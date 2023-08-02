@@ -1,0 +1,190 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Elementi esportabili da Revit 2022</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+p.hcp2 { text-align:center; }
+img.hcp3 { border:none; }
+span.hcp4 { text-transform:capitalize; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Elementi esportabili da Revit 2022</h1>
+<p>Si fa presente che l'esportazione degli elementi presenti in Revit è 
+ basata sulla definizione del modello analitico associato agli elementi 
+ stessi. Non è possibile quindi esportare da Revit elementi a cui non è 
+ stato associato il modello analitico.</p>
+<p>Con le limitazioni suddette, è comunque possibile esportare da Revit 
+ le informazioni relative a Travi, Pilastri, Muri (rettilinei o semicircolari) 
+ con o senza forature, Travi di fondazione relative a muri, Platee, Plinti, 
+ Solai monodirezionali, Solai bidirezionali (Solette o Solai a piastra 
+ bisettrice) e Vincoli esterni.</p>
+<p>Si fa notare che in Revit i valori numerici vengono memorizzati e trasferiti 
+ alle procedure esterne con il sistema &quot;imperiale&quot; (feet &amp; 
+ inch): la ovvia e necessaria trasformazione in coordinate metriche può 
+ portare a delle imprecisioni numeriche e/o di tolleranza indipendenti 
+ dalla nostra volontà. A titolo informativo, si segnala che per le conversioni 
+ è stato assunto 1 ft (piede) = 0.3048 m (metri).</p>
+<p>Per ogni elemento definito all'interno di Revit vengono definiti i punti 
+ a cui gli elementi sono collegati e che rappresentano (a livello concettuale) 
+ i nodi. Tali punti vengono desunti dal modello analitico associato all'elemento.</p>
+<p>Ovviamente alcuni elementi che in Revit sono definiti come un elemento 
+ unico (ad esempio una trave che &quot;passa&quot; sopra a uno o più pilastri) 
+ in ModeSt (come in qualunque modello FEM) dovranno poi essere definiti 
+ come più elementi, ognuno con le incidenze ed i collegamenti che gli competono.</p>
+<p>All'interno di Revit, cliccando nel gruppo <span class="hcp1">Esporta</span> 
+ della scheda <span class="hcp1">Moduli aggiuntivi</span> 
+ su <span class="hcp1">ModeSt</span> <span class="hcp1"><img src="../Icone/modest32.png" alt="" style="border: Solid 1px #808080; 
+	 border-width: 1px; border-style: solid;" border="1"> </span>compare 
+ la finestra di dialogo riportata nella figura sottostante.</p>
+<p class="hcp2"><img src="Revit_05.png" alt="" border="0" class="hcp3"></p>
+<p>Prima di procedere all'esportazione, occorre selezionare quali elementi 
+ esportare ed indicare come recuperare dal modello di Revit i fili fissi 
+ e gli scostamenti dai fili fissi di travi e pilastri ed inoltre se forare 
+ automaticamente i muri, le solette e le platee. Successivamente occorre 
+ impostare la <span class="hcp1">Cartella di esportazione</span> 
+ in cui vogliamo che venga salvato il file e specificare il percorso del 
+ <a name="sezmgt"></a><span class="hcp1">File corrispondenze 
+ sezioni (sezmgt.csv)</span> contenente le codifiche delle sezioni in acciaio 
+ utilizzate dai programmi ai quali ModeSt è collegato. Nel file ci sono 
+ una serie di righe e colonne, dove in ogni riga è specificato il codice 
+ della sezione utilizzato dal programma indicato in cima alla colonna. 
+ Il file sezmgt.csv è archiviato nella cartella ETC contenuta nella cartella 
+ di installazione del programma e può essere modificato utilizzando il 
+ programma Excel o il blocco note di Windows. Se nel computer utilizzato 
+ non è stato installato ModeSt, il file sezmgt.csv si può trovare nella 
+ cartella di installazione degli &quot;Addins&quot; di Revit. Se la struttura 
+ da esportare non contiene elementi in acciaio oppure non interessa che 
+ i dati relativi alle sezioni in acciaio vengano definiti dal codice, non 
+ specificare il percorso dove trovare il file.</p>
+<p>La procedura di esportazione si comporta come segue:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">Individua gli elementi di 
+	 Revit ed i punti necessari per descriverli.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Trasforma il modello analitico 
+	 in una struttura costituita da nodi ed elementi.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1" style="margin-bottom: 0pt;">Definisce 
+	 a livello ModeSt i parametri che caratterizzano gli elementi in modo 
+	 da valutare la loro reale posizione rispetto al modello analitico 
+	 e quindi ai nodi (fili fissi, scostamenti dai fili fissi).</p></li>
+</ol>
+<p>L'opzione <span class="hcp1">Precisione di arrotondamento 
+ al</span> consente di selezionare la precisione a cui arrotondare le coordinate 
+ dei punti del disegno da considerare durante l'esportazione. Nei disegni 
+ le coordinate dei punti sono a volte espresse con un numero elevato di 
+ decimali, che se considerate come rappresentative delle coordinate dei 
+ nodi possono portare a problemi numerici nel modello strutturale quali 
+ ad esempio la non perfetta verticalità dei pilastri.</p>
+<p class="Titolo7">Modalità di DEFINIZIONE delle sezioni Di travI e pilastrI</p>
+<p>La procedura di definizione si comporta come segue:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">Per la <span class="hcp1">definizione 
+	 delle sezioni in c.a. e legno</span>, se Revit fornisce le informazioni 
+	 sulla forma e le dimensioni, la sezione viene definita con la forma 
+	 e le dimensioni specificate altrimenti viene definita una sezione 
+	 rettangolare fittizia.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Per la <span class="hcp1">definizione 
+	 delle sezioni in acciaio</span> (si veda quanto descritto precedentemente) 
+	 viene utilizzato il nome indicato nel tipo della famiglia di Revit, 
+	 individuato il corrispondente codice presente nella colonna di ModeSt 
+	 e definita la sezione prelevandola dall'archivio delle sezioni di 
+	 ModeSt (default.sez nella cartella ETC). Nell'esempio evidenziato 
+	 nella figura sottostante il programma definirà una sezione HEA200.</p></li>
+</ol>
+<p class="Elenco1" style="text-align: center;"><img src="Revit_02.png" alt="" border="0" class="hcp3"></p>
+<ol start="3" style="list-style: decimal;">
+	<li class="p-Elenco1"><p class="Elenco1">Se il codice della sezione 
+	 di ModeSt (individuato dal nome indicato nel tipo della famiglia di 
+	 Revit) non è presente nell'archivio delle sezioni di ModeSt, ma è 
+	 stata definita la forma della sezione e le relative dimensioni in 
+	 Revit (vedi figura precedente), la sezione viene definita con la forma 
+	 e le dimensioni specificate. In tutti gli altri casi viene definita 
+	 una sezione rettangolare fittizia.</p></li>
+</ol>
+<p class="Titolo7">MODALITÀ DI ESPORTAZIONE DELLE TRAVI E DEI PILASTRI</p>
+<p>Sono esportabili travi e pilastri, con le sezioni definite come al punto 
+ precedente, che abbiano il flag <span class="hcp1">Attiva 
+ modello analitico</span> selezionato nella finestra delle proprietà delle 
+ travi e dei pilastri (vedi figura sottostante).</p>
+<p class="hcp2"><img src="Revit_08.png" alt="" border="0" class="hcp3"></p>
+<p class="Titolo7">MODALITÀ DI DEFINIZIONE DEI FILI FISSI E DEGLI SCOSTAMENTI 
+ DAI FILI FISSI DI TRAVI E PILASTRI</p>
+<p>Le modalità di individuazione dei fili fissi e degli scostamenti dai 
+ fili fissi di travi e pilastri sono:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">dalla geometria senza cancellazione 
+	 temporanea degli elementi (per travi e pilastri);</p></li>
+	<li class="p-Elenco1"><p class="Elenco1" style="margin-bottom: 0pt;">dalla 
+	 geometria con cancellazione temporanea degli elementi (per travi e 
+	 pilastri).</p></li>
+</ol>
+<p>In entrambi i casi, sia per le travi che per i pilastri, i fili fissi 
+ e gli scostamenti vengono valutati determinando la posizione del filo 
+ fisso e dello scostamento dal filo fisso che minimizzano la distanza dal 
+ modello analitico. All'interno di ModeSt le aste avranno un filo fisso 
+ e gli scostamenti dal filo fisso valutati in modo da collocare l'asta 
+ nella reale posizione. Il secondo caso è da utilizzare quando la posizione 
+ dell'asta all'interno di ModeSt non coincide con quella di Revit.</p>
+<p class="Titolo7">MODALITÀ DI ESPORTAZIONE DEI MURI</p>
+<p><span class="hcp4">S</span>ono esportabili i 
+ muri rettilinei o semicircolari definiti all'interno di Revit da 3 o 4 
+ punti e che abbiano i flag <span class="hcp1">Strutturale</span> 
+ e <span class="hcp1">Attiva modello analitico</span> selezionati 
+ nella finestra delle proprietà dei muri (vedi figura sottostante). I muri 
+ semicircolari vengono esportati suddividendoli in segmenti. Il numero 
+ di segmenti è dato dal rapporto tra l'angolo al centro dell'arco di cerchio 
+ del muro ed il valore del rapporto tra 3 e la lunghezza del raggio. Nel 
+ caso di muri forati, se è stata selezionata l'opzione <span class="hcp1">Fora 
+ automaticamente muri, solai come bidimensionali (solette) e platee</span>, 
+ vengono esportati i muri con le forature vere e proprie se sono di forma 
+ rettangolare, altrimenti vengono create delle aste fittizie sul perimetro 
+ delle forature.</p>
+<p class="hcp2"><img src="Revit_04.png" alt="" border="0" class="hcp3"></p>
+<p class="Titolo7">MODALITÀ DI ESPORTAZIONE DELLE PLATEE</p>
+<p><span class="hcp4">S</span>ono esportabili platee 
+ di qualsiasi forma e che abbiano i flag <span class="hcp1">Strutturale</span> 
+ e <span class="hcp1">Attiva modello analitico</span> selezionati 
+ nella finestra delle proprietà delle platee (vedi figura sottostante). 
+ Nel caso di platee forate, se è stata selezionata l'opzione <span class="hcp1">Fora 
+ automaticamente muri, solai come bidimensionali (solette) e platee</span>, 
+ vengono esportate le platee con le forature vere e proprie se sono di 
+ forma rettangolare, altrimenti vengono create delle aste fittizie sul 
+ perimetro delle forature.</p>
+<p class="hcp2"><img src="Revit_06.png" alt="" border="0" class="hcp3"></p>
+<p class="Titolo7">MODALITÀ DI ESPORTAZIONE DEI PLINTI</p>
+<p>Sono esportabili plinti di forma rettangolare, rettangolare con 1 palo, 
+ 2 pali e 4 pali e che abbiano il flag <span class="hcp1">Attiva 
+ modello analitico</span> selezionato nella finestra delle proprietà dei 
+ plinti (vedi figura sottostante).</p>
+<p class="hcp2"><img src="Revit_09.png" alt="" border="0" class="hcp3"></p>
+<p class="Titolo7">MODALITÀ DI ESPORTAZIONE DEI SOLAI E&#160;DELLE SOLETTE</p>
+<p>Sono esportabili i pavimenti di Revit (solai di calpestio) di qualsiasi 
+ forma che abbiano i flag <span class="hcp1">Strutturale</span> 
+ e <span class="hcp1">Attiva modello analitico</span> selezionati 
+ nella finestra delle proprietà dei pavimenti (vedi figura sottostante).</p>
+<p class="hcp2"><img src="Revit_10.png" alt="" border="0" class="hcp3"></p>
+<p>Se nella finestra delle proprietà del modello analitico l'opzione <span class="hcp1">Analizza come</span> (vedi figura sottostante) 
+ è impostata come <span class="hcp1">Monodirezionale</span> 
+ il pavimento verrà esportato come <span class="hcp1">Solaio 
+ unidirezionale</span>, se invece è impostata come&#160;<span class="hcp1">Bidirezionale</span> 
+ il pavimento verrà esportato come <span class="hcp1">Solette 
+ come</span> <span class="hcp1">bidimensionali</span> oppure 
+ come un <span class="hcp1">Solaio a piastra bisettrice</span> 
+ in funzione dell'opzione scelta nella finestra di esportazione.</p>
+<p class="hcp2"><img src="Revit_11.png" alt="" border="0" class="hcp3"></p>
+<p>Nel caso di pavimenti forati, se è stata selezionata l'opzione <span class="hcp1">Fora automaticamente muri, solai come bidimensionali 
+ (solette) e platee</span>, vengono esportate le solette con le forature 
+ vere e proprie se sono di forma rettangolare, altrimenti vengono create 
+ delle aste fittizie sul perimetro delle forature.</p>
+</body>
+</html>

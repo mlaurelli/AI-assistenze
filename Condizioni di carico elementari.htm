@@ -1,0 +1,146 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Condizioni di carico elementari</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+a.hcp3 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Condizioni di carico elementari</h1>
+<p>La gestione dei carichi avviene in ModeSt sempre per condizioni di carico 
+ elementari (CCE) nelle quali è possibile memorizzare carichi <a href="Carichi%20automatici.htm">automatici</a> 
+ o <a href="Carichi%20manuali.htm">manuali</a> associati agli elementi.</p>
+<p>In primo luogo occorre per prima cosa definire almeno una CCE cliccando 
+ nel gruppo <span class="hcp1">Definizioni</span> della scheda 
+ <span class="hcp1">Carichi</span> su&#160;<span class="hcp1">CCE</span> 
+ <img src="../Icone/16/cce.png" alt="" border="1" class="hcp2"> e poi sul 
+ bottone &quot;Aggiungi&quot;. Dopo aver specificato i dati richiesti la 
+ nuova CCE viene automaticamente resa corrente e sarà possibile assegnare 
+ i carichi agli elementi.</p>
+<p>Ogni CCE ha quindi i suoi specifici carichi sugli elementi e per modificarli 
+ o visualizzarli occorre sempre richiamare la CCE cliccando nel gruppo 
+ <span class="hcp1">Definizioni</span> della scheda <span class="hcp1">Carichi</span> su&#160;<span class="hcp1">CCE</span> 
+ <img src="../Icone/16/cce.png" alt="" border="1" class="hcp2">, selezionare 
+ nella tabella la relativa riga e cliccare sul bottone &quot;Rendi corrente&quot;. 
+ In alternativa è possibile rendere corrente una CCE selezionandola dalla 
+ casella di riepilogo a discesa &quot;Condizione di carico&quot; del pannello 
+ <span class="hcp1">Proprietà correnti</span>.</p>
+<p>Dalla tabella d'informazione delle CCE oltre che crearne di nuove o 
+ rendere corrente una di quelle già definite, si può eliminare una CCE 
+ selezionando la riga relativa e premendo &quot;Elimina&quot;. Il bottone 
+ &quot;Azzera carichi&quot; annulla tutti i carichi associati alla CCE 
+ senza eliminarla.</p>
+<p>La modifica dei parametri caratterizzanti la CCE (moltiplicatori delle 
+ masse, coefficiente di riduzione, ecc.) si esegue variando i valori numerici 
+ nelle celle o selezionando un'altra voce nella casella di riepilogo a 
+ discesa.</p>
+<p>Per quanto riguarda i dati che vengono richiesti quando viene creata 
+ una nuova CCE, si riportano di seguito alcune considerazioni.</p>
+<p>In caso di analisi sismica la componente verticale di tutti i carichi 
+ genera automaticamente le componenti di massa necessarie per l'analisi 
+ dinamica o per la determinazione dei pesi di piano per l'analisi sismica 
+ statica. Al momento dell'archiviazione delle CCE occorre specificare quali 
+ siano le componenti da generare. Questo viene effettuato mediante dei 
+ moltiplicatori che determinano quali delle 6 componenti di massa debbano 
+ essere generate.</p>
+<p>Normalmente si generano masse in direzione X e Y e momento polare intorno 
+ all'asse Z e quindi i valori dei coefficienti (mx, my, mz, jx, jy, jz) 
+ sono 1 1 0 0 0 1; se la condizione di carico deve indurre anche azioni 
+ sismiche verticali occorrerà introdurre il valore 1 anche per la componente 
+ Z e quindi i valori dei coefficienti saranno 1 1 1 0 0 1. Questo può essere 
+ facilmente realizzato inserendo i carichi da considerare per le azioni 
+ verticali (parti a sbalzo o zone spingenti) in una apposita CCE che sarà 
+ caratterizzata anche dal moltiplicatore in direzione Z pari a 1. Un metodo 
+ alternativo è quello di definire direttamente le masse necessarie come 
+ riportato in <span class="hcp1">Note sui carichi manuali</span>. 
+ Nella pratica corrente non vengono infatti mai definiti i valori di jx 
+ e jy.</p>
+<p>Ognuna delle CCE è caratterizzata inoltre da un coefficiente di riduzione 
+ (richiesto nel momento della definizione) che verrà applicato (per la 
+ determinazione delle masse di piano durante l'analisi sismica) solo ai 
+ carichi verticali inseriti manualmente. I carichi automatici provenienti 
+ dai solai assumono automaticamente il coefficiente di riduzione del tipo 
+ di solaio corrispondente mentre il peso proprio non viene mai ridotto.</p>
+<p>Se si intende procedere con il calcolo con il metodo degli stati limite, 
+ occorre associare ad ogni CCE che viene archiviata nella struttura una 
+ serie di dati che permettono il calcolo automatico delle combinazioni 
+ delle condizioni di carico elementari per i diversi stati limite ultimi 
+ e di esercizio. Questo viene effettuato attraverso la definizione di <span 
+	 style="font-style: italic; font-weight: bold;">tipi di condizioni 
+ di carico elementari</span> e si effettua cliccando nel gruppo <span class="hcp1">Definizioni</span> 
+ della scheda <span class="hcp1">Carichi</span> su&#160;<span class="hcp1">Tipi CCE</span> <img src="../Icone/16/tcce.png" alt="" border="1" class="hcp2">.<img src="Direzione_vento.PNG" alt="" style="border: none; margin-left: 5px; 
+	 margin-right: 0px; margin-top: 5px; margin-bottom: 5px;" width="328" height="250" align="right" border="0"></p>
+<p>I carichi nodali inseriti direttamente come carichi di tipo massa non 
+ sono affetti né dai moltiplicatori per generazione masse né dal coefficiente 
+ di riduzione.</p>
+<p>Per le CCE, a cui è stata assegnata un tipo di CCE variabile con selezionata 
+ l'opzione &quot;Da vento&quot;, è possibile specificare l'angolo della 
+ &quot;Direzione del vento&quot; e la tipologia di &quot;Pressione&quot;.</p>
+<p>Un angolo pari a 0 della direzione del vento corrisponde ad una pressione 
+ del vento in direzione X positiva, 180 in direzione X negativa, 90 in 
+ direzione Y positiva e 270 in direzione Y negativa (vedi figura).</p>
+<p>Si fa notare che tale convenzione (in contrasto a quella comunemente 
+ usata per cui l'angolo di direzione del vento è quello da cui proviene 
+ il vento) è stata assunta per mantenere la corrispondenza concettuale 
+ alle convenzioni di ModeSt per cui un carico è positivo se controverso 
+ agli assi di riferimento.</p>
+<p>La tipologia di pressione può essere: Interna, Esterna o Massimizzata. 
+ Per &quot;Interna&quot; si intende la pressione che va dall'interno verso 
+ l'esterno dell'edificio mentre per &quot;Esterna&quot; quella opposta. 
+ Questa distinzione consente all'utente di creare, per ogni direzione del 
+ vento, le due combinazioni di carico del vento che si hanno ad esempio 
+ nel caso delle &quot;Costruzioni aventi una parete con aperture di superficie 
+ &lt;33% di quella totale&quot;. In questo caso l'utente dovrà creare 2 
+ CCE per ogni direzione del vento, e quindi un totale di 8 CCE. Per &quot;Massimizzata&quot; 
+ si intende la pressione massima, derivante dall'<a href="Analisi_dei_carichi_da_neve_e_vento.htm#VENTO">analisi 
+ dei carichi da vento</a>, applicabile sugli elementi bidimensionali, solai 
+ e tamponature, e quindi in questo caso basterà creare una sola CCE per 
+ ogni direzione del vento, per un totale di 4 CCE.</p>
+<p>Utilizzando la tipologia &quot;Massimizzata&quot; si opera ovviamente 
+ a favore di sicurezza e senza particolari variazioni alle sollecitazioni 
+ finali di verifica dei&#160;singoli elementi investiti dal vento, ma si 
+ può sovrastimare l'effetto complessivo del vento sull'intera struttura. 
+ Se non si utilizza la tipologia massimizzata, ModeSt crea comunque gli 
+ ambienti e le CC necessarie per tenere in conto i possibili cambiamenti 
+ di segno del vento interno rispetto a quello esterno.</p>
+<p>I carichi da vento per gli elementi sopravento e sottovento di &quot;Tettoie 
+ e pensiline isolate&quot; devono essere archiviati in due diverse CCE 
+ per ogni direzione del vento e specificare come tipologia della pressione 
+ quella Massimizzata.</p>
+<p>Per le suddette CCE verranno poi generati automaticamente sia gli ambienti 
+ di carico che le combinazioni delle CCE.</p>
+<p>Non è possibile eseguire il calcolo della struttura se esiste una CCE 
+ senza carichi né definiti né assegnati. Per rimuovere una CCE già archiviata 
+ occorre selezionare la riga relativa alla CCE e cliccare &quot;Elimina&quot;;&#160;questo 
+ comporta la rinumerazione delle altre CCE.</p>
+<p style="margin-bottom: 0;">Si consiglia di archiviare i carichi inseriti 
+ manualmente in CCE separate da quelle dei carichi automatici. Risulta 
+ in questo caso molto più agevole la modifica dei carichi.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <a href="../Comandi/DCCE.htm" class="hcp3">DCCE</a> (Definisce 
+ condizioni di carico elementare), <a href="../Comandi/DETC.htm" class="hcp3">DETC</a> 
+ (Definisci tipo di condizione di carico elementare), <a href="../Comandi/_CCE.htm" class="hcp3">?CCE</a> 
+ (Informazioni condizioni di carico elementari), <a href="../Comandi/_TC.htm" class="hcp3">?TC</a> 
+ (Informazioni tipi condizioni di carico elementari), <a href="../Comandi/ZCA.htm" class="hcp3">ZCA</a> 
+ (Azzera carichi), <a href="../Comandi/ECON.htm" class="hcp3">ECON</a> 
+ (Elimina condizione di carico).</p>
+</body>
+</html>

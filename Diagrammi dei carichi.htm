@@ -1,0 +1,107 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Diagrammi dei carichi</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-style:italic; }
+img.hcp3 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Diagrammi o mappe dei carichi</h1>
+<p>La rappresentazione dei diagrammi o mappe dei carichi viene effettuata 
+ da ModeSt nelle <span class="hcp1"><a href="Finestre%20di%20modellazione.htm">finestre 
+ di modellazione</a></span> per i soli carichi (manuali e automatici) presenti 
+ nella CCE corrente. Per visualizzare i carichi di altre CCE occorre prima 
+ renderle correnti.</p>
+<p>La scelta se visualizzare i carichi con diagrammi oppure con mappe a 
+ colori si effettua con l'opzione <span class="hcp2">Carichi</span> 
+ presente nelle <span class="hcp2">Opzioni di disegno</span> 
+ del menu a comparsa che si ottiene facendo clic col tasto destro sullo 
+ sfondo della finestra. Se è attiva la visualizzazione con mappe a colori 
+ non vengono disegnati i carichi dei seguenti tipi: carico concentrato 
+ in un punto qualunque dell'asta, dilatazione termica uniforme, gradiente 
+ di temperatura lungo uno od entrambi gli assi locali; per poterli visualizzare 
+ occorre attivare l'altro tipo di visualizzazione.</p>
+<p>I diagrammi o le mappe dei carichi sulle aste si possono rappresentare 
+ nel reale orientamento nello spazio oppure nei piani locali XY e XZ dell'asta 
+ con l'opzione <span class="hcp2">Piano di visualizzazione</span> 
+ presente nelle <span class="hcp2">Opzioni di disegno</span> 
+ del menu a comparsa che si ottiene facendo clic col tasto destro sullo 
+ sfondo della finestra oppure nella sezione &quot;Diagrammi/Mappe&quot; 
+ del pannello <span class="hcp1">Parametri modellazione/Ms-Cad</span>.</p>
+<p>L'ampiezza dei diagrammi o delle mappe è in proporzione all'intensità 
+ dei carichi e vengono visualizzati in funzione dei <a href="Fattori%20di%20scala.htm">fattori 
+ di scala</a>.</p>
+<p>Quando il disegno dei carichi degli elementi è stato attivato i diagrammi 
+ riflettono automaticamente le modifiche apportate ai carichi presenti, 
+ sia che avvengano tramite assegnazioni di carichi, modifica di materiali, 
+ sezioni, forma o definizione dei solai ecc. sia che i carichi cambino 
+ completamente perché è stata richiamata un'altra CCE.</p>
+<p>Se è attiva la visualizzazione dei carichi con diagrammi è possibile 
+ disegnare il valore numerico relativo ai carichi attivi cliccando nel 
+ gruppo <span class="hcp1">Disegno</span> della scheda <span class="hcp1">Carichi</span> su <span class="hcp1">Valori 
+ num.</span> <img src="../Icone/32/valnumerici32.png" alt="" border="1" class="hcp3">. 
+ Con <span class="hcp1">Automatici</span> <img src="../Icone/16/NDVA.png" alt="" border="1" class="hcp3"> 
+ viene disegnato il valore massimo della risultante del carico. Mentre 
+ con <span class="hcp1">Puntuali</span> <img src="../Icone/16/NDVP.png" alt="" border="1" class="hcp3"> 
+ è possibile scorrere lungo l'asta, visualizzando in tempo reale i valori 
+ dei carichi, e indicare il punto in cui far disegnare il relativo valore 
+ dei carichi.</p>
+<p>Il disegno dei carichi sugli elementi viene attivato cliccando <span>nel 
+ gruppo</span> <span class="hcp1">Disegno</span> <span>della 
+ scheda</span> <span class="hcp1">Carichi</span> <span>su&#160;</span><span class="hcp1">Carichi</span> <span><img src="../Icone/32/dcar32.png" alt="" border="1" class="hcp3"> 
+ e quindi</span> <a href="Selezioni.htm">selezionando</a> gli elementi 
+ per i quali si vuole la rappresentazione dei carichi. Per i vari elementi 
+ vengono rappresentati i seguenti carichi:</p>
+<p class="Normal3"><span class="hcp1">nodi:</span> forze 
+ e momenti concentrati agenti sul nodo. Rappresentati con delle frecce 
+ nelle direzioni dei carichi e di dimensioni variabili in funzione della 
+ loro intensità, con un unico colore o con colori diversi. La scelta se 
+ visualizzarli con un unico colore oppure con colori diversi si effettua 
+ con l'opzione <span class="hcp2">Carichi</span> presente 
+ nelle <span class="hcp2">Opzioni di disegno</span> del 
+ menu a comparsa che si ottiene facendo clic col tasto destro sullo sfondo 
+ della finestra. Non vengono rappresentate masse concentrate e spostamenti 
+ impressi.</p>
+<p class="Normal3"><span class="hcp1">aste:</span> le componenti 
+ nelle direzioni Y e Z locali dell'asta dei carichi distribuiti, i carichi 
+ concentrati e i carichi termici. Le componenti del carico nella direzione 
+ locale X dell'asta, nel caso di visualizzazione con diagrammi, vengono 
+ rappresentate con delle frecce coincidenti con l'asta.</p>
+<p class="Normal3"><span class="hcp1">muri/elementi bidimensionali:</span> 
+ le componenti nella direzione Y locale degli elementi bidimensionali dei 
+ carichi distribuiti ed idrostatici. Non vengono rappresentati i carichi 
+ nelle direzioni locali X e Z ed i carichi termici.</p>
+<p>Selezionando &quot;Carichi automatici&quot; nella sezione &quot;Solai&quot; 
+ del pannello <span class="hcp1">Colorazioni elementi</span> 
+ è possibile visualizzare, relativamente alla CCE corrente, quale tipo 
+ di carico automatico sia stato calcolato sui solai.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DCN.htm">DCN</a></span> 
+ (Disegna carichi nodi), <span class="hcp1"><a href="../Comandi/DCA.htm">DCA</a></span> 
+ (Disegna carichi aste), <span class="hcp1"><a href="../Comandi/DCB.htm">DCB</a></span> 
+ (Disegna carichi elementi bidimensionali), <span class="hcp1"><a 
+	 href="../Comandi/COLS.htm">COLS</a></span> (Colora solai), <span class="hcp1"><a 
+	 href="../Comandi/DVAL.htm">DVAL</a></span> (Disegna valori).</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Argomenti 
+ correlati:</span> <span><span style="font-weight: bold; text-decoration: none; "><a 
+	 href="Fattori%20di%20scala.htm">Fattori di scala</a></span></span></p>
+</body>
+</html>

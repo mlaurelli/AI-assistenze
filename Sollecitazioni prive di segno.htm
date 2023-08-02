@@ -1,0 +1,72 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Sollecitazioni prive di segno</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Sollecitazioni prive di segno</h1>
+<p>Le componenti di sollecitazione dovute all'analisi dinamica con spettro 
+ di risposta o all'analisi sismica statica con sisma anche in direzione 
+ Z sono per definizione <span class="hcp1">prive di segno</span> 
+ e vanno sia sommate che sottratte alle altre sollecitazioni. Gli effetti 
+ del sisma torcente (Mt) sono valutati sempre da un'analisi sismica statica 
+ e quindi rientrano nella parte dei risultati con segno.</p>
+<p>Nel caso in cui le sollecitazioni abbiano delle componenti prive di 
+ segno, ModeSt si comporta in modo diverso a seconda dei casi.</p>
+<p class="Normal3"><span class="hcp1">Visualizzazione informazioni 
+ numeriche:</span> vengono normalmente riportate separatamente la parte 
+ con segno e la parte priva di segno. Nelle <a href="Tabelle%20sollecitazioni.htm"><span 
+	 style="font-weight: bold; text-decoration: underline; ">tabelle risultati 
+ del calcolo</span></a> è possibile visualizzare anche direttamente la 
+ somma e la differenza fra la componente con segno e quella priva di segno.</p>
+<p class="Normal3"><span class="hcp1">Progettazione armature, 
+ reticolari e collegamenti in acciaio, verifiche aste in acciaio e legno</span>: 
+ vengono considerate per lo sforzo normale e per i momenti flettenti tutte 
+ le combinazioni di segno necessarie per considerare tutti i possibili 
+ casi. In contemporanea i valori degli sforzi di taglio e momento torcente 
+ vengono considerati con lo stesso segno della componente statica. Nel 
+ caso di pressoflessione deviata si hanno quindi 8 casi possibili di combinazione 
+ fra N, Mx, My.</p>
+<p class="Normal3"><span class="hcp1">Diagrammi e rappresentazione 
+ forze</span>: vengono visualizzati i diagrammi, le deformate o le azioni 
+ in entrambi i casi di segno. Si avranno quindi due rappresentazioni sovrapposte, 
+ una in cui le componenti prive di segno sono state <span class="hcp1">sommate</span> 
+ alle altre sollecitazioni ed una in cui sono state <span class="hcp1">sottratte</span>.</p>
+<p class="Normal3"><span class="hcp1">Mappe a colori</span>: 
+ le componenti prive di segno possono essere a scelta dell'utente sommate, 
+ sottratte o considerate dello stesso segno della componente statica attraverso 
+ le <span style="font-style: italic;">Opzioni di disegno</span> dal menu 
+ a comparsa che si ottiene cliccando col tasto destro <span style="font-size: 10.0pt; 
+															 font-family: Verdana, sans-serif; 
+															 mso-bidi-language: AR-SA;">sullo 
+ sfondo della finestra</span>. Nella casella di riepilogo a discesa &quot;Segno 
+ comp. dinamiche&quot; l'opzione <span class="hcp1">Positivo</span> 
+ considera positive le componenti prive disegno, <span class="hcp1">Negativo</span> 
+ considera negative le componenti prive disegno e <span class="hcp1">Automatico</span> 
+ considera le componenti prive disegno con lo stesso segno delle componenti 
+ principali.</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Argomenti 
+ correlati:</span> <span class="hcp2"><a 
+	 href="Fattori%20di%20scala.htm">Fattori di scala</a></span><span style="font-weight: normal;">,</span> 
+ <span><span class="hcp2"><a href="Valori%20nodali%20elementi%20bidimensionali.htm">Valori 
+ nodali elementi bidimensionali</a></span></span></p>
+</body>
+</html>

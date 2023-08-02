@@ -1,0 +1,318 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Parametri geotecnici</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+table.hcp2 { vertical-align:top; }
+tr.hcp3 { vertical-align:top; }
+td.hcp4 { border:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp5 { text-align:center;
+font-weight:bold; }
+td.hcp6 { border-top:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+td.hcp7 { border-left:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp8 { text-align:center; }
+td.hcp9 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+span.hcp10 { font-family:Symbol, serif; }
+span.hcp11 { vertical-align:Sub; }
+td.hcp12 { padding-right:10px;
+padding-left:10px; }
+p.hcp13 { font-weight:bold;
+text-align:left; }
+p.hcp14 { text-align:left; }
+p.hcp15 { text-align:right; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Parametri geotecnici</h1>
+<h2 class="Titolo5">Classificazione</h2>
+<p>Un terreno può essere classificato come: Coesivo, Incoerente, Roccia, Non classificato.</p>
+<p>Sono classificabili come <span class="hcp1">coesivi</span> i terreni a grana fine, come limi e argille, caratterizzati da un basso coefficiente di permeabilità e per i quali, se presenti sotto falda, è possibile ipotizzare un comportamento sia drenato che non drenato.</p>
+<p>Sono classificabili come <span class="hcp1">incoerenti</span> i terreni a grana grossa, come sabbie e ghiaie, caratterizzati da un alto coefficiente di permeabilità e per i quali viene in ogni caso ipotizzato un comportamento drenato.</p>
+<p>La seguente tabella sintetizza tali concetti.</p>
+<table cellspacing="0" width="100%" class="hcp2">
+<col style="width: 33.333%;">
+<col style="width: 33.333%;">
+<col style="width: 33.333%;">
+<tr class="hcp3">
+<td style="width:33.333%;" class="hcp4">
+<p class="hcp5">Classificazione</p>
+</td>
+<td style="width:33.333%;" class="hcp6">
+<p class="hcp5">Ipotesi implicite</p>
+</td>
+<td style="width:33.333%;" class="hcp6">
+<p class="hcp5">Condizioni di calcolo</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:33.333%;" class="hcp7">
+<p class="hcp8">Coesivo</p>
+</td>
+<td style="width:33.333%;" class="hcp9">
+<p class="hcp8">Bassa permeabilità</p>
+</td>
+<td style="width:33.333%;" class="hcp9">
+<p class="hcp8">Sia drenate che non drenate</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:33.333%;" class="hcp7">
+<p class="hcp8">Incoerente</p>
+</td>
+<td style="width:33.333%;" class="hcp9">
+<p class="hcp8">Alta permeabilità</p>
+</td>
+<td style="width:33.333%;" class="hcp9">
+<p class="hcp8">Solo drenate</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:33.333%;" class="hcp7">
+<p class="hcp8">Roccia</p>
+</td>
+<td style="width:33.333%;" class="hcp9">
+<p class="hcp8">-</p>
+</td>
+<td style="width:33.333%;" class="hcp9">
+<p class="hcp8">-</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:33.333%;" class="hcp7">
+<p class="hcp8">Non classificato</p>
+</td>
+<td style="width:33.333%;" class="hcp9">
+<p class="hcp8">-</p>
+</td>
+<td style="width:33.333%;" class="hcp9">
+<p class="hcp8">-</p>
+</td>
+</tr>
+</table>
+<p>La scelta della classificazione determina quali sono i parametri da inserire per caratterizzare un terreno: per terreni che non sono classificati come coesivi non sono mai previste condizioni di calcolo non drenate e quindi non è richiesto l'inserimento della coesione non drenata e del modulo elastico non drenato; la densità relativa è una proprietà associabile solo a terreni incoerenti così come l'indice di plasticità lo è per i terreni coesivi; per le rocce non è necessario indicare alcun grado di sovraconsolidazione.</p>
+<p>Per i terreni classificati come incoerenti è comunque possibile assegnare valori non nulli di coesione, anche se generalmente i terreni a grana grossa ne sono privi, per poter tener conto di fenomeni di cementazione naturale.</p>
+<h2 class="Titolo5">Pesi specifici</h2>
+<p>I pesi specifici permettono di calcolare, una volta definita la colonna stratigrafica, le pressioni verticali totali ed efficaci. Tali parametri sono:</p>
+<p class="IndentBullet1">Peso specifico del terreno naturale <span class="hcp10">g</span></p>
+<p class="IndentBullet1">Peso specifico del terreno saturo <span class="hcp10">g</span><span class="hcp11">sat</span></p>
+<p>Il terreno viene ipotizzato di peso specifico naturale (o umido) <span class="hcp10">g</span> al di sopra della falda e di peso specifico <span class="hcp10">g</span><span class="hcp11">sat</span>, completamente saturo, al di sotto della falda.</p>
+<p>I parametri sono calcolati secondo le seguenti relazioni:</p>
+<p class="IndentBullet1">Peso specifico del terreno naturale <span class="hcp10">g</span> = <span class="hcp10">g</span><span class="hcp11">d</span>*(1+w)</p>
+<p class="IndentBullet1">Peso specifico del terreno saturo <span class="hcp10">g</span><span class="hcp11">sat</span> = <span class="hcp10">g</span><span class="hcp11">d</span> + n*<span class="hcp10">g</span><span class="hcp11">w</span></p>
+<p>dove:</p>
+<table cellspacing="0" width="100%" class="hcp2">
+<col style="width: 5.42%;">
+<col style="width: 94.58%;">
+<tr class="hcp3">
+<td style="width:5.42%;" class="hcp12">
+<p>n</p>
+</td>
+<td style="width:94.58%;" class="hcp12">
+<p>porosità: rapporto fra il volume dei vuoti e il volume totale, n = e/(1+e).</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:5.42%;" class="hcp12">
+<p>e</p>
+</td>
+<td style="width:94.58%;" class="hcp12">
+<p>indice dei vuoti: rapporto fra il volume dei vuoti e il volume del solido, e = n/(1-n).</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:5.42%;" class="hcp12">
+<p><span class="hcp10">g</span><span class="hcp11">s</span></p>
+</td>
+<td style="width:94.58%;" class="hcp12">
+<p>peso specifico della sostanza solida: peso per volume dei solidi.</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:5.42%;" class="hcp12">
+<p><span class="hcp10">g</span><span class="hcp11">d</span></p>
+</td>
+<td style="width:94.58%;" class="hcp12">
+<p>peso specifico del terreno secco: peso dei solidi per volume totale, <span class="hcp10">g</span><span class="hcp11">d</span> = <span class="hcp10">g</span><span class="hcp11">s</span>/(1+e).</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:5.42%;" class="hcp12">
+<p>w</p>
+</td>
+<td style="width:94.58%;" class="hcp12">
+<p>contenuto d'acqua: rapporto fra il peso dell'acqua e il peso dei solidi.</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:5.42%;" class="hcp12">
+<p><span class="hcp10">g</span><span class="hcp11">w</span></p>
+</td>
+<td style="width:94.58%;" class="hcp12">
+<p>peso specifico dell'acqua.</p>
+</td>
+</tr>
+</table>
+<h2 class="Titolo5">Proprietà indice</h2>
+<p>Le proprietà indice, caratterizzando i terreni, permettono l'utilizzo di correlazioni per la determinazione di altri parametri geotecnici, una volta che per questi è stata definita l'effettiva collocazione stratigrafica. La stima delle proprietà indice è legata al grado di approfondimento dell'indagine geotecnica svolta ed il loro inserimento è opzionale. Tali parametri sono:</p>
+<p class="IndentBullet1">Densità relativa Dr (solo per terreni incoerenti)</p>
+<p class="IndentBullet1">Indice di plasticità Ip (solo per terreni coesivi)</p>
+<p>La <span class="hcp1">densità relativa</span> è un indice del grado di addensamento di terreni incoerenti:</p>
+<table cellspacing="0" width="40%" align="center" class="hcp2">
+<col style="width: 60%;">
+<col style="width: 40%;">
+<tr class="hcp3">
+<td style="width:60%;" class="hcp4">
+<p class="hcp13">Stato di addensamento</p>
+</td>
+<td style="width:40%;" class="hcp6">
+<p class="hcp5">Dr</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:60%;" class="hcp7">
+<p class="hcp14">Molto sciolto</p>
+</td>
+<td style="width:40%;" class="hcp9">
+<p class="hcp15">0 - 20</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:60%;" class="hcp7">
+<p class="hcp14">Sciolto</p>
+</td>
+<td style="width:40%;" class="hcp9">
+<p class="hcp15">20 - 40</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:60%;" class="hcp7">
+<p class="hcp14">Medio</p>
+</td>
+<td style="width:40%;" class="hcp9">
+<p class="hcp15">40 - 60</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:60%;" class="hcp7">
+<p class="hcp14">Denso</p>
+</td>
+<td style="width:40%;" class="hcp9">
+<p class="hcp15">60 - 80</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:60%;" class="hcp7">
+<p class="hcp14">Molto denso</p>
+</td>
+<td style="width:40%;" class="hcp9">
+<p class="hcp15">80 - 100</p>
+</td>
+</tr>
+</table>
+<p>La conoscenza di tale proprietà è di aiuto alla determinazione di altri parametri quali l'angolo di attrito e il coefficiente di spinta a riposo.</p>
+<p>La densità relativa influenza: il calcolo della profondità critica di infissione per pali; il calcolo della capacità portante in condizioni statiche per rottura locale secondo Vesic (1975) per le fondazioni superficiali.</p>
+<p>L'<span class="hcp1">indice di plasticità</span> rappresenta l'ampiezza dell'intervallo di contenuto d'acqua in cui il terreno presenta un comportamento plastico:</p>
+<table cellspacing="0" width="40%" align="center" class="hcp2">
+<col style="width: 60%;">
+<col style="width: 40%;">
+<tr class="hcp3">
+<td style="width:60%;" class="hcp4">
+<p class="hcp13">Comportamento</p>
+</td>
+<td style="width:40%;" class="hcp6">
+<p class="hcp5">Ip</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:60%;" class="hcp7">
+<p>Non plastico</p>
+</td>
+<td style="width:40%;" class="hcp9">
+<p class="hcp15">0 - 5</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:60%;" class="hcp7">
+<p>Poco plastico</p>
+</td>
+<td style="width:40%;" class="hcp9">
+<p class="hcp15">5 - 15</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:60%;" class="hcp7">
+<p>Plastico</p>
+</td>
+<td style="width:40%;" class="hcp9">
+<p class="hcp15">15 - 40</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:60%;" class="hcp7">
+<p class="hcp14">Molto denso</p>
+</td>
+<td style="width:40%;" class="hcp9">
+<p class="hcp15">&gt; 40</p>
+</td>
+</tr>
+</table>
+<p>La conoscenza di tale proprietà è di aiuto alla determinazione di altri parametri quali l'angolo di attrito, la coesione non drenata e il coefficiente di spinta a riposo.</p>
+<h2 class="Titolo5">Parametri plastici</h2>
+<p>I parametri plastici definiscono il limite agli stati tensionali fisicamente ammissibili per sollecitazioni di taglio, il raggiungimento di tali stati tensionali viene associato alle condizioni di rottura per le analisi limite utilizzate in fase di progettazione e verifica, per tali analisi i valori inseriti sono intesi come caratteristici. Tali parametri sono:</p>
+<p class="IndentBullet1">Angolo di attrito efficace <span class="hcp10">j</span>'</p>
+<p class="IndentBullet1">Coesione efficace c'</p>
+<p class="IndentBullet1">Coesione non drenata cu (solo per terreni coesivi)</p>
+<p>In condizioni drenate la tensione tangenziale limite (<span class="hcp10">t</span><span class="hcp11">f</span>) è ipotizzata variabile in funzione della tensione normale efficace (<span class="hcp10">s</span>'<span class="hcp11">nf</span>) secondo il criterio di Mohr – Coulomb: <span class="hcp10">t</span><span class="hcp11">f</span> = c' + <span class="hcp10">s</span>'<span class="hcp11">nf</span>*tan(<span class="hcp10">j</span>').</p>
+<p>In condizioni non drenate la tensione tangenziale limite (<span class="hcp10">t</span><span class="hcp11">f</span>) è ipotizzata pari alla coesione non drenata: <span class="hcp10">t</span><span class="hcp11">f</span> = cu.</p>
+<h2 class="Titolo5">Caratteristiche litostatiche</h2>
+<p>Le caratteristiche litostatiche definiscono la condizione tensionale del terreno in condizioni ante opera. Tali parametri sono:</p>
+<p class="IndentBullet1">Grado di sovraconsolidazione OCR (solo se non è Roccia)</p>
+<p class="IndentBullet1">Coefficiente di spinta a riposo k<span class="hcp11">0</span></p>
+<p>Il <span class="hcp1">grado di sovraconsolidazione</span> misura il rapporto fra le pressioni verticali efficaci massime a cui il terreno è stato sottoposto in passato e le pressioni verticali efficaci attuali, tale parametro influenza: il valore del coefficiente di spinta a riposo; il calcolo della pressione limite alla base del palo attraverso il fattore di riduzione per terreni coesivi sovraconsolidati; il calcolo dei cedimenti di fondazioni superficiali col metodo edometrico.</p>
+<p>Il <span class="hcp1">coefficiente di spinta a riposo</span> è definito come il rapporto fra le pressioni orizzontali e verticali efficaci (calcolo delle pressioni litostatiche: k<span class="hcp11">0</span> = <span class="hcp10">s</span>'<span class="hcp11">h0</span>/<span class="hcp10">s</span>'<span class="hcp11">v0</span>); tale parametro influenza il calcolo dell'attrito laterale limite per pali, in condizioni drenate.</p>
+<h2 class="Titolo5">Parametri elastici</h2>
+<p>I parametri elastici permettono di descrivere il comportamento tensodeformativo di un terreno in campo elastico lineare isotropo. Tali parametri sono:</p>
+<p class="IndentBullet1">Modulo elastico E</p>
+<p class="IndentBullet1">Modulo elastico tangenziale G</p>
+<p class="IndentBullet1">Esponente del parametro tensionale kj</p>
+<p class="IndentBullet1">Coefficiente di Poisson <span class="hcp10">n</span></p>
+<p class="IndentBullet1">Modulo edometrico E<span class="hcp11">ed</span></p>
+<p class="IndentBullet1">Modulo elastico non drenato E<span class="hcp11">u</span> (solo per terreni coesivi)</p>
+<p>Il modulo elastico (modulo di Young) di calcolo, utilizzato per le verifiche, è ipotizzato variabile con lo stato tensionale litostatico secondo la seguente relazione:</p>
+<p class="IndentBullet1">E = E*(p'/p<span class="hcp11">atm</span>)<span style="vertical-align: Super;">kj</span></p>
+<p>In cui la pressione media efficace normalizzata con la pressione atmosferica (p'/p<span class="hcp11">atm</span>) è il parametro tensionale, l'esponente del parametro tensionale (kj) rappresenta la variabilità dei parametri elastici ed E è il valore del modulo di Young per p' = p<span class="hcp11">atm</span>.</p>
+<p>Ipotizzando il coefficiente di Poisson costante nello strato considerato, risulta che tutti i moduli elastici hanno la stessa variabilità del modulo di Young. Pertanto, in fase di primo inserimento dei dati, i valori di G , E<span class="hcp11">ed</span> e E<span class="hcp11">u</span> vengono calcolati automaticamente:</p>
+<p>Il modulo elastico tangenziale risulta:</p>
+<p class="IndentBullet1">G = E / [2*(1+<span class="hcp10">n</span>)]</p>
+<p>In condizioni edometriche, quindi per deformazioni laterali nulle, il modulo elastico vale:</p>
+<p class="IndentBullet1">Eed = E*{(1-<span class="hcp10">n</span>)/[(1+<span class="hcp10">n</span>)*(1-2*<span class="hcp10">n</span>)]}</p>
+<p>In condizioni non drenate, quindi per deformazioni volumetriche nulle (<span class="hcp10">n</span><span class="hcp11">u</span>=0.5), il modulo elastico vale:</p>
+<p class="IndentBullet1">Eu = E*{3/[2*(1+<span class="hcp10">n</span>)]}</p>
+<p>L'inserimento dei parametri elastici è opzionale perché per alcune analisi possono non essere utili. La conoscenza dei parametri elastici è comunque indispensabile al calcolo della capacità portante e della risposta deformativa per carichi orizzontali dei pali; al calcolo dei cedimenti di fondazioni superficiali secondo la teoria dell'elasticità e col metodo edometrico; al calcolo di capacità portanti riferite a meccanismi di rottura per punzonamento per fondazioni superficiali e profonde (Vesic, 1975).</p>
+<p><span class="hcp1">Nota</span>: i moduli di elasticità tangenziale e normale sono fortemente influenzati dal livello di sollecitazione; in altri termini, il comportamento del materiale è marcatamente non lineare. Per adottare il modello di mezzo linearmente elastico nei problemi applicativi si possono introdurre i valori iniziale, secante o tangente di tali moduli (Viggiani 1999).</p>
+<p><span class="hcp1">Nota</span>: si osserva che i valori di E decrescono sensibilmente al crescere del livello di tensione deviatorica; i valori iniziali (deviatore nullo) valgono circa il doppio di quelli (E<span class="hcp11">50</span>) relativi ad una tensione deviatorica pari al 50% di quella a rottura (Viggiani 1999).</p>
+<p>I calcoli e le verifiche verranno compiute utilizzando i parametri inseriti in fase di input. L'utente può scegliere, in base ai dati a sua disposizione ad alle sue ipotesi progettuali, se inserire i valori iniziale, secante o tangente dei moduli elastici.</p>
+</body>
+</html>

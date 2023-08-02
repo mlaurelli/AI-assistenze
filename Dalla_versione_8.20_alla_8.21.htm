@@ -1,0 +1,101 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.20 alla 8.21</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.20 alla 8.21</h1>
+<p>Sono state completamente riscritte le procedure di richiesta dei dati 
+ per l'analisi dei carichi da neve e da vento ed è stato adeguato il calcolo 
+ del carico da vento alla Circolare esplicativa n. 7 del 21/01/19, facendo 
+ anche riferimento alla C.N.R. 207/2008 per avere informazioni più dettagliate 
+ e per risolvere alcuni errori presenti nella Circolare. Per la procedura 
+ per la definizione e l'applicazione del carico da vento è anche possibile 
+ consultare il tutorial: <span class="hcp1"><a href="Guida.chm::/Definizione_ed_assegnazione_dei_carichi_da_vento.htm">Definizione 
+ ed assegnazione dei carichi da vento</a></span><span style="font-style: italic;">.</span></p>
+<p>Verifiche di stabilità anche a flessione e a pressoflessione per le 
+ membrature in acciaio e a flessione e a presso-tenso flessione per le 
+ membrature in legno, con la possibilità di visualizzare i relativi tassi 
+ di sfruttamento globali.</p>
+<p>Per le aste in legno sono state implementate le verifiche di resistenza 
+ a torsione e a taglio e torsione nonché le verifiche di stabilità a tensoflessione. 
+ Per le verifiche è stato fatto riferimento alla C.N.R. 206-R1 2018 ed 
+ alla Circolare esplicativa n. 7 del 21/01/19. Nella relazione di calcolo 
+ relativa alle verifiche delle aste in legno sono stati aggiunti i riferimenti 
+ di normativa. Revisionato il calcolo della freccia delle aste in legno 
+ differenziando quella istantanea da quella a lungo termine.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Visualizzazione del sistema 
+	 di riferimento e degli elementi bidimensionali considerati nel calcolo 
+	 delle sollecitazioni integrate su linea e sul piano. Nel caso di integrazione 
+	 sul piano viene visualizzato anche il piano di sezione. Per poterli 
+	 visualizzare basta selezionare, nella finestra di dialogo, l'opzione 
+	 &quot;Mostra elementi e sistema di riferimento&quot;.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Abbiamo reso possibile effettuare 
+	 la ricerca delle sezioni ottimizzanti di un insieme di aste in acciaio 
+	 anche per le strutture calcolate ai sensi del D.M. 17/01/18. Si ricorda 
+	 che questa funzionalità può essere utile quando si voglia ricercare 
+	 nell'archivio tutte le sezioni che rendono verificate le aste in esame, 
+	 visualizzare il risultato ordinato per tasso di sfruttamento e per 
+	 peso ed infine definire ed assegnare automaticamente la sezione ritenuta 
+	 ottimizzante.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">La chiusura della finestra 
+	 di testo contenente le anomalie riportate durante le elaborazioni 
+	 del programma non comporta più la perdita delle informazioni, poiché 
+	 queste vengono spostate in un apposito pannello chiamato &quot;Anomalie&quot;, 
+	 posizionabile sullo schermo a scelta dell'utente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nella relazione di calcolo 
+	 delle armature delle travi, oltre che a riportare le verifiche in 
+	 corrispondenza degli appoggi ed in campata, sono state aggiunte anche 
+	 le verifiche nei punti che corrispondono ad altre situazioni gravose, 
+	 in modo da avere corrispondenza fra i tassi di sfruttamento e la relazione 
+	 di calcolo.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Sono state velocizzate le 
+	 visualizzazioni delle mappe nella progettazione interattiva dell'armatura 
+	 delle solette e delle platee.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">È stata modificata e migliorata 
+	 la sagomatura dei ferri delle travi per tenere conto del copriferro 
+	 laterale (<span class="hcp1"><a href="CriTra.htm#Copriferro_per_calcolo_lunghezza_ferri">Copriferro 
+	 per calcolo lunghezza ferri</a></span> dei criteri di progetto specifici 
+	 delle travi) nel determinarne la lunghezza. In questo modo si evitano 
+	 collisioni con le staffe dei pilastri nel caso di ferri interi in 
+	 travi corte.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nel caso di edifici esistenti 
+	 con calcolo di tipo dissipativo sono state attivate le verifiche secondo 
+	 la gerarchia delle resistenze per gli elementi dissipativi (se non 
+	 diversamente specificato nei criteri di progetto) controllando, come 
+	 indicato nella Circolare, che il massimo valore del taglio di verifica 
+	 non sia comunque maggiore del taglio derivante dalla gerarchia.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nelle verifiche delle travi 
+	 è stata eliminata la gestione di una minima armatura a taglio longitudinale, 
+	 resa inutile dalla esplicita traslazione orizzontale del momento. 
+	 Il parametro <span class="hcp1"><a href="CriGenTra.htm#Min__di_armatura_per_taglio">Min. 
+	 di armatura per taglio&#160;(T.A. o S.L. D.M. 96)</a></span> dei criteri 
+	 di progetto delle travi resta valido per le verifiche ai sensi del 
+	 D.M. 96.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nelle verifiche delle piastre 
+	 in acciaio la diffusione delle tensioni indotte dagli sforzi nei bulloni 
+	 viene effettuata tenendo conto anche della larghezza del foro.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Non è più necessario impostare 
+	 come &quot;separatore decimale&quot; il punto e come &quot;simbolo 
+	 di raggruppamento cifre&quot; la virgola per il corretto funzionamento 
+	 di alcune macro.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Miglioramenti vari nella procedura 
+	 di collegamento con Revit ed in quella di importazione della struttura 
+	 da file IFC.</p></li>
+</ul>
+</body>
+</html>

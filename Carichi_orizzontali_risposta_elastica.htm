@@ -1,0 +1,48 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Carichi orizzontali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { vertical-align:Sub; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Carichi orizzontali</h1>
+<p>Il calcolo degli spostamenti orizzontali viene effettuato attraverso un'analisi dell'interazione palo-terreno, il comportamento del palo è ipotizzato puramente elastico mentre il terreno ha comportamento elasto-plastico.</p>
+<p>La risposta elastica del terreno può essere valutata in funzione delle caratteristiche deformative della stratigrafia. Il problema dell'elaborazione dei parametri elastici del terreno, ai fini della determinazione della costante elastica orizzontale che tenga in conto degli effetti tridimensionali di interazione col palo, è stato affrontato da vari autori. In generale tale costante è legata al <span class="hcp1">modulo elastico</span> da una relazione del tipo:</p>
+<p>kh(z) = e<span class="hcp2">t,h</span> * [E(z) / DP]</p>
+<p>in cui:</p>
+<p class="Normal3">e<span class="hcp2">t,h</span> coefficiente rappresentativo degli effetti tridimensionali</p>
+<p class="Normal3">E(z) modulo elastico (di Young) del terreno alla generica z del palo</p>
+<p class="Normal3">DP diametro del palo</p>
+<p>In seguito sono riportate le relazioni proposte da vari autori ed implementate:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1"><span class="hcp1">Vesic (1961)</span> (H. G. PUOLOS E. H. DAVIS - Analisi e progettazione di fondazioni su pali - Dario Flaccovio Editore, Palermo 2005. Pag. 180).</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1"><span class="hcp1">Broms (1964)</span> per terreni classificati come coesivi (H. G. PUOLOS E. H. DAVIS - Analisi e progettazione di fondazioni su pali - Dario Flaccovio Editore, Palermo 2005. Pag. 180).</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1"><span class="hcp1">Glick (1961)</span> (J. E. BOWLES - Fondazioni, progetto e analisi - McGraw-Hill, Milano 1991. Pag. 848).</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1"><span class="hcp1">Chen (1961)</span> per terreni classificati come coesivi o incoerenti (J. E. BOWLES - Fondazioni, progetto e analisi - McGraw-Hill, Milano 1991. Pag. 848).</p>
+</li>
+</ul>
+<p>È possibile infine considerare la risposta elastica del terreno, in funzione della profondità, sulla base di caratteristiche elastiche che prescindono dai parametri della stratigrafia. In seguito sono riportate le relazioni implementate:</p>
+<p>kh(z) = a + b * (z/DP)^n [forma binomia esponenziale]</p>
+<p>kh(z) = a + b * tan-1(z/DP) [forma binomia trigonometrica]</p>
+<p>kh(z) = a * (z/LP)^n [Palmer e Thompson (1948)]</p>
+<p>La valutazione dei parametri a, b, n è ad onere del progettista e deve essere fatta in funzione del metodo utilizzato.</p>
+</body>
+</html>

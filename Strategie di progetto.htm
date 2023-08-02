@@ -1,0 +1,335 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Strategie di progetto</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-style:italic; }
+span.hcp3 { font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Strategie di progetto</h1>
+<p>ModeSt progetta l'armatura dei pilastri seguendo determinate strategie 
+ completamente definibili dall'utente.</p>
+<p>Una strategia consiste in una serie di armature ammissibili da testare 
+ e fra le quali ModeSt può scegliere la più adatta.</p>
+<p>Per modificare le strategie di progetto occorre:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">editare il file STRATEG.SRC 
+	 presente nella cartella FILES con riferimento a quanto specificato 
+	 in seguito</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">salvare il file STRATEG.SRC 
+	 e compilarlo con il comando COMPILA impartito da una finestra Ms-Dos 
+	 dalla cartella FILES</p></li>
+</ol>
+<p>Il modo più semplice per definire una strategia potrebbe essere quello 
+ di elencare direttamente le armature ammissibili (ad esempio 4Ø12, poi 
+ 4Ø14, poi 4Ø16, ecc.) ma sono permessi comportamenti molto più sofisticati.</p>
+<p>Una strategia è infatti composta da più schemi d'armatura (ognuno dei 
+ quali genera una o più armature reali) e dalla sequenza dei test da effettuare.</p>
+<p>Una strategia è definita nel seguente modo (le parole in <span class="hcp1">MAIUSCOLO 
+ GRASSETTO</span> sono parole chiave, le parti successive al simbolo ' 
+ <span class="hcp2">scritte in corsivo sono commenti</span>, 
+ le parti fra [ ] possono essere omesse):</p>
+<p class="ParametriComando">&#160;</p>
+<p class="ParametriComando"><span class="hcp1">STRATEGIA</span> 
+ nome N ' <span class="hcp2">nome : identifica la strategia, 
+ N : numero massimo di spigoli per cui è valida la strategia</span></p>
+<p class="ParametriComando"><span class="hcp1">SCHEMA</span> 
+ nome_schema1 ' <span class="hcp2">schema di armatura</span></p>
+<p class="ParametriComando">...... ' <span class="hcp2">linee 
+ di definizione schema</span></p>
+<p class="ParametriComando">......</p>
+<p class="ParametriComando">......</p>
+<p class="ParametriComando"><span class="hcp1">SCHEMA</span> 
+ nome_schema2 ' <span class="hcp2">schema di armatura</span></p>
+<p class="ParametriComando">......</p>
+<p class="ParametriComando">......</p>
+<p class="ParametriComando">......</p>
+<p class="ParametriComando"><span class="hcp1">SCHEMA</span> 
+ nome_schema3 ' <span class="hcp2">schema di armatura</span></p>
+<p class="ParametriComando">......</p>
+<p class="ParametriComando">......</p>
+<p class="ParametriComando">......</p>
+<p>e così via con altri schemi d'armatura.</p>
+<p class="ParametriComando">&#160;</p>
+<p class="ParametriComando">[<span class="hcp1">FOR</span> 
+ var = iniz <span class="hcp1">TO</span> fine [<span class="hcp1">STEP</span> 
+ passo]]</p>
+<p class="ParametriComando" style="margin-left: 40px;"><span class="hcp1">PROVA</span> 
+ nome_schema1 var ' <span class="hcp2">la variabile var 
+ assume i valori specificati nel FOR</span></p>
+<p class="ParametriComando">[<span class="hcp1">NEXT</span>]</p>
+<p class="ParametriComando">[<span class="hcp1">FOR</span> 
+ var = iniz <span class="hcp1">TO</span> fine [<span class="hcp1">STEP</span> 
+ passo]]</p>
+<p class="ParametriComando" style="margin-left: 40px;"><span class="hcp1">PROVA</span> 
+ nome_schema2 var</p>
+<p class="ParametriComando">[<span class="hcp1">NEXT</span>]</p>
+<p>e così via con altri test d'armatura.</p>
+<p>Le istruzioni <span class="hcp1">FOR</span> consentono 
+ di specificare i dati variabili utilizzando cicli, in cui la variabile 
+ &quot;var&quot; assume tutti valori compresi fra &quot;iniz&quot; e &quot;fine&quot; 
+ procedendo con passo &quot;passo&quot;. Se &quot;STEP passo&quot; non 
+ è specificato, si assume 1.</p>
+<p>Deve essere lasciato almeno uno spazio fra le varie indicazioni di FOR, 
+ var, =, iniz, TO, fine, STEP, passo.</p>
+<p>Le linee di definizione degli schemi possono essere di due tipi:</p>
+<p>linee &quot;<span class="hcp1">sp</span>&quot;</p>
+<p class="ParametriComando"><span class="hcp1">sp *</span> 
+ '<span class="hcp2">tutti gli spigoli</span></p>
+<p class="ParametriComando"><span class="hcp1">sp %</span> 
+ '<span class="hcp2">spigolo variabile che sarà indicato 
+ in seguito</span></p>
+<p class="ParametriComando"><span class="hcp1">sp</span> 
+ N '<span class="hcp2">spigolo numero N (dove N è un intero)</span></p>
+<p>linee &quot;<span class="hcp1">lt</span>&quot;</p>
+<p class="ParametriComando"><span class="hcp1">lt *</span> 
+ '<span class="hcp2">tutti i lati</span></p>
+<p class="ParametriComando"><span class="hcp1">lt %</span> 
+ '<span class="hcp2">lato variabile che sarà indicato in 
+ seguito</span></p>
+<p class="ParametriComando"><span class="hcp1">lt</span> 
+ <span class="hcp3">N</span> '<span class="hcp2">lato 
+ dallo spigolo numero N (dove N è un intero) allo spigolo numero N+1</span></p>
+<p>Su ogni linea occorre poi specificare il diametro del ferro:</p>
+<p class="ParametriComando">&#160;</p>
+<p class="ParametriComando"><span class="hcp1">d *</span> 
+ '<span class="hcp2">tutti i diametri</span></p>
+<p class="ParametriComando"><span class="hcp1">d %</span> 
+ '<span class="hcp2">diametro variabile che sarà indicato 
+ in seguito</span></p>
+<p class="ParametriComando"><span class="hcp1">d</span> N 
+ '<span class="hcp2">diametro del ferro N (dove N è un intero) 
+ in mm</span></p>
+<p>Nota: Se l'indicazione del diametro è omessa, si assume <span class="hcp1">d 
+ *</span></p>
+<p>Nelle linee di spigolo occorre specificare la posizione:</p>
+<p class="ParametriComando">&#160;</p>
+<p class="ParametriComando"><span class="hcp1">p o</span> 
+ '<span class="hcp2">esattamente nello spigolo</span></p>
+<p class="ParametriComando"><span class="hcp1">p +</span> 
+ <span style="font-style: normal;">'</span><span class="hcp2">spostato 
+ verso lo spigolo successivo (una volta)</span></p>
+<p class="ParametriComando"><span class="hcp1">p ++</span> 
+ '<span class="hcp2">spostato verso lo spigolo successivo 
+ (due volte)</span></p>
+<p class="ParametriComando"><span class="hcp1">p +++</span> 
+ '<span class="hcp2">in generale tante volte quanti sono 
+ i simboli +</span></p>
+<p class="ParametriComando"><span class="hcp1">p -</span> 
+ '<span class="hcp2">come sopra ma verso lo spigolo precedente</span></p>
+<p class="ParametriComando"><span class="hcp1">p /</span> 
+ '<span class="hcp2">come sopra ma lungo la bisettrice dell'angolo</span></p>
+<p>Nelle linee di lato occorre specificare il numero di ferri da inserire:</p>
+<p class="ParametriComando">&#160;</p>
+<p class="ParametriComando"><span class="hcp1">n %</span> 
+ '<span class="hcp2">numero variabile che sarà indicato 
+ in seguito</span></p>
+<p class="ParametriComando"><span class="hcp1">n</span> N 
+ '<span class="hcp2">numero N (dove N è un intero). Il numero 
+ dei ferri di lato è calcolato automaticamente in modo da distanziare i 
+ ferri di lato al massimo N in mm (ad esempio N 200 vuol dire un ferro 
+ ogni 20 cm)</span></p>
+<p class="ParametriComando"><span class="hcp1">n -</span>N 
+ '<span class="hcp2">sul lato vengono messi N ferri</span></p>
+<p>Se al termine della linea che descrive una o più posizioni di spigolo 
+ viene aggiunto il simbolo <span class="hcp1">F</span> (ferro 
+ <span class="hcp1">F</span>isso) nel corso della progettazione 
+ per pilastri prefabbricati (con ferri andanti) i ferri generati non verranno 
+ interrotti in alcun caso.</p>
+<p>Questo consente ad esempio la forzatura della presenza fissa di uno 
+ o più ferri interni per incrementare la resistenza al fuoco.</p>
+<p>Nelle strategie per pilastri circolari devono comparire solo linee di 
+ lato.</p>
+<p>Negli esempi che seguono si riportano quattro metodi diversi per definire 
+ una strategia che tenta prima con 1Ø12 per ogni spigolo e poi con 1Ø14 
+ per ogni spigolo, valida per sezioni con 4 spigoli (rettangolari).</p>
+<p><span class="hcp3">STRATEGIA banale1 4</span></p>
+<p class="Rientro1">SCHEMA num_1</p>
+<p class="Rientro1-2">sp 1 d 12 p o</p>
+<p class="Rientro1-2">sp 2 d 12 p o</p>
+<p class="Rientro1-2">sp 3 d 12 p o</p>
+<p class="Rientro1-2">sp 4 d 12 p o</p>
+<p class="Rientro1">SCHEMA num_2</p>
+<p class="Rientro1-2">sp 1 d 14 p o</p>
+<p class="Rientro1-2">sp 2 d 14 p o</p>
+<p class="Rientro1-2">sp 3 d 14 p o</p>
+<p class="Rientro1-2">sp 4 d 14 p o</p>
+<p class="Normal2">PROVA num_1</p>
+<p class="Normal2">PROVA num_2</p>
+<p>STRATEGIA banale2 4 '<span class="hcp2">identica alla 
+ precedente ma espressa in modo più semplice in quanto il simbolo * in 
+ corrispondenza di sp indica di utilizzare i valori per tutti gli spigoli. 
+ Espressa in questo modo la strategia è valida anche per sezioni con più 
+ di 4 spigoli (è sufficiente modificare il numero 4 accanto al nome 'banale2')</span></p>
+<p class="Rientro1">SCHEMA num_1</p>
+<p class="Rientro1-2">sp * d 12 p o</p>
+<p class="Rientro1">SCHEMA num_2</p>
+<p class="Rientro1-2">sp * d 14 p o</p>
+<p class="Normal2">PROVA num_1</p>
+<p class="Normal2">PROVA num_2</p>
+<p>STRATEGIA banale3 4 '<span class="hcp2">identica alla 
+ precedente ma espressa in modo più semplice utilizzando il simbolo % per 
+ indicare un diametro variabile</span></p>
+<p class="Rientro1">SCHEMA num_1</p>
+<p class="Rientro1-2">sp * d % p o</p>
+<p class="Normal2">PROVA num_1 12 '<span class="hcp2">il 
+ valore 12 viene sostituito al simbolo %</span></p>
+<p class="Normal2">PROVA num_2 14</p>
+<p>STRATEGIA banale4 4 'identica alla precedente ma espressa in modo più 
+ semplice</p>
+<p class="Rientro1">SCHEMA num_1</p>
+<p class="Rientro1-2">sp * d % p o</p>
+<p class="Normal2">FOR j = 12 TO 14</p>
+<p class="Rientro1">PROVA num_1 j '<span class="hcp2">il 
+ valore di j (prima 12, poi 14) viene sostituito al simbolo %</span></p>
+<p class="Normal2">NEXT</p>
+<p>È anche possibile esprimere i diametri non in modo diretto, ma con riferimento 
+ ai valori specificati nei criteri di progetto (vedi <span class="hcp1"><a 
+	 href="CriPil.htm#Elenco_diametri_ferri_longitudinali">Elenco diametri 
+ ferri longitudinali</a></span>). Volendo ad esempio nell'ultimo esempio 
+ non utilizzare i diametri 12 e 14, ma i primi due diametri specificati 
+ nei criteri di progetto, è sufficiente modificare il ciclo nel seguente 
+ modo:</p>
+<p>STRATEGIA banale4 5 '<span class="hcp2">con diametri 
+ riferiti al criterio di progetto</span></p>
+<p class="Rientro1">SCHEMA num_1</p>
+<p class="Rientro1-2">sp * d % p o</p>
+<p class="Normal2">FOR j = 1 TO 2</p>
+<p class="Rientro1">PROVA num_1 (j) '<span class="hcp2">il 
+ valore di (j) viene sostituito con il j-esimo diametro del criterio di 
+ progetto</span></p>
+<p class="Normal2">NEXT</p>
+<p>In tal caso il valore finale del FOR può essere al massimo 7, poiché 
+ tanti sono i diametri specificabili nei criteri di progetto. Qualora nei 
+ criteri siano stati specificati un minor numero di diametri, i valori 
+ eccedenti vengono ignorati.</p>
+<p>Esaminiamo ora in dettaglio una strategia in cui si vuole operare nel 
+ seguente modo:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">tentare con un ferro di spigolo 
+	 con tutti i diametri</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">tentare con 3 ferri di spigolo 
+	 con tutti i diametri</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">tentare con un ferro di spigolo 
+	 di basso diametro più ferri di lato fino ad un interasse minimo di 
+	 10 cm fra ferri</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">come al punto 3 ma con 3 ferri 
+	 di spigolo</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">come al punto 3 ma con ferri 
+	 di alto diametro</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">come al punto 4 ma con ferri 
+	 di alto diametro</p></li>
+</ol>
+<p>STRATEGIA Standard 8 '<span class="hcp2">valida fino 
+ a 8 spigoli</span></p>
+<p class="Rientro1">SCHEMA Caso1</p>
+<p class="Rientro1-2">sp * d % p o '<span class="hcp2">un 
+ ferro di spigolo</span></p>
+<p class="Rientro1">SCHEMA Caso2</p>
+<p class="Rientro1-2">sp * d % p o '<span class="hcp2">ferro 
+ di spigolo</span></p>
+<p class="Rientro1-2">sp * d % p + '<span class="hcp2">ferro 
+ di spigolo aggiuntivo destro</span></p>
+<p class="Rientro1-2">sp * d % p - '<span class="hcp2">ferro 
+ di spigolo aggiuntivo sinistro</span></p>
+<p class="Rientro1">SCHEMA Caso3</p>
+<p class="Rientro1-2">sp * d % p o '<span class="hcp2">ferro 
+ di spigolo</span></p>
+<p class="Rientro1-2">lt * d % n % '<span class="hcp2">ferro 
+ di lato a distanza n</span></p>
+<p class="Rientro1">SCHEMA Caso4</p>
+<p class="Rientro1-2">sp * d % p o '<span class="hcp2">ferro 
+ di spigolo</span></p>
+<p class="Rientro1-2">sp * d % p + '<span class="hcp2">ferro 
+ di spigolo aggiuntivo destro</span></p>
+<p class="Rientro1-2">sp * d % p - '<span class="hcp2">ferro 
+ di spigolo aggiuntivo sinistro</span></p>
+<p class="Rientro1-2">lt * d % n % '<span class="hcp2">ferro 
+ di lato a distanza n</span></p>
+<p class="Normal2">'<span class="hcp2">tentativo 1</span></p>
+<p class="Normal2">FOR j = 1 TO 7 '<span class="hcp2">per 
+ tutti i diametri del criterio</span></p>
+<p class="Rientro1">PROVA Caso1 (j) '<span class="hcp2">prova 
+ con 1Ø(j) per spigolo</span></p>
+<p class="Normal2">NEXT</p>
+<p class="Normal2">'<span class="hcp2">tentativo 2</span></p>
+<p class="Normal2">FOR j = 1 TO 7 '<span class="hcp2">per 
+ tutti i diametri del criterio</span></p>
+<p class="Rientro1">PROVA Caso2 (j) '<span class="hcp2">prova 
+ con 3Ø(j) per spigolo</span></p>
+<p class="Normal2">NEXT</p>
+<p class="Normal2">'<span class="hcp2">tentativo 3</span></p>
+<p class="Normal2">FOR j = 1 TO 3 '<span class="hcp2">per 
+ i primi 3 diametri del criterio</span></p>
+<p class="Rientro1">FOR i = 300 to 100 step -50</p>
+<p class="Rientro1-2">PROVA Caso3 (j) i '<span class="hcp2">prova 
+ con 1Ø(j) per spigolo e ferri ogni 300,250,200,150,100 mm</span></p>
+<p class="Rientro1">NEXT</p>
+<p class="Normal2">NEXT</p>
+<p class="Normal2">'<span class="hcp2">tentativo 4</span></p>
+<p class="Normal2">FOR j = 1 TO 3 '<span class="hcp2">per 
+ i primi 3 diametri del criterio</span></p>
+<p class="Rientro1">FOR i = 300 to 100 step -50</p>
+<p class="Rientro1-2">PROVA Caso4 (j) i '<span class="hcp2">prova 
+ con 3Ø(j) per spigolo e ferri ogni 300,250,200,150,100 mm</span></p>
+<p class="Rientro1">NEXT</p>
+<p class="Normal2">NEXT</p>
+<p class="Normal2">'<span class="hcp2">tentativo 5</span></p>
+<p class="Normal2">FOR j = 4 TO 7 '<span class="hcp2">per 
+ gli ultimi 3 diametri del criterio</span></p>
+<p class="Rientro1">FOR i = 300 to 100 step -50</p>
+<p class="Rientro1-2">PROVA Caso3 (j) i '<span class="hcp2">prova 
+ con 1Ø(j) per spigolo e ferri ogni 300,250,200,150,100 mm</span></p>
+<p class="Rientro1">NEXT</p>
+<p class="Normal2">NEXT</p>
+<p class="Normal2">'<span class="hcp2">tentativo 6</span></p>
+<p class="Normal2">FOR j = 4 TO 7 '<span class="hcp2">per 
+ gli ultimi 3 diametri del criterio</span></p>
+<p class="Rientro1">FOR i = 300 to 100 step -50</p>
+<p class="Rientro1-2">PROVA Caso4 (j) i '<span class="hcp2">prova 
+ con 3Ø(j) per spigolo e ferri ogni 300,250,200,150,100 mm</span></p>
+<p class="Rientro1">NEXT</p>
+<p class="Normal2">NEXT</p>
+<p>Scambiando l'ordine dei tentativi è possibile creare una strategia che 
+ abbia meno &quot;propensione&quot; ad armare con tre ferri di spigolo, 
+ ma che prima tenti di inserire ferri di lato. Sarebbe sufficiente scambiare 
+ di posizione i tentativi 2 e 3.</p>
+<p>Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">ferri di lato di diametro 
+	 minimo vengono sempre aggiunti per rispettare i minimi di regolamento 
+	 sulla mutua distanza fra ferri;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">se uno spigolo od un lato 
+	 non sono esplicitamente definiti, in questi non vengono posti ferri;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">l'ordine in cui vengono definiti 
+	 gli schemi dei ferri è importante per la corretta sequenza di tentativo. 
+	 Nel progetto con tipologia &quot;prefabbricato&quot;, poiché l'armatura 
+	 di piede viene estesa (con eventuale eliminazione di alcuni ferri) 
+	 fino alla testa del pilastro, ModeSt tenta tutte le disposizioni e 
+	 poi sceglie, fra tutte le armature, quella che minimizza il peso complessivo 
+	 del ferro. Solo in tal caso quindi la sequenza non è importante;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">i commenti iniziano con il 
+	 carattere ' (apice) e finiscono con il termine della riga;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">gli spazi all'inizio ed alla 
+	 fine della riga vengono ignorati;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="margin-bottom: 0;">non 
+	 esiste differenza tra maiuscolo e minuscolo.</p></li>
+</ul>
+</body>
+</html>

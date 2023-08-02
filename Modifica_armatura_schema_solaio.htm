@@ -1,0 +1,92 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Modifica armatura schema solaio</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp3 { font-family:Symbol, serif; }
+span.hcp4 { font-family:Verdana, sans-serif; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Modifica armatura schema solaio</h1>
+<p>In progettazione interattiva per ogni schema di solaio è possibile modificare 
+ l'armatura proposta, inserire in campata dei carichi concentrati e/o rompitratta 
+ (note anche come corree di ripartizioni), specificare la larghezza di 
+ eventuali fasce piene all'estremità di ogni singola campata. La procedura 
+ è utilizzabile solo per schemi di solaio già progettati automaticamente. 
+ Le modifiche si effettuano tramite la finestra di dialogo (riportata di 
+ seguito) che si apre cliccando nel gruppo <span class="hcp1">Armatura</span> 
+ su <span class="hcp1">Modifica <img src="../Icone/16/modificaarmschema.png" alt="" border="1" class="hcp2"></span> 
+ oppure attraverso il tasto destro sulla linea tratteggiata che rappresenta 
+ lo <a href="Definizione%20schemi%20di%20calcolo%20dei%20solai.htm">schema di calcolo</a> 
+ del solaio.</p>
+<p>Si consiglia di definire prima tutti gli schemi di calcolo dei solai, 
+ progettare l'armatura cliccando nel gruppo <span class="hcp1">Generali</span> 
+ su <span class="hcp1">Progetta aut. <img src="../Icone/16/arma.png" alt="" border="1" class="hcp2"></span> 
+ e successivamente apportare le modifiche poiché se aggiungete uno schema 
+ ed eseguite la progettazione automatica questa annulla tutte le modifiche 
+ effettuate.</p>
+<p style="text-align: center;"><img src="EDAH.gif" alt="" style="border: none;" width="700" height="519" border="0"></p>
+<p>La finestra di dialogo si presenta suddivisa essenzialmente in due parti, 
+ quella superiore in cui viene riportato sia il disegno dell'armatura del 
+ solaio che una tabella con la descrizione dell'armatura per ogni appoggio 
+ e campata del solaio; quella inferiore per la modifica dell'armatura, 
+ l'inserimento di eventuali carichi e/o rompitratta e la specifica della 
+ larghezza di un'eventuale fascia piena alle estremità della campata.</p>
+<p>Selezionando l'appoggio o la campata, nella parte superiore della finestra 
+ di dialogo, cliccando con il cursore grafico sul disegno dell'armatura 
+ del solaio (si veda il punto A riportato nella figura soprastante) o all'interno 
+ della colonna della tabella (si veda il punto B riportato nella figura 
+ soprastante) è possibile effettuare le suddette modifiche.</p>
+<p>I parametri richiesti nella finestra di dialogo hanno il seguente significato:</p>
+<p><span class="hcp1">Ferri Appoggi:</span> si possono inserire 
+ al massimo 3 ferri. I ferri su appoggi intermedi possono avere lunghezze 
+ diverse a destra a sinistra rispetto all'asse della trave o del muro. 
+ La lunghezza sinistra e destra dei ferri non può essere maggiore della 
+ luce della campata adiacente ed inferiore a quella necessaria per soddisfare 
+ le verifiche (valore impostato automaticamente dal programma). Per i ferri 
+ sugli appoggi d'estremità la lunghezza è invece quella totale. La modifica 
+ dei ferri degli sbalzi si effettua cambiando l'armatura dell'appoggio 
+ adiacente lo sbalzo.</p>
+<p><span class="hcp1">Ferri Campata:</span> si possono inserire 
+ al massimo 3 ferri. I ferri sono sempre centrati rispetto alla campata 
+ e non possono essere più lunghi della sua luce.</p>
+<p><span class="hcp1">Carichi e rompitratta:</span> all'interno 
+ della campata è possibile inserire i soli carichi, i soli rompitratta 
+ oppure entrambi. Sia i carichi che i rompitratta possono essere posizionati 
+ ad una distanza baricentrica &quot;X&quot; misurata dall'inizio della 
+ campata. Si possono applicare esclusivamente carichi in senso ortogonale 
+ all'orditura del solaio. Tali carichi, a metro lineare, possono avere 
+ un'aliquota permanente &quot;Perm.&quot; e un'aliquota &quot;Acc.&quot; 
+ e sono applicati in modo uniforme su di una lunghezza &quot;Lcar&quot; 
+ misurata parallelamente all'orditura del solaio; i carichi possono ad 
+ esempio rappresentare il peso a metro lineare dei tramezzi trasversali 
+ all'orditura del solaio (per ulteriori chiarimenti si consulti anche il 
+ tutorial <span class="hcp1"><a href="Guida.chm::/Progettazione_interattiva_armature_solai.htm">Progettazione 
+ interattiva armature solai</a></span>). Il rompitratta è un elemento trasversale 
+ al solaio con sezione di base &quot;Br&quot; e altezza &quot;Hr&quot;, 
+ armato con &quot;Nfr&quot; ferri longitudinali (specificando ad esempio 
+ 2 si intende il travetto armato sia con 2 ferri superiori che inferiori) 
+ di diametro &quot;<span class="hcp3">F</span>r&quot; 
+ e staffe di diametro &quot;<span class="hcp3">F</span><span class="hcp4">s</span>r&quot; con passo 
+ &quot;<span class="hcp4">Ps</span>r&quot;. 
+ La sezione del rompitratta viene verificata a flessione con un momento 
+ flettente ricavato da una formula semi-empirica del Prof. Turrini (Università 
+ di Padova): M = 1/alpha*Q*L<span style="vertical-align: Super;">3</span> 
+ dove: alpha è un coefficiente pari a 250, Q è il carico a metro quadrato 
+ applicato sul solaio, L è la luce della campata del solaio.</p>
+</body>
+</html>

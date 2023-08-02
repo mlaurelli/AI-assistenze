@@ -1,0 +1,77 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Carichi verticali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-family:Symbol, serif; }
+span.hcp2 { vertical-align:Sub; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Carichi verticali</h1>
+<p>Il calcolo dei cedimenti viene effettuato attraverso un'analisi dell'interazione 
+ palo terreno, il comportamento del palo è ipotizzato puramente elastico 
+ mentre il terreno ha comportamento elasto-plastico. Siano:</p>
+<p>LP lunghezza del palo;</p>
+<p>DP diametro del palo;</p>
+<p>RP raggio del palo;</p>
+<p>z profondità, da 0 (testa del palo) a LP (piede del palo);</p>
+<p>G(z) modulo elastico tangenziale del terreno alla generica z del palo;</p>
+<p>ni(z) coefficiente di Poisson del terreno alla generica z del palo.</p>
+<p>La risposta elastica del terreno sollecitato dall'attrito laterale col 
+ palo viene valutata in funzione delle caratteristiche deformative della 
+ stratigrafia: la tensione trasmessa per attrito laterale dal palo al terreno, 
+ modellato come mezzo elastico, è pari a:</p>
+<p><span class="hcp1">t</span>(z,r) = <span class="hcp1">t</span>(z,RP) 
+ * (RP/r)</p>
+<p>in cui, in un sistema di riferimento cilindrico, &quot;r&quot; rappresenta 
+ la distanza dall'asse del palo, mentre <span class="hcp1">t</span>(z,RP) 
+ è la tensione tangenziale sulla superficie di contatto fra palo e terreno.</p>
+<p>La deformazione indotta da tale tensione vale:</p>
+<p><span class="hcp1">g</span>(z,r) = <span class="hcp1">t</span>(z,r) 
+ / G(z) = = <span class="hcp1">t</span>(z,RP) * 
+ (RP/r) / G(z)</p>
+<p>integrando le deformazioni del terreno da r = RP a r = r<span class="hcp2">max</span>, 
+ con r<span class="hcp2">max</span> distanza dal centro 
+ del palo alla quale sono trascurabili le deformazioni indotte, si ottiene 
+ il cedimento totale in funzione di z:</p>
+<p>ced(z) = &#8747;<span class="hcp2">RP , rmax</span> [<span class="hcp1">g</span>(z,r)]dr = <span class="hcp1">t</span>(z,RP) 
+ * [RP / G(z)] * ln(r<span class="hcp2">max</span> / RP)</p>
+<p>La risposta elastica è quindi pari al rapporto fra la tensione tangenziale 
+ sulla superficie di contatto fra palo e terreno <span class="hcp1">t</span>(z,RP) 
+ e il cedimento ced(z) da essa indotto e risulta pari a:</p>
+<p>kvL(z) = [G(z) / RP] / ln(r<span class="hcp2">max</span> 
+ / RP)</p>
+<p>in cui ln(r<span class="hcp2">max</span> / RP) è un 
+ coefficiente di influenza delle tensioni indotte dal palo e la determinazione 
+ del suo valore è ad onere del progettista.</p>
+<p><span style="font-weight: bold;">Nota</span>: valori indicativi di ln(r<span class="hcp2">max</span> / RP) variano fra 3 e 5.</p>
+<p>La risposta elastica appena valutata è riferita a sollecitazioni di 
+ compressione sul palo, nel caso di trazione è necessario indicare un rapporto 
+ di elasticità trazione/compressione.</p>
+<p>La risposta elastica del terreno sollecitato dalla pressione alla base 
+ del palo viene valutata in funzione delle caratteristiche deformative 
+ della stratigrafia: il cedimento alla punta è assimilato a quello calcolato 
+ per una piastra rigida circolare su un semispazio elastico sottoposta 
+ ad una pressione pari a quella agente alla punta:</p>
+<p>ced(LP) = [(1-ni(LP))/4] * [q<span class="hcp2">p</span>(LP)*<span class="hcp1">p</span>*RP^2] / [G(LP)*RP]</p>
+<p>La risposta elastica è quindi pari al rapporto fra la pressione alla 
+ punta del palo e terreno q<span class="hcp2">p</span>(LP) 
+ e il cedimento ced(LP) da essa indotto e risulta pari a:</p>
+<p>kvP(z) = [(4/<span class="hcp1">p</span>)/(1-ni(LP))] 
+ * [G(LP) / RP]</p>
+<p>È possibile specificare da criterio di progetto&#160;la risposta elastica 
+ del terreno sollecitato sia per attrito laterale che per pressione alla 
+ base. In tal caso kvL e kvP sono calcolati dai valori di&#160;rigidezza&#160;specificati 
+ nei criteri, divisi per il raggio del palo.</p>
+</body>
+</html>

@@ -1,0 +1,221 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Filo fisso e scostamento dal filo fisso</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+img.hcp3 { border:none;
+margin-left:5px;
+margin-right:0px;
+margin-top:5px;
+margin-bottom:5px; }
+span.hcp4 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Filo fisso e scostamento dal filo fisso</h1>
+<p>Spesso non è semplice conciliare il posizionamento dei nodi e degli 
+ elementi (collegati ai nodi in posizione baricentrica) con la reale configurazione 
+ della struttura che specialmente nel caso del cemento armato presenta 
+ spesso disallineamenti e non convergenza ideale in un unico punto degli 
+ assi degli elementi.</p>
+<p>Restando fermo il fatto che qualora si effettui un calcolo agli elementi 
+ finiti lo schema strutturale trasferito al solutore sarà quello corrispondente 
+ ad una visualizzazione unifilare della struttura, ModeSt offre numerose 
+ possibilità per definire la reale posizione nello spazio degli elementi 
+ conciliandola con lo schema nodi – aste - bidimensionali e permettendo 
+ quindi sia la creazione di disegni esecutivi aderenti alla realtà, sia 
+ in alcuni casi l'utilizzo di alcune ipotesi di calcolo che meglio modellano 
+ il comportamento della struttura.</p>
+<p>Sia le aste che i bidimensionali hanno infatti fra le proprietà che 
+ li caratterizzano anche il <span class="hcp1">filo fisso</span> 
+ e lo <span class="hcp1">scostamento dal filo fisso</span>.</p>
+<p>Il <span class="hcp1">filo fisso</span> indica quale dei 
+ punti notevoli della sezione di un'asta o del profilo di un bidimensionale 
+ far coincidere con il nodo. Se questo non fosse sufficiente lo <span class="hcp1">scostamento 
+ dal filo fisso</span> permette, assegnando degli spostamenti relativi 
+ rispetto al filo fisso, di portare il punto sui cui insiste il nodo in 
+ qualsiasi posizione.</p>
+<p>Qualora il solutore agli elementi finiti lo consenta sarà poi possibile 
+ imporre a ModeSt di trasferire al solutore anche le informazioni relative 
+ alla reale posizione degli elementi (zone rigide, offset) sia in modo 
+ globale (utilizzando l'opzione <span class="hcp1">Calcolo 
+ con zone rigide</span>) che localmente per le singole aste (si veda <span class="hcp1"><a href="Parametri_aste.htm">Parametri 
+ asta</a></span>).</p>
+<p>La <span class="hcp1">modifica del filo fisso dell'asta</span> 
+ si può effettuare nei seguenti modi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Cliccando nel gruppo <span class="hcp1">Modifica</span> della scheda <span class="hcp1">Modellazione</span> 
+	 su <span class="hcp1">FF aste <img src="../Icone/16/mffa.png" alt="" border="1" class="hcp2"></span> 
+	 e selezionando l'estremità o la parte centrale dell'asta, muovendosi 
+	 poi lungo il cerchio, che compare intorno all'asta, fino a posizionarla 
+	 nel punto desiderato. Selezionando un'estremità si modifica solo il 
+	 filo fisso di quell'estremità e si dispone l'asta in posizione sbieca 
+	 mentre con la parte centrale si modificano entrambi i fili fissi e 
+	 quindi si trasla rigidamente l'intera asta. Se sono state selezionate 
+	 più aste la modifica del filo fisso di un'asta si ripercuote sulle 
+	 altre.</p></li>
+	<li class="p-Bullet1"><p><img src="Filo_fisso.GIF" alt="" align="right" border="0" class="hcp3">Selezionando 
+	 l'asta e con il menu (rappresentato in figura) che compare cliccando 
+	 sulla casella di riepilogo a discesa &quot;Filo fisso&quot; presente 
+	 nella sezione &quot;Aste&quot; del pannello <a href="Proprieta_correnti.htm"><span class="hcp1">Proprietà elementi selezionati</span></a>. 
+	 La modifica del filo fisso si esegue poi cliccando su una delle icone 
+	 presenti nel menu. Per assegnare un diverso filo fisso alle due estremità 
+	 dell'asta occorre cliccare sull'icona del lucchetto per sbloccare 
+	 il vincolo che impone il filo fisso iniziale uguale a quello finale.</p></li>
+	<li class="p-Bullet1"><p>Selezionando l'asta e copiando il filo fisso 
+	 da un'altra asta con il menu che compare cliccando sul testo &quot;Filo 
+	 fisso&quot; presente nella sezione &quot;Aste&quot; del pannello <a 
+	 href="Proprieta_correnti.htm"><span class="hcp1">Proprietà 
+	 elementi selezionati</span></a>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Con l'opzione <span class="hcp4">Proprietà</span> 
+	 del menu a comparsa che si ottiene cliccando col tasto destro sull'asta, 
+	 specificando il codice del filo fisso da assegnare. Il codice del 
+	 filo fisso è definito da due cifre, in cui la prima indica la posizione 
+	 del punto iniziale dell'asta, mentre la seconda indica la posizione 
+	 del punto finale dell'asta, sempre rispetto alle coordinate del nodo.</p></li>
+</ul>
+<p>La <span class="hcp1">modifica del filo fisso del muro/elemento 
+ bidimensionale</span> si può effettuare nei seguenti modi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><img src="Filo_fisso_bidi.gif" alt="" align="right" border="0" class="hcp3">Cliccando 
+	 nel gruppo <span class="hcp1">Modifica</span> della 
+	 scheda <span class="hcp1">Modellazione</span> su <span class="hcp1">FF bidi <img src="../Icone/16/mffb.png" alt="" border="1" class="hcp2"></span> e selezionando 
+	 l'estremità o la parte centrale del muro/elemento bidimensionale, 
+	 muovendosi poi lungo la linea, che compare a lato del muro/elemento 
+	 bidimensionale, fino a posizionarlo nel punto desiderato. Selezionando 
+	 un'estremità si modifica solo il filo fisso di quell'estremità e si 
+	 dispone il muro/elemento bidimensionale in posizione inclinata mentre 
+	 con la parte centrale si modificano entrambi i fili fissi e quindi 
+	 si trasla rigidamente il muro/elemento bidimensionale.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Selezionando il muro/elemento 
+	 bidimensionale e con il menu (rappresentato in figura) che compare 
+	 cliccando sulla casella di riepilogo a discesa &quot;Filo fisso&quot; 
+	 presente nella sezione &quot;Muri&quot; del pannello <a href="Proprieta_correnti.htm"><span class="hcp1">Proprietà elementi selezionati</span></a>. 
+	 La modifica del filo fisso si esegue poi cliccando su una delle icone 
+	 presenti nel menu. Per assegnare un diverso filo fisso alle due estremità 
+	 dell'asta occorre cliccare sull'icona del lucchetto per sbloccare 
+	 il vincolo che impone il filo fisso iniziale uguale a quello finale.</p></li>
+	<li class="p-Bullet1"><p>Selezionando il muro/elemento bidimensionale 
+	 e copiando il filo fisso da un altro muro/elemento bidimensionale 
+	 con il menu che compare cliccando sul testo &quot;Filo fisso&quot; 
+	 presente nella sezione &quot;Muri&quot; del pannello <a href="Proprieta_correnti.htm"><span class="hcp1">Proprietà elementi selezionati</span></a>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Con l'opzione <span class="hcp4">Proprietà</span> 
+	 del menu a comparsa che si ottiene cliccando col tasto destro sul 
+	 muro/elemento bidimensionale, specificando il codice del filo fisso 
+	 da assegnare. Il codice del filo fisso è definito da due cifre, in 
+	 cui la prima cifra indica la posizione del primo nodo dell'elemento 
+	 bidimensionale, mentre la seconda cifra indica la posizione del secondo 
+	 nodo, sempre rispetto alle coordinate del nodo.</p></li>
+</ul>
+<p><span class="hcp1">Nota</span>: gli elementi bidimensionali 
+ con più di 4 nodi devono avere lo stesso filo fisso iniziale e finale.</p>
+<p>La <span class="hcp1">modifica dello scostamento dal filo 
+ fisso dell'asta</span> si può effettuare nei seguenti modi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Cliccando nel gruppo <span class="hcp1">Modifica</span> della scheda <span class="hcp1">Modellazione</span> 
+	 su <span class="hcp1">SFF aste <img src="../Icone/16/msffa.png" alt="" border="1" class="hcp2"></span>, 
+	 selezionando l'asta e successivamente una delle linee che compaiono 
+	 all'interno dell'asta e poi spostandosi lungo le linee guida fino 
+	 a posizionarla nel punto desiderato. Sulle linee guida, disegnate 
+	 o in corrispondenza dei nodi o nel centro dell'asta, sono presenti 
+	 dei trattini generati automaticamente dal programma che rappresentano 
+	 la proiezione dei punti d'intersezione dell'asta con le altre aste. 
+	 Questi punti possono essere disattivati deselezionando l'opzione &quot;Scost. 
+	 su intersezioni&quot; del pannello <span class="hcp1">Parametri 
+	 modellazione/Ms-Cad</span> in modo da poter posizionare l'asta liberamente 
+	 basandosi sulle distanze del punto selezionato dal nodo. La precisione 
+	 delle distanze può essere settata attraverso l'opzione &quot;Arr. 
+	 coordinate&quot; del pannello <span class="hcp1">Parametri 
+	 modellazione/Ms-Cad</span>. Selezionando una linea interna all'asta 
+	 in corrispondenza di un'estremità dell'asta si modifica solo lo scostamento 
+	 dal filo fisso di quell'estremità e si dispone l'asta in posizione 
+	 sbieca mentre con le linee della parte centrale si modificano entrambi 
+	 gli scostamenti dal filo fisso e quindi si trasla rigidamente l'intera 
+	 asta. Se sono state selezionate più aste la modifica dello scostamento 
+	 dal filo fisso di un'asta si ripercuote sulle altre.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Selezionando l'asta e specificando 
+	 i valori dello scostamento dal filo fisso nelle caselle di testo relative 
+	 a &quot;Scostamento&quot; presenti nella sezione &quot;Aste&quot; 
+	 del pannello <a href="Proprieta_correnti.htm"><span class="hcp1">Proprietà 
+	 elementi selezionati</span></a>. Gli scostamenti positivi spostano 
+	 l'asta nella direzione positiva dell'asse locale.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Con l'opzione <span class="hcp4">Proprietà</span> 
+	 del menu a comparsa che si ottiene cliccando col tasto destro sull'asta, 
+	 specificando i valori dello scostamento dal filo fisso.</p></li>
+</ul>
+<p>La <span class="hcp1">modifica dello scostamento dal filo 
+ fisso del muro/elemento bidimensionale</span> si può effettuare nei seguenti 
+ modi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Cliccando nel gruppo <span class="hcp1">Modifica</span> della scheda <span class="hcp1">Modellazione</span> 
+	 su <span class="hcp1">SFF bidi <img src="../Icone/16/msffb.png" alt="" border="1" class="hcp2"></span>, 
+	 selezionando il muro/elemento bidimensionale e successivamente una 
+	 delle linee che compaiono all'interno del muro/elemento bidimensionale 
+	 e poi spostandosi lungo la linea guida fino a posizionarlo nel punto 
+	 desiderato. Sulla linea guida sono presenti dei trattini generati 
+	 automaticamente dal programma che rappresentano la proiezione dei 
+	 punti d'intersezione del muro/elemento bidimensionale con gli altri 
+	 muri/elementi bidimensionali. Questi punti possono essere disattivati 
+	 deselezionando l'opzione &quot;Scost. su intersezioni&quot; del pannello 
+	 <span class="hcp1">Parametri modellazione/Ms-Cad</span> 
+	 in modo da poter posizionare il muro/elemento bidimensionale liberamente 
+	 basandosi sulle distanze del punto selezionato dal nodo. La precisione 
+	 delle distanze può essere settata attraverso l'opzione &quot;Arr. 
+	 coordinate&quot; del pannello <span class="hcp1">Parametri 
+	 modellazione/Ms-Cad</span>. Selezionando una linea interna al muro/elemento 
+	 bidimensionale in corrispondenza di un'estremità del muro/elemento 
+	 bidimensionale si modifica solo lo scostamento dal filo fisso di quell'estremità 
+	 e si dispone il muro/elemento bidimensionale in posizione inclinata 
+	 mentre con le linee della parte centrale si modificano entrambi gli 
+	 scostamenti dal filo fisso e quindi si trasla rigidamente il muro/elemento 
+	 bidimensionale. Se sono stati selezionati più muri/elementi bidimensionale 
+	 la modifica dello scostamento dal filo fisso di un muro/elemento bidimensionale 
+	 si ripercuote sugli altri.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Selezionando il muro/elemento 
+	 bidimensionale e specificando i valori dello scostamento dal filo 
+	 fisso nelle caselle di testo relative a &quot;Scostamento&quot; presenti 
+	 nella sezione &quot;Muri&quot; del pannello <a href="Proprieta_correnti.htm"><span class="hcp1">Proprietà elementi selezionati</span></a>. 
+	 Gli scostamenti positivi spostano il muro/elemento bidimensionale 
+	 nella direzione positiva dell'asse locale Y.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Con l'opzione <span class="hcp4">Proprietà</span> 
+	 del menu a comparsa che si ottiene cliccando col tasto destro sul 
+	 muro/elemento bidimensionale, specificando i valori dello scostamento 
+	 dal filo fisso.</p></li>
+</ul>
+<p><span class="hcp1">Nota</span>: gli elementi bidimensionali 
+ con più di 4 nodi devono avere lo stesso scostamento dal filo fisso iniziale 
+ e finale.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/FAC.htm">FAC</a></span> 
+ (Filo fisso asta corrente),&#160;<span class="hcp1"><a href="../Comandi/AFA.htm">AFA</a></span> 
+ (Assegna filo fisso asta), <span class="hcp1"><a href="../Comandi/SFAC.htm">SFAC</a></span> 
+ (Scostamento filo fisso asta corrente), <span class="hcp1"><a 
+	 href="../Comandi/ASFA.htm">ASFA</a></span> (Assegna scostamento filo 
+ fisso asta),&#160;<span class="hcp1"><a href="../Comandi/FBC.htm">FBC</a></span> 
+ (Filo fisso muro/elemento bidimensionale corrente),&#160;<span class="hcp1"><a 
+	 href="../Comandi/AFB.htm">AFB</a></span> (Assegna filo fisso muro/elemento 
+ bidimensionale), <span class="hcp1"><a href="../Comandi/SFBC.htm">SFBC</a></span> 
+ (Scostamento filo fisso muro/elemento bidimensionale corrente), <span class="hcp1"><a href="../Comandi/ASFB.htm">ASFB</a></span> 
+ (Assegna scostamento filo fisso muro/elemento bidimensionale).</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Argomenti 
+ correlati: <span style="text-decoration: none; "><a href="Aste%20-%20connessione%20e%20posizione.htm">Aste 
+ - connessione e posizione</a></span></span></p>
+</body>
+</html>

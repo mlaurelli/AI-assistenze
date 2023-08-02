@@ -1,0 +1,526 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Verifiche effettuate</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+font.hcp2 { font-family:Symbol;
+text-transform:none; }
+font.hcp3 { font-family:Symbol; }
+span.hcp4 { vertical-align:sub; }
+span.hcp5 { font-family:Verdana, sans-serif; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Verifiche effettuate</h1>
+<p>Per strutture calcolate ai sensi del D.M. 14/02/92 o del D.M. 16/01/96, 
+ le verifiche vengono effettuate con il metodo delle tensioni ammissibili 
+ e agli stati limite secondo le Norme Tecniche CNR 10011/85 e successive 
+ modifiche. Per strutture calcolate ai sensi del D.M. 17/01/18 le verifiche 
+ vengono effettuate secondo la suddetta normativa e la Circolare esplicativa 
+ n. 7 del 21/01/19, oppure&#160;secondo la normativa Eurocodice numero 
+ 3 (EC3) in funzione del criterio di progetto <span class="hcp1"><a 
+	 href="CriGenAcc.htm#Verifiche_con_EC3">Verifiche con EC3</a></span>. 
+ Da notare che il sistema di riferimento di normativa adottato dalla CNR 
+ 10011/85 (assi X e Y) non corrisponde al sistema di riferimento locale 
+ adottato in ModeSt (assi Y e Z) in quanto l'asse X in ModeSt coincide 
+ con l'asse dell'asta. Il D.M. 17/01/18 e la Circolare esplicativa n. 7 
+ del 21/01/19 adottano invece la stessa nomenclatura degli assi adottata 
+ in ModeSt.</p>
+<p>Vengono effettuate le verifiche di stabilità anche di membrature costituite 
+ da più aste allineate purché abbiano stesso numero, stessa sezione e stessa 
+ rotazione. Se la membratura così definita è composta da un numero di aste 
+ maggiore di quanto specificato nel criterio di verifica relativo (vedi 
+ <span class="hcp1"><a href="Criacc.htm#Max_num_aste_membratura">Massimo 
+ numero aste costituenti unica membratura</a></span>), viene effettuata 
+ automaticamente la suddivisione in più membrature.</p>
+<p>Per strutture calcolate ai sensi del D.M. 17/01/18 in zona sismica, 
+ se richiesto dal criterio di progetto <a href="Criacc.htm#Effettua_le_verifiche_della_gerarchia_delle_resistenze_per_strutture_intelaiate"><span class="hcp1">Effettua le verifiche della gerarchia delle 
+ resistenze per strutture intelaiate</span></a>, vengono effettuate le 
+ verifiche previste al capitolo 7.5 solamente per gli elementi con membratura 
+ di tipo &quot;trave&quot;, purché prive di rotazione, e per gli elementi 
+ con membratura di tipo &quot;pilastro&quot;. Per la corretta individuazione 
+ delle lunghezze e delle incidenze per i controlli di gerarchia, occorre 
+ che le travi abbiano una numerazione che consenta (a parità di numero) 
+ l'individuazione automatica delle &quot;travate&quot; con relative campate 
+ e ricerca dei pilastri incidenti. Per pilastri suddivisi in più parti 
+ fra piano e piano, le verifiche vengono effettuate solo per la parte di 
+ pilastro immediatamente sottostante il nodo di incidenza con la travata.</p>
+<h2>CNR 10011/85 (D.M. 14/02/92 - D.M. 16/01/96)</h2>
+<p>Le verifiche effettuate sono le seguenti (con riferimento ai paragrafi 
+ della normativa):</p>
+<p class="Titolo7">Verifiche di resistenza (<span style="font-family: Symbol, serif; 
+													 text-transform: none;">s</span><span 
+	 style="text-transform: none;">, <font face="Symbol" class="hcp2">t</font>, 
+ <font face="Symbol" class="hcp2">s</font></span><span 
+	 style="text-transform: none; vertical-align: Sub;">id</span>)</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 6.2 (area effettiva 
+	 definita dal criterio di progetto <a href="Criacc.htm#Rapporto_fra_area_netta_e_area_nominale"><span class="hcp1">Rapporto fra area effettiva e area nominale</span></a>).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 6.3 (area netta 
+	 definita dal criterio di progetto <span class="hcp1"><a 
+	 href="Criacc.htm#Rapporto_fra_area_netta_e_area_nominale">Rapporto 
+	 fra area netta e area nominale</a></span>).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 6.5 (con riferimento 
+	 a 6.5.2.1 e coefficiente <font face="Symbol" class="hcp3">Y</font> 
+	 definito dai criteri di progetto <a href="Criacc.htm#Coeff_di_forma"><span class="hcp1">Coeff. di forma intorno all'asse Y (Z)</span></a>).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 6.6</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 6.7</p></li>
+</ul>
+<p class="Titolo7"><span class="hcp1">Verifiche di stabilità 
+ aste</span></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 7.2.2 (7.2.2.4) 
+	 con <font face="Symbol" class="hcp3">l</font> = Max 
+	 [<font face="Symbol" class="hcp3">l</font><span class="hcp4">y</span>, 
+	 <font face="Symbol" class="hcp3">l</font><span class="hcp4">z</span>] 
+	 calcolati con i coefficienti <font face="Symbol" class="hcp3">b</font><span class="hcp4">y</span> e <font face="Symbol" class="hcp3">b</font><span class="hcp4">z</span> definiti nei criteri di progetto 
+	 (vedi <a href="Criacc.htm#Ver_di_stab_globale_in_dir__Y__Z__locale"><span class="hcp1">Verifiche di stabilità globale nel piano 
+	 XZ (XY) locale</span></a>) o nei parametri asta. Le verifiche di stabilità 
+	 delle singole aste sono effettuate&#160;nei piani principali d'inerzia 
+	 o nei piani Y e Z locali della sezione in funzione di quanto specificato 
+	 nei criteri di progetto (vedi <span class="hcp1"><a 
+	 href="Criacc.htm#Verifica_nei_piani_principali">Verifica nei piani 
+	 principali</a></span>), quindi i riferimenti citati a Y e Z sono da 
+	 intendersi come riferimenti a <font face="Symbol" class="hcp3">x</font> 
+	 ed <font face="Symbol" class="hcp3">h</font> nel caso 
+	 di verifica nei piani principali.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 7.2.3 per aste accoppiate, 
+	 con riferimento ai paragrafi 7.2.3.2.1 o 7.2.3.4.1 in funzione del 
+	 criterio di progetto (vedi <span class="hcp1"><a href="Criacc.htm#Tipo_di_accoppiamento">Tipo 
+	 di accoppiamento aste composte</a></span>). Se richiesto <span style="font-weight: normal;">dal</span> 
+	 criterio di progetto (vedi <span class="hcp1"><a href="Criacc.htm#Interasse_calastrelli">Interasse 
+	 calastrelli o imbottiture</a></span>) l'interasse dei calastrelli 
+	 o delle imbottiture viene calcolato come una frazione del valore massimo 
+	 che soddisfa le limitazioni di snellezza locale di normativa. Viene 
+	 comunque imposta una divisione dell'asta in almeno tre campi (7.2.3.2.3).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 7.3.1 e 7.2.6.1 
+	 per tutte le sezioni indipendentemente dal fatto che l'asta sia inflessa, 
+	 semplicemente compressa o pressoinflessa.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 7.3.2 per le sezioni 
+	 a I, con riferimento ai paragrafi 7.3.2.2.1 o 7.3.2.2.2 per sezioni 
+	 laminate o per sezioni saldate-composte che non rispettano le limitazioni 
+	 indicate, con lunghezza dei campi compresi fra ritegni torsionali 
+	 calcolata in funzione del criterio di progetto (vedi <span class="hcp1"><a 
+	 href="Criacc.htm#Verifiche_di_stabilita_laterale">Verifiche di stabilità 
+	 laterale</a></span>).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 7.4.1 con riferimento 
+	 al paragrafo 7.4.1.2 con gli stessi coefficienti <font face="Symbol" class="hcp3">b</font> 
+	 adottati per le verifiche di cui al paragrafo 7.2.2 e coefficienti 
+	 <font face="Symbol" class="hcp3">Y</font> (di forma) 
+	 definiti nei criteri di progetto. Il momento viene definito lineare 
+	 se il coefficiente di secondo grado dell'equazione che lo definisce 
+	 è nullo in tutte le CCE. In caso di momento non lineare il momento 
+	 medio viene valutato come la media dei valori assoluti dei momenti 
+	 d'estremità e di campata, ed assunto con lo stesso segno del massimo 
+	 momento in valore assoluto.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 7.6.1 e 7.6.2 per 
+	 sezioni a I ed a C.</p></li>
+</ul>
+<p class="Titolo7">Verifiche di deformazione</p>
+<ul style="list-style: disc;">
+	<li class="p-Bullet1"><p class="Bullet1"><span style="text-transform: uppercase;">è</span> 
+	 possibile specificare nei criteri di progetto (vedi <span class="hcp1"><a 
+	 href="Criacc.htm#Trascura_deformazione_dovuta_al_sisma">Trascura deformazione 
+	 dovuta al sisma (T.A.)</a></span>) se considerare o meno le deformazioni 
+	 dovute al sisma.</p></li>
+</ul>
+<p class="Titolo7"><span class="hcp1">Verifiche di stabilità 
+ membrature</span></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 7.2.2 (7.2.2.4) 
+	 con <font face="Symbol" class="hcp3">l</font> = Max 
+	 [<font face="Symbol" class="hcp3">l</font><span class="hcp4">y</span>, 
+	 <font face="Symbol" class="hcp3">l</font><span class="hcp4">z</span>] 
+	 calcolati con i coefficienti <font face="Symbol" class="hcp3">b</font><span class="hcp4">y</span> e <font face="Symbol" class="hcp3">b</font><span class="hcp4">z</span> definiti nei criteri di progetto 
+	 (vedi <a href="Criacc.htm#Ver_di_stabilita_globale_intorno_all_asse_Y__Z_"><span class="hcp1">Verifiche di stabilità globale&#160;nel 
+	 piano XZ (XY) locale</span></a>) o risultanti dal calcolo in funzione 
+	 degli sforzi normali nelle varie aste come indicato nei criteri di 
+	 progetto (vedi <a href="Criacc.htm#Sforzo_normale_di_verifica"><span class="hcp1">Sforzo normale di verifica</span></a> e 
+	 <a href="Criacc.htm#Contributo_eventuali_sforzi_di_trazione"><span class="hcp1">Contributo eventuali sforzi di trazione</span></a>). 
+	 Le verifiche di stabilità delle membrature sono effettuate negli stessi 
+	 piani delle singole aste. Se la verifica avviene nei piani Y e Z la 
+	 snellezza viene aumentata (7.2.2.3.3) solo se specificato nei criteri 
+	 di progetto (vedi <span class="hcp1"><a href="Criacc.htm#Incremento_snellezza">Incremento 
+	 snellezza</a></span>).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 7.2.3 per aste accoppiate, 
+	 con riferimento ai paragrafi 7.2.3.2.1 o 7.2.3.4.1 in funzione del 
+	 criterio di progetto. Come interasse calastrelli viene assunto il 
+	 massimo fra quelli delle varie aste costituenti la membratura.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 7.3.1 e 7.2.6.1 
+	 per tutte le sezioni indipendentemente dal fatto che la membratura 
+	 sia inflessa, semplicemente compressa o pressoinflessa.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 7.3.2 per le sezioni 
+	 a I, con riferimento ai paragrafi 7.3.2.2.1 o 7.3.2.2.2 per sezioni 
+	 laminate o per sezioni saldate-composte che non rispettano le limitazioni 
+	 indicate, con lunghezza dei campi compresi fra ritegni torsionali 
+	 calcolata in funzione del criterio di progetto (vedi <span class="hcp1"><a 
+	 href="Criacc.htm#Verifiche_di_stabilita_laterale_memb">Verifiche di 
+	 stabilità laterale</a></span>).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 7.4.1 con riferimento 
+	 al paragrafo 7.4.1.2 con gli stessi coefficienti <font face="Symbol" class="hcp3">b</font> 
+	 adottati per le verifiche di cui al paragrafo 7.2.2 e coefficienti 
+	 <font face="Symbol" class="hcp3">Y</font> definiti 
+	 nei criteri di progetto. Il momento viene definito lineare se: 1) 
+	 ha andamento lineare in ognuna delle aste che compongono la membratura; 
+	 2) i valori dei momenti d'estremità di tutte le aste si discostano 
+	 meno di 10 kgm dal valore teorico che avrebbe un momento variabile 
+	 linearmente fra il momento iniziale della prima asta ed il momento 
+	 finale dell'ultima asta.</p></li>
+</ul>
+<h2>D.M. 17/01/18 - EC3 (Stati limite D.M. 17/01/18)</h2>
+<p>Si fa presente che la normativa chiama &quot;membratura&quot; quello 
+ che in ModeSt in realtà è una singola &quot;asta&quot;. In ModeSt le &quot;membrature&quot; 
+ sono un insieme di aste. Le verifiche denominate in seguito EC3 si riferiscono 
+ alla UNI EN 1993-1-1:2005 (corretta il 25/09/2008).</p>
+<p>Le verifiche effettuate sono le seguenti (con riferimento ai paragrafi 
+ della normativa):</p>
+<p class="Titolo7">Verifiche di resistenza</p>
+<p>Si veda il paragrafo 4.2.4.1.2 del D.M. 17/01/18. Nel caso di verifica 
+ con EC3 si veda il paragrafo 6.2.</p>
+<p><span class="hcp1">Nota</span>: nel seguito per &quot;sismoresistente&quot; 
+ si intende un elemento di una struttura per cui è stato fatto un calcolo 
+ sismico, in cui non sono richieste le semplificazioni per la zona 4 e 
+ il cui criterio di progetto richiede le verifiche di cui al punto 7 (vedi 
+ <a href="Criacc.htm#Effettua_le_verifiche_della_gerarchia_delle_resistenze_per_strutture_intelaiate"><span class="hcp1">Effettua le verifiche della gerarchia delle 
+ resistenze per strutture intelaiate</span></a>).</p>
+<p>Premesso che la classificazione delle sezioni viene effettuata per ogni 
+ sezione di verifica, come spiegato più in dettaglio nel capitolo <span class="hcp1"><a href="Classificazione_delle_sezioni.htm">Classificazione 
+ delle sezioni</a></span>, e che per le sezioni in classe 3 e 4 viene sempre 
+ effettuata solo la verifica tensionale (formula 4.2.4 del D.M. 17/01/18 
+ o 6.1 del EC3) si riportano in dettaglio le diverse verifiche effettuate 
+ da ModeSt, con alcune note e precisazioni.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Trazione</span></p></li>
+</ul>
+<p class="IndentBullet1">Verifica della relazione 4.2.5&#160;del D.M. 17/01/18 
+ o 6.5 del EC3 con il controllo di quanto indicato nelle relazioni 4.2.6 
+ e 4.2.7 del D.M. 17/01/18 o 6.6 e 6.7 del EC3 con area netta come definita 
+ dal criterio di progetto <a href="Criacc.htm#Rapporto_fra_area_effettiva_e_area_nominale" 
+							 style="font-weight: bold;">Rapporto fra area 
+ effettiva e area nominale</a>. Si noti che la nuova normativa ha cambiato 
+ denominazione quando si riferisce all'area depurata dai fori.</p>
+<p class="IndentBullet1">Verifica della relazione 4.2.8 del D.M. 17/01/18 
+ o 6.5.4 del EC8 solamente se elemento sismoresistente.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Compressione</span></p></li>
+</ul>
+<p class="IndentBullet1">Verifica della relazione 4.2.9&#160;del D.M. 14/01/08 
+ o 6.9 del EC3 con riferimento all'area nominale della sezione per le sezioni 
+ in classe 1, 2 e 3. Il calcolo con l'area efficace (relazione 4.2.10 secondo 
+ caso&#160;del D.M. 17/01/18 o 6.11 del EC3) è implicito nel calcolo tensionale 
+ effettuato per le sezioni in classe 4 sulla sezione ridotta per instabilità.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Flessione 
+	 monoassiale (retta)</p></li>
+</ul>
+<p class="IndentBullet1">Verifica della relazione 4.2.11&#160;del D.M. 
+ 14/01/08 o 6.12 del EC3 con riferimento alla relazione 4.2.12&#160;del 
+ D.M. 17/01/18 o 6.13 del EC3 per sezioni in classe 1 e 2. Le verifiche 
+ delle relazioni 4.2.13 e 4.2.14&#160;del D.M. 17/01/18 o 6.14 e 6.15 del 
+ EC3 sono implicite nel calcolo tensionale effettuato per le sezioni in 
+ classe 3 sulla sezione ridotta per instabilità e sulla sezione effettiva 
+ per sezioni in classe 4. Non viene controllata la verifica della relazione 
+ 4.2.15&#160;del D.M. 17/01/18 o 6.16 del EC3.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Taglio</p></li>
+</ul>
+<p class="IndentBullet1">Le aree resistenti a taglio per le verifiche in 
+ campo plastico delle sezioni in classe 1 e 2 vengono determinate come 
+ indicato nelle formule 4.2.18 e 4.2.23 del D.M. 17/01/18 o nel paragrafo 
+ 6.2.6 (3) del EC3.</p>
+<p class="IndentBullet1">In assenza di torsione le verifiche vengono quindi 
+ condotte con riferimento alle formule 4.2.16&#160;del D.M. 17/01/18 o 
+ 6.17 del EC3 e 4.2.17&#160;del D.M. 17/01/18 o 6.18 del EC3 per le sezioni 
+ in classe 1 e 2 ed in termini tensionali per le sezioni di classe 3 e 
+ 4 con la formula 4.2.26&#160;del D.M. 17/01/18 o 6.19 del EC3.</p>
+<p class="IndentBullet1">In presenza di torsione vengono applicate le formule 
+ 4.2.24 e 4.2.25 del D.M. 17/01/18&#160;o 6.26 e 6.27 e 6.28 del EC3 solamente 
+ per le sezioni da esse previste. Negli altri casi viene effettuata la 
+ verifica tensionale con la formula 4.2.26&#160;del D.M. 17/01/18 o 6.19 
+ del EC3 anche per le sezioni in classe 1.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Torsione</span></p></li>
+</ul>
+<p class="IndentBullet1">Non è gestita singolarmente, essendo le verifiche 
+ già implicite nelle verifiche a taglio e torsione. Il caso di torsione 
+ pura viene quindi gestito con un calcolo di tipo tensionale con la formula 
+ 4.2.26 (equivalente alla formula 4.2.4)&#160;o 6.19 del EC3.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Flessione 
+	 e taglio</p></li>
+</ul>
+<p class="IndentBullet1">Un esame della formula 4.2.32 del D.M. 17/01/18 
+ o della corrispondente al paragrafo 6.2.8 (3) del EC3, porta alle seguenti 
+ considerazioni:</p>
+<p class="IndentBullet1">Posto: Wpl,y= Wpl,ali+Wpl,anima</p>
+<p class="IndentBullet1">e notando che si ha: Wpl, anima= hw<span style="vertical-align: Super;">2</span>*tw/4</p>
+<p class="IndentBullet1">Ponendo in prima approssimazione: Av= hw*tw</p>
+<p class="IndentBullet1">Si nota che in pratica la formula 4.2.32 valuta 
+ una riduzione del Wpl,y di una quota parte dell'area resistente a taglio 
+ attraverso il coefficiente <span style="font-family: Symbol, serif;">r</span>. 
+ Questo permette di estendere l'applicabilità della formula 4.2.32 anche 
+ ad altre sezioni, facendo riferimento all'area resistente a taglio, valutata 
+ come nelle formule 4.2.18 – 4.2.23.</p>
+<p class="IndentBullet1">Con tali ipotesi i momenti ultimi ridotti per 
+ taglio per le sezioni in classe 1 e 2 vengono valutati come indicato nella 
+ formula 4.2.32 del D.M. 17/01/18 o 6.30 del EC3.</p>
+<ul>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Presso 
+	 o tenso flessione retta</p></li>
+</ul>
+<p class="IndentBullet1">Nel caso di sezioni in classe 1 o 2, per sezioni 
+ a I si utilizzano le formule 4.2.34 e 4.2.35&#160;del D.M. 17/01/18 o 
+ 6.37 e 6.38 del EC3, per sezioni rettangolari la formula 6.32 del EC3, 
+ per sezioni rettangolari cave le formule 6.39 e 6.40 del EC3, per le sezioni 
+ circolari e circolari cave con la formula 6.2 del EC3.</p>
+<p class="IndentBullet1">Tutti gli altri tipi di sezione e le sezioni in 
+ classe 3 e 4 vengono verificati in termini tensionali.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Presso 
+	 o tenso flessione biassiale</p></li>
+</ul>
+<p class="IndentBullet1">Per la presso-tenso flessione biassiale è possibile 
+ specificare da criterio di progetto se utilizzare i disposti del EC3 (più 
+ dettagliati) o quelli del D.M. 17/01/18 per determinare gli esponenti 
+ della formula 4.2.38.</p>
+<p class="IndentBullet1">Con i disposti del EC3 si usa quanto specificato 
+ al punto 6.41 per le sezioni in esso previsto, e i disposti della formula 
+ 4.2.39 negli altri casi.</p>
+<p class="IndentBullet1">Per tutti i casi non previsti e per le sezioni 
+ in classe 3 e 4 vengono effettuate verifiche in termini tensionali.</p>
+<ul>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Flessione, 
+	 taglio e sforzo assiale</p></li>
+</ul>
+<p class="IndentBullet1">Si eseguono le verifiche previste, del resto implicite 
+ in quanto esposto negli altri punti di normativa.</p>
+<p class="Titolo7">Verifiche di stabilità asta</p>
+<p>Si veda il paragrafo 4.2.4.1.3 del D.M. 17/01/18. Nel caso di verifica 
+ con EC3 si veda il paragrafo 6.3.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Aste 
+	 compresse (paragrafo 4.2.4.1.3.1 del D.M. 17/01/18 o 6.3.1 del EC3)</p></li>
+</ul>
+<p class="IndentBullet1">Vengono completamente controllati tutti i punti 
+ di normativa per le aste che risultano semplicemente compresse. La lunghezza 
+ libera di inflessione viene valutata con riferimento alla lunghezza dell'asta 
+ con <font face="Symbol" class="hcp3">l</font> = Max [<font face="Symbol" class="hcp3">l</font><span class="hcp4">y</span>, 
+ <font face="Symbol" class="hcp3">l</font><span class="hcp4">z</span>] 
+ calcolati con i coefficienti <font face="Symbol" class="hcp3">b</font><span class="hcp4">y</span> e <font face="Symbol" class="hcp3">b</font><span class="hcp4">z</span> definiti nei criteri di progetto 
+ (vedi <a href="Criacc.htm#Ver_di_stabilita_globale_intorno_all_asse_Y__Z_"><span class="hcp1">Verifiche di stabilità globale&#160;nel 
+ piano XZ (XY) locale</span></a>) o nei parametri asta. Le verifiche di 
+ stabilità delle singole aste sono effettuate&#160;nei piani principali 
+ d'inerzia o nei piani Y e Z locali della sezione in funzione di quanto 
+ specificato nei criteri di progetto (vedi <span class="hcp1"><a 
+	 href="Criacc.htm#Verifica_nei_piani_principali">Verifica nei piani 
+ principali</a></span>), quindi i riferimenti citati a Y e Z sono da intendersi 
+ come riferimenti a <font face="Symbol" class="hcp3">x</font> 
+ ed <font face="Symbol" class="hcp3">h</font> nel caso 
+ di verifica nei piani principali.</p>
+<ul>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Travi 
+	 inflesse (paragrafo 4.2.4.1.3.2&#160;del D.M. 17/01/18 o 6.3.2 del 
+	 EC3)</p></li>
+</ul>
+<p class="IndentBullet1">La verifica viene effettuata solo per le aste 
+ con sezione a I o a C indipendentemente dal fatto che abbiano o meno membratura 
+ di tipo &quot;trave&quot;. La lunghezza di calcolo viene calcolata in 
+ funzione della lunghezza dell'asta con interasse fra ritegni torsionali 
+ calcolata in funzione del criterio di progetto (vedi <span class="hcp1"><a 
+	 href="Criacc.htm#Verifiche_di_stabilita_laterale">Verifiche di stabilità 
+ laterale</a></span>). Il momento critico viene valutato come indicato 
+ nella formula C.4.2.30. In quest'ambito il coefficiente <span><font face="Symbol" class="hcp3">Y</font></span> deve essere valutato in funzione dei 
+ momenti di estremità di tutta la eventuale &quot;travata&quot; di cui 
+ l'asta in oggetto fa parte. Per travate suddivise in più parti può quindi 
+ essere necessario, per le aste che la compongono, specificare il valore 
+ di <span><font face="Symbol" class="hcp3">Y</font></span> 
+ attraverso i criteri di progetto.</p>
+<p class="IndentBullet1">La normativa non dà indicazioni su come valutare 
+ i coefficienti &#946; e <span><font face="Symbol" class="hcp3">l</font></span> 
+ presenti nella formula 4.2.51, ma fornisce solo dei suggerimenti, è quindi 
+ possibile personalizzare tali valori tramite i criteri di progetto.</p>
+<ul>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Membrature 
+	 inflesse e compresse (paragrafo 4.2.4.1.3.3&#160;del D.M. 17/01/18 
+	 o 6.3.3 del EC3)</p></li>
+</ul>
+<p class="IndentBullet1">Le verifiche vengono effettuate con riferimento 
+ al punto C4.2.4.1.3.3. Per sezioni a doppio I e per sezioni rettangolari 
+ cave si fa riferimento al <span class="hcp1">Metodo B</span>, 
+ per le sezioni circolari cave e a C al <span class="hcp1">Metodo 
+ A</span>.</p>
+<p class="IndentBullet1">Nel caso di verifica con EC3, per sezioni doppiamente 
+ simmetriche si eseguono secondo il paragrafo 6.3.3 utilizzando il Metodo 
+ 2 dell'Appendice B, per le sezioni circolari cave e a C viene utilizzato 
+ il <span class="hcp1">Metodo A</span> <span class="hcp5">della 
+ Circolare esplicativa n. 7 del 21/01/19</span>.</p>
+<p class="IndentBullet1">Le verifiche non vengono effettuate per le altre 
+ tipologie di sezioni in quanto non è possibile determinare il valore del 
+ momento critico (M<span class="hcp4">cr</span>).</p>
+<p class="IndentBullet1">Quando si utilizza il <span class="hcp1">Metodo 
+ B</span> è possibile modificare i coefficienti &#945;<span class="hcp4">my</span>, 
+ &#945;<span class="hcp4">mz</span>, &#945;<span class="hcp4">mt</span>, 
+ in funzione del reale andamento del momento tramite i criteri di progetto 
+ se non si vogliono usare quelli cautelativi proposti come default.</p>
+<p class="IndentBullet1">Sempre tramite criterio di progetto è possibile 
+ indicare quale delle due tabelle per il calcolo dei coefficienti &quot;k&quot; 
+ si debba utilizzare. ModeSt non può infatti stabilire quale sia il grado 
+ di vincolamento a torsione della sezione (presenza di solette, controventi, 
+ ecc.).</p>
+<p class="IndentBullet1">Si segnala che in alcune edizioni del D.M. 17/01/18 
+ (sia cartacee che elettroniche) la tabella C4.2.IV riporta valori errati 
+ per i coefficienti kzz, usando il pedice y anziché z per i parametri di 
+ calcolo.</p>
+<ul>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Stabilità 
+	 dei pannelli (paragrafo 4.2.4.1.3.4 del D.M. 17/01/18)</p></li>
+</ul>
+<p class="IndentBullet1">La stabilità dei pannelli soggetti a taglio (C.4.2.4.1.3.4.1) 
+ non viene attualmente verificata. Anche nel caso di verifica con EC3 non 
+ vengono effettuate.</p>
+<p class="IndentBullet1">La stabilità dei pannelli soggetti a compressione 
+ (C.4.2.4.1.3.4.1) è effettuata implicitamente con il calcolo della sezione 
+ efficace per le sezioni in classe 4.</p>
+<p class="Titolo7">Verifiche di stabilità membratura</p>
+<p class="Bullet1">Per le membrature definite in ModeSt (si veda <span class="hcp1"><a href="Criacc.htm#Max_num_aste_membratura">Massimo 
+ numero aste costituenti unica membratura</a></span>) vengono effettuate 
+ le verifiche di seguito elencate.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Aste 
+	 compresse (paragrafo 4.2.4.1.3.1 del D.M. 17/01/18 o 6.3.1 del EC3)</p></li>
+</ul>
+<p class="IndentBullet1">Vengono completamente controllati tutti i punti 
+ di normativa per le membrature che risultano semplicemente compresse. 
+ Il valore dello sforzo normale considerato nella verifica è in funzione 
+ di quanto specificato nei criteri di progetto (vedi <span class="hcp1"><a 
+	 href="Criacc.htm#Sforzo_normale_di_verifica">Sforzo normale di verifica</a></span>). 
+ La lunghezza libera di inflessione viene valutata con riferimento alla 
+ lunghezza dell'asta con <font face="Symbol" class="hcp3">l</font> 
+ = Max [<font face="Symbol" class="hcp3">l</font><span class="hcp4">y</span>, <font face="Symbol" class="hcp3">l</font><span class="hcp4">z</span>] calcolati con i coefficienti 
+ <font face="Symbol" class="hcp3">b</font><span class="hcp4">y</span> 
+ e <font face="Symbol" class="hcp3">b</font><span class="hcp4">z</span> 
+ definiti nei criteri di progetto (vedi <a href="Criacc.htm#Ver_di_stabilita_globale_intorno_all_asse_Y__Z_"><span class="hcp1">Verifiche di stabilità globale&#160;nel 
+ piano XZ (XY) locale</span></a>) o nei parametri asta. Le verifiche di 
+ stabilità delle membrature sono effettuate&#160;nei piani principali d'inerzia 
+ o nei piani Y e Z locali della sezione in funzione di quanto specificato 
+ nei criteri di progetto (vedi <span class="hcp1"><a href="Criacc.htm#Verifica_nei_piani_principali">Verifica 
+ nei piani principali</a></span>), quindi i riferimenti citati a Y e Z 
+ sono da intendersi come riferimenti a <font face="Symbol" class="hcp3">x</font> ed 
+ <font face="Symbol" class="hcp3">h</font> nel caso di 
+ verifica nei piani principali.</p>
+<ul>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Travi 
+	 inflesse (paragrafo 4.2.4.1.3.2&#160;del D.M. 17/01/18 o 6.3.2 del 
+	 EC3)</p></li>
+</ul>
+<p class="IndentBullet1">La verifica viene effettuata solo per le membrature 
+ con sezione a I indipendentemente dal fatto che abbiano o meno membratura 
+ di tipo &quot;trave&quot;. La lunghezza di calcolo viene calcolata in 
+ funzione della lunghezza della membratura con interasse fra ritegni torsionali 
+ calcolata in funzione del criterio di progetto (vedi <span class="hcp1"><a 
+	 href="Criacc.htm#Verifiche_di_stabilita_laterale_memb">Verifiche di 
+ stabilità laterale</a></span>). Il momento critico viene valutato come 
+ indicato nella formula C.4.2.30. In quest'ambito il coefficiente <font face="Symbol" class="hcp3">Y</font> deve essere valutato 
+ in funzione dei momenti di estremità di tutta la eventuale &quot;travata&quot; 
+ di cui l'asta in oggetto fa parte.</p>
+<p class="IndentBullet1">La normativa non dà indicazioni su come valutare 
+ i coefficienti &#946; e <span><font face="Symbol" class="hcp3">l</font></span> 
+ presenti nella formula 4.2.51, ma fornisce solo dei suggerimenti, è quindi 
+ possibile personalizzare tali valori tramite i criteri di progetto.</p>
+<ul>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Membrature 
+	 inflesse e compresse (paragrafo 4.2.4.1.3.3&#160;del D.M. 17/01/18 
+	 o 6.3.3 del EC3)</p></li>
+</ul>
+<p class="IndentBullet1">Le verifiche vengono effettuate con riferimento 
+ al punto C4.2.4.1.3.3. Per sezioni a doppio I e per sezioni cave si fa 
+ riferimento al <span class="hcp1">Metodo B</span>, per le 
+ altre sezioni al <span class="hcp1">Metodo A</span>.</p>
+<p class="IndentBullet1">Nel caso di verifica con EC3, per sezioni doppiamente 
+ simmetriche si eseguono secondo il paragrafo 6.3.3 utilizzando il Metodo 
+ 2 dell'Appendice B, per le sezioni generiche viene utilizzato il <span class="hcp1">Metodo A</span> <span class="hcp5">della 
+ Circolare esplicativa n. 7 del 21/01/19</span>.</p>
+<p class="IndentBullet1">Quando si utilizza il <span class="hcp1">Metodo 
+ B</span> è possibile modificare i coefficienti &#945;<span class="hcp4">my</span>, 
+ &#945;<span class="hcp4">mz</span>, &#945;<span class="hcp4">mt</span>, 
+ in funzione del reale andamento del momento tramite i criteri di progetto 
+ se non si vogliono usare quelli cautelativi proposti come default.</p>
+<p class="IndentBullet1">Sempre tramite criterio di progetto è possibile 
+ indicare quale delle due tabelle per il calcolo dei coefficienti &quot;k&quot; 
+ si debba utilizzare. ModeSt non può infatti stabilire quale sia il grado 
+ di vincolamento a torsione della sezione (presenza di solette, controventi, 
+ ecc.).</p>
+<p class="IndentBullet1">Si segnala che in alcune edizioni del D.M. 17/01/18 
+ (sia cartacee che elettroniche) la tabella C4.2.IV riporta valori errati 
+ per i coefficienti kzz, usando il pedice y anziché z per i parametri di 
+ calcolo.</p>
+<p class="Titolo7">Verifiche di elementi dissipativi e gerarchia delle 
+ resistenze</p>
+<p>Premesso che tali verifiche vengono effettuate solo per gli elementi 
+ &quot;sismoresistenti&quot;, così come sopra definiti, si riportano alcune 
+ note e considerazioni sul comportamento di ModeSt.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Tutte le verifiche del capitolo 
+	 7 del D.M. 17/01/18 o del capitolo 6&#160;del EC8 vengono effettuate 
+	 solo per elementi con membratura &quot;trave&quot; o con membratura 
+	 &quot;pilastro&quot;, ad eccezione della verifica effettuata con la 
+	 formula 7.5.2 del D.M. 17/01/18 o 6.8 del EC8 che è implicita nella 
+	 verifica con la formula 4.2.8 del D.M. 17/01/18 o 6.5.4 del EC8, e 
+	 che viene controllato per tutti gli elementi &quot;sismoresistenti&quot;.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Viene controllato se gli elementi 
+	 &quot;sismoresistenti&quot; rispondono ai requisiti della tabella 
+	 7.5.I e alla relazione 7.5.3 del D.M. 17/01/18 o al prospetto 6.3 
+	 del EC8 dove DCM corrisponde alla Classe B e DCH alla Classe A.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 7.5.4.1 &quot;Travi&quot; 
+	 del D.M. 17/01/18&#160;o 6.6.2 &quot;Travi&quot; del EC8.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Verifica della relazione 7.5.4 
+	 del D.M. 17/01/18 o 6.2 del EC8: la verifica è implicita nelle verifiche 
+	 per flessione effettuate per tutte le aste.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Verifica della relazione 7.5.5 
+	 del D.M. 17/01/18&#160;o 6.3 del EC8: poiché la normativa non fornisce 
+	 dettagli, la verifica viene effettuata sia per trazione che per compressione 
+	 in tutte le CC.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Verifica della relazione 7.5.6 
+	 del D.M. 17/01/18&#160;o 6.4 del EC8: la verifica viene effettuata 
+	 valutando V<span class="hcp4">Ed,M</span> con la lunghezza 
+	 della &quot;campata&quot; della &quot;travata&quot; cui l'asta appartiene. 
+	 Per M<span class="hcp4">pl,Rd</span> viene considerato 
+	 il momento plastico resistente della sezione, non depurato della resistenza 
+	 a taglio.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Paragrafo 7.5.4.2 &quot;Colonne&quot; 
+	 del D.M. 17/01/18 o 6.6.3 &quot;Colonne&quot; del EC8. Le sollecitazioni 
+	 di progetto vengono amplificate come indicato nelle formule 7.5.7, 
+	 7.5.8 e 7.5.9 del D.M. 17/01/18 o 6.6 del EC8 ricercando tutte le 
+	 aste incidenti in testa ai pilastri che proseguono (quindi non per 
+	 i pilastri dell'ultimo piano, e comunque non per i pilastri non collegati 
+	 ad un pilastro soprastante) e considerando solo le aste con membratura 
+	 &quot;trave&quot; appartenenti ad una campata che non sia qualificabile 
+	 come mensola o come asta completamente immersa in un elemento bidimensionale.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Verifica della relazione 7.5.10 
+	 del D.M. 17/01/18&#160;o 6.7 del EC8: viene controllata in tutte le 
+	 CC.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Verifica della relazione 7.5.11 
+	 del D.M. 17/01/18&#160;o 6.8 del EC8: non viene attualmente controllata 
+	 (riguarda i collegamenti e non l'asta).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Verifica della relazione 7.5.12 
+	 del D.M. 17/01/18 o 4.4.2.3 del EC8: viene controllata per le CC sismiche, 
+	 considerando per i pilastri i momenti resistenti eventualmente ridotti 
+	 per effetto del taglio e dello sforzo normale. Nelle diverse CC si 
+	 possono quindi avere verifiche diverse.</p></li>
+</ul>
+</body>
+</html>

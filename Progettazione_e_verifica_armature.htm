@@ -1,0 +1,201 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione e verifica armature</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+u.hcp1 { text-decoration:none; }
+a.hcp2 { font-weight:bold; }
+span.hcp3 { margin-bottom:0; }
+span.hcp4 { font-weight:bold; }
+span.hcp5 { font-weight:bold;
+font-style:italic; }
+span.hcp6 { mso-spacerun:yes; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progettazione e verifica armature</h1>
+<p class="Titolo7">Verifica su sezioni orizzontali – flessione ortogonale 
+ al piano della parete</p>
+<p>Il programma individua automaticamente le principali sezioni orizzontali 
+ della parete su cui effettuare le verifiche. Queste sono normalmente il 
+ piede e la testa della parete e le linee in cui iniziano o terminano le 
+ aperture. In corrispondenza di un'apertura, ad esempio alla quota inferiore 
+ di una finestra si ha infatti una discontinuità sia di sollecitazioni 
+ che di geometria. Vengono quindi in tal caso individuate due linee di 
+ integrazione, una immediatamente sopra alla quota ed una immediatamente 
+ sotto (che nell'esempio citato porterà alla generazione di due sezioni 
+ di verifica, prima e dopo l'apertura). Attraverso il criterio di progetto 
+ <u class="hcp1"><a href="CriPareti.htm#Passo_di_verifica_sez_orizzontali" class="hcp2">passo 
+ di verifica</a></u> vengono poi individuate altre linee intermedie di 
+ verifica su indicazione dell'utente. Se il passo è maggiore dell'altezza 
+ della parete, viene comunque effettuata una verifica in mezzeria. Le posizioni 
+ di queste linee orizzontali di verifica possono essere visualizzate <span class="hcp3">cliccando ne</span>l gruppo <span class="hcp4">Disegno</span> 
+ su <span class="hcp4">Zone ver. <img src="../Icone/16/puntiver.png" alt="" style="border: Solid 1px #808080; 
+													 border-width: 1px; 
+													 border-style: solid;" border="1"></span>.</p>
+<p>Oltre a tali sezioni di calcolo è possibile richiedere l'individuazione 
+ di zone locali corrispondenti ai punti su cui incidono pilastri soprastanti 
+ o travi incidenti in cui a volte si hanno concentrazioni di sollecitazioni 
+ che non potrebbero essere colte con verifiche globali. Tali zone potranno 
+ poi essere modificate e/o integrate con altre ritenute opportune dall'utente 
+ per pilotare e controllare verifiche e armatura di rinforzo locali in 
+ punti ritenuti significativi. L'armatura per flessione ortogonale alla 
+ parete può essere progettata in funzione del criterio di progetto <a href="CriPareti.htm#Armatura_calcolata_in_funzione_delle_sollecitazioni_globali" class="hcp2">in funzione delle sollecitazioni globali</a> 
+ oppure <a href="CriPareti.htm#In_funzione_delle_zone_di_incidenza_elementi" class="hcp2">in funzione delle zone di incidenza 
+ elementi</a>. Nel primo caso viene effettuata l'integrazione complessiva 
+ delle sollecitazioni sull'intera parete ed in base a queste viene progettata 
+ l'armatura. Qualora le verifiche non fossero soddisfatte nelle zone locali, 
+ è possibile imporre al programma attraverso il criterio (<a href="CriPareti.htm#Zona_resistente_di_rinforzo_armatura_locale" class="hcp2">Inserisci 
+ armatura specifica per zone di incidenza elementi</a>) di effettuare anche 
+ la progettazione di armatura locale di rinforzo.</p>
+<p>Nel secondo caso l'armatura viene progettata in funzione delle sollecitazioni 
+ presenti nelle zone locali e le armature vengono estese al resto della 
+ parete.</p>
+<p>Nelle zone locali caratterizzate da un'armatura di rinforzo, è possibile 
+ indicare al programma di togliere l'armatura diffusa attraverso il criterio 
+ di progetto (<span class="hcp4"><a href="CriPareti.htm#Elimina_armatura_diffusa_nelle_zone_di_rinforzo">Elimina 
+ armatura diffusa nelle zone di rinforzo</a></span>). Tutte le verifiche 
+ sia locali che globali vengono effettuate con le barre effettivamente 
+ ricadenti nella sezione di verifica in base a tale scelta.</p>
+<p>È possibile completare l'armatura di rinforzo sia automaticamente che 
+ manualmente con una staffatura idonea a realizzare, attraverso il prolungamento 
+ ideale dell'armatura di un eventuale pilastro soprastante, un opportuno 
+ grado di confinamento nel calcestruzzo (<a href="CriPareti.htm#Aggiungi_staffe_chiuse" class="hcp2">Aggiungi 
+ staffe chiuse</a>). Analogamente è possibile impedire la creazione di 
+ armature di rinforzo quando in modellazione sia stato esplicitamente inserito 
+ un pilastro compenetrante la parete (<a href="CriPareti.htm#Trascura_zone_con_pilastro_inglobato" class="hcp2">Trascura 
+ zone con pilastro inglobato</a>).</p>
+<p>Si noti che i comandi che progettano automaticamente l'armatura o eliminano 
+ l'armatura rispettano la preesistente presenza di zone di rinforzo utilizzandole 
+ per la progettazione locale o globale in funzione del criterio di progetto. 
+ Questo consente, dopo aver ad esempio esaminato l'andamento tensionale 
+ <span class="hcp3">cliccando</span> su uno dei tre bottoni 
+ del gruppo <span class="hcp4">Mappe</span>, di pilotare 
+ la progettazione in funzione di punti ritenuti, a giudizio del progettista, 
+ come particolarmente critici.</p>
+<p class="Titolo7">Verifica su sezioni orizzontali – taglio ortogonale 
+ al piano della parete</p>
+<p>Le pareti non hanno generalmente problemi di taglio in direzione trasversale, 
+ ma è possibile imporre al programma di controllare la resistenza globale 
+ trasversale a taglio di una sezione priva di armatura a taglio attraverso 
+ il criterio di progetto (<span class="hcp4"><a href="CriPareti.htm#Controllare_resistenza_a_taglio_trasversale_come_sezione_priva_di_armatura_a_taglio">Controllare 
+ resistenza a taglio trasversale come sezione priva di armatura a taglio</a></span>). 
+ Il mancato soddisfacimento di tale verifica dovrebbe servire al progettista 
+ per una miglior comprensione dell'effettivo comportamento della parete.</p>
+<p class="Titolo7">Verifiche&#160;su sezioni orizzontali – flessione nel 
+ piano della parete</p>
+<p>Tali verifiche non dovrebbero generalmente essere necessarie per pareti 
+ essenzialmente inflesse ortogonalmente al proprio piano e l'armatura necessaria 
+ per questo stato flessionale non viene normalmente né verificata né progettata 
+ a meno non sia stato esplicitamente richiesto con l'apposito criterio 
+ di progetto (<a href="CriPareti.htm#Effettuare_le_verifiche_nel_piano_forte_della_parete" class="hcp2">Effettuare le verifiche nel 
+ piano della parete</a>). Quando questo parametro è attivato oltre ad effettuare 
+ le verifiche, anche l'armatura orizzontale viene progettata in funzione 
+ degli sforzi di taglio, e se la parete è classificata come debolmente 
+ armata, vengono effettuate le verifiche a scorrimento.</p>
+<p>Occorre tener presente che se le armature minime o necessarie per flessione 
+ trasversale inserite dal programma risultassero per tali verifiche insufficienti 
+ o con coefficienti di sicurezza molto prossimi ad 1, potrebbe essere necessario 
+ valutare bene l'effettivo comportamento della parete nell'ambito della 
+ struttura, per decidere se non sia il caso di considerarla come una vera 
+ e propria parete resistente a taglio sismico e quindi da progettare con 
+ le caratteristiche tipiche (in ModeSt) del comportamento a <span class="hcp5">nucleo</span> (zone critiche, amplificazioni 
+ sforzi, ecc.).</p>
+<p class="Titolo7">Verifica su sezioni verticali - flessione e taglio ortogonali 
+ al piano della parete</p>
+<p>La verifica su sezioni verticali, ossia il controllo della flessione 
+ per momenti intorno all'asse verticale della parete si rende necessaria 
+ in genere solo per pareti molto lunghe e con carichi ortogonali, come 
+ ad esempio le pareti di serbatoi.<span class="hcp6">&#160;</span>È 
+ possibile attivare tali verifiche attraverso il criterio (<a href="CriPareti.htm#Effettuare_verifiche_su_sezioni_verticali" class="hcp2">Effettuare le verifiche nel piano della 
+ parete</a>) ed indicando il passo di verifica orizzontale. In tal caso 
+ con riferimento anche al passo verticale, vengono individuate delle sezioni 
+ verticali di uguale dimensione a cavallo di linee orizzontali. Su tali 
+ sezioni vengono effettuate le verifiche per flessione con l'armatura orizzontale 
+ presente nella parete e per taglio come sezione non armata. La prima e 
+ l'ultima di queste sezioni (al piede ed in testa alla parete) avranno 
+ lunghezza pari alla metà delle altre. Eventuali sezioni ricadenti in parte 
+ in aperture verranno ignorate.</p>
+<p>Tale armatura non viene progettata automaticamente ma semplicemente 
+ verificata. Qualora fosse insufficiente si dovrà intervenire in progettazione 
+ interattiva per adeguarla.</p>
+<p class="Titolo7">Architravi</p>
+<p>Le zone di parete identificate come architravi vengono verificate a 
+ flessione e taglio agli estremi ed in mezzeria come una trave.<span class="hcp6">&#160;Se 
+ l'architrave è costituito da un'asta occorre ovviamente inserire in progettazione 
+ interattiva un'armatura costituita da barre e staffe, mentre se è formata 
+ da elementi bidimensionali è possibile decidere se armarla in aggiunta 
+ o in sostituzione dell'armatura diffusa. La verifica a taglio di architravi 
+ armate con solo armatura diffusa viene eseguita come sezione priva di 
+ armatura in quanto la posizione e la conformazione delle barre verticali 
+ non è detto possa garantire la corretta armatura a taglio.<br>
+<b style="mso-bidi-font-weight: normal;"><u class="hcp1">Importante</u></b>: 
+ si ricorda che in un architrave modellata con elementi bidimensionali 
+ il calcolo con piani rigidi comporta l'impossibilità di insorgere dei 
+ corretti effetti flessionali come quelli che ci si aspetterebbe. Si veda 
+ a tal proposito quanto indicato in</span> <span class="hcp4"><a 
+	 href="Guida.chm::/Elementi_bidimensionali_e_piani_rigidi.htm">Elementi 
+ bidimensionali e piani rigidi</a></span><span class="hcp6">. 
+ Resta onere del progettista valutare la plausibilità delle sollecitazioni 
+ risultanti dal calcolo.</span></p>
+<p class="Titolo7">Armatura solo al centro della parete</p>
+<p>Nel caso di armatura solo al centro della parete vengono eseguite solamente 
+ le verifiche relative alle seguenti sollecitazioni integrate per l'intera 
+ estensione della parete:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">taglio su sezioni orizzontali 
+	 (Ty) come sezione armata a taglio. Con tali sollecitazioni vengono 
+	 progettate le barre orizzontali;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">taglio su sezioni orizzontali 
+	 (Ty) con verifica a scorrimento, per condizioni di carico sismiche. 
+	 Con tali sollecitazioni vengono verificate le barre verticali;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">pressoflessione nel piano 
+	 della parete (N, Mz). Con tali sollecitazioni vengono verificate le 
+	 barre verticali.</p></li>
+</ul>
+<p><span class="hcp4">Nota</span>: nel caso di armatura solo 
+ al centro della parete le barre verticali non vengono progettate, ma vengono 
+ semplicemente verificate (pressoflessione e taglio per scorrimento) con 
+ l'armatura minima posizionata in base alle opzioni di &quot;Armatura distribuita&quot;, 
+ o con la rete elettrosaldata risultante dalla progettazione a taglio delle 
+ barre orizzontali della rete. Si consiglia quindi di eseguire tale tipo 
+ di progettazione su pareti modellate con elementi bidimensionali con utilizzo 
+ membranale.</p>
+<p class="Titolo7">Pareti debolmente armate</p>
+<p>In normativa non sono ben chiare le prescrizioni da ritenere cogenti 
+ per le cosiddette <span class="hcp5">pareti 
+ debolmente armate</span>, al di là di considerazioni geometriche complessive 
+ la cui valutazione resta ovviamente compito del progettista. ModeSt si 
+ limita a segnalare dei warning quando alcune di tali prescrizioni geometriche 
+ sembrano non essere rispettate nelle singole pareti.</p>
+<p>L'attivazione a livello di criteri di progetto del parametro <a href="CriPareti.htm#Considera_come_parete_debolmente_armata_ai_sensi_DM08" class="hcp2">considera come parete debolmente armata 
+ ai sensi D.M. 18</a> comporta automaticamente la possibilità di incrementare 
+ lo sforzo normale come indicato da normativa per le pareti, con alcune 
+ opzioni e l'attivazione dei controlli di snellezza presenti in normativa. 
+ Indipendente dalla classe di duttilità A o B, il taglio per le pareti 
+ debolmente armate viene incrementato di (q+1)/2 come indicato nel par. 
+ 7.4.4.5.1 del D.M. 17/01/18: &quot;<span style="font-style: italic;">Per 
+ pareti estese debolmente armate il taglio ad ogni piano può essere ottenuto 
+ amplificando il taglio derivante dall’analisi del fattore (q+1)/2.</span>&quot;</p>
+<p><span class="hcp4">Utilizzo da linea di comando</span>: 
+ <span class="hcp4"><a href="../Comandi/ARMA.htm">ARMA</a></span> 
+ (Progetta armatura), <span class="hcp4"><a href="../Comandi/ELAR.htm">ELAR</a></span>&#160;(Elimina 
+ armatura), <span class="hcp4"><a href="../Comandi/DSLB.htm">DSLB</a></span>&#160;(Disegna 
+ sollecitazioni elementi bidimensionali), <span class="hcp4"><a 
+	 href="../Comandi/AGGZ.htm">AGGZ</a></span>&#160;(Aggiungi zona di 
+ armatura concentrata).</p>
+</body>
+</html>

@@ -1,0 +1,171 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Plinti snelli</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:normal; }
+span.hcp3 { font-weight:normal;
+text-decoration:none; }
+td.hcp4 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp5 { text-align:center; }
+p.hcp6 { text-align:center;
+margin-bottom:0; }
+img.hcp7 { margin-top:0px;
+margin-bottom:0px;
+margin-left:0px;
+margin-right:0px; }
+span.hcp8 { vertical-align:Sub; }
+font.hcp9 { font-family:Symbol; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Plinti snelli</h1>
+<h2>Calcolo azioni sollecitanti</h2>
+<p>La verifica dei plinti definiti come <span class="hcp1">snelli</span> 
+ <span class="hcp2">in funzione di quanto specificato nei</span> 
+ <span class="hcp3">criteri di 
+ progetto</span> <span class="hcp2">(vedi</span> <a href="Criteri%20di%20progetto%20armatura%20plinti.htm#Angolo_limite_plinti_snelli_tozzi"><span class="hcp1">Angolo limite plinti snelli/tozzi</span></a><span class="hcp2">) viene effettuata calcolando il momento 
+ flettente indotto nel fondo del plinto dalle tensioni sul terreno o dagli 
+ sforzi agenti nei pali.</span></p>
+<p><span class="hcp2">Nei plinti diretti i valori del momento 
+ di verifica vengono valutati considerando la pressione sul terreno agente 
+ su una porzione di suola definita con il metodo dei rettangoli (più oneroso) 
+ o con il metodo dei trapezi (vedi figura).</span></p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt;" cellspacing="0" 
+		 width="100%">
+	<tr>
+		<td style="width:50%;" class="hcp4"><p class="hcp5"><span class="hcp1">Zona 
+		 spingente metodo dei rettangoli</span></p></td>
+		<td style="width:50%;" class="hcp4"><p class="hcp5"><span class="hcp1">Zona 
+		 spingente metodo dei trapezi</span></p></td>
+	</tr>
+	<tr>
+		<td style="width:50%;" class="hcp4"><p class="hcp6"><img src="../rettangolo.gif" alt="" border="0" class="hcp7"></p></td>
+		<td style="width:50%;" class="hcp4"><p class="hcp6"><img src="../trapezi.gif" alt="" border="0" class="hcp7"></p></td>
+	</tr>
+</table>
+<p><span class="hcp2">Definita l'area che provoca la spinta 
+ verso l'alto viene valutato il momento indotto da una forza calcolata 
+ come prodotto fra la tensione massima sul terreno e l'area stessa, con 
+ punto di applicazione nel baricentro.</span></p>
+<p><span class="hcp2">Poiché gli effetti dovuti al peso 
+ del plinto ed agli eventuali sovraccarichi sono contrari alla spinta del 
+ terreno o alle azioni dei pali e quindi rendono meno gravosa la flessione, 
+ è possibile chiederne la detrazione attraverso i</span> <span class="hcp3">criteri di progetto</span> <span class="hcp2">(vedi</span> 
+ <a href="Criteri%20di%20progetto%20armatura%20plinti.htm#Detrazione_p_p__e_sovraccarichi"><span class="hcp1">Detrazione p.p. e sovraccarichi</span></a><span class="hcp2">).</span></p>
+<h2>Sezioni di verifica</h2>
+<p><span class="hcp2">Le sezioni di verifica sono le seguenti:</span></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Plinti 
+	 rettangolari senza bicchiere</span>: a filo pilastro;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Plinti 
+	 rettangolari con bicchiere</span>: a filo o in asse della parete del 
+	 bicchiere in funzion<span class="hcp2">e di quanto 
+	 specificato nei</span> <span class="hcp3">criteri 
+	 di progetto</span> <span class="hcp2">(vedi</span> 
+	 <span class="hcp1"><a href="Criteri%20di%20progetto%20armatura%20plinti.htm#Sezione_verifica_plinti_a_bicchiere">Sezione 
+	 verifica plinti a bicchiere</a></span><span class="hcp2">);</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Plinti 
+	 a gradoni</span>: a filo pilastro e a filo del gradone<span class="hcp2">;</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Plinti 
+	 piramidali</span>: a filo del pilastro ed a metà distanza fra il pilastro 
+	 ed il bordo del plinto (spinta minore, ma anche altezza minore).</p></li>
+</ul>
+<p>Per i plinti monopalo non viene effettuata nessuna verifica in quanto 
+ si presume una trasmissione diretta dello sforzo dal pilastro al palo. 
+ Il plinto non è altro che un elemento di collegamento.</p>
+<h2><span class="hcp1">Disposizione armatura</span></h2>
+<p><span class="hcp1">Plinti diretti con o senza bicchiere</span>, 
+ <span class="hcp1">rettangolari</span>, <span class="hcp1">a 
+ gradoni</span>, <span class="hcp1">piramidali</span>: se 
+ è stato richiesto dai criteri di progetto (vedi <a href="Criteri%20di%20progetto%20armatura%20plinti.htm#Raffittimento_armatura_zona_centrale"><span class="hcp1">Raffittimento armatura zona centrale</span></a>) 
+ viene effettuato il raffittimento dell'armatura disponendone il 75% in 
+ una fascia centrale corrispondente al 50% della dimensione del plinto, 
+ mentre il restante 25% viene disposto nelle fasce laterali. Nel caso di 
+ plinti non simmetrici la fascia di raffittimento viene comunque mantenuta 
+ centrata sotto il pilastro e le fasce laterali vengono di conseguenza 
+ modificate o eliminate.</p>
+<p><span class="hcp1">Plinti rettangolari su pali</span>: 
+ se è stato richiesto dai <span class="hcp3">criteri 
+ di progetto</span> (vedi <a href="Criteri%20di%20progetto%20armatura%20plinti.htm#Raffittimento_armatura_zona_centrale"><span class="hcp1">Raffittimento armatura zona centrale</span></a>) 
+ viene effettuato il raffittimento dell'armatura disponendone il 75% in 
+ corrispondenza dei pali.</p>
+<p>L'eventuale doppia armatura viene sempre distribuita in modo uniforme.</p>
+<h2>Punzonamento</h2>
+<p>Nel caso di strutture calcolate secondo il D.M. 17/01/18 l'armatura 
+ a punzonamento viene calcolata utilizzando la metodologia riportata nel 
+ par. 6.4 del EC2. Il perimetro di verifica u<span class="hcp8">1</span> 
+ viene calcolato in funzione di quanto specificato nei criteri di progetto 
+ (vedi <span class="hcp1"><a href="Criteri%20di%20progetto%20armatura%20plinti.htm#Moltiplicatore_altezza_utile_per_valutare_perimetro_efficace_DM08">Moltiplicatore 
+ altezza utile per valutare perimetro efficace (D.M. 18)</a></span>). Il 
+ valore del coefficiente <span style="font-family: Symbol, serif;">b</span>, 
+ dell'espressione 6.38, è determinato automaticamente dal programma. L'armatura 
+ a punzonamento, calcolata in conformità dell'espressione 6.52, è costituta 
+ da una sola fila di ferri piegati e di conseguenza il rapporto d/s<span class="hcp8">r</span> è assunto pari a 0.67.</p>
+<p>Nel caso di strutture calcolate secondo il D.M. 14/02/92 o il D.M. 16/01/96 
+ l'armatura a punzonamento viene calcolata ipotizzando una superficie di 
+ rottura a forma piramidale, con faccia superiore pari al perimetro d'ingombro 
+ del pilastro che provoca le tensioni di punzonamento e con facce inclinate 
+ secondo un angolo di 45°. Per pilastri con forma non rettangolare viene 
+ considerato il rettangolo inviluppante, mentre per pilastri in acciaio 
+ è possibile indicare nei criteri di progetto (vedi <span class="hcp1"><a 
+	 href="Criteri%20di%20progetto%20armatura%20plinti.htm#Allargamento_piastra_pilastri_in_acciaio">Allargamento 
+ piastra pilastri in acciaio</a></span>) di quanto si allarga la piastra 
+ di base rispetto all'ingombro del pilastro. Vengono considerate valide 
+ solo le facce con distanza dal bordo libero del plinto inferiore a quanto 
+ specificato nei criteri di progetto (vedi <span class="hcp1"><a 
+	 href="Criteri%20di%20progetto%20armatura%20plinti.htm#Distanza_dal_bordo_libero">Distanza 
+ dal bordo libero</a></span>). Nel caso di faccia non valida vengono prolungate 
+ le facce adiacenti fino al bordo stesso. L'armatura a punzonamento viene 
+ calcolata e verificata nei casi seguenti:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">se <font face="Symbol" class="hcp9">t</font> 
+	 &gt; <font face="Symbol" class="hcp9">t</font><span class="hcp8">c0</span> nel caso di calcolo con metodo 
+	 delle tensioni ammissibili;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">se la resistenza a punzonamento 
+	 (calcolata in funzione della resistenza a trazione del calcestruzzo) 
+	 è inferiore alla sollecitazione di punzonamento nel caso di calcolo 
+	 col metodo degli stati limite secondo il D.M. 16/01/96.</p></li>
+</ul>
+<p><span class="hcp1">Plinti diretti</span>: lo sforzo di 
+ punzonamento viene determinato come risultante della tensione sul terreno 
+ sulla parte della base del plinto esterna al piede della piramide di rottura. 
+ La risultante viene valutata considerando una tensione pari alla tensione 
+ massima, detraendo il peso proprio del plinto e l'effetto di eventuali 
+ sovraccarichi.</p>
+<p><span class="hcp1">Plinti a bicchiere</span>: la verifica 
+ a punzonamento si esegue come indicato nella CNR UNI 10025/84.</p>
+<h2>Note</h2>
+<p>Nel caso di plinti asimmetrici (per forma o per posizione delle armature) 
+ può insorgere flessione deviata. In tal caso l'armatura teorica calcolata 
+ nell'ipotesi di flessione retta può non essere sufficiente. La progettazione 
+ automatica di questo tipo di plinti non viene quindi effettuata. In progettazione 
+ interattiva può essere ugualmente progettato automaticamente, ma le verifiche 
+ dell'armatura progettata potrebbero non essere rispettate, specie se il 
+ plinto risulta molto armato (doppia armatura). Occorre in tal caso integrare 
+ o modificare manualmente le armature.</p>
+<p>Nel caso di progetto col metodo degli stati limite si ipotizza comunque 
+ sempre una situazione di rottura con asse neutro parallelo al fondo del 
+ plinto.</p>
+<p style="margin-bottom: 0;">Non sono attualmente supportati plinti poligonali 
+ snelli su pali.</p>
+</body>
+</html>

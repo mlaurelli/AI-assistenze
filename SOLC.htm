@@ -1,0 +1,137 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>SOLC - Sollecitazioni correnti</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+span.hcp4 { font-weight:normal; }
+span.hcp5 { text-decoration:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">SOLC - Sollecitazioni correnti</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" 
+		 width="100%" bgcolor="#C0C0C0">
+	<tr>
+		<td style="width:68%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p></td>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>: 
+		 ?</p></td>
+	</tr>
+</table>
+<p>Rende corrente per la visualizzazione nella finestra attiva uno dei 
+ tipi di sollecitazione presenti nel calcolo.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3" style="text-align: justify;"><span class="hcp3">SOLC</span> 
+ <font color="#0000FF"><span style="font-style: italic;">Sollecitazioni 
+ correnti</span></font></p>
+<p>In funzione del tipo di calcolo che è stato effettuato possono essere 
+ ammessi i seguenti tipi di sollecitazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">CC</span>: 
+	 le sollecitazioni relative alle combinazioni delle condizioni di carico, 
+	 definibili dall'utente;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">CCSTA</span>: 
+	 le sollecitazioni relative allo <span class="hcp3">stato 
+	 attuale</span>;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">CCE</span>: 
+	 <span class="hcp4">le sollecitazioni relative alle 
+	 <span>singole</span> condizioni di carico elementari, comprese quelle 
+	 eventualmente definite in modo automatico in sede di calcolo, come 
+	 le azioni sismiche;</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">MOD</span>: 
+	 <span class="hcp4">le sollecitazioni <span>modali</span> 
+	 normalizzate (nel caso in cui sia stata effettuata l'analisi modale 
+	 della struttura);</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">SIS</span>: 
+	 <span class="hcp4">le sollecitazioni</span> <span><span class="hcp4">sismiche</span></span> <span class="hcp4">disaccoppiate 
+	 (nel caso in cui sia stata effettuata l'analisi sismica dinamica con 
+	 spettro di risposta o l'analisi sismica statica) ossia il contributo 
+	 delle diverse direzioni del sisma;</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">SLOD</span>: 
+	 le sollecitazioni sismiche disaccoppiate allo <span class="hcp3">stato 
+	 limite di operatività</span> (nel caso in cui sia stata effettuata 
+	 l'analisi sismica dinamica con spettro di risposta o l'analisi sismica 
+	 statica) ossia il contributo delle diverse direzioni del sisma allo 
+	 stato limite di operatività (nel caso in cui sia stata effettuata 
+	 l'analisi sismica della struttura utilizzando come normativa il D.M. 
+	 14/01/08);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">SLDD</span>: 
+	 le sollecitazioni sismiche disaccoppiate allo <span class="hcp3">stato 
+	 limite di danno</span> (nel caso in cui sia stata effettuata l'analisi 
+	 sismica dinamica con spettro di risposta o l'analisi sismica statica) 
+	 ossia il contributo delle diverse direzioni del sisma allo stato limite 
+	 di danno (nel caso in cui sia stata effettuata l'analisi sismica della 
+	 struttura utilizzando come normativa il D.M. 17/01/18);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">SLVD</span>: 
+	 le sollecitazioni sismiche disaccoppiate allo <span class="hcp3">stato 
+	 limite di vita</span> (nel caso in cui sia stata effettuata l'analisi 
+	 sismica dinamica con spettro di risposta o l'analisi sismica statica) 
+	 ossia il contributo delle diverse direzioni del sisma allo stato limite 
+	 di vita (nel caso in cui sia stata effettuata l'analisi sismica della 
+	 struttura utilizzando come normativa il D.M. 17/01/18);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">SLCD</span>: 
+	 le sollecitazioni sismiche disaccoppiate allo <span class="hcp3">stato 
+	 limite di collasso</span> (nel caso in cui sia stata effettuata l'analisi 
+	 sismica dinamica con spettro di risposta o l'analisi sismica statica) 
+	 ossia il contributo delle diverse direzioni del sisma allo stato limite 
+	 di collasso (nel caso in cui sia stata effettuata l'analisi sismica 
+	 della struttura utilizzando come normativa il D.M. 17/01/18);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">STCCn</span>: 
+	 le sollecitazioni relative alle <span class="hcp3">storie 
+	 di carico delle singole combinazioni delle condizioni di carico</span> 
+	 (nel caso in cui sia stata effettuata un'analisi non lineare e attivata 
+	 l'opzione del salvataggio dei risultati intermedi);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">BUCKn</span>: 
+	 i risultati relativi alle singole analisi di buckling (nel caso in 
+	 cui sia stata effettuata un'analisi di buckling). Sono visualizzabili 
+	 solo le deformate che rappresentano le forme di buckling;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">S+XG1, 
+	 S+XG2 (e simili)</span>: i risultati relativi all'analisi sismica 
+	 statica non lineare (pushover): ad esempio +X indica che si vogliono 
+	 i risultati relativi l'analisi per sisma X positivo, mentre G1 individua 
+	 l'analisi per distribuzione di forze del Gruppo 1.</p></li>
+</ul>
+<p><span class="hcp4">Note:</span></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Il 
+	 comando può essere attivato con un doppio clic del mouse sulla corrispondente 
+	 casella della barra di stato.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Si 
+	 consiglia di usare la casella di riepilogo a discesa.</p></li>
+</ul>
+<p style="text-align: justify;"><span class="hcp3">Comandi 
+ correlati:</span> <span class="hcp5"><a href="RISC.htm"><span class="hcp3">RISC</span></a></span> <span class="hcp4">Rende 
+ corrente un risultato.</span> <span class="hcp5"><a 
+	 href="_RIS.htm"><span class="hcp3">?RIS</span></a></span> 
+ <span class="hcp4">elenca i risultati disponibili.</span></p>
+<p style="text-align: left;"><span class="hcp3">Argomenti 
+ correlati:</span> <span style="font-weight: bold; text-decoration: none; "><a 
+	 href="../Manuale/Sollecitazione_e_risultato_corrente.htm">Sollecitazioni 
+ e risultati</a></span></p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a2');
+	FilePopupInit('a3');
+//]]></script>
+</body>
+</html>

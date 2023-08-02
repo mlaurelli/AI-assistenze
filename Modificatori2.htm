@@ -1,0 +1,49 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Modificatori</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-style:italic; }
+span.hcp2 { font-style:normal;
+text-decoration:underline; }
+span.hcp3 { font-weight:bold; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<p class="TitoloComando"><span style="font-size: 14.0pt;">Modificatori</span></p>
+<p>Alcuni comandi consentono l'uso di <span class="hcp1">modificatori</span> che ne modificano il comportamento.</p>
+<p>I modificatori vanno inseriti sulla Linea di comando immediatamente dopo il nome del comando stesso, separati da spazio, prima di premere il tasto Invio.</p>
+<p>I modificatori ammissibili per ogni comando sono riportati nell'aiuto specifico, ma i principali sono i caratteri '+' e '-' (simboli <span class="hcp2">più</span> e <span class="hcp2">meno</span> dell'addizione).</p>
+<p>Il loro significato varia in funzione dei comandi, ma si può riassumere nei seguenti casi:</p>
+<p>Per comandi che agiscono su un insieme di elementi, modificandone una loro proprietà, impediscono che l'eventuale insieme esistente venga annullato nel momento dell'esecuzione del comando (comportamento standard), indicando invece che si intende aggiungere ( carattere '+') o togliere (carattere '-') dall'insieme esistente o che si desiderano inserire dei <span style="font-weight: bold; text-decoration: none;">sottocomandi</span>.</p>
+<p>Ad esempio:</p>
+<p><span class="hcp3">DMOM</span> <span class="hcp3">IMP</span> 1 elimina i diagrammi momenti esistenti (non è stato inserito nessun modificatore) e disegna quelli delle aste sull'impalcato 1</p>
+<p><span class="hcp3">DMOM</span> + <span class="hcp3">IMP</span> 1 aggiunge (modificatore '+') ai diagrammi esistenti quelli delle aste sull'impalcato 1</p>
+<p><span class="hcp3">DMOM</span> – <span class="hcp3">IMP</span> 1 toglie (modificatore '-' dai diagrammi esistenti quelli delle aste sull'impalcato 2</p>
+<p>Per comandi che settano parametri interni e contemporaneamente modificano un comportamento, i modificatori permettono di cambiare il comportamento senza modificare i parametri interni.</p>
+<p>Ad esempio:</p>
+<p><span class="hcp3">SRIF</span> (senza modificatori) chiede i dati per la definizione di un nuovo sistema di riferimento e lo rende attivo.</p>
+<p><span class="hcp3">SRIF</span> + (modificatore '+') rende attivo l'ultimo sistema di riferimento definito</p>
+<p><span class="hcp3">SRIF</span> - (modificatore '-') disattiva l'eventuale sistema di riferimento attivo che ne venga perduta la definizione.</p>
+<p>oppure:</p>
+<p><span class="hcp3">SELA</span> <span class="hcp3">MEM</span> P - <span class="hcp3">SEZ</span> 2 seleziona tutte le aste con membratura di tipo pilastro e non di sezione 2</p>
+<p>Per comandi che funzionano da ‘interruttore’ ossia che attivano/disattivano un parametro passando ogni volta da uno stato all'altro, il modificatore '+' forza lo stato 'attivo' qualunque fosse lo stato precedente ed analogamente il modificatore '-'.</p>
+<p>Ad esempio:</p>
+<p><span class="hcp3">DNN</span> <span class="hcp1">attiva il disegno dei numeri dei nodi se non era attivo, lo disattiva se era attivo (non è stato inserito nessun modificatore)</span></p>
+<p><span class="hcp3">DNN</span> + <span class="hcp1">attiva in ogni caso il disegno dei numeri dei nodi. Se il disegno era già attivo, non viene eseguita nessuna operazione (modificatore</span> '<span class="hcp1">+</span>'<span class="hcp1">)</span></p>
+<p><span class="hcp3">DNN</span> - <span class="hcp1">disattiva in ogni caso il disegno dei numeri dei nodi. Se il disegno non era attivo, non viene eseguita nessuna operazione (modificatore</span> '+'<span class="hcp1">)</span>.</p>
+<p style="margin-bottom: 0;">Il modificatore '?' (punto di domanda) apre la finestra di dialogo sostitutiva del comando stesso se disponibile.</p>
+</body>
+</html>

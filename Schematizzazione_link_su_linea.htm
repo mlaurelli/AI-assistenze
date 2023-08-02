@@ -1,0 +1,82 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Schematizzazione link su linea</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { mso-fareast-language:IT;
+mso-no-proof:yes; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Schematizzazione link su linea</h1>
+<p><span class="hcp1">Il concetto 
+ di &quot;link su linea&quot; non è generalmente presente nei solutori 
+ ad elementi finiti oppure non consente appieno la definizione del comportamento 
+ strutturale desiderato con i link su linea come intesi in ModeSt.</span></p>
+<p><span class="hcp1">Tutti i solutori 
+ hanno invece il concetto di collegamento fra due nodi che possono essere 
+ anche coincidenti. Questo collegamento avviene attraverso diversi tipi 
+ di elementi (spesso denominati LINK) in cui oltre alla definizione del 
+ necessario sistema di riferimento viene specificato il tipo di accoppiamento 
+ fra i diversi Gradi di Libertà (GDL) dei due nodi. Il GDL può essere disaccoppiato, 
+ accoppiato rigidamente o con diverse modalità che possono variare a seconda 
+ del solutore (elastico lineare, non lineare, ecc.).</span></p>
+<p><span class="hcp1">I link su 
+ linea sono quindi stati pensati come uno strumento per trasformare un 
+ concetto (svincolamento di bordo di elementi bidimensionali) in elementi 
+ che possono essere gestiti da un solutore.</span></p>
+<p>Il programma individua tutti i nodi e gli elementi bidimensionali interessati 
+ dal link su linea e crea per ognuno di essi dei nodi aggiuntivi, coincidenti 
+ con i nodi di modellazione ma che ad essi vengono &quot;agganciati&quot; 
+ con elementi LINK. Il sistema di riferimento del link su linea identifica 
+ la definizione dei GDL. Se il GDL è elastico, la rigidezza distribuita 
+ viene concentrata nel LINK in funzione della lunghezza dell'elemento. 
+ Elementi incidenti nello stesso nodo e nello stesso link su linea avranno 
+ un unico nodo aggiuntivo, in modo da mantenere la congruenza fra di loro.</p>
+<p>I gradi di libertà rotazionali RY e RZ del link su linea in termini 
+ distribuiti non hanno senso in quanto i relativi GDL globali sono regolati 
+ dai GLD SY e SZ che la bloccano o la liberano a livello cinematico. In 
+ genere quindi tali GDL a livello locale (ossia a livello di LINK fra i 
+ nodi) vengono lasciati liberi.</p>
+<p>Nei casi di strutture molto semplici in cui a livello matematico alcuni 
+ solutori interpretano la mancanza ad esempio di un vincolo rotazionale 
+ (ad esempio RZ) come una labilità globale, può essere necessario bloccare 
+ tali GDL. Si pensi ad un modello costituito da una semplice soletta appoggiata 
+ su delle pareti di perimetro. Per simulare l'appoggio il link su linea 
+ di bordo avrà i GDL SX, SY ed SZ bloccati e RX libero.</p>
+<p>La rotazione rigida della soletta intorno all'asse verticale è ovviamente 
+ impedita dai blocchi in SX e SY, ma alcuni solutori danno ugualmente una 
+ labilità per RZ ed in tal caso sarà necessario bloccare RZ locale dei 
+ nodi generati.</p>
+<p>Il conflitto fra le libertà di movimento e rigidezze per due link su 
+ linea incidenti su<span style="mso-spacerun: yes;">&#160;</span>uno stesso 
+ nodo di uno stesso bidimensionale interessato da entrambi viene risolto 
+ dal programma considerando (dopo le opportune trasformazioni dovute ai 
+ sistemi di riferimento diversi) il più &quot;rigido&quot; fra i due. Tenendo 
+ presente che un GDL libero è come se avesse rigidezza nulla e che un GLD 
+ bloccato ha una rigidezza infinita, si può capire il comportamento del 
+ programma.</p>
+<p>Avere chiaro questo comportamento può aiutare a risolvere e modellare 
+ alcuni casi particolari.</p>
+<p>Immaginiamo di voler introdurre una discontinuità totale in una soletta, 
+ creando un link su linea che ne renda indipendenti tutti gli spostamenti 
+ (in pratica un TAGLIO), ma lasciando l'incastro sulle pareti che lungo 
+ il perimetro sorreggono la soletta.</p>
+<p>Definendo solamente il link su linea che simula il taglio, avremo che 
+ anche il nodo che appoggia sul bordo risulterà &quot;scollegato&quot; 
+ dalla parete creando un comportamento non voluto. Definendo invece un 
+ link su linea completamente bloccato sul bordo del bidimensionale che 
+ appoggia sulla parete, creeremo un &quot;conflitto&quot; fra i due GDL 
+ del nodo comune, che per quanto detto, verrà risolto lasciando il nodo 
+ &quot;agganciato&quot; alla parete.</p>
+</body>
+</html>

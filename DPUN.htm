@@ -1,0 +1,123 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>DPUN - Disegna punzonamento</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+td.hcp3 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp4 { text-align:left;
+margin-bottom:0; }
+font.hcp5 { font-family:Symbol; }
+span.hcp6 { vertical-align:sub; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">DPUN - Disegna punzonamento</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Progettazione interattiva solette/platee, plinti/pali</p>
+</td>
+<td style="width:28%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p>
+</td>
+</tr>
+</table>
+<p>Attiva o disattiva il disegno del diagramma delle zone in cui necessita l'armatura per punzonamento.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span style="font-weight: bold;">DPUN</span></p>
+<p>Vengono disegnate le piramidi di rottura per punzonamento e colorate nel modo seguente:</p>
+<ul>
+<li class="p">
+<p>Metodo delle tensioni ammissibili:</p>
+</li>
+</ul>
+<table wrapperparagraphselector="P.IndentBullet1" cellspacing="0" width="100%">
+<tr>
+<td style="width:7%;" class="hcp3">
+<p class="hcp4">grigio</p>
+</td>
+<td style="width:91%;" class="hcp3">
+<p class="hcp4"><font face="Symbol" class="hcp5">t</font> &lt; <font face="Symbol" class="hcp5">t</font><span class="hcp6">c0</span></p>
+</td>
+</tr>
+<tr>
+<td style="width:7%;" class="hcp3">
+<p class="hcp4">giallo</p>
+</td>
+<td style="width:91%;" class="hcp3">
+<p class="hcp2"><font face="Symbol" class="hcp5">t</font><span class="hcp6">c0</span> &lt; <font face="Symbol" class="hcp5">t</font> &lt; <font face="Symbol" class="hcp5">t</font><span class="hcp6">c1</span></p>
+</td>
+</tr>
+<tr>
+<td style="width:7%;" class="hcp3">
+<p class="hcp4">rosso</p>
+</td>
+<td style="width:91%;" class="hcp3">
+<p class="hcp2"><font face="Symbol" class="hcp5">t</font> &gt; <font face="Symbol" class="hcp5">t</font><span class="hcp6">c1</span></p>
+</td>
+</tr>
+</table>
+<ul>
+<li class="p">
+<p>Metodo degli stati limite:</p>
+</li>
+</ul>
+<table wrapperparagraphselector="P.IndentBullet1" cellspacing="0" width="100%">
+<tr>
+<td style="width:7%;" class="hcp3">
+<p class="hcp4">grigio</p>
+</td>
+<td style="width:91%;" class="hcp3">
+<p class="hcp4">Psd &lt; Prd</p>
+</td>
+</tr>
+<tr>
+<td style="width:7%;" class="hcp3">
+<p class="hcp4">giallo</p>
+</td>
+<td style="width:91%;" class="hcp3">
+<p class="hcp2">Psd &gt; Prd</p>
+</td>
+</tr>
+</table>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">L'armatura a punzonamento viene progettata solo per le zone in cui <font face="Symbol" class="hcp5">t</font> &gt; <font face="Symbol" class="hcp5">t</font><span class="hcp6">c0</span> nel caso di calcolo con metodo delle tensioni ammissibili e nel caso di calcolo con metodo degli stati limite se Psd &gt; Prd.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">In progettazione interattiva armatura plinti/pali viene momentaneamente disegnata la piramide di punzonamento senza colorare le facce in funzione della tensione tangenziale.<span style="text-align: justify; margin-bottom: 0;">&#160;</span></p>
+</li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+//]]>
+</script>
+</body>
+</html>

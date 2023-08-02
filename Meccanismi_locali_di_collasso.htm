@@ -1,0 +1,193 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Meccanismi locali di collasso</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+tr.hcp3 { vertical-align:top; }
+p.hcp4 { text-align:left; }
+td.hcp5 { border-left:solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp6 { text-align:center; }
+img.hcp7 { border:none; }
+td.hcp8 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+td.hcp9 { border-left:solid 1px #000000;
+border-right:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+td.hcp10 { border-right:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+td.hcp11 { padding-right:10px;
+padding-left:10px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Meccanismi locali di collasso</h1>
+<p>I meccanismi di collasso e le relative verifiche vengono effettuate 
+ sui <span class="hcp1">maschi per verifiche cinematismi</span>.</p>
+<p>Le verifiche vengono effettuate solo per la parte in muratura ordinaria 
+ di strutture calcolate sismicamente con il metodo degli stati limite secondo 
+ il D.M. 17/01/18.</p>
+<p>Vengono valutate in automatico tutte le caratteristiche geometriche 
+ dei meccanismi di collasso, come lo spessore dei muri e dei solai e le 
+ quote di interpiano.</p>
+<p>Automaticamente vengono determinati sia il valore delle forze peso relative 
+ ai muri e agli ammorsamenti con le relative coordinate del punto di applicazione, 
+ sia le forze peso derivanti dai solai che si appoggiano sul maschio murario, 
+ con le relative coordinate del punto di applicazione, valutate in funzione 
+ della lunghezza di appoggio dei solai indicata nei criteri di progetto 
+ specifici (vedi <span class="hcp1"><a href="Criteri_di_verifica_murature.htm#Lunghezza_appoggio_solai">Lunghezza 
+ appoggio solai</a></span>). Tutte le forze peso calcolate automaticamente 
+ sono relative alla combinazione di carico sismica.</p>
+<p>La geometria del cuneo della parete ammorsata è calcolata in funzione 
+ dell'angolo di generazione del cuneo di rottura indicato nei criteri generali 
+ di progetto (vedi <span class="hcp1"><a href="Criteri_generali_di_verifica_murature.htm#Angolo_di_generazione_del_cuneo_di_rottura">Angolo 
+ di generazione del cuneo di rottura</a></span>). La parete ammorsata viene 
+ suddivisa in blocchi in base al numero assegnato ai muri/elementi bidimensionali, 
+ consentendo così la modifica o l'eliminazione della massa di ogni singolo 
+ blocco.</p>
+<p>Nell'ambiente di progettazione interattiva delle murature, apribile 
+ cliccando nel gruppo <span class="hcp1">Progettazioni</span> 
+ della scheda <span class="hcp1">Post-Processor</span> su 
+ <img src="../Icone/32/progint32.png" alt="" border="1" class="hcp2"> e poi su 
+ <span class="hcp1">Murature</span> <img src="../Icone/16/ALB_MURATURA.png" alt="" border="1" class="hcp2">, 
+ dopo aver attivato la visualizzazione dei maschi per verifiche cinematismi 
+ cliccando nel gruppo <span class="hcp1">Modello</span> sulla 
+ freccia sottostante <span class="hcp1">Muratura</span> <img src="../Icone/32/muraturaON32.png" alt="" border="1" class="hcp2">, è possibile 
+ progettare interattivamente il maschio murario cliccando nel gruppo <span class="hcp1">Maschi</span> e poi su <span class="hcp1">Proprietà</span> 
+ <img src="../Icone/16/proprietamaschi.png" alt="" border="1" class="hcp2"> e quindi 
+ selezionando un maschio murario. </p>
+<p>È possibile modificare tutti i valori calcolati automaticamente ed aggiungere 
+ altre forze peso e/o forze aggiuntive attraverso l'opzione <span style="font-style: italic;">Forze 
+ peso e costanti</span> del menu a comparsa sulla finestra stessa.</p>
+<p>I carichi applicati nel modello, diversi da quelli sopra indicati (come 
+ ad esempio i carichi definiti manualmente o i pesi propri di travi in 
+ c.a. o acciaio) non vengono applicati automaticamente al cinematismo ma 
+ devono essere inseriti manualmente come forze peso.</p>
+<p>I carichi ai quali non corrisponde una massa, come la trazione di tiranti 
+ o la spinta orizzontale di volte o archi, sono inseribili manualmente 
+ nel cinematismo come forze costanti.</p>
+<p>Le coordinate di applicazione delle forze agenti sul cinematismo sono 
+ espresse rispetto a un sistema di riferimento avente origine nel punto 
+ di mezzeria alla base della prima parete del maschio, asse Z verticale 
+ ascendente ed asse X diretto verso la parte interna dell'edificio.</p>
+<p>Non vengono verificati quei cinematismi in cui il punto di rotazione 
+ è sotto lo zero sismico specificato nel parametro <span class="hcp1"><a 
+	 href="Dati%20struttura.htm#Quota_di_riferimento">Quota di riferimento</a></span> 
+ nella scheda &quot;Dati Struttura&quot; del calcolo della struttura in 
+ muratura.</p>
+<p>Sono verificabili i meccanismi di collasso che si realizzano nel piano 
+ ortogonale a quello del maschio. In particolare sono verificabili i meccanismi 
+ di collasso per ribaltamento, sia rispetto alla base dell'intera muratura 
+ che dei singoli pannelli d'interpiano senza ammorsamenti (Figg. 1, 3, 
+ 6) e con ammorsamenti (Figg. 2, 5, 9), anche parziali (Figg. 4, 7, 8), 
+ con i pannelli ortogonali. Sono inoltre verificabili i meccanismi di collasso 
+ per flessione verticale, rispetto ad ogni interpiano (Figg. 11, 12), che 
+ interessano anche parzialmente la muratura (Figg. 10, 13).</p>
+<p>Nella figura sottostante è riportato un esempio con tutti i possibili 
+ meccanismi di collasso verificabili. I colori si riferiscono allo schema 
+ di colore di default.</p>
+<table style="vertical-align: top;" cellspacing="0" align="center">
+	<col width="298">
+	<col width="298">
+	<tr class="hcp3">
+		<td style="border-top: Solid 1px #000000; border-left: solid 1px #000000; 
+			 border-right: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" 
+			 width="298"><p class="hcp4">Fig. 1 - Rotazione 
+		 attorno al 2° piano</p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 padding-right: 10px; padding-left: 10px;" width="298"><p class="hcp4">Fig. 
+		 2 - Rotazione attorno al 2° piano con parete ortogonale ammorsata</p></td>
+	</tr>
+	<tr class="hcp3">
+		<td width="298" class="hcp5"><p class="hcp6"><img src="CIN_01.jpg" alt="" width="363" height="350" border="0" class="hcp7"></p></td>
+		<td width="298" class="hcp8"><p class="hcp6"><img src="CIN_02.jpg" alt="" width="363" height="350" border="0" class="hcp7"></p></td>
+	</tr>
+	<tr class="hcp3">
+		<td width="298" class="hcp9"><p class="hcp4">Fig. 
+		 3 - Rotazione attorno al 1° piano</p></td>
+		<td width="298" class="hcp10"><p class="hcp4">Fig. 
+		 4 - Rotazione attorno al 1° piano con parete ortogonale ammorsata 
+		 parzialmente</p></td>
+	</tr>
+	<tr class="hcp3">
+		<td width="298" class="hcp5"><p class="hcp6"><img src="CIN_03.jpg" alt="" width="363" height="350" border="0" class="hcp7"></p></td>
+		<td width="298" class="hcp8"><p class="hcp6"><img src="CIN_04.jpg" alt="" width="363" height="350" border="0" class="hcp7"></p></td>
+	</tr>
+	<tr class="hcp3">
+		<td width="298" class="hcp9"><p class="hcp4">Fig. 
+		 5 - Rotazione attorno al 1° piano con parete ortogonale ammorsata</p></td>
+		<td width="298" class="hcp10"><p class="hcp4">Fig. 
+		 6 - Rotazione attorno alla base della parete</p></td>
+	</tr>
+	<tr class="hcp3">
+		<td width="298" class="hcp5"><p class="hcp6"><img src="CIN_05.jpg" alt="" width="363" height="350" border="0" class="hcp7"></p></td>
+		<td width="298" class="hcp8"><p class="hcp6"><img src="CIN_06.jpg" alt="" width="363" height="350" border="0" class="hcp7"></p></td>
+	</tr>
+	<tr class="hcp3">
+		<td width="298" class="hcp9"><p class="hcp4">Fig. 
+		 7 - Rotazione attorno alla base della parete con parete ortogonale 
+		 ammorsata parzialmente</p></td>
+		<td width="298" class="hcp10"><p class="hcp4">Fig. 
+		 8 - Rotazione attorno alla base della parete con parete ortogonale 
+		 ammorsata parzialmente</p></td>
+	</tr>
+	<tr class="hcp3">
+		<td width="298" class="hcp5"><p class="hcp6"><img src="CIN_07.jpg" alt="" width="363" height="350" border="0" class="hcp7"></p></td>
+		<td width="298" class="hcp8"><p class="hcp6"><img src="CIN_08.jpg" alt="" width="363" height="350" border="0" class="hcp7"></p></td>
+	</tr>
+	<tr class="hcp3">
+		<td width="298" class="hcp9"><p class="hcp4">Fig. 
+		 9 - Rotazione attorno alla base della parete con parete ortogonale 
+		 ammorsata</p></td>
+		<td width="298" class="hcp10"><p class="hcp4">Fig. 
+		 10 - Flessione verticale attorno al 2° piano di una porzione della 
+		 parete</p></td>
+	</tr>
+	<tr class="hcp3">
+		<td width="298" class="hcp5"><p class="hcp6"><img src="CIN_09.jpg" alt="" width="363" height="350" border="0" class="hcp7"></p></td>
+		<td width="298" class="hcp8"><p class="hcp6"><img src="CIN_10.jpg" alt="" width="363" height="350" border="0" class="hcp7"></p></td>
+	</tr>
+	<tr class="hcp3">
+		<td width="298" class="hcp9"><p class="hcp4">Fig. 
+		 11 - Flessione verticale attorno al 1° piano dell'intera parete</p></td>
+		<td width="298" class="hcp10"><p class="hcp4">Fig. 
+		 12 - Flessione verticale attorno al 2° piano dell'intera parete</p></td>
+	</tr>
+	<tr class="hcp3">
+		<td width="298" class="hcp5"><p class="hcp6"><img src="CIN_11.jpg" alt="" width="363" height="350" border="0" class="hcp7"></p></td>
+		<td width="298" class="hcp8"><p class="hcp6"><img src="CIN_12.jpg" alt="" width="363" height="350" border="0" class="hcp7"></p></td>
+	</tr>
+	<tr class="hcp3">
+		<td width="298" class="hcp9"><p class="hcp4">Fig. 
+		 13 - Flessione verticale attorno al 1° piano di una porzione della 
+		 parete</p></td>
+		<td width="298" class="hcp11"><p class="hcp6">&#160;</p></td>
+	</tr>
+	<tr class="hcp3">
+		<td width="298" class="hcp5"><p class="hcp6"><img src="CIN_13.jpg" alt="" width="363" height="350" border="0" class="hcp7"></p></td>
+		<td width="298" class="hcp11"><p class="hcp6">&#160;</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+</body>
+</html>

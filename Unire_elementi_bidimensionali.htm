@@ -1,0 +1,65 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Unifica gli elementi bidimensionali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Unifica gli elementi bidimensionali</h1>
+<p>È possibile unire un gruppo di elementi bidimensionali fra di loro al 
+ fine di ottenerne uno più grande cliccando nel gruppo <span class="hcp1">Modifica</span> 
+ della scheda <span class="hcp1">Modellazione</span> su <span class="hcp1">Unifica <img src="../Icone/16/unifica.png" alt="" border="1" class="hcp2"></span> e poi 
+ su <span class="hcp1">B</span><span class="hcp1">idimensionali 
+ <img src="../Icone/16/unmesh.png" alt="" border="1" class="hcp2"></span>.</p>
+<p>Vengono uniti gli elementi bidimensionali che giacciono sullo stesso 
+ piano e che hanno le stesse proprietà di seguito elencate:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">numero;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">tipologia;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">filo fisso e scostamento dal 
+	 filo fisso;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">direzione dell'asse locale 
+	 Y;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">carico.</p></li>
+</ul>
+<p>Il programma inizialmente raggruppa gli elementi bidimensionali selezionati 
+ in quelli che hanno lo stesso numero e poi li suddivide in sottogruppi 
+ che abbiano le stesse caratteristiche sopra elencate. Per cui ad esempio 
+ un insieme di elementi bidimensionali con lo stesso numero ma con 3 differenti 
+ zone di carico verranno suddivisi in 3 grossi elementi bidimensionali. 
+ Questo metodo di unione è stato ideato per evitare di perdere le proprietà, 
+ sia in termini geometrici che di carichi, assegnate dall'utente agli elementi 
+ bidimensionali.</p>
+<p>Il programma individua automaticamente le forature e provvede a ripristinarle 
+ ove è possibile con il comando <span class="hcp1"><a href="../Comandi/FORA.htm">FORA</a></span> 
+ oppure le contorna con delle aste fittizie di sezione 0.</p>
+<p style="text-align: justify;"><span class="hcp1">Note</span>:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">I muri non possono essere 
+	 uniti.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Le 
+	 eventuali aste presenti sul perimetro dell'elemento bidimensionale 
+	 non vengono automaticamente unite.</p></li>
+</ul>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/UNMESH.htm">UNMESH</a></span> 
+ (Unisce elementi bidimensionali).</p>
+<p>&#160;</p>
+</body>
+</html>

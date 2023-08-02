@@ -1,0 +1,262 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dati struttura</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { vertical-align:Sub; }
+span.hcp3 { font-style:italic; }
+span.hcp4 { font-weight:bold;
+vertical-align:Sub; }
+span.hcp5 { font-family:Symbol, serif;
+font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dati struttura</h1>
+<p>I dati struttura rappresentano dati, opzioni o interpretazioni di normativa 
+ che l'utente può modificare e che vengono associati al calcolo della struttura. 
+ Tutti i dati sono associati al calcolo in corso e vengono automaticamente 
+ memorizzati. Quando si calcola per la prima volta una struttura o quando 
+ si cambia solutore o quando nascono situazioni di incompatibilità vengono 
+ automaticamente impostati i valori di default.</p>
+<p>Molti dati vengono calcolati in automatico da ModeSt, ma l'utente può 
+ modificarli manualmente. Eventuali altri dati correlati vengono ricalcolati 
+ ma possono essere a loro volta modificati.</p>
+<p>Si riportano i significati dei parametri che vengono richiesti nei vari 
+ casi, alcuni avranno opzioni diverse e/o potranno non essere richiesti 
+ in funzione del tipo specifico di calcolo o di normativa:</p>
+<p><span class="hcp1"><a name="Sito_di_costruzione" id="Sito_di_costruzione"></a>Sito 
+ di costruzione</span>: cliccando sul bottone &quot;Individua&quot; è possibile 
+ individuare il sito di costruzione dell'opera in varie modalità: indicando 
+ il codice identificativo (ID) del punto del reticolo, specificando le 
+ coordinate in termini di Longitudine e Latitudine, indicando una delle 
+ Isole come prevede il D.M. 17/01/18. Se si dispone di un collegamento 
+ Internet è possibile utilizzare il bottone &quot;Cerca&quot; per aprire 
+ una pagina HTML con la mappa del territorio Italiano. Sarà sufficiente 
+ indicare la località desiderata per avere il calcolo automatico di tutti 
+ i dati. Una volta individuato il punto geografico sarà sufficiente chiudere 
+ la pagina HTML per selezionarlo automaticamente. All'interno della finestra 
+ di dialogo il bottone &quot;Controlla&quot; permette di visualizzare nuovamente 
+ la mappa con l'indicazione dei punti del reticolo utilizzati per l'interpolazione 
+ dei dati, mentre il bottone &quot;Dettagli&quot; consente di visualizzare 
+ per ogni stato limite i valori calcolati di a<span class="hcp2">g</span>, 
+ F<span class="hcp2">0</span> e T<span class="hcp2">c</span>*.</p>
+<p><span class="hcp1"><a name="Spettri" id="Spettri"></a>Spettri</span>: 
+ selezionare il tipo di spettro di progetto con calcolare la struttura 
+ ai sensi&#160;del D.M. 17/01/18. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Automatici_da_normativa"></a>Automatici da normativa</span>: 
+	 lo spettro viene calcolato in automatico seguendo le indicazioni della 
+	 normativa Italiana impostata nel parametro <a href="Parametri_generali_del_calcolo.htm#Normativa"><span class="hcp1">Normativa</span></a>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Da_specifiche_analisi_di_risposta_sismica_locale" id="Da_specifiche_analisi_di_risposta_sismica_locale"></a>Da 
+	 specifiche analisi di risposta sismica locale</span>: lo spettro, 
+	 calcolato in automatico seguendo le indicazioni della normativa Italiana 
+	 impostata nel parametro <a href="Parametri_generali_del_calcolo.htm#Normativa"><span class="hcp1">Normativa</span></a>, viene modificato 
+	 in funzione dei valori assegnati ai parametri <span class="hcp1"><a 
+	 href="Dati%20di%20calcolo.htm#Coefficiente_di_amplificazione_stratigrafica_Ss">Coefficiente 
+	 di amplificazione stratigrafica (Ss)</a></span>, <span class="hcp1"><a 
+	 href="Dati%20di%20calcolo.htm#Coefficiente_funzione_della_categoria_del_suolo_Cc">Coefficiente 
+	 funzione della categoria del suolo (Cc)</a></span> e <span class="hcp1"><a 
+	 href="Dati%20di%20calcolo.htm#Coefficiente_di_modifica_TB">Coefficiente 
+	 di modifica del periodo TB</a></span> presenti nella scheda &quot;Dati 
+	 di calcolo&quot;.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Definiti_manualmente" id="Definiti_manualmente"></a>Definiti 
+	 manualmente</span>: lo spettro è definito manualmente dall'utente 
+	 seguendo le indicazioni riportate ne paragrafo <span class="hcp1"><a 
+	 href="Spettri_di_progetto_DM18.htm">Spettri di progetto ai sensi D.M. 
+	 17/01/18</a></span>.</p></li>
+</ul>
+<p>Per tutti i suddetti spettri è possibile visualizzare i diagrammi cliccando 
+ sul <span class="hcp1">Visualizza spettri</span> o <span class="hcp1">Gestione spettri</span> nella scheda &quot;Dati 
+ di calcolo&quot;. Scorrendo con il cursore lungo l'asse del periodo si 
+ visualizzano i valori corrispondenti alle grandezze disegnate e cliccando 
+ in un punto è possibile fissare sul diagramma tali valori. <span style="text-transform: uppercase;">è</span> 
+ possibile salvare l'immagine rappresentata nella finestra attraverso il 
+ menu <span class="hcp3">Esporta</span>. Durante l'esportazione 
+ si può utilizzare un diverso schema di colore (esempio con sfondo bianco 
+ anziché nero) semplicemente selezionandolo dalla casella di riepilogo 
+ a discesa della finestra di dialogo.</p>
+<p><span class="hcp1"><a name="Edificio_esistente" id="Edificio_esistente"></a>Edificio 
+ esistente</span>: specificare se l'edificio sia una struttura esistente 
+ oppure nuova. Quest'opzione è presente solo se si esegue il calcolo della 
+ struttura agli <span class="hcp1">Stati limite D.M. 18</span>. 
+ Si vedano importanti note nei paragrafi <span class="hcp1"><a 
+	 href="Ricerca_stati_limite_pushover.htm">Ricerca stati limite pushover</a></span>, 
+ <span class="hcp1"><a href="Introduzione_verifiche_edifici_esistenti_in_ca.htm">Verifica 
+ di strutture esistenti</a></span> e<span class="hcp1"> </span><u><span 
+	 style="font-size: 11.0pt; line-height: 115%; font-family: Calibri, sans-serif; 
+	 mso-fareast-font-family: Calibri; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+	 font-weight: bold;"><a href="Calcolo_indicatori_di_rischio_ca.htm">Analisi 
+ lineare con fattore di comportamento</a></span></u>.</p>
+<p><span class="hcp1"><a name="Tipo_di_opera" id="Tipo_di_opera"></a>Tipo 
+ di opera</span>: selezionare il tipo di opera a cui appartiene l'edificio 
+ (par. 2.4.1 del D.M. 17/01/18). Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Provvisoria</span>: 
+	 <span class="hcp3">Costruzioni temporanee e provvisorie</span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Opera 
+	 ordinaria</span>: <span class="hcp3">Costruzioni con 
+	 livelli di prestazioni ordinari</span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Grande 
+	 opera</span>: <span class="hcp3">Costruzioni con livelli 
+	 di prestazioni elevati</span>.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Vita_nominale" id="Vita_nominale"></a>Vita 
+ nominale V</span><span class="hcp4">N</span>: 
+ specificare il valore della vita nominale di un'opera strutturale (par. 
+ 2.4.1 del D.M. 17/01/18).</p>
+<p><span class="hcp1"><a name="Classe_d_uso" id="Classe_d_uso"></a>Classe 
+ d'uso</span>: selezionare la classe d'uso a cui appartiene l'edificio 
+ (par. 2.4.2 del D.M. 17/01/18). Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Classe 
+	 I</span>: <span class="hcp3">Costruzioni con presenza 
+	 solo occasionale di persone, edifici agricoli.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Classe 
+	 II</span>:<span class="hcp3"> Costruzioni il cui uso 
+	 preveda normali affollamenti, senza contenuti pericolosi per l'ambiente 
+	 e senza funzioni pubbliche e sociali essenziali. Industrie con attività 
+	 non pericolose per l'ambiente. Ponti, opere infrastrutturali, reti 
+	 viarie non ricadenti in Classe d'uso III o in Classe d'so IV, reti 
+	 ferroviarie la cui interruzione non provochi situazioni di emergenza. 
+	 Dighe il cui collasso non provochi conseguenze rilevanti.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Classe 
+	 III</span>:<span class="hcp3"> Costruzioni il cui uso 
+	 preveda affollamenti significativi. Industrie con attività pericolose 
+	 per l’ambiente. Reti viarie extraurbane non ricadenti in Classe d'uso 
+	 IV. Ponti e reti ferroviarie la cui interruzione provochi situazioni 
+	 di emergenza. Dighe rilevanti per le conseguenze di un loro eventuale 
+	 collasso.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Classe 
+	 IV</span>: <span class="hcp3">Costruzioni con funzioni 
+	 pubbliche o strategiche importanti, anche con riferimento alla gestione 
+	 della protezione civile in caso di calamità. Industrie con attività 
+	 particolarmente pericolose per l'ambiente. Reti viarie di tipo A o 
+	 B, di cui al DM 5/11/2001, n. 6792, &quot;Norme funzionali e geometriche 
+	 per la costruzione delle strade&quot;, e di tipo C quando appartenenti 
+	 ad itinerari di collegamento tra capoluoghi di provincia non altresì 
+	 serviti da strade di tipo A o B. Ponti e reti ferroviarie di importanza 
+	 critica per il mantenimento delle vie di comunicazione, particolarmente 
+	 dopo un evento sismico. Dighe connesse al funzionamento di acquedotti 
+	 e a impianti di produzione di energia elettrica.</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="SL_Esercizio_Ultimi" id="SL_Esercizio_Ultimi"></a>SL 
+ Esercizio/Ultimi</span>: selezionare quali stati limite considerare e 
+ il valore della probabilità di superamento nel periodo di riferimento 
+ (par. 3.2.1 del D.M. 17/01/18). I parametri di pericolosità sismica a<span class="hcp2">g</span>, F<span class="hcp2">0</span> 
+ e T<span class="hcp2">c</span>* calcolati in funzione 
+ del sito di costruzione possono essere modificati per personalizzare lo 
+ spettro di progetto.</p>
+<p><span class="hcp1"><a name="Struttura_dissipativa" id="Struttura_dissipativa"></a>Struttura 
+ dissipativa</span>: specificare se il comportamento della struttura è 
+ di tipo dissipativo o non dissipativo (par. 7.2.2 del D.M. 17/01/18). 
+ Se l'opzione è selezionata il comportamento della struttura è di tipo 
+ dissipativo e di conseguenza è necessario selezionare la classe di duttilità: 
+ <span class="hcp1">Classe A</span> o<span class="hcp1"> 
+ Classe B</span>.</p>
+<p><span class="hcp1"><a name="Quota_di_riferimento" id="Quota_di_riferimento"></a>Quota 
+ di riferimento</span>: specificare la quota di riferimento (rispetto allo 
+ 0 assunto durante l'inserimento dei dati) da considerare nel calcolo dei 
+ coefficienti di distribuzione delle forze di piano. Tutte le masse al 
+ disotto della quota impostata vengono trascurate anche per l'analisi dinamica.</p>
+<p><span class="hcp1"><a name="Altezza" id="Altezza"></a>Quota 
+ max della struttura</span>: specificare la quota massima (nel sistema 
+ di riferimento globale) dei nodi appartenenti alla struttura da considerare 
+ nel calcolo dell'altezza dell'edificio. L'altezza dell'edificio è calcolata 
+ come la differenza tra il valore della <span class="hcp1">Quota 
+ max della struttura</span> e la <span class="hcp1">Quota 
+ di riferimento</span>.</p>
+<p><span class="hcp1"><a name="Numero_piani_edificio" id="Numero_piani_edificio"></a>Numero 
+ piani edificio</span>: specificare il numero dei piani dell'edificio. 
+ Questo valore influenza il valore del <span class="hcp1">Coeff.</span> 
+ <font style="font-family: Symbol; font-weight: bold;" face="Symbol">l</font> 
+ come riportato al par. 7.3.3.2 del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Coefficiente teta"></a>Coefficiente</span> 
+ <span style="font-weight: bold; font-family: Symbol, serif;">q</span>: 
+ specificare un valore del coefficiente diverso da zero se si vuole tener 
+ conto delle eventuali non linearità geometriche come riportato al par. 
+ 7.3.1 del D.M. 17/01/18: &quot;<span class="hcp3">Gli effetti 
+ delle non linearità geometriche possono essere trascurati quando </span><span class="hcp5">q</span><span class="hcp3"> è minore di 0,1; possono essere presi 
+ in conto incrementando gli effetti dell’azione sismica orizzontale di 
+ un fattore pari a 1/(1</span><span class="hcp5">-q</span><span class="hcp3">), quando </span><span class="hcp5">q</span><span class="hcp3"> è compreso tra 0,1 e 0,2; devono essere 
+ valutati attraverso un’analisi non lineare, quando </span><span class="hcp5">q</span><span class="hcp3"> è 
+ compreso tra 0,2 e 0,3. Il fattore </span><span class="hcp5">q</span><span class="hcp3"> non può comunque superare il valore 0,3&quot;</span>. 
+ Questo parametro non viene calcolato automaticamente dal programma ma 
+ può essere valutato cliccando nel gruppo <span class="hcp1">Valori</span> 
+ della scheda <span class="hcp1">Risultati</span> su <span class="hcp1">Numerici</span> <img src="../Icone/32/risnumerici32.png" alt="" style="border: Solid 1px #808080; 
+													 border-width: 1px; 
+													 border-style: solid;" border="1"> e poi 
+ su &quot;Rigidezze&quot;. Per approfondimenti si veda il capitolo <span class="hcp1"><a href="Rigidezze_teoriche.htm">Rigidezze 
+ teoriche</a></span>.</p>
+<p><span class="hcp1"><a name="Edificio_regolare_in_altezza" 
+										 id="Edificio_regolare_in_altezza"></a>Edificio 
+ regolare in altezza</span>: specificare se l'edificio è regolare in altezza. 
+ Questo valore influenza il valore del <span class="hcp1">Fattore 
+ di comportamento dissipativo (q)</span> attraverso il coefficiente K<span class="hcp2">R</span> come riportato al par. 7.3.1 
+ del D.M. 17/01/18: &quot;<span class="hcp3">è un fattore 
+ che dipende dalle caratteristiche di regolarità in altezza della costruzione, 
+ con valore pari ad 1 per costruzioni regolari in altezza e pari a 0,8 
+ per costruzioni non regolari in altezza.</span>&quot;</p>
+<p><span class="hcp1"><a name="Edificio_regolare_in_pianta" 
+										 id="Edificio_regolare_in_altezza1"></a>Edificio 
+ regolare in pianta</span>: specificare se l'edificio è regolare in pianta.</p>
+<p><span class="hcp1"><a name="Genera_stati_limite_per_verifiche_di_resistenza_al_fuoco" 
+										 id="Genera_stati_limite_per_verifiche_di_resistenza_al_fuoco"></a>Genera 
+ stati limite per verifiche di resistenza al fuoco</span>: specificare 
+ se deve essere generato lo stato limite per la verifica della resistenza 
+ al fuoco in aggiunta alle altre azioni specificate nella struttura. Vengono 
+ poi generate le combinazioni per gli stati limite ultimi connessi alle 
+ azioni eccezionali di progetto.</p>
+<p><span class="hcp1"><a name="Genera_le_combinazioni_corrispondenti_allo_stato_attuale" 
+										 id="a1"></a>Genera le combinazioni 
+ corrispondenti allo stato attuale</span>: specificare se deve essere generata 
+ la combinazione corrispondente allo stato attuale in aggiunta alle altre 
+ combinazioni specificate nella struttura. Le sollecitazioni derivanti 
+ da tale combinazione vengono utilizzate nelle verifiche dei rinforzi con 
+ materiali compositi FRP di travi e pilastri in c.a. per determinare lo 
+ stato deformativo preesistente all'applicazione del rinforzo.</p>
+<p><span class="hcp1"><a name="Lato_maggiore" id="Lato_maggiore"></a>Lato 
+ maggiore</span>: rappresenta la dimensione massima in pianta dell'edificio 
+ calcolata nelle direzioni del sisma.</p>
+<p><span class="hcp1"><a name="Lato_minore" id="Lato_minore"></a>Lato 
+ minore</span>: rappresenta la dimensione minima in pianta dell'edificio 
+ in direzione ortogonale al precedente parametro.</p>
+<p><span class="hcp1"><a name="Rapporto_tra_i_lati" id="Rapporto_tra_i_lati"></a>Rapporto 
+ tra i lati</span>: rappresenta il rapporto tra il <span class="hcp1">Lato 
+ maggiore</span> e il <span class="hcp1">Lato minore</span> 
+ dell'edificio. Nel caso si utilizzi il metodo alle Tensioni ammissibili 
+ D.M. 14/02/92 o agli Stati limite D.M. 9/01/96, se il rapporto è maggiore 
+ di 2.5, la normativa Italiana impone di tenere conto di un momento torcente 
+ fittizio aggiuntivo che ModeSt calcola automaticamente.</p>
+<p><span class="hcp1"><a name="Periodo_T0" id="Periodo_T0"></a>Periodo 
+ fondamentale (T</span><span class="hcp4">0</span><span class="hcp1">)</span>: specificare il valore del periodo 
+ fondamentale T<span class="hcp2">0</span>.</p>
+<p><span class="hcp1"><a name="Coeff__di_risposta" id="Coeff__di_risposta"></a>Coeff. 
+ di risposta</span>: rappresenta il coefficiente di risposta come funzione 
+ del <span class="hcp1">Periodo fondamentale</span> della 
+ struttura (D.M. 16/01/96).</p>
+<p><span class="hcp1"><a name="Impalcato_per_punto_di_controllo" 
+										 id="Impalcato_per_punto_di_controllo"></a>Impalcato 
+ per punto di controllo</span>: selezionare l'impalcato che si vuol considerare 
+ come punto di controllo, coincidente con il baricentro delle masse dell'impalcato, 
+ nella costruzione della curva di capacità. Generalmente per il punto di 
+ controllo si assume il baricentro delle masse dell'impalcato di copertura.</p>
+</body>
+</html>

@@ -1,0 +1,794 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dati di calcolo</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style type="text/css">
+<!--
+body { border-left-style:Solid;
+border-left-width:1px;
+border-right-style:Solid;
+border-right-width:1px;
+border-top-style:Solid;
+border-top-width:1px;
+border-bottom-style:Solid;
+border-bottom-width:1px; }
+-->
+</style>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-style:italic; }
+span.hcp3 { font-weight:bold;
+vertical-align:Sub; }
+span.hcp4 { vertical-align:Sub; }
+span.hcp5 { font-family:Symbol, serif; }
+table.hcp6 { vertical-align:top; }
+tr.hcp7 { vertical-align:top; }
+td.hcp8 { border:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp9 { font-weight:bold; }
+td.hcp10 { border-top:Double 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp11 { text-align:center;
+margin-bottom:0pt;
+font-weight:bold; }
+p.hcp12 { text-align:center;
+margin-top:0pt;
+margin-bottom:0pt;
+font-weight:bold; }
+td.hcp13 { border-top:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+td.hcp14 { border-left:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp15 { font-weight:normal; }
+td.hcp16 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+a.hcp17 { font-weight:bold; }
+font.hcp18 { font-family:Symbol;
+font-weight:bold; }
+span.hcp19 { font-style:italic;
+vertical-align:Sub; }
+p.hcp20 { margin-bottom:0; }
+span.hcp21 { font-weight:normal; }
+span.hcp22 { font-style:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dati di calcolo</h1>
+<p>I dati di calcolo rappresentano dati, opzioni o interpretazioni di normativa 
+ che l'utente può modificare e che vengono associati al calcolo della struttura. 
+ Tutti i dati sono associati al calcolo in corso e vengono automaticamente 
+ memorizzati. Quando si calcola per la prima volta una struttura o quando 
+ si cambia solutore o quando nascono situazioni di incompatibilità vengono 
+ automaticamente impostati i valori di default.</p>
+<p>Molti dati vengono calcolati in automatico da ModeSt, ma l'utente può 
+ modificarli manualmente. Eventuali altri dati correlati vengono ricalcolati 
+ ma possono essere a loro volta modificati.</p>
+<p>Si riportano i significati dei parametri che vengono richiesti nei vari 
+ casi, alcuni avranno opzioni diverse e/o potranno non essere richiesti 
+ in funzione del tipo specifico di calcolo o di normativa:</p>
+<p><span class="hcp1"><a name="Categoria_del_suolo_di_fondazione" 
+										 id="Categoria_del_suolo_di_fondazione"></a>Categoria 
+ del suolo di fondazione</span>: selezionare la categoria del suolo di 
+ fondazione fra quelle previste al par. 3.2.2 del D.M. 17/01/18:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">A</span>: 
+	 <span class="hcp2">ammassi rocciosi affioranti o terreni 
+	 molto rigidi</span> caratterizzati da valori di velocità delle onde 
+	 di taglio superiori a 800 m/s, eventualmente comprendenti in superficie 
+	 terreni di caratteristiche meccaniche più scadenti con spessore massimo 
+	 pari a 3 m.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">B</span>: 
+	 <span class="hcp2">rocce tenere e depositi di terreni 
+	 a grana grossa molto addensati o terreni a grana fina molto consistenti</span>, 
+	 caratterizzati da un miglioramento delle proprietà meccaniche con 
+	 la profondità e da valori di velocità equivalente compresi tra 360 
+	 m/s e 800 m/s.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">C</span>: 
+	 <span class="hcp2">depositi di terreni a grana grossa 
+	 mediamente addensati o terreni a grana fina mediamente consistenti</span> 
+	 con profondità del substrato superiori a 30 m, caratterizzati da un 
+	 miglioramento delle proprietà meccaniche con la profondità e da valori 
+	 di velocità equivalente compresi tra 180 m/s e 360 m/s.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">D</span>: 
+	 <span class="hcp2">depositi di terreni a grana grossa 
+	 scarsamente addensati o di terreni a grana fina scarsamente consistenti</span>, 
+	 con profondità del substrato superiori a 30 m, caratterizzati da un 
+	 miglioramento delle proprietà meccaniche con la profondità e da valori 
+	 di velocità equivalente compresi tra 100 e 180 m/s.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">E</span>: 
+	 <span class="hcp2">terreni con caratteristiche e valori 
+	 di velocità equivalente riconducibili a quelle definite per le categorie 
+	 C o D</span>, con profondità del substrato non superiore a 30 m.</p></li>
+</ul>
+<p><span class="hcp1"><span class="hcp1"><a 
+	 name="Categoria_topografica" id="Categoria_topografica"></a></span>Categoria 
+ topografica</span>: selezionare la categoria fra quelle previste al par. 
+ 3.2.2 del D.M. 17/01/18:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">T1 
+	 - Superficie pianeggiante, pendii e rilievi isolati con inclinazione 
+	 media i&lt;=15°</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">T2 
+	 - Pendii con inclinazione media i&gt;15°</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">T3 
+	 - Rilievi con larghezza in cresta molto minore che alla base e inclinazione 
+	 media 15°&lt;= i &lt;=30°</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">T4 
+	 - Rilievi con larghezza in cresta molto minore che alla base e inclinazione 
+	 media i&gt;30°</p></li>
+</ul>
+<p><span class="hcp1"><a name="Coeff_amplificazione_topografica" 
+										 id="Coeff_amplificazione_topografica"></a>Coeff. 
+ di amplificazione topografica S</span><span class="hcp3">T</span>: 
+ in funzione del precedente parametro viene automaticamente settato il 
+ valore che la normativa Italiana (par. 3.2.3.2.1 del D.M. 17/01/18) specifica 
+ di adottare.</p>
+<p><span class="hcp1"><a name="Coefficiente_di_amplificazione_stratigrafica_Ss" 
+										 id="Coefficiente_di_amplificazione_stratigrafica_Ss"></a>Coefficiente 
+ di amplificazione stratigrafica (Ss)</span>: questo valore viene utilizzato 
+ nel caso di spettri <span class="hcp1"><a href="Dati%20struttura.htm#Da_specifiche_analisi_di_risposta_sismica_locale">da 
+ specifiche analisi di risposta sismica locale</a></span> per modificare 
+ lo spettro calcolato in automatico seguendo le indicazioni della normativa 
+ Italiana impostata nel parametro <a href="Parametri_generali_del_calcolo.htm#Normativa"><span class="hcp1">Normativa</span></a>.</p>
+<p><span class="hcp1"><a name="Coefficiente_funzione_della_categoria_del_suolo_Cc" 
+										 id="Coefficiente_funzione_della_categoria_del_suolo_Cc"></a>Coefficiente 
+ funzione della categoria del suolo (Cc)</span>:&#160;questo valore viene 
+ utilizzato nel caso di spettri <span class="hcp1"><a href="Dati%20struttura.htm#Da_specifiche_analisi_di_risposta_sismica_locale">da 
+ specifiche analisi di risposta sismica locale</a></span> per modificare 
+ lo spettro calcolato in automatico seguendo le indicazioni della normativa 
+ Italiana impostata nel parametro <a href="Parametri_generali_del_calcolo.htm#Normativa"><span class="hcp1">Normativa</span></a>.</p>
+<p><span class="hcp1"><a name="Coefficiente_di_modifica_TB" 
+										 id="Coefficiente_di_modifica_TB"></a>Coefficiente 
+ di modifica del periodo TB</span>:&#160;questo valore viene utilizzato 
+ nel caso&#160;di spettri <span class="hcp1"><a href="Dati%20struttura.htm#Da_specifiche_analisi_di_risposta_sismica_locale">da 
+ specifiche analisi di risposta sismica locale</a></span> per modificare 
+ lo spettro calcolato in automatico seguendo le indicazioni della normativa 
+ Italiana impostata nel parametro <a href="Parametri_generali_del_calcolo.htm#Normativa"><span class="hcp1">Normativa</span></a>.</p>
+<p><span class="hcp1"><a name="Tipologia_diversa_nelle_due_direzioni_sismiche" 
+										 id="Tipologia_diversa_nelle_due_direzioni_sismiche"></a>Tipologia 
+ diversa nelle due direzioni sismiche</span>: attivando quest'opzione è 
+ possibile differenziare la tipologia strutturale per ciascuna direzione 
+ dell'azione sismica.</p>
+<p><span class="hcp1"><a name="Tipologia_strutturale" id="Tipologia_strutturale"></a>Tipologia 
+ strutturale</span>: selezionare la tipologia strutturale degli edifici 
+ in cemento armato, prefabbricati, in acciaio, legno o in muratura. La 
+ tipologia strutturale consente di determinare il fattore di comportamento 
+ q<span class="hcp4">0</span> e il rapporto di sovraresistenza 
+ <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span>. 
+ Le tipologie con uguale fattore di comportamento e rapporto di sovraresistenza 
+ sono state raggruppate. Di seguito, sono riportate in sequenza le tipologie 
+ strutturali corrispondenti agli edifici con struttura in cemento armato, 
+ prefabbricata, acciaio, legno e muratura, con i relativi valori del fattore 
+ di strutture e del rapporto di sovraresistenza e il riferimento al D.M. 
+ 17/01/18 o alla Circolare del D.M. 14/01/08.</p>
+<table cellspacing="0" width="100%" class="hcp6">
+	<col style="width: 58%;">
+	<col style="width: 11%;">
+	<col style="width: 11%;">
+	<col style="width: 5%;">
+	<col style="width: 15%;">
+	<tr class="hcp7">
+		<td class="hcp8"><p class="hcp9"><span class="hcp1">Tipologia 
+		 strutturale</span></p></td>
+		<td class="hcp10"><p class="hcp11"><span class="hcp1">q<span class="hcp4">0</span></span></p>
+		<p class="hcp12">(Classe A)</p></td>
+		<td class="hcp10"><p class="hcp11"><span class="hcp1">q<span class="hcp4">0</span></span></p>
+		<p class="hcp12">(Classe B)</p></td>
+		<td class="hcp13"><p class="hcp9"><span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp13"><p class="hcp9">D.M. 17/01/18</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">c.a. o prefabbricata a telaio 
+		 di un piano</p></td>
+		<td class="hcp16"><p>4.5 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>3.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>1.1</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.4.3.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p>c.a. 
+		 o prefabbricata a telaio a più piani ed una sola campata</p></td>
+		<td class="hcp16"><p>4.5 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>3.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>1.2</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.4.3.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p>c.a. 
+		 o prefabbricata a telaio a più piani e più campate</p></td>
+		<td class="hcp16"><p>4.5 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>3.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>1.3</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.4.3.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p 
+			 class="Bullet1">c.a. o prefabbricata con solo due pareti non 
+		 accoppiate per direzione orizzontale</p></td>
+		<td class="hcp16"><p>4.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>3.0</p></td>
+		<td class="hcp16"><p>1.0</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.4.3.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">c.a. o prefabbricata a pareti 
+		 non accoppiate</p></td>
+		<td class="hcp16"><p>4.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>3.0</p></td>
+		<td class="hcp16"><p>1.1</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.4.3.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">c.a. o prefabbricata a pareti 
+		 accoppiate</p></td>
+		<td class="hcp16"><p>4.5 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>3.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>1.2</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.4.3.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">c.a. deformabile torsionalmente</p></td>
+		<td class="hcp16"><p>3.0</p></td>
+		<td class="hcp16"><p>2.0</p></td>
+		<td class="hcp16"><p>&#160;</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.4.3.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">c.a. a pendolo inverso</p></td>
+		<td class="hcp16"><p>2.0</p></td>
+		<td class="hcp16"><p>1.5</p></td>
+		<td class="hcp16"><p>&#160;</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.4.3.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p>c.a. 
+		 a pendolo inverso intelaiate monopiano</p></td>
+		<td class="hcp16"><p>3.5</p></td>
+		<td class="hcp16"><p>2.5</p></td>
+		<td class="hcp16"><p>&#160;</p></td>
+		<td class="hcp16"><p>7.3.1</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">prefabbricata a pannelli</p></td>
+		<td class="hcp16"><p>4.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>3.0</p></td>
+		<td class="hcp16"><p>1.1*</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.4.5.1</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">prefabbricata monolitiche a cella</p></td>
+		<td class="hcp16"><p>3.0</p></td>
+		<td class="hcp16"><p>2.0</p></td>
+		<td class="hcp16"><p>&#160;</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.4.5.1</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">prefabbricata con pilastri incastrati 
+		 e orizzontamenti incernierati</p></td>
+		<td class="hcp16"><p>3.5</p></td>
+		<td class="hcp16"><p>2.5</p></td>
+		<td class="hcp16"><p>&#160;</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.4.5.1</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">acciaio a telaio di un piano</p></td>
+		<td class="hcp16"><p>5.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>4.0</p></td>
+		<td class="hcp16"><p>1.1</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.5.2.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">acciaio a telaio a più piani 
+		 ed una sola campata</p></td>
+		<td class="hcp16"><p>5.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>4.0</p></td>
+		<td class="hcp16"><p>1.2</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.5.2.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">acciaio a telaio a più piani 
+		 e più campate</p></td>
+		<td class="hcp16"><p>5.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>4.0</p></td>
+		<td class="hcp16"><p>1.3</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.5.2.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">acciaio con controventi eccentrici 
+		 ad un piano</p></td>
+		<td class="hcp16"><p>5.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>4.0</p></td>
+		<td class="hcp16"><p>1.1</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.5.2.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">acciaio con controventi eccentrici 
+		 a più piani</p></td>
+		<td class="hcp16"><p>5.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>4.0</p></td>
+		<td class="hcp16"><p>1.2</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.5.2.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">acciaio con controventi concentrici 
+		 a diagonale tesa attiva</p></td>
+		<td class="hcp16"><p>4.0</p></td>
+		<td class="hcp16"><p>4.0</p></td>
+		<td class="hcp16"><p>&#160;</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.5.2.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">acciaio a mensola o a pendolo 
+		 inverso</p></td>
+		<td class="hcp16"><p>2.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>2.0</p></td>
+		<td class="hcp16"><p>1.0</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.5.2.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">acciaio a telaio con controventi 
+		 concentrici a K ad un piano</p></td>
+		<td class="hcp16"><p>4.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>4.0</p></td>
+		<td class="hcp16"><p>1.1</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.5.2.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">acciaio a telaio con controventi 
+		 concentrici a K a più piani ed una sola campata</p></td>
+		<td class="hcp16"><p>4.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>4.0</p></td>
+		<td class="hcp16"><p>1.2</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.5.2.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">acciaio a telaio con controventi 
+		 concentrici a K a più piani e più campate</p></td>
+		<td class="hcp16"><p>4.0 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td class="hcp16"><p>4.0</p></td>
+		<td class="hcp16"><p>1.3</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.5.2.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">acciaio a telaio con controventi 
+		 concentrici a V</p></td>
+		<td class="hcp16"><p>2.5</p></td>
+		<td class="hcp16"><p>2.0</p></td>
+		<td class="hcp16"><p>&#160;</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.5.2.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p class="hcp15">acciaio intelaiata con tamponature 
+		 in muratura</p></td>
+		<td class="hcp16"><p>2.0</p></td>
+		<td class="hcp16"><p>2.0</p></td>
+		<td class="hcp16"><p>&#160;</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.5.2.2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p>legno 
+		 a pannelli di parete a telaio leggero chiodati con diaframmi incollati, 
+		 collegati mediante chiodi, viti e bulloni</p></td>
+		<td class="hcp16"><p>3.0</p></td>
+		<td class="hcp16"><p>2.0</p></td>
+		<td class="hcp16"><p>&#160;</p></td>
+		<td class="hcp16"><p>7.3.1 e 7.7.3</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p>legno 
+		 a strutture reticolari iperstatiche con giunti chiodati</p></td>
+		<td class="hcp16"><p>3.0</p></td>
+		<td class="hcp16"><p>2.0</p></td>
+		<td class="hcp16">&#160;</td>
+		<td class="hcp16"><p>7.3.1 e 7.7.3</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p>legno 
+		 a portali iperstatici con mezzi di unione a gambo cilindrico</p></td>
+		<td class="hcp16"><p>4.0</p></td>
+		<td class="hcp16"><p>2.5</p></td>
+		<td class="hcp16">&#160;</td>
+		<td class="hcp16"><p>7.3.1 e 7.7.3</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p>legno 
+		 a pannelli di parete a telaio leggero chiodati con diaframmi chiodati, 
+		 collegati mediante chiodi, viti e bulloni</p></td>
+		<td class="hcp16"><p>5.0</p></td>
+		<td class="hcp16"><p>3.0</p></td>
+		<td class="hcp16">&#160;</td>
+		<td class="hcp16"><p>7.3.1 e 7.7.3</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p>legno 
+		 a pannelli di tavole incollate a strati incrociati, collegati 
+		 mediante chiodi, viti, bulloni</p></td>
+		<td class="hcp16"><p>2.5*</p></td>
+		<td class="hcp16"><p>2.5</p></td>
+		<td class="hcp16">&#160;</td>
+		<td class="hcp16"><p>7.3.1 e 7.7.3</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p>legno 
+		 a strutture reticolari con collegamenti a mezzo di chiodi, viti, 
+		 bulloni o spinotti</p></td>
+		<td class="hcp16"><p>2.5*</p></td>
+		<td class="hcp16"><p>2.5</p></td>
+		<td class="hcp16">&#160;</td>
+		<td class="hcp16"><p>7.3.1 e 7.7.3</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p>legno 
+		 a strutture cosiddette miste, con intelaiatura (sismo-resistente) 
+		 in legno e tamponature non portanti</p></td>
+		<td class="hcp16"><p>2.5*</p></td>
+		<td class="hcp16"><p>2.5*</p></td>
+		<td class="hcp16">&#160;</td>
+		<td class="hcp16"><p>7.3.1 e 7.7.3</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td class="hcp14"><p>legno 
+		 a strutture isostatiche in genere, compresi portali isostatici 
+		 con mezzi di unione a gambo cilindrico, e altre tipologie strutturali</p></td>
+		<td class="hcp16"><p>1.5*</p></td>
+		<td class="hcp16"><p>1.5</p></td>
+		<td class="hcp16">&#160;</td>
+		<td class="hcp16"><p>7.3.1 e 7.7.3</p></td>
+	</tr>
+</table>
+<p>* Valore assunto dal programma come ammissibile ma non determinabile 
+ nel D.M. 17/01/18 in quanto non fornito.</p>
+<p><span class="hcp1"><a name="Valuta_T1_in_modo_automatico" 
+										 id="Valuta_T1_in_modo_automatico"></a>Valuta 
+ T</span><span class="hcp3">1</span> 
+ <span class="hcp1">in modo automatico</span>: specificare 
+ se il periodo T<span class="hcp4">1</span> vada valutato 
+ automaticamente dal programma adottando il periodo principale della struttura 
+ risultante a seguito dell'analisi modale o se debba essere valutato manualmente 
+ dall'utente con la formula [7.3.6] del par. 7.3.3.2 del D.M. 17/01/18 
+ e specificato in <span class="hcp1">Periodo</span> <span class="hcp1">T</span><span class="hcp3">1</span>. 
+ <span style="text-decoration: underline; ">Questa opzione non è presente 
+ nell'analisi sismica statica lineare</span>.</p>
+<p><span class="hcp1"><a name="Periodo_T1" id="Periodo_T1"></a>Periodo 
+ T</span><span class="hcp3">1</span>: 
+ specificare il valore del periodo T<span class="hcp4">1</span> 
+ (7.3.3.2 del D.M. 17/01/18). Nel caso di analisi sismica statica lineare 
+ o deselezionata l'opzione <span class="hcp1">Valuta T</span><span class="hcp3">1</span> <span class="hcp1">in 
+ modo automatico</span>, tale valore è calcolato con la formula [C7.3.2] 
+ del par. 7.3.3.2 della Circolare esplicativa n. 7 del 21/01/19. L'altezza 
+ dell'edificio e calcolata come la differenza tra il valore della <span class="hcp1"><a href="Dati%20struttura.htm#Altezza">Quota 
+ max della struttura</a></span> e la <span class="hcp1"><a 
+	 href="Dati%20struttura.htm#Quota_di_riferimento">Quota di riferimento</a></span>. 
+ L'utente può eseguire un'analisi dei soli modi di vibrare della struttura 
+ e valutare con le <a href="Tabelle%20risultati.htm">tabelle dei risultati 
+ dell'analisi</a> (<a href="../Comandi/_RIS.htm" class="hcp17">?RIS</a>) 
+ quale sia il periodo principale della struttura T<span class="hcp4">1</span>.</p>
+<p><span class="hcp1"><a name="Coeff_Lamda" id="Coeff_Lamda"></a>Coeff.</span> 
+ <font face="Symbol" class="hcp18">l</font>: 
+ questo valore viene calcolato in funzione del <span class="hcp1">Numero 
+ piani edificio</span> e del <span class="hcp1">Periodo</span> 
+ <span class="hcp1">T</span><span class="hcp3">1</span> 
+ come riportato al par. 7.3.3.2 del D.M. 17/01/18: &quot;<span class="hcp2">è 
+ un coefficiente pari a 0,85 se T</span><span class="hcp19">1</span> 
+ <span class="hcp2">&lt; 2T</span><span class="hcp19">C</span> 
+ <span class="hcp2">e la costruzione ha almeno tre orizzontamenti, 
+ uguale a 1,0 in tutti gli altri casi</span>&quot;. Poiché il periodo T<span class="hcp4">C</span> varia in funzione dello stato 
+ limite, è possibile specificare eventualmente un diverso valore del coefficiente 
+ <font style="font-family: Symbol;" face="Symbol">l</font> per ogni stato 
+ limite selezionato nella casella di riepilogo a discesa.</p>
+<p><span class="hcp1"><a name="Rapporto_di_sovraresistenza" 
+										 id="Rapporto_di_sovraresistenza"></a>Rapporto 
+ di sovraresistenza</span> <span class="hcp1">(<font face="Symbol" class="hcp18">a</font></span><span class="hcp3">u</span><span class="hcp1">/<font face="Symbol" class="hcp18">a</font></span><span class="hcp3">1</span><span class="hcp1">)</span>: 
+ questo valore viene calcolato automaticamente in funzione del parametro 
+ <span class="hcp1">Tipologia edificio</span> i cui valori 
+ sono riportati nelle precedenti tabelle.</p>
+<p><span class="hcp1"><a name="qo" id="qo"></a>Valore di 
+ riferimento del fattore di comportamento (q</span><span class="hcp3">0</span><span class="hcp1">)</span>: questo valore viene calcolato 
+ automaticamente in funzione del parametro <span class="hcp1">Tipologia 
+ edificio</span> i cui valori sono riportati nelle precedenti tabelle.</p>
+<p><span class="hcp1"><a name="Kw" id="Kw"></a>Fattore riduttivo 
+ (K</span><span class="hcp3">w</span><span class="hcp1">)</span>: specificare il valore del fattore 
+ riduttivo come indicato al par. 7.3.1 del D.M. 17/01/18: <span class="hcp2">&quot;Qualora 
+ nella costruzione siano presenti pareti di calcestruzzo armato, per prevenirne 
+ il collasso fragile, i valori di q</span><span class="hcp19">0</span> 
+ <span class="hcp2">devono essere ridotti mediante il fattore 
+ kw ...&quot;.</span> Questo valore non viene calcolato automaticamente 
+ dal programma.</p>
+<p class="hcp20"><span class="hcp1"><a name="q" 
+	 id="q"></a>Fattore di comportamento dissipativo (q)</span>: questo 
+ valore viene calcolato automaticamente in funzione del parametro <span class="hcp1">Valore di riferimento del fattore di comportamento 
+ (q</span><span class="hcp3">0</span><span class="hcp1">)</span> e del parametro <span class="hcp1">Edificio 
+ regolare in altezza</span>.</p>
+<p class="hcp20"><span class="hcp1"><a name="qND" 
+	 id="qND"></a>Fattore di comportamento non dissipativo (qND)</span>: 
+ questo valore viene calcolato automaticamente come indicato al par. 7.3.1 
+ del D.M. 17/01/18 formula [7.3.2]. Questo valore non può essere superiore 
+ a 1.5.</p>
+<p class="hcp20"><span class="hcp1"><a name="qD" 
+	 id="qD"></a>Fattore di comportamento per SLD (qD)</span>: questo valore 
+ viene di default impostato pari a 1.5 ma è comunque possibile specificare 
+ un valore inferiore come indicato nella tabella 7.3.I del par. 7.3 del 
+ D.M. 17/01/18.</p>
+<p class="hcp20"><span class="hcp1"><a name="qv" 
+	 id="qv"></a>Fattore di comportamento per sisma verticale (q</span><span class="hcp3">v</span><span class="hcp1">)</span>: 
+ specificare il valore del fattore di comportamento per l'azione sismica 
+ verticale come indicato al par. 7.3.1 del D.M. 17/01/18: <span class="hcp2">&quot;Il 
+ valore di q utilizzato per la componente verticale dell'azione sismica 
+ allo SLV, a meno di adeguate analisi giustificative, è q = 1,5 per qualunque 
+ tipologia strutturale e di materiale, tranne che per i ponti per i quali 
+ è q = 1.&quot;</span>.</p>
+<p><span class="hcp1"><a name="Modalita_di_calcolo_modi_di_vibrare" 
+										 id="Modi_da_calcolare"></a>Modalità 
+ di calcolo modi di vibrare</span>: specificare se effettuare l'analisi 
+ dinamica determinando i modi di vibrare con il metodo degli Autovalori 
+ o con il metodo di Ritz-vectors. Con il metodo degli Autovalori si vanno 
+ ad estrarre i modi naturali della struttura e tra questi anche quelli 
+ &quot;locali&quot; mentre, il metodo dei vettori di Ritz determina i modi 
+ di vibrare utilizzando come vettori di partenza dei carichi definiti dall'utente 
+ andando quindi a determinare i modi di vibrare nella &quot;direzione&quot; 
+ di applicazione del carico. Vengono inoltre calcolati solo i modi agenti 
+ nella direzione del carico, per cui se assegno un carico in direzione 
+ X non verranno estratti modi in direzione Y e viceversa. I modi di vibrare 
+ determinati con il metodo di Ritz costituiscono un'ottima approssimazione 
+ delle frequenze naturali e dei corrispondenti modi di vibrare della struttura 
+ inoltre, rispetto al metodo degli Autovalori presenta il vantaggio di 
+ poter estrarre i modi principali della struttura molto più rapidamente 
+ evitando l'estrazione di modi &quot;locali&quot; che interessano solo 
+ parte della struttura (a meno che il carico applicato non vada ad eccitare 
+ proprio il modo locale di quella parte della struttura). Il metodo di 
+ Ritz-vectors non è gestito da versioni di Xfinest precedenti alla 2013.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Autovalori</span>: 
+	 indicare il numero di modi di cui si richiede il calcolo.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Ritz-vectors<span class="hcp21">: indicare il numero dei vettori di Ritz.</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="CCE_per_vettori_di_Ritz_e_numero_di_modi_da_calcolare" 
+										 id="a2"></a>CCE per vettori di 
+ Ritz e numero di modi da calcolare</span>: selezionare la CCE da utilizzare 
+ come vettore di partenza del metodo di Ritz per determinare il numero 
+ di modi specificato. Non ha senso assegnare due carichi che agiscano nella 
+ stessa direzione (in genere si assegnano condizioni di carico mutuamente 
+ ortogonali). Per questo si consiglia di selezionare diverse CCE ciascuna 
+ per ognuna delle &quot;direzioni&quot; (X, Y o Z) per le quali interessa 
+ estrarre i corrispondenti modi ad esempio, le CCE relative alle Forze 
+ orizzontali convenzionali X/Y per il sisma in dir. X e Y e la CCE in cui 
+ è archiviato il Peso proprio per il sisma in dir. Z.</p>
+<p><span class="hcp1"><a name="Modi_da_considerare" id="Modi_da_considerare"></a>Modi 
+ da considerare</span>: specificare i modi (fra quelli calcolati) da considerare 
+ per il calcolo delle sollecitazioni dovute al sisma. Sono disponibili 
+ le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tutti 
+	 i modi calcolati</span>: vengono considerati tutti i modi calcolati.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tali 
+	 da movimentare una percentuale di massa pari a</span>: vengono considerati 
+	 i modi necessari per movimentare una massa percentuale pari almeno 
+	 alla percentuale indicata (ad esempio specificando 85 si intende di 
+	 voler movimentare una massa pari almeno all'85% delle masse totali). 
+	 Nel caso di strutture calcolate secondo il D.M. 17/01/18 vengono scelti 
+	 automaticamente solo i modi di vibrare che eccitano una massa superiore 
+	 al 5% come indicato nel par. 7.3.3.1: &quot;<span class="hcp2">Devono 
+	 essere considerati tutti i modi con massa partecipante significativa. 
+	 È opportuno a tal riguardo considerare tutti i modi con massa partecipante 
+	 superiore al 5% e un numero di modi la cui massa partecipante totale 
+	 sia superiore allo 85%</span>&quot;.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Sisma_verticale_in_analisi_dinamica" 
+										 id="Sisma_verticale_in_analisi_dinamica"></a>Sisma 
+ verticale in analisi dinamica</span>: specificare in che modo valutare 
+ l'azione sismica verticale nel caso che la struttura presenti masse con 
+ componente Z e venga selezionata l'analisi sismica dinamica della struttura. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Mediante 
+	 analisi sismica statica</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Mediante 
+	 analisi sismica dinamica</p></li>
+</ul>
+<p><span class="hcp1"><a name="Coeff__K_per_azioni_verticali" 
+										 id="Coeff__K_per_azioni_verticali"></a>Coeff. 
+ K per azioni verticali</span>: specificare il valore previsto dalla normativa 
+ Italiana. La casella di testo è disabilitata quando non esistono masse 
+ in direzione Z (<a href="Condizioni%20di%20carico%20elementari.htm" class="hcp17">Condizioni 
+ di carico elementari</a>).</p>
+<p><span class="hcp1"><a name="Tipo_di_combinazione_sismica" 
+										 id="Tipo_di_combinazione_sismica"></a>Tipo 
+ di combinazione sismica</span>: specificare il metodo di combinazione 
+ degli effetti (sollecitazioni, spostamenti, ecc.) dovuti alle azioni sismiche. 
+ Per il parametro, attivo solo per l'analisi sismica statica agli stati 
+ limite secondo il D.M. 17/01/18, sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">30% 
+	 esteso</span><span class="hcp21">:</span> il valore 
+	 di ogni singolo effetto dovuto alle azioni sismiche viene calcolato 
+	 combinando l'effetto dovuto all'azione sismica in una direzione con 
+	 il 30% dell'effetto dovuto all'azione sismica nell'altra direzione. 
+	 Le combinazioni vengono generate considerando tutti i possibili segni 
+	 delle azioni.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">30% 
+	 compatto</span>: il valore di ogni singolo effetto dovuto alle azioni 
+	 sismiche viene calcolato combinando l'effetto dovuto all'azione sismica 
+	 in una direzione con il 30% dell'effetto, considerato di segno concorde 
+	 all'azione &quot;principale&quot;, dovuto all'azione sismica nell'altra 
+	 direzione.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Smorzamento_spettro" id="Spettro_di_risposta"></a>Smorzamento 
+ spettro</span>: specificare la percentuale di smorzamento da considerare 
+ per la struttura in esame.</p>
+<p><span class="hcp1"><a name="Smorzamento_implicito" id="a1"></a>Smorzamento 
+ implicito</span>: specificare la percentuale di smorzamento adottato nella 
+ definizione dello spettro di progetto personalizzato. Questa opzione è 
+ presente solo nel caso si adotti il D.M. 17/01/18 e spettro personalizzato. 
+ Per approfondimenti si veda <span class="hcp1"><a href="Spettri_di_progetto_DM18.htm">Spettri 
+ di progetto personalizzati</a></span>.</p>
+<p><span class="hcp1"><a name="Angolo_di_ingresso_del_sisma" 
+										 id="Angolo_di_ingresso_del_sisma"></a>Angolo 
+ di ingresso del sisma</span>: specificare l'angolo, rispetto all'asse 
+ X globale, della direzione principale del sisma. La condizione di sisma 
+ ortogonale alla direzione prefissata viene creata automaticamente e quindi 
+ inserendo 0 si intende sisma in direzione X e sisma in direzione Y.</p>
+<p><span class="hcp1"><a name="Forze_primo_gruppo" id="Forze_primo_gruppo"></a>Forze 
+ primo gruppo</span>: specificare quale sia il tipo di distribuzione delle 
+ forze appartenenti al &quot;Gruppo 1&quot; da adottare nel calcolo della 
+ struttura come indicato nel par. 7.3.4.2 del D.M. 17/01/18. Sottolineiamo 
+ che per il &quot;Gruppo 2&quot; si adotta solo la distribuzione uniforme 
+ e non quella adattiva. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Statiche</span>: 
+	 viene applicato alla struttura una distribuzione di forze analoga 
+	 a quella di un'analisi sismica statica.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Primo 
+	 modo<span class="hcp21">: viene applicato alla struttura 
+	 una distribuzione di forze corrispondente ad una distribuzione di 
+	 accelerazioni proporzionale alla forma del modo di vibrare preponderante 
+	 nella direzione del sisma.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Analisi 
+	 dinamica<span class="hcp21">: viene applicato alla 
+	 struttura una distribuzione di forze corrispondente alla distribuzione 
+	 dei tagli di piano calcolati in un'analisi dinamica lineare.</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Creazione_SLU_non_sismici" 
+										 id="Creazione_SLU_non_sismici"></a>Creazione 
+ SLU non sismici</span>: nel caso di calcolo sismico, la normativa Italiana 
+ non è chiara se debbano essere considerati anche gli stati limite ultimi 
+ per soli carichi verticali o se siano sufficienti gli stati limite ultimi 
+ per azioni sismiche. Selezionando questa opzione ModeSt nella definizione 
+ automatica delle diverse combinazioni di carico, nel caso di calcolo con 
+ analisi sismica, prevede il calcolo degli SLU (stati limite ultimi) anche 
+ negli ambienti di carico privi di azione sismica.</p>
+<p><span class="hcp1"><a name="Grado_di_sismicita" id="Grado_di_sismicita"></a>Grado 
+ di sismicità</span>: indicare il grado di sismicità.</p>
+<p><span class="hcp1"><a name="Coeff__di_protezione" id="Coeff__di_protezione"></a>Coeff. 
+ di protezione</span>: si riporta il D.M. 16/01/96: <span class="hcp22">&quot;</span><span class="hcp2">Per opere la cui resistenza al sisma sia 
+ di importanza primaria per le necessità della protezione civile, si assume 
+ 1.4. Per le opere che presentano un particolare rischio per le loro caratteristiche 
+ d'uso, si assume 1.2. Per le opere che non rientrano nelle categorie precedenti, 
+ si assume 1.</span><span class="hcp22">&quot;</span></p>
+<p><span class="hcp1"><a name="Coeff__di_fondazione" id="Coeff__di_fondazione"></a>Coeff. 
+ di fondazione</span>: si riporta il D.M. 16/01/96: &quot;<span class="hcp2">Si 
+ assume di regola 1. Per fondazioni dirette e indirette che riportino il 
+ carico su terreni particolarmente compressibili il coefficiente sarà incrementato 
+ fino a raggiungere, nei casi di più elevata compressibilità, il valore 
+ 1.3</span>.&quot;</p>
+<p><span class="hcp1"><a name="Coeff__di_struttura" id="Coeff__di_struttura"></a>Coeff. 
+ di struttura</span>: si riporta il D.M. 16/01/96: &quot;<span class="hcp2">Si 
+ assume di regola 1; nel caso in cui nella struttura dell'edificio vi siano 
+ telai ed elementi irrigidenti verticali ai quali approssimativamente si 
+ affida il 100% delle azioni orizzontali, si assumerà 1.2</span>.&quot; 
+ Per le strutture in muratura si assume di regola un valore pari a 4.</p>
+<p class="AmbienteProgettazione"><span style="font-weight: bold; text-decoration: none; ">I 
+ seguenti parametri valgono solo per il calcolo di strutture in muratura</span></p>
+<p><span class="hcp1"><a name="Tipologia_strutturale_muratura" 
+										 id="Tipologia_strutturale_muratura"></a>Tipologia 
+ strutturale</span>: selezionare la tipologia strutturale degli edifici 
+ in cemento armato, prefabbricati, in acciaio, legno o in muratura. La 
+ tipologia strutturale consente di determinare il fattore di comportamento 
+ q<span class="hcp4">0</span> e il rapporto di sovraresistenza 
+ <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span>. 
+ Le tipologie con uguale fattore di comportamento e rapporto di sovraresistenza 
+ sono state raggruppate. Di seguito, sono riportate in sequenza le tipologie 
+ strutturali corrispondenti agli edifici con struttura in cemento armato, 
+ prefabbricata, acciaio, legno e muratura, con i relativi valori del fattore 
+ di strutture e del rapporto di sovraresistenza e il riferimento al D.M. 
+ 17/01/18 o alla Circolare del D.M. 14/01/08.</p>
+<table cellspacing="0" width="89%" class="hcp6">
+	<col style="width: 65.169%;">
+	<col style="width: 12.36%;">
+	<col style="width: 5.618%;">
+	<col style="width: 16.854%;">
+	<tr class="hcp7">
+		<td style="width:65.169%;" class="hcp8"><p class="hcp9"><span class="hcp1">Tipologia 
+		 strutturale</span></p></td>
+		<td style="width:12.36%;" class="hcp10"><p class="hcp11"><span class="hcp1">q</span><span class="hcp3">0</span></p></td>
+		<td style="width:5.618%;" class="hcp13"><p class="hcp9"><span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td style="width:16.854%;" class="hcp13"><p class="hcp9">D.M. 17/01/18</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td style="width:65.169%;" class="hcp14"><p class="hcp15">muratura 
+		 ordinaria</p></td>
+		<td style="width:12.36%;" class="hcp16"><p>1.75 
+		 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td style="width:5.618%;" class="hcp16"><p>1.7</p></td>
+		<td style="width:16.854%;" class="hcp16"><p>7.3.1 
+		 e 7.8.1.3</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td style="width:65.169%;" class="hcp14"><p class="hcp15">muratura 
+		 armata</p></td>
+		<td style="width:12.36%;" class="hcp16"><p>2.5 
+		 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td style="width:5.618%;" class="hcp16"><p>1.5</p></td>
+		<td style="width:16.854%;" class="hcp16"><p>7.3.1 
+		 e 7.8.1.3</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td style="width:65.169%;" class="hcp14"><p class="hcp15">muratura 
+		 armata progettate con la progettazione in capacità</p></td>
+		<td style="width:12.36%;" class="hcp16"><p>3.0 
+		 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td style="width:5.618%;" class="hcp16"><p>1.3</p></td>
+		<td style="width:16.854%;" class="hcp16"><p>7.3.1 
+		 e 7.8.1.3</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td style="width:65.169%;" class="hcp14"><p class="hcp15">muratura 
+		 confinata</p></td>
+		<td style="width:12.36%;" class="hcp16"><p>2.0 
+		 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td style="width:5.618%;" class="hcp16"><p>1.6</p></td>
+		<td style="width:16.854%;" class="hcp16"><p>7.3.1 
+		 e 7.8.1.3</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td style="width:65.169%;" class="hcp14"><p>muratura confinata con progettazione 
+		 in capacità</p></td>
+		<td style="width:12.36%;" class="hcp16"><p>2.0 
+		 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td style="width:5.618%;" class="hcp16"><p>1.3</p></td>
+		<td style="width:16.854%;" class="hcp16"><p>7.3.1 
+		 e 7.8.1.3</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td style="width:65.169%;" class="hcp14"><p>muratura esistente in pietra e/o mattoni 
+		 pieni</p></td>
+		<td style="width:12.36%;" class="hcp16"><p>2.0 
+		 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td style="width:5.618%;" class="hcp16"><p>1.5</p></td>
+		<td style="width:16.854%;" class="hcp16"><p>C8.5.5.1</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td style="width:65.169%;" class="hcp14"><p>muratura esistente in blocchi artificiali 
+		 con percentuale di foratura &gt;15%</p></td>
+		<td style="width:12.36%;" class="hcp16"><p>1.75 
+		 <span class="hcp5">a</span><span class="hcp4">u</span>/<span class="hcp5">a</span><span class="hcp4">1</span></p></td>
+		<td style="width:5.618%;" class="hcp16"><p>1.5</p></td>
+		<td style="width:16.854%;" class="hcp16"><p>C8.5.5.1</p></td>
+	</tr>
+</table>
+</body>
+</html>

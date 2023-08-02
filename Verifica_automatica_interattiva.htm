@@ -1,0 +1,126 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Verifica automatica ed interattiva</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Verifica automatica ed interattiva</h1>
+<p>A seguito del calcolo della struttura in muratura è possibile effettuare 
+ automaticamente le verifiche sui cinematismi individuabili nel modello, 
+ con i carichi definiti come pesi propri della muratura e carichi di solaio 
+ (vedi <span class="hcp1"><a href="Meccanismi_locali_di_collasso.htm">Meccanismi 
+ locali di collasso</a></span>).</p>
+<p>ModeSt individua sempre tutti i meccanismi di collasso possibili ma, 
+ attraverso i criteri generali di progetto (vedi <span class="hcp1"><a 
+	 href="Criteri_generali_di_verifica_murature.htm#Verifica_cinematismi_con_cunei_di_rottura">Verifica 
+ cinematismi con cunei di rottura (pareti ben ammorsate)</a></span>, <span class="hcp1"><a href="Criteri_generali_di_verifica_murature.htm#Verifica_cinematismi_senza_cunei_di_rottura">Verifica 
+ cinematismi senza cunei di rottura</a></span> e <span class="hcp1"><a 
+	 href="Criteri_generali_di_verifica_murature.htm#Verifica_cinematismi_a_flessione_verticale">Verifica 
+ cinematismi a flessione verticale</a></span>) è possibile selezionare 
+ quali meccanismi di collasso devono essere verificati automaticamente. 
+ Questi parametri hanno quindi solo la funzione di filtrare quelli che 
+ si ritengono più probabili nella struttura in esame. Alcuni meccanismi 
+ potrebbero infatti non avere senso in particolari situazioni. Ad esempio 
+ in una struttura in cui viene rifatto il tetto con cordolo in c.a., mentre 
+ gli altri solai restano allo stato di fatto, poco ammorsati alla muratura, 
+ non hanno più senso i meccanismi di ribaltamento, ma solo quelli di flessione 
+ di interpiano.</p>
+<p>Normalmente quindi occorre sempre intervenire manualmente per decidere 
+ di quali maschi e di quali cinematismi fare le verifiche. Può essere a 
+ volte più conveniente disabilitarli tutti e intervenire poi con la verifica 
+ interattiva dei maschi murari per decidere di quali cinematismi e di quali 
+ maschi murari attivare la verifica.</p>
+<p>I cinematismi sono verificati solo per strutture calcolate con analisi 
+ sismica con il metodo agli stati limite secondo il D.M. 17/01/18. Le verifiche, 
+ effettuate seguendo quanto indicato nel paragrafo C8A.4 della Circolare 
+ del D.M. 14/01/08, sono le seguenti:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Verifiche 
+	 di sicurezza per lo stato limite di danno (SLD)</p></li>
+</ul>
+<p class="IndentBullet1">Verifica della relazione C8A.4.7 nel caso in cui 
+ la verifica riguardi un elemento isolato o una porzione della costruzione 
+ comunque sostanzialmente appoggiata a terra, se invece il meccanismo locale 
+ interessa una porzione della costruzione posta ad una certa quota da terra 
+ viene verificata anche la relazione C8A.4.8.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Verifiche 
+	 di sicurezza per lo stato limite di salvaguardia della vita (SLV)</p></li>
+</ul>
+<p class="IndentBullet1">Verifica della relazione C8A.4.9 (C8A.4.11 per 
+ analisi cinematica non lineare) nel caso in cui la verifica riguardi un 
+ elemento isolato o una porzione della costruzione comunque sostanzialmente 
+ appoggiata a terra, se invece il meccanismo locale interessa una porzione 
+ della costruzione posta ad una certa quota da terra viene verificata anche 
+ la relazione C8A.4.10 (C8A.4.12 per analisi cinematica non lineare).</p>
+<p>Sottolineiamo che nel caso di maschi murari composti da muri/elementi 
+ bidimensionali con spessori diversi, nelle verifiche viene adottato come 
+ spessore di verifica della parete un valore medio pesato.</p>
+<p>Nell'ambiente di progettazione interattiva delle murature, apribile 
+ cliccando nel gruppo <span class="hcp1">Progettazioni</span> 
+ della scheda <span class="hcp1">Post-Processor</span> su 
+ <img src="../Icone/32/progint32.png" alt="" border="1" class="hcp2"> e poi su 
+ <span class="hcp1">Murature</span> <img src="../Icone/16/ALB_MURATURA.png" alt="" border="1" class="hcp2">, 
+ dopo aver attivato la visualizzazione dei maschi per verifiche cinematismi 
+ cliccando nel gruppo <span class="hcp1">Modello</span> sulla 
+ freccia sottostante <span class="hcp1">Muratura</span> <img src="../Icone/32/muraturaON32.png" alt="" border="1" class="hcp2">, è possibile 
+ progettare interattivamente il maschio murario cliccando nel gruppo <span class="hcp1">Maschi</span> e poi su <span class="hcp1">Proprietà</span> 
+ <img src="../Icone/16/proprietamaschi.png" alt="" border="1" class="hcp2"> e quindi 
+ selezionando un maschio murario.</p>
+<p>Il comando <span class="hcp1"><a href="../Comandi/CIN.htm">Cinematismi</a></span> 
+ <span class="hcp1"><img src="../Icone/16/cin.png" alt="" border="1" class="hcp2"></span> consente 
+ di accedere ad una finestra di gestione dei meccanismi di collasso del 
+ maschio murario in oggetto. È possibile abilitare e disabilitare i meccanismi 
+ e rendere corrente quello di cui eventualmente modificarne le forze agenti, 
+ anche introducendo forze aggiuntive.</p>
+<p>Per ogni meccanismo di collasso reso corrente, è possibile con il tasto 
+ destro del mouse sulla finestra di progettazione interattiva <font style="font-family: Wingdings;" 
+	 face="Wingdings">à</font> <span style="font-style: italic;">Forze 
+ peso e costanti</span> accedere alla finestra di gestione delle forze 
+ agenti. In questo modo è possibile inserire carichi non valutati automaticamente 
+ dal programma e modificare quelli presenti. Le modifiche effettuate possono 
+ essere estese per tutti i cinematismi abilitati per il maschio murario 
+ in oggetto. Le forze più comuni sono il tiro di eventuali catene o spinte 
+ orizzontali aggiuntive.</p>
+<p>Si fa presente che mentre il tiro di catene sarà una forza di tipo costante, 
+ l'effetto di una volta sarà dato da due componenti, uno orizzontale di 
+ tipo costante (spinta), ed uno verticale di tipo gravitazionale dovuto 
+ al peso della volta.</p>
+<p>Il comando <span class="hcp1">Ricalcola</span> <img src="../Icone/16/calc.png" alt="" border="1" class="hcp2"> come di consueto esegue le verifiche mentre dal pannello 
+ <span class="hcp1">Stato verifiche</span> è possibile impostare 
+ la verifica corrente, ossia quella per cui visualizzare i risultati. La 
+ relativa casella di riepilogo a discesa dà la possibilità di individuare 
+ tutte le verifiche effettuate sul maschio in oggetto.</p>
+<p>Il comando<span class="hcp1"> Anteprima rel. <img src="../Icone/16/anteprimarel.png" alt="" border="1" class="hcp2"></span> visualizza l'anteprima della relazione di calcolo. 
+ È possibile specificare se creare la relazione con il sistema tecnico 
+ o con l'unità di misura corrente utilizzando l'opzione &quot;Usa sistema 
+ tecnico&quot; del menu che compare cliccando sulla freccia a destra del 
+ comando.</p>
+<p>Il comando<span class="hcp1"> 3D&#160;<img src="../Icone/16/shading.png" alt="" border="1" class="hcp2"></span> 
+ apre una finestra con la visualizzazione tridimensionale del cinematismo 
+ selezionato.</p>
+<p><span class="hcp1">Nota</span>: qualunque modifica venga 
+ fatta alla geometria e ai criteri di progetto <span class="hcp1"><a 
+	 href="Criteri_di_verifica_murature.htm#Lunghezza_appoggio_solai">Lunghezza 
+ appoggio solai</a></span> e <span class="hcp1"><a href="Criteri_di_verifica_murature.htm#Comportamento_maschi">Comportamento 
+ maschi</a></span>, comporta la perdita del modello di muratura e di tutte 
+ le eventuali modifiche e personalizzazione apportate ai maschi. Si consiglia 
+ quindi di procedere a tutte le modifiche succitate solo quando il modello 
+ base è ormai definitivo.</p>
+</body>
+</html>

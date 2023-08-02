@@ -1,0 +1,109 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Uso delle macro da ModeSt</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:normal;
+font-size:14.0pt; }
+p.hcp3 { font-size:14.0pt; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Uso delle macro da ModeSt</h1>
+<p>Per eseguire una macro occorre digitarne il nome dalla linea comando. 
+ Durante l'esecuzione vengono effettuati nell'ordine i seguenti controlli:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">se il nome coincide con quello 
+	 di un file con estensione VBS nella cartella delle macro, viene eseguita 
+	 la macro;</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">se il nome coincide con un 
+	 comando ModeSt viene eseguito il comando;</p></li>
+</ol>
+<p>altrimenti viene visualizzato un messaggio di errore.</p>
+<p>Tutto il codice all'interno della macro ha accesso all'<span class="hcp1"><a 
+	 href="Oggetto%20ModeSt.htm">oggetto ModeSt</a></span> mediante il quale 
+ si interagisce col programma. ModeSt rende disponibili una serie di servizi 
+ sotto forma di metodi e proprietà.</p>
+<p><span class="hcp2">Struttura di una 
+ macro</span></p>
+<p><span style="font-weight: normal;">La struttura generale di una macro 
+ è la seguente:</span></p>
+<p><span class="hcp1">'#include &quot;modest&quot;</span></p>
+<p class="Normal2">&#160;</p>
+<p class="Normal2"><span class="hcp1">Sub Main ()</span></p>
+<p style="margin-left: 80px;"><span class="hcp1">corpo della 
+ macro</span></p>
+<p><span class="hcp1">End Sub</span></p>
+<p>La subroutine predefinita <span class="hcp1">Sub Main 
+ ()</span> rappresenta il punto di inizio dell'esecuzione della macro, 
+ mentre l'inclusione del file 'modest.vbs' permette l'accesso alle costanti 
+ definite in ModeSt.</p>
+<p>Solo se non esiste una macro ModeSt controlla l'elenco interno dei comandi. 
+ In questo modo è possibile sovrascrivere i comandi di ModeSt per ottenere 
+ comportamenti particolari. Per ulteriori dettagli si veda anche <span 
+	 style="font-weight: bold; text-decoration: none; "><a href="Ridefinizione%20dei%20comandi%20tramite%20macro.htm">Ridefinizione 
+ dei comandi tramite macro</a></span>.</p>
+<p class="hcp3"><a name="Visualizzazione_della_macro_nell_elenco_e_commento_a_video" 
+								 id="Visualizzazione_della_macro_nell_elenco_e_commento_a_video"></a>Visualizzazione 
+ della macro nell'elenco delle macro e del commento a video</p>
+<p>Attraverso la seguente istruzione è possibile rendere visibile la macro 
+ nell'elenco delle macro:</p>
+<p><span class="hcp1">'#Pragma title</span> &quot;nome&quot;</p>
+<p>Attraverso la seguente istruzione è possibile visualizzare un commento 
+ quando si posiziona il puntatore sul nome della macro:</p>
+<p><span class="hcp1">'#Pragma tooltip</span> &quot;nome 
+ del commento&quot;</p>
+<p>L'elenco delle macro è visibile cliccando nel gruppo <span class="hcp1">Strumenti</span> 
+ della scheda <span class="hcp1">Modellazione</span> sulla 
+ freccia a destra di <span class="hcp1">Macro <img src="../Icone/16/macro.png" alt="" style="border: Solid 1px #808080; border-width: 1px; border-style: solid;" border="1"></span>.</p>
+<p class="hcp3">Errori e loop infiniti</p>
+<p>Durante tutto il tempo che la macro resta in esecuzione non è possibile 
+ interagire direttamente con ModeSt se non tramite il codice della macro. 
+ Se si verifica un errore di esecuzione della macro, questa viene terminata 
+ e il relativo messaggio completo di numero di linea di riferimento viene 
+ mostrato in una finestra di dialogo. Se la macro non interagisce con l'interfaccia 
+ utente per 30 secondi questa potrebbe essere in un ciclo infinito, per 
+ cui compare una finestra di dialogo che dà la possibilità all'utente di 
+ interromperla, se riteniamo che l'esecuzione della macro sia corretta 
+ e che richieda un tempo maggiore ai 30 secondi possiamo lasciare la finestra 
+ di dialogo sullo schermo poiché scomparirà appena la macro farà la prossima 
+ operazione con l'interfaccia, altrimenti è possibile arrestare la macro 
+ in esecuzione e controllarla. Attraverso la seguente istruzione è possibile 
+ configurare la comparsa della finestra di dialogo:</p>
+<p><span class="hcp1">'#pragma timeout valore</span></p>
+<p>dove <span class="hcp1">valore</span>, espresso in millisecondi, 
+ rappresenta il tempo intercorso tra il lancio della macro e la comparsa 
+ della finestra di dialogo e in particolare se vale: -1 disattiva la comparsa 
+ della finestra di dialogo, 0 attiva immediatamente la comparsa della finestra 
+ di dialogo.</p>
+<p><span class="hcp2">Inclusione di 
+ altri file</span></p>
+<p>Se una macro contiene l'istruzione:</p>
+<p><span class="hcp1">'#include &quot;nomefile&quot;</span></p>
+<p>il file 'nomefile.vbs' viene considerato incluso nella macro al momento 
+ dell'esecuzione rendendo possibile creare delle librerie di funzioni e 
+ procedure riutilizzabili in altre macro.</p>
+<p><span class="hcp2">Passaggio parametri</span></p>
+<p>Il metodo <span class="hcp1">Var ()</span> dell'oggetto 
+ ModeSt permette di accedere alle variabili definite in ModeSt in quel 
+ momento, ivi comprese le variabili speciali %ARG0, %ARG1, %ARG2, ecc. 
+ che vengono definite al momento del lancio della macro e contenenti i 
+ parametri passati dalla linea di comando. In particolare %ARG0 contiene 
+ il numero di parametri passati mentre il loro valore è contenuto in %ARG1, 
+ %ARG2, ecc.</p>
+</body>
+</html>

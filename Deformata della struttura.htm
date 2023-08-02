@@ -1,0 +1,99 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Deformata della struttura</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp3 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1><span style="font-size: 24.0pt;">Deformata della struttura</span></h1>
+<p>La visualizzazione della deformazione nodale o elastica della struttura 
+ per la <span class="hcp1"><a href="Sollecitazione_e_risultato_corrente.htm">sollecitazione 
+ corrente</a></span> e per il <span class="hcp1"><a href="Sollecitazione_e_risultato_corrente.htm">risultato 
+ corrente</a></span> può essere effettuata nelle <span class="hcp1"><a 
+	 href="Finestre%20di%20modellazione.htm">finestre di modellazione</a></span> 
+ cliccando nel gruppo <span class="hcp1">Disegno</span> della 
+ scheda <span class="hcp1">Risultati</span> rispettivamente 
+ su <span class="hcp1">Def. nodale</span> <img src="../Icone/16/QDn.png" alt="" border="1" class="hcp2"> 
+ o su <span class="hcp1">Def. elastica</span> <img src="../Icone/16/QDe.png" alt="" border="1" class="hcp2">.</p>
+<p>La visualizzazione delle deformazioni è una informazione su selezione 
+ di nodi.</p>
+<p>Nella <span class="hcp1">deformata nodale</span> si considera 
+ semplicemente lo spostamento dei nodi selezionati (opportunamente amplificato) 
+ e si disegna in unifilare gli elementi incidenti, mentre nella <span class="hcp1">deformata 
+ elastica</span> si integra l'equazione della linea elastica delle aste 
+ tenendo conto dei vincoli interni e delle eventuali zone rigide e si disegna 
+ anche la deformata dell'asta.</p>
+<p>Gli elementi bidimensionali ed i muri vengono sempre disegnati solo 
+ con riferimento allo spostamento dei nodi, senza integrare lo stato deformativo 
+ interno.</p>
+<p>Con l'opzione <span class="hcp3">Deformata nodale</span> 
+ presente nelle <span class="hcp3">Opzioni di disegno</span> 
+ del menu a comparsa che si ottiene facendo clic col tasto destro <span 
+	 style="font-size: 10.0pt; mso-bidi-language: AR-SA;">sullo sfondo 
+ della finestra</span> è possibile scegliere se la <span class="hcp1">deformata 
+ nodale</span> vada rappresentata con una linea o con una colorazione variabile 
+ lungo l'asta o il muro/elemento bidimensionale.</p>
+<p>La visualizzazione può essere effettuata anche contemporaneamente per 
+ tutti i risultati presenti selezionando <span class="hcp1">ALL</span> 
+ nella casella di riepilogo a discesa della <span class="hcp1"><a 
+	 href="Sollecitazione_e_risultato_corrente.htm">sollecitazione corrente</a></span>.</p>
+<p>La visualizzazione in animazione dei modi di vibrare si effettua come 
+ indicato nel capitolo <span class="hcp1"><a href="Visualizzazioni_animate_dei_risultati.htm">Visualizzazioni 
+ animate dei risultati</a></span>.</p>
+<p>Se è attiva la deformata nodale o elastica della struttura è possibile 
+ disegnare il valore numerico relativo allo spostamento cliccando nel gruppo 
+ <span class="hcp1">Disegno</span> della scheda <span class="hcp1">Risultati</span> 
+ su <span class="hcp1">Valori num.</span> <img src="../Icone/32/valnumerici32.png" alt="" border="1" class="hcp2"> 
+ e poi su <span class="hcp1">Automatici</span> <img src="../Icone/16/NDVA.png" alt="" border="1" class="hcp2">. Non è in questo caso utilizzabile l'opzione <span class="hcp1">Puntuali</span> 
+ <img src="../Icone/16/NDVP.png" alt="" border="1" class="hcp2">. Per la 
+ deformata nodale vengono disegnati i valori corrispondenti alle tre componenti 
+ di spostamento valutati nel sistema di riferimento globale. Per la deformata 
+ elastica vengono disegnati i valori corrispondenti alle tre componenti 
+ di spostamento valutati nel sistema di riferimento locale dell'asta, nella 
+ prima riga i valori sono riferiti alla configurazione dell'asta indeformata 
+ mentre nella seconda riga sono riferiti alla configurazione dell'asta 
+ dopo il suo spostamento rigido.</p>
+<p>Se il tipo di risultato corrente è un'analisi di buckling, la deformata 
+ visualizzata corrisponde alla forma di buckling resa corrente.</p>
+<p>Si tenga presente che il disegno delle deformate relative ad analisi 
+ non lineari di strutture in muratura (metodo pushover) è puramente indicativo. 
+ Le analisi restituiscono come risultato praticamente solo lo spostamento 
+ del baricentro di piano, e quindi gli spostamenti degli altri elementi 
+ vengono interpolati o dedotti dal tipo di calcolo. Nel caso del calcolo 
+ pushover l'interpolazione avviene sempre fra piano e piano considerando 
+ le relative deformazioni, ma la deformata dei maschi murari non tiene 
+ conto delle rotazioni del piede e della testa, che pur sono state messe 
+ in conto durante l'analisi. Si ritiene comunque che tali deformate, specialmente 
+ in unione con le mappe dello stato degli elementi (si veda <span class="hcp1"><a 
+	 href="Mappe_tassi_di_sfruttamento_murature.htm">Mappe tassi di sfruttamento 
+ strutture in muratura</a></span>), possano essere utili per capire il 
+ comportamento della struttura durante l'evolversi dell'analisi.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DDEF.htm">DDEF</a></span> 
+ (Disegna deformata nodale), <span class="hcp1"><a href="../Comandi/DDEL.htm">DDEL</a></span> 
+ (Disegna deformata elastica), <span class="hcp1"><a href="../Comandi/DVAL.htm">DVAL</a></span> 
+ (Disegna valori).</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Argomenti 
+ correlati:</span> <span style="font-weight: bold; text-decoration: none; "><a 
+	 href="Fattori%20di%20scala.htm">Fattori di scala</a></span></p>
+</body>
+</html>

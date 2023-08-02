@@ -1,0 +1,184 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione interattiva nuclei</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-style:italic; }
+img.hcp3 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+p.hcp4 { font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progettazione interattiva nuclei</h1>
+<p>Nell'ambiente di progettazione interattiva nuclei, se l'armatura del 
+ nucleo era già stata precedentemente progettata e archiviata verrà richiamata, 
+ altrimenti verrà creato il solo disegno geometrico del nucleo. Al termine 
+ della progettazione è possibile archiviare il nucleo e creare o aggiornare 
+ i file necessari.</p>
+<p>È anche possibile consultare il tutorial: <span class="hcp1"><a 
+	 href="Guida.chm::/Progettazione_interattiva_armature_nuclei_e_pareti_irrigidenti.htm">Progettazione 
+ interattiva armature nuclei e pareti irrigidenti</a></span><span class="hcp2">.</span></p>
+<p>Si riportano di seguito i comandi principali raggruppati per funzionalità:</p>
+<h2 class="Titolo5">Proprietà correnti</h2>
+<p>Nella sezione <span class="hcp1">Ferri</span> del pannello 
+ <span class="hcp1">Proprietà correnti</span> è possibile: 
+ stabilire i diametri da utilizzare per aggiungere nuovi ferri o da assegnare 
+ a ferri esistenti; indicare la modalità di <span class="hcp1">Inserimento</span> 
+ (Semiautomatica, Manuale, Passo); indicare il valore del <span class="hcp1">Passo</span> 
+ dei ferri verticali; specificare la modalità di <span class="hcp1">Completamento</span> 
+ (Adattata, Terminata, Nessuna), nel caso si utilizzi la modalità di inserimento 
+ a Passo occorre specificare cioè come il programma debba comportarsi nel 
+ caso in cui la lunghezza della parete non sia un multiplo del passo. Per 
+ approfondimenti si veda il capitolo <span class="hcp1"><a 
+	 href="Posizionamento%20armature.htm">Posizionamento armature</a></span>.</p>
+<p>Nella sezione <span class="hcp1">Staffe</span> del pannello 
+ <span class="hcp1">Proprietà correnti</span> è possibile 
+ stabilire la staffatura da utilizzare per aggiungere nuove staffe o da 
+ assegnare a staffe esistenti.</p>
+<p>Stabilire il <span class="hcp1">Livello</span> corrente. 
+ I livelli oltre al primo vengono visualizzati solo schematicamente per 
+ permettere il controllo delle tensioni.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/FERC.htm">FERC</a></span>&#160;(Ferro 
+ corrente), <span class="hcp1"><a href="../Comandi/STAC.htm">STAC</a></span>&#160;(Staffatura 
+ corrente), <span class="hcp1"><a href="../Comandi/LIV.htm">LIV</a></span>&#160;(Cambia 
+ livello nucleo).</p>
+<h2 class="Titolo5"><a name="Nuclei_Generali" id="Nuclei_Generali"></a>Generali</h2>
+<p><span class="hcp1"><a name="ARMA" id="ARMA"></a>Progetta 
+ aut. <img src="../Icone/16/arma.png" alt="" border="1" class="hcp3"></span> 
+ progetta il nucleo esattamente come ModeSt avrebbe fatto in progettazione 
+ automatica.</p>
+<p><span class="hcp1"><a name="CALC" id="CALC"></a>Ricalcola 
+ <img src="../Icone/16/calc.png" alt="" border="1" class="hcp3"></span> 
+ effettua il controllo che il nucleo sia verificato e che siano rispettati 
+ tutti i minimi di regolamento, segnalando le eventuali anomalie.</p>
+<p><span class="hcp1"><a name="ELAR" id="ELAR"></a>Elimina 
+ prog. <img src="../Icone/16/eliminaprog.png" alt="" border="1" class="hcp3"></span> 
+ elimina completamente la progettazione lasciando solo il disegno geometrico 
+ del nucleo.</p>
+<p><span class="hcp1"><a name="_REL"></a>Anteprima rel. <img src="../Icone/16/anteprimarel.png" alt="" border="1" class="hcp3"></span> visualizza 
+ l'anteprima della relazione di calcolo. È possibile visualizzare una relazione 
+ in forma sintetica oppure estesa selezionando la relativa opzione del 
+ menu che compare cliccando sulla freccia a destra del comando. È possibile 
+ specificare se creare la relazione con il sistema tecnico o con l'unità 
+ di misura corrente utilizzando l'opzione &quot;Usa sistema tecnico&quot; 
+ del menu che compare cliccando sulla freccia a destra del comando.</p>
+<p><span class="hcp1">Mod. criteri <img src="../Icone/16/modcriteri.png" alt="" border="1" class="hcp3"></span> 
+ modifica i criteri di progetto posizionandosi automaticamente sul criterio 
+ specifico assegnato al nucleo.</p>
+<p><span class="hcp1">Mod. configurazione <img src="../Icone/16/modconfig.png" alt="" border="1" class="hcp3"></span> 
+ modifica la tipologia dell'armatura orizzontale. La stessa operazione 
+ si può effettuare con l'opzione <span class="hcp2">Configurazione 
+ armatura</span> del menu a comparsa che si ottiene cliccando col tasto 
+ destro su una staffa.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/ARMA.htm">ARMA</a></span>&#160;(Progetta), 
+ <span class="hcp1"><a href="../Comandi/CALC.htm">CALC</a></span>&#160;(Ricalcola), 
+ <span class="hcp1"><a href="../Comandi/ELAR.htm">ELAR</a></span>&#160;(Elimina 
+ progettazione), <span class="hcp1"><a href="../Comandi/_REL.htm">?REL</a></span>&#160;(Anteprima 
+ relazione).</p>
+<h2 class="Titolo5"><a name="Nuclei_Risultati_num" id="Nuclei_Risultati_num"></a>Risultati 
+ num.</h2>
+<p><span class="hcp1"><a name="_SLN"></a>Sollecitazioni <img src="../Icone/16/NSLN.png" alt="" border="1" class="hcp3"></span> visualizza 
+ le informazioni sui valori delle sollecitazioni nei nuclei.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/_SLN.htm">?SLN</a></span>&#160;(Informazioni 
+ sollecitazioni nuclei).</p>
+<h2 class="Titolo5"><a name="Nuclei_Diagrammi" id="Nuclei_Diagrammi"></a>Diagrammi</h2>
+<p>I comandi sono visualizzabili solo se è stato eseguito il calcolo delle 
+ tensioni e si riferiscono al caso di verifica impostato nella casella 
+ di riepilogo a discesa del pannello <span class="hcp1">Stato 
+ verifiche</span>.</p>
+<p><span class="hcp1"><a name="DSC" id="DSC"></a>Sigma c. 
+ <img src="../Icone/16/dsc.png" alt="" border="1" class="hcp3"></span> 
+ attiva o disattiva il disegno della tensione di compressione nel calcestruzzo.</p>
+<p><span class="hcp1"><a name="DSF" id="DSF"></a>Sigma f. 
+ <img src="../Icone/16/dsf.png" alt="" border="1" class="hcp3"></span>&#160;attiva 
+ o disattiva il disegno della tensione nei ferri verticali.</p>
+<p><span class="hcp1"><a name="DEPS" id="DEPS"></a>Epsilon 
+ <img src="../Icone/16/depsnucsez.png" alt="" border="1" class="hcp3"></span>&#160;attiva 
+ o disattiva il disegno della deformazione allo stato limite ultimo.</p>
+<p>Selezionando un caso di verifica dalla casella di riepilogo a discesa 
+ del pannello <span class="hcp1">Stato verifiche</span> è 
+ possibile controllare le sollecitazioni e le tensioni nelle singole combinazioni 
+ delle CCE, mentre selezionando il &quot;livello&quot; dalla relativa casella 
+ di riepilogo a discesa nel pannello <span class="hcp1">Proprietà 
+ correnti</span> si possono visualizzare i vari livelli ed i relativi stati 
+ tensionali.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DSC.htm">DSC</a></span>&#160;(Disegna 
+ sigma calcestruzzo),<span class="hcp1">&#160;<a href="../Comandi/DSF.htm">DSF</a></span>&#160;(Disegna 
+ sigma ferri), <span class="hcp1"><a href="../Comandi/DEPS.htm">DEPS</a></span>&#160;(Disegna 
+ epsilon), <span class="hcp1"><a href="../Comandi/VERC.htm">VERC</a></span>&#160;(Verifiche 
+ correnti).</p>
+<h2 class="Titolo5"><a name="Nuclei_Ferri" id="Nuclei_Ferri"></a>Ferri</h2>
+<p class="hcp4"><span class="hcp1"><a name="AGGF" 
+	 id="AGGF"></a>Aggiungi <img src="../Icone/16/aggiungiferro.png" alt="" border="1" class="hcp3"></span> 
+ aggiunge un nuovo ferro con la modalità di <span class="hcp1">Inserimento</span> 
+ indicata nella sezione <span class="hcp1">Ferri</span> del 
+ pannello <span class="hcp1">Proprietà correnti</span>.</p>
+<p class="hcp4"><span class="hcp1"><a name="AFER" 
+	 id="AFER"></a>Assegna <img src="../Icone/16/assegnaferro.png" alt="" border="1" class="hcp3"></span> 
+ assegna al ferro selezionato con il cursore grafico la combinazione di 
+ diametri corrente.</p>
+<p><span class="hcp1"><a name="ELIF" id="ELIF"></a>Elimina 
+ <img src="../Icone/16/eliminaferro.png" alt="" border="1" class="hcp3"></span> 
+ elimina il ferro selezionato con il cursore grafico. Tenendo premuto il 
+ tasto Shift elimina tutti i ferri sulla faccia della relativa parete.</p>
+<p>Attraverso il tasto destro sui ferri verticali è possibile cambiare 
+ il diametro con l'opzione <span class="hcp2">Proprietà</span>.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/AGGF.htm">AGGF</a></span>&#160;(Aggiungi 
+ ferro), <span class="hcp1"><a href="../Comandi/Afer.htm">AFER</a></span>&#160;(Assegna 
+ ferro),<span class="hcp1">&#160;<a href="../Comandi/ELIF.htm">ELIF</a></span>&#160;(Elimina 
+ ferro).</p>
+<h2 class="Titolo5"><a name="Nuclei_Zone_staffature" id="Nuclei_Zone_staffature"></a>Zone 
+ staffatura</h2>
+<p><span class="hcp1"><a name="ASTA" id="ASTA"></a>Assegna 
+ <img src="../Icone/16/assegnastaff.png" alt="" border="1" class="hcp3"></span> 
+ assegna o aggiunge la staffatura corrente nella zona di staffatura selezionata 
+ con il cursore grafico.</p>
+<p><span class="hcp1"><a name="UNIZ" id="UNIZ"></a>Unifica 
+ <img src="../Icone/16/unificazonastaff.png" alt="" border="1" class="hcp3"></span> 
+ unifica le zone di staffatura in cui è diviso il nucleo.</p>
+<p>Attraverso il tasto destro sulle staffe è possibile cambiare il diametro 
+ e il passo con l'opzione <span class="hcp2">Proprietà</span>.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/ASTA.htm">ASTA</a></span>&#160;(Assegna 
+ staffatura),<span class="hcp1">&#160;<a href="../Comandi/UNIZ.htm">UNIZ</a></span>&#160;(Unifica 
+ zona).</p>
+<h2 class="Titolo5"><a name="Nuclei_Disegno" id="Nuclei_Disegno"></a>Disegno</h2>
+<p><span class="hcp1"><a name="DPAR" id="DPAR"></a>Parete&#160;<img src="../Icone/16/disparete.png" alt="" border="1" class="hcp3"></span> aggiunge 
+ o elimina il disegno dell'armatura della parete in prospetto cliccando 
+ rispettivamente su <span class="hcp1">Aggiungi <img src="../Icone/16/aggiungidisparete.png" alt="" border="1" class="hcp3"></span> o su <span class="hcp1">Elimina 
+ <img src="../Icone/16/eliminadisparete.png" alt="" border="1" class="hcp3"></span>.</p>
+<p><span class="hcp1"><a name="SHADE" id="SHADE"></a>3D&#160;<img src="../Icone/16/shading.png" alt="" border="1" class="hcp3"></span> apre 
+ una finestra con la visualizzazione tridimensionale del nucleo progettato.</p>
+<p><span class="hcp1"><a name="DCMP" id="DCMP"></a>Computo&#160;<img src="../Icone/16/discomputo.png" alt="" border="1" class="hcp3"></span> attiva 
+ o disattiva il disegno del computo dei materiali. È possibile modificare 
+ la posizione della tabella del computo selezionando le relative opzioni 
+ del menu che compare cliccando sulla freccia a destra del comando.</p>
+<p><span class="hcp1">Opzioni&#160;<img src="../Icone/16/opzioni.png" alt="" border="1" class="hcp3"></span> 
+ modifica le opzioni di disegno.</p>
+<p><span class="hcp1">Utilizzo da linea di comando: <a href="../Comandi/DPAR.htm">DPAR</a></span>&#160;(Disegna 
+ parete), <span class="hcp1"><a href="../Comandi/SHAD.htm">SHADE</a></span>&#160;(Visualizzazione 
+ tridimensionale), <span class="hcp1"><a href="../Comandi/DCMP.htm">DCMP</a></span>&#160;(Disegna 
+ computo).</p>
+</body>
+</html>

@@ -1,0 +1,100 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Suggerimenti per la modellazione della struttura</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-size:10pt; }
+span.hcp2 { font-weight:bold; }
+img.hcp3 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp4 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Suggerimenti per la modellazione della struttura</h1>
+<p class="hcp1">La prima cosa da tener presente è che l'analisi 
+ pushover è un'analisi sismica statica e come tale richiede una semplificazione 
+ della struttura. È quindi del tutto inutile perdere tempo a modellare 
+ dettagli come balconi, tetti particolarmente articolati, interpiani con 
+ minimi dislivelli, ecc. Tutti gli studi fino ad oggi effettuati sono al 
+ 90% riferiti a telai piani o comunque a strutture riconducibili all'assemblaggio 
+ di telai. Tale deve essere lo spirito con cui viene effettuato il modello. 
+ Mai come in questo caso l'ingegnere è chiamato non a &quot;<i>disegnare</i>&quot; 
+ il modello all'interno di un programma di calcolo, ma a compiere scelte 
+ ben precise su come cogliere il comportamento della struttura.</p>
+<p class="hcp1">Quindi niente balconi (utilizzare carichi lineari 
+ eventualmente approssimati) e molto spesso niente tetti, simulati con 
+ carichi equivalenti. Infatti quello che influenza molto il calcolo è la 
+ situazione di carico iniziale e la resistenza degli elementi.</p>
+<p class="hcp1">Facciamo osservare che nessun solutore ad oggi 
+ gestisce elementi bidimensionali, quindi eventuali pareti sia isolate 
+ che raggruppate in nuclei scale o ascensore devono essere definite usando 
+ elementi asta. Utilizzando aste infinitamente rigide sarà poi possibile 
+ simulare la collaborazione reciproca fra tali elementi e le interazioni 
+ con eventuali aste che vi convergono. Si tenga presente che tali aste 
+ (ovviamente con sezione di notevoli dimensioni) possono richiedere un 
+ aggiustamento a livello di criteri di progetto per quanto riguarda il 
+ numero di fibre in cui suddividerle. I default, generalmente sufficienti 
+ per sezioni ordinarie, potrebbero essere troppo bassi.</p>
+<p>Nel nostro video tutorial, apribile dal menu dell'applicazione <span class="hcp2"><img src="../Icone/modest32.png" alt="" border="1" class="hcp3"></span> selezionando 
+ <span class="hcp2">Aiuto</span> <span class="hcp4"><img src="../Icone/32/main_aiuto32.png" alt="" border="1" class="hcp3"></span> e poi 
+ <span class="hcp2">Video di apprendimento</span> <span class="hcp4"><img src="../Icone/32/main_aiuto_videoapp32.png" alt="" border="1" class="hcp3"></span>, in 
+ cui si trasforma una struttura &quot;<span class="hcp4">standard</span>&quot; 
+ in una struttura &quot;<span class="hcp4">da pushover</span>&quot;, 
+ viene illustrato un esempio di tale schematizzazione.</p>
+<p class="hcp1">La struttura deve essere incastrata al piede, 
+ la presenza di fondazioni su suolo elastico, con i relativi moti rigidi 
+ della struttura, falserebbe completamente gli spostamenti dei nodi, derivanti 
+ non dalla deformazione elastica e/o plastica, ma anche da cedimenti che 
+ non interessano per lo studio del comportamento sismico dell'edificio. 
+ In quest'ottica le strutture con elementi di scantinato possono tranquillamente 
+ essere modellate come incastrate alla sommità di queste ultime. Si consiglia 
+ inoltre di posizionare nel baricentro gli elementi. Non è importante in 
+ questo caso infatti ottenere delle carpenterie di piano o dei disegni 
+ aderenti alla realtà, ma cogliere al meglio il modello &quot;matematico&quot; 
+ senza introdurre elementi di disturbo.</p>
+<p class="hcp1">Negli edifici le scale sono inoltre un punto 
+ critico in quanto forniscono spesso un elemento di controvento all'edificio, 
+ di difficile schematizzazione e dal comportamento, oltre che invasivo, 
+ anche di difficile comprensione. Anche in questo caso sta all'ingegnere 
+ decidere se trascurarle completamente (in quanto la loro presenza aiuta 
+ la resistenza dell'edificio e quindi il trascurarle è a vantaggio di sicurezza) 
+ o se cercare in qualche modo di simularne la presenza (potrebbero introdurre 
+ rotture fragili sui pilastri a livello di interpiano e quindi essere a 
+ svantaggio di sicurezza da un lato, o dall'altro contribuire a rendere 
+ più resistente una struttura che in loro assenza non ha una adeguata capacità). 
+ Mai come nel caso dell'&quot;<i>effetto scale</i>&quot; la struttura necessita 
+ di essere &quot;<i>studiata</i>&quot; e non semplicemente &quot;<i>calcolata</i>&quot;. 
+ In seguito esporremo alcuni suggerimenti per effettuare tali studi.</p>
+<p class="hcp1">Terminata la modellazione come di consueto 
+ occorre effettuare una <b><span style="color: #0000ff;"><a href="Numerazione_automatica_e_manuale.htm">numerazione 
+ automatica</a></span></b> dei nodi, delle aste e degli elementi bidimensionali 
+ per avere una buona numerazione.</p>
+<p class="hcp1">Una volta definito secondo questa filosofia 
+ il modello, sarà utile effettuare una analisi statica lineare per controllare 
+ che il modello &quot;giri&quot; e che non si siano dimenticati vincoli 
+ o altre cose importanti dal punto di vista della modellazione. Effettuate 
+ dopo anche una analisi modale per capire se il modello è abbastanza &quot;regolare&quot; 
+ ed adatto ad una analisi di tipo pushover. È importante che i primi tre 
+ modi siano ben disaccoppiati: X, Y e torcente (non necessariamente in 
+ quest'ordine). Se le masse in direzione X (o Y) non sono quasi del tutto 
+ movimentate in un unico modo sicuramente ci troviamo davanti ad una struttura 
+ che ci darà problemi nell'analisi pushover o per la quale l'analisi non 
+ è applicabile (per il c.a. la normativa prevede in genere che il metodo 
+ è applicabile se &quot;<i>il modo di vibrare fondamentale nella direzione 
+ considerata ha una partecipazione di massa non inferiore al 75%</i>&quot; 
+ Si può ovviare a tale limitazione &quot;<i>se il periodo fondamentale 
+ della struttura è superiore a TC</i>&quot;, ma ciò raramente avviene per 
+ strutture con modi fondamentali fortemente accoppiati).</p>
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progetto armatura teorica a taglio</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+p.hcp2 { margin-bottom:0; }
+font.hcp3 { font-family:Symbol; }
+span.hcp4 { vertical-align:sub; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progetto armatura teorica a taglio</h1>
+<p><span class="hcp1">Calcolo col metodo degli stati limite</span></p>
+<p>La trave viene suddivisa in zone in funzione di quanto indicato dalla 
+ normativa in modo da stabilire i punti vicini agli appoggi ed i punti 
+ di campata.</p>
+<p class="hcp2">Vengono ignorati i parametri relativi alla 
+ ripartizione fra staffe, sagomati e ferri di parete in quanto la resistenza 
+ viene affidata interamente alle staffe. In ogni zona la progettazione 
+ viene effettuata con riferimento ai soli stati limite ultimi ed al massimo 
+ valore del taglio agente.</p>
+<p class="hcp2">Per le strutture calcolate secondo il D.M. 
+ 17/01/18, se nei criteri di progetto non è stato selezionato il parametro 
+ <span class="hcp1"><a href="CriTra.htm#Trascura_gerarchia">Trascura 
+ gerarchia</a></span>, l'armatura a taglio viene progettata con le regole 
+ della gerarchia delle resistenze.</p>
+<p class="hcp2"><span class="hcp1">Nota</span>: 
+ per le travi a T o a L, sia che si utilizzi il metodo alle tensioni ammissibili 
+ che degli stati limite, le staffe dell'ala vengono verificate anche per 
+ la flessione generata dalla tensione sul terreno sull'ala della trave 
+ di fondazione.</p>
+<p><span class="hcp1">Calcolo col metodo delle tensioni ammissibili</span></p>
+<p>Il progetto dell'armatura a taglio viene attivato nelle zone di calcolo 
+ dello scorrimento in cui <font face="Symbol" class="hcp3">t</font><span class="hcp4">max_anima</span> &gt; <font face="Symbol" class="hcp3">t</font><span class="hcp4">c0</span>.</p>
+<p>In questo caso l'armatura teorica per ogni CC viene calcolata ripartendo 
+ lo sforzo di scorrimento (per solo taglio) in parti corrispondenti alle 
+ percentuali assegnate alle staffe, ai ferri sagomati e ai ferri di parete 
+ secondo le specifiche dei criteri di progetto (vedi <span class="hcp1"><a 
+	 href="CriTra.htm#Scorrimento">Scorrimento</a></span>). Si ha quindi:</p>
+<p><img src="Aftaglio.jpg" alt="" style="margin-top: 0px; margin-bottom: 0px; 
+		 margin-left: 0px; margin-right: 0px;" width="233" height="211" border="0"></p>
+<p>dove <font face="Symbol" class="hcp3">a</font> è l'angolo 
+ di piegatura stabilito nei criteri di progetto (vedi <span class="hcp1"><a 
+	 href="CriTra.htm#Angolo_di_piegatura">Angolo di piegatura</a></span>).</p>
+</body>
+</html>

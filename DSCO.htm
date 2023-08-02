@@ -1,0 +1,98 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>DSCO - Disegna scorrimento</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+span.hcp4 { font-weight:bold;
+text-decoration:none; }
+font.hcp5 { font-family:Symbol; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">DSCO - Disegna scorrimento</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Progettazione interattiva travi, sezioni</p>
+</td>
+<td style="width:28%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p>
+</td>
+</tr>
+</table>
+<p>Attiva o disattiva il disegno del diagramma dello sforzo di scorrimento agente nelle zone di calcolo dello scorrimento.</p>
+<p class="AmbienteProgettazione"><span class="hcp3">Progettazione interattiva travi</span></p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">DSCO</span></p>
+<p>In ognuna delle zone di calcolo dello scorrimento presenti nella travata viene visualizzato lo sforzo massimo di scorrimento agente e lo sforzo di scorrimento assorbito.</p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Il diagramma può essere visualizzato come scorrimento totale o come scorrimento unitario con il comando <span class="hcp4"><a href="SCOT.htm">SCOT</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">In ognuna delle CC viene calcolato lo sforzo di scorrimento dovuto al taglio e sommato ad un'eventuale scorrimento fittizio dovuto alla torsione calcolato facendo corrispondere l'area di ferro necessaria a torsione (staffe e ferri di parete) ad uno sforzo di scorrimento equivalente. In questo modo è possibile visualizzare se nel complesso staffe, ferri di parete (che lavorano sia a torsione che a taglio) e ferri sagomati sono sufficienti. Non è però possibile controllare con questo diagramma se sono sufficienti le singole armature e se sono rispettati i minimi di regolamento. Si veda anche il comando <span class="hcp4"><a href="DAST.htm">DAST</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Nel caso in cui una o più aste costituenti la travata siano a T o a L vengono disegnati due diagrammi. Il diagramma inferiore si riferisce allo sforzo di scorrimento equivalente agente nell'anima ed assorbito dalle staffe verticali, dai ferri di parete e dai ferri sagomati mentre il diagramma superiore si riferisce allo sforzo di scorrimento equivalente agente nell'ala ed assorbito dalle staffe orizzontali, dai ferri di fianco e di suola. In questo caso per il calcolo dello scorrimento fittizio oltre alle staffe necessarie per torsione vengono eventualmente considerate anche le staffe necessarie per flessione dell'ala (travi su suolo elastico).</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il diagramma dello scorrimento equivalente nell'anima viene disegnato con colore grigio se nella zona relativa è sufficiente l'armatura minima di regolamento (<font face="Symbol" class="hcp5">t</font> &lt; <font face="Symbol" class="hcp5">t</font><span style="vertical-align: sub;">c0</span>), in giallo se l'armatura deve essere calcolata. Si ricorda che nel caso di armatura minima di regolamento non necessariamente lo sforzo di scorrimento deve essere assorbito dall'armatura.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il diagramma dello scorrimento assorbito è rappresentato dalle linee rosse.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">La posizione del diagramma può essere modificata con il comando <span class="hcp4"><a href="PDIA.htm">PDIA</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il diagramma non viene in nessun caso riportato nel file DXF.</p>
+</li>
+</ul>
+<p class="AmbienteProgettazione"><span class="hcp3">Progettazione interattiva sezioni</span></p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">DSCO</span></p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Il disegno viene effettuato per la verifica corrente (<span class="hcp4"><a href="VERC.htm">VERC</a></span>), se compatibile con la visualizzazione richiesta.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il diagramma può essere visualizzato solamente come scorrimento unitario.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Con il disegno oggetto attivo è possibile visualizzare il diagramma in vista prospettica.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il comando è attivo solo per verifiche alle tensioni ammissibili.</p>
+</li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+//]]>
+</script>
+</body>
+</html>

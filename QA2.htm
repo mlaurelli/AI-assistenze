@@ -1,0 +1,64 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>QA2 - Calcolo secondo carico accidentale dai solai</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+p.hcp3 { text-align:justify; }
+span.hcp4 { font-weight:bold; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">QA2 - Calcolo secondo carico accidentale dai solai</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p>
+</td>
+<td style="width:29%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>: + -</p>
+</td>
+</tr>
+</table>
+<p class="hcp3">Esegue l'analisi del secondo carico accidentale dai solai selezionati determinando i carichi sulle aste.</p>
+<p class="hcp3">Sintassi del comando:</p>
+<p class="Normal3" style="text-align: justify;"><span class="hcp4">QA2</span></p>
+<p class="Normal2" style="font-weight: bold;"><a href="javascript:void(0);" id="a1" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Setsolai.htm');return false;">Selezionare i solai</a></p>
+<p class="hcp3">Il comando calcola automaticamente per le maglie di solaio selezionate il secondo carico accidentale che compete alle varie aste di perimetro.</p>
+<p class="hcp3">Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">I carichi calcolati si sommano a carichi eventualmente già presenti sulle aste.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">I carichi non vengono memorizzati. Eseguire il comando <span class="hcp4"><a href="DCCE.htm">DCCE</a></span> se e quando necessario.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Per solai inclinati va tenuto presente che il carico permanente (sia quello strutturale che non strutturale) è considerato agente su tutta la lunghezza del solaio, mentre l'accidentale viene considerato agente sulla proiezione orizzontale. In entrambi i casi comunque il carico viene considerato con lunghezze riferite agli assi delle aste che delimitano il solaio e nessuna riduzione viene effettuata per tener conto della larghezza delle travi.</p>
+</li>
+</ul>
+<p class="hcp3"><span class="hcp4">Comandi correlati: <a href="QPS.htm">QPS</a></span> calcola i carichi permanenti strutturali dai solai selezionati. <span class="hcp4"><a href="QPN.htm">QPN</a></span> calcola i carichi permanenti non strutturali dai solai selezionati. <span class="hcp4"><a href="DETS.htm">DETS</a></span> definisce un tipo di solaio.</p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+        FilePopupInit('a1');
+//]]>
+</script>
+</body>
+</html>

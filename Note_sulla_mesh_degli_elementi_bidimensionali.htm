@@ -1,0 +1,73 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Note sulla mesh degli elementi bidimensionali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Note sulla mesh degli elementi bidimensionali</h1>
+<p>Prima di passare ai consigli su come effettuare la mesh degli elementi 
+ bidimensionali occorre soffermarsi su alcuni concetti del metodo agli 
+ elementi finiti.</p>
+<p>Tale metodo consiste nel sostituire il modello continuo della struttura 
+ con un modello discreto utilizzando elementi finiti monodimensionali (asta) 
+ e bidimensionali. L'operazione di costruzione del modello discreto viene 
+ detta modellazione della struttura. Il metodo agli elementi finiti si 
+ basa quindi su un'approssimazione e di conseguenza la soluzione non è 
+ mai &quot;esatta&quot; in senso analitico e dipende da come il continuo 
+ è stato discretizzato. La capacità di approssimare la soluzione teorica, 
+ nel senso di avvicinarsi, si dice &quot;convergenza&quot;.</p>
+<p>Nel caso di elementi asta la soluzione discretizzata converge a quella 
+ analitica, mentre nel caso di elementi bidimensionali la convergenza è 
+ influenzata dalla &quot;mesh&quot;, per cui la discretizzazione influisce 
+ sulla qualità della soluzione che dipende anche dalla &quot;forma&quot; 
+ dell'elemento bidimensionale.</p>
+<p>La dimensione della mesh ovviamente è in funzione della grandezza dell'oggetto 
+ da discretizzare e dell'approssimazione che si vuole ottenere. La bontà 
+ di una meshatura può essere dedotta dal diverso valore assunto dagli sforzi 
+ in elementi contigui. Se infatti si ha una forte variazione degli sforzi 
+ in elementi contigui vuol dire che la mesh adottata non riesce a cogliere 
+ la variazione di sforzo e quindi occorre raffinare la mesh, mentre se 
+ le differenze sono contenute significa che si è sufficientemente approssimato 
+ il risultato.</p>
+<p>Le osservazioni suddette possono spingere ad effettuare subito meshature 
+ molto fitte, invece di fare più analisi della stessa struttura con mesh 
+ sempre più fitte in modo tale da studiare la convergenza verso un risultato, 
+ così da comprendere sia la qualità della mesh adottata sia l'attendibilità 
+ dei risultati. Se infatti due mesh di diversa raffinatezza conducono a 
+ risultati simili, vuol dire che si è sufficientemente approssimato il 
+ risultato.</p>
+<p>La qualità dei risultati dipende anche dalla forma dell'elemento bidimensionale 
+ che, nel caso di elementi quadrangolari, non deve essere distorta ma deve 
+ tendere il più possibile a quella rettangolare con un rapporto fra i lati 
+ massimo pari a due. Infatti una forma molto distorta dell'elemento impedisce 
+ l'esecuzione del calcolo agli elementi finiti. Facciamo osservare che 
+ la presenza di elementi molto distorti viene segnalata anche dal controllo 
+ congruenza dati di ModeSt.</p>
+<p>Per quanto riguarda gli elementi triangolari, questi non riescono a 
+ cogliere le differenze di sforzo. Nonostante la scarsa sensibilità degli 
+ elementi triangolari, sono usati per consentire la transizione da zone 
+ con mesh molto fitta a zone con mesh molto rada ed in molti casi in cui 
+ è praticamente impossibile, principalmente a causa di vincoli di carattere 
+ geometrico, utilizzare una mesh costituita esclusivamente da elementi 
+ quadrangolari.</p>
+<p>Quindi è consigliabile ricorrere a mesh con elementi quanto più possibile 
+ quadrangolari ed usare gli elementi triangolari in zone in cui non si 
+ hanno elevate differenze di sforzo.</p>
+<p>Purtroppo non esistono delle regole precise che possono guidarci nella 
+ meshatura degli elementi bidimensionali ma troviamo nella letteratura 
+ solo alcune indicazioni su dov'è opportuno infittire la mesh e cioè nei 
+ punti in cui si suppone si abbia una concentrazione di tensione (ad esempio 
+ lo spigolo di un'apertura, il punto di attacco di un pilastro alla platea, 
+ ecc.) oppure nelle zone in cui si vuole effettuare uno studio più dettagliato.</p>
+<p>Vogliamo sottolineare che quando si modella un elemento strutturale 
+ in cui le tre dimensioni sono equivalenti (elemento cubiforme) l'utilizzo 
+ degli elementi bidimensionali è inopportuno.</p>
+</body>
+</html>

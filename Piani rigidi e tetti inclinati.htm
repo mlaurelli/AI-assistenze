@@ -1,0 +1,39 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Piani rigidi e tetti inclinati</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Piani rigidi e tetti inclinati</h1>
+<p>Si premette che le considerazioni qui esposte hanno carattere prettamente ingegneristico e non sono specificatamente relative all'utilizzo di ModeSt per l'analisi delle problematiche esposte.</p>
+<p>La definizione degli impalcati e soprattutto l'appartenenza dei nodi agli impalcati è di fondamentale importanza quando si intende procedere con il calcolo agli elementi finiti e con la schematizzazione di piani infinitamente rigidi.</p>
+<p>Un errore comune è quello di definire i nodi di un tetto a falde come tutti appartenenti ad uno stesso impalcato, anche se a quote diverse. Questo è fattibile se il calcolo viene effettuato senza piani rigidi, ma con la schematizzazione di piani infinitamente rigidi <span style="font-weight: bold;">si perde completamente l'effetto di spinta del tetto</span> e le sollecitazioni relative. Si può accettare questa schematizzazione solo se nella struttura sono realmente presenti altri elementi o piani rigidi che assorbono nella realtà la spinta del tetto, ossia se esiste un solaio orizzontale di sottotetto (a volte detto <span style="font-style: italic;">solaio plafone</span>) e se le travi di perimetro di quest'ultimo coincidono con le travi di gronda. Si veda a proposito anche l'esempio <span style="font-weight: bold; text-decoration: none;">Impalcati rigidi non orizzontali</span>.</p>
+<p>Nel caso in cui questo non accada e che invece i pilastri proseguano oltre l'ultimo per sostenere la trave di gronda (tetto spingente) è opportuno procedere in altro modo.</p>
+<p>Fermo restando che durante l'inserimento dei dati i nodi possono anche appartenere allo stesso impalcato, si può operare seguendo una di queste strategie:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">prima della fase di calcolo si può assegnare a tutti i nodi del tetto impalcato 0. In questo modo i nodi sono liberi di muoversi in modo indipendente l'uno dall'altro. In caso di calcolo sismico sarà possibile trasferire le masse relative all'impalcato immediatamente sottostante o imporre il mantenimento delle masse sui nodi relativi (si veda <a href="Recupero%20masse%20secondarie.htm"><span style="font-weight: bold; text-decoration: underline;">Recupero masse secondarie</span><span style="text-decoration: none;">)</span></a>. In questo secondo caso alcune travi del tetto avranno anche sollecitazioni nel piano locale XY, ma possono in genere essere trascurate in quanto in realtà assorbite dalla presenza del solaio del tetto;</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">in sede di calcolo specificare che l'impalcato in questione non è rigido (il metodo è del tutto equivalente al precedente e analogo sarà il comportamento delle masse);</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">prima della fase di calcolo si può assegnare ad ogni nodo del tetto un impalcato diverso. Avremo ad esempio gli impalcati 1, 2, 3 corrispondenti ai primi 3 solai dell'edificio e gli impalcati 4, 5, 6, 7, ..., n corrispondenti ognuno ad un nodo del tetto. Anche in questo caso i nodi saranno in grado di muoversi in modo indipendente l'uno dall'altro ed in caso di spinta sismica in ogni caso ogni nodo sarà caratterizzato dalla massa di sua competenza, ma sarà possibile operare in modo diverso il trasferimento delle masse per gli altri nodi appartenenti all'impalcato 0. Valgono sempre le considerazioni del punto precedente sulle sollecitazioni delle aste del tetto;</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">in sede di calcolo specificare che l'impalcato in questione è rigido solo per azioni sismiche. Questo consente il libero spostamento per carichi verticali (generalmente quelli che generano le spinte maggiori) e mantiene l'ipotesi che la rigidezza dei solai sia in grado di ripartire le azioni orizzontali sui diversi elementi. Le sollecitazioni "anomale" nelle travi nel tetto saranno molto minori in quanto indotte solo dai carichi verticali.</p>
+</li>
+</ul>
+<p>Al termine del calcolo si potrà assegnare nuovamente lo stesso impalcato a tutti i nodi del tetto per aver un migliore disegno delle tavole dell'armatura dei pilastri, eliminando la definizione degli impalcati non più necessari.</p>
+</body>
+</html>

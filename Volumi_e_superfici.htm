@@ -1,0 +1,62 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Volumi e superfici</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Volumi e superfici</h1>
+<p>È possibile ottenere informazioni <span class="hcp1">indicative</span> 
+ sul volume degli elementi introdotti, le casserature teoriche degli elementi 
+ in c.a., le superfici di verniciatura degli elementi in acciaio ed in 
+ legno e le superfici dei solai cliccando nel gruppo <span class="hcp1">Elaborati 
+ finali</span> della scheda <span class="hcp1">Post-Processor</span> 
+ su&#160;<span class="hcp1">Volumi e superfici</span> <img src="../Icone/32/volume32.png" alt="" style="border: Solid 1px #808080; 
+	 border-width: 1px; border-style: solid;" border="1">.</p>
+<p>Il volume della struttura viene calcolato per ogni materiale utilizzato 
+ e per ogni tipo di verifica (cemento, acciaio, legno) in funzione delle 
+ lunghezze delle aste e delle superfici degli elementi bidimensionali con 
+ riferimento alle sole coordinate dei nodi. La presenza delle zone di interconnessione 
+ fra i nodi rendono quindi il calcolo approssimato e generalmente sovrastimato.</p>
+<p>Le superfici di casseratura vengono calcolate secondo i seguenti criteri:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">per i pilastri viene considerata 
+	 l'intera superficie laterale dell'asta;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">per le travi a sezione rettangolare, 
+	 a T, e a L vengono considerati i fianchi ed i lati orizzontali sopra-testa, 
+	 ignorando l'eventuale rotazione dell'asta e lo spessore di eventuali 
+	 solai;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">per le travi di fondazione 
+	 viene detratta la superficie del fondo;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">per le travi con altre sezioni 
+	 viene considerata l'intera superficie laterale;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">i bordi degli elementi bidimensionali 
+	 non vengono computati in nessun caso, le facce vengono computate due 
+	 volte solo se l'asse X o Z locale dell'elemento risulta verticale;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">gli elementi bidimensionali 
+	 su suolo elastico vengono considerati privi di cassero, quelli verticali 
+	 con due casseri, con un solo cassero tutti gli altri.</p></li>
+</ul>
+<p>Per poter raffinare il calcolo dei casseri viene riportato anche il 
+ perimetro dei solai, conteggiando solo i lati delimitati da aste con sezione 
+ diversa da 0 e -1. È possibile quindi ottenere un computo dei casseri 
+ delle travi più preciso detraendo le lunghezze perimetrali dei diversi 
+ tipi di solaio moltiplicate per il relativo spessore.</p>
+<p>Le superfici dei solai vengono calcolate con riferimento alle coordinate 
+ dei nodi senza tener conto della larghezza delle travi.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span style="font-weight: bold; text-decoration: underline; "><a href="../Comandi/_VOL.htm">?VOL</a></span> 
+ (Informazioni volume e superfici).</p>
+</body>
+</html>

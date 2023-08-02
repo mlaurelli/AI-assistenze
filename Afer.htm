@@ -1,0 +1,102 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>AFER - Assegna ferro</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+span.hcp4 { font-style:italic;
+font-weight:normal; }
+span.hcp5 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">AFER - Assegna ferro</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Progettazione interattiva travi, nuclei, plinti/pali, sezioni</p>
+</td>
+<td style="width:28%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p>
+</td>
+</tr>
+</table>
+<p>Assegna ad un ferro la combinazione di diametri o il diametro corrente.</p>
+<p class="AmbienteProgettazione"><span class="hcp3">Progettazione interattiva travi</span></p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">AFER</span> <font color="#0000FF"><span class="hcp4">Selezionare il ferro</span></font></p>
+<p>Assegna al ferro selezionato con il cursore grafico la combinazione di diametri corrente.</p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">La combinazione di diametri corrente può essere definita con il comando <span class="hcp5"><a href="FERC.htm">FERC</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il comando provoca la completa ridefinizione del ferro selezionato; vengono ricalcolati gli ancoraggi e le quotature. Si perdono quindi eventuali arrotondamenti sulla lunghezza ed eventuali modifiche effettuate sui testi associati al ferro (quote e lunghezza).</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Se il ferro selezionato è un ferro di parete, di suola o di fianco viene presa in considerazione solo la prima combinazione&#160;di diametri (ad esempio se la combinazione di diametri corrente è 2Ø12+2Ø14 viene considerato 2Ø12) e le sezioni della trave (se presenti) vengono ricalcolate.</p>
+</li>
+</ul>
+<p class="AmbienteProgettazione"><span class="hcp3"><span class="hcp3">P</span>rogettazione interattiva nuclei</span></p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">AFER</span> <font color="#0000FF"><span class="hcp4">Selezionare il ferro</span></font></p>
+<p>Assegna al ferro selezionato con il cursore grafico il diametro corrente.</p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Il diametro corrente può essere definito con il comando <span class="hcp5"><a href="FERC.htm">FERC</a></span>.</p>
+</li>
+</ul>
+<p class="AmbienteProgettazione" style="font-weight: bold;">Progettazione interattiva sezioni</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">AFER</span> <font color="#0000FF"><span class="hcp4">Selezionare il ferro</span></font></p>
+<p>Assegna al ferro selezionato con il cursore grafico il diametro corrente.</p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Il diametro corrente può essere definito con il comando <span class="hcp5"><a href="FERC.htm">FERC</a></span>.</p>
+</li>
+</ul>
+<p class="AmbienteProgettazione"><span class="hcp3">Progettazione interattiva plinti/pali</span></p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">AFER</span> <font color="#0000FF"><span class="hcp4">Selezionare il ferro</span></font></p>
+<p>Assegna al ferro selezionato con il cursore grafico il diametro corrente.</p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Il diametro corrente può essere definito con il comando <span class="hcp5"><a href="FERC.htm">FERC</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il comando non può essere eseguito su rappresentazioni che identificano più ferri (ferri esplosi in disegno tecnico) e può portare ad identificazioni non corrette del ferro se eseguito su rappresentazioni ambigue o sovrapposte di ferri (rappresentazioni dei ferri all'interno del plinto in disegno tecnico).</p>
+</li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+//]]>
+</script>
+</body>
+</html>

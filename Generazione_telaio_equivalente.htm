@@ -1,0 +1,370 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Generazione telaio equivalente</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { line-height:115%;
+mso-bidi-language:AR-SA; }
+span.hcp3 { vertical-align:super; }
+span.hcp4 { mso-spacerun:yes; }
+img.hcp5 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+tr.hcp6 { vertical-align:top; }
+p.hcp7 { font-weight:bold;
+text-align:left; }
+img.hcp8 { border:none; }
+td.hcp9 { border-left:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+td.hcp10 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp11 { text-align:center; }
+span.hcp12 { font-weight:normal; }
+span.hcp13 { line-height:115%;
+mso-fareast-font-family:Calibri;
+mso-fareast-language:EN-US;
+mso-bidi-language:AR-SA; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Generazione telaio equivalente</h1>
+<p>ModeSt esegue l'analisi sismica statica non lineare (cosiddetto metodo 
+ pushover) generando dai maschi murari per verifiche sismiche e dalle fasce 
+ di piano un insieme di aste che individua un telaio tridimensionale con 
+ comportamento elasto-plastico non lineare secondo le indicazioni della 
+ normativa.</p>
+<p>La procedura di generazione del telaio si comporta come segue:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Individua in primo luogo i 
+	 diversi allineamenti di pareti che compongono la struttura, in modo 
+	 da garantire attraverso collegamenti rigidi o attraverso il comportamento 
+	 delle fasce di piano la mutua interazione fra i diversi maschi murari. 
+	 I nodi che collegano tali elementi hanno solo i gradi di libertà che 
+	 ne descrivono il comportamento nel piano della parete e nel piano 
+	 orizzontale. Tali allineamenti sono visualizzabili cliccando negli 
+	 <b><span style="layout-grid-mode: line;"><a href="Strumenti_di_visualizzazione.htm">Strumenti 
+	 di visualizzazione</a></span></b> su &quot;Allineamenti&quot;. Gli 
+	 impalcati definiti costituiscono i piani della struttura e vengono 
+	 considerati come infinitamente rigidi durante l'analisi sismica statica 
+	 non lineare (pushover) e come scelto dell'utente durante la parte 
+	 di calcolo FEM per azioni verticali.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Trascura i maschi murari inseriti 
+	 manualmente con forma non rettangolare.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Trascura i maschi murari che 
+	 non rispondono ai requisiti di rapporto L/H definito nei criteri di 
+	 progetto o per i quali è stata richiesta esplicitamente la non resistenza 
+	 sismica (vedi <span class="hcp1"><a href="Criteri_di_verifica_murature.htm#Comportamento_maschi">Comportamento 
+	 maschi</a></span>).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Considera come pilastri solo 
+	 le aste verticali con membratura pilastro e tipo di verifica &quot;Cemento 
+	 armato&quot; o &quot;Acciaio&quot; e se specificato nei criteri di 
+	 progetto generali delle murature (vedi <span class="hcp1"><a 
+	 href="Criteri_generali_di_verifica_murature.htm#Considera_collaboranti_anche_pilastri_ca_acciaio">Considera 
+	 collaboranti anche pilastri in c.a. e/o in acciaio</a></span>) e trascura 
+	 quelli realizzati con elementi bidimensionali con utilizzo &quot;Pilastro&quot;.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Considera come pareti in c.a. 
+	 solo i muri/elementi bidimensionali con utilizzo &quot;Parete&quot; 
+	 e se specificato nei criteri di progetto generali delle murature (vedi 
+	 <span class="hcp1"><a href="Criteri_generali_di_verifica_murature.htm#Considera_collaboranti_anche_pareti_ca">Considera 
+	 collaboranti anche pareti in c.a.</a></span>).</p></li>
+</ul>
+<p>Si fa notare quanto segue:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">I</span>l 
+	 materiale associato al tipo di muro/elemento bidimensionale nella 
+	 fase di modellazione è utilizzato solo ai fini del calcolo del peso 
+	 proprio e per il calcolo iniziale FEM; nell'analisi sismica statica 
+	 non lineare (pushover) vengono utilizzate le caratteristiche riportate 
+	 nel criterio di progetto associato al tipo di muro/elemento bidimensionale.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">La rottura dei maschi e delle 
+	 fasce in muratura avviene quando lo spostamento ultimo (drift) ha 
+	 superato il valore limite imposto nei criteri di progetto ma sempre 
+	 dopo la loro plasticizzazione. Il calcolo dello spostamento ultimo 
+	 (drift) che ne determina la rottura può essere di tipo assoluto o 
+	 incrementale in funzione del parametro <a href="Criteri_generali_di_verifica_murature.htm#Valuta_spostamenti_ultimi_dopo_la_plasticizzazione"><span class="hcp1">Calcola spostamenti per la rottura di maschi 
+	 e fasce in muratura in modo incrementale</span></a>.</p></li>
+</ul>
+<p>Per il <span class="hcp1">solutore interno</span> valgono 
+ le seguenti note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">I pilastri hanno rigidezza 
+	 solo intorno alla direzione dell'asse locale Y (Jy). Il vincolamento 
+	 dei pilastri (vedi <span class="hcp1"><a href="Vincoli_aste.htm">Definizione 
+	 del vincolo interno all'asta</a></span>) influenza la rigidezza. Il 
+	 vincolo di tipo doppio incastro dà una rigidezza pari a 12EJ/h<span class="hcp3">3</span>, la presenza di una cerniera 
+	 intorno agli assi locali Y e Z in testa o al piede dà una rigidezza 
+	 pari a 3EJ/h<span class="hcp3">3</span>, se sono 
+	 svincolati entrambi gli estremi l'asta non avrà rigidezza (tale caso 
+	 viene evidenziato con una diversa colorazione dell'asta di telaio), 
+	 altri tipi di vincolo vengono assunti come doppio incastro. Viene 
+	 sempre messa in conto la rigidezza per deformabilità a taglio.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">I 
+	 pilastri e le travi in c.a. armate&#160;hanno comportamento</span><span class="hcp4">&#160;</span><span class="hcp2">a 
+	 taglio di tipo elastico-fragile ed elastico-plastico a momento (con 
+	 riferimento al momento di prima plasticizzazione) con rottura regolata 
+	 dalla rotazione ultima indicata al paragrafo </span>C8.7.2.3.2<span class="hcp2"> della Circolare 
+	 del D.M. 17/01/18. Elementi non armati hanno un comportamento elastico 
+	 indefinito.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Le pareti in c.a., similmente 
+	 alle pareti in muratura, hanno rigidezza solo nella direzione del 
+	 piano che le contiene ed <span class="hcp2">un 
+	 comportamento elastico indefinito</span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">Gli 
+	 elementi in acciaio hanno comportamento a taglio di tipo elastico-plastico 
+	 indefinito con </span><span class="hcp4">taglio di plasticizzazione 
+	 calcolato con la</span> <span class="hcp2">formula 
+	 [4.2.17] del paragrafo 4.2.4.1.2 del D.M. 17/01/18 e a momento di 
+	 tipo elastico-plastico indefinito, con riferimento al momento </span><span class="hcp4">di plasticizzazione</span><span class="hcp2"> calcolato con formula [4.2.12] (trascurando 
+	 le riduzioni dovute al taglio di cui alla</span><span class="hcp4">&#160;formula</span> 
+	 <span class="hcp2">[4.2.40]) 
+	 del paragrafo 4.2.4.1.2 del</span>&#160;D.M. 17/01/18.</p></li>
+</ul>
+<p>Per il <span class="hcp1">solutore Xfinest</span> valgono 
+ le seguenti note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Le travi e i pilastri hanno 
+	 rigidezza in entrambe le direzioni degli assi locali e il vincolamento 
+	 (vedi <span class="hcp1"><a href="Vincoli_aste.htm">Definizione 
+	 del vincolo interno all'asta</a></span>) influenza la formazione della 
+	 cerniera plastica. La presenza di una cerniera intorno agli assi locali 
+	 Y o Z annulla la formazione della cerniera plastica in corrispondenza 
+	 dell'estremo a cui è stata assegnata.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">I 
+	 pilastri e le travi in c.a. armate&#160;hanno comportamento</span><span class="hcp4">&#160;</span><span class="hcp2">a 
+	 taglio di tipo elastico-fragile ed elastico-plastico a momento (con 
+	 riferimento al momento di prima plasticizzazione) con rottura regolata 
+	 dalla rotazione ultima indicata al paragrafo </span>C8.7.2.3.2<span class="hcp2"> della Circolare 
+	 del D.M. 17/01/18. Elementi non armati hanno un comportamento elastico 
+	 indefinito.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">L</span>e 
+	 pareti in c.a., similmente alle pareti in muratura, hanno rigidezza 
+	 solo nella direzione del piano che le contiene ed <span class="hcp2">un 
+	 comportamento elastico indefinito</span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="line-height: 115%; 
+							 mso-bidi-language: AR-SA;">Gli elementi in 
+	 acciaio facenti parte del telaio equivalente possono essere solo quelli 
+	 di classe 1 o 2 (vedi <span class="hcp1"><a href="Classificazione_delle_sezioni.htm">Classificazione 
+	 delle sezioni</a></span>).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">Gli 
+	 elementi in acciaio hanno comportamento a taglio di tipo elastico-plastico 
+	 con </span><span class="hcp4">taglio di plasticizzazione 
+	 (VRd) calcolato con la</span> <span class="hcp2">formula 
+	 [4.2.17] del paragrafo 4.2.4.1.2 del D.M. 17/01/18 ed uno spostamento 
+	 di plasticizzazione calcolato come </span><span class="hcp4">VRd</span><span class="hcp2">/G*Av (dove G 
+	 è il modulo di elasticità tangenziale ed Av è l'area a taglio) e a 
+	 momento di tipo elastico-plastico, con riferimento al momento </span><span class="hcp4">di plasticizzazione</span><span class="hcp2"> calcolato con formula [4.2.12] (trascurando 
+	 le riduzioni dovute al taglio di cui alla</span><span class="hcp4">&#160;formula</span> 
+	 <span class="hcp2">[4.2.40]) 
+	 come indicato al paragrafo 4.2.4.1.2 del</span>&#160;D.M. 17/01/18 
+	 <span class="hcp2">ed una 
+	 rotazione di plasticizzazione calcolata come </span><span style="line-height: 115%; 
+	 mso-bidi-language: AR-SA; mso-spacerun: yes;">Mpl,Rd*Lv</span><span class="hcp2">/3*E*J (dove 
+	 E è il modulo di elasticità, Lv è la luce di taglio e J è il momento 
+	 d'inerzia) ed una rotazione di collasso pari a 8 volte la rotazione 
+	 di plasticizzazione come indicato nel prospetto B.1 del EC8 (UNI EN 
+	 1998-3:2005).</span></p></li>
+</ul>
+<p>Per visualizzare il telaio equivalente occorre prima rendere corrente 
+ i maschi per verifiche sismiche cliccando nel gruppo <span class="hcp1">Disegno</span> 
+ della scheda <span class="hcp1">Modellazione</span> sulla 
+ freccia sottostante <span class="hcp1">Muratura </span><img src="../Icone/32/muratura32.png" alt="" border="1" class="hcp5"> e quindi selezionare 
+ &quot;Verifiche sismiche&quot; nella sezione &quot;Maschi e fasce&quot;, 
+ poi attivarne il disegno cliccando nel gruppo <span class="hcp1">Disegno</span> 
+ della scheda <span class="hcp1">Modellazione</span> sulla 
+ freccia sottostante <span class="hcp1">Muratura </span><img src="../Icone/32/muratura32.png" alt="" border="1" class="hcp5"> e quindi selezionare 
+ nella sezione &quot;Telaio equivalente&quot; il tipo da visualizzare: 
+ Maschi, fasce e telaio o Solo telaio.</p>
+<p>Per individuare quali siano i maschi murari che eventualmente verranno 
+ trascurati nella generazione del telaio equivalente in funzione di quanto 
+ impostato tramite il criterio di progetto (vedi <span class="hcp1"><a 
+	 href="Criteri_di_verifica_murature.htm#Comportamento_maschi">Comportamento 
+ maschi</a></span>), si consiglia di rendere corrente la visualizzazione 
+ &quot;Maschi, fasce e telaio&quot;.</p>
+<p>Nella figura sottostante è riportato un esempio con le fasi di generazione 
+ del telaio equivalente. I colori si riferiscono allo schema di colore 
+ di default.</p>
+<table style="vertical-align: top;" cellspacing="0" align="center">
+	<col width="350">
+	<col width="400">
+	<tr class="hcp6">
+		<td style="border: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" 
+			 width="350"><p class="hcp7"><span class="hcp1">Modello strutturale</span></p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;" 
+			 width="400"><p style="font-weight: bold; text-align: center;"><img src="GEN_TEL_01.png" alt="" border="0" class="hcp8"></p></td>
+	</tr>
+	<tr class="hcp6">
+		<td width="350" class="hcp9"><p class="hcp7">Individuazione 
+		 dei maschi murari, fasce di piano in muratura e cordoli di piano 
+		 in c.a.</p></td>
+		<td width="400" class="hcp10"><p class="hcp11"><img src="GEN_TEL_02.png" alt="" border="0" class="hcp8"></p></td>
+	</tr>
+	<tr class="hcp6">
+		<td width="350" class="hcp9"><p class="hcp7">Individuazione 
+		 degli assi baricentrici dei maschi murari, fasce di piano in muratura 
+		 e cordoli di piano in c.a.</p></td>
+		<td width="400" class="hcp10"><p class="hcp11"><img src="GEN_TEL_03.png" alt="" border="0" class="hcp8"></p></td>
+	</tr>
+	<tr class="hcp6">
+		<td width="350" class="hcp9"><p class="hcp7">Determinazione 
+		 del telaio equivalente con relative parti flessibili e zone rigide: 
+		 <span class="hcp12">le zone rigide all'estremità 
+		 dei maschi murari vengono generate immaginando un comportamento 
+		 irrigidente degli architravi e dei sotto-finestra con una diffusione 
+		 a 30 gradi. Alcuni elementi che compongono le travi di accoppiamento 
+		 (cordoli di piano, architravi sotto-finestra) possono non essere 
+		 considerati collaboranti nel telaio in funzione di quanto specificato 
+		 nei criteri di progetto</span> <b><span class="hcp12">o 
+		 di altri parametri e quindi non verranno visualizzati nel telaio. 
+		 Gli elementi di telaio derivanti da elementi in muratura e da 
+		 elementi in c.a. od acciaio verranno visualizzati con colori diversi.</span></b></p></td>
+		<td width="400" class="hcp10"><p class="hcp11"><img src="GEN_TEL_04.png" alt="" border="0" class="hcp8"></p></td>
+	</tr>
+</table>
+<p>La generazione del telaio si basa sempre sui <span class="hcp1">maschi 
+ e le fasce per le verifiche sismiche</span> sia che questi siano generati 
+ automaticamente in funzione di quanto impostato tramite il criterio di 
+ progetto (<span class="hcp1"><a href="Criteri_generali_di_verifica_murature.htm#Metodo_di_individuazione">Metodo 
+ di individuazione</a></span>) sia che siano inseriti manualmente.</p>
+<p><span class="hcp1">Nota</span>: Nel calcolo della struttura 
+ sia con il solutore interno sia con Xfinest, le aste che rappresentano 
+ la fascia di piano ed il cordolo in c.a o in acciaio sono posizionate 
+ in corrispondenza dell'impalcato e di conseguenza risultano prive di sforzo 
+ normale.</p>
+<p class="Titolo7">ELEMENTI di accoppiamento</p>
+<p>Il collegamento fra diversi maschi può avvenire attraverso tre tipi 
+ diversi di oggetti:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1">Architravi 
+	 in muratura</span> (le parti in muratura soprastanti un'apertura di 
+	 tipo &quot;finestra&quot; o di tipo &quot;porta&quot;)</p></li>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1">Sottofinestre 
+	 in muratura</span> (le parti in muratura sottostanti un'apertura di 
+	 tipo &quot;finestra&quot;)</p></li>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1">Cordoli 
+	 in c.a. o in acciaio</span> (aste in c.a. od in acciaio definite a 
+	 livello di piano)</p></li>
+</ol>
+<p>Le resistenze degli elementi di cui al punto 1 o 2 vengono normalmente 
+ considerate (come indicato in normativa) solo se &quot;siano presenti, 
+ in prossimità della trave in muratura, elementi orizzontali dotati di 
+ resistenza a trazione&quot;.</p>
+<p>I limiti di resistenza previsti nel <span class="hcp2">paragrafo</span> 
+ 7.8.2.2.4 del D.M. 17/01/18, vengono quindi valutati attraverso i criteri 
+ di progetto relativi al tipo di muratura che li caratterizza, ricercando 
+ elementi del modello in grado di fornire un'adeguata resistenza a trazione. 
+ Tali elementi possono essere sotto (per i sottofinestra) o sopra/sotto 
+ (per gli architravi).</p>
+<p>In ogni caso l'utente può ipotizzare l'esistenza di elementi resistenti 
+ ad una trazione specificata anche se non inseriti nel modello (ad esempio 
+ catene o cordoli che non si è ritenuto necessario dover modellare, ma 
+ di cui si vuole tenere conto in ogni caso)&#160;attraverso il criterio 
+ di progetto (<span class="hcp1"><a href="Criteri_di_verifica_murature.htm#Comportamento_fasce_in_muratura">Considera 
+ ipotizzando elemento con resistenza a trazione pari a</a></span>).</p>
+<p>A parte il caso di resistenza imposta da criterio, negli altri casi 
+ i valori di resistenza da utilizzare nel calcolo vengono individuati automaticamente 
+ dal programma secondo diverse modalità che sono funzione degli oggetti 
+ che vengono trovati a livello di piano come incidenti con le fasce in 
+ muratura:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Per gli elementi in acciaio 
+	 la resistenza (a trazione ed a flessione) viene valutata direttamente 
+	 dalle resistenze massime valutate dai disposti di normativa per elementi 
+	 soggetti a trazione e/o flessione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Per gli elementi in cemento 
+	 armato la resistenza (a trazione ed a flessione) dipende ovviamente 
+	 dalle armature disposte nell'elemento: solo se usando le procedure 
+	 di <span class="hcp13">progettazione 
+	 armature travi sono state introdotte delle armature, in base a queste 
+	 verrà determinata la resistenza a trazione.</span></p></li>
+</ul>
+<p>In ogni altro caso la resistenza a trazione necessaria per valutare 
+ le resistenze della fascia di muratura sono considerate nulle, ed insieme 
+ ad esse anche le relative resistenze della fascia stessa.<span class="hcp4">&#160;</span>La 
+ fascia, anche se presente nel modello, si romperà al primo step di calcolo. 
+ Tale comportamento verrà segnalato in fase di calcolo.</p>
+<p>Il comportamento <b style="mso-bidi-font-weight: normal; font-weight: normal;">proprio</b> 
+ e la resistenza di elementi di cui al punto 3 è controllabile attraverso 
+ il criterio di progetto (<u><a href="Criteri_generali_di_verifica_murature.htm#Comportamento_cordoli" 
+								 style="font-weight: bold;">Comportamento 
+ cordoli in c.a. o acciaio</a></u>).</p>
+<p><span class="hcp2">Gli elementi 
+ in c.a. (se armati)&#160;hanno comportamento</span><span class="hcp4">&#160;</span><span class="hcp2">a taglio di tipo 
+ elastico-fragile ed elastico-plastico a momento (con riferimento al momento 
+ di prima plasticizzazione) con rottura regolata dalla rotazione ultima 
+ indicata al paragrafo C8A.6. Elementi non armati hanno un comportamento 
+ elastico indefinito. Gli elementi in acciaio hanno comportamento elastico-plastico 
+ indefinito a taglio con riferimento</span><span class="hcp4">&#160;alla</span> 
+ <span class="hcp2">formula [4.2.18] 
+ del paragrafo 4.2.4.1.2 del D.M. 17/01/18 ed elastico-plastico indefinito 
+ a momento, con riferimento al momento ultimo per flessione calcolato con 
+ formula [4.2.36] (trascurando le riduzioni dovute al taglio di cui alla</span><span class="hcp4">&#160;formula</span> <span class="hcp2">[4.2.41]) 
+ come indicato al paragrafo 4.2.4.1.2 del</span>&#160;D.M. 17/01/18;</p>
+<p style="mso-fareast-font-family: Calibri;"><span style="mso-fareast-language: EN-US; 
+													 mso-bidi-language: AR-SA;">Le 
+ travi di accoppiamento in c.a. ed acciaio vengono individuate solo se 
+ collegano due maschi in muratura o se si trovano in allineamenti contenenti 
+ maschi murari e sono adiacenti ad elementi bidimensionali sopra o sottostanti. 
+ Travi di accoppiamento che collegano un muro ad un pilastro senza avere 
+ elementi in muratura sopra o sotto oppure travi di accoppiamento che collegano 
+ solo pilastri in c.a. non vengono riconosciute. In ogni caso è bene che 
+ le travi non adiacenti ad elementi bidimensionali non siano meshate.</span></p>
+<p>La collaborazione di pareti in c.a. viene gestita con l'introduzione 
+ di maschi con le stesse modalità di quelli in muratura e con comportamento 
+ indefinitamente elastico.</p>
+<p>La collaborazione di pilastri in materiale diverso dalla muratura (c.a. 
+ o acciaio) viene gestita attraverso la generazione di appositi elementi. 
+ <span class="hcp13">Come già detto, i pilastri hanno rigidezza 
+ solo intorno alla direzione dell'asse locale Y (Jy).</span> In analisi 
+ pushover il comportamento di tali elementi è identico a quello già indicato 
+ per le travi di accoppiamento in c.a. ed acciaio.</p>
+<p>La collaborazione reciproca fra pareti viene generalmente trascurata, 
+ ma è possibile attivarla attraverso un apposito criterio di progetto (<span class="hcp1"><a href="Criteri_generali_di_verifica_murature.htm#Crea_collegamenti_fra_pareti">Crea 
+ collegamenti fra pareti</a></span>). In questo caso vengono creati collegamenti 
+ rigidi fra le estremità delle pareti incidenti fra di loro ed anche in 
+ questo caso i nodi necessari descrivono il comportamento in entrambi i 
+ piani verticali e nel piano orizzontale. <span class="hcp13">Tali 
+ nodi (che hanno</span><span class="hcp4">&#160;</span><span class="hcp13">più gradi di libertà) vengono disegnati 
+ con colore diverso nel disegno dello schema a telaio.</span></p>
+<p class="Titolo7">Zone rigide</p>
+<p>È possibile considerare l'irrigidimento provocato dalle fasce di piano, 
+ facendo generare delle zone rigide alle estremità delle aste che rappresentano 
+ i maschi. Tali zone vengono generate immaginando un comportamento irrigidente 
+ degli architravi e dei sottofinestra con una diffusione a 30 gradi. Tale 
+ meccanismo è risultato il più adatto per simulare l'effetto irrigidente 
+ delle fasce di piano da numerosi studi condotti in merito (Prof. Dolce, 
+ Prof. Magenes). Un apposito criterio di progetto (<span class="hcp1"><a 
+	 href="Criteri_generali_di_verifica_murature.htm#Calcola_con_zone_rigide">Calcola 
+ con zone rigide</a></span>) consente di attivare o disattivare la ricerca 
+ delle zone rigide. Se la ricerca delle zone rigide è attiva, viene in 
+ ogni caso considerata rigida la zona corrispondente allo spessore del 
+ solaio (se definito). Negli eventuali pilastri in c.a. o in acciaio vengono 
+ trascurate le zone rigide.</p>
+<p><span class="hcp1">Nota</span>: Le armature necessarie 
+ per valutare il comportamento degli elementi in c.a. vengono desunte dagli 
+ elementi progettati, con alcune semplificazioni: le armature dei pilastri 
+ vengono ricercate nei punti di verifica di piede del piano interessato 
+ e considerate simmetriche sia in termini di barre longitudinali che di 
+ staffe fra testa e piede. Per le travi viene ricercata l'armatura nel 
+ punto più vicino alla zona in cui inizia la trave e anche in questo caso 
+ l'armatura viene considerata costante in termini di barre longitudinali 
+ e di staffe.</p>
+</body>
+</html>

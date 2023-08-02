@@ -1,0 +1,72 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Note sui nuclei</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Note sui nuclei</h1>
+<p>Nel definire un nucleo si dovrebbe sempre rispettare la logica dei piani 
+ dell'edificio. Generalmente è incorretto assegnare l'appartenenza ad un 
+ solo nucleo a tutti gli elementi, da terra a cielo, che definiscono ad 
+ esempio un vano scale e/o ascensore; in tal caso infatti ModeSt non differenzia 
+ le armature da piano a piano in relazione alla diminuzione delle sollecitazioni. 
+ Si consiglia quindi di definire ad esempio il nucleo 1 per gli elementi 
+ dal piano di fondazione al primo piano, il nucleo 101 dal primo al secondo 
+ piano e così via.</p>
+<p>Nel caso di progetto secondo il D.M. 14/02/92 e il D.M. 16/01/96 il 
+ nucleo può essere costituito da più pareti ed è quindi possibile riunire 
+ in un nucleo unico eventuali vani scale, ascensore di forma qualunque. 
+ Nel caso di progetto secondo il D.M. 17/01/18 i nuclei devono essere costituiti 
+ da pareti <span class="hcp1">singole</span> e quindi occorre 
+ definire come nuclei diversi le singole pareti dei vani scale, ascensore, 
+ ecc. Per approfondimenti si veda <a href="Verifiche_secondo_il_DM_17_01_18.htm" 
+									 style="font-weight: bold;">Verifiche 
+ secondo il D.M. 17/01/18</a>.</p>
+<p>Inoltre, prima di definire un nucleo, occorre accertarsi che i muri/elementi 
+ bidimensionali abbiano l'asse Z locale parallelo ed equiverso all'asse 
+ Z globale e che i lati superiori ed inferiori degli elementi devono essere 
+ orizzontali. Eventualmente solo gli elementi dell'ultimo livello possono 
+ avere il lato superiore obliquo (ad esempio per seguire l'andamento del 
+ tetto).</p>
+<p class="Titolo7"><span><span style="font-style: normal; font-weight: bold;">Scorciatoie 
+ di modellazione</span></span></p>
+<p>È molto semplice assegnare l'appartenenza ad un nucleo ad un insieme 
+ di muri/elementi bidimensionali verticali: basta infatti posizionarsi 
+ su un piano verticale passante per due nodi del nucleo e in visualizzazione 
+ prospettica definire un <span class="hcp1">BOX</span> tale 
+ da vedere solo gli elementi interessati. A questo punto attivare una vista 
+ piana e di volta in volta <a href="Selezioni.htm">selezionare</a> con 
+ una finestra di selezione solo gli elementi presenti fra un piano e l'altro 
+ e nel pannello <span class="hcp1">Proprietà elementi selezionati</span> 
+ cambiare il numero ai bidimensionali.</p>
+<p class="Titolo7"><span class="hcp1">Pareti di scantinato</span></p>
+<p>Si fa notare che è <span class="hcp1">sbagliato</span> 
+ definire come nucleo le cosiddette &quot;pareti di scantinato&quot;, in 
+ quanto il loro comportamento non è sicuramente quello di una grande sezione 
+ inflessa per la quale valgono le ipotesi di conservazione delle sezioni 
+ piane.</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Argomenti 
+ correlati:</span> <span class="hcp2"><a 
+	 href="Nuclei.htm">Nuclei</a></span><span style="font-weight: normal;">,</span> 
+ <span class="hcp2"><a href="Definizione%20nuclei.htm">Definizione 
+ nuclei</a></span></p>
+</body>
+</html>

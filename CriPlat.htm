@@ -1,0 +1,565 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Criteri di progetto solette e platee</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+font.hcp2 { font-family:Symbol; }
+span.hcp3 { vertical-align:sub;
+font-weight:bold; }
+span.hcp4 { vertical-align:sub; }
+span.hcp5 { font-weight:normal; }
+span.hcp6 { font-weight:normal;
+font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Criteri di progetto armature solette/platee</h1>
+<h2>Materiali</h2>
+<p><span class="hcp1"><a name="Considera_come_elemento_esistente" 
+										 id="Considera_come_elemento_nuovo"></a>Considera 
+ come elemento esistente</span>: specificare se la soletta/platea è un 
+ elemento strutturale esistente oppure nuovo. Nel caso di elementi esistenti 
+ è possibile selezionare il livello di conoscenza (<span class="hcp1">LC1</span>, 
+ <span class="hcp1">LC2</span>, <span class="hcp1">LC3</span>) 
+ da cui discende il valore del fattore di confidenza (<span class="hcp1">FC</span>).</p>
+<p><span class="hcp1"><a name="LC_FC_cls" id="LC_FC_cls"></a>Livello 
+ di conoscenza e Fattore di confidenza</span>: se la soletta/platea è un 
+ elemento strutturale esistente è possibile selezionare il livello di conoscenza 
+ (<span class="hcp1">LC1</span>, <span class="hcp1">LC2</span>, 
+ <span class="hcp1">LC3</span>) da cui discende il valore 
+ del fattore di confidenza (<span class="hcp1">FC</span>). 
+ Il fattore di confidenza, eventualmente modificabile dall'utente, viene 
+ utilizzato per ridurre solo le caratteristiche di resistenza del calcestruzzo 
+ e non il modulo elastico.</p>
+<p><span class="hcp1"><a name="Tipo_di_calcestruzzo" id="Tipo_di_calcestruzzo"></a>Tipo 
+ di calcestruzzo</span>: selezionare il tipo di calcestruzzo previsto dalla 
+ normativa Italiana. Ogni volta che viene modificata la tipologia viene 
+ cambiata la classe del calcestruzzo e di conseguenza ricalcolati il modulo 
+ elastico e tutti i valori delle resistenze secondo le indicazioni della 
+ normativa.</p>
+<p><span class="hcp1"><a name="Rbk_calcestruzzo" id="Rbk_calcestruzzo"></a>Rck 
+ calcestruzzo</span>: specificare il valore della classe del calcestruzzo 
+ così come indicato dalla normativa Italiana. Ogni volta che questo valore 
+ viene modificato vengono ricalcolati il modulo elastico e tutti i valori 
+ delle resistenze secondo le indicazioni della normativa. È possibile variare 
+ successivamente tali valori per far lavorare il calcestruzzo a tassi inferiori 
+ a quelli previsti dal regolamento.</p>
+<p><a name="Modulo_elastico_cls" id="Modulo_elastico_cls"></a><span class="hcp1">Modulo 
+ elastico</span>: specificare il valore del modulo elastico del calcestruzzo. 
+ In mancanza di dati più esatti si può considerare il valore calcolato 
+ con l'espressione riportata nel par. 11.2.10.3 del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Fck" id="Fck"></a>Resistenza 
+ caratteristica cilindrica (Fck)</span>: specificare il valore della resistenza 
+ caratteristica cilindrica del calcestruzzo. In mancanza di dati più esatti 
+ si può considerare il valore calcolato con l'espressione riportata nel 
+ par. 11.2.10.1 del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Fctm" id="Fctm"></a>Resistenza 
+ caratteristica a trazione (Fctk)</span>: specificare il valore della resistenza 
+ caratteristica a trazione del calcestruzzo. In mancanza di dati più esatti 
+ si può considerare il valore calcolato con l'espressione riportata nel 
+ par. 11.2.10.2 del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Fcm" id="Fcm"></a>Resistenza 
+ media (Fcm)</span>: specificare il valore della resistenza cilindrica 
+ media del calcestruzzo. In mancanza di dati più esatti si può considerare 
+ il valore calcolato con l'espressione riportata nel par. 11.2.10.1 del 
+ D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Fctm1" id="Fctm_esistente1"></a>Resistenza 
+ media a trazione (Fctm)</span>: specificare il valore della resistenza 
+ media a trazione del calcestruzzo. In mancanza di dati più esatti si può 
+ considerare il valore calcolato con l'espressione riportata nel par. 11.2.10.2 
+ del D.M. 17/01/18.</p>
+<p><span><span class="hcp1"><a name="samm_calcestruzzo" id="samm_calcestruzzo"></a></span></span><font face="Symbol" class="hcp2"><span class="hcp1">s</span></font><span class="hcp3">amm.</span> <span class="hcp1">calcestruzzo</span>: specificare il valore 
+ massimo della tensione a compressione alla quale far lavorare il calcestruzzo.</p>
+<p><span class="hcp1"><a name="tc0" id="tc0"></a><font face="Symbol" class="hcp2">t</font><span class="hcp4">c0</span></span><span class="hcp5">:</span> specificare il valore minimo 
+ per le tensioni tangenziali al disotto delle quali è sufficiente l'armatura 
+ a taglio minima di regolamento.</p>
+<p><span class="hcp1"><a name="tc1" id="tc1"></a></span><font face="Symbol" class="hcp2"><span class="hcp1">t</span></font><span class="hcp4"><span class="hcp1">c1</span></span><span class="hcp5">:</span> specificare il valore massimo 
+ ammissibile per le tensioni tangenziali. Quando si supera tale valore 
+ ModeSt lo segnala nelle anomalie, ma progetta ugualmente l'armatura a 
+ taglio.</p>
+<p><span class="hcp1"><a name="Riduci_Fcd_per_tutte_le_verifiche_secondo_il_DM18" 
+										 id="Riduci_Fcd_per_tutte_le_verifiche_secondo_il_DM18"></a>Riduci 
+ Fcd per tutte le verifiche secondo il D.M. 18</span>: non essendo chiaro 
+ se il coefficiente <span style="font-family: Symbol, serif;">a</span><span class="hcp4">cc</span> pari a 0.85 debba essere considerato 
+ solo per le verifiche a pressoflessione, anche perché nel D.M. 16/01/96 
+ la resistenza a compressione nelle verifiche a pressoflessione è pari 
+ a 0.85Fcd e pari a Fcd nelle altre verifiche, o se vada applicato in genere 
+ per tutte le verifiche e controlli in cui si fa riferimento a Fcd, questa 
+ opzione consente di applicare la riduzione dello 0.85 di Fcd in tutte 
+ le verifiche.</p>
+<p><span class="hcp1"><a name="Gc" id="Gc"></a><font face="Symbol" class="hcp2">g</font><span class="hcp4">c</span> 
+ per stati limite ultimi</span>: specificare il valore del coefficiente 
+ di sicurezza <font face="Symbol" class="hcp2">g</font> 
+ del calcestruzzo. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Automatico</span>: 
+	 ModeSt sceglie il coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font> 
+	 automaticamente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: valore del coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font>.</p></li>
+</ul>
+<p><span class="hcp1"><a name="LC_FC_acciaio" id="LC_FC_acciaio"></a>Livello 
+ di conoscenza e Fattore di confidenza</span>: se la soletta/platea è un 
+ elemento strutturale esistente è possibile selezionare il livello di conoscenza 
+ (<span class="hcp1">LC1</span>, <span class="hcp1">LC2</span>, 
+ <span class="hcp1">LC3</span>) da cui discende il valore 
+ del fattore di confidenza (<span class="hcp1">FC</span>). 
+ Il fattore di confidenza, eventualmente modificabile dall'utente, viene 
+ utilizzato per ridurre solo le caratteristiche di resistenza dell'acciaio 
+ e non il modulo elastico.</p>
+<p><span class="hcp1"><a name="Tipo_di_acciaio" id="Tipo_di_acciaio"></a>Tipo 
+ di acciaio</span>: selezionare il tipo di acciaio previsto dalla normativa 
+ Italiana. Ogni volta che questo dato viene modificato viene modificato 
+ il valore della tensione caratteristica di snervamento dell'acciaio e 
+ ricalcolato il valore della tensione ammissibile nell'acciaio, valori 
+ che possono successivamente essere modificati per far lavorare l'acciaio 
+ a tensioni inferiori a quelle previste dal regolamento.</p>
+<p><span class="hcp1"><a name="Modulo_elastico_acciaio" id="Modulo_elastico_acciaio"></a>Modulo 
+ elastico</span>: specificare il valore del modulo elastico dell'acciaio.</p>
+<p><span class="hcp1"><a name="Fyk" id="Fyk"></a>Tensione 
+ caratteristica di snervamento (Fyk)</span>: specificare il valore della 
+ tensione caratteristica di snervamento dell'acciaio.</p>
+<p><span class="hcp1"><a name="Fym" id="Fym"></a>Tensione 
+ media di snervamento (Fym)</span>: specificare il valore della tensione 
+ media di snervamento dell'acciaio.</p>
+<p><span class="hcp1"><a name="samm_acciaio" id="samm_acciaio"></a></span><font face="Symbol" class="hcp2"><span class="hcp1">s</span></font><span class="hcp3">amm.</span> <span class="hcp1">acciaio</span>: specificare il valore massimo 
+ della tensione alla quale far lavorare l'acciaio.</p>
+<p><span class="hcp1"><a name="samm_reti_e_tralicci" id="samm_reti_e_tralicci"></a><font face="Symbol" class="hcp2">s</font></span><span class="hcp3">amm.</span> <span class="hcp1">reti 
+ e tralicci</span>: specificare il valore massimo della tensione alla quale 
+ far lavorare l'acciaio di reti elettrosaldate e tralicci. Si ricorda che 
+ per normativa non sono ammesse reti con f<span class="hcp4">yk</span> 
+ &lt; 4000 kg/cmq e f<span class="hcp4">tk</span> &lt; 
+ 4500 kg/cmq (D.M. 14/02/92 par. 2.2.5) a cui corrisponde <font face="Symbol" class="hcp2">s</font>amm = 2600 kg/cmq (D.M. 14/02/92 par. 3.1.7).</p>
+<p><span class="hcp1"><a name="Agt" id="Agt"></a>Allungamento 
+ per verifiche di duttilità (Agt)</span>: specificare la deformazione ultima 
+ dell'acciaio necessaria per valutare la capacità di rotazione della sezione 
+ in calcestruzzo armato secondo l'equazione C8A.6.5 della Circolare del 
+ D.M. 14/01/08.</p>
+<p><span class="hcp1"><a name="Gs" id="Gs"></a><font face="Symbol" class="hcp2">g</font><span class="hcp4">s</span> 
+ per stati limite ultimi</span>: specificare il valore del coefficiente 
+ di sicurezza <font face="Symbol" class="hcp2">g</font> 
+ dell'acciaio. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Automatico</span>: 
+	 ModeSt sceglie il coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font> 
+	 automaticamente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: valore del coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font>.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Coeff__di_omogeneizzazione" 
+										 id="Coeff__di_omogeneizzazione"></a>Coeff. 
+ di omogeneizzazione</span>: specificare il fattore di amplificazione dell'acciaio 
+ per il progetto della sezione (indicato con n dalla normativa).</p>
+<h2>Parametri di calcolo</h2>
+<p><span class="hcp1"><a name="Parametri_di_progetto_DM08" 
+										 id="Parametri_di_progetto_DM08"></a>Parametri 
+ di progetto secondo il D.M. 18</span>: specificare le modalità di progettazione. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Elemento_dissipativo" id="Elemento_dissipativo"></a>Elemento 
+	 dissipativo</span>: specificare se la soletta/platea debba essere 
+	 considerata o meno come un elemento di tipo dissipativo. Se l'opzione 
+	 è deselezionata la soletta/platea sarà considerata come un elemento 
+	 non dissipativo e nel caso di struttura calcolata come dissipativa 
+	 verrà progettata e verificata con le sollecitazioni di tipo non dissipativo 
+	 (SND). Se l'opzione è selezionata la soletta/platea sarà considerata 
+	 come un elemento dissipativo e nel caso di struttura calcolata come 
+	 non dissipativa verrà comunque progettata e verificata con le sollecitazioni 
+	 di tipo non dissipativo (SND).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Sollecitazioni_dissipative_amplificate_per_elementi_di_fondazione" 
+	 id="Sollecitazioni_dissipative_amplificate_per_elementi_di_fondazione"></a>Sollecitazioni 
+	 dissipative amplificate per elementi di fondazione</span>: specificare 
+	 se la platea debba essere progettata con le sollecitazioni dissipative 
+	 amplificate come previsto nella terza opzione del par. 7.2.5 del D.M. 
+	 17/01/18: <span style="font-style: italic;">&quot;quella trasferita 
+	 dagli elementi soprastanti nell'ipotesi di comportamento strutturale 
+	 dissipativo, amplificata di un coefficiente pari a 1,30 in CD&quot;A&quot; 
+	 e 1,10 in CD&quot;B&quot;;&quot;</span>.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Angolo_d_armatura" id="Angolo_d_armatura"></a>Angolo 
+ d'armatura</span>: specificare l'angolo che la prima direzione d'armatura 
+ (armatura in direzione X) deve formare con l'asse X. La seconda direzione 
+ d'armatura (armatura in direzione Y) formerà con la prima un angolo di 
+ 90°.</p>
+<p><span class="hcp1"><a name="Copriferro_teorico_superiore" 
+										 id="Copriferro_teorico_superiore"></a>Copriferro 
+ teorico superiore</span>: specificare il valore del copriferro teorico 
+ superiore da utilizzare per il progetto della soletta/platea. Tale valore 
+ viene assunto come distanza del baricentro dell'armatura superiore dall'estremo 
+ superiore della soletta/platea.</p>
+<p><span class="hcp1"><a name="Copriferro_teorico_inferiore" 
+										 id="Copriferro_teorico_inferiore"></a>Copriferro 
+ teorico inferiore</span>: specificare il valore del copriferro teorico 
+ inferiore da utilizzare per il progetto della soletta/platea. Tale valore 
+ viene assunto come distanza del baricentro dell'armatura inferiore dall'estremo 
+ inferiore della soletta/platea.</p>
+<p><span class="hcp1"><a name="Tipo_di_progetto_in_doppia_armatura" 
+										 id="Tipo_di_progetto_in_doppia_armatura"></a>Tipo 
+ di progetto in doppia armatura</span>: specificare come calcolare la doppia 
+ armatura nei punti della soletta/platea in cui non è sufficiente la semplice 
+ armatura. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tensioni 
+	 pari ai valori amm.</span>: permette di calcolare l'armatura in modo 
+	 che le tensioni nel ferro e nel calcestruzzo siano pari ai valori 
+	 ammissibili.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tensioni 
+	 pari ai valori amm. con AfCom/AfTesa minore o pari a</span>: come 
+	 nel caso precedente, ma con la limitazione che il rapporto fra AfCompressa 
+	 e AfTesa sia inferiore o uguale a quanto specificato.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tensioni 
+	 pari ai valori amm. con AfCom/AfTesa pari a</span>: progettare sempre 
+	 con un rapporto d'armatura pari a quello specificato.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Min__percentuale_di_regolamento" 
+										 id="Min__percentuale_di_regolamento"></a>Min. 
+ percentuale di regolamento</span>: specificare in quali casi considerare 
+ la prescrizione di normativa relativa alla percentuale di armatura longitudinale 
+ in zona tesa. Questa opzione è utilizzata solo per le strutture calcolate 
+ alle tensioni ammissibili secondo il D.M. 14/02/92 o agli stati limite 
+ secondo il D.M. 16/01/96. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Platee 
+	 di fondazione su suolo elastico</span>: permette di considerare il 
+	 minimo percentuale solo per le platee di fondazione (su suolo elastico).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solette 
+	 di elevazione</span>: permette di considerare il minimo percentuale 
+	 solo per le solette di elevazione.</p></li>
+</ul>
+<p>Se entrambe le opzioni sono deselezionate non verranno mai considerati 
+ i minimi percentuali, mentre se sono entrambe selezionate verranno sempre 
+ considerati i minimi percentuali.</p>
+<p><span class="hcp1"><a name="Controlla_min_armatura_di_ripartizione" 
+										 id="Controlla_min_armatura_di_ripartizione"></a>Controlla 
+ min. armatura di ripartizione</span>: specificare se considerare la prescrizione 
+ di normativa (par. 5.3.5 del D.M. 16/01/96) relativa alla percentuale 
+ di armatura di ripartizione nel caso di solette non calcolate come piastre. 
+ Se l'opzione è attiva viene controllato che l'armatura di ripartizione 
+ sia non inferiore al 20% dell'armatura principale. Quest'opzione è utile 
+ ad esempio nel caso di solette a sbalzo (balconi).</p>
+<h2>Armatura a flessione</h2>
+<p><span class="hcp1"><a name="Elenco_diametri_utilizzabili_f" 
+										 id="Elenco_diametri_utilizzabili_f"></a>Elenco 
+ diametri utilizzabili</span>: specificare l'elenco dei diametri utilizzabili 
+ per la progettazione dei ferri d'armatura della soletta/platea, separati 
+ da spazi (ad esempio 10 12 14 16 18). Sono ammessi anche valori non consecutivi.</p>
+<p><span class="hcp1"><a name="Passi_utilizzabili_f" id="Passi_utilizzabili_f"></a>Passi 
+ utilizzabili</span>: specificare il passo minimo, massimo e l'incremento 
+ per determinare l'armatura della soletta/platea. Ad esempio inserendo 
+ (in cm) 14 20 2 saranno ammissibili armature con interasse fra i ferri 
+ di 14, 16, 18 e 20 cm.</p>
+<p><span class="hcp1"><a name="Uniformizzazione_interassi_armatura" 
+										 id="Uniformizzazione_interassi_armatura"></a>Uniformizzazione 
+ interassi armatura</span>: specificare se e come uniformizzare gli interassi 
+ delle armature della soletta/platea. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Sempre</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Nella 
+	 stessa direzione</span>: uniformizza gli interassi delle armature 
+	 nella stessa direzione (X-Y).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Nella 
+	 stessa posizione</span>: uniformizza gli interassi delle armature 
+	 nella stessa posizione (superiore-inferiore).</p></li>
+</ul>
+<p><span class="hcp1"><a name="Uniformizzazione_diametri_armatura" 
+										 id="Uniformizzazione_diametri_armatura"></a>Uniformizzazione 
+ diametri armatura</span>: specificare se e come uniformizzare i diametri 
+ delle armature della soletta/platea. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Sempre</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Nella 
+	 stessa direzione</span>: uniformizza i diametri delle armature nella 
+	 stessa direzione (X-Y).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Nella 
+	 stessa posizione</span>: uniformizza i diametri delle armature nella 
+	 stessa posizione (superiore-inferiore).</p></li>
+</ul>
+<p><span class="hcp1"><a name="Tipo_di_ottimizzazione_armatura_a_flessione" 
+										 id="Tipo_di_ottimizzazione_armatura_a_flessione"></a>Tipo 
+ di ottimizzazione armatura a flessione</span>: specificare il criterio 
+ di scelta fra le diverse combinazioni di armatura risultanti dai parametri 
+ precedenti. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Minimizza 
+	 il peso complessivo dei ferri</span>: permette che l'armatura venga 
+	 progettata minimizzando il peso complessivo dei ferri.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Minimizza 
+	 il numero dei ferri</span>: permette che l'armatura venga progettata 
+	 minimizzando il numero dei ferri.</p></li>
+</ul>
+<h2>Verifiche a taglio</h2>
+<p><span class="hcp1"><a name="Escludi_punti_di_verifica_sotto_piramidi_di_punzonamento" 
+										 id="Escludi_punti_di_verifica_sotto_piramidi_di_punzonamento"></a>Escludi 
+ punti di verifica sotto piramidi di punzonamento</span>: specificare se 
+ escludere nelle verifiche a taglio i punti al di sotto della piramide 
+ di punzonamento. Non sono esclusi i punti che si trovano tra il perimetro 
+ di verifica u1 e il perimetro u<span class="hcp4">out</span>. 
+ Se l'opzione è attiva il programma esclude tali punti e provvede ad individuare 
+ altri.</p>
+<p><span class="hcp1"><a name="Escludi_punti_di_verifica_sotto_muri_bidimensionali" 
+										 id="Escludi_punti_di_verifica_sotto_muri_bidimensionali"></a>Escludi 
+ punti di verifica sotto muri/bidimensionali</span>: specificare se escludere 
+ nelle verifiche a taglio i punti al di sotto di elementi verticali modellati 
+ con muri/elementi bidimensionali. Se l'opzione è attiva il programma esclude 
+ tali punti e provvede ad individuare altri.</p>
+<h2>Ancoraggi</h2>
+<p><span class="hcp1"><a name="Fattore_di_riduzione_tc0_per_ancoraggio_ferri" 
+										 id="Fattore_di_riduzione_tc0_per_ancoraggio_ferri"></a>Fattore 
+ di riduzione</span> <font face="Symbol" class="hcp2"><span class="hcp1">t</span></font><span class="hcp4"><span class="hcp1">c0</span></span> <span class="hcp1">per 
+ ancoraggio ferri</span>: specificare di quanto deve essere ridotto il 
+ valore di <font face="Symbol" class="hcp2"><span class="hcp5">t</span></font><span class="hcp4"><span class="hcp5">c0</span></span> 
+ (definito fra le caratteristiche dei materiali) per calcolare la tensione 
+ tangenziale di aderenza ammissibile necessaria per il calcolo degli ancoraggi 
+ dei ferri. Ad esempio specificando 0.6 si impone una riduzione di <font face="Symbol" class="hcp2"><span class="hcp5">t</span></font><span class="hcp4"><span class="hcp5">c0</span></span> 
+ del 40%.</p>
+<p>Si fa presente comunque che durante il calcolo degli ancoraggi, quando 
+ si raggiunge il bordo della soletta/platea o generalmente quando il ferro 
+ non può essere prolungato, ModeSt risvolta il ferro (se richiesto) e rinuncia 
+ alla verifica dell'ancoraggio.</p>
+<p><span class="hcp1"><a name="Lunghezza_ancoraggi_armature" 
+										 id="Lunghezza_ancoraggi_armature"></a>Lunghezza 
+ ancoraggi armature</span>: specificare la lunghezza degli ancoraggi per 
+ i ferri d'armatura. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Calcolata 
+	 in funzione della</span> <font face="Symbol" class="hcp2"><span class="hcp1">s</span></font><span class="hcp4"><span class="hcp1">f</span></span>: la lunghezza degli ancoraggi 
+	 è pari al risultato del calcolo teorico con <font face="Symbol" class="hcp2">s</font><span class="hcp4">f</span> = <font face="Symbol" class="hcp2">s</font><span class="hcp4">famm</span> e coefficiente di riduzione 
+	 <font face="Symbol" class="hcp2"><span class="hcp5">t</span></font><span class="hcp4"><span class="hcp5">c0</span></span> 
+	 specificato nel criterio precedente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Imposta 
+	 come multiplo del diametro</span>: la lunghezza degli ancoraggi è 
+	 pari al multiplo del diametro dei ferri.</p></li>
+</ul>
+<p>Quando i ferri raggiungono il bordo della soletta/platea, vengono risvoltati 
+ (se richiesto) e non viene eseguita la verifica della lunghezza degli 
+ ancoraggi.</p>
+<p><span class="hcp1"><a name="Lunghezza_ancoraggi_ferri_punz_" 
+										 id="Lunghezza_ancoraggi_ferri_punz_"></a>Lunghezza 
+ ancoraggi ferri punzonamento</span>: specificare la lunghezza degli ancoraggi 
+ per i ferri per punzonamento. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Calcolata 
+	 in funzione della</span> <font face="Symbol" class="hcp2"><span class="hcp1">s</span></font><span class="hcp4"><span class="hcp1">f</span></span>: la lunghezza degli ancoraggi 
+	 è pari al risultato del calcolo teorico con <font face="Symbol" class="hcp2">s</font><span class="hcp4">f</span> = <font face="Symbol" class="hcp2">s</font><span class="hcp4">famm</span> e coefficiente di riduzione 
+	 <font face="Symbol" class="hcp2"><span class="hcp5">t</span></font><span class="hcp4"><span class="hcp5">c0</span></span> 
+	 specificato nel criterio precedente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Imposta 
+	 come multiplo del diametro</span>: la lunghezza degli ancoraggi è 
+	 pari al multiplo del diametro dei ferri.</p></li>
+</ul>
+<p>Quando i ferri raggiungono il bordo della soletta/platea, vengono risvoltati 
+ (se richiesto) e non viene eseguita la verifica della lunghezza degli 
+ ancoraggi.</p>
+<h2>Armatura a punzonamento</h2>
+<p><span class="hcp1"><a name="Fattore_di_riduzione_altezza_soletta_platea" 
+										 id="Fattore_di_riduzione_altezza_soletta_platea"></a>Fattore 
+ di riduzione altezza soletta/platea</span>: poiché in letteratura diversi 
+ sono i metodi consigliati per il calcolo delle tensioni di punzonamento, 
+ si consente all'utente di specificare in dettaglio la formula di calcolo. 
+ Posto:</p>
+<p><font face="Symbol" class="hcp2">t</font> = N/(k*h*S)</p>
+<p>dove:</p>
+<p class="Normal2"><font face="Symbol" class="hcp2"><span class="hcp1">t</span></font>: tensione tangenziale per 
+ punzonamento</p>
+<p class="Normal2"><span class="hcp1">N</span>: sforzo complessivo 
+ di punzonamento</p>
+<p class="Normal2"><span class="hcp1">k</span>: coefficiente 
+ moltiplicativo</p>
+<p class="Normal2"><span class="hcp1">h</span>: altezza della 
+ soletta/platea</p>
+<p class="Normal2"><span class="hcp1">S</span>: perimetro 
+ medio utile della superficie teorica di rottura</p>
+<p>con questo parametro è possibile specificare il valore del coefficiente 
+ moltiplicativo <span class="hcp1">k</span> (generalmente 
+ 0.9 o 1).</p>
+<p><span class="hcp1"><a name="Modifica_altezza_soletta_platea" 
+										 id="Modifica_altezza_soletta_platea"></a>Modifica 
+ altezza soletta/platea</span>: poiché in letteratura diversi sono i metodi 
+ consigliati per il calcolo delle tensioni di punzonamento, si consente 
+ all'utente di specificare in dettaglio la formula di calcolo. Posto:</p>
+<p><font face="Symbol" class="hcp2">t</font> = N/(k*h*S)</p>
+<p>dove:</p>
+<p class="Normal2"><font face="Symbol" class="hcp2"><span class="hcp1">t</span></font>: tensione tangenziale per 
+ punzonamento</p>
+<p class="Normal2"><span class="hcp1">N</span>: sforzo complessivo 
+ di punzonamento</p>
+<p class="Normal2"><span class="hcp1">k</span>: coefficiente 
+ moltiplicativo</p>
+<p class="Normal2"><span class="hcp1">h</span>: altezza della 
+ soletta/platea</p>
+<p class="Normal2"><span class="hcp1">S</span>: perimetro 
+ medio utile della superficie teorica di rottura</p>
+<p>con questo parametro è possibile stabilire se ModeSt debba considerare 
+ l'altezza utile o l'altezza effettiva della soletta/platea. Se l'opzione 
+ è deselezionata ModeSt considera l'altezza effettiva della soletta/platea, 
+ mentre se è selezionata viene considerata l'altezza utile (altezza effettiva 
+ detratta la media fra copriferro teorico superiore e copriferro teorico 
+ inferiore).</p>
+<p><span class="hcp1"><a name="Allargamento_piastra_pilastri_in_acciaio" 
+										 id="Allargamento_piastra_pilastri_in_acciaio"></a>Allargamento 
+ piastra pilastri in acciaio</span>: specificare di quanto la piastra di 
+ base dei pilastri in acciaio si allarga rispetto all'ingombro netto della 
+ sezione. Con questo valore ModeSt determina le dimensioni della piastra 
+ di base e di conseguenza calcola gli sforzi di punzonamento.</p>
+<p><span class="hcp1"><a name="Distanza_dal_bordo_libero" 
+										 id="Distanza_dal_bordo_libero"></a>Distanza 
+ dal bordo libero&#160;(D.M. 92/96)</span>: specificare la distanza massima 
+ dal bordo della soletta/platea che devono avere le superfici teoriche 
+ di rottura a punzonamento per essere considerate ai fini del calcolo della 
+ tensione tangenziale e per essere interessate dall'armatura a punzonamento. 
+ Non è infatti ipotizzabile che nascano superfici di rottura in prossimità 
+ del bordo libero della platea, causa un effetto di &quot;trascinamento&quot; 
+ che porta la rottura ad estendersi fino al bordo libero. Con questo parametro 
+ è possibile stabilire fino a che distanza dal bordo libero sia lecito 
+ considerare come valida la superficie di rottura. Si fa presente che per 
+ calcoli eseguiti secondo il D.M. 17/01/18 la distanza dal bordo libero 
+ è assunta pari a 0. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Distanza 
+	 come un moltiplicatore dello spessore</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Distanza 
+	 imposta a</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Tipo_di_armatura_a_punzonamento" 
+										 id="Tipo_di_armatura_a_punzonamento"></a>Tipo 
+ di armatura a punzonamento</span>: specificare in che modo realizzare 
+ l'armatura a punzonamento.&#160;Si fa presente che per calcoli eseguiti 
+ sia secondo il D.M. 14/02/92 sia secondo il D.M. 16/01/96 l'armatura a 
+ punzonamento viene realizzata con i ferri piegati. Sono disponibili le 
+ seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 un ferro piegato</span>: vengono inseriti un numero di ferri piegati 
+	 disposti parallelamente fra di loro.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Serie 
+	 di barre verticali disposte radialmente<span class="hcp5">: 
+	 vengono inseriti una serie di barre verticali (pioli) disposti radialmente.</span></p></li>
+</ul>
+<p class="IndentBullet1" style="font-weight: bold;"><a name="Controlla_prescrizioni_EC2"></a>Controlla 
+ prescrizioni EC2<span class="hcp5">: specificare se l'armatura 
+ a punzonamento, nel caso in cui sia realizzata con barre verticali disposte 
+ radialmente, debba essere posizionata come prescritto nel par. 6.4.5 del 
+ EC2 (caso A della figura 6.22): &quot;</span><span class="hcp6">Si 
+ raccomanda che il perimetro più lontano delle armature a taglio si collochi 
+ a una distanza non maggiore di kd all'interno di u</span><span style="font-weight: normal; 
+	 font-style: italic; vertical-align: Sub;">out</span><span class="hcp6"> ...</span><span class="hcp5">&quot;. 
+ Il valore di k adottato dal programma è 1.5.</span></p>
+<p><span class="hcp1"><a name="Moltiplicatore_altezza_utile_per_valutare_perimetro_efficace_DM08" 
+										 id="Moltiplicatore_altezza_utile_per_valutare_perimetro_efficace_DM08"></a>Moltiplicatore 
+ altezza utile per valutare perimetro efficace (D.M. 18)</span>: specificare 
+ il moltiplicatore dell'altezza utile (spessore della soletta/platea meno 
+ il valore del <span class="hcp1">Copriferro teorico superiore/inferiore</span>). 
+ Con questo valore il programma determina le dimensioni della base della 
+ piramide di punzonamento e di conseguenza calcola il perimetro efficace 
+ come indicato al par. 4.1.2.1.3.4 del D.M. 17/01/18. Si fa presente che 
+ per calcoli eseguiti sia secondo il D.M. 14/02/92 sia secondo il D.M. 
+ 16/01/96 il valore del moltiplicatore è assunto pari a 1 a cui corrisponde 
+ un angolo di 45°.</p>
+<p><span class="hcp1"><a name="Tolleranza_di_posizionamento_barre" 
+										 id="Tolleranza_di_posizionamento_barre"></a>Tolleranza 
+ di posizionamento barre</span>: specificare con che tolleranza rispetto 
+ al perimetro del pilastro iniziare la piegatura delle barre a punzonamento. 
+ Per una efficace armatura a punzonamento è infatti necessario che le barre 
+ piegate intersechino una ipotetica superficie di rottura disposta a 45° 
+ (l'intersezione può anche non avvenire nel punto medio della superficie). 
+ Consentendo una leggera tolleranza è possibile aumentare il numero di 
+ barre progettabili per l'armatura a punzonamento. Sono disponibili le 
+ seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Distanza 
+	 come un moltiplicatore dello spessore</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Distanza 
+	 imposta a</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Elenco_diametri_utilizzabili" 
+										 id="Elenco_diametri_utilizzabili"></a>Elenco 
+ diametri utilizzabili</span>: specificare l'elenco dei diametri utilizzabili 
+ per la progettazione dei ferri necessari per l'armatura a punzonamento, 
+ separati da spazi (ad esempio 10 12 14 16 18). Sono ammessi anche valori 
+ non consecutivi.</p>
+<p><span class="hcp1"><a name="Passi_utilizzabili" id="Passi_utilizzabili"></a>Passi 
+ utilizzabili</span>: specificare il passo minimo, massimo e l'incremento 
+ per determinare la posizione dei ferri per punzonamento. Ad esempio inserendo 
+ (in cm) 14 20 2 saranno ammissibili armature per punzonamento con interasse 
+ fra i ferri di 14, 16, 18 e 20 cm.</p>
+<p><span class="hcp1"><a name="Tipo_di_ottimizzazione_armatura_a_punzonamento" 
+										 id="Tipo_di_ottimizzazione_armatura_a_punzonamento"></a>Tipo 
+ di ottimizzazione armatura a punzonamento</span>: specificare il criterio 
+ di scelta fra le diverse combinazioni di armatura risultanti dai parametri 
+ precedenti. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Minimizza 
+	 il peso complessivo dei ferri</span>: permette che l'armatura venga 
+	 progettata minimizzando il peso complessivo dei ferri.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Minimizza 
+	 il numero dei ferri</span>: permette che l'armatura venga progettata 
+	 minimizzando il numero dei ferri.</p></li>
+</ul>
+<h2>Dati per progettazione agli stati limite</h2>
+<p><span class="hcp1"><a name="Condizioni_ambientali" id="Condizioni_ambientali"></a>Condizioni 
+ ambientali</span>: indicare le condizioni ambientali secondo la normativa 
+ Italiana per determinare i fattori di sicurezza negli stati limiti d'esercizio:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Ordinarie</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Aggressive</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Molto 
+	 aggressive</span></p></li>
+</ul>
+<p class="IndentBullet1"><span class="hcp1"><a name="Scelta_cemento" 
+															 id="Scelta_cemento"></a>Scelta 
+ cemento</span>: cliccando sul bottone &quot;Scelta cemento&quot;, sono 
+ accessibili all'utente le caratteristiche dei cementi relativi al produttore 
+ selezionato nella casella di riepilogo a discesa. Tecnisoft fornisce i 
+ dati relativi ai cementi di produzione industriale come uno strumento 
+ di utilità secondo le specifiche fornite dai relativi produttori, e non 
+ si assume alcuna responsabilità circa l'effettiva rispondenza alle specifiche 
+ di normativa. Nella tabella sono riportati i prodotti da utilizzare in 
+ funzione della classe d'esposizione, sono anche indicati l'ambiente con 
+ la sua descrizione, il massimo rapporto acqua/cemento e la minima resistenza 
+ del calcestruzzo. Cliccando sul nome del prodotto è possibile collegarsi 
+ al sito Internet del produttore per avere maggiori informazioni sulle 
+ sue caratteristiche.</p>
+<p><span class="hcp1"><a name="Controllo_rapporto_x_d" id="Controllo_rapporto_x_d"></a>Controllo 
+ rapporto x/d</span>: specificare se deve essere effettuato il controllo 
+ di normativa relativo al rapporto X/D fra la posizione dell'asse neutro 
+ e l'altezza utile della sezione.</p>
+<p><span class="hcp1"><a name="Classificazione_barre_tese_compresse" 
+										 id="Classificazione_barre_tese_compresse"></a>Classificazione 
+ barre tese/compresse</span>: in numerose verifiche interviene la valutazione 
+ dell'area di ferro teso (ad esempio nel calcolo della resistenza ultima 
+ a taglio) e/o dell'area di ferro compressa (ad esempio nel calcolo della 
+ capacità in termini di rotazione). Nel caso più generale possono risultare 
+ &quot;tese&quot; o &quot;compresse&quot; armature molto vicine all'asse 
+ neutro ed il loro conteggio può quindi falsare le relative verifiche. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 le barre con deformazione percentuale rispetto alla barra più tesa/compressa 
+	 non inferiore a</span>: specificare la percentuale della deformazione 
+	 della barra più tesa/compressa in assoluto affinché le barre con deformazione 
+	 al disotto del valore specificato siano considerate allo stesso modo. 
+	 Ad esempio specificando 30% verranno considerate tese tutte quelle 
+	 barre la cui deformazione sia almeno il 30% della deformazione della 
+	 barra più tesa della sezione e analogamente per quelle compresse.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">In 
+	 funzione della deformazione</span>: verranno considerate tese o compresse 
+	 tutte le barre con deformazione positiva o negativa.</p></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,129 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.14 alla 8.15</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp3 { text-transform:capitalize; }
+span.hcp4 { mso-bidi-font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.14 alla 8.15</h1>
+<p>Ampliate le modalità di trasferimento delle masse secondarie sugli impalcati 
+ e introdotta la possibilità di trasferirle anche su nodi di impalcati 
+ non rigidi. Possibilità di visualizzare graficamente dove sono state trasferite 
+ le masse con l'apposito comando <span class="hcp1">Trasf. 
+ masse sec.</span> <img src="../Icone/16/dtms.png" alt="" border="1" class="hcp2"> 
+ presente nel gruppo <span class="hcp1">Disegno</span> della 
+ scheda <span class="hcp1">Risultati</span>.</p>
+<p>Nella progettazione interattiva delle solette/platee è stata introdotta 
+ la possibilità di aggiungere i punti di verifica o eliminare quelli determinati 
+ automaticamente dal programma.</p>
+<p>Integrati i disegni delle carpenterie di piano con la numerazione dei 
+ maschi murari sia del modello generale pareti (MGP) che del modello tipo 
+ POR (MPOR). Nella creazione delle carpenterie di piano, se nella struttura 
+ sono presenti elementi in muratura ordinaria, vengono automaticamente 
+ create anche le suddette carpenterie di piano per un agevole riscontro 
+ e confronto fra relazione di calcolo e lo schema adottato.</p>
+<p>Nuovo collegamento delle aste in acciaio del tipo trave su trave o su 
+ pilastro con flangia e bullonatura. Il collegamento è composto da una 
+ piastra saldata sulla testa del finale d'asta e da un'altra piastra saldata 
+ sulle ali dell'ospite, le due piastre sono poi collegate fra loro con 
+ bulloni. In entrambi i casi è possibile inserire anche un rinforzo nella 
+ trave o nel pilastro disposto rispettivamente in verticale o in orizzontale.</p>
+<p>Individuazione e riparazione delle progettazioni non più collegate alla 
+ struttura o contenenti elementi con diversa numerazione. Nel primo caso 
+ le progettazioni vengono trasformate in disegni Ms-Cad mentre nel secondo 
+ caso vengono invece rinominate le progettazioni assegnando lo stesso nome 
+ che verrebbe generato dalla progettazione automatica.</p>
+<p>Migliorate le tecniche di progettazione automatica dell'armatura delle 
+ travi ai sensi del D.M. 17/01/18 e modificati i criteri di progetto di 
+ default in cui si è cercato di concepire delle strategie di progetto adatte 
+ per i casi più comuni (per approfondimenti si veda <u style="text-decoration: none; "><span class="hcp1"><a href="Tecniche_di_progettazione_ai_sensi_DM08.htm#Criteri" 
+									 style="font-family: Verdana, sans-serif;">Tecniche 
+ di progettazione ai sensi D.M. 17/01/18</a></span>)</u>.</p>
+<p>Nuovo modulo IDEA che consente il collegamento automatico di ModeSt 
+ al software IDEA StatiCa Connection mediante il quale è possibile progettare 
+ e verificare qualsiasi tipo di collegamento di strutture in acciaio, indicando 
+ il nodo da progettare con IDEA StatiCa Connection e con esso tutte le 
+ aste che vi convergono (incluso fili fissi e scostamenti dai fili fissi) 
+ e tutte le sollecitazioni risultanti dal calcolo effettuato con ModeSt. 
+ All'interno di IDEA StatiCa Connection è possibile effettuare la progettazione 
+ interattiva dei collegamenti delle aste introducendo piastre, saldature, 
+ bullonature, forature delle aste, ecc. e verificare quanto introdotto 
+ (piastre, saldature, ecc.). Salvando il progetto dei collegamenti in IDEA 
+ StatiCa Connection questo comparirà nell'albero del progetto di ModeSt 
+ e dal quale può essere riaperto in IDEA StatiCa Connection, ad esempio 
+ per controllare se a seguito del ricalcolo della struttura sia ancora 
+ verificato. IDEA StatiCa Connection effettua le verifiche secondo l'Eurocodice 
+ 3 (EN 1993-1-8) e l'AISC e genera una relazione di calcolo dettagliata 
+ (completa di immagini sia della geometria del nodo che delle mappe relative 
+ alle tensioni equivalenti e allo stato deformativo) o compatta (composta 
+ da una sola pagina).</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">N</span><span class="hcp4">ella progettazione dell'armatura 
+	 delle travi è stato aggiunto <b style="font-weight: normal;">nei criteri 
+	 di progetto il parametro</b> </span><span class="hcp1"><a 
+	 title="Risvoltare i ferri per garantire l'ancoraggio agli estremi della trave" 
+	 href="CriGenTra.htm#Risvoltare_i_ferri_per_garantire_l_ancoraggio_agli_estremi_della_trave">Risvoltare 
+	 i ferri per garantire l'ancoraggio agli estremi della trave</a></span><span class="hcp4">, che permette</span> di risvoltare 
+	 i ferri per garantire l'ancoraggio all'estremità della trave o nei 
+	 punti in cui non possono essere prolungati.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">N</span>el 
+	 disegno dei carichi nodali e delle reazioni vincolari, oltre a rappresentare 
+	 le forze ed i momenti con frecce di dimensioni variabili, queste sono 
+	 state anche colorate in funzione dei valori riportati nella legenda.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">N</span>ei 
+	 criteri di progetto delle aste in legno sono stati aggiunti fra i 
+	 vari tipi di materiale le caratteristiche previste dalle UNI EN 14080:2013 
+	 per il lamellare e dalle UNI EN 338:2016 per il legno massiccio.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">I</span>mportazione 
+	 della modellazione geotecnica da un'altra struttura. L'importazione 
+	 si effettua cliccando dal menu dell'applicazione <span class="hcp1"><img src="../Icone/modest32.png" alt="" border="1" class="hcp2"></span> su <span class="hcp1">Importa</span> <img src="../Icone/32/main_importa32.png" alt="" border="1" class="hcp2"> e poi 
+	 <span class="hcp1">Modellazione geotecnica</span> <span 
+	 style="font-style: italic;"><img src="../Icone/32/main_importa_geotecnica32.png" alt="" border="1" class="hcp2"></span>. Questa operazione 
+	 comporta ovviamente la perdita dei dati eventualmente già definiti 
+	 relativi alle unità e alle prove geotecniche, alle colonne stratigrafiche 
+	 e ai criteri di progetto geotecnici.</p></li>
+	<li class="p-Bullet1"><p style="margin-top: 0pt; margin-bottom: 7pt;">Colorazione 
+	 delle aste in funzione del criterio di progetto dei collegamenti in 
+	 acciaio.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nell'analisi sismica statica 
+	 non lineare <span style="line-height: 115%; mso-bidi-language: AR-SA;">(</span>pushover) 
+	 delle strutture compare, alla destra del titolo del pannello &quot;Output 
+	 solutore&quot;, il numero dell'analisi in corso, il numero delle analisi 
+	 da eseguire ed il tempo stimato rimanente per arrivare alla fine dell'intera 
+	 analisi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Nell'analisi 
+	 sismica statica non lineare (pushover) delle strutture è possibile 
+	 scegliere, nella scheda &quot;Opzioni pushover&quot;, le analisi da 
+	 eseguire in modo da effettuare solo quelle che danno problemi e che 
+	 devono essere maggiormente approfondite.<span class="hcp4"> 
+	 Questa opzione sostituisce le precedenti che permettevano di gestire 
+	 le eccentricità aggiuntive ed eventualmente eseguire solo un calcolo 
+	 di test che risultava però essere sempre solo il primo di quelli necessari.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp4">Nella 
+	 progettazione interattiva dell'armatura delle solette/platee è stata 
+	 aggiunta, nel gruppo </span><span style="mso-bidi-font-weight: bold; 
+										 font-weight: bold;">Mappe</span><span class="hcp4">, l'opzione </span><span class="hcp1">Agg. 
+	 aut. mappe</span><span class="hcp4"> che permette 
+	 di attivare o disattivare l'aggiornamento automatico delle mappe.</span>&#160;Nel 
+	 caso di strutture molto grandi questo consente di lavorare in modo 
+	 più agevole alla definizione delle zone di rinforzo.</p></li>
+</ul>
+</body>
+</html>

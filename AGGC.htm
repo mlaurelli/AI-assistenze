@@ -1,0 +1,80 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>AGGC - Aggiungi cavallotto</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+span.hcp4 { font-style:italic;
+font-weight:normal; }
+span.hcp5 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">AGGC - Aggiungi cavallotto</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Progettazione interattiva travi</p>
+</td>
+<td style="width:28%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p>
+</td>
+</tr>
+</table>
+<p>Permette di inserire un cavallotto (ferro simmetrico rispetto al pilastro) o un ferro centrato sulla campata in una travata.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">AGGC</span> <font color="#0000FF"><span class="hcp4">Punto dell'asse di simmetria del ferro</span></font> / <font color="#0000FF"><span class="hcp4">Punto finale del ferro</span></font></p>
+<p>Il primo punto selezionato con il cursore grafico deve individuare l'asse di un pilastro o un punto interno di una campata, il secondo punto indica la posizione finale a destra o a sinistra.</p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Non è possibile inserire cavallotti su pilastri che abbiano a destra o a sinistra linee di blocco attive nella posizione corrente del ferro (superiore o inferiore).</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Se il ferro raggiunge a destra o a sinistra una linea di blocco, non sarà possibile prolungarlo oltre, a meno di non disattivare i blocchi con il comando <span class="hcp5"><a href="FBL.htm">FBL</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il ferro che viene inserito sarà un ferro superiore o inferiore in funzione della scelta effettuata con i comandi <span class="hcp5"><a href="FINF.htm">FINF</a></span> e <span class="hcp5"><a href="FSUP.htm">FSUP</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il ferro viene inserito con la combinazione di diametri corrente specificata con il comando <span class="hcp5"><a href="FERC.htm">FERC</a></span>. Durante l'inserimento del ferro è possibile cambiare la combinazione di diametri con il comando <span class="hcp3">FERC</span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">In qualunque momento è possibile piegare il ferro per realizzare un sagomato usando i tasti <span class="hcp3">I</span> o <span class="hcp3">F</span> e "Invio" che consentono di specificare il punto iniziale o finale di piegatura.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">In qualunque momento è possibile annullare l'ultima piegatura del ferro usando il tasto <span class="hcp3">U</span> e "Invio".</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="margin-bottom: 0;">Se è stato settato un passo di arrotondamento ferri con il comando <span class="hcp5"><a href="PASSO.htm">PASSO</a></span>, il ferro inserito avrà una lunghezza multipla di tale valore. Sarà però in tal caso difficoltoso inserire punti di piegatura.</p>
+</li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+//]]>
+</script>
+</body>
+</html>

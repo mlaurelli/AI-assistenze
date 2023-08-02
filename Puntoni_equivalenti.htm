@@ -1,0 +1,58 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Puntoni equivalenti</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-size:10pt; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Puntoni equivalenti</h1>
+<p>È possibile indicare al programma di generare in automatico due puntoni 
+ diagonali equivalenti per tenere in conto dell'interazione tra tamponature 
+ e telai.</p>
+<p>Il metodo usato è quello introdotto nella&#160;Circolare dei LL.PP. 
+ n. 65 del 10/4/97 e consiste nell'utilizzare un'asta con rigidezza equivalente 
+ al pannello di muratura compreso all'interno del telaio. Nel solo caso 
+ di tamponature quadrangolari il programma se richiesto crea due aste, 
+ <span style="font-weight: bold;">resistenti solo a compressione</span>, 
+ segnalando eventualmente se non sono rispettati campi di utilizzo specificati 
+ nel testo della circolare citata.</p>
+<p class="hcp1">L'introduzione di questa schematizzazione è 
+ di totale responsabilità del progettista, perché può modificare in modo 
+ significativo e non facilmente controllabile il comportamento della struttura.</p>
+<p class="hcp1">Si fa infatti presente che il D.M. 17/01/18 
+ al paragrafo 7.2.3 prescrive: “<i style="mso-bidi-font-style: normal;">In 
+ nessun caso la scelta degli elementi da considerare secondari può determinare 
+ il passaggio da struttura “irregolare” a struttura “regolare”, <b style="mso-bidi-font-weight: normal;">né 
+ il contributo alla rigidezza totale sotto azioni orizzontali degli elementi 
+ secondari può superare il 15% della analoga rigidezza degli elementi principali</b>.</i>”. 
+ Tali controlli NON vengono eseguiti dal programma.</p>
+<p>La schematizzazione dei puntoni può comportare inoltre una sottostima 
+ notevole delle sollecitazioni degli elementi sia per azioni sismiche che 
+ per i semplici carichi verticali.</p>
+<p>L'introduzione di tali elementi comporta inoltre ovviamente l'obbligo 
+ di eseguire analisi non lineari e quindi preclude il calcolo modale e 
+ l'analisi sismica dinamica lineare.</p>
+<p>Nel caso di analisi pushover l'analisi modale o dinamica sono necessarie 
+ in realtà solo per la valutazione della distribuzione delle forze incrementali. 
+ In quest'ottica, per poter consentire ugualmente uno studio del comportamento 
+ della struttura, è possibile comunque indicare al programma di eseguire 
+ l'analisi modale ipotizzando che le due aste che schematizzano la tamponatura 
+ abbiano comportamento lineare (quindi resistenti sia a trazione che compressione) 
+ ma riducendone la rigidezza (vedi <a href="Criteri_di_verifica_tamponature.htm#Considera_nell_analisi_modale_del_pushover_ca" 
+										 style="font-weight: bold;">Considera 
+ nell'analisi modale del pushover c.a.</a>).</p>
+<p>Anche in questo caso si lasciano al progettista le considerazioni sulla 
+ validità ed i limiti di un simile approccio.</p>
+</body>
+</html>

@@ -1,0 +1,284 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione interattiva solette/platee</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+p.hcp3 { font-weight:bold; }
+span.hcp4 { font-weight:normal; }
+p.hcp5 { font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progettazione interattiva solette/platee</h1>
+<p>Nell'ambiente di progettazione interattiva soletta/platea, se l'armatura 
+ della soletta/platea era già stata precedentemente progettata e archiviata 
+ verrà richiamata, altrimenti verrà creato il solo disegno geometrico della 
+ soletta/platea. Al termine della progettazione è possibile archiviare 
+ la soletta/platea e creare o aggiornare i file necessari.</p>
+<p>È anche possibile consultare il tutorial: <span class="hcp1"><a 
+	 href="Guida.chm::/Progettazione_interattiva_armature_solette_e_platee.htm">Progettazione 
+ interattiva armature solette/platee</a></span><span style="font-style: italic;">.</span></p>
+<p>Si riportano di seguito i comandi principali raggruppati per funzionalità:</p>
+<h2 class="Titolo5">Proprietà correnti</h2>
+<p>Nella sezione <span class="hcp1">Ferri</span> del pannello 
+ <span class="hcp1">Proprietà correnti</span> è possibile 
+ stabilire il diametro e il passo dell'armatura da utilizzare per aggiungere 
+ nuove zone d'armatura a flessione o da assegnare a zone esistenti diffuse 
+ o concentrate.</p>
+<p>Nella sezione <span class="hcp1">Rinf.</span> del pannello 
+ <span class="hcp1">Proprietà correnti</span> è possibile 
+ stabilire il numero al metro quadro e il diametro dell'armatura a taglio 
+ da utilizzare per aggiungere nuove zone d'armatura a taglio o da assegnare 
+ a zone esistenti.</p>
+<p>Nella sezione <span class="hcp1">Posizionamento</span> 
+ del pannello <span class="hcp1">Proprietà correnti</span> 
+ è possibile stabilire la superficie corrente, se è settata come superficie 
+ corrente quella &quot;Automatica&quot;, indicando una zona generica della 
+ platea l'armatura verrà assegnata seguendo l'indicazione fornita dalla 
+ visualizzazione settata mentre se è stata impostata una superficie corrente 
+ verranno richieste la direzione e la posizione dell'armatura da assegnare. 
+ Modificare la direzione X (e quindi Y) dell'armatura con <span class="hcp1">Asse 
+ X</span>.</p>
+<p>Nella sezione <span class="hcp1">Zone concentrate</span> 
+ del pannello <span class="hcp1">Proprietà correnti</span> 
+ è possibile stabilire: il <span class="hcp1">Tipo di zona</span> 
+ (Rettangolare, Centrata su un punto generico, Centrata su un pilastro) 
+ da utilizzare per aggiungere nuove zone d'armatura concentrata; imporre 
+ una lunghezza X e/o Y delle zone d'armatura concentrata con <span class="hcp1">Imponi 
+ lungh. X</span> e <span class="hcp1">Imponi lungh. Y</span>; 
+ impostare un multiplo fisso per le lunghezze delle zone d'armatura concentrata 
+ in <span class="hcp1">Arrotondamento</span>.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/FERC.htm">FERC</a></span>&#160;(Ferro 
+ corrente), <span class="hcp1"><a href="../Comandi/SUPC.htm">SUPC</a></span>&#160;(Superfici 
+ correnti), <span class="hcp1"><a href="../Comandi/ASSX.htm">ASSX</a></span>&#160;(Direzione 
+ asse X principale), <span class="hcp1"><a href="../Comandi/TZC.htm">TZC</a></span>&#160;(Tipo 
+ zona corrente), <span class="hcp1"><a href="../Comandi/LZX.htm">LZX</a></span>&#160;(Lunghezza 
+ zona in direzione X), <span class="hcp1"><a href="../Comandi/LZX.htm">LZY</a></span>&#160;(Lunghezza 
+ zona in direzione Y), <span class="hcp1"><a href="../Comandi/PASSO.htm">PASSO</a></span>&#160;(Imposta 
+ passo lunghezze ferri).</p>
+<h2 class="Titolo5"><a name="Solette_platee_Generali" id="Solette_platee_Generali"></a>Generali</h2>
+<p><span class="hcp1"><a name="ARMA" id="ARMA"></a>Progetta 
+ aut. <img src="../Icone/16/arma.png" alt="" border="1" class="hcp2"></span> 
+ progetta la soletta/platea esattamente come ModeSt avrebbe fatto in progettazione 
+ automatica.</p>
+<p><span class="hcp1"><a name="CALC" id="CALC"></a>Ricalcola 
+ <img src="../Icone/16/calc.png" alt="" border="1" class="hcp2"></span> 
+ effettua il controllo che la soletta/platea sia verificata e che siano 
+ rispettati tutti i minimi di regolamento, segnalando le eventuali anomalie.</p>
+<p><span class="hcp1"><a name="ELAR" id="ELAR"></a>Elimina 
+ prog. <img src="../Icone/16/eliminaprog.png" alt="" border="1" class="hcp2"></span> 
+ elimina completamente la progettazione lasciando solo il disegno geometrico 
+ della soletta/platea.</p>
+<p><span class="hcp1"><a name="_REL"></a>Anteprima rel. <img src="../Icone/16/anteprimarel.png" alt="" border="1" class="hcp2"></span> visualizza 
+ l'anteprima della relazione di calcolo. È possibile visualizzare una relazione 
+ in forma sintetica oppure estesa selezionando la relativa opzione del 
+ menu che compare cliccando sulla freccia a destra del comando. È possibile 
+ specificare se creare la relazione con il sistema tecnico o con l'unità 
+ di misura corrente utilizzando l'opzione &quot;Usa sistema tecnico&quot; 
+ del menu che compare cliccando sulla freccia a destra del comando.</p>
+<p><span class="hcp1">Mod. criteri <img src="../Icone/16/modcriteri.png" alt="" border="1" class="hcp2"></span> 
+ modifica i criteri di progetto posizionandosi automaticamente sul criterio 
+ specifico assegnato alla soletta/platea.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/ARMA.htm">ARMA</a></span>&#160;(Progetta), 
+ <span class="hcp1"><a href="../Comandi/CALC.htm">CALC</a></span>&#160;(Ricalcola), 
+ <span class="hcp1"><a href="../Comandi/ELAR.htm">ELAR</a></span>&#160;(Elimina 
+ progettazione), <span class="hcp1"><a href="../Comandi/_REL.htm">?REL</a></span>&#160;(Anteprima 
+ relazione).</p>
+<h2 class="Titolo5"><a name="Solette_platee_Af_teoriche" id="Solette_platee_Af_teoriche"></a>Mappe</h2>
+<p class="hcp3"><a name="DAFB" id="DAFB"></a>Af teo. bidi 
+ <img src="../Icone/32/afteobidi32.png" alt="" border="1" class="hcp2"> <span class="hcp4">attiva 
+ e disattiva la mappa dell'area di ferro necessaria per le combinazioni 
+ relative ai soli stati limite di esercizio e per eventuali minimi di regolamento 
+ nelle varie direzioni e posizioni (si veda <a href="Progettazione%20agli%20stati%20limite%20platee.htm" 
+												 style="font-weight: bold;">Progettazione 
+ agli stati limite</a>).</span></p>
+<p><span class="hcp1"><a name="Solette_platee_M-Mu" id="Solette_platee_M-Mu"></a>M-Mu 
+ bidi <img src="../Icone/32/m_mubidi32.png" alt="" border="1" class="hcp2"></span> 
+ attiva e disattiva la mappa della differenza tra i momenti agenti e quelli 
+ ultimi nelle varie direzioni.</p>
+<p><span class="hcp1"><a name="Solette_platee_T-Tu" id="Solette_platee_T-Tu"></a>T-Tu 
+ bidi <img src="../Icone/32/t_tubidi32.png" alt="" border="1" class="hcp2"></span> 
+ attiva e disattiva la mappa della differenza tra i tagli agenti e quelli 
+ ultimi nelle varie direzioni.</p>
+<p><span class="hcp1"><a name="Solette_platee_T-Tu1" id="Solette_platee_T-Tu1"></a>Agg. 
+ aut. mappe </span>attiva e disattiva l'aggiornamento automatico delle 
+ mappe durante la modifica dell'armatura.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DAFB.htm">DAFB</a></span>&#160;(Disegna 
+ aree di ferro teoriche elementi bidimensionali), <span class="hcp1"><a 
+	 href="../Comandi/UMAP.htm">UMAP</a></span>&#160;(Aggiornamento automatico 
+ mappe).</p>
+<h2 class="Titolo5"><a name="Punti_verifica" id="Punti_verifica"></a>Punti 
+ verifica</h2>
+<p class="hcp5"><span class="hcp1"><a name="EDIZ" 
+	 id="EDIZ"></a>Modifica <img src="../Icone/16/modificazonaverconc.png" alt="" border="1" class="hcp2"></span> modifica un punto 
+ di verifica. Tutti i nodi appartenenti alla soletta/platea vengono classificati 
+ come punti in cui effettuare le verifiche se necessario, la classificazione 
+ può essere modificata in &quot;Non verificare&quot; o in &quot;Verifica 
+ sempre&quot;. La classificazione può essere modificata per ciascuna delle 
+ sollecitazioni di verifica: Mxx, Mzz, T. La modifica in sostanza permette 
+ di aggiungere i punti di verifica, eliminare quelli determinati automaticamente 
+ dal programma o escludere la verifica per determinate sollecitazioni.</p>
+<p class="hcp5"><span class="hcp1">Utilizzo 
+ da linea di comando</span>: <span class="hcp1"><a href="../Comandi/EDPV.htm">EDPV</a></span>&#160;(Edita 
+ punti di verifica).</p>
+<h2 class="Titolo5"><a name="Solette_platee_Zone_armatura" id="Solette_platee_Zone_armatura"></a>Zone 
+ arm. flessione</h2>
+<p><span class="hcp1"><a name="PAD" id="PAD"></a>Progetta 
+ <img src="../Icone/16/progarmdiff.png" alt="" border="1" class="hcp2"></span> 
+ progetta automaticamente l'armatura diffusa.</p>
+<p><span class="hcp1"><a name="ASSX" id="ASSX"></a>Asse X 
+ <img src="../Icone/16/assex.png" alt="" border="1" class="hcp2"></span> 
+ imposta l'orientamento della prima delle due direzioni d'armatura (asse 
+ X).</p>
+<p><span class="hcp1"><a name="AGGZ" id="AGGZ"></a>Aggiungi 
+ <img src="../Icone/16/aggiungizonaarmconc.png" alt="" border="1" class="hcp2"></span> 
+ aggiunge nuove zone d'armatura a flessione.</p>
+<p><span class="hcp1"><a name="AAZ" id="AAZ"></a>Assegna 
+ <img src="../Icone/16/assegnazonaarm.png" alt="" border="1" class="hcp2"></span> 
+ assegna l'armatura corrente ad una zona o modifica il diametro e/o il 
+ passo a zone esistenti.</p>
+<p><span class="hcp1"><a name="ELIZ" id="ELIZ"></a>Elimina 
+ <img src="../Icone/16/eliminazonaarm.png" alt="" border="1" class="hcp2"></span> 
+ elimina zone d'armatura diffusa o concentrata.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1">PAD</span>&#160;(Progetta armatura diffusa), 
+ <span class="hcp1"><a href="../Comandi/ASSX.htm">ASSX</a></span>&#160;(Direzione 
+ asse X principale), <span class="hcp1"><a href="../Comandi/AGGZ.htm">AGGZ</a></span>&#160;(Aggiungi 
+ zona), <span class="hcp1"><a href="../Comandi/AAZ.htm">AAZ</a></span>&#160;(Assegna 
+ armatura zona), <span class="hcp1"><a href="../Comandi/ELIZ.htm">ELIZ</a></span>&#160;(Elimina 
+ zona).</p>
+<h2 class="Titolo5"><a name="Solette_platee_Zone_armatura_taglio" id="Solette_platee_Zone_armatura_taglio"></a>Zone 
+ arm. taglio</h2>
+<p><span class="hcp1"><a name="AGGZ_TAG" id="AGGZ_TAG"></a>Aggiungi 
+ <img src="../Icone/16/aggiungizonaarmtag.png" alt="" border="1" class="hcp2"></span> 
+ aggiunge nuove zone d'armatura a taglio.</p>
+<p><span class="hcp1"><a name="AAZ_TAG" id="AAZ_TAG"></a>Assegna 
+ <img src="../Icone/16/assegnazonaarmtag.png" alt="" border="1" class="hcp2"></span> 
+ assegna l'armatura corrente ad una zona o modifica il diametro e/o il 
+ passo a zone esistenti.</p>
+<p><span class="hcp1"><a name="ELIZ_TAG" id="ELIZ_TAG"></a>Elimina 
+ <img src="../Icone/16/eliminazonaarmtag.png" alt="" border="1" class="hcp2"></span> 
+ elimina zone d'armatura a taglio.</p>
+<p class="hcp3">Nota<span class="hcp4">: 
+ la zona interna all'armatura a taglio, con perimetro disegnato con linea 
+ tratteggiata, è l'area che assorbe il taglio mentre la cornice di tale 
+ zona, di larghezza 0.50 m, è la zona necessaria per il funzionamento dell'armatura 
+ a taglio. Le verifiche sono eseguite su una sezione di larghezza pari 
+ ad un metro secondo quanto indicato nel par. 4.1.2.3.5.2 del D.M. 17/01/2018. 
+ La grandezza rappresentativa dei rinforzi a taglio della [4.1.27] (cioè 
+ il rapporto fra l'area dell'armatura trasversale &quot;Asw&quot; e l'interasse 
+ tra due armature trasversali consecutive &quot;s&quot;) è considerata 
+ pari a: Asw/s = n*A1/1.0, dove &quot;n&quot; è il numero di rinforzi a 
+ metro quadro ed A1 è l'area del singolo rinforzo. Il valore di ctg</span> 
+ <span style="font-family: Symbol, serif; font-weight: normal;">q</span><span class="hcp4"> è posto fisso e pari ad 1.</span></p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/AGGZ.htm">AGGZ</a></span>&#160;(Aggiungi 
+ zona), <span class="hcp1"><a href="../Comandi/AAZ.htm">AAZ</a></span>&#160;(Assegna 
+ armatura zona), <span class="hcp1"><a href="../Comandi/ELIZ.htm">ELIZ</a></span>&#160;(Elimina 
+ zona).</p>
+<h2 class="Titolo5"><a name="Solette_platee_Punzonamento" id="Solette_platee_Punzonamento"></a>Punzonamento</h2>
+<p><span class="hcp1"><a name="PAP" id="PAP"></a>Progetta</span> 
+ <img src="../Icone/16/progpunzo.png" alt="" border="1" class="hcp2"> progetta 
+ solo l'armatura a punzonamento.</p>
+<p><span class="hcp1"><a name="EDIP" id="EDIP"></a>Modifica</span> 
+ <img src="../Icone/16/progpunzo.png" alt="" border="1" class="hcp2"> assegna, 
+ modifica o elimina l'armatura a punzonamento. L'opzione &quot;Verifica&quot; 
+ permette di attivare o disattivare la verifica a punzonamento.</p>
+<p><span class="hcp1"><a name="UNIP" id="UNIP"></a>Unifica 
+ <img src="../Icone/16/unificapunzo.png" alt="" border="1" class="hcp2"></span> 
+ unifica le piramidi di punzonamento, cliccando sulla freccia a destra 
+ del comando è possibile con <span class="hcp1">Unifica automaticamente 
+ <img src="../Icone/16/unipa.png" alt="" border="1" class="hcp2"></span> 
+ unificare automaticamente le piramidi di punzonamento, con <span class="hcp1">Cancella 
+ unificazioni <img src="../Icone/16/unipc.png" alt="" border="1" class="hcp2"></span> 
+ cancellare tutte le unificazioni definite, con <span class="hcp1">Imposta 
+ direzione asse Y <img src="../Icone/16/assey.png" alt="" border="1" class="hcp2"></span> 
+ impostare la direzione dell'asse Y della piramide di punzonamento unificata, 
+ con <span class="hcp1">Unifica singole piramidi <img src="../Icone/16/unippiu.png" alt="" border="1" class="hcp2"></span> unificare le piramidi di punzonamento indicate 
+ con il cursore grafico e con <span class="hcp1">Cancella 
+ singole unificazioni <img src="../Icone/16/unipc.png" alt="" border="1" class="hcp2"></span> 
+ cancellare la singola unificazione indicata con il cursore grafico.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1">PAP</span>&#160;(Progetta armatura punzonamento),&#160;<span class="hcp1"><a href="../Comandi/EDIP.htm">EDIP</a></span>&#160;(Edita 
+ armatura punzonamento), <span class="hcp1"><a href="../Comandi/UNIP.htm">UNIP</a></span>&#160;(Unifica 
+ piramidi di punzonamento).</p>
+<h2 class="Titolo5"><a name="Solette_platee_Disegno" id="Solette_platee_Disegno"></a>Disegno</h2>
+<p><span class="hcp1"><a name="DISP" id="DISP"></a>Disp. 
+ <img src="../Icone/32/D2A32.png" alt="" border="1" class="hcp2"></span> 
+ modifica la disposizione del disegno principale e dei disegni secondari 
+ d'armatura.</p>
+<p><span class="hcp1"><a name="DAD" id="DAD"></a>Arm. diffusa 
+ <img src="../Icone/16/disarmdiff.png" alt="" border="1" class="hcp2"></span> 
+ crea o modifica il disegno dell'armatura diffusa, cliccando sulla freccia 
+ a destra del comando è possibile con <span class="hcp1">Nessun 
+ disegno&#160;<img src="../Icone/16/dadn.png" alt="" border="1" class="hcp2"></span> 
+ cancellare gli eventuali disegni già presenti (l'indicazione del tipo 
+ di armatura diffusa viene riportata in calce al disegno), con <span class="hcp1">Totale&#160;<img src="../Icone/16/dadt.png" alt="" border="1" class="hcp2"></span> disegnare 
+ tutta l'armatura diffusa con una retinatura (l'indicazione del tipo di 
+ armatura diffusa viene riportata in calce al disegno) e con <span class="hcp1">Parziale&#160;<img src="../Icone/16/dadt.png" alt="" border="1" class="hcp2"></span> disegnare 
+ l'armatura diffusa con un cerchio in un punto a scelta dell'utente, con 
+ la rappresentazione e l'indicazione del tipo di armatura diffusa.</p>
+<p style="margin-bottom: 0;"><span class="hcp1"><a name="DPUN" 
+	 id="DPUN"></a>Punzonamento <img src="../Icone/16/dispunzo.png" alt="" border="1" class="hcp2"></span> attiva o disattiva 
+ il disegno delle piramidi di rottura per punzonamento. Il perimetro di 
+ verifica u<span style="vertical-align: Sub;">out</span>,<span style="font-style: italic; 
+	 vertical-align: Sub;"> </span>in cui non è più necessaria l'armatura 
+ a punzonamento, è rappresentato con una linea tratteggiata di colore blu 
+ e quello arretrato di 1.5d con una linea tratteggiata di colore rosso.</p>
+<p><span class="hcp1"><a name="DPV" id="DPV"></a>Punti ver. 
+ <img src="../Icone/16/dpv.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno dei punti di verifica, in cui verranno effettuate 
+ le verifiche da riportare in relazione, e che consentono di individuare 
+ i punti in cui sono soddisfatte oppure non soddisfatte le verifiche. I 
+ punti di verifica vengono visualizzati con un simbolo che indica la direzione 
+ di verifica che può assumere i seguenti colori: Verde, Rosso, Blu, che 
+ corrispondono rispettivamente a verifiche soddisfatte, non soddisfatte 
+ e da aggiornare. Il simbolo è un cerchio per verifiche alle tensioni ammissibili 
+ o agli stati limite di esercizio, un triangolo per le verifiche al limite 
+ elastico, un quadrato per verifiche agli stati limite ultimi, una &quot;X&quot; 
+ quando è classificato come &quot;Non verificare&quot;. La rappresentazione 
+ dei punti di verifica viene effettuata rispettando la disposizione dei 
+ disegni. Nel caso in cui le armature in direzione X ed Y siano riportate 
+ in un unico disegno si può quindi avere una sovrapposizione dei simboli. 
+ Attivando il disegno dei punti di verifica si genera, in alto a destra 
+ del disegno della carpenteria di piano, una tabella in cui sono riportati 
+ sia i simboli che la loro descrizione.</p>
+<p><span class="hcp1"><a name="SHADE" id="SHADE"></a>3D&#160;<img src="../Icone/16/shading.png" alt="" border="1" class="hcp2"></span> apre 
+ una finestra con la visualizzazione tridimensionale della soletta/platea 
+ progettata.</p>
+<p><span class="hcp1"><a name="DCMP" id="DCMP"></a>Computo&#160;<img src="../Icone/16/discomputo.png" alt="" border="1" class="hcp2"></span> attiva 
+ o disattiva il disegno del computo dei materiali. È possibile modificare 
+ la posizione della tabella del computo selezionando le relative opzioni 
+ del menu che compare cliccando sulla freccia a destra del comando.</p>
+<p><span class="hcp1">Opzioni&#160;<img src="../Icone/16/opzioni.png" alt="" border="1" class="hcp2"></span> 
+ modifica le opzioni di disegno.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <a href="../Comandi/DISP.htm"><span class="hcp1">DISP</span></a>&#160;(Disposizione 
+ disegni), <span class="hcp1"><a href="../Comandi/DAD.htm">DAD</a></span>&#160;(Disegna 
+ armatura diffusa), <span class="hcp1"><a href="../Comandi/DPUN.htm">DPUN</a></span>&#160;(Disegna 
+ punzonamento), <span class="hcp1"><a href="../Comandi/DPV.htm">DPV</a></span>&#160;(Disegna 
+ punti/piani di verifica), <span class="hcp1"><a href="../Comandi/SHAD.htm">SHADE</a></span>&#160;(Visualizzazione 
+ tridimensionale), <span class="hcp1"><a href="../Comandi/DCMP.htm">DCMP</a></span>&#160;(Disegna 
+ computo).</p>
+</body>
+</html>

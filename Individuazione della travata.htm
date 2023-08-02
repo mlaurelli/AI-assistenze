@@ -1,0 +1,66 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Individuazione della travata</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Individuazione della travata</h1>
+<p>ModeSt considera come unica &quot;travata&quot; un insieme di aste consecutive 
+ con lo stesso numero, con sezione non fittizia (0 o -1), con membratura 
+ trave e tipo di verifica c.a. Per consentire una corretta gestione di 
+ travate interrotte da uno o più muri occorre assegnare all'asta di testa 
+ dei muri una sezione reale, almeno pari al &quot;cordolo&quot; (spessore 
+ muro per altezza solaio) che normalmente viene realizzato. Si ricorda 
+ che nel caso di muri schematizzati con traliccio equivalente trasformare 
+ un'asta con sezione fittizia in un'asta con sezione reale non porta ad 
+ un incremento di rigidezza poiché le aste di piede e di testa dei muri 
+ vengono trasformate così come descritto in <a href="Schematizzazione%20muri.htm"><span class="hcp1">Schematizzazione muri</span></a>, mentre 
+ si ha un incremento di rigidezza nel caso di muri schematizzati mediante 
+ elementi&#160;bidimensionali. Comunque normalmente la rigidezza aggiunta 
+ è trascurabile rispetto alla rigidezza della parete e l'inserimento dell'asta 
+ può essere ugualmente necessario per ovviare alla labilità intorno all'asse 
+ Y locale degli elementi bidimensionali (si veda <span class="hcp1"><a 
+	 href="Guida.chm::/Rigidezza_torsionale_elementi_bidimensionali.htm">Rigidezza 
+ torsionale elementi bidimensionali</a></span>).</p>
+<p>La presenza di due o più travate non consecutive con lo stesso numero 
+ rende&#160;impossibile la progettazione dell'armatura delle travate medesime.</p>
+<p>Se le travi che costituiscono la travata non sono allineate in pianta 
+ (con riferimento all'asse reale e quindi considerando anche i fili fissi 
+ e gli scostamenti dal filo fisso) ModeSt determina la linea che meglio 
+ approssima gli allineamenti delle aste e proietta il disegno sul piano 
+ verticale definito da questa linea. In tal caso però le lunghezze dei 
+ ferri non saranno corrette.</p>
+<p>Nel primo e nell'ultimo nodo e nei nodi privi di pilastro inferiore 
+ ModeSt controlla l'esistenza di eventuali travi che incidono sulla travata 
+ in&#160;esame (cosiddette travi&#160;&quot;in falso&quot;), per poi tenerne 
+ conto nella progettazione dei ferri.</p>
+<p style="margin-bottom: 0;">ModeSt è in grado di gestire anche travate 
+ con cambiamenti di pendenza dell'asse (tetti, scale, ecc.). Nella scheda 
+ &quot;Numerazioni&quot;, apribile cliccando sul menu dell'applicazione 
+ <span class="hcp1"><img src="../Icone/modest32.png" alt="" border="1" class="hcp2"></span> e poi su 
+ <span class="hcp1">Opzioni <img src="../Icone/16/opzioni.png" alt="" border="1" class="hcp2"></span>, 
+ è possibile attraverso il parametro &quot;Angolo tolleranze allineamenti&quot; 
+ configurare la numerazione automatica delle aste in modo da assegnare 
+ lo stesso numero anche ad aste consecutive allineate ma con variazioni 
+ di&#160;pendenza.</p>
+</body>
+</html>

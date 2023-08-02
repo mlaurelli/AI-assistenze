@@ -1,0 +1,86 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Sezioni</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Sezioni aste</h1>
+<p>Nella finestra di dialogo si possono utilizzare alcune facilitazioni:</p>
+<p class="Normal3">Le <span class="hcp1">sezioni accoppiate</span> 
+ possono essere definite, oltre che definendone i parametri, anche prelevando 
+ dall'archivio la sezione che costituisce la coppia e fornendo solo la 
+ distanza fra le due parti. Si seleziona il tipo di sezione da definire 
+ e si utilizza <span style="font-style: italic; font-weight: normal;">Accoppia</span> 
+ del menu della finestra. Si apre automaticamente l'archivio delle sezioni 
+ con già attivo un filtro sui soli tipi di sezioni semplici corrispondenti.</p>
+<p class="Normal3">Le <span class="hcp1">sezioni poligonali</span> 
+ possono essere definite, oltre che specificando il numero dei vertici 
+ e la loro posizione (sezioni per coordinate), anche specificando il nome 
+ di un disegno Ms-Cad in cui sia disegnata la loro forma (sezioni disegnate). 
+ In tal caso la sezione potrà anche avere al suo interno uno o più fori 
+ di forma poligonale o circolare ed anche il perimetro esterno potrà essere 
+ circolare (ad esempio sezione circolare con foro quadrato). La sezione 
+ di tipo &quot;Per coordinate&quot; è possibile definirla importandole 
+ da un file DXF/DWG o da un file Ms-Cad in cui è disegnata.</p>
+<p class="Normal3">Le <span class="hcp1">sezioni disegnate</span> 
+ possono essere definite importandole da un file DXF/DWG o da un file Ms-Cad 
+ in cui è disegnata. La sezione nel file DXF/DWG deve essere disegnata 
+ in mm poiché nel programma viene assunto che 1 unità di disegno CAD corrisponde 
+ a 1 mm. Questo tipo di sezione è definibile solo per membratura di tipo 
+ &quot;Generica&quot;.</p>
+<p class="Normal3">La <span class="hcp1">copia di sezioni</span>, 
+ a volte necessaria per creare sezioni uguali o simili, ma con criteri 
+ o tipi di verifica diversi, può essere effettuata agevolmente selezionando 
+ nella casella di riepilogo a discesa la sezione originale e utilizzando 
+ <span class="hcp2">Duplica</span> del menu della finestra. 
+ Viene automaticamente creata una nuova sezione con gli stessi dati e sarà 
+ sufficiente effettuare le modifiche volute.</p>
+<p>Dal menu <span class="hcp2">Archivi</span> <font style="font-family: Wingdings;" 
+	 face="Wingdings">à</font> <span class="hcp2">Carica</span> 
+ è possibile definire la sezione prelevandola dall'archivio fornito con 
+ il programma. L'archivio è comunque personalizzabile come indicato nel 
+ paragrafo <span class="hcp1"><a href="Archivi%20dati.htm">Archivi 
+ dati</a></span>.</p>
+<p>Una sezione definita ma non utilizzata nel modello può essere eliminata 
+ selezionando la corrispondente riga e premendo sul bottone &quot;Elimina&quot;.</p>
+<p>Si può associare anche un commento che se non specificato viene generato 
+ automaticamente in modo da riportare in breve le caratteristiche della 
+ proprietà stessa.</p>
+<p>Si può associare anche un codice, utilizzato nella <a href="Classificazione_delle_sezioni.htm">classificazione 
+ delle sezioni</a>, nell'importazione da Revit e nell'esportazione a IDEA 
+ StatiCa Steel.</p>
+<p>Se si modificano i parametri di una sezione già definita, si modificano 
+ ovviamente tutte le aste che hanno tale sezione.</p>
+<p>Se si ridefiniscono una o più sezioni, <span class="hcp1">non</span> 
+ occorre correggere la condizione di carico elementare in cui erano stati 
+ memorizzati i carichi dovuti al peso proprio, poiché quest'ultimo viene 
+ automaticamente tenuto aggiornato.</p>
+<p>È possibile utilizzare un'altra procedura per definire una sezione disegnata: 
+ è sufficiente aprire il file Ms-Cad in cui è disegnata la sezione e cliccare 
+ nella scheda <span class="hcp1">Definisci</span> su <span class="hcp1">Sezione <img src="../Icone/16/definiscisez.png" alt="" style="border: Solid 1px #808080; 
+											 border-width: 1px; border-style: solid;" border="1"></span> oppure 
+ con il menu a comparsa sulla finestra, selezionare l'opzione <span class="hcp2">Genera 
+ sezione.</span></p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DESE.htm">DESE</a></span> 
+ (Definisci sezione), <span style="font-weight: bold; text-decoration: underline; "><a 
+	 href="../Comandi/_SA.htm">?SA</a></span> (Informazioni sezioni aste).</p>
+</body>
+</html>

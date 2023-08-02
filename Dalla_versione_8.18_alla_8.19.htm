@@ -1,0 +1,115 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.18 alla 8.19</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-style:italic; }
+span.hcp3 { mso-bidi-font-weight:bold; }
+b.hcp4 { font-weight:normal; }
+img.hcp5 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.18 alla 8.19</h1>
+<p>Revisione delle nomenclature utilizzate nella verifica delle strutture 
+ in muratura. La dicitura <span class="hcp1">Modello generale 
+ pareti (MGP)</span> è stata modificata in<span class="hcp1"> 
+ Modello definito per maschi</span> e quella <span class="hcp1">Modello 
+ POR (MPOR)</span> in<span class="hcp1"> Modello definito 
+ per pareti</span>. Tale modifica è stata effettuata al fine di eliminare 
+ delle interpretazioni errate da parte degli utenti nell'utilizzo del programma. 
+ In particolare la dicitura <span class="hcp1">Modello POR 
+ (MPOR)</span> induceva gli utenti a pensare di effettuare un calcolo con 
+ il metodo POR invece di eseguire le verifiche su un modello generato come 
+ nel metodo POR, e cioè con pannelli murari individuati assemblando per 
+ ogni piano gli elementi presenti tra due aperture. </p>
+<p>Progetto automatico ed interattivo dell'armatura di solette/platee che 
+ giacciono su piani inclinati. Il progetto di solette/platee su piani inclinati 
+ può essere effettuato solo su carpenterie di piano create con l'opzione 
+ &quot;Passante per tre nodi selezionati&quot;.</p>
+<p>Modifica interattiva dell'armatura a punzonamento di solette/platee 
+ che consente di modificare quella progettata automaticamente e di aggiungerla 
+ in corrispondenza di pilastri che non ne necessitano.</p>
+<p>Progetto automatico dei collegamenti di reticolari in acciaio completamente 
+ saldate, con profili singoli a doppio T (IPE o HE) e con profili tubolari 
+ cavi rettangolari o circolari (RHS o CHS).</p>
+<p>Verifica delle aste in acciaio con sezione di forma generica (per approfondimenti 
+ si veda <u style="text-decoration: none; "><span class="hcp1"><a 
+	 href="Sezioni_generiche.htm" style="font-family: Verdana, sans-serif;">Sezioni 
+ generiche</a></span>)</u>.</p>
+<p>Introdotta la possibilità di applicare l'indicazione del par. 7.4.4.3.1 
+ della Circolare esplicativa n. 7 del 21/01/19 nella verifica dei nodi 
+ trave-pilastro: &quot;<span class="hcp2">Le verifiche di 
+ resistenza dei nodi indicate nel presente paragrafo si applicano a strutture 
+ in CD &quot;A&quot; e, limitatamente ai nodi non interamente confinati, 
+ in CD &quot;B&quot;. Esse non si applicano alle strutture non dissipative.</span>&quot;. 
+ Tale indicazione si applica <span class="hcp3">attraverso 
+ <b class="hcp4">il parametro </b></span><span class="hcp1"><a 
+	 href="CriPil.htm#Progetta_e_verifica_elementi_nuovi_secondo_Circolare_n_7_del_21_01_19">Progetta 
+ e verifica elementi nuovi secondo Circolare n. 7 del 21/01/19</a></span><span class="hcp3"> d<b class="hcp4">ei 
+ criteri di progetto specifici dei pilastri.</b></span></p>
+<p>È stata modificata l'analisi pushover delle strutture in muratura sia 
+ nuove che esistenti per tenere conto delle modifiche introdotte dalla 
+ Circolare sulla ricerca dei diversi stati limite. La modifica più significativa 
+ introdotta è stata quella di considerare l'SLV pari ai 3/4 di SLC, mentre 
+ prima i due stati limite coincidevano. Questo può influire notevolmente 
+ su gli Indici di sicurezza e quindi sulla Classe di Rischio.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Migliorata notevolmente la 
+	 gestione dei fili fissi e degli scostamenti dai fili fissi di travi 
+	 e pilastri nell'importazione della struttura mediante link diretto 
+	 da Revit.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">È 
+	 stata introdotta la possibilità di esportare la struttura mediante 
+	 link diretto per Revit. L</span>a procedura, da integrare all'interno 
+	 di Revit, consente di importare in Revit una struttura creata o modificata 
+	 con ModeSt in modo da generare o aggiornare automaticamente il modello 
+	 di Revit. <span class="hcp3">È possibile importare 
+	 in Revit i dati relativi agli impalcati e alle travi e ai pilastri 
+	 con qualunque tipo di sezione, rotazione, filo fisso e scostamenti 
+	 dal filo fisso.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">Nell'esportazione 
+	 delle immagini è stata aggiunta la possibilità visualizzare l'elenco 
+	 delle immagini salvate e cliccando su un </span>nome dell'elenco visualizzarne 
+	 l'anteprima.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nella creazione della relazione 
+	 di calcolo è stata aggiunta l'opzione<span class="hcp1"> 
+	 Raggruppa elementi bidimensionali con lo stesso numero</span> che 
+	 permette di ridurre il numero di elementi riportati nella tabella 
+	 delle tensioni nei bidimensionali in quanto, per ogni elemento bidimensionale 
+	 con lo stesso numero, viene stampato soltanto in quale nodo ed in 
+	 quale CC o CCE si ha il valore massimo e minimo della tensione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nella creazione della relazione 
+	 di calcolo è stata aggiunta la possibilità di inserire delle introduzioni 
+	 personalizzate ai vari capitoli con l'opzione <span class="hcp2">Introduzione 
+	 ai capitoli</span> presente nella scheda &quot;Relazione&quot; delle 
+	 opzioni di ModeSt, apribili cliccando sul menu dell'applicazione <span class="hcp1"><img src="../Icone/modest32.png" alt="" border="1" class="hcp5"></span> e poi su <span class="hcp1">Opzioni <img src="../Icone/16/opzioni.png" alt="" border="1" class="hcp5"></span>. Per 
+	 personalizzare le introduzioni occorre modificare i file forniti con 
+	 l'installazione del programma e presenti nella cartella RELAZIONE 
+	 che è una sotto-cartella di ETC di ModeSt.&#160;I file vanno salvati 
+	 nel formato RTF e vengono inseriti solo se la relazione viene creata 
+	 con&#160;Microsoft Word.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Introdotta 
+	 la possibilità di selezionare gli elementi della struttura anche dal 
+	 pannello delle colorazioni mediante il tasto destro del mouse sul 
+	 nome dell'attributo (utile ad esempio per selezionare le aste con 
+	 una determinata sezione).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Implementato 
+	 il calcolo delle strutture anche con la versione 21 del solutore SAP2000, 
+	 sia a 32 che a 64 bit.</p></li>
+</ul>
+</body>
+</html>

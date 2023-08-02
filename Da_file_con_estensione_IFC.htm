@@ -1,0 +1,248 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Da file con estensione IFC</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp3 { font-style:italic; }
+td.hcp4 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+mso-border-alt:solid black .75pt;
+padding:0cm 7.5pt 0cm 7.5pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+td.hcp5 { border-bottom:Solid 1px #000000;
+mso-border-top-alt:solid black .75pt;
+mso-border-bottom-alt:solid black .75pt;
+mso-border-right-alt:solid black .75pt;
+padding:0cm 7.5pt 0cm 7.5pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+td.hcp6 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+mso-border-left-alt:solid black .75pt;
+mso-border-bottom-alt:solid black .75pt;
+mso-border-right-alt:solid black .75pt;
+padding:0cm 7.5pt 0cm 7.5pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+td.hcp7 { border-bottom:Solid 1px #000000;
+mso-border-bottom-alt:solid black .75pt;
+mso-border-right-alt:solid black .75pt;
+padding:0cm 7.5pt 0cm 7.5pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Importazione struttura da IFC</h1>
+<p>Dal menu dell'applicazione <span class="hcp1"><img src="../Icone/modest32.png" alt="" border="1" class="hcp2"></span> selezionando <span class="hcp1">Importa</span> 
+ <span class="hcp3"><img src="../Icone/32/main_importa32.png" alt="" border="1" class="hcp2"></span> e poi <span class="hcp1">Struttura da IFC</span> <span class="hcp3"><img src="../Icone/32/main_importa_IFC32.png" alt="" border="1" class="hcp2"></span> è possibile 
+ importare un modello solido 3D o un modello analitico da un file con estensione 
+ IFC. Il modello analitico, generalmente creato da programmi di calcolo 
+ strutturale, si differenzia da quello solido 3D in quanto contiene le 
+ informazioni relative sia alle coordinate dei nodi sia alle proprietà 
+ delle aste e degli elementi bidimensionali.</p>
+<p>Il formato IFC (Industry Foundation Classes) è uno standard per la descrizione 
+ delle costruzioni, supportato dai principali software di architettura 
+ ed ingegneria, nato per facilitare lo scambio dati nel settore dell'architettura, 
+ ingegneria e costruzioni ed è un formato comunemente usato nel BIM (Building 
+ Information Modeling).</p>
+<p>ModeSt supporta l'importazione da file IFC basati sullo standard IFC2x3 
+ e IFC4.</p>
+<p>Elenco delle classi degli oggetti importabili dagli IFC contenenti il 
+ modello analitico e dei corrispondenti oggetti di ModeSt:</p>
+<table class="SimpleGridBlack" style="mso-border-top-alt: solid black .75pt; 
+		 mso-border-left-alt: solid black .75pt; mso-yfti-tbllook: 1184; 
+		 mso-padding-alt: 0cm 0cm 0cm 0cm;" cellspacing="0px" width="600" align="center">
+	<col width="400">
+	<col width="200">
+	<tr class="t1Row" style="mso-yfti-irow: 0; mso-yfti-firstrow: yes;">
+		<td class="hcp4"><p 
+			 class="MsoNormal"><b>Classe IFC</b></p></td>
+		<td class="hcp5"><p class="MsoNormal"><b>Oggetti 
+		 di ModeSt</b></p></td>
+	</tr>
+	<tr class="t2Row" style="mso-yfti-irow: 1;">
+		<td class="hcp6"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;"><span 
+		 class="self-ref">IfcStructuralCurveMember</span></p></td>
+		<td class="hcp7"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">Aste</p></td>
+	</tr>
+	<tr class="t1Row" style="mso-yfti-irow: 2;">
+		<td class="hcp6"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;"><span 
+		 class="self-ref">IfcStructuralSurfaceMember</span></p></td>
+		<td class="hcp7"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">Bidimensionali</p></td>
+	</tr>
+</table>
+<p>Elenco delle classi degli oggetti importabili dagli IFC contenenti il 
+ modello solido 3D e dei corrispondenti oggetti di ModeSt:</p>
+<table class="SimpleGridBlack" style="mso-border-top-alt: solid black .75pt; 
+		 mso-border-left-alt: solid black .75pt; mso-yfti-tbllook: 1184; 
+		 mso-padding-alt: 0cm 0cm 0cm 0cm;" cellspacing="0px" width="600" align="center">
+	<col width="400">
+	<col width="200">
+	<tr class="t1Row" style="mso-yfti-irow: 0; mso-yfti-firstrow: yes;">
+		<td class="hcp4"><p 
+			 class="MsoNormal"><b>Classe IFC</b></p></td>
+		<td class="hcp5"><p class="MsoNormal"><b>Oggetti 
+		 di ModeSt</b></p></td>
+	</tr>
+	<tr class="t2Row" style="mso-yfti-irow: 1;">
+		<td class="hcp6"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;"><span 
+		 class="self-ref">IfcBeam, IfcMember, IfcFooting-STRIP_FOOTING</span></p></td>
+		<td class="hcp7"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">Travi</p></td>
+	</tr>
+	<tr class="t1Row" style="mso-yfti-irow: 2;">
+		<td class="hcp6"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;"><span 
+		 class="self-ref">IfcColumn</span></p></td>
+		<td class="hcp7"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">Pilastri</p></td>
+	</tr>
+	<tr class="t2Row" style="mso-yfti-irow: 3;">
+		<td class="hcp6"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">IfcWallStandardCase, 
+		 IfcWall</p></td>
+		<td class="hcp7"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">Pareti</p></td>
+	</tr>
+	<tr class="t1Row" style="mso-yfti-irow: 4;">
+		<td class="hcp6"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">IfcSlab</p></td>
+		<td class="hcp7"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">Solai</p></td>
+	</tr>
+</table>
+<p>Nota: le classi <span class="self-ref">IfcMember, IfcFooting-STRIP_FOOTING, 
+ </span>IfcWall sono presenti nei file IFC basati sullo standard IFC4.</p>
+<p>Elenco delle classi delle sezioni importabili e delle corrispondenti 
+ sezioni di ModeSt:</p>
+<table class="SimpleGridBlack" style="mso-border-top-alt: solid black .75pt; 
+		 mso-border-left-alt: solid black .75pt; mso-yfti-tbllook: 1184; 
+		 mso-padding-alt: 0cm 0cm 0cm 0cm;" cellspacing="0px" width="600" align="center">
+	<col width="400">
+	<col width="200">
+	<tr class="t1Row" style="mso-yfti-irow: 0; mso-yfti-firstrow: yes;">
+		<td class="hcp4"><p 
+			 class="MsoNormal"><b>Classe IFC</b></p></td>
+		<td class="hcp5"><p class="MsoNormal"><b>Sezione 
+		 di ModeSt</b></p></td>
+	</tr>
+	<tr class="t2Row" style="mso-yfti-irow: 1;">
+		<td class="hcp6"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">IfcRectangleProfileDef</p></td>
+		<td class="hcp7"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">Rettangolare</p></td>
+	</tr>
+	<tr class="t1Row" style="mso-yfti-irow: 2;">
+		<td class="hcp6"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">IfcRectangleHollowProfileDef</p></td>
+		<td class="hcp7"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">Rettangolare 
+		 cava</p></td>
+	</tr>
+	<tr class="t2Row" style="mso-yfti-irow: 3;">
+		<td class="hcp6"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">IfcCircleProfileDef</p></td>
+		<td class="hcp7"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">Circolare</p></td>
+	</tr>
+	<tr class="t1Row" style="mso-yfti-irow: 4;">
+		<td class="hcp6"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">IfcCircleHollowProfileDef</p></td>
+		<td class="hcp7"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">Circolare 
+		 cava</p></td>
+	</tr>
+	<tr class="t2Row" style="mso-yfti-irow: 5;">
+		<td class="hcp6"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">IfcTShapeProfileDef</p></td>
+		<td class="hcp7"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">T</p></td>
+	</tr>
+	<tr class="t1Row" style="mso-yfti-irow: 6;">
+		<td class="hcp6"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">IfcLShapeProfileDef</p></td>
+		<td class="hcp7"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">L</p></td>
+	</tr>
+	<tr class="t2Row" style="mso-yfti-irow: 7;">
+		<td class="hcp6"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">IfcIShapeProfileDef</p></td>
+		<td class="hcp7"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">I</p></td>
+	</tr>
+	<tr class="t1Row" style="mso-yfti-irow: 8;">
+		<td class="hcp6"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">IfcUShapeProfileDef</p></td>
+		<td class="hcp7"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">U</p></td>
+	</tr>
+	<tr class="t2Row" style="mso-yfti-irow: 9;">
+		<td class="hcp6"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">IfcZShapeProfileDef</p></td>
+		<td class="hcp7"><p 
+			 class="MsoNormal" style="margin: 0cm; margin-bottom: .0001pt;">Z</p></td>
+	</tr>
+	<tr class="t1Row" style="mso-yfti-irow: 10; mso-yfti-lastrow: yes;">
+		<td style="border-right: Solid 1px #000000; mso-border-left-alt: solid black .75pt; 
+			 mso-border-bottom-alt: solid black .75pt; mso-border-right-alt: solid black .75pt; 
+			 padding: 0cm 7.5pt 0cm 7.5pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p class="MsoNormal" 
+															 style="margin: 0cm; 
+															 margin-bottom: .0001pt;">IfcArbitraryClosedProfileDef</p></td>
+		<td style="mso-border-bottom-alt: solid black .75pt; mso-border-right-alt: solid black .75pt; 
+			 padding: 0cm 7.5pt 0cm 7.5pt; padding-left: 0px; padding-top: 0px; 
+			 padding-right: 0px; padding-bottom: 0px;"><p class="MsoNormal" 
+															 style="margin: 0cm; 
+															 margin-bottom: .0001pt;">Per 
+		 coordinate</p></td>
+	</tr>
+</table>
+<p>Le sezioni associate ad aste che risultano verticali vengono classificate 
+ con membratura pilastro, mentre le altre con membratura trave. Tutte le 
+ sezioni hanno come tipo di verifica prevista &quot;nessuna&quot;. Nel 
+ caso in cui non sia possibile riconoscere la sezione, alle aste viene 
+ assegnata la sezione fittizia 0. Se necessario vengono duplicate sezioni 
+ uguali con membratura diversa.</p>
+<p><span class="self-ref">I</span> nodi hanno il vincolo nodale 1 e quindi 
+ generalmente risultano essere liberi ed appartengono tutti all'impalcato 
+ 0.</p>
+<p>Le aste sono posizionate nel baricentro e hanno il vincolo asta 1 e 
+ quindi generalmente risultano essere incastro-incastro.</p>
+<p>Gli elementi bidimensionali hanno tutti utilizzo generico e comportamento 
+ membranale e flessionale.</p>
+<p>Gli elementi bidimensionali sono posizionati nel baricentro e possono 
+ essere a &quot;n&quot; nodi.</p>
+<p>Le pareti, importate dagli IFC contenenti il modello solido 3D, che 
+ si intersecano possono essere spezzate nel punto di intersezione e collegate 
+ tra di loro utilizzando l'opzione Collegamento automatico pareti secondo 
+ IfcRelConnectsElements.</p>
+</body>
+</html>

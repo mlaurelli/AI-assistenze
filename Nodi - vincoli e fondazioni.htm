@@ -1,0 +1,40 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Nodi - vincoli e fondazioni</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Nodi - vincoli e fondazioni</h1>
+<p>Si premette che le considerazioni qui esposte hanno carattere prettamente ingegneristico e non sono specificatamente relative all'utilizzo di ModeSt per l'analisi delle problematiche esposte.</p>
+<p class="Titolo7">Impalcato nodi vincolati</p>
+<p>I nodi con vincolo esterno devono normalmente appartenere all'impalcato 0 qualunque sia la loro coordinata Z, in caso contrario si avrebbe infatti il trasferimento del vincolo a tutti gli altri nodi appartenenti allo stesso impalcato e questo è raramente il comportamento richiesto.</p>
+<p class="Titolo7"><span class="hcp1">Vincolo nodi di fondazione</span></p>
+<p>Le consuete fondazioni su reticolo di travi rovesce o su platea sono in grado di fornire un corretto grado di vincolo in direzione Z (mediante il terreno elastico) e di supportare i momenti intorno agli assi Y e X grazie al reciproco interagire. Normalmente quindi il vincolo da dare ai nodi di fondazione, almeno nei punti dove attestano le strutture in elevazione, è X-Y-RZ per bloccare gli altri gradi di libertà.</p>
+<p>Nel caso di strutture piane (telai) o di strutture di fondazione in una sola direzione, occorrerà ovviamente bloccare anche i gradi di libertà fuori dal loro piano. Ad esempio un telaio giacente nel piano XZ, con trave di fondazione, dovrà avere i nodi di piede bloccati anche intorno all'asse X (vincolo X-Y-RX-RZ).</p>
+<p class="Titolo7"><span class="hcp1">Vincolo nodi di fondazione serbatoi</span></p>
+<p>Nei serbatoi soggetti alla spinta dell'acqua in cui si vogliono valutare correttamente anche le trazioni nella soletta di fondo nasce il problema del vincolo dei nodi. Bloccare infatti gli spostamenti X e Y dei nodi del fondo implica la perdita degli sforzi normali nella soletta/platea.</p>
+<p>Se il serbatoio è a simmetria radiale e soggetto a carichi simmetrici (spinte sismiche) è possibile risolvere il problema vincolando in direzione X-Y-RZ solo il nodo centrale che per simmetria resta fermo in ogni caso. In casi più complessi una soluzione può essere quella di vincolare i nodi di piede con un vincolo elastico nelle direzioni X-Y-RZ con una costante sufficiente a non rendere labile la struttura ma abbastanza bassa da non fungere da ritegno reciproco per i nodi. Sotto la spinta dei carichi orizzontali la struttura avrà ovviamente un moto di corpo rigido che andrà trascurato, ma il calcolo delle tensioni nel fondo viene garantito. Occorreranno probabilmente alcuni tentativi per trovare il corretto valore delle costanti elastiche.</p>
+<p class="Titolo7"><span class="hcp1">Vincolo nodi di fondazione platee nervate</span></p>
+<p>Nel calcolo di strutture con fondazione con platea nervata in cui sia la platea sia le nervature sono schematizzate con elementi bidimensionali nasce un problema analogo a quello dei serbatoi per quanto riguarda il vincolo dei nodi di fondazione.</p>
+<p>Assegnare vincolo X-Y-RZ ai nodi della platea impedisce ai nodi degli elementi costituenti la nervatura di allontanarsi ed avvicinarsi e quindi non nasce il comportamento flessionale "a trave" richiesto dalla nervatura.</p>
+<p>Un metodo per risolvere il problema è quello di usare vincoli orizzontali elastici secondo la filosofia esposta per i serbatoi. In alternativa è possibile vincolare in X, Y e RZ solamente i nodi di piede dei pilastri, eventualmente usando come nodo di innesto platea-pilastro uno dei nodi a metà altezza della nervatura, o comunque in un punto che si ritiene in prossimità dell'asse neutro. Resterà comunque complessa la valutazione dell'armatura necessaria nelle nervature.</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Argomenti correlati:</span> <span class="hcp2"><a href="Note%20sui%20vincoli%20di%20tipo%20plinto.htm">Note sui vincoli di tipo plinto</a></span><span style="font-weight: normal;">,</span> <span class="hcp2"><a href="Fondazioni%20su%20plinti.htm">Fondazioni su plinti</a></span></p>
+</body>
+</html>

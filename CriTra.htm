@@ -1,0 +1,1380 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Criteri di progetto armatura travi</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+font.hcp2 { font-family:Symbol; }
+span.hcp3 { vertical-align:sub;
+font-weight:bold; }
+span.hcp4 { vertical-align:sub; }
+span.hcp5 { font-weight:normal; }
+span.hcp6 { font-family:Symbol, serif; }
+span.hcp7 { font-style:italic; }
+li.hcp8 { list-style:decimal; }
+span.hcp9 { vertical-align:super; }
+a.hcp10 { font-weight:bold; }
+p.hcp11 { text-align:center; }
+img.hcp12 { margin-top:0px;
+margin-bottom:0px;
+margin-left:0px;
+margin-right:0px; }
+td.hcp13 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp14 { margin-bottom:0; }
+font.hcp15 { font-family:Verdana; }
+font.hcp16 { font-size:x-small; }
+span.hcp17 { font-size:10pt; }
+span.hcp18 { font-weight:bold;
+font-family:Symbol, serif; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Criteri di progetto armatura travi</h1>
+<h2>Materiali</h2>
+<p><span class="hcp1"><a name="Considera_come_elemento_esistente" 
+										 id="Considera_come_elemento_nuovo"></a>Considera 
+ come elemento esistente</span>: specificare se la trave è un elemento 
+ strutturale esistente oppure nuovo. Nel caso di elementi esistenti è possibile 
+ selezionare il livello di conoscenza (<span class="hcp1">LC1</span>, 
+ <span class="hcp1">LC2</span>, <span class="hcp1">LC3</span>) 
+ da cui discende il valore del fattore di confidenza (<span class="hcp1">FC</span>).</p>
+<p><span class="hcp1"><a name="LC_FC_cls" id="LC_FC_cls"></a>Livello 
+ di conoscenza e Fattore di confidenza</span>: se la trave è un elemento 
+ strutturale esistente è possibile selezionare il livello di conoscenza 
+ (<span class="hcp1">LC1</span>, <span class="hcp1">LC2</span>, 
+ <span class="hcp1">LC3</span>) da cui discende il valore 
+ del fattore di confidenza (<span class="hcp1">FC</span>). 
+ Il fattore di confidenza, eventualmente modificabile dall'utente, viene 
+ utilizzato per ridurre solo le caratteristiche di resistenza del calcestruzzo 
+ e non il modulo elastico.</p>
+<p><span class="hcp1"><a name="Tipo_di_calcestruzzo" id="Tipo_di_calcestruzzo"></a>Tipo 
+ di calcestruzzo</span>: selezionare il tipo di calcestruzzo previsto dalla 
+ normativa Italiana. Ogni volta che viene modificata la tipologia viene 
+ cambiata la classe del calcestruzzo e di conseguenza ricalcolati il modulo 
+ elastico e tutti i valori delle resistenze secondo le indicazioni della 
+ normativa.</p>
+<p><span class="hcp1"><a name="Rck_calcestruzzo" id="Rbk_calcestruzzo"></a>Rck 
+ calcestruzzo</span>: specificare il valore della classe del calcestruzzo 
+ così come indicato dalla normativa Italiana. Ogni volta che questo valore 
+ viene modificato vengono ricalcolati il modulo elastico e tutti i valori 
+ delle resistenze secondo le indicazioni della normativa. È possibile variare 
+ successivamente tali valori per far lavorare il calcestruzzo a tassi inferiori 
+ a quelli previsti dal regolamento.</p>
+<p><a name="Modulo_elastico_cls" id="Modulo_elastico_cls"></a><span class="hcp1">Modulo 
+ elastico</span>: specificare il valore del modulo elastico del calcestruzzo. 
+ In mancanza di dati più esatti si può considerare il valore calcolato 
+ con l'espressione riportata nel par. 11.2.10.3 del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Fck" id="Fck"></a>Resistenza 
+ caratteristica cilindrica (Fck)</span>: specificare il valore della resistenza 
+ caratteristica cilindrica del calcestruzzo. In mancanza di dati più esatti 
+ si può considerare il valore calcolato con l'espressione riportata nel 
+ par. 11.2.10.1 del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Fctk" id="Fctm"></a>Resistenza 
+ caratteristica a trazione (Fctk)</span>: specificare il valore della resistenza 
+ caratteristica a trazione del calcestruzzo. In mancanza di dati più esatti 
+ si può considerare il valore calcolato con l'espressione riportata nel 
+ par. 11.2.10.2 del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Fcm" id="Fcm"></a>Resistenza 
+ media (Fcm)</span>: specificare il valore della resistenza cilindrica 
+ media del calcestruzzo. In mancanza di dati più esatti si può considerare 
+ il valore calcolato con l'espressione riportata nel par. 11.2.10.1 del 
+ D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Fctm" id="Fctm_esistente1"></a>Resistenza 
+ media a trazione (Fctm)</span>: specificare il valore della resistenza 
+ media a trazione del calcestruzzo. In mancanza di dati più esatti si può 
+ considerare il valore calcolato con l'espressione riportata nel par. 11.2.10.2 
+ del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="samm_calcestruzzo" id="samm_calcestruzzo"></a></span><font face="Symbol" class="hcp2"><span class="hcp1">s</span></font><span class="hcp3">amm.</span> <span class="hcp1">calcestruzzo</span>: specificare il valore 
+ massimo della tensione a compressione alla quale far lavorare il calcestruzzo.</p>
+<p><span class="hcp1"><a name="tc0" id="tc0"></a></span><font face="Symbol" class="hcp2"><span class="hcp1">t</span></font><span class="hcp4"><span class="hcp1">c0</span></span><span class="hcp5">:</span> specificare il valore minimo 
+ per le tensioni tangenziali al disotto delle quali è sufficiente l'armatura 
+ a taglio minima di regolamento.</p>
+<p><span class="hcp1"><a name="tc1" id="tc1"></a></span><font face="Symbol" class="hcp2"><span class="hcp1">t</span></font><span class="hcp4"><span class="hcp1">c1</span></span><span class="hcp5">:</span> specificare il valore massimo 
+ ammissibile per le tensioni tangenziali. Quando si supera tale valore 
+ ModeSt lo segnala nelle anomalie, ma progetta ugualmente l'armatura a 
+ taglio.</p>
+<p><span class="hcp1"><a name="Riduci_Fcd_per_tutte_le_verifiche_secondo_il_DM18" 
+										 id="Riduci_Fcd_per_tutte_le_verifiche_secondo_il_DM18"></a>Riduci 
+ Fcd per tutte le verifiche secondo il D.M. 18</span>: non essendo chiaro 
+ se il coefficiente <span class="hcp6">a</span><span class="hcp4">cc</span> pari a 0.85 debba essere considerato 
+ solo per le verifiche a pressoflessione, anche perché nel D.M. 16/01/96 
+ la resistenza a compressione nelle verifiche a pressoflessione è pari 
+ a 0.85Fcd e pari a Fcd nelle altre verifiche, o se vada applicato in genere 
+ per tutte le verifiche e controlli in cui si fa riferimento a Fcd, questa 
+ opzione consente di applicare la riduzione dello 0.85 di Fcd in tutte 
+ le verifiche.</p>
+<p><span class="hcp1"><a name="Gc" id="Gc"></a><font face="Symbol" class="hcp2">g</font><span class="hcp4">c</span> 
+ per stati limite ultimi</span>: specificare il valore del coefficiente 
+ di sicurezza <font face="Symbol" class="hcp2">g</font> 
+ del calcestruzzo. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Automatico</span>: 
+	 ModeSt sceglie il coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font> 
+	 automaticamente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: valore del coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font>.</p></li>
+</ul>
+<p><span class="hcp1"><a name="LC_FC_acciaio" id="LC_FC_acciaio"></a>Livello 
+ di conoscenza e Fattore di confidenza</span>: se la trave è un elemento 
+ strutturale esistente è possibile selezionare il livello di conoscenza 
+ (<span class="hcp1">LC1</span>, <span class="hcp1">LC2</span>, 
+ <span class="hcp1">LC3</span>) da cui discende il valore 
+ del fattore di confidenza (<span class="hcp1">FC</span>). 
+ Il fattore di confidenza, eventualmente modificabile dall'utente, viene 
+ utilizzato per ridurre solo le caratteristiche di resistenza dell'acciaio 
+ e non il modulo elastico.</p>
+<p><span class="hcp1"><a name="Tipo_di_acciaio" id="Tipo_di_acciaio"></a>Tipo 
+ di acciaio</span>: selezionare il tipo di acciaio previsto dalla normativa 
+ Italiana. Ogni volta che questo dato viene modificato viene modificato 
+ il valore della tensione caratteristica di snervamento dell'acciaio e 
+ ricalcolato il valore della tensione ammissibile nell'acciaio, valori 
+ che possono successivamente essere modificati per far lavorare l'acciaio 
+ a tensioni inferiori a quelle previste dal regolamento.</p>
+<p><span class="hcp1"><a name="Modulo_elastico_acciaio" id="Modulo_elastico_acciaio"></a>Modulo 
+ elastico</span>: specificare il valore del modulo elastico dell'acciaio.</p>
+<p><span class="hcp1"><a name="Fyk" id="Fyk"></a>Tensione 
+ caratteristica di snervamento (Fyk)</span>: specificare il valore della 
+ tensione caratteristica di snervamento dell'acciaio.</p>
+<p><span class="hcp1"><a name="Fym" id="Fym"></a>Tensione 
+ media di snervamento (Fym)</span>: specificare il valore della tensione 
+ media di snervamento dell'acciaio.</p>
+<p><span class="hcp1"><a name="samm_acciaio" id="samm_acciaio"></a></span><font face="Symbol" class="hcp2"><span class="hcp1">s</span></font><span class="hcp3">amm.</span> <span class="hcp1">acciaio</span>: specificare il valore massimo 
+ della tensione alla quale far lavorare l'acciaio.</p>
+<p><span class="hcp1"><a name="samm_reti_e_tralicci" id="samm_reti_e_tralicci"></a><font face="Symbol" class="hcp2">s</font></span><span class="hcp3">amm.</span> <span class="hcp1">reti 
+ e tralicci</span>: specificare il valore massimo della tensione alla quale 
+ far lavorare l'acciaio di reti elettrosaldate e tralicci. Si ricorda che 
+ per normativa non sono ammesse reti con f<span class="hcp4">yk</span> 
+ &lt; 4000 kg/cmq e f<span class="hcp4">tk</span> &lt; 
+ 4500 kg/cmq (D.M. 14/02/92 par. 2.2.5) a cui corrisponde <font face="Symbol" class="hcp2">s</font>amm = 2600 kg/cmq (D.M. 14/02/92 par. 3.1.7).</p>
+<p><span class="hcp1"><a name="Agt" id="Agt"></a>Allungamento 
+ per verifiche di duttilità (Agt)</span>: specificare la deformazione ultima 
+ dell'acciaio necessaria per valutare la capacità di rotazione della sezione 
+ in calcestruzzo armato secondo l'equazione C8.7.2.5 della <span style="line-height: 115%;">Circolare 
+ n. 7 del 21/01/19</span>.</p>
+<p><span class="hcp1"><a name="Gs" id="Gs"></a><font face="Symbol" class="hcp2">g</font><span class="hcp4">s</span> 
+ per stati limite ultimi</span>: specificare il valore del coefficiente 
+ di sicurezza <font face="Symbol" class="hcp2">g</font> 
+ dell'acciaio. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Automatico</span>: 
+	 ModeSt sceglie il coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font> 
+	 automaticamente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: valore del coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font>.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Coeff_di_omogeneizzazione" 
+										 id="Coeff__di_omogeneizzazione"></a>Coeff. 
+ di omogeneizzazione</span>: specificare il fattore di amplificazione dell'acciaio 
+ per il progetto della sezione (indicato con n dalla normativa).</p>
+<h2>Parametri per analisi pushover</h2>
+<p><span class="hcp1"><a name="Numero_di_fibre" id="Numero_di_fibre"></a>Numero 
+ di fibre</span>: specificare il numero delle fibre con cui viene discretizzata 
+ la sezione della travata. Nel manuale di alcuni solutori come ad esempio 
+ Xfinest 2010 è riportato &quot;<span class="hcp7">Se viene 
+ utilizzato un numero sufficiente di fibre (200-400 in un'analisi tridimensionale), 
+ la distribuzione delle non linearità del materiale attraverso la sezione 
+ è solitamente ben descritta, anche nel caso di elevata non linearità</span>&quot;. 
+ Si rimanda al manuale del solutore per informazioni aggiuntive sul parametro.</p>
+<p><span class="hcp1"><a name="Fattore_di_confinamento_nucleo_interno" 
+										 id="Fattore_di_confinamento_nucleo_interno"></a>Fattore 
+ di confinamento nucleo interno</span>: specificare il valore del fattore 
+ di confinamento costante, definito come il rapporto tra lo sforzo di compressione 
+ nel calcestruzzo confinato e non confinato ed è usato per scalare la relazione 
+ sforzo-deformazione in tutto il campo di deformazioni. Nel manuale di 
+ alcuni solutori come ad esempio Xfinest 2010 è riportato &quot;<span class="hcp7">Sebbene 
+ possa essere calcolato utilizzando un qualunque modello di confinamento 
+ disponibile in letteratura [ad esempio Ahmad and Sahad, 1982; Sheikh and 
+ Uzumeri, 1982; Eurocode 8, 1996; Penelis and Kappos, 1997], si raccomanda 
+ l'uso della formula di Mander et al. [1989]. Il suo valore solitamente 
+ varia tra 1.0 e 1.3 per elementi in calcestruzzo armato ...&quot;.</span> 
+ Si rimanda al manuale del solutore per informazioni aggiuntive sul parametro.</p>
+<p><span class="hcp1"><a name="Fattore_di_incrudimento_acciaio" 
+										 id="Fattore_di_incrudimento_acciaio"></a>Fattore 
+ di incrudimento acciaio</span>: specificare il valore percentuale del 
+ fattore di incrudimento dell'acciaio delle barre d'armatura, definito 
+ come il rapporto tra il modulo elastico dopo lo snervamento e il modulo 
+ elastico iniziale. Si rimanda al manuale del solutore per informazioni 
+ aggiuntive sul parametro.</p>
+<h2>Parametri per verifiche di duttilità</h2>
+<p><span class="hcp1"><a name="Considera_rotazione_massima_di_esercizio_per_determinare_SLO_e_SLD" 
+										 id="Considera_rotazione_massima_di_esercizio_per_determinare_SLO_e_SLD"></a>Considera 
+ rotazione massima di esercizio per determinare SLO e SLD</span>: specificare 
+ se gli stati limite di operatività (SLO) e danno (SLD) devono essere individuati 
+ quando si ha il raggiungimento della rotazione limite (calcolata con la 
+ formula 8.7.2.7a (travi e pilastri) della Circolare esplicativa n. 7 del 
+ 21/01/19) in una trave anziché il raggiungimento dello spostamento relativo 
+ nei pilastri pari a limite imposto nel par. 7.3.6.1 del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Modalita_di_calcolo_luce_di_taglio_Lv" 
+										 id="Modalita_di_calcolo_luce_di_taglio_Lv"></a>Modalità 
+ di calcolo luce di taglio Lv</span>: specificare la modalità di calcolo 
+ della luce di taglio Lv necessaria per calcolare la capacità di rotazione 
+ rispetto alla corda <span class="hcp6">q</span>. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Lv=L/2</span>: 
+	 la luce di taglio è pari alla metà della luce della trave.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Lv=M/V</span>: 
+	 la luce di taglio viene determinata seguendo le indicazioni del par. 
+	 C8.7.2.3.2 della Circolare esplicativa n. 7 del 21/01/19.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Lv=Punto 
+	 di nullo del momento flettente</span>: la luce di taglio è pari alla 
+	 distanza tra il punto di nullo del momento flettente e il filo del 
+	 pilastro.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Capacita_di_rotazione_alla_corda_al_collasso" 
+										 id="Capacita_di_rotazione_alla_corda_al_collasso"></a>Capacità 
+ di rotazione alla corda al collasso</span>: specificare quale formula 
+ utilizzare per calcolare la capacità di rotazione rispetto alla corda 
+ relativa allo stato limite ultimo di collasso. Sono disponibili le seguenti 
+ opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Formula 
+	 C87.2.1 con fattore</span>: specificare il fattore moltiplicativo 
+	 del valore dato dalla formula C87.2.1 come prescritto dalla normativa: 
+	 &quot;<span class="hcp7">Negli elementi non dotati 
+	 di adeguati dettagli di tipo antisismico</span>&quot;.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Formula 
+	 C87.2.5</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Sforzo_normale_di_verifica_per_analisi_pushover" 
+										 id="Sforzo_normale_di_verifica_per_analisi_pushover"></a>Sforzo 
+ normale di verifica per analisi pushover</span>: specificare quale sforzo 
+ normale utilizzare nelle verifiche. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Gravitazionale</span>: 
+	 per tutti i passi dell'analisi sismica statica non lineare (pushover) 
+	 viene utilizzato lo sforzo normale relativo al primo passo dall'analisi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Dal 
+	 calcolo</span>: per tutti i passi dell'analisi sismica statica non 
+	 lineare (pushover) viene utilizzato lo sforzo normale derivante dal 
+	 calcolo.</p></li>
+</ul>
+<h2>Parametri di calcolo</h2>
+<p><span class="hcp1"><a name="Progetto_a_pressoflessione" 
+										 id="Progetto_a_pressoflessione"></a>Progetto 
+ a pressoflessione</span>: specificare se deve essere effettuato il progetto 
+ a pressoflessione invece che flessione semplice. Per strutture calcolate 
+ agli stati limite le armature vengono progettate a flessione semplice. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Per 
+	 tutte le travi</span>: esegue sempre il progetto a pressoflessione 
+	 in presenza di sforzo normale.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 per le travi inclinate</span>: esegue il progetto a pressoflessione 
+	 solo per travi inclinate con un angolo maggiore del valore specificato 
+	 nel parametro seguente:</p></li>
+</ul>
+<p class="IndentBullet1"><span class="hcp1"><a name="Min__angolo_per_pressoflessione" 
+															 id="Min__angolo_per_pressoflessione"></a>Min. 
+ angolo per pressoflessione</span>: specificare l'angolo con l'orizzontale 
+ oltre il quale la trave va considerata inclinata.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="smax_amm__senza_progetto_a_pressoflessione" id="smax_amm__senza_progetto_a_pressoflessione"></a>Compressione 
+	 massima senza progetto a pressoflessione</span>: specificare la percentuale 
+	 della compressione ammissibile <font face="Symbol" class="hcp2"><span class="hcp5">s</span></font><span class="hcp4"><span class="hcp5">amm</span></span> 
+	 o F<span class="hcp4">ck</span> nel calcestruzzo al 
+	 di sotto della quale non effettuare il progetto a pressoflessione. 
+	 Scopo di questo parametro è evitare il progetto a pressoflessione 
+	 per travi minimamente compresse. In caso di asta compressa ModeSt 
+	 controlla se la tensione teorica per solo sforzo normale (N/A) supera 
+	 il valore percentuale indicato e solo in tal caso procede al progetto 
+	 a pressoflessione. In ogni caso viene considerata non compressa una 
+	 trave con compressione &lt; 10 g/cmq.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Progetto_a_torsione" id="Progetto_a_torsione"></a>Progetto 
+ a torsione</span>: specificare se deve essere effettuato il progetto considerando 
+ o meno la torsione. È disponibile la seguente opzione:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="tmax_amm__senza_progetto_a_torsione" id="tmax_amm__senza_progetto_a_torsione"></a>Trazione 
+	 senza progetto a torsione</span>: specificare la percentuale della 
+	 trazione ammissibile nel calcestruzzo <font face="Symbol" class="hcp2"><span class="hcp5">t</span></font><span class="hcp4"><span class="hcp5">c0</span></span> 
+	 o F<span class="hcp4">ctm</span> al di sotto della 
+	 quale non effettuare il progetto a torsione. Scopo di questo parametro 
+	 è evitare il progetto a torsione per travi con momenti torcenti minimi. 
+	 In presenza di momento torcente ModeSt controlla se la tensione teorica 
+	 per sola torsione supera il valore percentuale indicato e solo in 
+	 tal caso procede al progetto a torsione.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Armatura_secondo_Circ__65_del_10_4_97" 
+										 id="Armatura_secondo_Circ__65_del_10_4_97"></a>Armatura 
+ secondo Circ. 65 del 10/4/97</span>: specificare se, nel caso di calcolo 
+ sismico, l'armatura debba corrispondere ai requisiti della Circolare dei 
+ LL.PP. n. 65 del 10/4/97.</p>
+<p><span class="hcp1"><a name="Parametri_di_progetto_DM08" 
+										 id="Parametri_di_progetto_DM08"></a>Parametri 
+ di progetto secondo il D.M. 18</span>: specificare le modalità di progettazione. 
+ Sono disponibili le seguenti opzioni:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Elemento_dissipativo" id="Elemento_dissipativo"></a>Elemento 
+	 dissipativo</span>: specificare se la trave debba essere considerata 
+	 o meno come un elemento di tipo dissipativo. Se l'opzione è deselezionata 
+	 la trave sarà considerata come un elemento non dissipativo e nel caso 
+	 di struttura calcolata come dissipativa verrà progettata e verificata 
+	 con le sollecitazioni di tipo non dissipativo (SND). Se l'opzione 
+	 è selezionata la trave sarà considerata come un elemento dissipativo 
+	 e nel caso di struttura calcolata come non dissipativa verrà comunque 
+	 progettata e verificata con le sollecitazioni di tipo non dissipativo 
+	 (SND). Sono disponibili le seguenti opzioni:</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1"><a 
+	 name="Trascura_gerarchia"></a>Trascura gerarchia</span>:&#160;specificare 
+	 se la trave debba essere progettato senza rispettare la gerarchia 
+	 delle resistenze ma solo in funzione dello stato di sollecitazione 
+	 determinato dal calcolo con il metodo FEM.</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1"><a 
+	 name="Verifica_a_taglio_ciclico_elementi_esistenti"></a>Verifica a 
+	 taglio ciclico elementi esistenti</span>:&#160;specificare per gli 
+	 elementi esistenti vadano effettuate le verifica di resistenza in 
+	 condizioni cicliche (azioni sismiche), come richiesto al par. C8.7.2.3.5 
+	 della Circolare esplicativa n. 7 del 21/01/19. Questa opzione non 
+	 è utilizzata per le strutture calcolate con l'analisi sismica statica 
+	 non lineare <span style="line-height: 115%; mso-bidi-language: AR-SA;">(</span>pushover).</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1"><a 
+	 name="Limita_verifica_a_taglio_ad_elemento_non_dissipativo"></a>Limita 
+	 verifica a taglio ad elemento non dissipativo</span>:&#160;specificare 
+	 se adottare le verifiche a taglio con le sollecitazioni non dissipative 
+	 (SND) nel caso in cui le verifiche a taglio con la gerarchia delle 
+	 resistenze siano più gravose. Questo parametro consente di ottemperare 
+	 a quanto previsto nel par. 7.2.2 del D.M. 17/01/18: &quot;<span class="hcp7">La 
+	 domanda di resistenza valutata con i criteri della progettazione in 
+	 capacità può essere assunta non superiore alla domanda di resistenza 
+	 valutata per il caso di comportamento strutturale non dissipativo.</span>&quot; 
+	 </p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1"><a 
+	 name="Elemento_secondario" id="Elemento_secondario"></a>Elemento secondario</span>: 
+	 specificare se le verifiche della trave debbano essere eseguite solo 
+	 per le combinazioni delle condizioni di carico elementari di tipo 
+	 non sismico. Può essere necessario disattivare le verifiche per le 
+	 CC sismiche se si ritiene che la trave vada considerata come un elemento 
+	 secondario in quanto le azioni sismiche sono assorbite da altri elementi 
+	 della struttura. In quest'ottica alcune interpretazioni della normativa 
+	 ritengono la trave implicitamente verificata in termini di duttilità 
+	 se sono rispettati i limiti di normativa o se vengono effettuate specifiche 
+	 valutazioni sulla duttilità (attualmente non effettuate da ModeSt).</p></li>
+</ol>
+<ol start="2">
+	<li class="hcp8"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Sollecitazioni_dissipative_amplificate_per_elementi_di_fondazione" 
+	 id="Sollecitazioni_dissipative_amplificate_per_elementi_di_fondazione"></a>Sollecitazioni 
+	 dissipative amplificate per elementi di fondazione</span>: specificare 
+	 se la trave di fondazione debba essere progettata con le sollecitazioni 
+	 dissipative amplificate come previsto nella terza opzione del par. 
+	 7.2.5 del D.M. 17/01/18: <span class="hcp7">&quot;quella 
+	 trasferita dagli elementi soprastanti nell'ipotesi di comportamento 
+	 strutturale dissipativo, amplificata di un coefficiente pari a 1,30 
+	 in CD&quot;A&quot; e 1,10 in CD&quot;B&quot;;&quot;</span>.</p></li>
+	<li class="hcp8"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Escludi_dal_calcolo_sovraresistenza_per_pilastri_incidenti" 
+	 id="Escludi_dal_calcolo_sovraresistenza_per_pilastri_incidenti"></a>Escludi 
+	 dal calcolo sovraresistenza per pilastri incidenti</span>: specificare 
+	 se la trave debba essere considerata nel calcolo del coefficiente 
+	 di amplificazione delle sollecitazioni per il pilastro su cui incide. 
+	 Può essere necessario attivare l'opzione ad esempio per travi sopra 
+	 una parete o per elementi secondari.</p></li>
+</ol>
+<p><span class="hcp1"><a name="Soll_compl_elem_bidi" id="Soll_compl_elem_bidi"></a>Sollecitazioni 
+ complanari ad eventuali elementi bidimensionali</span>: specificare se 
+ debbano essere considerate nella trave (quali ad esempio travi di fondazione 
+ o di elevazione sottostanti o sovrastanti gli elementi bidimensionali) 
+ le sollecitazioni complanari ed adiacenti ad elementi bidimensionali. 
+ Le sollecitazioni risultanti dal calcolo sono generalmente prive di significato 
+ (dipendono solo dalla dimensione della mesh).</p>
+<p><span class="hcp1"><a name="Copriferro_teorico_superiore" 
+										 id="Copriferro_teorico_superiore"></a>Copriferro 
+ teorico superiore</span>: specificare il valore del copriferro teorico 
+ superiore da utilizzare per il progetto delle travi. Tale valore viene 
+ assunto come distanza del baricentro dell'armatura superiore dall'estremo 
+ superiore della sezione.</p>
+<p><span class="hcp1"><a name="Copriferro_teorico_inferiore" 
+										 id="Copriferro_teorico_inferiore"></a>Copriferro 
+ teorico inferiore</span>: specificare il valore del copriferro teorico 
+ inferiore da utilizzare per il progetto delle travi. Tale valore viene 
+ assunto come distanza del baricentro dell'armatura inferiore dall'estremo 
+ inferiore della sezione.</p>
+<p><span class="hcp1"><a name="Min__momento_fittizio_agli_appoggi" 
+										 id="Min__momento_fittizio_agli_appoggi"></a>Min. 
+ momento fittizio agli appoggi</span>: specificare se calcolare un momento 
+ fittizio negativo agli appoggi. In caso affermativo occorre specificare 
+ il denominatore. Ad esempio inserendo 14 ModeSt considererà insieme alle 
+ altre CC anche la parte negativa di un diagramma dei momenti che all'appoggio 
+ presenta un momento pari a ql<span class="hcp9">2</span>/14. 
+ Il momento viene considerato senza taglio, sforzo normale e torsione. 
+ Per travi su suolo elastico viene considerata la parte positiva del momento.</p>
+<p><span class="hcp1"><a name="Min__momento_fittizio_in_campata" 
+										 id="Min__momento_fittizio_in_campata"></a>Min. 
+ momento fittizio in campata</span>: specificare se calcolare un momento 
+ fittizio positivo in campata. In caso affermativo occorre specificare 
+ il denominatore. Ad esempio inserendo 14 ModeSt terrà conto, insieme alle 
+ altre CC, anche della parte positiva di un diagramma dei momenti che in 
+ campata presenta un momento pari a ql<span class="hcp9">2</span>/14. 
+ Il momento viene considerato senza taglio, sforzo normale e torsione. 
+ Per travi su suolo elastico viene considerata la parte negativa del momento.</p>
+<p><span class="hcp1"><a name="Incremento_percentuale_momento_in_campata" 
+										 id="Incremento_percentuale_momento_in_campata"></a>Incremento 
+ percentuale momento in campata</span>: specificare il valore (espresso 
+ in percentuale) con il quale aumentare il momento positivo di tutte le 
+ CC per tenere conto di eventuali cedimenti dei vincoli per fenomeni viscosi, 
+ o semplicemente per motivi di sicurezza. Per travi su suolo elastico viene 
+ incrementato il momento negativo.</p>
+<p><span class="hcp1"><a name="Usa_taglio_max_per_traslazione_momento" 
+										 id="Usa_taglio_max_per_traslazione_momento"></a>Usa 
+ taglio max per traslazione momento (S.L.)</span>: indicare se vada considerato 
+ il taglio massimo di tutte le CC per la traslazione del momento. Se l'opzione 
+ è deselezionata il momento viene traslato per ogni CC con il relativo 
+ taglio. Questa opzione è utilizzata solo per le strutture calcolate agli 
+ stati limite secondo il D.M. 16/01/96.</p>
+<p><span class="hcp1"><a name="Limitare_momento_traslato_al_valore_max_di_appoggio" 
+										 id="Limitare_momento_traslato_al_valore_max_di_appoggio"></a>Limitare 
+ momento traslato al valore max di appoggio (S.L.)</span>: indicare se 
+ agli appoggi il momento traslato vada limitato al valore massimo derivante 
+ dal calcolo. La normativa infatti parla di traslazione longitudinale del 
+ momento, ma poi indica di effettuarla con un metodo che in effetti è una 
+ traslazione verticale. Attivando questa opzione ModeSt controlla che il 
+ valore del momento traslato non superi il valore massimo del momento di 
+ appoggio. Questa opzione è utilizzata solo per le strutture calcolate 
+ agli stati limite secondo il D.M. 16/01/96.</p>
+<p>La limitazione viene effettuata solo per il momento negativo (positivo 
+ per travi di fondazione).</p>
+<p><span class="hcp1"><a name="Limitare_momento_traslato_al_valore_max_di_campata" 
+										 id="Limitare_momento_traslato_al_valore_max_di_campata"></a>Limitare 
+ momento traslato al valore max di campata (S.L.)</span>: indicare se in 
+ campata il momento traslato vada limitato al valore massimo derivante 
+ dal calcolo. La normativa infatti parla di traslazione longitudinale del 
+ momento, ma poi indica di effettuarla con un metodo che in effetti è una 
+ traslazione verticale. Attivando questa opzione ModeSt controlla che il 
+ valore del momento traslato non superi il valore massimo del momento di 
+ campata. Questa opzione è utilizzata solo per le strutture calcolate agli 
+ stati limite secondo il D.M. 16/01/96.</p>
+<p><span class="hcp1"><a name="Taglio_da_momento_resistente_in_fondazione" 
+										 id="Taglio_da_momento_resistente_in_fondazione"></a>Taglio 
+ da momento resistente in fondazione (S.L.)</span>: indicare se nel caso 
+ di progettazione in classe di duttilità A vadano effettuate le verifiche 
+ con gli sforzi di taglio indotti dai momenti resistenti anche per le travi 
+ di fondazione. Questa opzione è utilizzata solo per le strutture calcolate 
+ agli stati limite secondo il D.M. 16/01/96.</p>
+<p><span class="hcp1"><a name="Tipo_di_progetto_in_doppia_armatura" 
+										 id="Tipo_di_progetto_in_doppia_armatura"></a>Tipo 
+ di progetto in doppia armatura (T.A.)</span>: specificare come calcolare 
+ la doppia armatura in sezioni in cui non è sufficiente la semplice armatura. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tensioni 
+	 pari ai valori amm.</span>: permette di calcolare l'armatura in modo 
+	 che le tensioni nel ferro e nel calcestruzzo siano pari ai valori 
+	 ammissibili.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tensioni 
+	 pari ai valori amm. con AfCom/AfTesa minore o pari a</span>: come 
+	 nel caso precedente, ma con la limitazione che il rapporto fra AfCompressa 
+	 e AfTesa sia inferiore o uguale a quanto specificato.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Con 
+	 AfCom/AfTesa pari a</span>: progettare sempre con un rapporto d'armatura 
+	 pari a quello specificato.</p></li>
+</ul>
+<h2>Parametri di progettazione armatura</h2>
+<p><span class="hcp1"><a name="Utilizzo" id="Utilizzo"></a>Utilizzo</span>: 
+ indicare la tipologia di utilizzo. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Trave</span>: 
+	 permette di progettare le armature come indicato in <a href="Progettazione%20armature%20travi.htm" class="hcp10">Progetto 
+	 armatura travi</a>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Cordolo</span>: 
+	 permette di progettare le armature come indicato in <a href="Cordoli_e_solette_rampanti.htm#Solette_rampanti" class="hcp10">Cordoli 
+	 e solette rampanti</a>.&#160;Questo parametro è utilizzato solo per 
+	 le strutture calcolate agli stati limite secondo il D.M. 17/01/18.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Soletta 
+	 rampante</span>: permette di progettare le armature come indicato 
+	 in <a href="Cordoli_e_solette_rampanti.htm#Solette_rampanti" class="hcp10">Cordoli 
+	 e solette rampanti</a>.&#160;Questo parametro è utilizzato solo per 
+	 le strutture calcolate agli stati limite secondo il D.M. 17/01/18.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Sequenza_di_progetto" id="Sequenza_di_progetto"></a>Sequenza 
+ di progetto</span>: specificare la sequenza delle <span class="hcp1"><a 
+	 href="Fasi%20di%20progetto.htm">Fasi di progetto</a></span> da utilizzare 
+ per la progettazione automatica dell'armatura delle travi. Questa sequenza 
+ è utilizzata per le strutture calcolate alle tensioni ammissibili secondo 
+ il D.M. 14/02/92 o agli stati limite secondo il D.M. 17/01/18 e il D.M. 
+ 16/01/96.</p>
+<p><span class="hcp1"><a name="Max_differenza_fra_diametri_per_unificazioni" 
+										 id="Max_differenza_fra_diametri_per_unificazioni"></a>Max 
+ differenza fra diametri per unificazioni</span>: questo parametro, insieme 
+ al successivo, specifica le modalità secondo le quali ModeSt, nella fase 
+ di unificazione ferri, unifica ferri simili a distanza ravvicinata. In 
+ pratica non vengono unificati ferri con differenza di diametro superiore 
+ a quanto specificato in questo parametro.</p>
+<p><span class="hcp1"><a name="Max_distanza_fra_barre_per_unificazioni" 
+										 id="Max_distanza_fra_barre_per_unificazioni"></a>Max 
+ distanza fra barre per unificazioni</span>: specificare la massima distanza 
+ fra le estremità di due barre da unificare. Con questo parametro e il 
+ precedente si può imporre a ModeSt di unificare i ferri in casi particolari.</p>
+<p>Supponiamo per esempio di aver specificato una differenza fra diametri 
+ per unificazioni pari a 2 ed una distanza fra barre pari a 0.50 m. In 
+ tal caso due ferri posizionati come in figura:</p>
+<p class="hcp11"><img src="Dibarun0.jpg" alt="" width="200" height="47" border="0" class="hcp12"></p>
+<p>in cui la differenza fra <font face="Symbol" class="hcp2">f</font>1 
+ e <font face="Symbol" class="hcp2">f</font>2 è inferiore 
+ a 2 diametri e la distanza D è inferiore a 50 cm, diventano un'unica barra 
+ di diametro pari al massimo fra <font face="Symbol" class="hcp2">f</font>1 
+ e <font face="Symbol" class="hcp2">f</font>2.</p>
+<p class="hcp11"><img src="Dibarun1.jpg" alt="" width="200" height="43" border="0" class="hcp12"></p>
+<p>Analogamente due ferri posizionati come in figura:</p>
+<p class="hcp11"><img src="Dibarun2.jpg" alt="" width="200" height="81" border="0" class="hcp12"></p>
+<p>in cui la differenza fra <font face="Symbol" class="hcp2">f</font>1 
+ e <font face="Symbol" class="hcp2">f</font>2 è inferiore 
+ a 2 diametri ed entrambi i valori di D1 e D2 sono inferiori a 50 cm, diventano 
+ un'unica barra in cui <font face="Symbol" class="hcp2">f</font>3 
+ è un diametro (o una coppia di diametri) equivalente a <font face="Symbol" class="hcp2">f</font>1+<font face="Symbol" class="hcp2">f</font>2.</p>
+<p class="hcp11"><img src="Dibarun3.jpg" alt="" width="200" height="53" border="0" class="hcp12"></p>
+<p>&#160;</p>
+<p><span class="hcp1"><a name="Denominatore_per_individuazione_zona_di_campata" 
+										 id="Denominatore_per_individuazione_zona_di_campata"></a>Denominatore 
+ per individuazione zona di campata</span>: ModeSt progetta i reggistaffe 
+ superiori in modo da coprire l'armatura necessaria in campata (per problemi 
+ di doppia armatura o per minimi di regolamento) ed in parte anche la zona 
+ d'appoggio, riservandosi di coprire la parte mancante o sovrapponendo 
+ i reggistaffe o inserendo degli spezzoni. È quindi necessario concettualmente 
+ definire quale parte della trave si possa definire come &quot;zona di 
+ campata&quot; e quale come &quot;zona d'appoggio&quot;. Con questo parametro 
+ si indica che la parte positiva di un ipotetico diagramma di ql<span class="hcp9">2</span>/n 
+ è da considerarsi come &quot;zona di campata&quot;. Valori bassi (10, 
+ 12) porteranno ad armature superiori più uniformi, magari sovrabbondanti 
+ in campata, ma con minori sovrapposizioni e con minori spezzoni, mentre 
+ valori più alti (14, 16) porteranno ad armature superiori meno abbondanti 
+ ma con più sovrapposizioni e più spezzoni. Nel caso di travi su suolo 
+ elastico quanto detto vale per le armature inferiori.</p>
+<p><span class="hcp1"><a name="Fattore_di_copertura_appoggi" 
+										 id="Fattore_di_copertura_appoggi"></a>Fattore 
+ di copertura appoggi</span>: questo parametro, che può assumere valori 
+ variabili teoricamente fra 0 ed 1, rappresenta un'indicazione sul grado 
+ di copertura dell'armatura agli appoggi con i reggistaffe superiori (inferiori 
+ per travi su suolo elastico). I valori estremi hanno il seguente significato:</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt;" cellspacing="0" 
+		 width="100%">
+	<tr>
+		<td style="width:7%;" class="hcp13"><p class="hcp14"><span class="hcp1">0</span></p></td>
+		<td style="width:95%;" class="hcp13"><p class="hcp14">i reggistaffe vengono dimensionati 
+		 solo in funzione dell'area di ferro necessaria superiormente nella 
+		 zona individuata come campata con il parametro precedente. L'area 
+		 di ferro necessaria agli appoggi verrà quindi coperta prevalentemente 
+		 con spezzoni;</p></td>
+	</tr>
+	<tr>
+		<td style="width:7%;" class="hcp13"><p class="hcp14"><span class="hcp1">1</span></p></td>
+		<td style="width:95%;" class="hcp13"><p class="hcp14">i reggistaffe vengono dimensionati 
+		 in funzione dell'area di ferro necessaria superiormente zona individuata 
+		 come campata con il parametro precedente e di tutta l'area di 
+		 ferro necessaria agli appoggi. In questo caso verranno quindi 
+		 minimizzati gli spezzoni superiori all'appoggio, ma avremo dei 
+		 reggistaffe sovrabbondanti in campata.</p></td>
+	</tr>
+</table>
+<p>Si consigliano valori compresi fra 0.6 e 1, usando senz'altro 1 per 
+ travi molto strette.</p>
+<p><span class="hcp1"><a name="Fattore_di_riduzione_tc0_per_ancoraggio_ferri" 
+										 id="Fattore_di_riduzione_tc0_per_ancoraggio_ferri"></a>Fattore 
+ di riduzione per ancoraggio ferri</span>: specificare di quanto deve essere 
+ ridotto il valore di <font face="Symbol" class="hcp2"><span class="hcp5">t</span></font><span class="hcp4"><span class="hcp5">c0</span></span> o di F<span class="hcp4">bd</span> 
+ (definito fra le caratteristiche dei materiali) per calcolare la tensione 
+ tangenziale di aderenza ammissibile necessaria per il calcolo degli ancoraggi 
+ dei ferri. Ad esempio specificando 0.6 si impone una riduzione di <font face="Symbol" class="hcp2"><span class="hcp5">t</span></font><span class="hcp4"><span class="hcp5">c0</span></span> 
+ o di F<span class="hcp4">bd</span> del 40%. Si ricorda 
+ che la normativa ammette riduzioni anche fino al 50%. Questa riduzione 
+ viene applicata solo nel calcolo di ancoraggi la cui posizione soddisfa 
+ i requisiti specificati nei criteri generali di progetto armatura travi 
+ al parametro &quot;<a href="CriGenTra.htm#Riduzione_ancoraggi"><span class="hcp1">Riduzione 
+ ancoraggi</span></a>&quot;.</p>
+<p>Si fa presente comunque che durante il calcolo degli ancoraggi, quando 
+ si raggiunge un'estremità di una trave o generalmente quando il ferro 
+ non può essere prolungato, ModeSt risvolta il ferro dentro la trave e 
+ rinuncia alla verifica dell'ancoraggio. Se il parametro &quot;<span class="hcp1"><a 
+	 href="CriGenTra.htm#Risvoltare_i_ferri_per_garantire_l_ancoraggio_agli_estremi_della_trave">Risvoltare 
+ i ferri per garantire l'ancoraggio agli estremi della trave</a></span>&quot; 
+ è stato attivato, ModeSt risvolta il ferro della lunghezza necessaria 
+ a garantirne l'ancoraggio.</p>
+<p><span class="hcp1"><a name="Minimizzazione_momenti_appoggio_DM08" 
+										 id="Minimizzazione_momenti_appoggio_DM08"></a>Minimizzazione 
+ momenti resistenti di appoggio (stati limite D.M. 18)</span>: è possibile 
+ imporre a ModeSt di adottare particolari tecniche di progettazione armatura 
+ in modo da minimizzare i momenti resistenti sull'appoggio, per non aggravare 
+ eccessivamente la progettazione in gerarchia delle resistenze dei pilastri. 
+ Quando si attiva tale tecnica, meglio descritta in <span class="hcp1"><a 
+	 href="Tecniche_di_progettazione_ai_sensi_DM08.htm">Tecniche di progettazione 
+ ai sensi D.M. 17/01/18</a></span> è possibile anche specificare le <span class="hcp1"><a href="Fasi%20di%20progetto.htm">Fasi di 
+ progetto</a></span> da utilizzare e le seguenti opzioni che ne influenzano 
+ il comportamento:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Sequenza_di_progettoDM08" id="Sequenza_di_progettoDM08"></a>Sequenza 
+	 di progetto</span>: specificare la sequenza delle <span class="hcp1"><a 
+	 href="Fasi%20di%20progetto.htm">Fasi di progetto</a></span> da utilizzare 
+	 per la progettazione automatica dell'armatura delle travi in alternativa 
+	 alla sequenza standard.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Tolleranza_di_copertura_da_sovrapposizione" id="Tolleranza_di_copertura_da_sovrapposizione"></a>Tolleranza 
+	 di copertura da sovrapposizione</span>: indicare la tolleranza consentita 
+	 in termini di sovra-copertura durante le fasi <span class="hcp1">SRG</span> 
+	 e <span class="hcp1">SFA</span>. Le sovrapposizioni 
+	 che superano tale tolleranza non vengono effettuate e la copertura 
+	 del momento è affidata ad una eventuale fase <span class="hcp1">PFA</span>.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Tipo_di_distribuzione_armatura_eccedente" 
+										 id="Tipo_di_distribuzione_armatura_eccedente"></a>Tipo 
+ di distribuzione armatura eccedente</span>: poiché l'armatura effettivamente 
+ presente nella trave sarà superiore a quella teorica, occorre precisare 
+ come deve essere considerata l'armatura longitudinale eccedente durante 
+ le verifiche. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Ripartita 
+	 proporzionalmente per flessione, torsione e taglio</span>: l'area 
+	 di ferro eccedente viene ripartita per flessione, torsione e taglio 
+	 in ogni CC in modo proporzionale alle aree di ferro teoriche strettamente 
+	 necessarie.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tutta 
+	 agente per flessione</span>: l'area di ferro eccedente viene considerata 
+	 tutta agente per flessione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tutta 
+	 agente per taglio</span>: l'area di ferro eccedente viene considerata 
+	 tutta agente per taglio. Prima di utilizzare questa opzione, si legga 
+	 attentamente quanto riportato in <span class="hcp1"><a 
+	 href="Tecniche_di_progettazione_ai_sensi_DM08.htm">Tecniche di progettazione 
+	 ai sensi D.M. 17/01/18</a></span>, con particolare riferimento alla 
+	 <a href="Tecniche_di_progettazione_ai_sensi_DM08.htm#Nota_1">Nota 
+	 1</a>.</p></li>
+</ul>
+<h2>Armatura a flessione</h2>
+<p><span class="hcp1"><a name="Elenco_diametri_ferri_longitudinali" 
+										 id="Elenco_diametri_ferri_longitudinali"></a>Elenco 
+ diametri ferri longitudinali</span>: specificare l'elenco dei diametri 
+ utilizzabili per la progettazione dei ferri longitudinali, separati da 
+ spazi (ad esempio 10 12 14 16 18). Sono ammessi anche valori non consecutivi.</p>
+<p><span class="hcp1"><a name="Max_differenza_fra_diametri_nella_trave" 
+										 id="Max_differenza_fra_diametri_nella_trave"></a>Max 
+ differenza fra diametri nella trave</span>: con questo parametro è possibile 
+ limitare l'intervallo fra i diametri dei ferri nell'ambito della stessa 
+ trave, per evitare l'utilizzo contemporaneo di ferri con diametro molto 
+ diverso. Ad esempio, specificando 4, con riferimento ai valori citati 
+ per il parametro precedente, nell'ambito della stessa trave avremo solo 
+ ferri Ø10,12,14 o Ø12,14,16 o Ø14,16,18.</p>
+<p><span class="hcp1"><a name="Max_differenza_fra_diametri_ferri_accoppiati" 
+										 id="Max_differenza_fra_diametri_ferri_accoppiati"></a>Max 
+ differenza fra diametri ferri accoppiati</span>: analogamente al parametro 
+ precedente, questo limita la differenza fra i diametri di due ferri nella 
+ stessa posizione. Ad esempio specificando 2 non avremo mai nella stessa 
+ posizione 1Ø10+1Ø14 (differenza 4 diametri), ma al massimo 1Ø10+1Ø12 oppure 
+ 1Ø12+1Ø14, ecc.</p>
+<p><span class="hcp1"><a name="Reggistaffe_superiori_inferiori" 
+										 id="Reggistaffe_superiori_inferiori"></a>Reggistaffe 
+ superiori/inferiori</span>: specificare il numero e il diametro dei reggistaffe 
+ da adottare superiormente ed inferiormente nella trave. Sono disponibili 
+ le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Numero</span>: 
+	 permette di specificare il numero dei reggistaffe superiori/inferiori.</p></li>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Pari 
+	 a</span>: si intende il numero dei reggistaffa.</p></li>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Max 
+	 mutua distanza</span>: si intende la massima mutua distanza fra i 
+	 reggistaffe. In tal caso il numero di reggistaffe viene calcolato 
+	 automaticamente in funzione della larghezza della sezione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Diametro</span>: 
+	 permette di specificare il diametro dei reggistaffe superiori/inferiori.</p></li>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Automatico</span>: 
+	 ModeSt sceglie il diametro automaticamente in funzione dell'armatura 
+	 necessaria.</p></li>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Pari 
+	 a</span>: ModeSt inserisce reggistaffe del diametro specificato, eventualmente 
+	 integrandoli con altri ferri longitudinali se la progettazione lo 
+	 richiede.</p></li>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Minimo</span>: 
+	 ModeSt impone come diametro minimo il valore specificato, ma usa diametri 
+	 maggiori se la progettazione lo richiede.</p></li>
+</ul>
+<p>Si fa presente che i reggistaffe vengono sempre considerati ai fini 
+ del calcolo dell'armatura della trave.</p>
+<h2>Armatura a taglio</h2>
+<p><span class="hcp1"><a name="Scorrimento" id="Scorrimento"></a>Scorrimento 
+ (T.A.)</span>: specificare la percentuale dello sforzo di scorrimento 
+ dovuto al taglio da fare assorbire alle staffe, ai ferri piegati e ai 
+ ferri di parete. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Percentuale_assorbita_dalle_staffe" id="Percentuale_assorbita_dalle_staffe"></a>Percentuale 
+	 assorbita dalle staffe</span>: specificare la percentuale dello sforzo 
+	 di scorrimento dovuto al taglio da fare assorbire alle staffe. Sono 
+	 ammissibili valori compresi fra 40 e 100.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Percentuale_assorbita_dai_ferri_piegati" id="Percentuale_assorbita_dai_ferri_piegati"></a>Percentuale 
+	 assorbita dai ferri piegati</span>: specificare la percentuale dello 
+	 sforzo di scorrimento dovuto al taglio da fare assorbire ai ferri 
+	 sagomati.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Percentuale_assorbita_dai_ferri_di_parete" id="Percentuale_assorbita_dai_ferri_di_parete"></a>Percentuale 
+	 assorbita dai ferri di parete</span>: la somma dello scorrimento assorbito 
+	 dalle staffe e dai ferri piegati può essere minore di 100. In tal 
+	 caso la percentuale residua verrà fatta assorbire dai ferri di parete.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Considerare_il_valore_alle_staffe_come_minimo_percentuale_da_adottare" 
+	 id="Considerare_il_valore_alle_staffe_come_minimo_percentuale_da_adottare"></a>Considerare 
+	 il valore alle staffe come minimo percentuale da adottare</span>: 
+	 specificare se considerare la percentuale assorbita dalle staffe come 
+	 un minimo di percentuale da adottare, con l'intesa di aumentare la 
+	 staffatura (fra quelle previste dall'utente in diametri, bracci e 
+	 passi) fino a trovarne una che minimizzi o elimini del tutto i ferri 
+	 piegati e di parete. In altre parole ModeSt armerà con ferri piegati 
+	 e di parete solo se la staffatura massima prevista dall'utente non 
+	 è in grado di assorbire tutto lo sforzo di scorrimento.</p></li>
+</ul>
+<p>Nel calcolo agli Stati Limite gli sforzi di taglio vengono affidati 
+ interamente alle staffe ed i parametri indicati vengono ignorati.</p>
+<p><span class="hcp1"><a name="Variabilita_staffe" id="Variabilita_staffe"></a>Variabilità 
+ staffe</span>: per questo parametro sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Staffe_uguali_a_passo_costante" id="Staffe_uguali_a_passo_costante"></a>Staffe 
+	 uguali a passo costante</span>: la trave viene armata con staffe tutte 
+	 uguali a passo costante.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Staffe_diverse_in_tre_parti_della_trave_in_funzione_di_tc0" 
+	 id="Staffe_diverse_in_tre_parti_della_trave_in_funzione_di_tc0"></a>Staffe 
+	 diverse in tre parti della trave in funzione di</span> <font face="Symbol" class="hcp2"><span class="hcp1">t</span></font><font face="Verdana" class="hcp15"><span class="hcp4">c0</span></font>: 
+	 la trave viene divisa e staffata diversamente in tre parti in funzione 
+	 del valore della tensione tangenziale. Le due parti di estremità in 
+	 cui la tensione tangenziale è maggiore di <font face="Symbol" class="hcp2">t</font><font face="Verdana" class="hcp15"><span class="hcp4">c0</span></font> 
+	 e la restante parte centrale in cui è sufficiente l'armatura minima 
+	 di regolamento. Vengono ovviamente inviluppate le varie combinazioni 
+	 delle condizioni di carico elementari.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Staffe_diverse_in_tre_parti_della_trave_in_funzione_di_un_multiplo_dell_altezza_pari_a" 
+	 id="Staffe_diverse_in_tre_parti_della_trave_in_funzione_di_un_multiplo_dell_altezza_pari_a"></a>Staffe 
+	 diverse in tre parti della trave in funzione di un multiplo dell'altezza 
+	 pari a</span><span class="hcp5">:</span> il valore 
+	 specificato indica il numero di multipli dell'altezza della trave 
+	 in funzione della quale dividere e staffare la trave stessa. La trave 
+	 viene divisa in due tratti di estremità con una lunghezza pari a n 
+	 multipli di H (dove n è il valore inserito e H è l'altezza della trave 
+	 diminuita del massimo fra copriferro teorico superiore e inferiore) 
+	 ed un tratto centrale pari al rimanente.</p></li>
+</ul>
+<p>ModeSt rispetta comunque sempre i minimi di regolamento relativi ai 
+ tratti di estremità con staffatura differenziata.</p>
+<p><span class="hcp1"><a name="Variabilita_staffe_ala" id="Variabilita_staffe_ala"></a>Variabilità 
+ staffe ala</span><span class="hcp5">: per questo parametro 
+ sono disponibili le seguenti opzioni:</span></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Passi 
+	 uguali a passi anima</span>: le staffe nell'ala della trave vengono 
+	 disposte con passo uguale a quello dell'anima.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Passi 
+	 multipli di passi anima</span>: le staffe nell'ala della trave vengono 
+	 disposte con passo uguale a un multiplo intero di quello dell'anima.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Passi 
+	 indipendenti da passi anima</span>: le staffe nell'ala della trave 
+	 vengono disposte con passo indipendente da quello dell'anima.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Min__lunghezza_tratto_centrale_come_multiplo_dell_altezza_della_trave" 
+										 id="Min__lunghezza_tratto_centrale_come_multiplo_dell_altezza_della_trave"></a>Min. 
+ lunghezza tratto centrale come multiplo dell'altezza della trave</span>: 
+ specificare, in multipli dell'altezza della trave, la lunghezza minima 
+ che può assumere il tratto centrale di staffatura. Se, a seguito di quanto 
+ specificato nel parametro precedente e dei minimi di regolamento, il tratto 
+ centrale risulta inferiore a quanto specificato, ModeSt arma con staffatura 
+ costante.</p>
+<p><span class="hcp1"><a name="Elenco_diametri_staffe" id="Elenco_diametri_staffe"></a>Elenco 
+ diametri staffe</span>: specificare l'elenco dei diametri utilizzabili 
+ per la staffatura della trave, separati da spazi. Sono ammessi anche valori 
+ non consecutivi (ad esempio 6 10). Nel caso di travi a T o a L questi 
+ dati sono riferiti alle staffe dell'anima.</p>
+<p><span class="hcp1"><a name="Elenco_numero_bracci_staffe" 
+										 id="Elenco_numero_bracci_staffe"></a>Elenco 
+ numero bracci staffe</span>: specificare l'elenco dei bracci utilizzabili 
+ per la staffatura della trave, separati da spazi. Ad esempio 2 4 significa 
+ che ModeSt può armare con staffe a 2 o a 4 bracci. Sono ammessi anche 
+ valori non consecutivi ma non valori dispari.</p>
+<p><span class="hcp1"><a name="Passi_staffe" id="Passi_staffe"></a>Passi 
+ staffe</span>: specificare il passo minimo, massimo e l'incremento per 
+ determinare la staffatura ammissibile della trave. Ad esempio inserendo 
+ (in cm) 14, 20 e 2 saranno ammissibili staffature con passo 14, 16, 18 
+ e 20 cm.</p>
+<p><span class="hcp1"><a name="Elementi_costanti" id="Elementi_costanti"></a>Elementi 
+ costanti</span>: questo parametro permette di staffare in modo parzialmente 
+ uniforme una trave che è comunque armata con staffatura variabile. Sono 
+ disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Diametro</span>: 
+	 permette di armare la trave con staffe a diametro costante (varieranno 
+	 il passo ed il numero di bracci).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Passo</span>: 
+	 permette di armare la trave con staffe a passo costante (varieranno 
+	 il diametro ed il numero di bracci).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Bracci</span>: 
+	 permette di armare la trave con staffe a <span class="hcp5">numero</span> 
+	 bracci costante (varieranno il diametro ed il passo).</p></li>
+</ul>
+<p>Se tutte le opzioni sono deselezionate non verrà effettuato nessun tipo 
+ di uniformizzazione. I valori <span class="hcp1">Diametro</span>, 
+ <span class="hcp1">Passo</span> e <span class="hcp1">Bracci</span> 
+ possono essere accoppiati fra loro per determinare staffature particolari: 
+ ad esempio inserendo per questo parametro il valore <span class="hcp1">Bracci-Diametro</span> 
+ avremo nella trave staffe costanti in diametro e bracci e nei vari tratti 
+ varierà solo il passo; inserendo <span class="hcp1">Bracci-Passo</span> 
+ avremo nella trave staffe a passo costante e stesso numero di bracci, 
+ mentre varierà il diametro.</p>
+<p><span class="hcp1"><a name="Tipo_di_minimizzazione_staffatura" 
+										 id="Tipo_di_minimizzazione_staffatura"></a>Tipo 
+ di minimizzazione staffatura</span>: specificare il criterio di scelta 
+ fra le diverse combinazioni di staffatura risultanti dai parametri precedenti. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Minimizza 
+	 il numero delle staffe</span>: ricercare la staffatura che globalmente 
+	 minimizza il numero delle staffe (una staffa a 4 bracci viene considerata 
+	 come due staffe).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Minimizza 
+	 il peso delle staffe</span>: ricercare la staffatura che globalmente 
+	 minimizza il peso delle staffe.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Lunghezza_max_del_tratto_di_calcolo_scorrimento" 
+										 id="Lunghezza_max_del_tratto_di_calcolo_scorrimento"></a>Lunghezza 
+ max del tratto di calcolo scorrimento</span>: specificare quale deve essere 
+ la lunghezza massima del singolo tratto in cui viene calcolato lo scorrimento 
+ nelle zone in cui <font face="Symbol" class="hcp2">t</font> 
+ &gt; <font face="Symbol" class="hcp2">t</font><span class="hcp4">c0</span>. 
+ Ad esempio se è stato specificato di raffittire le staffe in tutto il 
+ tratto in cui <font face="Symbol" class="hcp2">t</font> 
+ &gt; <font face="Symbol" class="hcp2">t</font><span class="hcp4">c0</span> 
+ possono risultare zone particolarmente lunghe per le quali il calcolo 
+ dello scorrimento deve essere effettuato con maggiore precisione. Sono 
+ disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 al tratto in cui</span> <font face="Symbol" class="hcp2"><span class="hcp1">t</span></font> <span class="hcp1">&gt;</span> 
+	 <font face="Symbol" class="hcp2"><span class="hcp1">t</span></font><span class="hcp4"><span class="hcp1">c0</span></span>: 
+	 il tratto in cui <font face="Symbol" class="hcp2">t</font> 
+	 &gt; <font face="Symbol" class="hcp2">t</font><span class="hcp4">c0</span> non viene suddiviso ulteriormente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: il tratto viene diviso ed eventualmente staffato diversamente 
+	 in parti con lunghezza massima pari al valore assoluto di quanto inserito. 
+	 Ad esempio specificando 60 vengono create un numero di suddivisioni 
+	 sufficienti a realizzare tratti di lunghezza inferiore a 60 cm.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Come 
+	 multiplo dell'altezza pari a</span>: un valore maggiore di zero indica 
+	 il numero di multipli dell'altezza della trave in funzione dei quali 
+	 calcolare la lunghezza massima del singolo tratto.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Raffittimento_staffe_all_estremita" 
+										 id="Raffittimento_staffe_all_estremita"></a>Raffittimento 
+ staffe all'estremità</span>: specificare se raffittire le staffe all'estremità 
+ della trave in assenza di prescrizioni di normativa. In caso affermativo 
+ occorre specificare il passo massimo delle staffe da utilizzare tra i 
+ passi ammissibili delle staffe.</p>
+<h2>Armatura a taglio e torsione</h2>
+<p><span class="hcp1"><a name="Elenco_diametri_ferri_piegati" 
+										 id="Elenco_diametri_ferri_piegati"></a>Elenco 
+ diametri ferri piegati</span>: specificare l'elenco dei diametri utilizzabili 
+ per la progettazione dei ferri piegati, separati da spazi. Sono ammessi 
+ anche valori non consecutivi (ad esempio 6 10).</p>
+<p><span class="hcp1"><a name="Angolo_di_piegatura" id="Angolo_di_piegatura"></a>Angolo 
+ di piegatura</span>: specificare l'angolo rispetto all'orizzontale da 
+ utilizzare per la piegatura dei sagomati e dei cavallotti.</p>
+<p><span class="hcp1"><a name="Posizione_primo_punto_di_piegatura" 
+										 id="Posizione_primo_punto_di_piegatura"></a>Posizione 
+ primo punto di piegatura</span>: specificare la distanza dal filo pilastro 
+ del punto in cui effettuare la prima piegatura dei ferri sagomati e dei 
+ cavallotti. Valori positivi vengono interpretati come multipli dell'altezza 
+ della trave (detratto il valore del copriferro per il calcolo delle lunghezze 
+ dei ferri), mentre valori negativi vengono interpretati come una distanza 
+ espressa in cm.</p>
+<p><span class="hcp1"><a name="Interasse_punti_di_piegatura" 
+										 id="Interasse_punti_di_piegatura"></a>Interasse 
+ punti di piegatura</span>: specificare la distanza tra i punti di piegatura 
+ dei ferri sagomati successivi. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 al multiplo dell'altezza</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Distanza</span></p></li>
+</ul>
+<p><span class="hcp1">Nota</span>: l'altezza della trave 
+ viene diminuita di due volte il valore del copriferro per il calcolo delle 
+ lunghezze dei ferri.</p>
+<p><span class="hcp1"><a name="Tipo_di_ferri_piegati" id="Tipo_di_ferri_piegati"></a>Tipo 
+ di ferri piegati</span>: specificare il tipo di ferri piegati da utilizzare. 
+ Premesso che per sagomati si intendono i ferri di campata rialzati sugli 
+ appoggi, mentre per cavallotti gli spezzoni sugli appoggi piegati e prolungati, 
+ sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 sagomati</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 cavallotti</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Sia 
+	 sagomati che cavallotti</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Ferri_di_parete" id="Ferri_di_parete"></a>Ferri 
+ di parete</span>: specificare se aggiungere i ferri sulla parete e sul 
+ fianco delle travi. È disponibile la seguente opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Max 
+	 distanza fra le barre</span><span class="hcp5">:</span> 
+	 specificare la massima distanza ammissibile fra i ferri da aggiungere 
+	 sulla parete e sul fianco delle travi. Inserendo ad esempio 25 cm, 
+	 in tutte le travi di altezza compresa fra 26 e 50 cm verrà aggiunto 
+	 un ferro di parete, in tutte le travi di altezza compresa fra 51 e 
+	 75 cm ne verranno aggiunti due, ecc.</p></li>
+</ul>
+<p>ModeSt considera questo dato nel seguente modo:</p>
+<p class="Normal3"><span class="hcp1">Travi senza torsione</span><span class="hcp5">: nella parete vengono inseriti ferri 
+ secondo quanto specificato, con diametro minimo fra quelli ammissibili. 
+ Nel fianco non vengono inseriti ferri.</span></p>
+<p class="Normal3"><span class="hcp1">Travi con torsione</span><span class="hcp5">: nella parete viene inserito il numero 
+ minimo di ferri specificato, aumentandone il numero e determinandone il 
+ diametro se necessario. Nel fianco i ferri vengono inseriti solo se questo 
+ parametro lo consente. In caso contrario l'area di ferro necessaria per 
+ torsione viene ridistribuita sugli altri lati dell'ala della sezione.</span></p>
+<p><span class="hcp1"><a name="Elenco_diametri_ferri_di_parete" 
+										 id="Elenco_diametri_ferri_di_parete"></a>Elenco 
+ diametri ferri di parete</span>: specificare l'elenco dei diametri utilizzabili 
+ per la progettazione dei ferri di parete, di fianco e di suola, separati 
+ da spazi. Sono ammessi anche valori non consecutivi (ad esempio 6 10).</p>
+<p><span class="hcp1"><a name="Elenco_diametri_staffe_orizzontali" 
+										 id="Elenco_diametri_staffe_orizzontali"></a>Elenco 
+ diametri staffe orizzontali</span>: specificare l'elenco dei diametri 
+ utilizzabili per la staffatura dell'ala di sezioni a T o a L, separati 
+ da spazi. Sono ammessi anche valori non consecutivi (ad esempio 6 10).</p>
+<h2>Parametri di disegno</h2>
+<p><span class="hcp1"><a name="Copriferro_per_calcolo_lunghezza_ferri" 
+										 id="Copriferro_per_calcolo_lunghezza_ferri"></a>Copriferro 
+ per calcolo lunghezza ferri</span>: specificare il valore del copriferro 
+ per calcolare la lunghezza dei ferri.&#160;Si intende l'effettivo spessore 
+ del calcestruzzo fra il bordo esterno del pilastro e il bordo del ferro.</p>
+<p><span class="hcp1"><a name="Risvolto_ferri_superiori" 
+										 id="Risvolto_ferri_superiori"></a>Risvolto 
+ ferri superiori</span>: specificare se risvoltare i ferri superiori, ovviamente 
+ se non vengono risvoltati i ferri non viene garantito l'ancoraggio. Sono 
+ disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: specificare la lunghezza dei risvolti dei ferri superiori 
+	 che vengono ancorati nel pilastro (ad esempio al termine della travata 
+	 o in corrispondenza di discontinuità di sezione). ModeSt controlla 
+	 automaticamente che il risvolto non sia superiore all'altezza della 
+	 trave.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 all'altezza della trave</span>: permette di eseguire risvolti di lunghezza 
+	 pari all'altezza della trave.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Risvolto_ferri_inferiori" 
+										 id="Risvolto_ferri_inferiori"></a>Risvolto 
+ ferri inferiori</span>: questo parametro ha lo stesso significato del 
+ precedente, con riferimento ai ferri inferiori della travata.</p>
+<p><span class="hcp1"><a name="Risvolto_ferri_laterali" id="Risvolto_ferri_laterali"></a>Risvolto 
+ ferri laterali</span>: specificare se risvoltare i ferri di parete, di 
+ fianco e di suola; ovviamente se non vengono risvoltati i ferri non viene 
+ garantito l'ancoraggio. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: specificare la lunghezza dei risvolti dei ferri di parete, 
+	 di fianco e di suola. ModeSt controlla automaticamente che il risvolto 
+	 non sia superiore alla larghezza della trave.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 alla larghezza della trave</span>: permette di eseguire risvolti di 
+	 lunghezza pari alla larghezza della trave.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Magrone" id="Magrone"></a>Magrone</span>: 
+ specificare se disegnare il magrone. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Allargamento 
+	 laterale</span>: specificare l'allargamento laterale del magrone sotto 
+	 le travi di fondazione. Inserendo 0 il magrone viene considerato largo 
+	 come le basi delle travi stesse.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Altezza 
+	 magrone</span>: specificare l'altezza del magrone sotto le travi di 
+	 fondazione.</p></li>
+</ul>
+<h2><a name="Dati_per_progettazione_interattiva_sezioni"></a>Dati per progettazione 
+ interattiva sezioni</h2>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; border-collapse: separate; 
+		 border-collapse: separate;" cellspacing="1" width="100%" border="1">
+	<tr>
+		<td style="width:100%;" class="hcp13"><p><span class="hcp1">IMPORTANTE</span>: questi dati e quelli 
+		 relativi agli stati limite vengono utilizzati solamente se effettua 
+		 la progettazione interattiva di sezioni caratterizzate da membratura 
+		 di tipo <span class="hcp1">Trave</span>. Non vengono 
+		 effettuate verifiche di stabilità.</p></td>
+	</tr>
+</table>
+<p><span class="hcp1"><a name="Copriferro_reale_al_bordo_staffa" 
+										 id="Copriferro_reale_al_bordo_staffa"></a>Copriferro 
+ reale al bordo staffa</span>: specificare il valore del copriferro per 
+ il posizionamento delle staffe. Si intende l'effettivo spessore del calcestruzzo 
+ fra il bordo esterno e il bordo della staffa.</p>
+<p><span class="hcp1"><font size="2" class="hcp16"><a 
+	 name="Diametro_staffa_teorica" id="Diametro_staffa_teorica"></a></font>Diametro 
+ staffa teorica</span>: specificare il diametro teorico della staffa per 
+ consentire il posizionamento reale dei ferri anche in assenza di una staffatura 
+ reale. In questo modo sarà possibile operare verifiche con la reale posizione 
+ dei ferri anche quando non si intendono effettuare verifiche a taglio.</p>
+<p><a name="Distanza_fra_ferri_su_più_strati"></a><span class="hcp1">Distanza 
+ fra ferri su più strati</span>: indicare la distanza che deve intercorrere 
+ fra ferri disposti su più strati. Non si intende la distanza fra i baricentri 
+ dei ferri, ma l'effettiva distanza netta fra le barre. Il programma gestisce 
+ in modo automatico la variazione dei diametri dei ferri e ne ricalcola 
+ di conseguenza la posizione.</p>
+<p><a name="Verifica_con_barre_in_posizione_teorica" id="Verifica_con_barre_in_posizione_teorica"></a><span class="hcp1">Verifica con barre in posizione teorica</span>: 
+ specificare se eseguire le verifiche considerando l'effettiva posizione 
+ delle barre, calcolata considerando il copriferro al bordo staffa, il 
+ diametro della staffa e il diametro del ferro, o se debbano essere eseguite 
+ con le posizioni teoriche, in cui tutti i ferri sono considerati ad una 
+ distanza dal bordo della sezione pari al <a href="#Copriferro_teorico_superiore" class="hcp10">Copriferro 
+ teorico superiore</a> e al <a href="#Copriferro_teorico_inferiore" class="hcp10">Copriferro 
+ teorico inferiore</a> specificato.</p>
+<p><font size="2" class="hcp16"><span class="hcp1"><a 
+	 name="Verifiche_a_pressoflessione" id="Verifiche_a_pressoflessione"></a></span><span 
+	 style="font-weight: bold; font-size: 10pt;">Verifiche a pressoflessione</span><span class="hcp17">:</span></font> <span class="hcp17">specificare 
+ se effettuare le verifiche a pressoflessione o a flessione semplice (indipendentemente 
+ dalla presenza o meno di sforzo normale fra le sollecitazioni).</span></p>
+<p><font size="2" class="hcp16"><span class="hcp1"><a 
+	 name="Verifiche_a_flessione_pressoflessione_retta" id="Verifiche_a_flessione_pressoflessione_retta"></a>Verifiche 
+ a flessione/pressoflessione retta</span><span class="hcp17">: 
+ specificare se effettuare</span></font> le verifiche a flessione o a pressoflessione 
+ retta. In questo caso i momenti My e Mz (e relativi Tz e Ty) vengono considerati 
+ separatamente e solo se specificati nelle opzioni successive. Se deselezionata 
+ vengono effettuate le verifiche a flessione o a pressoflessione deviata 
+ ed i momenti My e Mz (e relativi Tz e Ty) vengono considerati agenti contemporaneamente. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><a name="Considera_My" id="Considera_My"></a><span class="hcp1">Considera My</span>: specificare se si 
+	 desiderano le verifiche per il momento My (e taglio Tz).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><a name="Considera_Mz" id="Considera_Mz"></a><span class="hcp1">Considera Mz</span>: specificare se si 
+	 desiderano le verifiche per il momento Mz (e taglio Ty).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><a name="Considera_My_Mz" 
+												 id="Considera_My_Mz"></a><span class="hcp1">Considera My e Mz</span>: specificare se 
+	 si desiderano le verifiche sia per i momenti My che Mz (e taglio Tz 
+	 e Ty).</p></li>
+</ul>
+<p><span class="hcp1"><font size="2" class="hcp16"><span class="hcp1"><a name="Modalita_di_calcolo_Vrdu" id="Modalita_di_calcolo_Vrdu"></a></span></font>Modalità 
+ di calcolo Vrdu</span>: il calcolo della resistenza a taglio agli stati 
+ limite nel caso di flessione deviata viene effettuato come indicato in 
+ <a href="Stati_limite_-_Verifiche_a_taglio.htm" class="hcp10">Verifiche 
+ a Taglio</a>, con le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 Vrdu minimo</span>: viene assunta la minima resistenza a taglio fra 
+	 quelle ipotizzabili.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 Vrdu calcolato in corrispondenza di bw minimo</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 Vrdu calcolato in corrispondenza di bw medio</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 Vrdu calcolato in corrispondenza di bw massimo</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Considera_sempre_Af_Staffe_non_proiettata_in_direzione_del_taglio" 
+	 id="Considera_sempre_Af_Staffe_non_proiettata_in_direzione_del_taglio"></a>Considera 
+	 sempre Af Staffe non proiettata in direzione del taglio</span>: specificare 
+	 se l'area resistente delle staffe (calcolata come somma delle aree 
+	 delle staffe intercettate dalla fibra di verifica) debba essere ridotta 
+	 considerandone solo la componente nella direzione ortogonale all'asse 
+	 neutro. Nel progetto col metodo delle tensioni ammissibili l'area 
+	 viene sempre ridotta.</p></li>
+</ul>
+<p><a name="Integrare_lo_scorrimento_lungo_il_tratto" id="Integrare_lo_scorrimento_lungo_il_tratto"></a><span class="hcp1">Integrare lo scorrimento lungo il tratto</span>: 
+ poiché risulterebbe troppo a favore di sicurezza la valutazione della 
+ tensione nelle staffe in base allo scorrimento unitario agente nella sezione 
+ verificata, il programma valuta la variazione di scorrimento in base alla 
+ variazione del taglio ed estrapolandone i valori ne effettua l'integrazione, 
+ in modo da valutare la tensione nelle staffe con riferimento ad un tratto 
+ di asta di lunghezza finita specificata. Viene considerato lo scorrimento 
+ agente in un tratto di lunghezza specificata, centrato sulla sezione verificata. 
+ Agli estremi dell'asta il tratto viene considerato completamente a destra 
+ (o sinistra) della sezione in esame. Se deselezionata non viene effettuata 
+ l'integrazione e la tensione nelle staffe viene valutata con riferimento 
+ allo scorrimento unitario.</p>
+<h2>Dati per progettazione interattiva agli stati limite</h2>
+<p><span class="hcp1"><a name="Condizioni_ambientali" id="Condizioni_ambientali"></a>Condizioni 
+ ambientali</span>: indicare le condizioni ambientali secondo la normativa 
+ Italiana per determinare i fattori di sicurezza negli stati limiti d'esercizio:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Ordinarie</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Aggressive</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Molto 
+	 aggressive</span></p></li>
+</ul>
+<p class="IndentBullet1"><span class="hcp1"><a name="Scelta_cemento" 
+															 id="Scelta_cemento"></a>Scelta 
+ cemento</span>: cliccando sul bottone &quot;Scelta cemento&quot;, sono 
+ accessibili all'utente le caratteristiche dei cementi relativi al produttore 
+ selezionato nella casella di riepilogo a discesa. Tecnisoft fornisce i 
+ dati relativi ai cementi di produzione industriale come uno strumento 
+ di utilità secondo le specifiche fornite dai relativi produttori, e non 
+ si assume alcuna responsabilità circa l'effettiva rispondenza alle specifiche 
+ di normativa. Nella tabella sono riportati i prodotti da utilizzare in 
+ funzione della classe d'esposizione, sono anche indicati l'ambiente con 
+ la sua descrizione, il massimo rapporto acqua/cemento e la minima resistenza 
+ del calcestruzzo. Cliccando sul nome del prodotto è possibile collegarsi 
+ al sito Internet del produttore per avere maggiori informazioni sulle 
+ sue caratteristiche.</p>
+<p><span class="hcp1"><a name="Usa_dominio_N-M_per_flessioni_rette" 
+										 id="Usa_dominio_N-M_per_flessioni_rette"></a>Usa 
+ dominio N-M per flessioni rette</span>: nel caso in cui le sollecitazioni 
+ siano rette (My tutti nulli o Mz tutti nulli in tutte le CC) e la sezione 
+ sia simmetrica rispetto al piano di sollecitazione, indicare se vadano 
+ effettuate le verifiche allo stato limite ultimo considerando il dominio 
+ N-My (o N-Mz) anziché il dominio a sforzo normale costante. Se la sezione 
+ risulta non simmetrica per geometria o per posizioni e/o diametri dei 
+ ferri verrà in ogni caso effettuata la verifica considerando il dominio 
+ a sforzo normale costante. Nel caso in cui venga utilizzato per la verifica 
+ il dominio N-My o il dominio N-Mz, specificare come deve essere effettuato 
+ il calcolo della sicurezza:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Ricerca 
+	 della sicurezza a sforzo normale costante</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Ricerca 
+	 della sicurezza eccentricità con costante</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Controllo_rapporto_x_d" id="Controllo_rapporto_x_d"></a>Controllo 
+ rapporto X/D</span>: specificare se deve essere effettuato il controllo 
+ di normativa relativo al rapporto X/D fra la posizione dell'asse neutro 
+ e l'altezza utile della sezione.</p>
+<p><span class="hcp1"><a name="Classificazione_barre_tese_compresse" 
+										 id="Classificazione_barre_tese_compresse"></a>Classificazione 
+ barre tese/compresse</span>: in numerose verifiche interviene la valutazione 
+ dell'area di ferro teso (ad esempio nel calcolo della resistenza ultima 
+ a taglio) e/o dell'area di ferro compressa (ad esempio nel calcolo della 
+ capacità in termini di rotazione). Nel caso più generale possono risultare 
+ &quot;tese&quot; o &quot;compresse&quot; armature molto vicine all'asse 
+ neutro ed il loro conteggio può quindi falsare le relative verifiche. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 le barre con deformazione percentuale rispetto alla barra più tesa/compressa 
+	 non inferiore a</span>: specificare la percentuale della deformazione 
+	 della barra più tesa/compressa in assoluto affinché le barre con deformazione 
+	 al disotto del valore specificato siano considerate allo stesso modo. 
+	 Ad esempio specificando 30% verranno considerate tese tutte quelle 
+	 barre la cui deformazione sia almeno il 30% della deformazione della 
+	 barra più tesa della sezione e analogamente per quelle compresse.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">In 
+	 funzione della deformazione</span>: verranno considerate tese o compresse 
+	 tutte le barre con deformazione positiva o negativa.</p></li>
+</ul>
+<h2>Dati per verifiche di resistenza al fuoco</h2>
+<p><span class="hcp1"><a name="Tempo_di_verifica" id="Tempo_di_verifica"></a>Tempo 
+ di verifica (REI)</span>: indicare il tempo dall'inizio dell'applicazione 
+ dell'azione termica in cui devono essere eseguite le verifiche di resistenza 
+ delle sezioni.</p>
+<p><span class="hcp1"><a name="Dimensione_MESH" id="Dimensione_MESH"></a>Dimensione 
+ MESH</span>: indicare la dimensione della griglia dello schema alle differenze 
+ finite utilizzato per l'analisi di propagazione del calore all'interno 
+ della sezione.</p>
+<p><span class="hcp1"><a name="Passo_di_calcolo" id="Passo_di_calcolo"></a>Passo 
+ di calcolo</span>: indicare il passo temporale dello schema alle differenze 
+ finite utilizzato per l'analisi di propagazione del calore all'interno 
+ della sezione.</p>
+<p><span class="hcp1"><a name="Temperatura_ambiente" id="Temperatura_ambiente"></a>Temperatura 
+ ambiente</span>: indicare la temperatura [°C] dell'ambiente non esposto 
+ all'azione termica, tale valore è anche quello considerato come iniziale 
+ all'interno della sezione.</p>
+<p><span class="hcp1"><a name="Coefficiente_di_convezione_a_temperatura_ambiente" 
+										 id="Coefficiente_di_convezione_a_temperatura_ambiente"></a>Coefficiente 
+ di convezione a temperatura ambiente</span>: indicare il valore del coefficiente 
+ di convezione per superfici non esposte all'azione termica, ipotizzando 
+ per esse che il flusso termico netto sia pari al solo flusso di calore 
+ per convezione, cioè considerando compresi in esso anche gli effetti del 
+ trasferimento di calore per irraggiamento.</p>
+<p><span class="hcp1"><a name="Gruppo_di_esigenza1" id="Gruppo_di_esigenza1"></a>Calcestruzzo</span>: 
+ indicare le caratteristiche del calcestruzzo utili a desumere, secondo 
+ le prescrizioni della normativa, sia i dati per l'analisi di propagazione 
+ del calore all'interno della sezione (conducibilità termica, calore specifico 
+ e densità), che i dati utili ad effettuare le verifiche di resistenza 
+ delle sezioni.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;"><a 
+	 name="Tipo_di_aggregati" id="Tipo_di_aggregati"></a>Tipo di aggregati<span class="hcp5">: indicare se verranno utilizzati aggregati 
+	 silicei o calcarei.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;"><a 
+	 name="Massa_volumica_iniziale" id="Massa_volumica_iniziale"></a>Massa 
+	 volumica iniziale<span class="hcp5">: indicare la 
+	 massa volumica del calcestruzzo alla temperatura di 20 °C. Tale valore 
+	 permette di determinare la variazione della massa volumica con la 
+	 temperatura (si veda il punto (3) del §3.3.2 di UNI EN 1992-1-2 Eurocodice 
+	 2 Progettazione delle strutture di calcestruzzo Parte 1-2: Regole 
+	 generali - Progettazione strutturale contro l'incendio).</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Umidita_iniziale" id="Umidita_iniziale"></a>Umidità iniziale</span>: 
+	 indicare il contenuto di umidità. Tale valore permette di calcolare 
+	 il calore specifico (vedi §3.3.2 di UNI EN 1992-1-2 Eurocodice 2 Progettazione 
+	 delle strutture di calcestruzzo Parte 1-2: Regole generali - Progettazione 
+	 strutturale contro l'incendio).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Fattore_di_interpolazione_conducibilita" id="Fattore_di_interpolazione_conducibilita"></a>Fattore 
+	 di interpolazione conducibilità</span>: indicare il fattore che permette 
+	 di ottenere il valore della conduttività termica interpolando i valori 
+	 indicati dalla normativa come limite inferiore e superiore (vedi §3.3.3 
+	 di UNI EN 1992-1-2 Eurocodice 2 Progettazione delle strutture di calcestruzzo 
+	 Parte 1-2: Regole generali - Progettazione strutturale contro l'incendio). 
+	 Indicando 0 la conduttività termica è pari al limite inferiore, indicando 
+	 1 è pari al limite superiore.</p></li>
+</ul>
+<h2>Dati per verifiche FRP</h2>
+<p><span class="hcp1">Rinforzo longitudinale</span></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Nome_FRP_long" id="Nome_FRP_long"></a>Nome</span>: specificare 
+	 il nome del tipo di rinforzo longitudinale da riportare nel disegno.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Tipo_di_fibra_resina_long" id="Tipo_di_fibra_resina_long"></a>Tipo 
+	 di fibra/resina</span>: indicare il tipo di fibra/resina necessaria 
+	 per determinare il fattore di conversione per effetti di lunga durata 
+	 &#951;<span class="hcp4">1</span> della Tabella 3-3 della 
+	 CNR DT 200 R1/2012:</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Vetro/Epossidica</span></p></li>
+	<li class="p-IndentBullet2" style="font-weight: bold;"><p class="IndentBullet2">Arammidica/Epossidica</p></li>
+	<li class="p-IndentBullet2" style="font-weight: bold;"><p class="IndentBullet2">Carbonio/Epossidica</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Ffk_long" id="a2"></a>Resistenza caratteristica (f</span><span class="hcp3">fk</span><span class="hcp1">)</span>: 
+	 specificare il valore della resistenza caratteristica del rinforzo 
+	 di FRP.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Ef_long" id="a1"></a>Modulo elastico (E</span><span class="hcp3">f</span><span class="hcp1">)</span>: 
+	 specificare il valore del modulo elastico del rinforzo di FRP.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="EpsilonFK_long" id="a3"></a>Deformazione caratteristica a rottura 
+	 per trazione (</span><span class="hcp18">e</span><span class="hcp3">fk</span><span class="hcp1">)</span>: 
+	 specificare il valore della deformazione caratteristica a rottura 
+	 per trazione del rinforzo di FRP.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Tf_long" id="a4"></a>Spessore equivalente (t</span><span class="hcp3">f</span><span class="hcp1">)</span>: 
+	 specificare il valore dello spessore equivalente del rinforzo di FRP.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Sistemi_di_rinforzo_long" id="Sistemi_di_rinforzo_long"></a>Sistemi 
+	 di rinforzo</span>: indicare il tipo di sistema di rinforzo:</p></li>
+</ul>
+<ul>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">Preformati</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">Impregnati 
+	 in situ</p></li>
+</ul>
+<p><span class="hcp1"><span class="hcp1">R</span>inforzo 
+ trasversale</span></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Nome_FRP_trasv" id="Nome_FRP_trasv"></a>Nome</span>: specificare 
+	 il nome del tipo di rinforzo trasversale da riportare nel disegno.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Tipo_di_fibra_resina_trasv" id="Tipo_di_fibra_resina_trasv"></a>Tipo 
+	 di fibra/resina</span>: indicare il tipo di fibra/resina necessaria 
+	 per determinare il fattore di conversione per effetti di lunga durata 
+	 &#951;<span class="hcp4">1</span> della Tabella 3-3 della 
+	 CNR DT 200 R1/2012:</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Vetro/Epossidica</span></p></li>
+	<li class="p-IndentBullet2" style="font-weight: bold;"><p class="IndentBullet2">Arammidica/Epossidica</p></li>
+	<li class="p-IndentBullet2" style="font-weight: bold;"><p class="IndentBullet2">Carbonio/Epossidica</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Ffk_trasv" id="a12"></a>Resistenza caratteristica (f</span><span class="hcp3">fk</span><span class="hcp1">)</span>: 
+	 specificare il valore della resistenza caratteristica del rinforzo 
+	 di FRP.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Ef_trasv" id="a14"></a>Modulo elastico (E</span><span class="hcp3">f</span><span class="hcp1">)</span>: 
+	 specificare il valore del modulo elastico del rinforzo di FRP.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="EpsilonFK_trasv" id="a15"></a>Deformazione caratteristica a 
+	 rottura per trazione (</span><span class="hcp18">e</span><span class="hcp3">fk</span><span class="hcp1">)</span>: 
+	 specificare il valore della deformazione caratteristica a rottura 
+	 per trazione del rinforzo di FRP.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Tf_trasv" id="a16"></a>Spessore equivalente (t</span><span class="hcp3">f</span><span class="hcp1">)</span>: 
+	 specificare il valore dello spessore equivalente del rinforzo di FRP.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Sistemi_di_rinforzo_trasv" id="Sistemi_di_rinforzo_trasv"></a>Sistemi 
+	 di rinforzo</span>: indicare il tipo di sistema di rinforzo:</p></li>
+</ul>
+<ul>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">Preformati</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">Impregnati 
+	 in situ</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Modalita_di_carico" id="Modalita_di_carico"></a>Modalità di 
+	 carico</span>: indicare la modalità di carico necessaria per determinare 
+	 il fattore di conversione per effetti di lunga durata &#951;<span class="hcp4">1</span> 
+	 della Tabella 3-3 della CNR DT 200 R1/2012:</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Lungo 
+	 termine</span></p></li>
+	<li class="p-IndentBullet2" style="font-weight: bold;"><p class="IndentBullet2">Ciclico</p></li>
+</ul>
+<p><span class="hcp1"><a name="GammaFD" id="a17"></a>Coeff. 
+ parziale SLU di distacco&#160;(</span><span class="hcp18">g</span><span class="hcp3">f,d</span><span class="hcp1">)</span>: 
+ specificare il valore del coefficiente parziale utilizzato nelle verifiche 
+ di sicurezza nei confronti del distacco dal supporto (par. 4.1.2 della 
+ CNR DT 200 R1/2012). I valori sono riportati nel par. 3.4.1 della CNR 
+ DT 200 R1/2012: &quot;<span class="hcp7">Per il solo Stato 
+ Limite Ultimo di distacco dal supporto sono invece suggeriti valori di</span> 
+ <span class="hcp6">g</span><span class="hcp4">m</span> 
+ <span class="hcp7">=</span> <span class="hcp6">g</span><span class="hcp4">fd</span> <span class="hcp7">variabili, 
+ a giudizio del progettista, da 1.20 a 1.50 in funzione della maggiore 
+ o minore possibilità di prevedere, per la specifica applicazione, l'effettivo 
+ comportamento del composito nei riguardi del distacco dal supporto.</span>&quot;</p>
+<p><span class="hcp1"><a name="EtaA" id="a13"></a>Fattore 
+ di conversione ambientale&#160;(</span><span class="hcp18">h</span><span class="hcp3">a</span><span class="hcp1">)</span>: 
+ specificare il valore del fattore di conversione ambientale utilizzato 
+ sia nella stima della pressione laterale di confinamento sia nel calcolo 
+ della deformazione massima nel rinforzo di FRP (<span class="hcp6">e</span><span class="hcp4">fd</span>) utilizzata nelle verifiche 
+ a flessione e pressoflessione. I valori sono riportati nella Tabella 3-2 
+ del par. 3.5.1 della CNR DT 200 R1/2012.</p>
+<p><span class="hcp1"><a name="Rc" id="a18"></a>Raggio di 
+ arrotondamento spigolo&#160;(r</span><span class="hcp3">c</span><span class="hcp1">)</span>: specificare il valore del raggio 
+ di arrotondamento degli spigoli della sezione rinforzata. Nel par. 4.8.2.2 
+ della CNR DT 200 R1/2012 viene indicato che &quot;<span class="hcp7">Il 
+ raggio di curvatura, r</span><span style="font-style: italic; vertical-align: Sub;">c</span><span class="hcp7">, dell'arrotondamento deve essere almeno 
+ pari a 20 mm</span>&quot;.</p>
+<p><span class="hcp7"><a name="Kq" id="a19"></a></span><span class="hcp1">Coeff. condizione di carico&#160;(K</span><span class="hcp3">q</span><span class="hcp1">)</span>: 
+ specificare il valore del coefficiente di condizione di carico utilizzato 
+ nelle verifiche di resistenza allo stato limite ultimo per distacco intermedio 
+ (modo 2) par. 4.1.4 della CNR DT 200 R1/2012: &quot;[omissis] <span class="hcp7">da 
+ assumersi pari a 1.25 per prevalenti carichi distribuiti e 1 in tutti 
+ gli altri casi</span>&quot;.</p>
+</body>
+</html>

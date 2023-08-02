@@ -1,0 +1,124 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progetto armatura teorica a punzonamento</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { vertical-align:Sub; }
+span.hcp2 { font-weight:bold; }
+span.hcp3 { font-style:italic;
+vertical-align:Sub; }
+span.hcp4 { font-style:italic; }
+font.hcp5 { font-family:Symbol; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progetto armatura teorica a punzonamento</h1>
+<p>Il progetto dell'armatura a punzonamento viene effettuato in tutti i 
+ nodi in cui incidono pilastri con perimetro interamente compreso all'interno 
+ della platea e non giacente sul bordo libero.</p>
+<p>Se sul nodo incidono anche aste orizzontali o altri elementi bidimensionali 
+ non appartenenti alla platea oppure il pilastro si trova in corrispondenza 
+ del cambio di sezione della platea/soletta la verifica a punzonamento 
+ non viene effettuata.</p>
+<p>ModeSt è in grado di riconoscere sforzi anomali di punzonamento (ad 
+ esempio platee con tensione sul terreno preponderante rispetto all'azione 
+ del pilastro), li segnala e progetta comunque correttamente l'eventuale 
+ armatura a punzonamento con ferri invertiti.</p>
+<p>Nel caso di strutture calcolate secondo il D.M. 17/01/18 l'armatura 
+ a punzonamento viene calcolata utilizzando la metodologia riportata nel 
+ par. 6.4 del EC2. Il perimetro di verifica u<span class="hcp1">1</span> 
+ viene calcolato in funzione di quanto specificato nei criteri di progetto 
+ (vedi <span class="hcp2"><a href="CriPlat.htm#Moltiplicatore_altezza_utile_per_valutare_perimetro_efficace_DM08">Moltiplicatore 
+ altezza utile per valutare perimetro efficace (D.M. 18)</a></span>). Il 
+ valore del coefficiente <span style="font-family: Symbol, serif;">b</span>, 
+ dell'espressione 6.38, è determinato automaticamente dal programma. L'armatura 
+ a punzonamento, calcolata in conformità dell'espressione 6.52, può essere 
+ costituta da una sola fila di ferri piegati (il rapporto d/s<span class="hcp1">r</span> 
+ è assunto pari a 0.67) oppure da barre verticali disposte radialmente 
+ in funzione di quanto specificato nei criteri di progetto (vedi <span class="hcp2"><a href="CriPlat.htm#Tipo_di_armatura_a_punzonamento">Tipo 
+ di armatura a punzonamento</a></span>).</p>
+<p>Il perimetro di verifica u<span class="hcp1">out</span><span class="hcp3"> </span>(calcolato 
+ con l'espressione 6.54 del EC2), in cui non è più necessaria l'armatura 
+ a punzonamento, è rappresentato, nell'ambiente di progettazione interattiva 
+ soletta/platea, con una linea tratteggiata di colore blu e quello arretrato 
+ di 1.5d con una linea tratteggiata di colore rosso.</p>
+<p>Nel caso di barre verticali disposte radialmente è possibile specificare 
+ nei criteri di progetto (vedi <span class="hcp2"><a href="CriPlat.htm#Tipo_di_armatura_a_punzonamento">Tipo 
+ di armatura a punzonamento</a></span>) se l'armatura debba essere collocata 
+ fino ad un perimetro distante kd dal perimetro di verifica u<span class="hcp1">out</span> 
+ &#160;come prescritto nel par. 6.4.5 del EC2 (caso A della figura 6.22): 
+ &quot;<span class="hcp4">Si raccomanda che il perimetro 
+ più lontano delle armature a taglio si collochi a una distanza non maggiore 
+ di kd all'interno di u</span><span class="hcp3">out</span><span class="hcp4"> ...</span>&quot;. Il valore di k adottato 
+ dal programma è 1.5.</p>
+<p>Nel caso di strutture calcolate secondo il D.M. 14/02/92 o il D.M. 16/01/96 
+ l'armatura a punzonamento viene calcolata ipotizzando una superficie di 
+ rottura a forma piramidale, con faccia superiore pari al perimetro d'ingombro 
+ del pilastro che provoca le tensioni di punzonamento e con facce inclinate 
+ secondo un angolo di 45°. Viene poi determinato nelle varie CC lo sforzo 
+ di punzonamento come differenza fra le azioni nei pilastri e nelle aste 
+ non orizzontali incidenti superiormente e inferiormente (considerando 
+ eventualmente anche le tensioni sul terreno sulla base inferiore della 
+ piramide di rottura). Gli sforzi tangenziali di punzonamento vengono determinati 
+ considerando <font face="Symbol" class="hcp5">t</font> 
+ = N/(L*H) dove N è l'azione di punzonamento, L è la lunghezza del perimetro 
+ medio delle facce valide della piramide di rottura e H è in funzione dell'altezza 
+ della platea specificabile dall'utente nei criteri di progetto (vedi <a 
+	 href="CriPlat.htm#Fattore_di_riduzione_altezza_soletta_platea"><span class="hcp2">Fattore di riduzione altezza soletta/platea</span></a> 
+ e <span class="hcp2"><a href="CriPlat.htm#Modifica_altezza_soletta_platea">Modifica 
+ altezza soletta/platea</a></span>). L'armatura a punzonamento viene calcolata 
+ e verificata nei casi seguenti:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">se <font face="Symbol" class="hcp5">t</font> 
+	 &gt; <font face="Symbol" class="hcp5">t</font><span class="hcp1">c0</span> nel caso di calcolo con metodo 
+	 delle tensioni ammissibili;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">se la resistenza a punzonamento 
+	 (calcolata in funzione della resistenza a trazione del calcestruzzo) 
+	 è inferiore alla sollecitazione di punzonamento nel caso di calcolo 
+	 con metodo degli stati limite secondo il D.M. 16/01/96.</p></li>
+</ul>
+<h2>Note</h2>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Per pilastri con forma concava 
+	 (ad esempio a L o a T) viene considerato il perimetro che rende convessa 
+	 la sezione, mentre per pilastri in acciaio è possibile indicare nei 
+	 criteri di progetto (vedi <span class="hcp2"><a href="CriPlat.htm#Allargamento_piastra_pilastri_in_acciaio">Allargamento 
+	 piastra pilastri in acciaio</a></span>) di quanto si allarga la piastra 
+	 di base rispetto all'ingombro del pilastro.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Vengono considerate valide 
+	 solo i lati del perimetro di verifica o le facce o le parti di facce 
+	 della piramide di rottura con distanza dal bordo libero della platea 
+	 inferiore a quanto specificato nei criteri di progetto (vedi <span class="hcp2"><a href="CriPlat.htm#Distanza_dal_bordo_libero">Distanza 
+	 dal bordo libero (D.M. 92/96)</a></span>). Si fa presente che per 
+	 calcoli eseguiti secondo il D.M. 17/01/18 la distanza dal bordo libero 
+	 è assunta pari a 0.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Per il calcolo delle armature 
+	 si suppone poi che lo sforzo di punzonamento si ripartisca sui lati 
+	 del perimetro di verifica o sulle varie facce della superficie piramide 
+	 di rottura in modo proporzionale alla lunghezza media.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nel caso di armatura a punzonamento 
+	 realizzata con barre verticali disposte radialmente viene riportato 
+	 in sequenza il numero delle serie, il numero delle barre per ogni 
+	 serie con indicato il diametro e l'altezza, la distanza radiale con 
+	 specificato, fra parentesi tonde, la distanza della prima barra dal 
+	 bordo del pilastro ed il numero e la distanza dell'intervallo fra 
+	 le barre (vedi figura di esempio).</p></li>
+</ul>
+<p style="text-align: center;"><img src="Quota_barre_punzonamento.png" alt="" style="border: none; margin-left: 5px; 
+									 margin-right: 0px; margin-top: 5px; 
+									 margin-bottom: 5px;" border="0"></p>
+</body>
+</html>

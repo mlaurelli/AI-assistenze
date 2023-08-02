@@ -1,0 +1,104 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Piastre di fondazione</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { mso-bidi-font-weight:bold; }
+span.hcp2 { font-weight:bold; }
+p.hcp3 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Piastra di fondazione</h1>
+<p>Si fa presente che qualora vengano assegnate piastre con uno o più irrigidimenti 
+ a sezioni non a I, Rettangolare cava o Circolare cava, ModeSt considera 
+ sempre una piastra priva di rinforzi. In questi casi le verifiche vengono 
+ effettuate considerando come colonna una sezione rettangolare di ingombro 
+ equivalente.</p>
+<p>È possibile posizionare 
+ i tirafondi in corrispondenza della mezzeria del lato della piastra indicando, 
+ in progettazione interattiva, un numero pari a 1 di forature in entrambe 
+ le direzioni X e Y.</p>
+<p><span class="hcp1">Per i pilastri con sezione 
+ Circolare cava è possibile scegliere la forma della piastra (circolare 
+ o rettangolare) utilizzando il parametro dei criteri di progetto</span> 
+ <span class="hcp2"><a href="Criteri%20di%20progetto%20reticolari%20in%20acciaio.htm#Forma_della_piastra">Forma 
+ della piastra</a></span><span class="hcp1">.</span>&#160;È 
+ possibile scegliere la disposizione della piastra <span class="hcp1">(</span>Ortogonale,<span class="hcp1"> </span>Verticale<span class="hcp1"> 
+ o </span>Orizzontale<span class="hcp1">) utilizzando 
+ il parametro dei criteri di progetto</span> <span class="hcp2"><a 
+	 href="Criteri%20di%20progetto%20reticolari%20in%20acciaio.htm#Disp_piastra_di_fondazione">Disposizione 
+ della piastra nel collegamento &quot;piastra di fondazione&quot;</a></span><span class="hcp1">.</span></p>
+<p>Nel caso di piastre eccentriche rispetto al baricentro della colonna 
+ le sollecitazioni vengono riportate nel baricentro della piastra.</p>
+<p>Le verifiche delle piastre di fondazione, attraverso un apposito criterio 
+ di progetto (vedi <a href="Criteri%20di%20progetto%20reticolari%20in%20acciaio.htm#Verifica_piastra_e_tirafondi_con_reazioni_vincolari">Verifica 
+ piastra e tirafondi con reazioni vincolari</a>), possono essere eseguite 
+ con le sollecitazioni dell'asta a cui viene assegnato il finale oppure 
+ con le reazioni vincolari del nodo. In entrambi i casi le saldature di 
+ attacco della colonna alla piastra vengono verificate in base alle sollecitazioni 
+ dell'asta. Nel caso di nodi di fondazione su cui insistono dei controventi 
+ (peraltro non disegnati) se la piastra è progettata in base alle sollecitazioni 
+ dell'asta questo può portare ad una evidente sottostima delle sollecitazioni 
+ agenti sulla piastra; si consiglia in questo caso di effettuare il progetto 
+ in base alle reazioni vincolari del nodo.</p>
+<p>La verifica dei tirafondi viene eseguita come la verifica di una sezione 
+ in calcestruzzo con dimensioni pari alla piastra di fondazione, armata 
+ con delle barre pari alla bullonatura adottata. A differenza delle normali 
+ sezioni in calcestruzzo, in questo caso attraverso un apposito criterio 
+ di progetto (vedi <a href="Criteri%20di%20progetto%20reticolari%20in%20acciaio.htm#Trascura_tirafondi_compressi">Trascura 
+ tirafondi compressi</a>) è possibile trascurare il contributo resistente 
+ delle barre compresse ai fini della verifica delle tensioni nel calcestruzzo.</p>
+<p>Si fa notare che nel caso di fondazioni interamente compresse con tirafondi 
+ con ancoraggio ad uncino la normativa non prescrive dei minimi di regolamento 
+ e quindi possono risultare dei tirafondi di lunghezza particolarmente 
+ corta, in questo caso attraverso un apposito criterio di progetto (vedi 
+ <a href="Criteri%20di%20progetto%20reticolari%20in%20acciaio.htm#Lunghezza minima infissione">Lunghezza 
+ minima d'infissione</a>) è possibile imporre una lunghezza minima d'infissione. 
+ In progettazione interattiva è ovviamente sempre possibile adattare tali 
+ lunghezze alle proprie preferenze. Quando i tirafondi sono con rosetta 
+ viene trascurata la resistenza per attrito e viene fatto assorbire lo 
+ sforzo di trazione nel tirafondo interamente alla rosetta.</p>
+<p>Nelle piastre circolari il momento flettente viene valutato considerando 
+ una piastra anulare incastrata sull'asta.</p>
+<p>Oltre alle verifiche dei tirafondi ed alle verifiche delle saldature 
+ dell'asta con la piastra di fondazione, vengono nei vari casi effettuati 
+ numerosi altri controlli:</p>
+<p class="hcp3">Piastre senza rinforzi</p>
+<p>Nel caso di sezioni NON a I e quindi assimilate a sezioni rettangolari 
+ di pari ingombro vengono effettuate per ognuno dei quattro lati della 
+ piastra le verifiche di una mensola incastrata alla colonna e soggetta 
+ al momento risultante dovuto alla tensione sul terreno ed alle azioni 
+ dei tirafondi nella zona interessata dal bordo della piastra. Come sezione 
+ resistente viene considerata la sezione totale eventualmente depurata 
+ dei fori dei tirafondi se ne esistono di tesi in quella zona.</p>
+<p>Nel caso di sezioni ad I dal lato delle ali si procede nello stesso 
+ modo, mentre dal lato dell'anima le verifiche laterali vengono omesse 
+ e sostituite con verifiche locali in cui per ogni tirafondo si valuta 
+ una distribuzione delle tensioni a 45° fino all'intersezione con le ali 
+ o con l'anima della colonna, per poi procedere ad una verifica della sezione 
+ rettangolare di dimensioni e sollecitazioni così individuate. Non vengono 
+ considerate eventuali interferenze fra le diverse zone di diffusione.</p>
+<p class="hcp3">Piastre con rinforzi</p>
+<p>Le verifiche a flessione sui quattro lati vengono effettuate considerando 
+ anche l'eventuale presenza degli irrigidimenti e sempre come mensole incastrate 
+ alla colonna.</p>
+<p>Nei quattro lati intorno alla colonna viene poi valutata la tensione 
+ media nel calcestruzzo e vengono calcolate le sollecitazioni e quindi 
+ le tensioni nella piastra immaginata come una trave su due o tre appoggi 
+ con mensole agli estremi, caricata da un carico distribuito. Nel caso 
+ di singolo rinforzo d'anima questa verifica non viene effettuata.</p>
+<p>In corrispondenza dei tirafondi vengono poi effettuate le verifiche 
+ locali considerando la diffusione fino ai bordi degli irrigidimenti in 
+ modo analogo a quanto riportato per le <a href="Flange_e_continuit&agrave;_con_flangia.htm">flange</a>.</p>
+</body>
+</html>

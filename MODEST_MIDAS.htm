@@ -1,0 +1,242 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>MODEST_MIDAS</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp3 { font-style:italic; }
+p.hcp4 { font-weight:bold; }
+p.hcp5 { margin-top:0pt;
+margin-bottom:0pt; }
+p.hcp6 { text-indent:24px;
+margin-top:0pt;
+margin-bottom:0pt; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Esportazione struttura per MIDAS</h1>
+<p>Dal menu dell'applicazione <span class="hcp1"><img src="../Icone/modest32.png" alt="" border="1" class="hcp2"></span> selezionando <span class="hcp1">Esporta</span> 
+ <span class="hcp3"><img src="../Icone/32/main_esporta32.png" alt="" border="1" class="hcp2"></span> e poi <span class="hcp1">Struttura per MIDAS</span> <span class="hcp3"><img src="../Icone/32/main_esporta_MIDAS32.png" alt="" border="1" class="hcp2"></span> è possibile 
+ esportare la struttura corrente per MIDAS.</p>
+<p class="MsoNormal">Il numero dei nodi, delle aste e degli elementi bidimensionali 
+ viene esportato con le seguenti regole:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Numero nodo MGT = Indice nodo 
+	 ModeSt + 1.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Numero asta MGT = Indice asta 
+	 ModeSt + 1.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Numero bidimensionale MGT 
+	 = Indice bidimensionale ModeSt + 1 + Indice massimo asta ModeSt.</p></li>
+</ul>
+<p>Per ogni nodo ed elemento è indicato come commento il numero assegnato 
+ in ModeSt, fra parentesi quadre.</p>
+<p>Le sezioni con tipologia diversa da quelle elencate in *SECTION sono 
+ esportate come una sezione fittizia.</p>
+<p>I carichi sulle aste di sezione 0 (purché non definiti nel sistema di 
+ riferimento locale) sono esportati come carichi nodali.</p>
+<p>I vincoli nodali tipo pseudo-plinto con rotazione libera sono esportati 
+ con rotazione bloccata.</p>
+<p>Il peso proprio è applicato direttamente come carico e non come tipo 
+ *SELFWEIGHT (non viene esportato il peso proprio per l'elemento WALL).</p>
+<p>Tutte le condizioni di carico elementari (CCE) sono esportate come STLDCASE 
+ di tipo D.</p>
+<p>Per esportare sezioni e materiali come indice di archivio è necessario 
+ indicare come commento il codice 1_NORM_ID. Ad esempio per la sezione 
+ il commento sarà &quot;1_UNI_HEA100&quot; mentre per i materiali sarà 
+ &quot;1_UNI(RC)_Rck35&quot; o &quot;1_EN(S)_S235&quot;.</p>
+<p>Non sono esportati: gli scostamenti dai fili fissi; le sezioni, i tipi 
+ di bidimensionali e i materiali definiti ma non utilizzati nel modello; 
+ le aste fittizie (sezione 0 -1 -2); i vincoli con coefficiente di sottofondo 
+ valutato in funzione della stratigrafia; i link su linea; gli integratori 
+ longitudinali e trasversali.</p>
+<p><span class="self-ref">Elenco delle entità esportabili e delle corrispondenze 
+ con ModeSt:</span></p>
+<table class="SimpleGridBlack" cellspacing="0px" width="750" align="center" bgcolor="#FFFFFF">
+	<col style="width: 30%;">
+	<col style="width: 70%;">
+	<tr class="t1Row">
+		<td><p class="hcp4">MGT</p></td>
+		<td><p class="hcp4">ModeSt</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">*UNIT</p></td>
+		<td><p class="hcp5">Unità di misura</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">*NODE</p></td>
+		<td><p class="hcp5">Nodo</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">*ELEMENT:</p></td>
+		<td><p class="hcp5">Elementi</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp6">BEAM</p></td>
+		<td><p class="hcp5">Asta con vincolo 
+		 assegnato</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp6">TRUSS</p></td>
+		<td><p class="hcp5">Asta con vincolo 
+		 biella</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp6">TENSTR</p></td>
+		<td><p class="hcp5">Asta con vincolo 
+		 biella solo resistente a trazione</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp6">COMPTR</p></td>
+		<td><p class="hcp5">Asta con vincolo 
+		 biella solo resistente a compressione</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp6">PLATE</p></td>
+		<td><p class="hcp5">Elemento bidimensionale</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp6">WALL</p></td>
+		<td><p class="hcp5">Elemento bidimensionale</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">*SECTION:</p></td>
+		<td><p class="hcp5">Sezioni</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp6">SB</p></td>
+		<td><p class="hcp5">Rettangolare</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp6">SR</p></td>
+		<td><p class="hcp5">Circolare</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp6">B</p></td>
+		<td><p class="hcp5">Rettangolare 
+		 cava</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp6">P</p></td>
+		<td><p class="hcp5">Circolare cava</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp6">H</p></td>
+		<td><p class="hcp5">I stondata</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp6">CS</p></td>
+		<td><p class="hcp5">C stondata</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp6">L</p></td>
+		<td><p class="hcp5">L</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp6">T(UDT)</p></td>
+		<td><p class="hcp5">T</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">*THICKNESS</p></td>
+		<td><p class="hcp5">Spessore dell'elemento 
+		 bidimensionale</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">*MATERIAL</p></td>
+		<td><p class="hcp5">Materiale</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">*STLDCASE (D)</p></td>
+		<td><p class="hcp5">Elenco delle 
+		 condizioni di carico elementari</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">*USE-STLD</p></td>
+		<td><p class="hcp5">Condizione 
+		 di carico elementare</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">*CONLOAD</p></td>
+		<td><p class="hcp5">Carico nodale 
+		 di tipo &quot;Carico concentrato&quot;</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">*SPDISP</p></td>
+		<td><p class="hcp5">Carico nodale 
+		 di tipo &quot;Cedimento vincolare&quot;</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">*BEAMLOAD</p></td>
+		<td><p class="hcp5">Carichi asta</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp6">UNILOAD</p></td>
+		<td><p class="hcp5">Carico asta 
+		 generico</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp6">CONLOAD</p></td>
+		<td><p class="hcp5">Carico asta 
+		 concentrato in un punto (Forza)</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp6">CONMOMENT</p></td>
+		<td><p class="hcp5">Carico asta 
+		 concentrato in un punto (Momento)</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">*PRESSURE</p></td>
+		<td><p class="hcp5">Carico sull'elemento 
+		 bidimensionale di tipo &quot;uniformemente distribuito&quot;</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">*ELTEMPER</p></td>
+		<td><p class="hcp5">Carico asta/elemento 
+		 bidimensionale di tipo &quot;Dilatazione termica uniforme&quot;</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">*THERGRAD</p></td>
+		<td><p class="hcp5">Carico asta/elemento 
+		 bidimensionale di tipo &quot;Gradiente di temperatura&quot;</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">*CONSTRAINT</p></td>
+		<td><p class="hcp5">Vincoli nodali</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">*FRAME-RLS</p></td>
+		<td><p class="hcp5">Vincoli asta</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">*SPRING</p></td>
+		<td><p class="hcp5">Aste su suolo 
+		 elastico alla Winkler</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">*SURFACE-SPRING</p></td>
+		<td><p class="hcp5">Elementi bidimensionali 
+		 su suolo elastico&#160;alla Winkler</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">*NODALMASS</p></td>
+		<td><p class="hcp5">Masse nodali</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">*STORY</p></td>
+		<td><p class="hcp5">Quote degli 
+		 impalcati</p></td>
+	</tr>
+</table>
+</body>
+</html>

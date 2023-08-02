@@ -1,0 +1,97 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Caratterizzazione degli strati</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { vertical-align:Sub; }
+span.hcp2 { font-weight:bold; }
+span.hcp3 { font-family:Symbol, serif; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Introduzione</h1>
+<p>La caratterizzazione geotecnica avviene nell'ambito della definizione 
+ della colonna stratigrafica, una volta che ad ogni strato è associato 
+ lo stato tensionale in sito (determinato col calcolo delle pressioni litostatiche).</p>
+<p>Se alla colonna in oggetto sono state assegnate prove in sito allora 
+ la determinazione dei parametri geotecnici dei singoli strati può essere 
+ fatta attraverso l'utilizzo di una serie di relazioni che legano le misure 
+ che compongono le prove ai valori caratteristici dei parametri geotecnici.</p>
+<p>Tale operazione prevede la scelta, nei criteri di progetto specifici 
+ degli strati, delle relazioni da utilizzare per calcolare i singoli parametri 
+ della colonna. L'accesso alla gestione dei criteri di progetto è possibile, 
+ sempre nell'ambito della definizione della colonna stratigrafica, da tasto 
+ destro sulla finestra di riepilogo a discesa del criterio assegnato allo 
+ strato oggetto di valutazione. I colori delle caselle dei vari parametri 
+ ne indicano la correlabilità e lo stato di valutazione: verde se un parametro 
+ è correlabile; azzurro se è già stato correlato.</p>
+<p>Ogni singola correlazione è effettuabile o disattivabile da tasto destro, 
+ sia sulla casella del parametro oggetto di valutazione, sia sul titolo 
+ del parametro stesso. È 
+ anche possibile effettuare le correlazioni selezionando la riga rappresentativa 
+ dello strato e cliccare sul bottone &quot;Correla&quot;.</p>
+<p>In sintesi: i parametri geotecnici possono essere determinati attraverso 
+ stime fatte dal progettista a priori dell'utilizzo del programma oppure 
+ attraverso una caratterizzazione geotecnica. Nel primo caso l'assegnazione 
+ dei parametri allo strato avviene per mezzo dell'unità geotecnica, nel 
+ secondo i parametri vengono calcolati dai risultati di prove in sito, 
+ in funzione delle pressioni litostatiche verticali e della classificazione, 
+ secondo il seguente schema:</p>
+<p style="text-align: center;"><img src="Caratt_geotec_01.gif" alt="" style="border: none;" width="650" height="111" border="0"></p>
+<p>Inoltre il valore del coefficiente di spinta a riposo k<span class="hcp1">0</span> 
+ può essere calcolato attraverso relazioni che non prevedono l'utilizzo 
+ di correlazioni da prove in sito.</p>
+<h2 class="Titolo5">Informazioni preliminari</h2>
+<p>Se lo strato è caratterizzato come incoerente è possibile inserire alcune 
+ informazioni aggiuntive relative alla composizione granulometrica, tali 
+ informazioni servono all'utilizzo di correlazioni proposte da alcuni autori. 
+ È richiesto:</p>
+<p><span class="hcp2">Coefficiente di uniformità</span> (U): 
+ è un parametro richiesto per il calcolo di Dr secondo Marcuson e Bieganousky 
+ (1977).</p>
+<p><span class="hcp2">Nota</span>: il coefficiente di uniformità 
+ (U = D<span class="hcp1">60</span>/D<span class="hcp1">10</span>) 
+ è un parametro rappresentativo della composizione granulometrica (determinabile 
+ per setacciatura) ed è definito dal rapporto fra i diametri corrispondenti 
+ al 60% di materiale passante (D<span class="hcp1">60</span>) 
+ e al 10% (D<span class="hcp1">10</span>). Il coefficiente 
+ di (dis)uniformità è tanto maggiore quanto più la granulometria è eterogenea 
+ ed è almeno pari ad uno, per granulometrie uniformi.</p>
+<p><span class="hcp2">Definizione della composizione granulometrica</span>: 
+ specificare se lo strato da caratterizzare è definibile come:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">sabbia fine uniforme (sabbia 
+	 fine)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">sabbia fine ben gradata - 
+	 sabbia media uniforme (sabbia fine)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">sabbia media ben gradata - 
+	 sabbia grossa uniforme (sabbia grossa)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">sabbia e ghiaia - ghiaia media 
+	 (sabbia grossa)</p></li>
+</ul>
+<p>Tale definizione è richiesta sia per il calcolo di <span class="hcp3">j</span>' 
+ da Dr secondo Schmertmann (1978) che per il calcolo del coefficiente correttivo 
+ C<span class="hcp1">N</span> da applicare al valore rappresentativo 
+ di N<span class="hcp1">SPT</span> per il calcolo di Dr 
+ secondo Skempton (1986) e per il calcolo di <span class="hcp3">j</span>': 
+ C<span class="hcp1">N</span> = 2/[1 + (<span class="hcp3">s</span>'<span class="hcp1">v0</span>/p<span class="hcp1">atm</span>)] 
+ per sabbie fini; C<span class="hcp1">N</span> = 3 / [2 
+ + (<span class="hcp3">s</span>'<span class="hcp1">v0</span>/p<span class="hcp1">atm</span>)] per sabbie grosse.</p>
+<p><span class="hcp2">Correggi N</span><span style="vertical-align: Sub; 
+															 font-weight: bold;">SPT</span> 
+ <span class="hcp2">se la misura è sottofalda</span>: se 
+ viene scelta questa opzione i valori (direttamente letti dalla prova) 
+ di N<span class="hcp1">SPT</span> &gt; 15 misurati sottofalda 
+ vengono corretti secondo la seguente relazione: N<span class="hcp1">SPT</span> 
+ = N<span class="hcp1">SPT</span> + 0.5*(N<span class="hcp1">SPT</span>-15).</p>
+</body>
+</html>

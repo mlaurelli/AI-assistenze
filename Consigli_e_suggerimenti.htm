@@ -1,0 +1,116 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Consigli e suggerimenti</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Consigli e suggerimenti</h1>
+<p>Data la complessità intrinseca dell'analisi sismica statica non lineare 
+ e considerate le numerose possibilità di interpretazione delle normative 
+ e dei metodi di calcolo, risulta sempre molto difficile comprendere se 
+ si è ben colto il comportamento della struttura o se si sono introdotte 
+ variabili di modellazione o altro che possono modificare o falsare i risultati.</p>
+<p>In quest'ottica si consiglia di creare sempre modelli semplici, in cui 
+ sia ben chiaro quali sono gli elementi resistenti al sisma e quali hanno 
+ mero comportamento per carichi verticali. Spesso può essere necessario 
+ effettuare l'analisi sismica su un modello più semplice rispetto a quello 
+ sul quale si fanno le verifiche per carichi verticali, in modo da differenziare 
+ bene le diverse ipotesi alla base dei due calcoli.</p>
+<p>Una buona idea è anche quella di trascurare in prima istanza il contributo 
+ delle travi di accoppiamento, e di aggiungerlo successivamente se proprio 
+ si ha bisogno di una maggiore rigidezza iniziale della struttura.</p>
+<p style="color: #000000;">Quando nel modello vengono introdotti elementi 
+ verticali in c.a. o acciaio per simulare cerchiature o rinforzi su edifici 
+ esistenti, è generalmente bene non collegare tali elementi alla mesh degli 
+ elementi in muratura adiacenti (cosa che creerebbe una falsa collaborazione 
+ in realtà non presente) ed è da prendere in considerazione l'idea di sbloccare 
+ attraverso il vincolo dell'asta la resistenza iniziale a sforzo normale. 
+ Infatti tali elementi hanno in genere moduli elastici molto superiori 
+ a quelli della muratura, ed avrebbero l'effetto di &quot;scaricare&quot; 
+ la compressione degli elementi adiacenti, con la relativa diminuzione 
+ di resistenza a flessione. Nell'analisi sismica statica non lineare (pushover) 
+ lo svincolamento a sforzo normale viene ignorato e quindi tali elementi 
+ entreranno normalmente in trazione e compressione.</p>
+<p>Se il calcolo non lineare non converge, esaminare bene il modello a 
+ telaio equivalente che viene generato (si veda <span class="hcp1"><a 
+	 href="Generazione_telaio_equivalente.htm">Generazione telaio equivalente</a></span>), 
+ controllando che ad esempio non nascano elementi in grado di resistere 
+ solamente in una direzione, senza alcun elemento in grado di resistere 
+ nell'altra direzione. Esempio tipico di questa situazione è quello di 
+ un piano in cui risulta solamente una parete resistente, come la parte 
+ di sottotetto di un edificio rettangolare dove è presente solo il muro 
+ di spina che regge il colmo del tetto. In tal caso è meglio interrompere 
+ l'analisi al piano inferiore, definendo un impalcato in meno.</p>
+<p>ModeSt normalmente valuta automaticamente il passo di analisi ed il 
+ massimo numero di passi in funzione di alcuni parametri come l'altezza 
+ dell'edificio ed il numero di piani. Nel caso di edifici molto piccoli 
+ e molto rigidi questi parametri possono essere sottostimati ed allora 
+ occorre intervenire nelle &quot;Opzioni pushover&quot; modificando i parametri 
+ di <span class="hcp1"><a href="Opzioni_pushover.htm#Analisi_sismica_non_lineare_struttura_pushover">Analisi 
+ sismica statica non lineare (pushover)</a></span>.</p>
+<p>Se la non convergenza è stata segnalata con &quot;Raggiunto massimo 
+ numero di passi&quot;, può essere sufficiente aumentare tale parametro 
+ ma in genere è meglio diminuire il &quot;Passo di calcolo&quot; e congruentemente 
+ il &quot;Massimo numero di passi di analisi&quot; (ad esempio dimezzando 
+ il passo e, di conseguenza, raddoppiando il numero di passi).</p>
+<p><span style="font-size: 10.0pt; mso-bidi-language: AR-SA;">È</span> 
+ in genere buona regola effettuare un rapido calcolo eliminando le eccentricità 
+ aggiuntive deselezionandole nelle &quot;Opzioni pushover&quot; (si veda 
+ <span class="hcp1"><a href="Opzioni_pushover.htm#Analisi_pushover_da_eseguire">Analisi 
+ pushover da eseguire</a></span>). Solo per edifici molto irregolari o 
+ molto stretti e lunghi si possono in genere avere problemi di convergenza 
+ diversi con o senza le eccentricità.</p>
+<p>Al termine dell'analisi è bene esaminare le curve carico-spostamento, 
+ visualizzabili cliccando nel gruppo <span class="hcp1">Verifica</span> 
+ della scheda <span class="hcp1">Post-Processor</span> su 
+ <span class="hcp1">Muratura</span> <img src="../Icone/32/muratura32.png" alt="" border="1" class="hcp2">&#160;e 
+ poi su <span class="hcp1">Curva c/s</span> <img src="../Icone/16/dccs.png" alt="" border="1" class="hcp2">, dei vari calcoli e con l'ausilio delle mappe dello 
+ stato degli elementi (si veda <span class="hcp1"><a href="Mappe_tassi_di_sfruttamento_murature.htm">Mappe 
+ tassi di sfruttamento murature</a></span>), cambiando il passo di visualizzazione 
+ e selezionando il risultato corrente dal pannello <span class="hcp1">Parametri 
+ risultati</span> della sezione &quot;Sollecitazioni e risultati correnti&quot; 
+ dalla casella di riepilogo a discesa &quot;Risultati&quot;, controllare 
+ se le prime plasticizzazioni avvengono dopo pochi passi, o addirittura 
+ al primo passo. In tal caso è sicuramente necessario diminuire il passo 
+ di calcolo come sopra spiegato.</p>
+<p>Un passo eccessivo influenza poco il calcolo dello spostamento ultimo 
+ e della capacità della struttura, ma in genere può sottostimare il calcolo 
+ di Fbu* e quindi di conseguenza sovrastimare il calcolo di T*, e la domanda 
+ richiesta. Se la struttura è verificata con un passo di analisi &quot;grande&quot;, 
+ lo sarà quindi quasi sicuramente anche con un passo più piccolo. L'unico 
+ rischio è la sovrastima di q* portandolo ad un valore &gt;3 in cui l'analisi 
+ non è più valida.</p>
+<p>Se la struttura converge ma viene segnalato il messaggio che la percentuale 
+ di massa partecipante al modo principale è minore del 60%, potrebbe essere 
+ necessario modificare l'angolo di ingresso del sisma. Controllate con 
+ la deformata nodale relativa ai soli modi di vibrare (si veda <span class="hcp1"><a 
+	 href="Deformata%20della%20struttura.htm">Deformata della struttura</a></span>) 
+ se i modi principali sono all'incirca nelle direzioni X e Y o se sono 
+ in altre direzioni. Se i primi due modi sono molto obliqui ma comunque 
+ quasi ortogonali fra loro, si può valutare un migliore angolo di ingresso 
+ del sisma come l'arcotangente del rapporto fra le percentuali di massa 
+ movimentate in direzione Y e X nel modo principale (informazioni reperibili 
+ cliccando nel gruppo <span class="hcp1">Valori</span> della 
+ scheda <span class="hcp1">Risultati</span> su <span class="hcp1">Numerici</span> 
+ <img src="../Icone/32/risnumerici32.png" alt="" border="1" class="hcp2">&#160;e 
+ poi su <span class="hcp1">Risultati analisi</span> e quindi 
+ scegliendo i modi calcolati per informazioni su tali percentuali). Se 
+ i modi non sono obliqui è proprio la struttura che non ha dei modi principali 
+ e quindi forse l'analisi non lineare non è applicabile.</p>
+</body>
+</html>

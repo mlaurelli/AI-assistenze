@@ -1,0 +1,56 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Legame costitutivo Drucker-Prager</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { text-align:center; }
+img.hcp2 { border:none; }
+p.hcp3 { text-align:center;
+font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Legame costitutivo Drucker-Prager</h1>
+<p>Il legame costitutivo Drucker-Prager implementato in Xfinest 2018 e 
+ gestito da ModeSt è di tipo attritivo (Figura 1) ed infatti i dati richiesti 
+ sono l'angolo d'attrito e la coesione. Il materiale Drucker-Prager può 
+ essere applicato solo ad elementi QF46. Il comportamento non lineare è 
+ limitato alla direzione membranale; a flessione fuori piano l'elemento 
+ manifesta una risposta infinitamente elastica.</p>
+<p class="hcp1"><img src="Drucker_Prager_01.png" alt="" width="500" height="272" border="0" class="hcp2"></p>
+<p class="hcp3">Figura 1: criterio di 
+ rottura Drucker-Prager nel piano di Mohr</p>
+<p>Il dominio elastico nel piano deviatorico è di forma circolare; è possibile 
+ decidere se esso debba essere inscritto oppure circoscritto all'esagono 
+ di Mohr-Coulomb, optando così per una variazione più o meno ampia dello 
+ stato tensionale, prima di raggiungere la superficie di rottura. Attualmente 
+ ModeSt impone il passaggio del cono di Drucker-Prager per gli spigoli 
+ esterni dell'esagono di Mohr-Coulomb (Figura 2 - Outer Edges). Tale scelta 
+ facilita la convergenza del solutore.</p>
+<p class="hcp1"><img src="Drucker_Prager_02.png" alt="" width="350" height="332" border="0" class="hcp2"></p>
+<p class="hcp3">Figura 2: relazione 
+ tra i criteri di Drucker-Prager e Mohr-Coulomb nel piano deviatorico</p>
+<p>Dopo l'uscita dal campo elastico, ModeSt impone un comportamento perfettamente 
+ plastico (Figura 3 - Curva blu). Questa scelta, che comporta una ridistribuzione 
+ più marcata degli sforzi negli elementi adiacenti, si configura come a 
+ favore di sicurezza.</p>
+<p class="hcp1"><img src="Drucker_Prager_03.png" alt="" width="350" height="298" border="0" class="hcp2"></p>
+<p class="hcp3"><span style="font-style: italic;">Figura 
+ 3: relazione sforzi-deformazioni</span></p>
+<p>La dilatanza del materiale viene assunta uguale all'angolo d'attrito, 
+ assumendo quindi una legge di flusso associata (Figura 4).</p>
+<p class="hcp1"><img src="Drucker_Prager_04.png" alt="" width="350" height="212" border="0" class="hcp2"></p>
+<p class="hcp3">Figura 4: legge di flusso 
+ associata (angolo di dilatanza = angolo d’attrito)</p>
+<p>&#160;</p>
+</body>
+</html>

@@ -1,0 +1,121 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Mesh muri/elementi bidimensionali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Mesh muri/elementi bidimensionali</h1>
+<p>Gli elementi bidimensionali devono generalmente essere <span style="font-style: italic;">meshati</span>, 
+ ossia suddivisi in elementi più piccoli, procedura necessaria per rendere 
+ le dimensioni dei singoli elementi compatibile con la precisione richiesta 
+ nel calcolo agli elementi finiti.</p>
+<p>Anche i muri possono (e spesso debbono) essere meshati, e questo ne 
+ comporta la trasformazione automatica in elementi bidimensionali.</p>
+<p>Nel gruppo <span class="hcp1">Modifica</span> della scheda 
+ <span class="hcp1">Modellazione</span> cliccando su <span class="hcp1">Mesh <img src="../Icone/16/mesh.png" alt="" border="1" class="hcp2"></span> si accede 
+ ad una serie di funzionalità che consentono di effettuare la mesh dei 
+ muri/elementi bidimensionali.</p>
+<p><span class="hcp1">Mesh avanzata muri/bidimensionali complessi 
+ <img src="../Icone/16/meshbidiava.png" alt="" border="1" class="hcp2"></span> 
+ divide in elementi più piccoli i muri/elementi bidimensionali complessi, 
+ costituiti cioè da più di 4 nodi, con eventuale raffittimento in corrispondenza 
+ di pilastri e nodi interni. Occorre fornire sia le dimensioni indicative 
+ dei nuovi elementi che si vogliono creare sia quelle del raffittimento. 
+ Non viene eseguito il raffinamento se la dimensione del raffinamento è 
+ uguale a quella della mesh. Se i muri/elementi bidimensionali sono già 
+ stati <span class="hcp1"><a href="Selezioni.htm">selezionati</a></span> 
+ verranno automaticamente meshati tali elementi altrimenti verrà richiesto 
+ di <span class="hcp1"><a href="Selezioni.htm">selezionare</a></span> 
+ i muri/elementi bidimensionali da meshare.</p>
+<p><span class="hcp1">Mesh avanzata con raffinamento muri/bidimensionali 
+ complessi <img src="../Icone/16/meshbidiavar.png" alt="" border="1" class="hcp2"></span> 
+ il comando si differenzia dal precedente poiché esegue un raffinamento 
+ della mesh sotto i pilastri.</p>
+<p><span class="hcp1">Mesh semplificata muri/bidimensionali 
+ a 3 o 4 nodi in parti di lunghezza indicativa <img src="../Icone/16/meshbidipli.png" alt="" border="1" class="hcp2"></span> 
+ divide in elementi più piccoli i muri/elementi bidimensionali a 3 o 4 
+ nodi suddividendo i lati degli elementi in un numero di parti tali che 
+ le dimensioni dei lati siano circa uguali al valore specificato. Se i 
+ muri/elementi bidimensionali sono già stati <span class="hcp1"><a 
+	 href="Selezioni.htm">selezionati</a></span> verranno automaticamente 
+ meshati tali elementi altrimenti verrà richiesto di <span class="hcp1"><a 
+	 href="Selezioni.htm">selezionare</a></span> i muri/elementi bidimensionali 
+ da meshare.</p>
+<p><span class="hcp1">Mesh semplificata muri/bidimensionali 
+ a 3 o 4 nodi in n parti <img src="../Icone/16/meshbidinp.png" alt="" border="1" class="hcp2"></span> divide in elementi 
+ più piccoli i muri/elementi bidimensionali a 3 o 4 nodi suddividendo i 
+ lati degli elementi nel numero di parti specificato. Se i muri/elementi 
+ bidimensionali sono già stati <span class="hcp1"><a href="Selezioni.htm">selezionati</a></span> 
+ verranno automaticamente meshati tali elementi altrimenti verrà richiesto 
+ di <span class="hcp1"><a href="Selezioni.htm">selezionare</a></span> 
+ i muri/elementi bidimensionali da meshare.</p>
+<p><span class="hcp1">Raffina mesh bidimensionali a 3 o 4 
+ nodi <img src="../Icone/16/rame.png" alt="" border="1" class="hcp2"></span> 
+ divide ulteriormente gli elementi bidimensionali a 3 o 4 nodi in corrispondenza 
+ del nodo specificato in modo da raffinare la mesh nell'intorno del nodo 
+ stesso. Se i nodi sono già stati <span class="hcp1"><a href="Selezioni.htm">selezionati</a></span> 
+ verranno automaticamente raffinati gli elementi in corrispondenza di tali 
+ nodi altrimenti verrà richiesto di <span class="hcp1"><a 
+	 href="Selezioni.htm">selezionare</a></span> i nodi in cui eseguire 
+ il raffinamento dei bidimensionali.</p>
+<p><span class="hcp1">Note</span>:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Gli elementi a 3 o 4 nodi 
+	 vengono suddivisi secondo il seguente criterio: siano N1-N2-N3-N4 
+	 i nodi dell'elemento; inizialmente vengono esaminati i lati N1-N2 
+	 e N3-N4 ricercando gli eventuali nodi intermedi, dividendo quindi 
+	 per primo il lato contenente più nodi intermedi o, in caso di ugual 
+	 numero di nodi intermedi, il lato più corto. Nel caso di suddivisione 
+	 con una lunghezza indicativa per ogni tratto (compreso fra eventuali 
+	 nodi intermedi) del lato così individuato viene calcolato il numero 
+	 di nuove suddivisioni come l'arrotondamento all'intero più vicino 
+	 del rapporto fra la lunghezza del tratto e la dimensione X della mesh. 
+	 Il lato opposto viene poi suddiviso imponendo un numero globale di 
+	 divisioni uguale a quello del lato già elaborato ed eventualmente 
+	 dividendo prima i tratti più lunghi. In modo analogo vengono poi trattati 
+	 gli altri due lati (con riferimento alla dimensione della mesh in 
+	 direzione Z) ed infine vengono creati per generazione i nodi interni.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">I nuovi nodi creati automaticamente 
+	 dalla meshatura vengono numerati con una numerazione negativa e non 
+	 vengono normalmente visualizzati; in realtà questi sono nodi a tutti 
+	 gli effetti che possono essere cancellati, spostati, ecc.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Gli eventuali carichi agenti 
+	 sull'elemento bidimensionale vengono ripartiti e trasferiti ai nuovi 
+	 elementi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Le eventuali aste presenti 
+	 sul perimetro dell'elemento bidimensionale vengono automaticamente 
+	 suddivise e mantengono automaticamente i carichi assegnati.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Gli eventuali solai che interessavano 
+	 i nodi dell'elemento vengono ad interessare anche i nuovi nodi.</p></li>
+</ul>
+<p><span class="hcp1">Argomenti correlati: <a href="Note_sulla_mesh_degli_elementi_bidimensionali.htm">Note 
+ sulla mesh degli elementi bidimensionali</a></span>,<span class="hcp1"> 
+ <a href="Guida.chm::/Elementi_bidimensionali_e_metodo_Master-Slave.htm">Elementi 
+ bidimensionali e metodo Master-Slave</a></span>, <span class="hcp1"><a 
+	 href="Guida.chm::/Elementi_bidimensionali_e_piani_rigidi.htm">Elementi 
+ bidimensionali e piani rigidi</a></span>, <span class="hcp1"><a 
+	 href="Guida.chm::/Inserimento_di_una_platea.htm">Inserimento di una 
+ platea</a></span>, <span class="hcp1"><a href="Guida.chm::/Rigidezza_torsionale_elementi_bidimensionali.htm">Rigidezza 
+ torsionale elementi bidimensionali</a></span>, <span class="hcp1"><a 
+	 href="Schematizzazione%20muri.htm">Schematizzazione muri</a></span>.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/MESH.htm">MESH</a></span> 
+ (Divide muro/elemento bidimensionali), <span class="hcp1"><a 
+	 href="../Comandi/RAME.htm">RAME</a></span> (Raffina mesh).</p>
+</body>
+</html>

@@ -1,0 +1,229 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Fasi di progetto</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { text-align:left;
+margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+p.hcp4 { margin-bottom:0; }
+span.hcp5 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Fasi di progetto</h1>
+<p>La progettazione automatica dell'armatura viene eseguita determinando 
+ le armature teoriche e quindi progettando i ferri secondo una sequenza 
+ di fasi il cui ordine può modificare sensibilmente l'armatura.</p>
+<p>Si consideri ad esempio la progettazione a taglio col metodo delle tensioni 
+ ammissibili nel caso in cui si voglia affidare il 70% dello sforzo di 
+ scorrimento alle staffe ed il 30% ai ferri piegati: progettando prima 
+ le staffe, i limiti di normativa e di criterio porteranno sicuramente 
+ ad una copertura maggiore del 70% e quindi i ferri piegati verranno progettati 
+ per assorbire uno sforzo di scorrimento minore del 30% e risulteranno 
+ di minor numero e diametro che se progettati per primi. Progettando invece 
+ prima i ferri piegati si avranno invece probabilmente meno staffe.</p>
+<p>Anche l'unificazione fra ferri eseguita prima o dopo una loro eventuale 
+ sovrapposizione, porta a risultati diversi.</p>
+<p>Il significato dei nomi che identificano le varie fasi progettuali è 
+ il seguente:</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; border-collapse: separate; 
+		 border-collapse: separate;" cellspacing="0" width="100%" border="1">
+	<tr>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><span class="hcp3">PFS</span> 
+		 (<span class="hcp3">P</span>rogetta <span class="hcp3">F</span>erri 
+		 <span class="hcp3">S</span>agomati)</p></td>
+		<td style="width:71%;" class="hcp1"><p class="hcp4">progetta i sagomati e i cavallotti 
+		 in relazione alle percentuali di scorrimento specificate nei criteri 
+		 di progetto. Se le staffe e/o i ferri di parete esistono già, 
+		 viene tenuto conto dello scorrimento già assorbito. Eventuali 
+		 ferri sagomati già esistenti vengono eliminati. Nel caso di progetto 
+		 agli stati limite questa fase non ha alcun effetto.</p></td>
+	</tr>
+	<tr>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><span class="hcp3">PFP</span> 
+		 (<span class="hcp3">P</span>rogetta <span class="hcp3">F</span>erri 
+		 di <span class="hcp3">P</span>arete)</p></td>
+		<td style="width:71%;" class="hcp1"><p class="hcp4">progetta i ferri di parete in relazione 
+		 alle percentuali di scorrimento specificate nei criteri di progetto 
+		 e dell'armatura necessaria per torsione. Se le staffe e/o i ferri 
+		 piegati esistono già, viene tenuto conto dello scorrimento già 
+		 assorbito. Vengono progettati anche i ferri di fianco e di suola 
+		 delle travi a T e a L. Eventuali ferri di parete già esistenti 
+		 vengono eliminati. Se non sono necessari o non sono richiesti 
+		 ferri di parete (o di fianco o di suola) per taglio e torsione 
+		 ModeSt inserisce eventualmente solo quelli minimi specificati 
+		 nei criteri di progetto e non li conteggia nelle verifiche a taglio 
+		 e torsione. È possibile distinguere se i ferri di parete o di 
+		 suola vengono conteggiati nelle verifiche nel seguente modo: i 
+		 ferri conteggiati vengono denominati nei disegni ferri di &quot;<span class="hcp5">parete</span>&quot; o di &quot;<span class="hcp5">suola</span>&quot; (scritti <span class="hcp3">minuscoli</span>), i ferri non conteggiati 
+		 vengono denominati ferri di &quot;<span class="hcp5">PARETE</span>&quot; 
+		 o di &quot;<span class="hcp5">SUOLA</span>&quot; 
+		 (scritti <span class="hcp3">maiuscoli</span>).</p></td>
+	</tr>
+	<tr>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><span class="hcp3">PST</span> 
+		 (<span class="hcp3">P</span>rogetta <span class="hcp3">ST</span>affe)</p></td>
+		<td style="width:71%;" class="hcp1"><p class="hcp4">progetta le staffe in relazione 
+		 alle percentuali di scorrimento specificate nei criteri di progetto. 
+		 Se i ferri sagomati e/o i ferri di parete esistono già, viene 
+		 tenuto conto dello scorrimento già assorbito. Il controllo sul 
+		 minimo di 12 o 6 Ø viene effettuato solo sui ferri eventualmente 
+		 già presenti. Vengono progettate anche le staffe orizzontali nell'ala 
+		 di sezioni a T e a L. Eventuali staffe già esistenti vengono eliminate.</p></td>
+	</tr>
+	<tr>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><span class="hcp3">PRG</span> 
+		 (<span class="hcp3">P</span>rogetta <span class="hcp3">R</span>e<span class="hcp3">G</span>gistaffe)</p></td>
+		<td style="width:71%;" class="hcp1"><p class="hcp4">vengono progettati i reggistaffe 
+		 ed eventuali ferri integrativi andanti. Vengono eventualmente 
+		 interrotti in campata i reggistaffe secondo quanto specificato 
+		 nei criteri di progetto. Nel caso di calcolo ai sensi del D.M. 
+		 17/01/18 è possibile modificare il comportamento di questa fase. 
+		 Si veda anche &quot;<span class="hcp3"><a href="Tecniche_di_progettazione_ai_sensi_DM08.htm">Tecniche 
+		 di progettazione ai sensi D.M. 17/01/18</a></span>&quot;.</p></td>
+	</tr>
+	<tr>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><span class="hcp3">URG</span> 
+		 (<span class="hcp3">U</span>nifica <span class="hcp3">R</span>e<span class="hcp3">G</span>gistaffe)</p></td>
+		<td style="width:71%;" class="hcp1"><p class="hcp4">vengono unificati in parte o totalmente 
+		 i reggistaffe di campate adiacenti se hanno lo stesso diametro 
+		 e in presenza di continuità.</p></td>
+	</tr>
+	<tr>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><span class="hcp3">SRG</span> 
+		 (<span class="hcp3">S</span>ovrapponi <span class="hcp3">R</span>e<span class="hcp3">G</span>gistaffe)</p></td>
+		<td style="width:71%;" class="hcp1"><p class="hcp4">se nei criteri di progetto è richiesto 
+		 un tipo particolare di sovrapposizione reggistaffe (larghezza 
+		 pilastro o quantità fissa) i reggistaffe vengono modificati in 
+		 modo da rispettare quanto richiesto, in caso contrario questa 
+		 fase non ha alcun effetto. Nel caso di calcolo ai sensi del D.M. 
+		 17/01/18 è possibile modificare il comportamento di questa fase. 
+		 Si veda anche &quot;<span class="hcp3"><a href="Tecniche_di_progettazione_ai_sensi_DM08.htm">Tecniche 
+		 di progettazione ai sensi D.M. 17/01/18</a></span>&quot;.</p></td>
+	</tr>
+	<tr>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><span class="hcp3">SFA</span> 
+		 (<span class="hcp3">S</span>ovrapponi <span class="hcp3">F</span>erri 
+		 <span class="hcp3">A</span>ppoggi)</p></td>
+		<td style="width:71%;" class="hcp1"><p class="hcp4">si tenta di coprire gli appoggi 
+		 allungando i reggistaffe ed i sagomati o i cavallotti delle campate 
+		 adiacenti. Nel caso di calcolo ai sensi del D.M. 17/01/18 è possibile 
+		 modificare il comportamento di questa fase. Si veda anche &quot;<span class="hcp3"><a href="Tecniche_di_progettazione_ai_sensi_DM08.htm">Tecniche 
+		 di progettazione ai sensi D.M. 17/01/18</a></span>&quot;.</p></td>
+	</tr>
+	<tr>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><span class="hcp3">PFA</span> 
+		 (<span class="hcp3">P</span>rogetta <span class="hcp3">F</span>erri 
+		 <span class="hcp3">A</span>ppoggi)</p></td>
+		<td style="width:71%;" class="hcp1"><p class="hcp4">vengono aggiunti i ferri integrativi 
+		 necessari per coprire gli appoggi.</p></td>
+	</tr>
+	<tr>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><span class="hcp3">EAT</span> 
+		 (<span class="hcp3">E</span>limina <span class="hcp3">A</span>ncoraggi 
+		 <span class="hcp3">T</span>esi)</p></td>
+		<td style="width:71%;" class="hcp1"><p class="hcp4">si tenta di prolungare i ferri che 
+		 terminano in zona non utilmente compressa ai fini dell'ancoraggio 
+		 fino ad una zona utilmente compressa, in modo che la minor lunghezza 
+		 d'ancoraggio comporti in definitiva una minor lunghezza complessiva 
+		 del ferro.</p></td>
+	</tr>
+	<tr>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><span class="hcp3">UFA</span> 
+		 (<span class="hcp3">U</span>nifica <span class="hcp3">F</span>erri 
+		 <span class="hcp3">A</span>diacenti)</p></td>
+		<td style="width:71%;" class="hcp1"><p class="hcp4">unifica i ferri che non interessano 
+		 la stessa zona di travata, ma con distanze reciproche e caratteristiche 
+		 che soddisfano i criteri.</p></td>
+	</tr>
+	<tr>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><span class="hcp3">UFS</span> 
+		 (<span class="hcp3">U</span>nifica <span class="hcp3">F</span>erri 
+		 <span class="hcp3">S</span>ovrapposti)</p></td>
+		<td style="width:71%;" class="hcp1"><p class="hcp4">unifica i ferri che interessano 
+		 la stessa zona di travata, ma con sovrapposizioni reciproche e 
+		 caratteristiche che soddisfano i criteri.</p></td>
+	</tr>
+	<tr>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><span class="hcp3">EFB</span> 
+		 (<span class="hcp3">E</span>stendi <span class="hcp3">F</span>erri 
+		 al <span class="hcp3">B</span>locco)</p></td>
+		<td style="width:71%;" class="hcp1"><p class="hcp4">prolunga i ferri fino al più vicino 
+		 punto di discontinuità se la distanza soddisfa i criteri.</p></td>
+	</tr>
+	<tr>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><span class="hcp3">ARF</span> 
+		 (<span class="hcp3">AR</span>rotonda lunghezze <span class="hcp3">F</span>erri)</p></td>
+		<td style="width:71%;" class="hcp1"><p class="hcp4">cerca di allungare i ferri in modo 
+		 che la lunghezza sia un multiplo intero di quanto specificato 
+		 nei criteri. Nel caso di calcolo ai sensi del D.M. 17/01/18 è 
+		 possibile modificare il comportamento di questa fase. Si veda 
+		 anche &quot;<span class="hcp3"><a href="Tecniche_di_progettazione_ai_sensi_DM08.htm">Tecniche 
+		 di progettazione ai sensi D.M. 17/01/18</a></span>&quot;.</p></td>
+	</tr>
+	<tr>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><span class="hcp3">EFI</span> 
+		 (<span class="hcp3">E</span>limina <span class="hcp3">F</span>erri 
+		 <span class="hcp3">I</span>nutili)</p></td>
+		<td style="width:71%;" class="hcp1"><p class="hcp4">elimina i ferri che a seguito di 
+		 arrotondamenti, estensioni, unificazioni, ecc. si rivelino inutili.</p></td>
+	</tr>
+	<tr>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><span class="hcp3">CIF</span> 
+		 (<span class="hcp3">C</span>ontrolla <span class="hcp3">I</span>nter<span class="hcp3">F</span>erri)</p></td>
+		<td style="width:71%;" class="hcp1"><p class="hcp4">calcola gli ingombri dei ferri e 
+		 dove necessario esegue le unificazioni delle barre per diminuirne 
+		 l'ingombro. Se nei criteri è richiesto il progetto a torsione, 
+		 controlla che l'interasse fra le barre longitudinali sia compatibile 
+		 con i massimi di regolamento e dove necessario aumenta il numero 
+		 delle barre.</p></td>
+	</tr>
+</table>
+<p>Alcune fasi progettuali possono essere anche eliminate e la progettazione 
+ sarà comunque corretta purché sia presente almeno la fase <span class="hcp3">PFA</span>. 
+ Le fasi <span class="hcp3">PFS</span> e <span class="hcp3">PFP</span> 
+ possono essere eliminate solo se la trave non è progettata a torsione 
+ e se la relativa percentuale di scorrimento per taglio è pari a zero.</p>
+<p>Altre fasi possono essere anche ripetute più volte in momenti diversi 
+ (ad esempio <span class="hcp3">ARF</span>).</p>
+<p>Alcune fasi vanificano il risultato di altre (ad esempio <span class="hcp3">CIF</span>, 
+ modificando i diametri e quindi ricalcolando gli ancoraggi, può vanificare 
+ l'effetto di <span class="hcp3">ARF</span> e d'altronde 
+ <span class="hcp3">ARF</span> può vanificare l'effetto di 
+ <span class="hcp3">CIF</span> allungando ferri fino ad un 
+ punto in cui l'ingombro diventa eccessivo). Analogamente l'allungamento 
+ o la modifica dei ferri può rendere non verificato il controllo sul passo 
+ delle staffe inferiore a 12 o a 6 Ø.</p>
+<p>Volendo effettuare un'armatura con ferri sovrapposti in modo fisso agli 
+ appoggi (gabbie montate a terra) può essere utile eliminare tutte le fasi 
+ di arrotondamento e unificazione e fra le fasi di progettazione utilizzare 
+ solo <span class="hcp3">PRG</span>, <span class="hcp3">SRG</span> 
+ e <span class="hcp3">PFA</span> oltre a <span class="hcp3">PST</span> 
+ ed eventualmente <span class="hcp3">PFS</span> e <span class="hcp3">PFP</span>.</p>
+<p>Le fasi <span class="hcp3">EAT</span>, <span class="hcp3">UFA</span>, 
+ <span class="hcp3">EFB</span>, <span class="hcp3">ARF</span>, 
+ <span class="hcp3">EFI</span> possono ovviamente essere 
+ eliminate senza problemi.</p>
+<p class="hcp4">In progettazione interattiva le varie fasi 
+ possono essere eseguite digitandone il nome sulla linea di comando.</p>
+</body>
+</html>

@@ -1,0 +1,111 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Criteri di verifica tamponature</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:bold;
+vertical-align:Sub; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Criteri di verifica tamponature</h1>
+<h2>Materiali</h2>
+<p><span class="hcp1"><a name="Considera_come_elementi_esistenti_consolidata" 
+										 id="Considera_come_elementi_esistenti_consolidata"></a>Considera 
+ come elementi esistenti</span>: specificare se la tamponatura è esistente 
+ oppure nuova. Nel caso di tamponature esistenti è possibile selezionare 
+ il livello di conoscenza (<span class="hcp1">LC1</span>, 
+ <span class="hcp1">LC2</span>, <span class="hcp1">LC3</span>) 
+ da cui discende il valore del fattore di confidenza (<span class="hcp1">FC</span>).</p>
+<p><span class="hcp1"><a name="Peso_specifico" id="Caratteristiche_meccaniche_consolidata"></a>Peso 
+ per unità di superficie</span>: specificare il peso specifico a mq da 
+ utilizzare per calcolare il peso della tamponatura (Wa) e quindi la forza 
+ sismica agente sulla tamponatura. L'altezza della tamponatura viene determinata 
+ automaticamente dal programma come specificato in <a href="Verifiche_effettuate_tamponature.htm" 
+														 style="font-weight: bold;">Verifiche 
+ effettuate</a> in funzione della sua geometria.</p>
+<p><span class="hcp1"><a name="Resistenza_caratteristica_a_compressione" 
+										 id="Resistenza_a_taglio_consolidata"></a>Resistenza 
+ caratteristica a compressione (f</span><span class="hcp2">k</span><span class="hcp1">)</span>: specificare la resistenza caratteristica 
+ a compressione della tamponatura.</p>
+<p><span class="hcp1"><a name="Resistenza_media_a_compressione" 
+										 id="a1"></a>Resistenza media a 
+ compressione (f</span><span class="hcp2">m</span><span class="hcp1">)</span>: specificare la resistenza media 
+ a compressione della tamponatura.</p>
+<p><span class="hcp1"><a name="Modulo_elastico" id="Modulo_elastico_consolidata"></a>Modulo 
+ elastico (E)</span>: specificare il modulo di elasticità della tamponatura.</p>
+<p><span class="hcp1"><a name="Coeff_gamma" id="Coeff_gamma_carichi_verticali_DM08"></a>Coeff. 
+ <font style="font-family: Symbol;" face="Symbol">g</font></span>: specificare 
+ il valore del coefficiente parziale di sicurezza da utilizzare nelle verifiche.</p>
+<h2><span>Parametri per verifiche</span></h2>
+<p><a name="Spessore" id="a2"></a><span class="hcp1">Spessore 
+ resistente</span>: specificare lo spessore della sezione resistente della 
+ tamponatura da utilizzare nelle verifiche.&#160;In questo modo è possibile 
+ svincolare il peso, comprendente ad esempio parti non strutturali come 
+ intonaci, faccia vista, ecc. dalla parte di tamponatura effettivamente 
+ resistente.</p>
+<p style="mso-spacerun: yes; mso-fareast-font-family: Calibri; line-height: 115%;"><span 
+	 style="font-size: 11.0pt; font-family: Calibri, sans-serif; mso-fareast-language: EN-US; 
+	 mso-bidi-language: AR-SA; mso-bidi-font-style: italic; font-weight: bold;"><a 
+	 name="Verifiche_a_ribaltamento" id="Verifiche_a_ribaltamento"></a></span><span class="hcp1">Verifiche a ribaltamento</span>: specificare 
+ se debbano essere eseguite le verifiche a ribaltamento. Se l'opzione è 
+ attiva occorre specificare se la tamponatura inserita all'interno di una 
+ maglia di un telaio è aderente o no al telaio e quale sia il metodo di 
+ verifica. In entrambi i casi si trascura l'eventuale contributo resistente 
+ dovuto alla flessione orizzontale. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><a name="Aderente_al_telaio" 
+												 id="Calcolo_freccia_viscosa"></a><span class="hcp1">Aderente al telaio</span>: per le tamponature 
+	 aderenti al telaio, il cui schema statico è quello di una trave incernierata 
+	 agli estremi, la&#160;verifica si effettua confrontando la sollecitazione 
+	 flettente agente con quella resistente determinata come indicato nel 
+	 paragrafo 7.8.2.2.3 del D.M. 17/01/18.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Aderente 
+	 al telaio con verifica con relazione EC6</span>: per le tamponature 
+	 aderenti al telaio, il cui schema statico è quello di una trave incernierata 
+	 agli estremi, la verifica si effettua confrontando il valore del momento 
+	 agente con quello resistente determinato dal valore del carico resistente 
+	 calcolato con la relazione proposta nel par. 6.3.2 dell'EC6.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><a name="Non_aderente_al_telaio" 
+												 id="a4"></a><span class="hcp1">Non 
+	 aderente al telaio</span>: per le tamponature non aderenti al telaio, 
+	 il cui schema statico è quello di una mensola, la verifica si effettua 
+	 confrontando la sollecitazione flettente agente con quella resistente 
+	 determinata come indicato nel paragrafo 7.8.2.2.3 del D.M. 17/01/18.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Non 
+	 aderente al telaio con verifica a ribaltamento</span>: per le tamponature 
+	 non aderenti al telaio, il cui schema statico è quello di una mensola,&#160;la&#160;verifica 
+	 si effettua confrontando il momento ribaltante con il momento stabilizzante.</p></li>
+</ul>
+<p><a name="Verifiche_per_contenimento_danno" id="Verifiche_per_contenimento_danno"></a><span class="hcp1">Verifiche per contenimento danno</span>: 
+ specificare se debbono essere eseguite le verifiche per il contenimento 
+ del danno come indicato nel paragrafo 7.3.6.1 del D.M. 17/01/18. Se l'opzione 
+ è attiva occorre specificare se la tamponatura è <span class="hcp1">Collegata 
+ rigidamente alla struttura (fragile)</span> o <span class="hcp1">Collegata 
+ rigidamente alla struttura (duttile) (caso a)</span> oppure è <span class="hcp1">Progettata 
+ per non subire danni (caso b)</span>, attraverso queste opzioni vengono 
+ determinati i valori limite degli spostamenti relativi necessari per eseguire 
+ le suddette verifiche.</p>
+<h2>Puntoni equivalenti</h2>
+<p><span class="hcp1"><a name="Considera_nell_analisi_modale_del_pushover_ca" 
+										 id="Considera_nell_analisi_modale_del_pushover_ca"></a>Considera 
+ nell'analisi modale del pushover c.a.</span>: indicare se durante l'analisi 
+ modale o dinamica, necessarie per la valutazione della distribuzione delle 
+ forze incrementali, i puntoni vadano messi in conto come aste a comportamento 
+ lineare, eventualmente riducendone la rigidezza. Se l'opzione è deselezionata, 
+ i puntoni vengono ignorati nell'analisi preliminare e schematizzati solo 
+ durante il pushover. Si consiglia di approfondire l'argomento leggendo 
+ anche quanto riportato in <u style="text-decoration: none; "><span class="hcp1"><a 
+	 href="Puntoni_equivalenti.htm">Puntoni equivalenti</a></span>.</u></p>
+</body>
+</html>

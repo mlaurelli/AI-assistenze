@@ -1,0 +1,88 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Ambienti di carico</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+font.hcp2 { font-family:Symbol; }
+span.hcp3 { vertical-align:sub; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Ambienti</h1>
+<p>Nel caso in cui si esegua il calcolo della struttura secondo <a href="Il%20metodo%20degli%20stati%20limite.htm">il 
+ metodo degli stati limite</a> occorre definire gli <span class="hcp1">ambienti 
+ di carico</span>, concettualmente simili alle &quot;Combinazioni di Carico&quot; 
+ del metodo delle tensioni ammissibili, ma che più in generale definiscono 
+ le diverse situazioni di carico e quali stati limite valutare. L'inserimento 
+ o l'eliminazione di un ambiente di carico si effettua selezionando la 
+ riga corrispondente e cliccando sul bottone &quot;Inserisci&quot; o &quot;Elimina&quot; 
+ mentre la modifica si esegue selezionando o deselezionando le celle appartenenti 
+ alla riga dell'ambiente di carico.</p>
+<p>Le vere e proprie combinazioni di carico verranno poi generate in automatico 
+ da ModeSt in funzione della classificazione e dei coefficienti delle varie 
+ CCE. Si può visualizzare la definizione delle combinazioni di carico anche 
+ in forma simbolica attraverso il bottone &quot;Comb. teoriche&quot; in 
+ modo da poter valutare la corretta scelta dei coefficienti <font face="Symbol" class="hcp2">g</font>, <font face="Symbol" class="hcp2">Y</font> 
+ e avere una visualizzazione più simile a quella abitualmente utilizzata 
+ nella normativa.</p>
+<p>Nel caso di carichi variabili classificati come <span style="font-style: normal; 
+														 font-weight: normal;">&quot;Ambigui</span>&quot; 
+ ossia sia di base che indipendenti, è poi possibile indicare insieme a 
+ quali altri carichi debbano essere <span class="hcp1">accoppiati</span> 
+ (ossia considerati sempre dello stesso tipo) o <span class="hcp1">disaccoppiati</span>, 
+ ossia considerati sempre di tipo diverso.</p>
+<p>Ad esempio le CCE dovute alla neve e al vento possono essere definite 
+ come ambigue, in modo che vengano considerate sia di base che indipendenti, 
+ ma occorre imporre che non siano contemporaneamente dello stesso tipo, 
+ devono cioè essere <span class="hcp1">disaccoppiate</span>. 
+ Al contrario se per motivi di convenienza di modellazione un certo carico 
+ è stato diviso in due o più CCE diverse (ad esempio vento radente e vento 
+ in pressione), occorre imporre che le due CCE siano considerate di volta 
+ in volta dello stesso tipo (ossia <span class="hcp1">accoppiate</span>) 
+ in quanto concettualmente rappresentano una sola condizione di carico.</p>
+<p>Per quanto riguarda il vento, se si utilizzano le apposite procedure 
+ implementate in ModeSt, gli ambienti necessari vengono creati automaticamente 
+ in modo da considerare contemporanee le CCE con la stessa direzione di 
+ vento. </p>
+<p>Attraverso l'opzione <span class="hcp1">Genera le combinazioni 
+ con un solo carico di tipo variabile come di base</span> è possibile creare 
+ le combinazioni di carico con al massimo un carico di tipo variabile considerato 
+ come di base.</p>
+<p>Si noti inoltre che, oltre ai coefficienti <font face="Symbol" class="hcp2">Y</font><span class="hcp3">0</span>, <font face="Symbol" class="hcp2">Y</font><span class="hcp3">1</span>, <font face="Symbol" class="hcp2">Y</font><span class="hcp3">2</span> previsti dal metodo agli stati 
+ limite, la normativa Italiana D.M. 96 per i carichi variabili considera 
+ un coefficiente <font face="Symbol" class="hcp2">Y</font> 
+ diverso in caso di calcolo sismico. Pertanto è stato introdotto in ModeSt 
+ anche il coefficiente <font face="Symbol" class="hcp2">Y<span class="hcp3">0</span></font>,<span class="hcp3">s</span> 
+ (D.M. 96) che viene utilizzato per gli stati limite ultimi sismici secondo 
+ il D.M. 96.</p>
+<p>Nell'analisi dinamica con spettro di risposta l'opzione <a name="Considera_sollecitazioni_dinamiche_con_segno_dei_modi_principali"></a><span class="hcp1">Considera sollecitazioni dinamiche con 
+ segno dei modi principali</span> permette di considerare il segno delle 
+ sollecitazioni dinamiche ottenute dalla combinazione quadratica, come 
+ il segno della componente modale principale nella direzione specifica 
+ del sisma. Nel caso di strutture regolari con modi principali ben definiti 
+ e disaccoppiati, questo consente di eliminare dalle verifiche di tutti 
+ gli elementi strutturali quelle combinazioni di N, My, Mz poco plausibili 
+ dal punto di vista fisico, diminuendo in tal modo la quantità di calcoli 
+ da fare e quindi accelerando i tempi di elaborazione. Questa procedura 
+ permette inoltre di ottenere dei risultati definiti per le diverse direzioni 
+ e segno del sisma, ad esempio per consentire calcoli esterni con programmi 
+ che non supportano la gestione di componenti prive di segno.</p>
+<p style="margin-bottom: 0; font-weight: bold;">Argomenti correlati: <a 
+	 href="../Comandi/DETC.htm">Definisci tipo di condizione di carico 
+ elementare</a></p>
+</body>
+</html>

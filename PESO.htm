@@ -1,0 +1,67 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>PESO - Calcola peso proprio</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+p.hcp3 { text-align:justify; }
+span.hcp4 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">PESO - Calcola peso proprio</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" 
+		 width="100%" bgcolor="#C0C0C0">
+	<tr>
+		<td style="width:68%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p></td>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>: 
+		 + -</p></td>
+	</tr>
+</table>
+<p class="hcp3">Determina tutti i carichi dovuti al peso 
+ proprio della struttura.</p>
+<p class="hcp3">Sintassi del comando:</p>
+<p class="Normal3" style="text-align: justify;"><span class="hcp4">PESO</span></p>
+<p class="hcp3">Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Il 
+	 calcolo del peso proprio viene effettuato considerando il materiale 
+	 definito ed associato alle sezioni delle aste ed ai tipi degli elementi 
+	 bidimensionali.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Cambiare 
+	 la sezione di un'asta o il tipo di un elemento bidimensionale o le 
+	 caratteristiche del materiale ad esso associato modifica automaticamente 
+	 il carico eventualmente già calcolato con il comando <span class="hcp4">PESO</span> 
+	 anche se archiviato in una CCE.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Il 
+	 peso si somma ad altri carichi eventualmente già presenti sulle aste.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">I 
+	 carichi non vengono memorizzati. Eseguire il comando <span class="hcp4"><a 
+	 href="DCCE.htm">DCCE</a></span> se e quando necessario.</p></li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a2');
+	FilePopupInit('a3');
+//]]></script>
+</body>
+</html>

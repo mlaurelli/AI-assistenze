@@ -1,0 +1,571 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Criteri di progetto muri</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+font.hcp2 { font-family:Symbol; }
+span.hcp3 { vertical-align:sub;
+font-weight:bold; }
+span.hcp4 { vertical-align:sub; }
+span.hcp5 { font-weight:normal; }
+span.hcp6 { font-weight:bold;
+vertical-align:sub;
+font-family:Verdana, sans-serif; }
+span.hcp7 { line-height:115%;
+mso-bidi-language:AR-SA; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Criteri di progetto armatura pareti</h1>
+<h2>Materiali</h2>
+<p><span class="hcp1"><a name="Considera_come_elemento_esistente" 
+										 id="Considera_come_elemento_nuovo"></a>Considera 
+ come elemento esistente</span>: specificare se la parete è un elemento 
+ strutturale esistente oppure nuovo. Nel caso di elementi esistenti è possibile 
+ selezionare il livello di conoscenza (<span class="hcp1">LC1</span>, 
+ <span class="hcp1">LC2</span>, <span class="hcp1">LC3</span>) 
+ da cui discende il valore del fattore di confidenza (<span class="hcp1">FC</span>).</p>
+<p><span class="hcp1"><a name="LC_FC_cls" id="LC_FC_cls"></a>Livello 
+ di conoscenza e Fattore di confidenza</span>: se la parete è un elemento 
+ strutturale esistente è possibile selezionare il livello di conoscenza 
+ (<span class="hcp1">LC1</span>, <span class="hcp1">LC2</span>, 
+ <span class="hcp1">LC3</span>) da cui discende il valore 
+ del fattore di confidenza (<span class="hcp1">FC</span>). 
+ Il fattore di confidenza, eventualmente modificabile dall'utente, viene 
+ utilizzato per ridurre solo le caratteristiche di resistenza del calcestruzzo 
+ e non il modulo elastico.</p>
+<p><span class="hcp1"><a name="Tipo_di_calcestruzzo" id="Tipo_di_calcestruzzo"></a>Tipo 
+ di calcestruzzo</span>: selezionare il tipo di calcestruzzo previsto dalla 
+ normativa Italiana. Ogni volta che viene modificata la tipologia viene 
+ cambiata la classe del calcestruzzo e di conseguenza ricalcolati il modulo 
+ elastico e tutti i valori delle resistenze secondo le indicazioni della 
+ normativa.</p>
+<p><span class="hcp1"><a name="Rbk_calcestruzzo" id="Rbk_calcestruzzo"></a>Rck 
+ calcestruzzo</span>: specificare il valore della classe del calcestruzzo 
+ così come indicato dalla normativa Italiana. Ogni volta che questo valore 
+ viene modificato vengono ricalcolati il modulo elastico e tutti i valori 
+ delle resistenze secondo le indicazioni della normativa. È possibile variare 
+ successivamente tali valori per far lavorare il calcestruzzo a tassi inferiori 
+ a quelli previsti dal regolamento.</p>
+<p><a name="Modulo_elastico_cls" id="Modulo_elastico_cls"></a><span class="hcp1">Modulo 
+ elastico</span>: specificare il valore del modulo elastico del calcestruzzo. 
+ In mancanza di dati più esatti si può considerare il valore calcolato 
+ con l'espressione riportata nel par. 11.2.10.3 del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Fck" id="Fck"></a>Resistenza 
+ caratteristica cilindrica (Fck)</span>: specificare il valore della resistenza 
+ caratteristica cilindrica del calcestruzzo. In mancanza di dati più esatti 
+ si può considerare il valore calcolato con l'espressione riportata nel 
+ par. 11.2.10.1 del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Fctk" id="Fctk"></a>Resistenza 
+ caratteristica a trazione (Fctk)</span>: specificare il valore della resistenza 
+ caratteristica a trazione del calcestruzzo. In mancanza di dati più esatti 
+ si può considerare il valore calcolato con l'espressione riportata nel 
+ par. 11.2.10.2 del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Fcm" id="Fcm"></a>Resistenza 
+ media (Fcm)</span>: specificare il valore della resistenza cilindrica 
+ media del calcestruzzo. In mancanza di dati più esatti si può considerare 
+ il valore calcolato con l'espressione riportata nel par. 11.2.10.1 del 
+ D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Fctm" id="Fctm"></a>Resistenza 
+ media a trazione (Fctm)</span>: specificare il valore della resistenza 
+ media a trazione del calcestruzzo. In mancanza di dati più esatti si può 
+ considerare il valore calcolato con l'espressione riportata nel par. 11.2.10.2 
+ del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="samm_calcestruzzo" id="samm_calcestruzzo"></a></span><font face="Symbol" class="hcp2"><span class="hcp1">s</span></font><span class="hcp3">amm.</span> <span class="hcp1">calcestruzzo</span>: specificare il valore 
+ massimo della tensione a compressione alla quale far lavorare il calcestruzzo.</p>
+<p><span class="hcp1"><a name="tc0" id="tc0"></a><font face="Symbol" class="hcp2">t</font><span class="hcp4">c0</span></span><span class="hcp5">:</span> specificare il valore minimo 
+ per le tensioni tangenziali al disotto delle quali è sufficiente l'armatura 
+ a taglio minima di regolamento.</p>
+<p><span class="hcp1"><a name="tc1" id="tc1"></a><font face="Symbol" class="hcp2">t</font></span><span class="hcp3">c1</span>: 
+ specificare il valore massimo ammissibile per le tensioni tangenziali. 
+ Quando si supera tale valore ModeSt lo segnala nelle anomalie, ma progetta 
+ ugualmente l'armatura a taglio.</p>
+<p><span class="hcp1"><a name="Riduci_Fcd_per_tutte_le_verifiche_secondo_il_DM18" 
+										 id="Riduci_Fcd_per_tutte_le_verifiche_secondo_il_DM18"></a>Riduci 
+ Fcd per tutte le verifiche secondo il D.M. 18</span>: non essendo chiaro 
+ se il coefficiente <span style="font-family: Symbol, serif;">a</span><span class="hcp4">cc</span> pari a 0.85 debba essere considerato 
+ solo per le verifiche a pressoflessione, anche perché nel D.M. 16/01/96 
+ la resistenza a compressione nelle verifiche a pressoflessione è pari 
+ a 0.85Fcd e pari a Fcd nelle altre verifiche, o se vada applicato in genere 
+ per tutte le verifiche e controlli in cui si fa riferimento a Fcd, questa 
+ opzione consente di applicare la riduzione dello 0.85 di Fcd in tutte 
+ le verifiche.</p>
+<p><span class="hcp1"><a name="Gc" id="Gc"></a><font face="Symbol" class="hcp2">g</font><span class="hcp4">c</span> 
+ per stati limite ultimi</span>: specificare il valore del coefficiente 
+ di sicurezza <font face="Symbol" class="hcp2">g</font> 
+ del calcestruzzo. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Automatico</span>: 
+	 ModeSt sceglie il coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font> 
+	 automaticamente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: valore del coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font>.</p></li>
+</ul>
+<p><span class="hcp1"><a name="LC_FC_acciaio" id="LC_FC_acciaio"></a>Livello 
+ di conoscenza e Fattore di confidenza</span>: se la parete è un elemento 
+ strutturale esistente è possibile selezionare il livello di conoscenza 
+ (<span class="hcp1">LC1</span>, <span class="hcp1">LC2</span>, 
+ <span class="hcp1">LC3</span>) da cui discende il valore 
+ del fattore di confidenza (<span class="hcp1">FC</span>). 
+ Il fattore di confidenza, eventualmente modificabile dall'utente, viene 
+ utilizzato per ridurre solo le caratteristiche di resistenza dell'acciaio 
+ e non il modulo elastico.</p>
+<p><span class="hcp1"><a name="Tipo_di_acciaio1" id="Tipo_di_acciaio1"></a>Tipo 
+ di acciaio</span>: selezionare il tipo di acciaio previsto dalla normativa 
+ Italiana. Ogni volta che questo dato viene modificato viene modificato 
+ il valore della tensione caratteristica di snervamento dell'acciaio e 
+ ricalcolato il valore della tensione ammissibile nell'acciaio, valori 
+ che possono successivamente essere modificati per far lavorare l'acciaio 
+ a tensioni inferiori a quelle previste dal regolamento.</p>
+<p><span class="hcp1"><a name="Modulo_elastico_acciaio" id="Modulo_elastico_acciaio"></a>Modulo 
+ elastico</span>: specificare il valore del modulo elastico dell'acciaio.</p>
+<p><span class="hcp1"><a name="Fyk" id="Fyk"></a>Tensione 
+ caratteristica di snervamento (Fyk)</span>: specificare il valore della 
+ tensione caratteristica di snervamento dell'acciaio.</p>
+<p><span class="hcp1"><a name="Fym" id="Fym"></a>Tensione 
+ media di snervamento (Fym)</span>: specificare il valore della tensione 
+ media di snervamento dell'acciaio.</p>
+<p><span class="hcp1"><a name="samm_acciaio" id="samm_acciaio"></a></span><font face="Symbol" class="hcp2"><span class="hcp1">s</span></font><span class="hcp3">amm.</span> <span class="hcp1">acciaio</span>: specificare il valore massimo 
+ della tensione alla quale far lavorare l'acciaio.</p>
+<p><span class="hcp1"><a name="samm_reti_e_tralicci" id="samm_reti_e_tralicci"></a><font face="Symbol" class="hcp2">s</font></span><span class="hcp3">amm.</span> <span class="hcp1">reti 
+ e tralicci</span>: specificare il valore massimo della tensione alla quale 
+ far lavorare l'acciaio di reti elettrosaldate e tralicci. Si ricorda che 
+ per normativa non sono ammesse reti con f<span class="hcp4">yk</span> 
+ &lt; 4000 kg/cmq e f<span class="hcp4">tk</span> &lt; 
+ 4500 kg/cmq (D.M. 14/02/92 par. 2.2.5) a cui corrisponde <font face="Symbol" class="hcp2">s</font>amm = 2600 kg/cmq (D.M. 14/02/92 par. 3.1.7).</p>
+<p><span class="hcp1"><a name="Agt" id="Agt"></a>Allungamento 
+ per verifiche di duttilità (Agt)</span>: specificare la deformazione ultima 
+ dell'acciaio necessaria per valutare la capacità di rotazione della sezione 
+ in calcestruzzo armato secondo l'equazione C8A.6.5 della Circolare del 
+ D.M. 14/01/08.</p>
+<p><span class="hcp1"><a name="Gs" id="Gs"></a><font face="Symbol" class="hcp2">g</font><span class="hcp4">s</span> 
+ per stati limite ultimi</span>: specificare il valore del coefficiente 
+ di sicurezza <font face="Symbol" class="hcp2">g</font> 
+ dell'acciaio. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Automatico</span>: 
+	 ModeSt sceglie il coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font> 
+	 automaticamente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: valore del coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font>.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Coeff__di_omogeneizzazione" 
+										 id="Coeff__di_omogeneizzazione"></a>Coeff. 
+ di omogeneizzazione</span>: specificare il fattore di amplificazione dell'acciaio 
+ per il progetto della sezione (indicato con n dalla normativa).</p>
+<h2>Parametri di calcolo</h2>
+<p><span class="hcp1"><a name="Elemento_dissipativo" id="Elemento_dissipativo"></a>Elemento 
+ dissipativo</span>: specificare se la parete debba essere considerata 
+ o meno come un elemento di tipo dissipativo. Se l'opzione è deselezionata 
+ la parete sarà considerata come un elemento non dissipativo e nel caso 
+ di struttura calcolata come dissipativa verrà progettata e verificata 
+ con le sollecitazioni di tipo non dissipativo (SND). Se l'opzione è selezionata 
+ la parete sarà considerata come un elemento dissipativo e nel caso di 
+ struttura calcolata come non dissipativa verrà comunque progettata e verificata 
+ con le sollecitazioni di tipo non dissipativo (SND).</p>
+<p><span class="hcp1"><a name="Copriferro" id="Copriferro"></a>Copriferro</span>: 
+ specificare il valore del copriferro per il posizionamento dei ferri verticali 
+ e cioè l'effettivo spessore del calcestruzzo fra il bordo della parete 
+ e il bordo esterno dei ferri orizzontali.</p>
+<p><span class="hcp1"><a name="Fattore_moltiplicativo_per_calcolo" 
+										 id="Fattore_moltiplicativo_per_calcolo"></a>Fattore 
+ moltiplicativo per calcolo <font face="Symbol" class="hcp2">t</font></span><font><span class="hcp6">l</span></font> 
+ <span class="hcp1">(<font face="Symbol" class="hcp2">t</font></span><font><span class="hcp6">t</span></font><span class="hcp1">)</span>: poiché risulta complesso stabilire 
+ se la parete è trattabile come una sezione compatta parzializzata, come 
+ una mensola tozza o come una sezione interamente reagente (nelle zone 
+ non parzializzate), l'utente può definire due moltiplicatori k<span class="hcp4">l</span> 
+ e k<span class="hcp4">t</span> utilizzati per il calcolo 
+ delle tensioni tangenziali nella parete.</p>
+<p><span class="hcp1"><a name="Fattore_di_riduzione_per_ancoraggio_ferri" 
+										 id="Fattore_di_riduzione_per_ancoraggio_ferri"></a>Fattore 
+ di riduzione</span> <span class="hcp1">per ancoraggio ferri</span>: 
+ specificare di quanto deve essere ridotto il valore di <font face="Symbol" class="hcp2">t</font>c0 o di F<span class="hcp4">bd</span> 
+ (definito fra le caratteristiche dei materiali) per calcolare la tensione 
+ tangenziale di aderenza ammissibile necessaria per il calcolo degli ancoraggi 
+ dei ferri. Ad esempio specificando 0.6 si impone una riduzione di <font face="Symbol" class="hcp2">t</font>c0 o di F<span class="hcp4">bd</span> del 40%. Si ricorda che la 
+ normativa ammette riduzioni anche fino al 50%.</p>
+<p><span class="hcp1"><a name="Lunghezza_ancoraggi_armature" 
+										 id="Lunghezza_ancoraggi_armature"></a>Lunghezza 
+ ancoraggi armature</span>: specificare la lunghezza degli ancoraggi per 
+ i ferri d'armatura. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Calcolata 
+	 in funzione della</span> <font face="Symbol" class="hcp2"><span class="hcp1">s</span></font><span class="hcp4"><span class="hcp1">f</span></span>: la lunghezza degli ancoraggi 
+	 è pari al risultato del calcolo teorico con <font face="Symbol" class="hcp2">s</font><span class="hcp4">f</span> = <font face="Symbol" class="hcp2">s</font><span class="hcp4">famm</span> e coefficiente di riduzione 
+	 specificato nel criterio precedente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Imposta 
+	 come multiplo del diametro</span>: la lunghezza degli ancoraggi è 
+	 pari al multiplo del diametro dei ferri.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Lunghezza 
+	 minima pari a</span>: la lunghezza dei ferri di ancoraggio viene imposta 
+	 pari al valore specificato nel caso in cui la lunghezza dell'ancoraggio 
+	 calcolata in funzione della <font face="Symbol" class="hcp2">s</font><span class="hcp4">f</span> o come multiplo del diametro 
+	 sia inferiore al valore impostato.</p></li>
+</ul>
+<p>Non vengono effettuate le verifiche d'aderenza.</p>
+<p><span class="hcp1"><a name="Inserire_solo_armatura_al_centro_della_parete" 
+										 id="Inserire_solo_armatura_al_centro_della_parete"></a>Inserire 
+ solo armatura al centro della parete</span>: specificare se inserire l'armatura 
+ solo nel centro della parete (per maggiori informazioni si veda <span class="hcp1"><a href="Progettazione_e_verifica_armature.htm">Progettazione 
+ e verifica armature</a></span> e <span class="hcp1"><a href="Pareti_con_cassero_a_perdere_(ISOTEX_o_simili).htm">Pareti 
+ con cassero a perdere (ISOTEX o simili)</a></span>).</p>
+<p><span class="hcp1">Modalità di progettazione e verifica 
+ armatura verticale</span>: specificare le modalità di progettazione e 
+ verifica dell'armatura verticale. Sono disponibili le seguenti opzioni:</p>
+<p><span class="hcp1"><a name="In_funzione_delle_zone_di_incidenza_elementi" 
+										 id="In_funzione_delle_zone_di_incidenza_elementi"></a>In 
+ funzione delle zone di incidenza elementi</span>: l'armatura è progettata 
+ in funzione delle massime sollecitazioni locali (in corrispondenza dei 
+ nodi) sulla parete (per maggiori informazioni si veda <span class="hcp1"><a 
+	 href="Progettazione_e_verifica_armature.htm">Progettazione e verifica 
+ armature</a></span>).</p>
+<p><span class="hcp1"><a name="Armatura_calcolata_in_funzione_delle_sollecitazioni_globali" 
+										 id="Armatura_calcolata_in_funzione_delle_sollecitazioni_globali"></a>In 
+ funzione delle sollecitazioni globali</span>: l'armatura viene progettata 
+ in funzione delle sollecitazioni globali sulla parete (per maggiori informazioni 
+ si veda <span class="hcp1"><a href="Progettazione_e_verifica_armature.htm">Progettazione 
+ e verifica armature</a></span>). È disponibile la seguente opzione:</p>
+<ul>
+	<li class="p"><p><span class="hcp1"><a name="Zona_resistente_di_rinforzo_armatura_locale" 
+														 id="Zona_resistente_di_rinforzo_armatura_locale"></a>Inserisci 
+	 armatura di rinforzo nelle zone di incidenza elementi</span>: se selezionato 
+	 oltre all'armatura diffusa sul pannello viene calcolata anche l'eventuale 
+	 armatura da adottare localmente in corrispondenza dell'appoggio di 
+	 travi e/o pilastri. La zona resistente viene assunta pari alla massima 
+	 larghezza degli elementi trave o pilastro che incidono sul nodo della 
+	 parete.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Dimensione_minima_zone_di_incidenza_elementi" 
+										 id="Dimensione_minima_zone_di_incidenza_elementi"></a>Dimensione 
+ minima zone di incidenza elementi</span>: la zona resistente viene assunta 
+ pari alla massima larghezza degli elementi trave o pilastro che incidono 
+ sul nodo della parete. È disponibile la seguente opzione:</p>
+<ul>
+	<li class="p"><p><span class="hcp1">Pari a multiplo dello 
+	 spessore</span>: la zona di incidenza viene assunta pari al multiplo 
+	 dello spessore della parete specificato.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Passo_di_verifica_sez_orizzontali" 
+										 id="a1"></a>Passo di verifica</span>: 
+ specificare il passo con il quale ModeSt deve individuare le sezioni orizzontali 
+ per effettuare la progettazione e la verifica dell'armatura verticale. 
+ Utilizzare un passo troppo piccolo porta a maggiori tempi di elaborazione.</p>
+<p><a name="Trascura_zone_con_pilastro_inglobato" id="Trascura_zone_con_pilastro_inglobato"></a><span class="hcp1">Trascura zone con pilastro inglobato</span>: 
+ indicare se eventuali zone individuate in funzione dei parametri succitati 
+ vadano trascurate qualora nella parete risulti inglobata anche un'asta 
+ di tipo &quot;pilastro&quot;. Sarà infatti il modulo di progettazione 
+ pilastri a inserire una adeguata armatura in questo pilastro.</p>
+<p><span class="hcp1"><a name="Effettuare_le_verifiche_nel_piano_forte_della_parete" 
+										 id="Effettuare_le_verifiche_nel_piano_forte_della_parete"></a>Effettuare 
+ verifiche nel piano della parete</span>: specificare se eseguire le verifiche 
+ anche nel piano della parete (per maggiori informazioni si veda <span class="hcp1"><a href="Progettazione_e_verifica_armature.htm">Progettazione 
+ e verifica armature</a></span>).</p>
+<p><span class="hcp1"><a name="Elimina_armatura_diffusa_nelle_zone_di_rinforzo" 
+										 id="a4"></a>Elimina armatura diffusa 
+ nelle zone di rinforzo</span>: <span class="hcp7">specificare 
+ se nelle zone con armatura verticale di rinforzo vada eliminata l'armatura 
+ verticale diffusa</span>.</p>
+<p><span class="hcp1"><a name="Effettuare_verifiche_su_sezioni_verticali" 
+										 id="a2"></a>Effettuare verifiche 
+ su sezioni verticali</span>: specificare se eseguire le verifiche anche 
+ su sezioni verticali della parete (per maggiori informazioni si veda <span class="hcp1"><a href="Progettazione_e_verifica_armature.htm">Progettazione 
+ e verifica armature</a></span>).&#160;È disponibile la seguente opzione:</p>
+<ul>
+	<li class="p"><p><span class="hcp1"><a name="Passo_di_verifica_sez_verticali" 
+														 id="a3"></a>Passo 
+	 di verifica</span>: <span class="hcp7">specificare 
+	 il passo con il quale ModeSt deve individuare la dimensione delle 
+	 sezioni verticali su cui effettuare la verifica dell'armatura orizzontale. 
+	 Utilizzare un passo troppo piccolo porta a maggiori tempi di elaborazione.</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Elimina_armatura_diffusa_nell_architrave" 
+										 id="a5"></a>Elimina armatura diffusa 
+ nell'architrave</span>: <span class="hcp7">specificare 
+ se negli architravi costituiti da bidimensionali e dei quali viene richiesta 
+ la verifica, vada eliminata l'armatura diffusa (sia verticale che orizzontale)</span> 
+ <span class="hcp7">per effettuare 
+ le verifiche con la sola armatura specifica introdotta.</span></p>
+<p><span class="hcp1"><a name="Controllare_resistenza_a_taglio_trasversale_come_sezione_priva_di_armatura_a_taglio" 
+										 id="Controllare_resistenza_a_taglio_trasversale_come_sezione_priva_di_armatura_a_taglio"></a>Controllare 
+ resistenza a taglio trasversale come sezione priva di armatura a taglio</span>: 
+ specificare se eseguire le verifiche a taglio nel piano trasversale della 
+ parete (per maggiori informazioni si veda <span class="hcp1"><a 
+	 href="Progettazione_e_verifica_armature.htm">Progettazione e verifica 
+ armature</a></span>).</p>
+<p><span class="hcp1"><a name="Min__Af_armatura_diffusa" 
+										 id="Min__Af_armatura_diffusa"></a>Min. 
+ Af armatura diffusa</span>: specificare il minimo di armatura a metro 
+ lineare da considerare per le barre verticali e orizzontali. Lo scopo 
+ è di permettere per alcune normative di trascurare dei minimi da cui si 
+ può derogare a seguito di apposita certificazione, o di inserire dei minimi 
+ cautelativi anche per normative che non prevedono nessun minimo di armatura 
+ (D.M. 17/01/18).</p>
+<p><span class="hcp1"><a name="Considera_come_parete_debolmente_armata_ai_sensi_DM08" 
+										 id="Considera_come_parete_debolmente_armata_ai_sensi_DM08"></a>Considera 
+ come parete debolmente armata ai sensi D.M. 18</span>: specificare se 
+ eseguire le verifiche per le pareti debolmente armate come indicato nel 
+ par. 7.4.4.5.1 del D.M. 17/01/18. Sono disponibili le seguenti opzioni:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Modalita_di_valutazione_parametri_nel_caso_di_sisma_diverso_per_X_e_Y" 
+	 id="Modalita_di_valutazione_parametri_nel_caso_di_sisma_diverso_per_X_e_Y"></a>Modalità 
+	 di valutazione parametri nel caso di sisma diverso per X e Y</span>: 
+	 poiché la struttura può avere comportamento sismico diverso nelle 
+	 due direzioni e poiché le pareti possono non essere allineate alle 
+	 direzioni del sisma, è possibile con questa opzione specificare come 
+	 valutare le espressioni 7.4.13 o 7.4.14 riportate nel par. 7.4.4.5.1 
+	 del D.M. 17/01/18. Sono disponibili le seguenti opzioni:</p></li>
+</ol>
+<ul>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Usa 
+	 valore massimo</span>: viene considerato il massimo valore fra quello 
+	 calcolato con il fattore di comportamento in direzione X e Y.</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Componi 
+	 in direzione parete</span>: viene considerata la composizione della 
+	 proiezione lungo la parete dei valori calcolati con i fattori di struttura 
+	 in direzione X e Y.</p></li>
+</ul>
+<ol start="2">
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Incremento_del_50_delle_forze_assiali" id="Incremento_del_50_delle_forze_assiali"></a>Incremento 
+	 del 50% delle forze assiali</span>: specificare se incrementare e 
+	 decrementare del 50% le sollecitazioni assiali indotte dalle azioni 
+	 statiche relative alle sole combinazioni di tipo sismico come previsto 
+	 nel par. 7.4.4.5.1 del D.M. 17/01/18. La normativa non è chiara, ma 
+	 si segnala che l'Eurocodice indica esplicitamente di effettuare l'incremento 
+	 anche per pareti debolmente armate. L'incremento non viene effettuato 
+	 se il fattore di comportamento q è minore di 2. Sono disponibili le 
+	 seguenti opzioni:</p></li>
+</ol>
+<ul>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Sempre</span></p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Solo 
+	 per analisi sismiche statiche</span></p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Mai</span></p></li>
+</ul>
+<ol start="3" style="list-style: decimal;">
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Coeff_b_per_controllo_snellezza" id="Coeff_b_per_controllo_snellezza"></a>Coeff. 
+	 <font face="Symbol" class="hcp2">b</font> per controllo 
+	 snellezza</span>: specificare il valore del coefficiente <font face="Symbol" class="hcp2">b</font> per il quale moltiplicare l'altezza della parete 
+	 per calcolare la lunghezza libera di inflessione.</p></li>
+</ol>
+<h2>Armatura diffusa</h2>
+<p><span class="hcp1"><a name="Diametro_armatura_verticale1" 
+										 id="Diametro_armatura_verticale1"></a>Considera 
+ armatura con rete elettrosaldata</span>: specificare se armare la parete 
+ con rete elettrosaldata.</p>
+<p><span class="hcp1"><a name="Armatura_verticale_o_rete" 
+										 id="Armatura_verticale_o_rete"></a>Armatura 
+ verticale o rete</span>: specificare il diametro e il passo dei ferri 
+ costituenti l'armatura verticale principale.</p>
+<p><span class="hcp1"><a name="Elenco_diametri_utilizzabili_verticali" 
+										 id="Elenco_diametri_utilizzabili_verticali"></a>Elenco 
+ diametri utilizzabili</span>: specificare l'elenco dei diametri utilizzabili, 
+ separati da spazi (ad esempio 10 12 14 16 18). Sono ammessi anche valori 
+ non consecutivi.</p>
+<p><span class="hcp1"><a name="Passi_utilizzabili_verticali" 
+										 id="Passi_utilizzabili_verticali"></a>Passi 
+ utilizzabili</span>: specificare il valore minimo, massimo e l'incremento 
+ per determinare i passi ammissibili dei ferri di armatura. Ad esempio 
+ specificando (in cm) 10 20 5 saranno ammissibili ferri ogni 10, 15 o 20 
+ cm.</p>
+<p><span class="hcp1"><a name="Armatura_orizzontale" id="Armatura_orizzontale"></a>Armatura 
+ orizzontale</span>: specificare il diametro e il passo dei ferri costituenti 
+ l'armatura orizzontale principale.</p>
+<p><span class="hcp1"><a name="Elenco_diametri_utilizzabili_orizzontali" 
+										 id="Elenco_diametri_utilizzabili_orizzontali"></a>Elenco 
+ diametri utilizzabili</span>: specificare l'elenco dei diametri utilizzabili, 
+ separati da spazi (ad esempio 10 12 14 16 18). Sono ammessi anche valori 
+ non consecutivi.</p>
+<p><span class="hcp1"><a name="Passi_utilizzabili_orizzontali" 
+										 id="Passi_utilizzabili_orizzontali"></a>Passi 
+ utilizzabili</span>: specificare il valore minimo, massimo e l'incremento 
+ per determinare i passi ammissibili dei ferri di armatura. Ad esempio 
+ specificando (in cm) 10 20 5 saranno ammissibili ferri ogni 10, 15 o 20 
+ cm.</p>
+<p><span class="hcp1"><a name="Tipo_di_armatura_orizzontale" 
+										 id="Tipo_di_armatura_orizzontale"></a>Tipo 
+ di armatura orizzontale</span>: specificare il tipo di armatura orizzontale. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Dritta</span>: 
+	 vengono disposti ferri dritti.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Con 
+	 risvolti di estremità</span>: vengono disposti ferri con risvolto 
+	 di lunghezza pari allo spessore della parete meno due volte il copriferro 
+	 e il diametro della staffa.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Modalita_di_chiusura" id="Modalita_di_chiusura"></a>Modalità 
+ di chiusura</span>: specificare se e in che modo chiudere l'armatura orizzontale 
+ in prossimità degli estremi liberi. Le zone d'intersezioni tra pareti 
+ non sono considerate normalmente estremi liberi, comunque in progettazione 
+ interattiva è possibile applicare lo stesso tipo di chiusura anche per 
+ queste zone. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Nessuna 
+	 chiusura</span>: non viene eseguita nessuna chiusura.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Chiusura 
+	 con ferri ad U</span>: l'armatura orizzontale viene terminata con 
+	 ferri a forma di U e di lunghezza pari a quanto specificato nel parametro 
+	 <span class="hcp1">Lunghezza armatura di chiusura</span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Chiusura 
+	 con staffe</span>: l'armatura orizzontale viene terminata con staffe 
+	 di lunghezza pari a quanto specificato nel parametro <span class="hcp1">Lunghezza 
+	 armatura di chiusura</span>.</p></li>
+</ul>
+<p class="IndentBullet1" style="font-weight: bold;">Lunghezza armatura 
+ di chiusura<span class="hcp5">: specificare il metodo 
+ di calcolo della lunghezza dei ferri di chiusura. Sono disponibili le 
+ seguenti opzioni:</span></p>
+<ul>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Multiplo 
+	 dello spessore pari a</span>: specificare il valore del multiplo dello 
+	 spessore per il calcolo della lunghezza dei ferri di chiusura.</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Lunghezza 
+	 fissa pari a</span>: specificare il valore della lunghezza dei ferri 
+	 di chiusura.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Modalita_di_completamento_armatura_verticale" 
+										 id="Modalita_di_completamento_armatura_verticale"></a>Modalità 
+ di completamento armatura</span>: specificare come il programma debba 
+ comportarsi nel caso in cui le dimensioni (lunghezza e/o altezza) della 
+ parete non siano un multiplo del passo. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Adattata</span>: 
+	 il passo dei ferri viene ridotto in modo da posizionare il primo e 
+	 l'ultimo ferro della parete adiacenti all'estremità interna della 
+	 staffa o alle estremità superiori ed inferiori della parete.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Terminata</span>: 
+	 il passo dei ferri non viene cambiato e vengono aggiunti due ferri 
+	 adiacenti all'estremità interna della staffa&#160;o alle estremità 
+	 superiori ed inferiori della parete.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Nessuna</span>: 
+	 il passo dei ferri non viene cambiato e non vengono aggiunti ferri 
+	 all'estremità della parete.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Tipo_di_ottimizzazione_armatura" 
+										 id="Tipo_di_ottimizzazione_armatura"></a>Tipo 
+ di ottimizzazione armatura</span>: specificare il criterio di scelta fra 
+ le diverse combinazioni di armatura risultanti dai parametri precedenti. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Minimizza 
+	 il peso complessivo dei ferri</span>: permette che l'armatura venga 
+	 progettata minimizzando il peso complessivo dei ferri.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Minimizza 
+	 il numero dei ferri</span>: permette che l'armatura venga progettata 
+	 minimizzando il numero dei ferri.</p></li>
+</ul>
+<h2>Armatura di rinforzo</h2>
+<p><span class="hcp1"><a name="Elenco_diametri_utilizzabili_concentrata" 
+										 id="Elenco_diametri_utilizzabili_concentrata"></a>Elenco 
+ diametri utilizzabili</span>: specificare l'elenco dei diametri utilizzabili, 
+ separati da spazi (ad esempio 10 12 14 16 18). Sono ammessi anche valori 
+ non consecutivi.</p>
+<p><span class="hcp1"><a name="Numero_minimo_ferri" id="Numero_minimo_ferri"></a>Numero 
+ minimo ferri</span>: specificare il minimo numero di ferri da considerare 
+ nella zona di rinforzo.</p>
+<p><span class="hcp1"><a name="Interferro_minimo_sotto_il_quale_non_è_possibile_aggiungere_ferri" 
+										 id="Interferro_minimo_sotto_il_quale_non_è_possibile_aggiungere_ferri"></a>Interferro 
+ minimo sotto il quale non è possibile aggiungere ferri</span>: specificare 
+ il valore minimo della distanza fra i ferri sotto il quale non è possibile 
+ aggiungere ferri nella zona di rinforzo.</p>
+<p><span class="hcp1"><a name="Aggiungi_staffe_chiuse" id="Aggiungi_staffe_chiuse"></a>Aggiungi 
+ staffe chiuse</span>: specificare se e con quale diametro e passo aggiungere 
+ delle staffe chiuse nella zona di rinforzo. Sono disponibili le seguenti 
+ opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Stesso 
+	 diametro armatura diffusa orizzontale</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Diametro 
+	 imposto</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Stesso 
+	 passo armatura diffusa orizzontale</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Passo 
+	 imposto</span></p></li>
+</ul>
+<h2>Armatura secondaria</h2>
+<p><span class="hcp1"><a name="Diametro_ferri_di_collegamento" 
+										 id="Diametro_ferri_di_collegamento"></a>Diametro 
+ ferri di collegamento</span>: specificare il diametro dei ferri di collegamento 
+ fra le due armature disposte su facce parallele.</p>
+<p><span class="hcp1"><a name="Numero_ferri_di_collegamento__a_mq_" 
+										 id="Numero_ferri_di_collegamento__a_mq_"></a>Numero 
+ ferri di collegamento (a mq)</span>: specificare il numero dei ferri di 
+ collegamento (a mq) fra le due armature disposte su facce parallele. Si 
+ ricorda che la normativa prevede un numero minimo di 6 collegamenti a 
+ mq (D.M. 14/02/92 par. 5.3.4) o 9 collegamenti a mq (D.M. 17/01/18 par. 
+ 7.4.6.2.4).</p>
+<p><span class="hcp1"><a name="Lunghezza_ancoraggio_ferri_di_collegamento" 
+										 id="Lunghezza_ancoraggio_ferri_di_collegamento"></a>Lunghezza 
+ ancoraggio ferri di collegamento</span>: specificare la lunghezza degli 
+ ancoraggi per ogni collegamento fra le due armature disposte su facce 
+ parallele. Ad esempio specificando 10 cm per pareti di spessore 30 cm 
+ verranno conteggiati dei collegamenti di lunghezza pari a 30-2*C<span class="hcp4">f</span>+10+10 cm in totale, dove C<span class="hcp4">f</span> è il copriferro specificato.</p>
+<h2>Dati per progettazione agli stati limite</h2>
+<p><span class="hcp1"><a name="Condizioni_ambientali" id="Condizioni_ambientali"></a>Condizioni 
+ ambientali</span>: indicare le condizioni ambientali secondo la normativa 
+ Italiana per determinare i fattori di sicurezza negli stati limiti d'esercizio:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Ordinarie</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Aggressive</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Molto 
+	 aggressive</span></p></li>
+</ul>
+<p class="IndentBullet1"><span class="hcp1"><a name="Scelta_cemento" 
+															 id="Scelta_cemento"></a>Scelta 
+ cemento</span>: cliccando sul bottone &quot;Scelta cemento&quot;, sono 
+ accessibili all'utente le caratteristiche dei cementi relativi al produttore 
+ selezionato nella casella di riepilogo a discesa. Tecnisoft fornisce i 
+ dati relativi ai cementi di produzione industriale come uno strumento 
+ di utilità secondo le specifiche fornite dai relativi produttori, e non 
+ si assume alcuna responsabilità circa l'effettiva rispondenza alle specifiche 
+ di normativa. Nella tabella sono riportati i prodotti da utilizzare in 
+ funzione della classe d'esposizione, sono anche indicati l'ambiente con 
+ la sua descrizione, il massimo rapporto acqua/cemento e la minima resistenza 
+ del calcestruzzo. Cliccando sul nome del prodotto è possibile collegarsi 
+ al sito Internet del produttore per avere maggiori informazioni sulle 
+ sue caratteristiche.</p>
+<p><span class="hcp1"><a name="Controllo_rapporto_x_d" id="Controllo_rapporto_x_d"></a>Controllo 
+ rapporto X/D</span>: specificare se deve essere effettuato il controllo 
+ di normativa relativo al rapporto X/D fra la posizione dell'asse neutro 
+ e l'altezza utile della sezione.</p>
+<p><span class="hcp1"><a name="Classificazione_barre_tese_compresse" 
+										 id="Classificazione_barre_tese_compresse"></a>Classificazione 
+ barre tese/compresse</span>: in numerose verifiche interviene la valutazione 
+ dell'area di ferro teso (ad esempio nel calcolo della resistenza ultima 
+ a taglio) e/o dell'area di ferro compressa (ad esempio nel calcolo della 
+ capacità in termini di rotazione). Nel caso più generale possono risultare 
+ &quot;tese&quot; o &quot;compresse&quot; armature molto vicine all'asse 
+ neutro ed il loro conteggio può quindi falsare le relative verifiche. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 le barre con deformazione percentuale rispetto alla barra più tesa/compressa 
+	 non inferiore a</span>: specificare la percentuale della deformazione 
+	 della barra più tesa/compressa in assoluto affinché le barre con deformazione 
+	 al disotto del valore specificato siano considerate allo stesso modo. 
+	 Ad esempio specificando 30% verranno considerate tese tutte quelle 
+	 barre la cui deformazione sia almeno il 30% della deformazione della 
+	 barra più tesa della sezione e analogamente per quelle compresse.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">In 
+	 funzione della deformazione</span>: verranno considerate tese o compresse 
+	 tutte le barre con deformazione positiva o negativa.</p></li>
+</ul>
+</body>
+</html>

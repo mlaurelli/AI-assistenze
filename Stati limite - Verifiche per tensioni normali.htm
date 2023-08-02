@@ -1,0 +1,127 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Verifiche a presso-tenso flessione</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-style:italic;
+font-weight:bold; }
+span.hcp3 { font-weight:normal; }
+p.hcp4 { text-align:center; }
+img.hcp5 { margin-top:0px;
+margin-bottom:0px;
+margin-left:0px;
+margin-right:0px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Verifiche a presso-tenso flessione</h1>
+<p class="Titolo7"><span class="hcp1">Premessa</span></p>
+<p>Le verifiche per sollecitazioni che inducono tensioni normali (sforzo 
+ normale e momento) secondo il metodo degli stati limite teoricamente consistono 
+ nel determinare se la sollecitazione agente (N-My-Mz) è contenuta o meno 
+ all'interno del dominio di rottura totale della sezione.</p>
+<p>Nel caso di elementi snelli le verifiche vengono effettuate basandosi 
+ sul dominio di rottura ridotto che viene determinato con il procedimento 
+ della &quot;colonna modello&quot;.</p>
+<p>Per poter procedere alle successive verifiche previste dalle diverse 
+ normative e per valutare in un certo qual modo la distanza dal bordo del 
+ dominio è però necessario determinare anche una terna di <span class="hcp2">Sollecitazioni ultim</span><span class="hcp1">e</span> 
+ giacenti sul confine del dominio e logicamente correlate alle sollecitazioni 
+ agenti.</p>
+<p>In pratica, dette <span class="hcp1">S</span> le sollecitazioni 
+ agenti ed <span class="hcp1">U</span> le sollecitazioni 
+ ultime da determinare, si sceglie in modo opportuno un punto <span class="hcp1">O</span> 
+ all'interno del dominio come <span class="hcp1">&quot;</span><span class="hcp2">origine</span><span class="hcp1">&quot;</span> delle sollecitazioni. Il 
+ punto del confine del dominio allineato sulla congiungente <span class="hcp1">O-S</span> 
+ sarà il cercato punto <span class="hcp1">U</span>.</p>
+<p>Il rapporto fra le distanze <span class="hcp1">U-O</span> 
+ e <span class="hcp1">S-O</span> dà in un certo qual modo 
+ la valutazione della <span class="hcp2">sicurezza</span> 
+ relativa alla verifica in oggetto. Infatti un valore pari ad 1 indicherà 
+ in modo univoco che <span class="hcp1">S</span> giace sul 
+ bordo del dominio mentre un valore minore di 1 indicherà che <span class="hcp1">S</span> 
+ <span class="hcp3">giace all'esterno del dominio e che 
+ la verifica non è soddisfatta. Questo indipendentemente dalla scelta di</span> 
+ <span class="hcp1">O</span> <span class="hcp3">e 
+ quindi dalla modalità di calcolo di</span> <span class="hcp1">U</span><span class="hcp3">.</span></p>
+<p><span class="hcp3">Valori maggiori di 1 indicano che 
+ la sicurezza è soddisfatta, ma non ne forniscono un valore in modo univoco. 
+ La scelta di</span> <span class="hcp1">O</span> <span class="hcp3">e 
+ la modalità di calcolo di</span> <span class="hcp1">U</span> 
+ <span class="hcp3">rispecchiano infatti a livello logico 
+ la scelta di una modalità di accrescimento dei carichi, ma le diverse 
+ modalità di accrescimento sono già implicitamente considerate dalle combinazioni 
+ dei carichi previste dai metodi agli stati limite e valutate con criteri 
+ semi-probabilistici.</span></p>
+<p>La scelta di <span class="hcp1">O</span> e quindi di <span class="hcp1">U</span> può quindi essere effettuata secondo 
+ diverse modalità senza incidere sulla bontà o correttezza delle verifiche.</p>
+<p><span class="hcp1"><a name="Nota" id="Nota"></a>Nota</span>: 
+ se al termine della verifica compare il messaggio &quot;<span style="font-style: italic;">sicurezza 
+ a rottura non calcolabile ma soddisfatta</span>&quot; questo può essere 
+ trascurato perché le verifiche sono soddisfatte. Il programma avverte 
+ comunque che non è stato determinato il coefficiente di sicurezza e quindi 
+ non verrà riportato nella relazione di calcolo. Ricordiamo che secondo 
+ il metodo degli stati limite le verifiche consistono nel determinare se 
+ la sollecitazione agente (N-My-Mz) è contenuta o meno all'interno del 
+ dominio di rottura totale della sezione e quindi non sono indispensabili 
+ le valutazioni sul coefficiente di sicurezza.</p>
+<p class="Titolo7"><span class="hcp1">Flessione e presso-tenso 
+ flessione retta</span></p>
+<p>Se nei criteri di progetto è impostata l'opzione <a href="Criteri%20di%20disegno%20armatura%20sezioni.htm#Usa_dominio_N-M_per_flessioni_rette"><span class="hcp1">Usa dominio N-M per flessioni rette</span></a> 
+ e se la sezione è soggetta solo a momento My o Mz (ed eventualmente sforzo 
+ normale) ModeSt controlla che gli stati di rottura corrispondenti alla 
+ sole posizioni dell'asse neutro ortogonali all'asse di sollecitazione 
+ non comportino l'insorgere di momenti nell'altro senso. Se il controllo 
+ è positivo significa che la sezione è soggetta a sola flessione o pressoflessione 
+ retta ed in tal caso viene valutato il dominio di rottura al variare di 
+ N-My (o N-Mz).</p>
+<p>In questo caso nei criteri di progetto è possibile scegliere la <span class="hcp3">modalità di ricerca sicurezza:</span></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Sicurezza 
+	 a sforzo normale costante</span><span class="hcp3">: 
+	 il punto O viene scelto come la proiezione del punto S sulla retta 
+	 congiungente il punto con N=0 e M=0 ed il punto del dominio corrispondente 
+	 all'assetto di rottura 1 o 4 (trazione pura o compressione pura in 
+	 funzione delle sollecitazioni agenti). Non viene scelto il punto con 
+	 N pari a quello agente e M=0 (sull'asse N) perché in alcuni casi può 
+	 ricadere fuori dal dominio, come appare evidente dalla figura, e quindi 
+	 non può essere utilizzato per la determinazione di U. Nel caso improbabile 
+	 in cui S coincida con O, si effettua una verifica ad eccentricità 
+	 costante.</span></p></li>
+</ul>
+<p class="hcp4"><span class="hcp3"><img src="../dom1.jpg" alt="" width="318" height="225" border="0" class="hcp5"></span></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Sicurezza 
+	 a eccentricità costante</span><span class="hcp3">: 
+	 viene ovviamente scelto come punto O il punto con N=0, M=0.</span></p></li>
+</ul>
+<p class="hcp4"><span class="hcp3"><img src="../dom2.jpg" alt="" width="318" height="225" border="0" class="hcp5"></span></p>
+<p class="IndentBullet1"><span class="hcp3">Se la citata 
+ opzione non è attiva o se il citato controllo non risulta rispettato, 
+ si procede come nel caso della flessione e pressoflessione deviata.</span></p>
+<p class="Titolo7"><span class="hcp1">Flessione e presso-tenso 
+ flessione deviata</span></p>
+<p style="margin-bottom: 0;"><span class="hcp3">Viene valutato 
+ il dominio di rottura al variare di My-Mz con N costante pari a quello 
+ agente. Il punto</span> <span class="hcp1">O</span> <span class="hcp3">viene scelto in analogia al caso precedente 
+ e per gli stessi motivi come l'intersezione fra la retta nello spazio 
+ congiungente il punto con N=0, My=0, Mz=0 ed il punto del dominio corrispondente 
+ all'assetto di rottura 1 o 4 (trazione pura o compressione pura in funzione 
+ delle sollecitazioni agenti) con il piano corrispondente a N pari a quello 
+ agente.</span></p>
+</body>
+</html>

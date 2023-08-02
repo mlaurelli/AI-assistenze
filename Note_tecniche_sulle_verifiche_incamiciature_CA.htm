@@ -1,0 +1,94 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Note tecniche sulle verifiche</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { line-height:115%; }
+span.hcp2 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Note tecniche sulle verifiche</h1>
+<p><span class="hcp1">Il programma consente di verificare 
+ rinforzi a flessione e taglio di pilastri in c.a. di strutture esistenti 
+ calcolate in base al D.M. 17/01/18. Le verifiche vengono eseguite come 
+ indicato nel paragrafo C8.7.4.2.1 della Circolare n. 7 del 21/01/19.</span></p>
+<p class="Titolo7"><b>Effetto del confinamento</b></p>
+<p>L'effetto di confinamento dovuto sia alla staffatura della camicia sia 
+ di quella esistente non vengono tenuti in conto. Le caratteristiche del 
+ diagramma sigma-epsilon delle varie parti della sezione sono quindi quelle 
+ del calcestruzzo indicate nei criteri come caratteristiche della camicia, 
+ immaginate estese a tutta la sezione come indicato al punto C8.7.4.2.1 
+ <span class="hcp1">della Circolare n. 7 del 21/01/19.</span></p>
+<p class="Titolo7"><b>Verifiche a presso/tenso-flessione</b></p>
+<p>Le verifiche sono effettuate considerando per il calcestruzzo un diagramma 
+ sigma-epsilon univoco e pari a quello del calcestruzzo indicato nei criteri 
+ come caratteristiche della camicia, immaginate estese a tutta la sezione 
+ come indicato nel par. C8.7.4.2.1 <span class="hcp1">della 
+ Circolare n. 7 del 21/01/19</span>, mentre per l'acciaio vengono differenziate 
+ per quanto riguarda i fattori di confidenza, la classe, ecc.</p>
+<p>In ogni caso i valori del momento ultimo ed elastico sono ridotti di 
+ un fattore pari al 90% come indicato al punto C8.7.4.2 <span class="hcp1">della 
+ Circolare n. 7 del 21/01/19.</span></p>
+<p class="Titolo7"><b><a name="Verifiche_a_taglio"></a>Verifiche a taglio</b></p>
+<p>Nelle verifiche a taglio è possibile scegliere se considerare o meno 
+ il contributo della resistenza a taglio dell'incamiciatura attraverso 
+ il parametro <b style="mso-bidi-font-weight: normal;"><span class="hcp2"><a 
+	 href="CriPil.htm#Considera_resistenza_a_taglio_della_nuova_sezione" 
+	 style="font-family: Arial, sans-serif;">Considera resistenza a taglio 
+ della nuova sezione</a></span></b><b>.</b> Se l'opzione è deselezionata 
+ la resistenza a taglio corrisponde a quella della sezione esistente con 
+ le relative caratteristiche meccaniche e staffatura. Se l'opzione è selezionata 
+ la resistenza a taglio corrisponde a quella della sezione con le dimensioni 
+ aumentate dal rinforzo e le caratteristiche meccaniche e staffatura del 
+ rinforzo. Inoltre, selezionando il parametro <span class="hcp2"><a 
+	 href="CriPil.htm#Considera_anche_contibuto_della_sezione_esistente1">Considera 
+ anche contributo della sezione esistente</a></span> la resistenza a taglio 
+ sarà considerata non minore di quella calcolata considerando la somma 
+ delle resistenze delle staffe nuove ed esistenti, con la base di taglio 
+ (bw) della nuova sezione ma con l'altezza utile (d) pari a quella della 
+ sezione attuale, rispetto alla quale si ritiene possano essere tenute 
+ in conto le staffe esistenti. Tale ultima opzione permette di tenere in 
+ conto delle staffe esistenti, oltre che le nuove, in un unico modello 
+ del traliccio ad inclinazione variabile. Ovviamente per le staffe esistenti, 
+ viene tenuto in conto delle differenze nella resistenza dovute ai fattori 
+ di confidenza.</p>
+<p>Sia la capacità della sezione di dimensioni aumentate dal rinforzo con 
+ le sole staffe nuove che quella ottenuta considerando anche il contributo 
+ della sezione esistente sono ridotte di un fattore pari a al 90% come 
+ indicato al punto C8.7.4.1 <span class="hcp1">della Circolare 
+ n. 7 del 21/01/19.</span></p>
+<p class="Titolo7"><b>Verifiche agli stati limite di esercizio</b></p>
+<p>Gli stati limite di esercizio vengono effettuate nel modo consueto valutando 
+ le tensioni in una sezione omogeneizzata con calcestruzzo non resistente 
+ a trazione. I controlli sulle tensioni massime sia lato acciaio che lato 
+ calcestruzzo vengono effettuati con riferimento alle resistenze della 
+ camicia, che essendo la più esterna, è quella soggetta alle tensioni maggiori.</p>
+<p>Nelle verifiche a fessurazione si prendono in conto tutti i ferri ricadenti 
+ nelle zone di influenza soggette a fessurazione.</p>
+<p class="Titolo7"><b>Nota importante:</b></p>
+<p>Nella definizione della armatura longitudinale della incamiciatura occorre 
+ specificare se è garantito l'ancoraggio superiore e/o inferiore delle 
+ barre. La lunghezza indicata è solo per motivi di disegno e computo. ModeSt 
+ non entra nel merito di <b style="font-weight: normal;">come</b> venga 
+ realizzato l'ancoraggio, per il quale esistono diverse possibilità (inghisaggio, 
+ ferri passanti bloccati con piastre, resine, ecc.) ma si comporta in modo 
+ diverso a seconda che l'ancoraggio sia garantito o meno: a livello di 
+ verifiche a flessione (sia ultime che di esercizio) vengono tenuti in 
+ conto solo i ferri che siano ancorati nella rispettiva zona di verifica 
+ (testa o piede).</p>
+<p>Per le verifiche a taglio, si ritiene che le staffe dell'incamiciatura 
+ (se presenti) possano contribuire alla creazione di un traliccio resistente 
+ solamente se le barre longitudinali risultano ancorate <b>sia al piede 
+ che alla testa del pilastro<span style="font-weight: normal;">.</span></b></p>
+</body>
+</html>

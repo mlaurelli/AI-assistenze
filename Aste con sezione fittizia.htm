@@ -1,0 +1,57 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Aste con sezione fittizia</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Aste con sezione fittizia</h1>
+<p>Fra i diversi tipi di sezione che è possibile assegnare come proprietà 
+ alle aste oltre a quelle espressamente definite dall'utente si trovano 
+ anche tre tipi di sezione fittizie:</p>
+<p class="Normal3"><span class="hcp1">Sezione 0</span>: le 
+ aste con sezione 0 non vengono in nessun caso trasferite al solutore ma 
+ trasmettono solo sforzi di taglio. Un'asta con sezione 0 viene inserita 
+ per default fra i nodi inferiori e superiori dei muri, nel qual caso viene 
+ poi trasformata in una delle aste necessarie per la schematizzazione del 
+ muro. È possibile assegnare carichi alle aste con sezione 0 e quindi carichi 
+ lineari in testa ed al piede dei muri.</p>
+<p class="Normal3"><span class="hcp1">Sezione –1</span>: 
+ le aste con sezione –1 non vengono in nessun caso trasferite al solutore 
+ e non è possibile assegnare loro carichi. Vanno utilizzate solo per la 
+ schematizzazione di zone di carico (solai) a sbalzo o per individuarne 
+ il perimetro lungo lati paralleli al verso dell'orditura. I carichi che 
+ competerebbero all'asta di sezione –1 vengono trasferiti automaticamente 
+ all'asta che la fronteggia nel senso dell'orditura e che quindi non può 
+ essere anch'essa caratterizzata da sezione –1.</p>
+<p class="Normal3"><span class="hcp1">Isolatore</span>: le 
+ aste con sezione di tipo &quot;isolatore&quot; indicano la presenza di 
+ un dispositivo di isolamento sismico fra i due nodi di estremità.</p>
+<p>Nota: non dovrebbe essere necessario in alcun caso l'utilizzo di aste 
+ con sezione 0 se non in testa ed al piede dei muri. Se l'utente sente 
+ la necessità di utilizzare una sezione 0 per delimitare un solaio o per 
+ introdurre dei carichi lineari nella struttura, probabilmente l'asta può 
+ essere trascurata o trasformata in un cordolo o (se non prende carico) 
+ sostituita da un'asta con sezione –1.</p>
+<p>Due aste (non di testa ad un muro) di sezione 0 che incidono sullo stesso 
+ nodo introducono molto probabilmente delle labilità nella struttura.</p>
+<p style="margin-bottom: 0;">Per chiarimenti sull'uso delle sezioni fittizie 
+ si veda anche l'esempio <span class="hcp1"><a href="Guida.chm::/Schematizzazione_aree_a_sbalzo.htm">Schematizzazione 
+ aree a sbalzo</a></span>.</p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Modellazione della struttura</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Modellazione della struttura</h1>
+<p>Prima di procedere si consiglia di eseguire le analisi preliminari di 
+ semplificazione e controllo del modello come indicato nel paragrafo <u><span 
+	 style="text-decoration: none; "><a href="Suggerimenti_per_la_modellazione_della_struttura.htm" 
+										 style="font-weight: bold;">Suggerimenti 
+ per la modellazione della struttura</a>.</span></u></p>
+<p>Dopo avere modellato la struttura, alle aste devono essere assegnati 
+ dei vincoli aste di tipo cerniera plastica. <span style="mso-bidi-font-weight: bold;">È 
+ possibile definire ed assegnare automaticamente le cerniere plastiche</span>&#160;a 
+ tutte le aste del modello cliccando nel gruppo <span class="hcp1">Strumenti</span> 
+ della scheda <span class="hcp1">Modellazione</span> su <span class="hcp1">Assegna cerniere plastiche <img src="../Icone/16/assegnacerpl.png" alt="" style="border: Solid 1px #808080; border-width: 1px; border-style: solid;" border="1"></span>.</p>
+<p>Le aste devono essere suddivise solo negli elementi in c.a. nel caso 
+ in cui si desideri che il programma utilizzi come valore del taglio di 
+ plasticizzazione quello corrispondente alla zona di staffatura e non il 
+ minore di tutta la campata. In tala caso la lunghezza dell'asta dovrà 
+ essere minore o uguale alla zona di staffatura, ad esempio una trave in 
+ cui in una campata le due zone di staffatura di estremità sono lunghe 
+ 1.20 m, dovrà essere composta da 3 aste e le aste di estremità dovranno 
+ avere una lunghezza minore o uguale a 1.20 m.</p>
+<p>Nel caso di aste in acciaio suddivise occorre <a href="Definizione_automatica_ed_interattiva_delle_membrature_acciaio.htm">definire 
+ la membratura</a> in quanto è necessaria per la corretta determinazione 
+ della luce di taglio (Lv).</p>
+<p>Per le aste con membratura trave, le cerniere plastiche nel piano locale 
+ XY non vengono trasferite al solutore in quanto ininfluenti nell'analisi 
+ pushover poiché eseguita con l'ipotesi di piano rigido.</p>
+<p>Per determinare le caratteristiche delle cerniere plastiche e i domini 
+ di interazione N-M nelle travi e pilastri in c.a. è necessario seguire 
+ la procedura indicata nel paragrafo <span class="hcp1"><a 
+	 href="Inserimento_armature.htm">Inserimento armature</a></span>.</p>
+</body>
+</html>

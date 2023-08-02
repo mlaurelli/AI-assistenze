@@ -1,0 +1,95 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>EDIF - Edita ferro</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+span.hcp4 { font-style:italic; }
+span.hcp5 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">EDIF - Edita ferro</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Progettazione interattiva travi, pilastri, pareti</p>
+</td>
+<td style="width:28%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p>
+</td>
+</tr>
+</table>
+<p>Permette di modificare un ferro già inserito nella travata, inserire o modificare i ferri verticali in una sezione della pilastrata oppure inserire o modificare l'armatura distribuita o di rinforzo in una parete.</p>
+<p class="AmbienteProgettazione" style="font-weight: bold;">Progettazione interattiva travi</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">EDIF</span> <span class="hcp4"><font color="#0000FF">clic</font> <font color="#0000FF">clic</font></span></p>
+<p>Il primo punto selezionato con il cursore grafico individua il ferro che si intende editare e l'estremo che si desidera spostare (inizio o fine ferro), il secondo punto indica la nuova posizione dell'estremo del ferro (escluso l'ancoraggio).</p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Se il ferro raggiunge una linea di blocco, non sarà possibile prolungarlo oltre, a meno di non disattivare i blocchi con il comando <span class="hcp5"><a href="FBL.htm">FBL</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Durante l'editing del ferro NON viene effettuato il controllo se la lunghezza del ferro supera quanto specificato nei criteri di progetto (vedi <span class="hcp3"><a href="../Manuale/CriGenTra.htm#Max_lunghezza_barre">Max lunghezza barre</a></span>).</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Durante l'editing del ferro è possibile cambiare la combinazione di diametri corrente con il comando <span class="hcp5"><a href="FERC.htm">FERC</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">In qualunque momento è possibile piegare il ferro per realizzare un sagomato usando i tasti <span class="hcp3">I</span> o <span class="hcp3">F</span> e "Invio" che consentono di specificare il punto iniziale o finale di piegatura.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">In qualunque momento è possibile annullare l'ultima piegatura del ferro usando il tasto <span class="hcp3">U</span> e "Invio".</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">In corrispondenza dei cambi di pendenza della travata, il ferro inverte automaticamente la posizione se incontra una concavità. Se il ferro incontra una convessità normalmente non inverte la posizione. È possibile modificare questo comportamento con il comando <span class="hcp3"><a href="IPF.htm">IPF</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Se è stato settato un passo di arrotondamento ferri con il comando <span class="hcp3"><a href="PASSO.htm">PASSO</a></span>, il ferro inserito avrà una lunghezza multipla di tale valore. Sarà però in tal caso difficoltoso inserire punti di piegatura.</p>
+</li>
+</ul>
+<p class="AmbienteProgettazione" style="font-weight: bold;"><span class="hcp3">Progettazione interattiva pilastri</span></p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">EDIF</span> <span class="hcp4"><font color="#0000FF">Selezionare la sezione</font></span></p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Non è possibile modificare la lunghezza dei ferri.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Per i pilastri rettangolari, a T o a L, indicando nella casella di testo del numero di ferri un valore negativo si possono posizionare i ferri di lato alla distanza in millimetri specificata. Ad esempio specificando -215 verrano posizionati ferri sul lato ad una mutua distanza al massimo di 215 mm.</p>
+</li>
+</ul>
+<p class="AmbienteProgettazione" style="font-weight: bold;"><span class="hcp3">Progettazione interattiva pareti</span></p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">EDIF</span> <span class="hcp4"><font color="#0000FF">Selezionare l'armatura distribuita o il rinforzo</font></span></p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+//]]>
+</script>
+</body>
+</html>

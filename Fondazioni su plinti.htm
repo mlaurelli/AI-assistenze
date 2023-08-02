@@ -1,0 +1,135 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Fondazioni su plinti</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Fondazioni su plinti</h1>
+<p>Si premette che le considerazioni qui esposte hanno carattere prettamente 
+ ingegneristico e non sono specificatamente relative all'utilizzo di ModeSt 
+ per l'analisi delle problematiche esposte.</p>
+<p>Si possono distinguere alcuni casi principali di strutture con fondazioni 
+ con plinti:</p>
+<p class="Titolo7"><span class="hcp1">Struttura esclusivamente 
+ fondata con plinti</span></p>
+<p>Tipicamente si tratta di strutture non in zona sismica, dato l'obbligo 
+ di eseguire collegamenti al piede previsti dalla legge Italiana per strutture 
+ in zona sismica. A volte si ricorre a questa schematizzazione anche in 
+ zona sismica nel caso di pavimenti industriali (su massicciata) ben ripartiti 
+ con rete elettrosaldata ed eventuali ferri aggiuntivi in corrispondenza 
+ delle &quot;strisce&quot; fra i pilastri.</p>
+<p>In questo caso con ModeSt si può operare essenzialmente in tre modi:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">sovrastruttura incastrata 
+	 al piede e successivo calcolo dei plinti con applicate come azioni 
+	 le reazioni vincolari;</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">sovrastruttura con vincoli 
+	 al piede pari a pseudo-plinti con rotazione bloccata e successivo 
+	 calcolo dei plinti con applicate come azioni le reazioni vincolari;</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">sovrastruttura con vincoli 
+	 al piede pari a pseudo-plinti con rotazione libera e successivo calcolo 
+	 dei plinti con applicate come azioni le reazioni vincolari.</p></li>
+</ol>
+<p>Si possono nei vari casi effettuare le seguenti considerazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">il calcolo con il metodo 1 
+	 è quello più semplice e che riserva meno &quot;sorprese&quot; per 
+	 quanto riguarda il comportamento della sovrastruttura. Molto simile 
+	 a quanto si faceva prima delle possibilità offerte dai programmi di 
+	 calcolo;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">il metodo 3 è sicuramente 
+	 il più realistico se si decide di prescindere totalmente dalla rigidezza 
+	 degli elementi di collegamento, ma porta ad un comportamento della 
+	 sovrastruttura difficilmente prevedibile e spesso all'apparenza assurdo;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">il metodo 2 è ovviamente una 
+	 via intermedia fra i due e può essere adottato specialmente se la 
+	 sovrastruttura è di tipo prefabbricato, praticamente &quot;pendolare&quot; 
+	 o comunque poco rigida.</p></li>
+</ul>
+<p class="Titolo7"><span class="hcp1">Struttura fondata con 
+ plinti e cordoli di collegamento non su suolo elastico</span></p>
+<p>I cordoli di collegamento possono essere in tal caso essenzialmente 
+ di due tipi: cordoli &quot;leggeri&quot;, inseriti esclusivamente per 
+ i motivi di normativa sopra esposti, o cordoli di una certa importanza, 
+ deputati ad assorbire la tendenza alla rotazione al piede indotta dalla 
+ sovrastruttura.</p>
+<p>In questo caso si possono adottare le stesse schematizzazioni di cui 
+ al punto precedente, con le seguenti considerazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">col metodo 1 i cordoli risultano 
+	 completamente privi di sollecitazioni (a meno di quelle indotte dal 
+	 peso proprio o da carichi applicati) ed ai fini del calcolo della 
+	 sovrastruttura il loro inserimento è del tutto ininfluente. Il metodo 
+	 è adatto per cordoli &quot;leggeri&quot;, ma è poco aderente alla 
+	 realtà;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">col metodo 2 i cordoli risultano 
+	 sollecitati solo in funzione dei cedimenti differenziali, e non potendo 
+	 le loro estremità ruotare, possono nascere dei momenti flettenti a 
+	 volte eccessivi, forse poco aderenti alla realtà;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">col metodo 3 tutti gli effetti 
+	 flessionali al piede dei pilastri sono assorbiti dai cordoli, mentre 
+	 la &quot;portanza&quot; dei carichi verticali è affidata ai plinti. 
+	 Forse è lo schema che più si avvicina alla realtà, ma se le flessioni 
+	 al piede dei pilastri sono notevoli (tipico per edifici prefabbricati 
+	 con schema &quot;pendolare&quot; in zona sismica) possono essere necessari 
+	 cordoli di notevoli dimensioni.</p></li>
+</ul>
+<p class="Titolo7"><span class="hcp1">Struttura fondata con 
+ plinti e cordoli (travi) di collegamento su suolo elastico</span></p>
+<p>In questo caso lo schema di calcolo di tipo 1 è decisamente inapplicabile, 
+ dato che la mancanza di abbassamento dei nodi d'estremità rende praticamente 
+ trascurabile il contributo del suolo elastico per i collegamenti. Può 
+ servire solo se i collegamenti sono molto lunghi e soggetti a forti carichi 
+ verticali, nel qual caso il suolo elastico riduce le sollecitazioni da 
+ essi indotte. Nei casi 2 e 3 valgono le stesse considerazioni, con il 
+ contributo del terreno che generalmente però rischia di essere oneroso 
+ in termine di sollecitazioni per cordoli molto lunghi se non controbilanciato 
+ da carichi verticali.</p>
+<p>Occorre inoltre fare attenzione al fatto che intorno al pilastro si 
+ ha la sovrapposizione delle aree che &quot;appoggiano sul terreno&quot; 
+ (plinto e suole delle travi nelle due direzioni) con una sovrastima della 
+ capacità portante in quella zona.</p>
+<p><span class="hcp1">Strutture con fondazioni &quot;a zone</span>&quot;, 
+ ossia con zone della struttura fondate con plinti (ed eventuali cordoli) 
+ e zone fondate con travi o platee su suolo elastico:</p>
+<p>Anche in questo caso ovviamente non è applicabile il metodo 1, altrimenti 
+ le zone di struttura con fondazioni su suolo elastico (con cedimenti) 
+ risulterebbero &quot;appese&quot; a quelle incastrate al piede (senza 
+ cedimenti), con conseguenti sollecitazioni nella sovrastruttura completamente 
+ errate.</p>
+<p>Restano valide per le zone a plinti le considerazioni sopra esposte.</p>
+<p>Per i nodi su cui insistono dei plinti/pali è possibile modellare la 
+ condizione di vincolo elastico, analogamente al vincolo pseudo-plinto, 
+ valutando le costanti elastiche in funzione della stratigrafia. L'opzione 
+ &quot;vincoli valutati in funzione della stratigrafia&quot; permette anche 
+ la modellazione automatica del vincolo nodale rappresentativo della risposta 
+ elastica offerta da fondazioni su pali. Le considerazioni fatte in questo 
+ paragrafo sono estendibili anche a questo tipo di modellazione.</p>
+<p>Concludendo, come è ovvio, resta al progettista la scelta del tipo di 
+ schema strutturale che più si avvicina alla realtà o alle personali considerazioni 
+ di carattere ingegneristico. ModeSt lascia la libertà di procedere come 
+ si desidera.</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Argomenti 
+ correlati: <a href="Nodi%20-%20vincoli%20e%20fondazioni.htm">Nodi - vincoli e 
+ fondazioni</a></span>, <span class="hcp1"><a href="Note%20sui%20vincoli%20di%20tipo%20plinto.htm">Note 
+ sui vincoli di tipo plinto</a></span>, <span class="hcp1"><a 
+	 href="../Manuale_geotecnica/Vincoli_valutati_in_funzione_della_stratigrafia.htm">Vincoli 
+ valutati in funzione della stratigrafia</a></span></p>
+</body>
+</html>

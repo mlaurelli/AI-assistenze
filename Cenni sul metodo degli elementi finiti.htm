@@ -1,0 +1,41 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Cenni sul metodo degli elementi finiti</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+font.hcp1 { font-family:Verdana; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Cenni sul metodo degli elementi finiti</h1>
+<p>Il metodo degli elementi finiti (FEM) è una generalizzazione del metodo matriciale degli spostamenti utilizzato nell'analisi strutturale. <font face="Verdana" class="hcp1">Il</font> <a href="Cenni%20sul%20metodo%20degli%20elementi%20finiti.htm"><span style="text-decoration: none;"><font color="#000000" face="Verdana" class="hcp1">concetto basilare del FEM</font></span></a> <font face="Verdana" class="hcp1">è che</font> la struttura viene considerata come un assemblaggio di pezzi discreti, chiamati elementi, interconnessi in un numero finito di punti o nodi.</p>
+<p>Nella struttura reale il numero di nodi interconnessi è infinito e la grandezza degli elementi è infinitamente piccola.</p>
+<p>Avendo rappresentato la struttura con elementi bi/tridimensionali, è possibile analizzare la struttura attraverso una procedura simile a quella usata nella teoria delle travi.</p>
+<p>Gli spostamenti interni agli elementi sono correlati agli spostamenti dei nodi di estremità mediante una funzione, propria dell'elemento utilizzato, detta funzione di forma o di spostamento. Essa in genere è determinata utilizzando il principio del minimo dell'energia potenziale. La matrice di rigidezza, che correla gli spostamenti nodali di un elemento, è una combinazione della funzione di spostamento suddetta e le proprietà del materiale dell'elemento. Imponendo l'equilibrio ad ogni nodo, le matrici di rigidezza dei singoli elementi sono assemblate in un unico sistema di equazioni lineari che, risolto rispetto agli spostamenti nodali incogniti, fornisce le deformazioni e le tensioni relative ad ogni singolo elemento.</p>
+<p>Le deformazioni della struttura sono rappresentate dai movimenti dei nodi. Questi movimenti sono noti come gradi di libertà. Nei programmi agli elementi finiti i gradi di libertà sono le incognite principali dell'analisi e possono includere sia le componenti traslazionali che rotazionali. Il grado di libertà associato ad ogni nodo dipende dai tipi di elementi connessi nel nodo.</p>
+<p>Il metodo degli elementi finiti può essere così riassunto:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">schematizzazione della struttura mediante nodi ed elementi;</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">creazione della matrice di rigidezza di ogni singolo elemento utilizzato;</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="margin-bottom: 0;">assemblaggio e risoluzione del sistema di equazioni di equilibrio globale ottenuto.</p>
+</li>
+</ul>
+</body>
+</html>

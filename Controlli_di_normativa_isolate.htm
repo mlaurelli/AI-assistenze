@@ -1,0 +1,96 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Controlli di normativa</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold;
+font-style:italic; }
+span.hcp2 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Controlli di normativa</h1>
+<p>Si riassumono i controlli che ModeSt esegue alla fine del calcolo, con 
+ alcune considerazioni in merito. Si fa notare che ModeSt non esegue le 
+ verifiche di cui al par. 7.10.5.2 del D.M. 17/01/18.</p>
+<p class="hcp1">&quot;Periodo struttura 
+ isolata &lt; 2 sec.&quot;</p>
+<p class="Normal3" style="font-weight: bold; font-style: italic;">&quot;Periodo 
+ struttura isolata &lt; 3 * Periodo struttura a base fissa&quot;</p>
+<p>Il riferimento è alla <span style="line-height: 115%;">Circolare n. 
+ 7 del 21/01/19</span>, par. C7.10.1, punto a). Tali indicazioni non sembrano 
+ avere valore prescrittivo, ma solo indicazione di buona esecuzione del 
+ sistema di isolamento. La circolare inoltre fa riferimento ad un generico 
+ &quot;periodo della struttura isolata&quot; senza considerare che a rigor 
+ di logica già i periodi principali sono generalmente due. ModeSt controlla 
+ comunque tutti i periodi richiesti dall'utente, meramente per dare un'indicazione 
+ sui risultati dell'elaborazione. Se una o più di tali segnalazioni sono 
+ relative ad un periodo successivo ai primi due, e se tali periodi sono 
+ ben disaccoppiati, possono a nostro avviso generalmente essere ignorate. 
+ Si tenga inoltre presente che nel caso di isolatori a pendolo i periodi 
+ sono diversi in funzione dello stato limite per cui si sta eseguendo il 
+ calcolo (si veda anche <span class="hcp2"><a href="Calcolo_struttura_isolate.htm">Calcolo 
+ struttura</a></span>).</p>
+<p class="hcp1">&quot;Rapporto fra rigidezza 
+ verticale e rigidezza orizzontale &lt; 800&quot;</p>
+<p>Il riferimento è al par. 7.10.5.2 primo comma e 7.10.5.3.2 secondo comma 
+ del D.M. 17/01/18. ModeSt esegue questo controllo solo quando il sistema 
+ di isolamento è di tipo elastomerico e quando sono stati introdotti tramite 
+ archivio degli isolatori con la specifica del valore di rigidezza verticale. 
+ Quando tali valori non sono disponibili ModeSt considera sempre in fase 
+ di calcolo una rigidezza verticale pari a 1000 volte la rigidezza orizzontale 
+ ed omette tali verifiche. In ogni caso viene quindi messa in conto la 
+ deformabilità verticale degli isolatori (7.10.5.2 primo comma) mentre 
+ è scelta del progettista se mettere in conto l'azione sismica verticale 
+ (7.10.5.3.2 terzo comma).</p>
+<p class="hcp1">&quot;Carico per carichi 
+ statici &gt; Carico ammissibile per carichi statici&quot;</p>
+<p class="Normal3" style="font-weight: bold; font-style: italic;">&quot;Spostamento 
+ risultante &gt; Spostamento ammissibile&quot;</p>
+<p class="Normal3" style="font-weight: bold; font-style: italic;">&quot;Carico 
+ per carichi sismici &gt; Carico ammissibile per carichi sismici&quot;</p>
+<p>Questi controlli vengono eseguiti solamente quando sono stati introdotti 
+ tramite archivio degli isolatori in cui siano presenti le caratteristiche 
+ in esame.</p>
+<p>Il controllo &quot;Carico per carichi statici &gt; Carico ammissibile 
+ per carichi statici&quot; ha in genere un carattere dirimente sulla bontà 
+ dell'isolatore definito, mentre i secondi due richiedono di considerare 
+ diversi fattori:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">Stato 
+	 limite in esame.</span> Lo spostamento e le sollecitazioni dipendono 
+	 ovviamente dallo stato limite per cui si sta eseguendo il calcolo 
+	 (si veda anche <span class="hcp2"><a href="Calcolo_struttura_isolate.htm">Calcolo 
+	 struttura</a></span>). Alcuni produttori riportano in catalogo valori 
+	 validi allo SLC, altri allo SLV e a volte misti o non ben specificati. 
+	 Sarebbe bene controllare con il produttore il significato dei valori 
+	 forniti.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">Contemporaneità 
+	 segnalazioni.</span> Quando viene segnalato un carico sismico eccessivo, 
+	 ma non uno spostamento eccessivo, la soluzione adottata potrebbe comunque 
+	 essere valida, infatti un isolatore con un dato carico massimo e relativo 
+	 spostamento ammissibile può essere in grado, per spostamenti di progetto 
+	 inferiori, di portare un carico maggiore di quanto indicato nel catalogo. 
+	 Anche in tal caso è bene controllare con il produttore.</p></li>
+</ul>
+<p class="hcp1">&quot;Risultano sforzi 
+ di trazione&quot;</p>
+<p>Il riferimento è al par. 7.10.4.2 terzo comma e C7.10.4.2, comma 6 e 
+ successivi. Tale segnalazione viene data per consentire al progettista 
+ di controllare l'entità degli sforzi di trazione ed eventualmente prendere 
+ gli opportuni provvedimenti. Viene riportato il massimo fra i diversi 
+ sforzi di trazione risultanti dall'analisi nelle diverse CC.</p>
+<p class="hcp1">&quot;Spostamento pilastro 
+ sottostante &gt; 1/20 Spostamento isolatore&quot;</p>
+<p>Il riferimento è al par. 7.10.4.3 secondo comma del D.M. 17/01/18.</p>
+</body>
+</html>

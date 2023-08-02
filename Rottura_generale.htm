@@ -1,0 +1,71 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Rottura generale</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold;
+text-align:center; }
+span.hcp2 { vertical-align:Sub; }
+span.hcp3 { font-family:Symbol, serif; }
+span.hcp4 { font-weight:bold; }
+p.hcp5 { text-align:center; }
+span.hcp6 { vertical-align:Super; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Rottura generale</h1>
+<p>La verifica di capacità portante per rottura generale è soddisfatta se la sicurezza, cioè il rapporto fra l'effetto delle azioni di progetto (carico verticale totale sulla fondazione) e la resistenza di progetto è maggiore o uguale ad uno.</p>
+<p class="hcp1">sic. = R<span class="hcp2">d</span>/E<span class="hcp2">d</span> &gt;= 1</p>
+<p class="Normal3">dove:</p>
+<p class="Normal3">E<span class="hcp2">d</span> effetto delle azioni di progetto</p>
+<p class="Normal3">E<span class="hcp2">d</span> = N (valore comprensivo dei coefficienti parziali sulle azioni <span class="hcp3">g</span><span class="hcp2">A</span>)</p>
+<p class="Normal3">R<span class="hcp2">d</span> resistenza di progetto</p>
+<p class="Normal3">R<span class="hcp2">d</span> = (qlim * B' * L') / <span class="hcp3">g</span><span class="hcp2">R</span></p>
+<p class="Normal3"><span class="hcp3">g</span><span class="hcp2">R</span> coefficiente parziale sulle resistenze</p>
+<p class="Normal3">q<span class="hcp2">lim</span> pressione limite, calcolata considerando i coefficienti parziali sui materiali <span class="hcp3">g</span><span class="hcp2">M</span></p>
+<p>I valori delle azioni che interessano la valutazione della pressione limite sono comprensivi dei coefficienti parziali sulle azioni <span class="hcp3">g</span><span class="hcp2">A</span></p>
+<p>I valori dei parametri del terreno (attrito e coesione) basilari per la valutazione della pressione limite sono comprensivi dei coefficienti parziali sui materiali <span class="hcp3">g</span><span class="hcp2">M</span></p>
+<p>Il <span class="hcp4">calcolo della pressione limite per rottura generale</span> (q<span class="hcp2">lim</span>) viene effettuato utilizzando la seguente relazione trinomia:</p>
+<p class="hcp5">q<span class="hcp2">lim</span> = <span class="hcp3">s</span><span class="hcp2">v0</span>*N<span class="hcp2">q</span><span class="hcp6">(m)</span> + c*N<span class="hcp2">c</span><span class="hcp6">(m)</span> + (B'/2)*<span class="hcp3">g</span><span class="hcp2">r</span>*N<span class="hcp3">g</span><span class="hcp6">(m)</span></p>
+<p>dove:</p>
+<p class="Normal3"><span class="hcp3">s</span><span class="hcp2">v0</span>*N<span class="hcp2">q</span><span class="hcp6">(m)</span> termine rappresentativo del sovraccarico laterale</p>
+<p class="Normal3">c*N<span class="hcp2">c</span><span class="hcp6">(m)</span> termine rappresentativo della coesione del terreno di fondazione</p>
+<p class="Normal3">(B'/2)*<span class="hcp3">g</span><span class="hcp2">r</span>*N<span class="hcp3">g</span><span class="hcp6">(m)</span> termine rappresentativo del peso efficace del terreno di fondazione</p>
+<p class="Normal3">con c = c' in condizioni drenate e c = c<span class="hcp2">u</span> in condizioni non drenate</p>
+<p>In cui i coefficienti di portata modificati N<span class="hcp2">q</span><span class="hcp6">(m)</span>, N<span class="hcp2">c</span><span class="hcp6">(m)</span> e N<span class="hcp3">g</span><span class="hcp6">(m)</span> sono dati, per le condizioni di calcolo da considerare, secondo i metodi proposti da vari autori attraverso la definizione di:</p>
+<p class="Normal3">N<span class="hcp2">i</span> coefficienti di portata</p>
+<p class="Normal3">s<span class="hcp2">i</span> fattori di forma</p>
+<p class="Normal3">d<span class="hcp2">i</span> fattori di profondità</p>
+<p class="Normal3">i<span class="hcp2">i</span> fattori di inclinazione del carico</p>
+<p class="Normal3">g<span class="hcp2">i</span> fattori di inclinazione del piano di campagna</p>
+<p class="Normal3">b<span class="hcp2">i</span> fattori di inclinazione del piano di fondazione</p>
+<p><span class="hcp4">Nota</span>: le relazioni considerate per il calcolo della capacità portante per rottura generale, ottenute attraverso analisi limite, si basano sull'ipotesi di comportamento del terreno rigido-plastico con criterio di rottura di Mohr-Coulomb. La superficie di rottura ipotizzata è schematizzata nella seguente figura:</p>
+<p class="hcp5"><img src="Ver_capa_gen_01.gif" alt="" style="border: none;" width="550" height="186" border="0"></p>
+<p style="text-align: center; font-style: italic;">Fig. 1 - Superficie di scorrimento per meccanismo di rottura generale</p>
+<p>in cui sono in evidenza: il cuneo al di sotto della fondazione (zona I); il cuneo di spinta passiva (zona III); la zona di transizione (zona II) delimitata da una superficie di scorrimento a forma di spirale logaritmica. L'angolo <span class="hcp3">q</span><span class="hcp2">0</span> è pari a <span class="hcp3">p</span>/4+<span class="hcp3">j</span>/2 (per Terzaghi è pari a <span class="hcp3">j</span>). La superficie di scorrimento si interrompe alla profondità del piano di posa della fondazione (per Meyerhof la superficie di scorrimento a forma di spirale logaritmica arriva fino al piano di campagna).</p>
+<p>In letteratura sono presenti varie relazioni per il calcolo della pressione limite, basate su differenti forme di valutazione dei coefficienti di portata. Sono state implementate le seguenti relazioni: <span class="hcp4">Terzaghi (1943)</span>; <span class="hcp4">Meyerhof (1963)</span>; <span class="hcp4">Hansen (1970)</span>; <span class="hcp4">Brinch - Hansen (1970)</span>; <span class="hcp4">Vesic (1973)</span>; <span class="hcp4">Indicazioni EC7 (Allegato D)</span>; <span class="hcp4">Stagg e Zienkiewicz (1968)</span> (per fondazioni su rocce).</p>
+<p>Per il calcolo della capacità portante per rottura generale è possibile indicare, attraverso i criteri generali di verifica, come devono essere <span class="hcp4">combinati i fattori di forma e di inclinazione del carico</span>, se considerare il <span class="hcp4">fattore di riduzione per platee</span>, se considerare gli <span class="hcp4">effetti dell'eccentricità del carico con un unico fattore riduttivo</span>.</p>
+<p>Il fattore di riduzione per platee (nel metodo intese come fondazioni con B&gt;=2m) è un ulteriore fattore di riduzione del coefficiente di portata del termine rappresentativo del peso del terreno di fondazione (N<span class="hcp3">g</span>). Tale fattore è pari a: s<span style="font-family: Symbol, serif; vertical-align: Sub;">g</span><span class="hcp2">,plat</span> = 1-0.25*log(B/2) &lt;m&gt; (Bowles, 1999).</p>
+<p>Nel caso in cui i terreni interessati dalla superficie di rottura siano tutti di tipo coesivo o tutti di tipo incoerente, è possibile trascurare l'eccentricità del carico nelle relazioni relative al metodo di calcolo scelto applicando alla pressione limite calcolata un unico fattore riduttivo pari a: f<span class="hcp2">ecc</span> = [1-2*e<span class="hcp2">B</span>/B]*[1–2*e<span class="hcp2">L</span>/L] se i terreni interessati dalla superficie di rottura sono tutti di tipo coesivo e f<span class="hcp2">ecc</span> = [1–(e<span class="hcp2">B</span>/B)0.5]*[1–(e<span class="hcp2">L</span>/L)0.5] se i terreni interessati dalla superficie di rottura sono tutti di tipo incoerente. Risulta: q<span class="hcp2">lim</span> = f<span class="hcp2">ecc</span>*qlim(e<span class="hcp2">B</span>=0; e<span class="hcp2">L</span>=0) (Meyerhof1953).</p>
+<p>Infine, la verifica di capacità portante per rottura generale può essere effettuata confrontando le sollecitazioni agenti col dominio di resistenza dell'insieme terreno fondazione. La fondazione è quindi verificata se la combinazione di sollecitazioni agenti {N ; H ; M} è tale da soddisfare la seguente relazione: mm<span class="hcp6">2</span> + hh<span class="hcp6">2</span> - nn<span class="hcp6">2</span>*[1-nn]<span class="hcp6">2</span> &lt;= 0</p>
+<p>La verifica è quindi soddisfatta se:</p>
+<p class="hcp1">sic. = 1/[(mm/nn)<span class="hcp6">2</span> + (hh/nn)<span class="hcp6">2</span> +2*nn-nn<span class="hcp6">2</span>] &gt;= 1</p>
+<p>in cui:</p>
+<p class="Normal3">nn = N/N<span class="hcp2">max</span> sforzo verticale adimensionale</p>
+<p class="Normal3">hh = H/(<span class="hcp3">Y</span><span class="hcp2">H</span>*N<span class="hcp2">max</span>) sforzo orizzontale adimensionale</p>
+<p class="Normal3">mm = (M/B)/(<span class="hcp3">Y</span><span class="hcp2">M</span>*N<span class="hcp2">max</span>) momento adimensionale</p>
+<p>Dove lo sforzo normale massimo N<span class="hcp2">max</span> = (q<span class="hcp2">lim</span> * B * L) / <span class="hcp3">g</span><span class="hcp2">R</span> viene calcolato, per carico verticale centrato (e<span class="hcp2">B</span> = e<span class="hcp2">L</span> = 0 ; H = 0), come indicato in precedenza.</p>
+<p>Devono essere specificati i parametri del dominio di interazione statico <span class="hcp3">Y</span><span class="hcp2">M</span> e <span class="hcp3">Y</span><span class="hcp2">H</span>.</p>
+<p>I valori delle azioni che interessano la valutazione della pressione limite sono comprensivi dei coefficienti parziali sulle azioni <span class="hcp3">g</span><span class="hcp2">A</span>.</p>
+<p>I valori dei parametri del terreno (attrito e coesione) basilari per la valutazione dello sforzo normale massimo sono comprensivi dei coefficienti parziali sui materiali <span class="hcp3">g</span><span class="hcp2">M</span>.</p>
+<p><span class="hcp4">Nota</span>: valori massimi di M/B ed H si ottengono per N = Q<span class="hcp2">lim</span>/2, ipotizzando (M/B)<span class="hcp2">lim</span> = Q<span class="hcp2">lim</span>/10 ed (H)<span class="hcp2">lim</span> = Q<span class="hcp2">lim</span>/8 si ottiene: <span class="hcp3">Y</span><span class="hcp2">M</span> = 0.5 e <span class="hcp3">Y</span><span class="hcp2">H</span> =0.4 (Butterfield e Gottardi, 1994).</p>
+</body>
+</html>

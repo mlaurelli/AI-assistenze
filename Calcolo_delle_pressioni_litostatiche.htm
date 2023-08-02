@@ -1,0 +1,196 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Calcolo delle pressioni litostatiche</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-family:Symbol, serif; }
+span.hcp2 { vertical-align:Sub; }
+tr.hcp3 { vertical-align:top; }
+td.hcp4 { border-top:Solid 1px #000000;
+border-right:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px;
+vertical-align:center; }
+p.hcp5 { text-align:left; }
+td.hcp6 { border-left:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px;
+vertical-align:center; }
+td.hcp7 { border-right:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px;
+vertical-align:center; }
+p.hcp8 { text-align:right; }
+td.hcp9 { padding-right:10px;
+padding-left:10px;
+vertical-align:center; }
+td.hcp10 { border-right:Groove 1px #000000;
+padding-right:10px;
+padding-left:10px;
+vertical-align:center; }
+td.hcp11 { border-right:Groove 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px;
+vertical-align:center; }
+span.hcp12 { font-family:Verdana, sans-serif; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Calcolo delle pressioni litostatiche</h1>
+<p>Una volta definita la colonna stratigrafica, per quanto riguarda le profondità degli strati, il loro peso specifico e la falda, è possibile calcolare l'andamento delle pressioni litostatiche con la profondità (z) dal piano di campagna:</p>
+<p><span class="hcp1">s</span><span class="hcp2">v0</span>(z) pressione litostatica verticale totale</p>
+<p>u(z) pressione neutra</p>
+<p><span class="hcp1">s</span>'<span class="hcp2">0</span>(z) pressione litostatica verticale efficace</p>
+<p><span class="hcp1">s</span>'<span class="hcp2">h0</span>(z) pressione litostatica orizzontale efficace</p>
+<p><span class="hcp1">s</span><span class="hcp2">h0</span>(z) pressione litostatica orizzontale totale</p>
+<p>p'(z) pressione media efficace</p>
+<p>in relazione al seguente schema:</p>
+<p style="text-align: center;"><img src="Calc_pres_lito_01.gif" alt="" style="border: none;" width="273" height="166" border="0"></p>
+<p>per una generica z in cui è presente l'i-esimo strato, la pressione litostatica verticale totale risulta:</p>
+<table style="vertical-align: top;" cellspacing="0" width="70%" align="center">
+<col style="width: 15%;">
+<col style="width: 15%;">
+<col style="width: 40%;">
+<col style="width: 20%;">
+<col style="width: 10%;">
+<tr class="hcp3">
+<td style="border-top: Solid 1px #000000; border-left: Solid 1px #000000; width: 15%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p>&#160;</p>
+</td>
+<td style="width:15%;" class="hcp4">
+<p>&#160;</p>
+</td>
+<td style="width:40%;" class="hcp4">
+<p><span class="hcp1">g</span><span class="hcp2">j</span>*(z<span class="hcp2">j</span>-z<span class="hcp2">j-1</span>)</p>
+</td>
+<td style="border-top: Solid 1px #000000; width: 20%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p class="hcp5">se z<span class="hcp2">w</span>&gt;z<span class="hcp2">j</span></p>
+</td>
+<td style="width:10%;" class="hcp4">
+<p class="hcp5">&#160;</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:15%;" class="hcp6">
+<p class="hcp5"><span class="hcp1">s</span><span class="hcp2">v0</span>(z) =</p>
+</td>
+<td style="width:15%;" class="hcp7">
+<p class="hcp8"><span class="hcp1">S</span><span class="hcp2">j=1,i-1</span>{</p>
+</td>
+<td style="width:40%;" class="hcp7">
+<p><span class="hcp1">g</span><span class="hcp2">j</span>*(z<span class="hcp2">w</span>-z<span class="hcp2">j-1</span>)+<span class="hcp1">g</span><span class="hcp2">sat j</span>*(z<span class="hcp2">j</span>-z<span class="hcp2">w</span>)</p>
+</td>
+<td style="width:20%;" class="hcp9">
+<p class="hcp5">se z<span class="hcp2">j</span>-1&lt;z<span class="hcp2">w</span>&lt;z<span class="hcp2">j</span></p>
+</td>
+<td style="width:10%;" class="hcp7">
+<p class="hcp5">} +</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:15%;" class="hcp6">
+<p>&#160;</p>
+</td>
+<td style="width:15%;" class="hcp7">
+<p>&#160;</p>
+</td>
+<td style="width:40%;" class="hcp7">
+<p><span class="hcp1">g</span><span class="hcp2">sat j</span>*(z<span class="hcp2">j</span>-z<span class="hcp2">j-1</span>)</p>
+</td>
+<td style="width:20%;" class="hcp9">
+<p class="hcp5">se z<span class="hcp2">w</span>&lt;z<span class="hcp2">j</span>-1</p>
+</td>
+<td style="width:10%;" class="hcp7">
+<p class="hcp5">&#160;</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:15%;" class="hcp6">
+<p>&#160;</p>
+</td>
+<td style="width:15%;" class="hcp9">
+<p>&#160;</p>
+</td>
+<td style="width:40%;" class="hcp9">
+<p>&#160;</p>
+</td>
+<td style="width:20%;" class="hcp9">
+<p class="hcp5">&#160;</p>
+</td>
+<td style="width:10%;" class="hcp7">
+<p class="hcp5">&#160;</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:15%;" class="hcp6">
+<p>&#160;</p>
+</td>
+<td style="width:15%;" class="hcp10">
+<p>&#160;</p>
+</td>
+<td style="width:40%;" class="hcp10">
+<p><span class="hcp1">g</span><span class="hcp2">i</span>*(z-z<span class="hcp2">i-1</span>)</p>
+</td>
+<td style="width:20%;" class="hcp9">
+<p class="hcp5">se z<span class="hcp2">w</span>&gt;z</p>
+</td>
+<td style="width:10%;" class="hcp7">
+<p class="hcp5">&#160;</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="width:15%;" class="hcp6">
+<p>&#160;</p>
+</td>
+<td style="width:15%;" class="hcp10">
+<p class="hcp8">+</p>
+</td>
+<td style="width:40%;" class="hcp10">
+<p><span class="hcp1">g</span><span class="hcp2">i</span>*(z<span class="hcp2">w</span>-z<span class="hcp2">i-1</span>)+<span class="hcp1">&#61543;</span><span class="hcp2">sat i</span>*(z-z<span class="hcp2">w</span>)</p>
+</td>
+<td style="width:20%;" class="hcp9">
+<p class="hcp5">se z<span class="hcp2">i</span>-1&lt;z<span class="hcp2">w</span>&lt;z</p>
+</td>
+<td style="width:10%;" class="hcp7">
+<p class="hcp5">&#160;</p>
+</td>
+</tr>
+<tr class="hcp3">
+<td style="border-left: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 15%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p>&#160;</p>
+</td>
+<td style="width:15%;" class="hcp11">
+<p>&#160;</p>
+</td>
+<td style="width:40%;" class="hcp11">
+<p><span class="hcp1">g</span><span class="hcp2">sat i</span>*(z-z<span class="hcp2">i-1</span>)</p>
+</td>
+<td style="border-bottom: Solid 1px #000000; width: 20%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p class="hcp5">se z<span class="hcp2">w</span>&lt;z<span class="hcp2">i</span>-1</p>
+</td>
+<td style="border-right: Solid 1px #000000; border-bottom: Solid 1px #000000; width: 10%; padding-right: 10px; padding-left: 10px; vertical-align: center;">
+<p class="hcp5">&#160;</p>
+</td>
+</tr>
+</table>
+<p>Il valore della pressione neutra risulta:</p>
+<p>u(z) = min{<span class="hcp1">g</span><span class="hcp2">w</span>*(z-z<span class="hcp2">w</span>) ; 0} in cui <span class="hcp1">g</span><span class="hcp2">w</span> è il peso specifico dell'acqua.</p>
+<p>Quindi la pressione litostatica verticale efficace risulta:</p>
+<p><span class="hcp1">s</span><span class="hcp12">'</span><span class="hcp2">v0</span>(z) = <span class="hcp1">s</span><span class="hcp2">v0</span>(z) - u(z)</p>
+<p>Lo stato tensionale è ipotizzato assialsimmetrico rispetto alla verticale, quindi le tensioni verticali ed orizzontali sono principali. Per il principio delle tensioni efficaci la pressione litostatica orizzontale efficace risulta dal coefficiente di spinta a riposo:</p>
+<p><span class="hcp1">s</span><span class="hcp12">'</span><span class="hcp2">h0</span>(z) = k<span class="hcp2">0 i</span>*<span class="hcp1">s</span><span class="hcp12">'</span><span class="hcp2">v0</span>(z)</p>
+<p>Da cui la pressione orizzontale totale risulta:</p>
+<p><span class="hcp1">s</span><span class="hcp2">h0</span>(z) = <span class="hcp1">s</span><span class="hcp12">'</span><span class="hcp2">h0</span>(z) - u(z)</p>
+<p>La pressione media efficace risulta:</p>
+<p>p'(z) = [<span class="hcp1">s</span><span class="hcp12">'</span><span style="font-family: Verdana, sans-serif; vertical-align: Sub;">v</span><span class="hcp2">0</span>(z)+2*<span class="hcp1">s</span><span class="hcp12">'</span><span class="hcp2">h0</span>(z)]/3 = [(1+2*k<span class="hcp2">0</span>)/3]*<span class="hcp1">s</span><span class="hcp12">'</span><span class="hcp2">v0</span>(z)</p>
+</body>
+</html>

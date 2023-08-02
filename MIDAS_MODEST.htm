@@ -1,0 +1,261 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>MIDAS_MODEST</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+p.hcp3 { font-weight:bold; }
+p.hcp4 { margin-top:0pt;
+margin-bottom:0pt; }
+p.hcp5 { text-indent:24px;
+margin-top:0pt;
+margin-bottom:0pt; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Importazione struttura da MIDAS</h1>
+<p>Il collegamento fra MIDAS e ModeSt avviene attraverso una procedura 
+ all'interno di MIDAS che genera automaticamente un file per ModeSt. All'interno 
+ di ModeSt dopo aver creato una nuova struttura (vuota), dal menu dell'applicazione 
+ <span class="hcp1"><img src="../Icone/modest32.png" alt="" border="1" class="hcp2"></span> selezionando 
+ <span class="hcp1">Importa</span> <img src="../Icone/32/main_importa32.png" alt="" border="1" class="hcp2"> 
+ e poi <span class="hcp1">Struttura da MIDAS</span> <span 
+	 style="font-style: italic;"><img src="../Icone/32/main_importa_MIDAS32.png" alt="" border="1" class="hcp2"></span> è possibile 
+ leggere tale file e generare automaticamente il modello nella struttura 
+ corrente.</p>
+<p>Non vengono importate strutture se il numero assegnato ai nodi è superiore 
+ a 65535 e/o il numero assegnato agli elementi è superiore a 32767.</p>
+<p>Le masse nodali (NODALMASS) sono archiviate in un'apposita CCE.</p>
+<p>Non vengono importati i vincoli nodali di tipo elastico e gli elementi 
+ su suolo elastico alla Winkler.</p>
+<p>Vengono importati i tipi di sezione elencati in *SECTION, tutti gli 
+ altri tipi sono importati come una sezione fittizia.</p>
+<p>Non vengono importati, e non viene riportata nessuna anomalia, le aste 
+ sovrapposte e gli elementi bidimensionali non piani.</p>
+<p>Elenco delle entità importabili e delle corrispondenze con ModeSt:</p>
+<table class="SimpleGridBlack" cellspacing="0px" width="750" align="center">
+	<col style="width: 30%;">
+	<col style="width: 70%;">
+	<tr class="t1Row">
+		<td><p class="hcp3">MGT</p></td>
+		<td><p class="hcp3">ModeSt</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp4">*UNIT</p></td>
+		<td><p class="hcp4">Unità di misura</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp4">*NODE</p></td>
+		<td><p class="hcp4">Nodo</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp4">*ELEMENT:</p></td>
+		<td><p class="hcp4">Elementi</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">BEAM</p></td>
+		<td><p class="hcp4">Asta con vincolo 
+		 assegnato</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">TRUSS</p></td>
+		<td><p class="hcp4">Asta con vincolo 
+		 biella</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">TENSTR</p></td>
+		<td><p class="hcp4">Asta con vincolo 
+		 biella solo resistente a trazione</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">COMPTR</p></td>
+		<td><p class="hcp4">Asta con vincolo 
+		 biella solo resistente a compressione</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">PLATE</p></td>
+		<td><p class="hcp4">Elemento bidimensionale</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">WALL</p></td>
+		<td><p class="hcp4">Elemento bidimensionale</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp4">*SECTION:</p></td>
+		<td><p class="hcp4">Sezioni</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">SB</p></td>
+		<td><p class="hcp4">Rettangolare</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">SR</p></td>
+		<td><p class="hcp4">Circolare</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">B</p></td>
+		<td><p class="hcp4">Rettangolare 
+		 cava</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">P</p></td>
+		<td><p class="hcp4">Circolare cava</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">H</p></td>
+		<td><p class="hcp4">I stondata</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">CS</p></td>
+		<td><p class="hcp4">C stondata</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">L</p></td>
+		<td><p class="hcp4">L</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">T(UDT)</p></td>
+		<td><p class="hcp4">T</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp4">*THICKNESS</p></td>
+		<td><p class="hcp4">Spessore dell'elemento 
+		 bidimensionale</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp4">*MATERIAL</p></td>
+		<td><p class="hcp4">Materiale</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp4">*STLDCASE (D 
+		 L S)</p></td>
+		<td><p class="hcp4">Elenco delle 
+		 condizioni di carico elementari</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp4">*USE-STLD</p></td>
+		<td><p class="hcp4">Condizione 
+		 di carico elementare</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp4">*CONLOAD</p></td>
+		<td><p class="hcp4">Carico nodale 
+		 di tipo &quot;Carico concentrato&quot;</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp4">*SPDISP</p></td>
+		<td><p class="hcp4">Carico nodale 
+		 di tipo &quot;Cedimento vincolare&quot;</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp4">*BEAMLOAD</p></td>
+		<td><p class="hcp4">Carichi asta</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">UNILOAD</p></td>
+		<td><p class="hcp4">Carico asta 
+		 generico</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp5">CONLOAD</p></td>
+		<td><p class="hcp4">Carico asta 
+		 concentrato in un punto (Forza)</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp5">CONMOMENT</p></td>
+		<td><p class="hcp4">Carico asta 
+		 concentrato in un punto (Momento)</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp4">*PRESSURE</p></td>
+		<td><p class="hcp4">Carico sull'elemento 
+		 bidimensionale di tipo &quot;uniformemente distribuito&quot;</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp4">*ELTEMPER</p></td>
+		<td><p class="hcp4">Carico asta/elemento 
+		 bidimensionale di tipo &quot;Dilatazione termica uniforme&quot;</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp4">*THERGRAD</p></td>
+		<td><p class="hcp4">Carico asta/elemento 
+		 bidimensionale di tipo &quot;Gradiente di temperatura&quot;</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp4">*CONSTRAINT</p></td>
+		<td><p class="hcp4">Vincoli nodali</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp4">*FRAME-RLS</p></td>
+		<td><p class="hcp4">Vincoli asta</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp4">*NODALMASS</p></td>
+		<td><p class="hcp4">Masse nodali</p></td>
+	</tr>
+	<tr class="t2Row" style="height: 19px;">
+		<td><p class="hcp4">*STORY</p></td>
+		<td><p class="hcp4">Quote degli 
+		 impalcati</p></td>
+	</tr>
+	<tr class="t1Row" style="height: 19px;">
+		<td><p class="hcp4">*ELASTICLINK</p></td>
+		<td><p class="hcp4">Asta con sezione 
+		 fittizia 0</p></td>
+	</tr>
+</table>
+<p>Particolare attenzione va posta alle modalità di <span class="hcp1">definizione 
+ delle sezioni</span>.</p>
+<p>Nel caso di sezioni in acciaio viene utilizzato il file sezmgt.csv contenente 
+ le codifiche delle sezioni in acciaio utilizzate dai programmi ai quali 
+ ModeSt è collegato. Nel file ci sono una serie di righe e colonne, dove 
+ in ogni riga è specificato il codice della sezione utilizzato dal programma 
+ indicato in cima alla colonna (intestazione). Il file sezmgt.csv è archiviato 
+ nella cartella ETC contenuta nella cartella di installazione del programma 
+ e può essere modificato utilizzando il programma Excel o il blocco note 
+ di Windows.</p>
+<p>La procedura di definizione si comporta come segue:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">Se il nome della sezione nel 
+	 file MGT coincide con quello presente nella colonna con intestazione 
+	 Midas del file sezmgt.csv, la sezione viene definita prelevandola 
+	 dall'archivio delle sezioni di ModeSt (default.sez nella cartella 
+	 ETC) utilizzando il codice indicato nella colonna con intestazione 
+	 ModeSt.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Se il nome della sezione nel 
+	 file MGT è un numero ed il codice corrisponde con i tipi elencati 
+	 in *SECTION, la sezione viene definita con la forma e le dimensioni 
+	 specificate.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1" style="margin-bottom: 0pt;">In 
+	 tutti gli altri casi viene definita una sezione circolare fittizia.</p></li>
+</ol>
+<p>Particolare attenzione va posta alle modalità di <span class="hcp1">definizione 
+ dei materiali</span>.</p>
+<p>Allo scopo viene utilizzato il file matmgt.csv contenente le caratteristiche 
+ dei materiali utilizzati dai programmi ai quali ModeSt è collegato. Il 
+ file matmgt.csv è archiviato nella cartella ETC contenuta nella cartella 
+ di installazione del programma e può essere modificato utilizzando il 
+ programma Excel o il blocco note di Windows.</p>
+<p>La procedura di definizione si comporta come segue:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">Se il nome del materiale nel 
+	 file MGT coincide con quello presente in una delle prime due colonne 
+	 del file matmgt.csv, il materiale viene definito utilizzando i dati 
+	 dalla terza colonna in poi del file matmgt.csv.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">In tutti gli altri casi viene 
+	 definito un materiale fittizio.</p></li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,79 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Spezza aste e muri</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Spezza aste e muri</h1>
+<p>Nel gruppo <span class="hcp1">Modifica</span> della scheda 
+ <span class="hcp1">Modellazione</span> cliccando su <span class="hcp1">Spezza <img src="../Icone/16/spezza.png" alt="" border="1" class="hcp2"></span> si accede 
+ ad una serie di funzionalità che consentono di suddividere le aste o i 
+ muri.</p>
+<p><span class="hcp1">Spezza aste in n parti <img src="../Icone/16/spezzaastenp.png" alt="" border="1" class="hcp2"></span> divide un'asta nel numero esatto di parti specificato 
+ indipendentemente dalla loro dimensione.</p>
+<p><span class="hcp1">Spezza aste in parti di lunghezza indicativa 
+ <img src="../Icone/16/spezzaastepli.png" alt="" border="1" class="hcp2"></span> 
+ divide un'asta in un numero di parti di lunghezza indicativa.</p>
+<p><span class="hcp1">Spezza aste ad una certa distanza dal 
+ nodo iniziale <img src="../Icone/16/spezzaastedni.png" alt="" border="1" class="hcp2"></span> 
+ divide un'asta in un punto ad una distanza prefissata dal nodo iniziale.</p>
+<p><span class="hcp1">Spezza aste in 3 parti (estremità imposte) 
+ <img src="../Icone/16/spezzaastedni.png" alt="" border="1" class="hcp2"></span> 
+ divide un'asta in 3 parti con conci di estremità di lunghezza imposta. 
+ Questo comando e il successivo vengono normalmente utilizzati nella modellazione 
+ di strutture esistenti in c.a. da verificare con l'analisi sismica statica 
+ non lineare (pushover) (si veda <a href="Linee_guida_sulla_modellazione_e_la_verifica.htm"><span class="hcp1">Verifica strutture esistenti in c.a. -</span> 
+ <span class="hcp1">Linee guida sulla modellazione e la verifica</span></a>).</p>
+<p><span class="hcp1">Spezza aste in 3 parti (estremità = 
+ nH) <img src="../Icone/16/spezzaaste3nh.png" alt="" border="1" class="hcp2"></span> 
+ divide un'asta in 3 parti con conci di estremità di lunghezza pari ad 
+ un multiplo dell'altezza della sezione.</p>
+<p><span class="hcp1">Spezza aste su nodi esistenti <img src="../Icone/16/spezzaastene.png" alt="" border="1" class="hcp2"></span> divide 
+ un'asta in corrispondenza di nodi esistenti. L'asta viene divisa solo 
+ se i nodi esistenti giacciono lungo la linea rappresentante l'asta.</p>
+<p><span class="hcp1">Spezza muri in n parti <img src="../Icone/16/spezzamurinp.png" alt="" border="1" class="hcp2"></span> divide un muro nel numero esatto di parti specificato 
+ indipendentemente dalla loro dimensione.</p>
+<p><span class="hcp1">Spezza muri in parti di lunghezza indicativa 
+ <img src="../Icone/16/spezzamuripli.png" alt="" border="1" class="hcp2"></span> 
+ divide un muro in un numero di parti di lunghezza indicativa.</p>
+<p style="text-align: justify;"><span class="hcp1">Note</span>:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">I 
+	 nuovi nodi creati automaticamente dal comando vengono numerati con 
+	 una numerazione negativa e non vengono normalmente visualizzati; in 
+	 realtà questi sono nodi a tutti gli effetti che possono essere cancellati, 
+	 spostati, ecc.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Gli 
+	 eventuali carichi agenti sull'asta o sui muri vengono suddivisi e 
+	 trasferiti alle nuove aste.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Gli 
+	 eventuali carichi agenti sul muro vengono ripartiti e trasferiti ai 
+	 nuovi elementi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Le 
+	 eventuali aste presenti sul perimetro del muro vengono automaticamente 
+	 suddivise e mantengono automaticamente i carichi assegnati.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Gli 
+	 eventuali solai che interessavano i nodi dell'asta o del muro vengono 
+	 ad interessare anche i nuovi nodi.</p></li>
+</ul>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/SPEA.htm">SPEA</a></span> 
+ (Spezza asta), <span class="hcp1"><a href="../Comandi/SPEM.htm">SPEM</a></span> 
+ (Spezza muri).</p>
+</body>
+</html>

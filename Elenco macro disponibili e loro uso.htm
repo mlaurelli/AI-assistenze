@@ -1,0 +1,299 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Elenco macro disponibili e loro uso</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-style:italic;
+font-weight:normal; }
+span.hcp3 { font-style:normal; }
+span.hcp4 { font-weight:normal; }
+p.hcp5 { text-align:justify; }
+span.hcp6 { text-decoration:none; }
+span.hcp7 { font-style:italic; }
+font.hcp8 { font-size:x-small; }
+font.hcp9 { font-family:Wingdings; }
+span.hcp10 { text-decoration:underline; }
+p.hcp11 { text-align:center; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Elenco macro disponibili e loro uso</h1>
+<p>Le macro fornite con l'installazione del programma sono le seguenti:</p>
+<p class="AmbienteProgettazione"><span class="hcp1">TCON 
+ -</span> Genera una trave continua</p>
+<p>La macro permette di generare una trave continua.</p>
+<p>Sintassi della macro:</p>
+<p class="Normal3"><span class="hcp1">TCON</span> <font color="#0000FF"><span class="hcp2">Numero campate</span></font> 
+ <span class="hcp3"><font color="#000000"><span class="hcp4">/</span></font></span> 
+ <font color="#0000FF"><span class="hcp2">Lunghezza 
+ campate</span></font> <span class="hcp3"><font color="#000000"><span class="hcp4">/</span></font></span> <font color="#0000FF"><span class="hcp2">Definizione</span></font> 
+ <span class="hcp2"><font color="#0000FF">sezione</font></span> 
+ <font color="#0000FF"><span class="hcp2">pilastro</span></font> 
+ <span class="hcp3"><font color="#000000"><span class="hcp4">/</span></font></span> 
+ <font color="#0000FF"><span class="hcp2">Definizione</span></font> 
+ <span class="hcp2"><font color="#0000FF">sezione</font></span> 
+ <font color="#0000FF"><span class="hcp2">trave</span></font> 
+ <span class="hcp3"><font color="#000000"><span class="hcp4">/</span></font></span> 
+ <font color="#0000FF"><span class="hcp2">Carico 
+ permanente</span></font> <span class="hcp3"><font color="#000000"><span class="hcp4">/</span></font></span> <font color="#0000FF"><span class="hcp2">Carico</span></font> 
+ <span class="hcp2"><font color="#0000FF">accidentale</font></span></p>
+<p class="hcp5">Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">I 
+	 carichi permanenti ed accidentali sono costanti e uniformemente distribuiti 
+	 su tutta l'asta.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Vengono 
+	 create in automatico le CCE.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Prima di procedere al progetto 
+	 dell'armatura occorre ovviamente eseguire un'analisi statica della 
+	 struttura senza l'ipotesi di piano rigido tramite la <span><span class="hcp6"><a 
+	 href="Interfaccia%20grafica.htm">barra dei menu</a></span></span> con 
+	 l'opzione <span class="hcp7">Elaborazioni</span> <font size="2" class="hcp8"><font face="Wingdings" class="hcp9">à</font></font> 
+	 <span class="hcp7">Calcolo struttura con metodo FEM</span>. 
+	 Essendoci più CCE la macro definisce correttamente la matrice di <span 
+	 style="font-weight: bold; text-decoration: none; "><a href="Combinazione%20delle%20condizioni%20di%20carico.htm">combinazioni 
+	 delle condizioni di carico</a></span> che può essere riletta sia intervenendo 
+	 sui risultati intermedi del calcolo che tramite la <span><span class="hcp6"><a 
+	 href="Interfaccia%20grafica.htm">barra dei menu</a></span></span> con 
+	 l'opzione <span class="hcp7">Strumenti</span> <font size="2" class="hcp8"><font face="Wingdings" class="hcp9">à</font></font> 
+	 <span class="hcp7">Modifica combinazioni di calcolo</span>.</p></li>
+</ul>
+<p class="AmbienteProgettazione"><span class="hcp1"><a name="CAPR" 
+	 id="CAPR"></a>CAPR -</span> Genera una capriata</p>
+<p>La macro permette di generare le capriate del tipo: Mohniè, Warren, 
+ Inglese, Circolare, Neville.</p>
+<p>Sintassi della macro:</p>
+<p class="Normal3"><span class="hcp1">CAPR</span></p>
+<p class="Normal2" style="font-weight: bold;"><span class="hcp10"><a href="javascript:void(0);" id="a5" style="font-weight: bold;" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('Setnodi.htm');return false;">Selezionare 
+ i nodi</a></span></p>
+<p class="hcp11"><img src="CAPR.png" alt="" style="border: none;" border="0"></p>
+<p class="hcp5">Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nella struttura occorre che 
+	 siano stati inseriti almeno due nodi e definita almeno una sezione 
+	 da utilizzare per le aste della capriata. Inoltre occorre che non 
+	 siano presenti nodi nei punti dove verranno creati i nodi della capriata, 
+	 oltre ai due nodi di estremità. Se ci fossero devono essere cancellati 
+	 o spostati dal piano della capriata, prima di lanciare la macro.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Ad 
+	 esclusione della tipologia di capriata Neville si può specificare 
+	 se i diagonali devono essere tesi o compressi.</p></li>
+</ul>
+<p class="AmbienteProgettazione"><span class="hcp1">FREC 
+ -</span> Calcola la freccia elastica delle aste</p>
+<p>La macro permette di calcolare la freccia elastica delle aste.</p>
+<p>Sintassi della macro:</p>
+<p class="Normal3"><span class="hcp1">FREC</span></p>
+<p class="Normal2" style="font-weight: bold;"><span class="hcp10"><a href="javascript:void(0);" id="a12" style="font-weight: bold;" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('SetAste.htm');return false;">Selezionare 
+ le aste</a></span></p>
+<p class="hcp11"><img src="Freccia.gif" alt="" style="margin-top: 0px; 
+									 margin-bottom: 0px; margin-left: 0px; 
+									 margin-right: 0px;" width="560" height="280" border="0"></p>
+<p><span class="hcp1">F1</span>: valore della freccia riferito 
+ alla configurazione dell'asta dopo il suo spostamento rigido valutato 
+ nel sistema di riferimento globale.</p>
+<p class="Elenco1"><span class="hcp1">F2</span>: valore della 
+ freccia riferito alla configurazione dell'asta dopo il suo spostamento 
+ rigido valutato nel sistema locale dell'asta.</p>
+<p class="Elenco1"><span class="hcp1">F3</span>: valore della 
+ freccia riferito alla configurazione dell'asta indeformata valutato nel 
+ sistema di riferimento globale.</p>
+<p class="Elenco1"><span class="hcp1">F4</span>: valore della 
+ freccia riferito alla configurazione dell'asta indeformata valutato nel 
+ sistema di riferimento locale dell'asta.</p>
+<p class="AmbienteProgettazione"><span class="hcp1">RVN -</span> 
+ Assegna ad una fondazione le reazioni vincolari di una struttura</p>
+<p>La macro permette assegnare ad una fondazione le reazioni vincolari 
+ di una struttura.</p>
+<p>Sintassi della macro:</p>
+<p class="Normal3"><span class="hcp1">RVN</span></p>
+<p class="Normal2" style="font-weight: bold;"><span class="hcp10"><a href="javascript:void(0);" id="a7" style="font-weight: bold;" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('Setnodi.htm');return false;">Selezionare 
+ i nodi</a></span></p>
+<p>Per quanto riguarda l'utilizzo della macro si veda anche gli esempi 
+ <span class="hcp1"><a href="Guida.chm::/Calcolo_senza_interazione_suolo-struttura.htm">Calcolo 
+ senza interazione suolo-struttura</a></span> e <span class="hcp1"><a 
+	 href="Guida.chm::/Struttura_con_giunto_in_elevazione_e_fondazione_unica.htm">Struttura 
+ con giunto in elevazione e fondazione unica</a></span>.</p>
+<p class="AmbienteProgettazione"><span class="hcp1"><a name="ARUT" 
+	 id="ARUT"></a>ARUT -</span> Legge un file con estensione CSV e genera 
+ i nodi con le reazioni vincolari applicate divise per CCE</p>
+<p>La macro permette di leggere un file ASCII di nome NOMEFILE.CSV e genera 
+ i nodi con le reazioni vincolari applicate divise per CCE.</p>
+<p>Sintassi della macro:</p>
+<p class="Normal3"><span class="hcp1">ARUT</span> <font color="#0000FF"><span class="hcp2">Nome del file</span></font></p>
+<p class="hcp5">Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Il file con estensione CSV 
+	 deve essere creato nella cartella del progetto e deve contenere i 
+	 seguenti dati:</p></li>
+</ul>
+<ol start="1">
+	<li style="list-style: decimal;"><p class="Elenco1">Numero di combinazioni 
+	 delle CCE da inviluppare nel calcolo (NCC).</p></li>
+	<li><p class="Elenco1">Numero di nodi al piede della struttura (NNODI).</p></li>
+	<li><p class="Elenco1">Per ogni CCE occorre poi specificare NNODI linee 
+	 ognuna delle quali contenente, separati dal carattere &quot;;&quot;, 
+	 il numero del nodo ed i valori delle 6 componenti di reazione vincolare: 
+	 RX, RY, RZ, MX, MY, MZ.</p></li>
+</ol>
+<p class="IndentBullet1-2">Si avranno quindi in totale 2+NNODI*NCC linee.</p>
+<p class="IndentBullet1">Da notare che:</p>
+<ul>
+	<li class="p-Rientro1"><p class="Rientro1">I numeri dei nodi possono 
+	 essere non consecutivi.</p></li>
+	<li class="p-Rientro1"><p class="Rientro1">Ogni linea deve contenere 
+	 numeri separati dal carattere &quot;;&quot;.</p></li>
+	<li class="p-Rientro1"><p class="Rientro1">Non devono esserci linee 
+	 vuote alla fine del file.</p></li>
+</ul>
+<p class="IndentBullet1">Un esempio di file dati per la definizione di 
+ plinti indipendenti potrebbe essere il seguente:</p>
+<p class="IndentBullet1">3</p>
+<p class="IndentBullet1">7</p>
+<p class="IndentBullet1">1;-4424;1645;46389;-2425;-28345;0</p>
+<p class="IndentBullet1">4;-4424;2963;78227;-28345;0;0</p>
+<p class="IndentBullet1">5;-4424;2963;78228;-28345;0;0</p>
+<p class="IndentBullet1">6;-4424;1645;46389;-2425;-28345;0</p>
+<p class="IndentBullet1">10;-7212;0;102666;0;-32455;0</p>
+<p class="IndentBullet1">19;-4424;0;64478;0;-28345;0</p>
+<p class="IndentBullet1">20;-7212;0;102666;0;-32455;0</p>
+<p class="IndentBullet1">1;4424;1645;46389;-2425;28345;0</p>
+<p class="IndentBullet1">4;4424;2963;78227;-4369;28345;0</p>
+<p class="IndentBullet1">5;4424;2963;78228;-4369;28345;0</p>
+<p class="IndentBullet1">6;4424;1645;46389;-2425;28345;0</p>
+<p class="IndentBullet1">10;7212;0;102666;0;32455;0</p>
+<p class="IndentBullet1">19;4424;0;64478;0;28345;0</p>
+<p class="IndentBullet1">20;7212;0;102666;0;32455;0</p>
+<p class="IndentBullet1">1;0;-2779;46389;25919;0;0</p>
+<p class="IndentBullet1">4;0;-1461;78227;23975;0;0</p>
+<p class="IndentBullet1">5;0;-1461;78228;23975;0;0</p>
+<p class="IndentBullet1">6;0;-2779;46389;25919;0;0</p>
+<p class="IndentBullet1">10;0;-7212;102666;32455;0;0</p>
+<p class="IndentBullet1">19;0;-4424;64478;28345;0;0</p>
+<p class="IndentBullet1">20;0;-7212;102666;32455;0;0</p>
+<p class="IndentBullet1" style="margin-top: 0pt;">Come si può notare i 
+ segni sono tali che i dati possono essere interpretati come le reazioni 
+ vincolari del nodo o (secondo le convenzioni usate in ModeSt di carichi 
+ positivi se controversi agli assi) come le azioni agenti sui plinti.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">L'unità di misura impostata 
+	 in ModeSt deve essere congruente con quella usata nel file&#160;con 
+	 estensione CSV.</p></li>
+	<li><p class="Bullet1"><font size="2" class="hcp8">N</font>el 
+	 caso di strutture calcolate sismicamente secondo il D.M. 17/01/18 
+	 occorre ovviamente eseguire un'analisi sismica statica della struttura 
+	 ed importata la matrice diagonale creata automaticamente della macro.</p></li>
+	<li><p class="Bullet1">Se i plinti sono a bicchiere e si vuole verificare 
+	 il bicchiere con i tagli e i momenti resistenti del pilastro soprastante 
+	 occorre creare un file con lo stesso nome della struttura con estensione 
+	 MRP. Il file deve essere creato nella cartella del progetto e deve 
+	 contenere i seguenti dati separati dal carattere &quot;;&quot;: numero 
+	 del nodo al piede della struttura; numero della combinazione delle 
+	 condizioni di carico elementare di tipo SLV o SND; valori dei tagli 
+	 e dei momenti resistenti, espressi in daN e daNm, eventualmente già 
+	 amplificati&#160;di <span style="font-family: Symbol, serif;">g</span><span 
+	 style="vertical-align: Sub;">Rd</span>: TY, TZ, MY, MZ. Un esempio 
+	 di file dati per la definizione dei tagli e dei momenti resistenti 
+	 potrebbe essere il seguente: 6;2;-74266;74266;154053;154053. Nota: 
+	 se il file MRP viene modificato occorre riverificare i plinti.</p></li>
+	<li><p class="Bullet1" style="font-size: 10pt;">Prima di procedere 
+	 al progetto dell'armatura occorre ovviamente eseguire un'analisi statica 
+	 della struttura. Se sono presenti più CCE andrà correttamente definita 
+	 la matrice di <span class="hcp1"><a href="Combinazione%20delle%20condizioni%20di%20carico.htm" 
+														 style="font-size: 10pt;">combinazioni 
+	 delle condizioni di carico</a></span> (generalmente, se i dati forniti 
+	 sono già relativi a combinazioni di carico, andrà definita una matrice 
+	 diagonale).</p></li>
+</ul>
+<p class="AmbienteProgettazione"><span class="hcp1"><a name="ICN"></a>ICN 
+ -</span> Legge un file con estensione CSV ed applica ai nodi i carichi</p>
+<p>La macro permette di leggere un file ASCII di nome NOMEFILE.CSV contenente 
+ i carichi nodali e di applicarli ai nodi esistenti della struttura corrente.</p>
+<p>Sintassi della macro:</p>
+<p class="Normal3"><span class="hcp1">ICN</span> <font color="#0000FF"><span class="hcp2">Nome del file</span></font></p>
+<p class="hcp5">Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Ogni riga del file CSV deve 
+	 contenere, separati dal carattere &quot;;&quot;, il numero del nodo 
+	 su cui devono essere applicati i carichi, il nome della CCE (può essere 
+	 anche un valore non numerico) in cui archiviare i carichi ed i valori 
+	 delle 6 componenti del carico: FX, FY, FZ, MX, MY, MZ.</p></li>
+</ul>
+<ul>
+	<li class="p-Rientro1"><p>Un esempio di file dati per la definizione 
+	 di plinti indipendenti potrebbe essere il seguente (le parti fra parentesi 
+	 sono commenti che non devono essere realmente presenti nel file):</p></li>
+</ul>
+<p class="IndentBullet1">1;1;-4424;1645;46389;-2425;-28345;0</p>
+<p class="IndentBullet1">4;1;-4424;2963;78227;-28345;0;0</p>
+<p class="IndentBullet1">5;1;-4424;2963;78228;-28345;0;0</p>
+<p class="IndentBullet1">6;1;-4424;1645;46389;-2425;-28345;0</p>
+<p class="IndentBullet1">10;1;-7212;0;102666;0;-32455;0</p>
+<p class="IndentBullet1">19;1;-4424;0;64478;0;-28345;0</p>
+<p class="IndentBullet1">20;1;-7212;0;102666;0;-32455;0</p>
+<p class="IndentBullet1">1;2;4424;1645;46389;-2425;28345;0</p>
+<p class="IndentBullet1">4;2;4424;2963;78227;-4369;28345;0</p>
+<p class="IndentBullet1">5;2;4424;2963;78228;-4369;28345;0</p>
+<p class="IndentBullet1">6;2;4424;1645;46389;-2425;28345;0</p>
+<p class="IndentBullet1">10;2;7212;0;102666;0;32455;0</p>
+<p class="IndentBullet1">19;2;4424;0;64478;0;28345;0</p>
+<p class="IndentBullet1">20;2;7212;0;102666;0;32455;0</p>
+<p class="IndentBullet1">1;3;0;-2779;46389;25919;0;0</p>
+<p class="IndentBullet1">4;3;0;-1461;78227;23975;0;0</p>
+<p class="IndentBullet1">5;3;0;-1461;78228;23975;0;0</p>
+<p class="IndentBullet1">6;3;0;-2779;46389;25919;0;0</p>
+<p class="IndentBullet1">10;3;0;-7212;102666;32455;0;0</p>
+<p class="IndentBullet1">19;3;0;-4424;64478;28345;0;0</p>
+<p class="IndentBullet1">20;3;0;-7212;102666;32455;0;0</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">I numeri dei nodi possono 
+	 essere non consecutivi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">I carichi vengono applicati 
+	 nell'unità di misura corrente.</p></li>
+	<li><p class="Bullet1">Le CCE vengono definite nell'ordine in cui compaiono 
+	 per la prima volta nel file.</p></li>
+	<li><p class="Bullet1">Al termine della macro viene chiesto quante 
+	 sono le prime CC da considerare come sismiche (SLV), considerando 
+	 le altre come statiche (SLU), e viene definito il file .CMB diagonalizzato.</p></li>
+	<li><p class="Bullet1">Alle CCE definite è assegnato un Tipo di CCE 
+	 chiamato &quot;tipo di carico fittizio&quot; che, se non è già presente 
+	 nella struttura, viene definito come permanente strutturale con coefficienti 
+	 gamma unitari.</p></li>
+	<li><p class="Bullet1">Non vengono applicati carichi a CCE indicate 
+	 come zero e a nodi non indicati o indicati come zero o con valori 
+	 non numerici.</p></li>
+	<li><p class="Bullet1">Valori non indicati vengono imposti pari a zero.</p></li>
+	<li><p class="Bullet1">È segnalata la presenza di valori non numerici 
+	 relativi ai carichi.</p></li>
+	<li><p class="Bullet1">È segnalata la presenza di CCE prive di carichi.</p></li>
+	<li><p class="Bullet1">Se un nodo indicato nel file dati non è presente 
+	 nella struttura allora viene aggiunto un nodo con le seguenti coordinate: 
+	 X = Max (X) + 3 metri, Y = 0, Z = 0.</p></li>
+	<li><p class="Bullet1">Può essere utilizzata al posto di ARUT ma non 
+	 mette il doppio nodo con FZ in testa.</p></li>
+	<li><p class="Bullet1">Può essere utilizzata al posto di RVN utilizzando 
+	 il file CSV generato dall'esportazione delle reazioni vincolari.</p></li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a5');
+	FilePopupInit('a12');
+	FilePopupInit('a7');
+//]]></script>
+</body>
+</html>

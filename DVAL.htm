@@ -1,0 +1,109 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>DVAL - Disegna valori</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:normal; }
+span.hcp4 { font-weight:bold; }
+a.hcp5 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">DVAL - Disegna valori</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" 
+		 width="100%" bgcolor="#C0C0C0">
+	<tr>
+		<td style="width:68%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p></td>
+		<td style="width:28%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>: 
+		 P</p></td>
+	</tr>
+</table>
+<p>Permette di disegnare il valore numerico relativo ai diagrammi attivi.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3" style="font-weight: bold;">DVAL</p>
+<p class="Normal2" style="font-weight: bold; text-decoration: none; "><a href="javascript:void(0);" id="a1" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Setnodi.htm');return false;">Selezionare 
+ i nodi</a><span class="hcp3">,</span> <a href="javascript:void(0);" id="a4" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/SetAste.htm');return false;">Selezionare 
+ le aste</a><span class="hcp3">,</span> <a href="../Manuale/Setbidi.htm">Selezionare 
+ i muri/elementi bidimensionali</a> <span style="font-weight: normal; color: #0000ff;">o 
+ i baricentri degli impalcati</span></p>
+<p class="Normal3">oppure:</p>
+<p class="Normal3"><span class="hcp4">DVAL</span> <font color="#0000FF">P</font></p>
+<p class="Normal2"><font color="#0000FF">Punto sull'asse dell'asta</font></p>
+<p>Nella prima forma vengono disegnati in automatico i valori numerici 
+ dei diagrammi attivi: carichi (<a href="DCN.htm" class="hcp5">DCN</a>, 
+ <a href="DCA.htm" class="hcp5">DCA</a>, <a href="DCB.htm" class="hcp5">DCB</a>), 
+ reazioni vincolari (<span class="hcp4"><a href="DRVN.htm">DRVN</a></span>), 
+ sollecitazioni (<span class="hcp4"><a href="DNOR.htm">DNOR</a></span>, 
+ <span class="hcp4"><a href="DMOM.htm">DMOM</a></span>, <span class="hcp4"><a href="DTAG.htm">DTAG</a></span>, <span class="hcp4"><a href="DTOR.htm">DTOR</a></span>), spostamenti 
+ nodali (<a href="DDEF.htm" class="hcp5">DDEF</a>), masse 
+ e forze sismiche (<span class="hcp4"><a href="DMS.htm">DMS</a></span>, 
+ <span class="hcp4"><a href="DFS.htm">DFS</a></span>), zone 
+ rigide (<a href="DZR.htm" class="hcp5">DZR</a>).</p>
+<p class="Normal2">Nella seconda forma è possibile scorrere lungo l'asta, 
+ visualizzando in tempo reale i valori delle sollecitazioni, e indicare 
+ il punto in cui far disegnare il relativo valore della coordinata e delle 
+ sollecitazioni.</p>
+<p>Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Il comando non è eseguibile 
+	 quando è attiva la visualizzazione dei carichi o delle sollecitazioni 
+	 con mappe a colori.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">I valori vengono visualizzati 
+	 solo se è attivo il disegno di almeno un diagramma.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Per le aste viene disegnato 
+	 le componenti nelle direzioni Y e Z locali dell'asta dei carichi distribuiti, 
+	 i carichi concentrati e i carichi termici. Le componenti del carico 
+	 nella direzione locale X dell'asta, nel caso di visualizzazione con 
+	 diagrammi, vengono rappresentate con delle frecce coincidenti con 
+	 l'asta.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Per i bidimensionali viene 
+	 disegnato le componenti nella direzione Y locale degli elementi bidimensionali 
+	 dei carichi distribuiti ed idrostatici. Non vengono rappresentati 
+	 i carichi nelle direzioni locali X e Z ed i carichi termici.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">I valori numerici delle sollecitazioni 
+	 vengono disegnati nei punti estremi dell'asta e per le travi anche 
+	 in corrispondenza del massimo momento flettente in campata.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Per la deformata elastica 
+	 vengono disegnati i valori corrispondenti alle tre componenti di spostamento 
+	 valutati nel sistema di riferimento locale dell'asta, nella prima 
+	 riga i valori sono riferiti alla configurazione dell'asta indeformata 
+	 mentre nella seconda riga sono riferiti alla configurazione dell'asta 
+	 dopo il suo spostamento rigido.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nella scheda &quot;Disegni&quot; 
+	 delle <a href="../Manuale/Opzioni.htm">opzioni</a> di ModeSt è possibile 
+	 specificare il numero di decimali da riportare nel valore numerico 
+	 relativo al diagramma attivo e se disegnare il valore della coordinata 
+	 X.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Al variare del risultato corrente 
+	 (<span style="font-weight: bold; text-decoration: none; "><a href="RISC.htm">RISC</a></span>) 
+	 vengono aggiornati i valori delle sollecitazioni e spostamenti.</p></li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a2');
+	FilePopupInit('a3');
+	FilePopupInit('a1');
+	FilePopupInit('a4');
+//]]></script>
+</body>
+</html>

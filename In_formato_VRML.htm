@@ -1,0 +1,102 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>In formato VRML</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp3 { font-style:italic; }
+span.hcp4 { font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Esportazione struttura in VRML</h1>
+<p>Dal menu dell'applicazione <span class="hcp1"><img src="../Icone/modest32.png" alt="" border="1" class="hcp2"></span> selezionando <span class="hcp1">Esporta</span> 
+ <span class="hcp3"><img src="../Icone/32/main_esporta32.png" alt="" border="1" class="hcp2"></span> e poi <span class="hcp1">File VRML</span> <span class="hcp3"><img src="../Icone/32/main_esporta_VRML32.png" alt="" border="1" class="hcp2"></span> è possibile 
+ esportare la struttura corrente in formato VRML.</p>
+<p>Il formato VRML (Virtual Reality Modeling Language) è uno standard per 
+ la descrizione di oggetti o ambienti tridimensionali, supportato da tutti 
+ i più recenti browser HTML direttamente o tramite plug-in gratuiti esterni.</p>
+<p>Oltre alla possibilità di utilizzare questo tipo di visualizzazione 
+ sul proprio computer, si può così ad esempio anche inviare per e-mail 
+ il file VRML a terzi che possono visualizzare e controllare il modello 
+ senza essere dotati di ModeSt.</p>
+<p style="text-align: center;"><img src="vrml.png" alt="" style="margin-top: 0px; 
+									 margin-bottom: 0px; margin-left: 0px; 
+									 margin-right: 0px;" border="0"></p>
+<p>I parametri richiesti nella finestra di dialogo hanno il seguente significato:</p>
+<p><span class="hcp1">Fattori di trasparenza:</span> valore 
+ numerico compreso tra 0 e 1 che consente di rendere l'oggetto opaco (0) 
+ oppure trasparente (1).</p>
+<p><span class="hcp1">Fattori di emissione:</span> quantità 
+ di luce propria riflessa che consente di rendere l'oggetto più brillante.</p>
+<p><span class="hcp1">Aste fittizie 0 e -1:</span> consente 
+ il disegno delle aste fittizie 0 e -1.</p>
+<p><span class="hcp1">Dettaglio armature:</span> consente 
+ il disegno del dettaglio delle armature.</p>
+<p><span class="hcp1">Attraversamento solai:</span> consente 
+ l'attraversamento dei solai durante il percorso all'interno della struttura.</p>
+<p><span class="hcp1">Dettaglio sez.:</span> può assumere 
+ le due seguenti tipologie:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Nessuna:</span> 
+	 <span class="hcp4">le sezioni verranno disegnate in 
+	 modo semplificato.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 c.a.:</span> <span class="hcp4">solo le sezioni con 
+	 verifica prevista in cemento armato verranno disegnate in modo dettagliato;</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tutte:</span> 
+	 <span class="hcp4">tutte le sezioni verranno disegnate 
+	 in modo dettagliato.</span></p></li>
+</ul>
+<p><span class="hcp1">Delta solai:</span> rappresenta lo 
+ scostamento dei solai dai nodi in modo da evitare che il disegno dei solai 
+ si sovrapponga al disegno della trave.</p>
+<p><span class="hcp1">Ricentra struttura:</span> consente 
+ di posizionare il baricentro della struttura nell'origine del sistema 
+ di riferimento dell'ambiente di visualizzazione.</p>
+<p><span class="hcp1">Crea vista piana:</span> consente di 
+ posizionarsi in vista piana all'apertura dell'ambiente di visualizzazione.</p>
+<p><span class="hcp1">Tipo di sfondo:</span> può assumere 
+ le due seguenti tipologie:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Schema:</span> 
+	 <span class="hcp4">lo sfondo coincide con quello della 
+	 finestra di modellazione.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Standard:</span> 
+	 <span class="hcp4">lo sfondo coincide con quello standard 
+	 dei mondi VRML, cioè due semisfere di raggio infinito di colore blu 
+	 e verde che nelle viste normali creano l'effetto del cielo e del terreno.</span></p></li>
+</ul>
+<p><span class="hcp1">Tipo:</span> per ogni elemento della 
+ struttura (aste con verifica cemento, aste con verifica acciaio, muri, 
+ ecc.) è possibile definire una modalità di rappresentazione scegliendola 
+ tra quelle sotto indicate:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Schema 
+	 di colore:</span> verrà applicato il corrispondente colore impostato 
+	 nello schema di colore.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Motivo:</span> 
+	 verrà applicato il motivo dell'immagine JPEG selezionata. In questo 
+	 caso si attiva anche il parametro <span class="hcp1">Scalatura</span> 
+	 del motivo che consente di adattare l'immagine alle dimensioni dell'elemento 
+	 specificato.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Automatico 
+	 da verifica:</span> verrà applicato il motivo interno predefinito 
+	 nel programma in funzione del tipo di verifica.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Default:</span> 
+	 verrà applicata la colorazione predefinita in VRML.</p></li>
+</ul>
+</body>
+</html>

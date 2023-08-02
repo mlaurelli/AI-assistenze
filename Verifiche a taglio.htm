@@ -1,0 +1,67 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Verifiche a taglio</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { vertical-align:Sub; }
+span.hcp2 { font-weight:bold; }
+img.hcp3 { margin-top:0px;
+margin-bottom:0px;
+margin-left:0px;
+margin-right:0px; }
+font.hcp4 { font-family:Symbol; }
+span.hcp5 { font-weight:bold;
+font-family:Verdana, sans-serif; }
+span.hcp6 { vertical-align:sub;
+font-family:Verdana, sans-serif; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Verifiche a taglio</h1>
+<p>Per effettuare le verifiche a taglio, sia alle tensioni ammissibili che agli stati limite, ModeSt analizza ogni pezzo di parete costituente il nucleo e valuta i valori di T<span class="hcp1">l</span> e T<span class="hcp1">t</span> (taglio longitudinale e trasversale in coordinate locali) integrando le relative tensioni tangenziali o sforzi di taglio.</p>
+<p>Agli <span class="hcp2">stati limite</span> il programma non esegue le verifiche in direzione ortogonale alla parete in quanto mancano indicazioni normative in merito. Le armature tese e compresse e le zone di calcestruzzo tese e compresse vengono valutate con riferimento allo stato limite ultimo dell'intero nucleo.</p>
+<p>Alle <span class="hcp2">tensioni ammissibili</span> il programma opera nel modo seguente:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Vengono calcolate le tensioni tangenziali:</p>
+</li>
+</ul>
+<p class="IndentBullet1"><img src="nuc1.gif" alt="" width="75" height="89" border="0" class="hcp3"></p>
+<p class="IndentBullet1-2">dove A è l'area dell'elemento e k<span class="hcp1">l</span> e k<span class="hcp1">t</span> sono fattori moltiplicativi definiti nei criteri di progetto (vedi <a href="Criteri%20di%20progetto%20nuclei.htm#Fattore_moltiplicativo_per_calcolo"><span class="hcp2">Fattore moltiplicativo per calcolo <font face="Symbol" class="hcp4">t</font></span><font><span class="hcp5">l</span></font> <span class="hcp2">(<font face="Symbol" class="hcp4">t</font></span><font><span class="hcp5">t</span></font><span class="hcp2">)</span></a>).</p>
+<p class="IndentBullet1">Risulta infatti complesso stabilire se il nucleo deve essere trattato come una sezione compatta parzializzata, come una mensola tozza o come una sezione interamente reagente (non parzializzata). Anche l'applicazione della formula di Jourasky è di dubbia validità per una sezione sicuramente non "compatta" come quella di un nucleo e nella quale una ripartizione delle tensioni tangenziali è già avvenuta in fase di calcolo con il solutore. Il coefficiente k permette all'utente di stabilire il metodo di calcolo delle tensioni tangenziali, eventualmente modificando i criteri di progetto dopo aver controllato le tensioni nelle varie CC.</p>
+<p class="IndentBullet1">Si ricorda che per sezioni compatte parzializzate si considera comunemente:</p>
+<p class="IndentBullet1-2"><img src="nuc2.jpg" alt="" width="88" height="43" border="0" class="hcp3"></p>
+<p class="IndentBullet1-2">e quindi</p>
+<p class="IndentBullet1-2"><img src="nuc3.jpg" alt="" width="99" height="42" border="0" class="hcp3"></p>
+<p class="IndentBullet1-2">mentre per sezioni non parzializzate si può porre:</p>
+<p class="IndentBullet1-2"><img src="nuc4.jpg" alt="" width="78" height="46" border="0" class="hcp3"></p>
+<p class="IndentBullet1-2">e quindi</p>
+<p class="IndentBullet1-2">k = 1.5</p>
+<p class="IndentBullet1">I valori precedenti si riferiscono al calcolo della <font face="Symbol" class="hcp4">t</font><span class="hcp1">max</span>, mentre l'utente può decidere di considerare la <font face="Symbol" class="hcp4">t</font><span class="hcp1">media</span> e quindi porre in ogni caso k<span class="hcp1">l</span> = k<span class="hcp1">t</span> = 1.</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Definite in tal modo <font face="Symbol" class="hcp4">t<span class="hcp6">l</span></font> e <font face="Symbol" class="hcp4">t<span class="hcp6">t</span></font> vengono calcolate le tensioni nelle barre orizzontali del singolo elemento come:</p>
+</li>
+</ul>
+<p class="IndentBullet1-2"><img src="nuc2.GIF" alt="" width="83" height="51" border="0" class="hcp3"></p>
+<p class="IndentBullet1-2">dove S è lo spessore dell'elemento e A<span class="hcp1">o</span> l'area di ferro orizzontale a metro lineare verticale.</p>
+<p class="IndentBullet1">In pratica si considera quindi lo sforzo di scorrimento relativo ad un tratto di nucleo di altezza unitaria.</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1" style="margin-bottom: 0;">I valori di <font face="Symbol" class="hcp4">t<span class="hcp6">l</span></font> non vengono utilizzati per il calcolo delle tensioni nelle armature di collegamento. Si ricorda inoltre che alcuni solutori (quali ad esempio i solutori della serie SAP) non forniscono il valore di <font face="Symbol" class="hcp4">t<span class="hcp6">t</span></font> per gli elementi bidimensionali (taglio fuori piano).</p>
+</li>
+</ul>
+</body>
+</html>

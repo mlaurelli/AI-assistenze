@@ -1,0 +1,74 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Stati limite - Verifiche a taglio</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { margin-bottom:0; }
+span.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Verifiche a taglio</h1>
+<p class="hcp1">Le verifiche a taglio con il metodo degli 
+ stati limite dipendono in linea generale, secondo le diverse formulazioni 
+ delle normative, dalla larghezza bw della membratura, dall'altezza utile 
+ della sezione e (per la verifica delle armature) dalla quantità di area 
+ di ferro tesa presente nella sezione e dalla quantità di staffe.</p>
+<p class="hcp1"><span class="hcp2">Nel caso di 
+ sezione generica o soggetta a pressoflessione deviata non esiste un metodo 
+ riportato in letteratura e la normativa non offre nessuna indicazione. 
+ Per analogia con quanto si usa fare per le sezioni rettangolari, ModeSt 
+ tenta di trovare un &quot;traliccio resistente&quot; che abbia un senso 
+ all'interno della sezione. Data la notevole variazione di risultati che 
+ comporta l'individuazione di tale traliccio, è possibile con gli appositi 
+ criteri di progetto modificare il comportamento del programma, che qui 
+ si riassume:</span></p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">L'altezza utile della sezione 
+	 viene valutata come la distanza fra il punto maggiormente compresso 
+	 e la barra d'armatura maggiormente tesa.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp2">Le 
+	 verifiche vengono condotte per ogni fibra della sezione (discretizzata 
+	 in strisce parallele alla direzione dell'asse neutro) considerando 
+	 solo le fibre comprese fra la barra più tesa della sezione e la fibra 
+	 maggiormente compressa e trascurando le fibre che non intercettano 
+	 staffatura.</span></p></li>
+	<li class="p-Elenco1"><p class="Elenco1">In ogni fibra viene calcolato 
+	 il valore di bw e viene valutata l'area di ferro delle staffe intercettate.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Se richiesto dal criterio 
+	 di progetto (vedi <span class="hcp3"><a href="Criteri%20di%20disegno%20armatura%20sezioni.htm#Considera_sempre_Af_Staffe_non_proiettata_in_direzione_del_taglio">Considera 
+	 sempre Af Staffe non proiettata in direzione del taglio</a></span>) 
+	 l'area delle staffe viene ridotta considerandone solo la componente 
+	 nella direzione ortogonale all'asse neutro. Nel progetto col metodo 
+	 delle tensioni ammissibili l'area viene sempre ridotta.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">L'area di ferro tesa viene 
+	 valutata, secondo quanto specificato nei criteri di progetto (vedi 
+	 <span class="hcp3"><a href="Criteri%20di%20disegno%20armatura%20sezioni.htm#Classificazione_barre_tese_compresse">Classificazione 
+	 barre tese/compresse</a></span>), trascurando o meno le barre troppo 
+	 vicine all'asse neutro.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1" style="margin-bottom: 0pt; 
+							 margin-top: -10pt;"><span class="hcp2">Dopo 
+	 aver valutato in tal modo il valore del taglio resistente in tutte 
+	 le fibre, viene scelto quello specificato dal criterio di progetto 
+	 </span><span class="hcp3"><a href="Criteri%20di%20disegno%20armatura%20sezioni.htm#Modalita_di_calcolo_Vrdu">Modalità 
+	 di calcolo Vrdu</a></span><span class="hcp2">.</span></p></li>
+</ol>
+<p class="hcp1">Si fa notare come la possibile variazione 
+ dell'area delle staffe faccia sì che non ci sia necessariamente un rapporto 
+ diretto fra larghezza di bw e il valore della resistenza a taglio.</p>
+</body>
+</html>

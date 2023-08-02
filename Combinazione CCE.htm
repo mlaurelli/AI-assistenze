@@ -1,0 +1,167 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Combinazione CCE</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Combinazioni</h1>
+<p>ModeSt provvede automaticamente a creare le combinazioni delle condizioni 
+ di carico elementari a secondo dei casi, del tipo di normativa e del tipo 
+ di analisi.</p>
+<p>Nel caso si esegua un calcolo agli stati limite sia adottando la normativa 
+ del D.M. 9/01/96 che del D.M. 17/01/18 ModeSt opera nel seguente modo: 
+ partendo dalla classificazione delle condizioni di carico elementari, 
+ dall'impostazione del loro contributo alla sicurezza e della loro importanza, 
+ attraverso la definizione della loro mutua correlazione il programma è 
+ in grado di calcolare automaticamente le combinazioni delle condizioni 
+ di carico. Facciamo notare che se la CCE al momento della creazione è 
+ stata classificata come ambigua nei confronti della sicurezza e se nel 
+ relativo tipo di CCE sono stati definiti due coefficienti <font style="font-family: Symbol;" 
+	 face="Symbol">g</font> diversi vengono normalmente create le combinazioni 
+ con entrambi i valori. Per approfondimenti si veda anche <a href="Il%20metodo%20degli%20stati%20limite.htm"><span class="hcp1">Il metodo degli stati limite</span></a><a 
+	 href="Combinazione%20delle%20condizioni%20di%20carico.htm"><span style="text-decoration: none; ">.</span></a></p>
+<p>In funzione di quanto è stato specificato nei <a href="Parametri_generali_del_calcolo.htm"><span class="hcp1">Parametri generali di calcolo</span></a> 
+ nella sezione <a href="Parametri_generali_del_calcolo.htm#Generazione_combinazioni"><span class="hcp1">generazione combinazioni</span></a>, le 
+ combinazioni vengono automaticamente classificate come lineari o non lineari, 
+ e per ognuna di esse viene stabilito se attivare l'<span class="hcp1">analisi 
+ di buckling</span> e quante forme modali ricercare. Per le combinazioni 
+ non lineari vengono generate in automatico anche le <span class="hcp1">Tabelle 
+ della storia di carico</span>, attivate le opzioni per il salvataggio 
+ dei risultati intermedi e con quanti sotto-step eseguire il calcolo. Cliccando 
+ sulle righe delle combinazioni di carico è possibile visualizzare la relativa 
+ tabella e/o gli altri dati necessari, tutti modificabili, cosicché è possibile 
+ differenziare tutti i parametri di tutte le diverse combinazioni generate 
+ in automatico.</p>
+<p>In ogni riga della tabella delle combinazioni viene riportato il tipo 
+ di calcolo (Lineare o Non Lineare) e se è attiva o meno l'analisi di buckling.</p>
+<p>L'inserimento o l'eliminazione di una combinazione delle condizioni 
+ di carico elementari si effettua selezionando la riga corrispondente e 
+ cliccando sul bottone &quot;Inserisci&quot; o &quot;Elimina&quot; mentre 
+ la modifica si esegue variando i valori numerici nelle celle appartenenti 
+ alla riga della combinazione. L'aggiunta di una combinazione delle condizioni 
+ di carico elementari si effettua cliccando sul bottone &quot;Aggiungi&quot;. 
+ La tabella delle combinazioni può essere memorizzata e richiamata da un 
+ file esterno con estensione CMB (in formato binario) utilizzando le voci 
+ di menu &quot;Salva&quot; e &quot;Carica&quot; oppure esportata o importata 
+ da un file con estensione CSV o ASC (file di testo in formato ASCII) utilizzando 
+ le voci di menu &quot;Esporta&quot; e &quot;Importa&quot;.</p>
+<p>La modifica delle combinazioni può comunque essere effettuata anche 
+ dopo il calcolo cliccando nel gruppo <span class="hcp1">Combinazioni</span> 
+ della scheda <span class="hcp1">Analisi</span> su<span class="hcp1"> 
+ Modifica</span> <img src="../Icone/32/modcombina32.png" alt="" style="border: Solid 1px #808080; 
+						 border-width: 1px; border-style: solid;" border="1">. 
+ In questa sede sarà possibile modificare ovviamente solo combinazioni 
+ lineari ed inserirne di nuove solo se nel calcolo è stata effettuata almeno 
+ un'analisi lineare. Non sarà possibile ovviamente inserire combinazioni 
+ di tipo non lineare.</p>
+<p>Le combinazioni vengono create secondo le seguenti specifiche:</p>
+<h2>Analisi statica alle Tensioni ammissibili D.M. 92, Stati limite D.M. 
+ 96 o D.M. 18</h2>
+<p>Nel caso si esegua un calcolo alle tensioni ammissibili secondo il D.M. 
+ 14/02/92 ModeSt crea una combinazione uguale alla somma delle CCE definite 
+ dall'utente.</p>
+<p>Nel caso si esegua un calcolo agli stati limite ModeSt crea una serie 
+ di combinazioni delle CCE ed in particolare vengono create le combinazioni 
+ per lo stato limite ultimo non sismico e quelle relative agli stati limite 
+ di esercizio per le combinazioni Rare, Frequenti e Quasi permanenti. Il 
+ numero di combinazioni che vengono create dipende ovviamente anche da 
+ quanto è stato specificato negli <a href="Ambienti%20di%20carico.htm">ambienti 
+ di carico</a>.</p>
+<h2>Analisi sismica secondo Tensioni ammissibili D.M. 92 o Stati limite 
+ D.M. 96</h2>
+<p>Nel caso si esegua un calcolo alle tensioni ammissibili secondo il D.M. 
+ 14/02/92 ModeSt crea, se non sono previste azioni sismiche verticali e 
+ la struttura ha un rapporto fra i lati minore di 2.5, una serie di combinazioni 
+ delle CCE ed in particolare la prima combinazione viene generata come 
+ la somma delle CCE (senza azione sismica) e le successive vengono create 
+ aggiungendo alla prima combinazione l'azione sismica in ognuna delle due 
+ direzioni sia con segno positivo che negativo.</p>
+<p>Nel caso si esegua un calcolo agli stati limite adottando la normativa 
+ del D.M. 9/01/96 ModeSt crea, se non sono previste azioni sismiche verticali 
+ e la struttura ha un rapporto fra i lati minore di 2.5, una serie di combinazioni 
+ delle CCE ed in particolare vengono create le combinazioni per lo stato 
+ limite ultimo sismico aggiungendo alle CCE l'azione sismica in ognuna 
+ delle due direzioni considerandola sia con segno positivo che negativo, 
+ quelle relative allo stato limite ultimo non sismico e quelle relative 
+ agli stati limite di esercizio per le combinazioni Rare, Frequenti e Quasi 
+ permanenti. Il numero di combinazioni che vengono create dipende ovviamente 
+ anche da quanto è stato specificato negli <a href="Ambienti%20di%20carico.htm">ambienti 
+ di carico</a>.</p>
+<p>Se la struttura ha un rapporto fra i lati maggiore di 2.5 (e quindi 
+ momento torcente aggiuntivo diverso da zero) viene aggiunto all'azione 
+ sismica il momento torcente considerandolo sia con segno positivo che 
+ negativo.</p>
+<p>Se nella struttura sono presenti masse con componente Z diversa da zero, 
+ ModeSt calcola le azioni sismiche verticali, e quindi l'azione sismica 
+ in ognuna delle due direzioni risulta da una combinazione quadratica delle 
+ azioni orizzontali e verticali.</p>
+<p>Se il rapporto fra i lati della struttura è maggiore di 2.5 la normativa 
+ Italiana impone di tenere conto di un momento torcente fittizio aggiuntivo, 
+ ma non specifica come le azioni che ne derivano vadano combinate con le 
+ azioni verticali. L'interpretazione più plausibile è quella di considerare 
+ l'effetto del momento torcente come un'azione aggiuntiva dell'azione orizzontale, 
+ che in questo modo si &quot;sdoppia&quot; nei due casi di azione torcente 
+ positiva e negativa.</p>
+<p>L'analisi sismica dinamica viene effettuata calcolando i modi richiesti 
+ e poi, tramite i coefficienti di partecipazione (eventualmente modificati 
+ per tenere conto dell'angolo di ingresso del sisma), lo spettro di risposta 
+ ed i vari coefficienti sismici, vengono calcolate le sollecitazioni spettrali 
+ in funzione di quelle modali, selezionando i soli modi richiesti dall'utente.</p>
+<p>Viene considerato solamente lo spettro nelle direzioni X, Y (ed eventualmente 
+ Z) e di conseguenza è considerato nullo il contributo modale rotazionale.</p>
+<h2>Analisi sismica secondo Stati limite D.M. 18</h2>
+<p>ModeSt crea le combinazioni delle CCE sia per gli stati limite ultimi 
+ sismici (SLV, SLC) che di esercizio sismici (SLO, SLD) aggiungendo alle 
+ CCE definite l'azione sismica in ognuna delle due direzioni considerandola 
+ sia con segno positivo che negativo, quelle relative allo stato limite 
+ ultimo non sismico e quelle relative agli stati limite di esercizio per 
+ le combinazioni Rare, Frequenti e Quasi permanenti.</p>
+<p>Il numero delle combinazioni di tipo sismico può variare in funzione 
+ della <a href="Dati%20di%20calcolo.htm#Tipo_di_combinazione_sismica">modalità 
+ di combinazione</a> e degli stati limite specificati nei <a href="Dati%20struttura.htm#SL_Esercizio_Ultimi">dati 
+ struttura</a>.</p>
+<p>Nel caso della combinazione &quot;estesa&quot; vengono effettuate tutte 
+ le combinazioni con i possibili segni delle diverse azioni sismiche (X,Y,Z), 
+ mentre caso della combinazione &quot;compatta&quot; vengono sommati i 
+ massimi delle azioni in una direzione con quelli delle altre direzioni, 
+ considerati di segno concorde all'azione &quot;principale&quot;. Sono 
+ due interpretazioni diverse che portano a risultati con delle sottili 
+ differenze. Con la modalità compatta, data la sua natura non perfettamente 
+ lineare di combinazione, non è possibile visualizzare le deformate elastiche 
+ (che sarebbero incongruenti) e la visualizzazione delle caratteristiche 
+ di sollecitazione (N,M,T) può presentare delle singolarità e delle imperfezioni 
+ (puramente grafiche) se non eseguite con un passo di campionamento abbastanza 
+ fitto.</p>
+<p>Il momento torcente viene ovviamente aggiunto solo ai piani considerati 
+ infinitamente rigidi. Le dimensioni dell'edificio ai vari piani vengono 
+ calcolate automaticamente, ma è possibile modificare i valori che ne derivano. 
+ Il momento torcente viene combinato con le altre azioni sismiche nelle 
+ due possibili variazioni di segno e valutato come da normativa considerando 
+ la forza sismica di piano nell'ipotesi di analisi statica moltiplicata 
+ per l'eccentricità massima complessiva derivante dalla somma vettoriale 
+ delle due eccentricità X e Y.</p>
+<p>L'analisi sismica dinamica viene effettuata calcolando i modi richiesti 
+ e poi, tramite i coefficienti di partecipazione (eventualmente modificati 
+ per tenere conto dell'angolo di ingresso del sisma), lo spettro di risposta 
+ ed i vari coefficienti sismici, vengono calcolate le sollecitazioni spettrali 
+ in funzione di quelle modali, selezionando i soli modi richiesti dall'utente.</p>
+<p>Viene considerato solamente lo spettro nelle direzioni X, Y (ed eventualmente 
+ Z) e di conseguenza è considerato nullo il contributo modale rotazionale.</p>
+</body>
+</html>

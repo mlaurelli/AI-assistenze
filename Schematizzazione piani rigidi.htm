@@ -1,0 +1,99 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Schematizzazione piani rigidi</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+text-decoration:none; }
+span.hcp2 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Schematizzazione piani rigidi</h1>
+<p>Quando nella struttura sono stati definiti degli impalcati (si veda 
+ <span class="hcp1"><a href="Impalcati%20e%20piani%20rigidi.htm">Impalcati 
+ e piani rigidi</a></span>) o sono stati introdotti dei solai, è possibile 
+ effettuare il calcolo usando la schematizzazione di piani infinitamente 
+ rigidi.</p>
+<p>Quando nella struttura sono stati definiti degli impalcati o sono stati 
+ introdotti dei solai, viene richiesto se e in che modo schematizzare i 
+ piani rigidi. È possibile utilizzare una delle seguenti opzioni:</p>
+<p class="Titolo7">Piano non rigido</p>
+<p>I nodi relativi all'impalcato classificato come non rigido vengono lasciati 
+ liberi di muoversi per tutti i 6 gradi di libertà. Nel caso di analisi 
+ sismica le masse o le forze vengono applicate su ogni nodo, valutandole 
+ in funzione delle masse degli elementi che vi incidono.</p>
+<p class="Titolo7">Piano rigido con il metodo Master-Slave</p>
+<p>In questo modo viene imposta una relazione matematica che obbliga gli 
+ spostamenti X e Y e la rotazione RZ dei nodi appartenenti all'impalcato 
+ (detti nodi Slave) ad essere congruenti con quelli di un unico nodo (detto 
+ nodo Master). Gli spostamenti dei nodi sono quindi congruenti con lo spostamento 
+ rigido di un piano orizzontale e si ha una notevole riduzione dei gradi 
+ di libertà del sistema.</p>
+<p>Il nodo Master viene automaticamente creato da ModeSt nel baricentro 
+ delle masse dei nodi appartenenti ad ogni impalcato e le eventuali forze 
+ o masse sismiche orizzontali e polari intorno all'asse Z globale vengono 
+ concentrate su questo nodo, mentre le altre masse o forze restano sui 
+ nodi di pertinenza; le masse relative a nodi non appartenenti a nessun 
+ impalcato possono poi essere trattate secondo diverse modalità (si veda 
+ <span class="hcp1"><a href="Recupero%20masse%20secondarie.htm">Recupero 
+ masse secondarie</a></span>).</p>
+<p class="Titolo7">Piano rigido con il metodo Master-Slave solo per forze 
+ sismiche</p>
+<p>Viene effettuato il calcolo della struttura due volte: per i carichi 
+ inseriti dall'utente senza considerare il piano rigido e successivamente 
+ per le azioni sismiche impostando la correlazione Master-Slave.</p>
+<p>Il vantaggio di questa modalità di calcolo è di permettere la coesistenza 
+ del modello a piani rigidi per la ridistribuzione delle azioni sismiche 
+ secondo le diverse rigidezze della struttura con la presenza di situazioni 
+ geometriche (tetti spingenti), di carico (carichi termici), di schematizzazione 
+ (elementi bidimensionali con comportamento trave) che non si conciliano 
+ con l'ipotesi di piano rigido (si veda <span class="hcp2"><a 
+	 href="Guida.chm::/Elementi_bidimensionali_e_piani_rigidi.htm">Elementi 
+ bidimensionali e piani rigidi</a></span>, <span class="hcp2"><a 
+	 href="Guida.chm::/Impalcati_rigidi_non_orizzontali.htm">Impalcati 
+ rigidi non orizzontali</a></span>).</p>
+<p class="Titolo7"><a name="Piano_rigido_con_controventatura_solai"></a>Piano 
+ rigido con controventatura solai</p>
+<p>Condizione necessaria per poter utilizzare questo metodo è che i solai 
+ da controventare siano piani e non sghembi (anche se non orizzontali). 
+ In pratica viene creato un reticolo triangolare di bielle con centro nel 
+ baricentro del solaio e congiungenti il centro con i nodi del perimetro 
+ ed i nodi del perimetro fra di loro. Per impedire l'insorgere di labilità 
+ (il nodo centrale sarebbe libero di spostarsi ortogonalmente al piano 
+ del solaio per spostamenti del primo ordine), viene creata una biella 
+ aggiuntiva in direzione ortogonale al piano del solaio e vincolata sul 
+ secondo nodo che serve da sostegno, la cui rigidezza è specificabile nelle 
+ <span class="hcp2"><a href="Opzioni%20generali.htm#Rigidezza_asta_controventatura_solai">Opzioni 
+ generali</a></span>. Questo sistema comporta un aumento dei gradi di libertà 
+ del modello, ma presenta il vantaggio di permettere la schematizzazione 
+ di piani rigidi inclinati, cosa che gli altri metodi non consentono. Un'altra 
+ possibilità offerta da questo sistema è quella di poter rendere rigida 
+ solamente una parte di impalcato.</p>
+<p>In questo caso le masse o le forze sismiche restano applicate sui singoli 
+ nodi della struttura.</p>
+<p class="Titolo7">Piano rigido con controventatura solai solo per forze 
+ sismiche</p>
+<p>Valgono le stesse considerazioni riportate nel caso del metodo Master-Slave 
+ ma utilizzando come schematizzazione di piano rigido la controventatura 
+ di solai.</p>
+<p style="margin-bottom: 0;"><span class="hcp2">Argomenti 
+ correlati: <a href="Guida.chm::/Elementi_bidimensionali_e_piani_rigidi.htm">Elementi 
+ bidimensionali e piani rigidi</a></span>, <span class="hcp2"><a 
+	 href="Guida.chm::/Impalcati_rigidi_non_orizzontali.htm">Impalcati 
+ rigidi non orizzontali</a></span></p>
+</body>
+</html>

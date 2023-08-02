@@ -1,0 +1,27 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Aste - connessione e posizione</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-style:italic; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Aste - connessione e posizione</h1>
+<p>Si premette che le considerazioni qui esposte hanno carattere prettamente ingegneristico e non sono specificatamente relative all'utilizzo di ModeSt per l'analisi delle problematiche esposte.</p>
+<p>Si sconsiglia l'utilizzo di scostamenti dal filo fisso eccessivi per l'aggiustamento di posizionamenti molto discosti dalla realtà. In alcuni casi è meglio introdurre un nuovo nodo nella reale posizione dell'elemento. Una buona modellazione dovrebbe sempre cercare di conciliare la rappresentazione <span class="hcp1">geometrica</span> della struttura con la rappresentazione <span class="hcp1">matematica</span> della struttura, dando la precedenza a quest'ultima nei casi più complessi. Un disegno inesatto può essere sempre corretto in CAD, ma un calcolo con impostazioni sbagliate porta errori sulle sollecitazioni di tutti gli elementi ed è molto più pericoloso.</p>
+<p style="margin-bottom: 0;">Una trave che cade su di un'altra vicino al pilastro, può essere schematizzata facendola incidere sul nodo di testa del pilastro e poi scostandola col filo fisso, o inserendo un nodo intermedio nella trave portante. Sarà bene utilizzare le due schematizzazioni non in funzione di ciò che è più comodo per il disegno (fili fissi, allineamenti, regolarità delle maglie, ecc.) ma in funzione del reale comportamento: se la trave col suo reale ingombro è parzialmente sovrapposta al pilastro al punto da far pensare che non induca taglio nell'altra, o se non è una trave portante sarà meglio che venga schematizzata come incidente sul pilastro, mentre se l'effetto di taglio sulla trave portante è un parametro critico che deve essere valutato, è meglio introdurre un nuovo nodo, possibilmente non troppo vicino al pilastro (meglio usare il filo della trave opposto al pilastro o l'asse della trave).</p>
+</body>
+</html>

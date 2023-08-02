@@ -1,0 +1,28 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Sezioni accoppiate</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { margin-bottom:0; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Sezioni accoppiate</h1>
+<p class="hcp1">Per il calcolo ai sensi della CNR 10011/85 le tensioni nelle sezioni accoppiate vengono calcolate nell'ipotesi che le due sezioni siano rigidamente collegate. Questa ipotesi fornisce risultati corretti in termini di tensioni se la sezione è sollecitata solo da N, My e Tz (le sezioni trattate sono simmetriche rispetto all'asse Z locale). ModeSt calcola comunque le tensioni dovute a Mz e Ty con le stesse ipotesi e ripartisce in parti uguali Mx (momento torcente) nelle due sezioni.</p>
+<p class="hcp1">Per le verifiche ai sensi del D.M. 17/01/18 tali componenti di sollecitazione vengono invece trascurate completamente.</p>
+<p class="hcp1">In ogni caso ModeSt segnala la presenza di queste componenti di sollecitazione nel report visualizzato al termine delle verifiche. I valori di sollecitazione riportati servono perché il progettista possa valutare se si tratta di sforzi secondari dovuti alla modalità di modellazione o se sono significativi e quindi richiedono analisi o schematizzazioni più approfondite.</p>
+<p class="hcp1">La deformabilità dell'asta per queste sollecitazioni è infatti diversa da quella dell'asta teorica costituita dalle sezioni accoppiate a causa della deformabilità dei calastrelli o delle imbottiture e quindi le sollecitazioni stesse possono essere errate. I risultati possono dirsi corretti solo se le due sezioni sono saldate in continuo.</p>
+</body>
+</html>

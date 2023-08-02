@@ -1,0 +1,143 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Mappe armatura teorica elementi bidimensionali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp3 { font-weight:bold;
+text-decoration:none; }
+span.hcp4 { font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Mappe armatura teorica elementi bidimensionali</h1>
+<p>La visualizzazione delle armature teoriche per gli elementi bidimensionali 
+ per la <span class="hcp1">sollecitazione corrente</span> 
+ e per il <span class="hcp1">risultato corrente</span> può 
+ essere effettuata nelle <span class="hcp1"><a href="Finestre%20di%20modellazione.htm">finestre 
+ di modellazione</a></span>, purché sia stato eseguito il calcolo, cliccando 
+ nel gruppo <span class="hcp1">Diagrammi e mappe</span> della 
+ scheda <span class="hcp1">Post-Processor</span> su <span class="hcp1">Af teo. bidi <img src="../Icone/32/afteobidi32.png" alt="" border="1" class="hcp2"></span> 
+ e poi sull'area di ferro teorica da visualizzare.</p>
+<p>La visualizzazione delle armature è una informazione su selezione di 
+ elementi bidimensionali e può essere effettuata solo per gli elementi 
+ bidimensionali il cui tipo di utilizzo è stato settato come parete, soletta/platea 
+ o nucleo.</p>
+<p>La visualizzazione può essere effettuata solamente se il tipo di sollecitazione 
+ corrente è una combinazione di condizioni elementari di carico e può essere 
+ visualizzata anche per un solo risultato, ma ModeSt segnala la cosa come 
+ inconsueta, in quanto normalmente occorre fare l'inviluppo dei diversi 
+ risultati per valutare l'armatura necessaria.</p>
+<p>Nel caso di calcolo col metodo degli stati limite l'armatura teorica 
+ viene calcolata con riferimento agli stati limite d'esercizio per combinazioni 
+ quasi permanenti e per combinazioni rare. Nelle combinazioni frequenti 
+ non è infatti richiesto il controllo delle armature e nelle combinazioni 
+ per stato limite ultimo l'armatura necessaria non è determinabile in modo 
+ univoco.</p>
+<p>La visualizzazione delle armature viene effettuata con riferimento al 
+ <span class="hcp3"><a href="Piano%20di%20tensione.htm">piano 
+ di tensione</a></span>. Se il piano di tensione è stato settato come il 
+ piano di visualizzazione o come un piano definito dall'utente la mappa 
+ sarà effettuata solamente per gli elementi che hanno normale parallela 
+ alla normale del piano di tensione e i valori rappresentati saranno omogenei 
+ fra di loro, mentre nel caso in cui sia stato settato come piano di tensione 
+ il piano locale degli elementi la rappresentazione verrà effettuata per 
+ tutti gli elementi selezionati ma è compito dell'utente accertarsi che 
+ non vi siano incongruenze fra i valori di elementi adiacenti a causa dei 
+ diversi assi locali cui sono riferite le tensioni.</p>
+<p>I tipi di armatura teorica che si possono visualizzare sono:</p>
+<p class="Normal3"><span class="hcp1"><img src="../Icone/16/AFXs.png" alt="" border="1" class="hcp2"></span>: 
+ armatura teorica nella direzione X del piano di tensione, dal lato superiore;</p>
+<p class="Normal3"><span class="hcp1"><img src="../Icone/16/AFXi.png" alt="" border="1" class="hcp2"></span>: 
+ armatura teorica nella direzione X del piano di tensione, dal lato inferiore;</p>
+<p class="Normal3"><span class="hcp1"><img src="../Icone/16/AFZs.png" alt="" border="1" class="hcp2"></span>: 
+ armatura teorica nella direzione Z del piano tensione, dal lato superiore;</p>
+<p class="Normal3"><span class="hcp1"><img src="../Icone/16/AFZi.png" alt="" border="1" class="hcp2"></span>: 
+ armatura teorica nella direzione Z del piano di tensione, dal lato inferiore.</p>
+<p>Per la definizione di &quot;superiore&quot;, onde evitare incomprensioni 
+ sulla posizione dell'armatura, si faccia riferimento a quanto riportato 
+ in <span class="hcp3"><a href="Piano%20di%20tensione.htm">Piano 
+ di tensione</a></span>.</p>
+<p>Nella sezione &quot;Opzioni mappe&quot; del pannello <span class="hcp1">Parametri 
+ risultati</span> è possibile stabilire un'area di armatura diffusa da 
+ considerare già presente e quindi visualizzare e riportare solo l'area 
+ di ferro eccedente quella diffusa:</p>
+<p class="Normal3"><span class="hcp1">Sup. X</span>: indica 
+ la quantità di armatura diffusa da considerare già presente in direzione 
+ X, dal lato superiore;</p>
+<p class="Normal3"><span class="hcp1">Inf. X</span>: indica 
+ la quantità di armatura diffusa da considerare già presente in direzione 
+ X, dal lato inferiore;</p>
+<p class="Normal3"><span class="hcp1">Sup. Z</span>: indica 
+ la quantità di armatura diffusa da considerare già presente in direzione 
+ Z, dal lato superiore;</p>
+<p class="Normal3"><span class="hcp1">Inf. Z</span>: indica 
+ la quantità di armatura diffusa da considerare già presente in direzione 
+ Z, dal lato inferiore.</p>
+<p>Normalmente ModeSt decide automaticamente se eseguire il progetto a 
+ flessione o presso-tenso flessione e se in armatura simmetrica o meno 
+ in funzione del tipo di utilizzo previsto per gli elementi bidimensionali 
+ e del criterio di progetto e verifica armatura relativo. In particolare 
+ si ha:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">utilizzo previsto <span class="hcp1">parete</span>: 
+	 progetto a presso-tenso flessione, armatura doppia simmetrica;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">utilizzo previsto <span class="hcp1">soletta/platea</span>: 
+	 progetto a flessione semplice, eventuale doppia armatura come specificato 
+	 nel relativo criterio (vedi <span class="hcp1"><a href="CriPlat.htm#Tipo_di_progetto_in_doppia_armatura">Tipo 
+	 di progetto in doppia armatura</a></span>);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">utilizzo previsto <span class="hcp1">nucleo</span>: 
+	 progetto a presso-tenso flessione, armatura doppia simmetrica.</p></li>
+</ul>
+<p>Attraverso le <span style="font-style: italic;">Opzioni di disegno</span> 
+ del menu a comparsa che si ottiene cliccando col tasto destro sullo sfondo 
+ della finestra è possibile con l'opzione &quot;Tipo di progetto&quot; 
+ modificare il comportamento indicato:</p>
+<p class="Normal3"><span class="hcp1">FLEA</span>: progetto 
+ a <span class="hcp1">FLE</span>ssione semplice <span class="hcp1">A</span>simmetrica. 
+ Viene calcolata l'armatura necessaria per un tasso di sfruttamento massimo 
+ dei materiali, solo se l'armatura compressa supera l'armatura tesa viene 
+ progettata una doppia armatura simmetrica;</p>
+<p class="Normal3"><span class="hcp1">FLES</span>: progetto 
+ a <span class="hcp1">FLE</span>ssione semplice <span class="hcp1">S</span>immetrica. 
+ L'armatura compressa viene sempre impostata uguale all'armatura tesa;</p>
+<p class="Normal3"><span class="hcp1">PRFS</span>: progetto 
+ a <span class="hcp1">PR</span>esso-tenso <span class="hcp1">F</span>lessione 
+ in doppia armatura <span class="hcp1">S</span>immetrica;</p>
+<p class="Normal3"><span class="hcp1">AUTO</span>: ripristina 
+ il progetto <span class="hcp1">AUTO</span>matico. L'armatura 
+ viene calcolata secondo il tipo di utilizzo e del relativo criterio di 
+ progetto e verifica.</p>
+<p>Le caratteristiche del calcestruzzo ed i valori dei copriferri teorici 
+ vengono in ogni caso desunti dai criteri di progetto e verifica.</p>
+<p>Si ricorda che nel caso di nuclei l'armatura visualizzata con questo 
+ comando è un'armatura locale e quindi completamente diversa da quella 
+ determinata dalle procedure di progettazione nuclei. In proposito si veda 
+ anche quanto riportato in <span><span class="hcp3"><a 
+	 href="Definizione%20nuclei.htm">Definizione nuclei</a></span></span>.</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Argomenti 
+ correlati:</span> <span class="hcp3"><a 
+	 href="Fattori%20di%20scala.htm">Fattori di scala</a></span><span class="hcp4">,</span> 
+ <span class="hcp3"><a href="Valori%20nodali%20elementi%20bidimensionali.htm">Valori 
+ nodali elementi bidimensionali</a></span><span class="hcp4">,</span> 
+ <span class="hcp3"><a href="Sollecitazioni%20prive%20di%20segno.htm">Sollecitazioni 
+ prive di segno</a></span><span class="hcp4">,</span> <span class="hcp3"><a href="Piano%20di%20tensione.htm">Piano 
+ di tensione</a></span></p>
+</body>
+</html>

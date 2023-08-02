@@ -1,0 +1,148 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Verifiche nodi trave-pilastro</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+p.hcp2 { font-family:Verdana, sans-serif;
+font-size:10pt;
+text-align:center; }
+span.hcp3 { line-height:115%;
+mso-bidi-font-family:Verdana; }
+p.hcp4 { font-family:Verdana, sans-serif;
+font-size:10pt; }
+span.hcp5 { line-height:115%; }
+span.hcp6 { line-height:115%;
+mso-bidi-font-family:Calibri; }
+p.hcp7 { mso-bidi-font-family:Verdana; }
+span.hcp8 { mso-bidi-font-family:Verdana; }
+span.hcp9 { mso-fareast-font-family:Times New Roman;
+mso-bidi-font-family:Verdana; }
+p.hcp10 { line-height:115%;
+font-family:Verdana, sans-serif;
+font-size:10pt; }
+span.hcp11 { mso-bidi-font-weight:bold; }
+b.hcp12 { font-weight:normal; }
+span.hcp13 { mso-fareast-language:AR-SA;
+mso-bidi-language:AR-SA; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Verifiche nodi trave-pilastro</h1>
+<p>ModeSt esegue una o più verifiche dei nodi trave-pilastro in cemento 
+ armato a seconda del tipo&#160;di calcolo, della classe di duttilità della 
+ struttura e del grado di confinamento del nodo. Solo per i pilastri progettati 
+ è possibile capire quali nodi vengano considerati interamente confinati 
+ e quali no attivando il disegno della colorazione dei nodi selezionando 
+ &quot;Confinamento&quot; nella sezione &quot;Nodi&quot; del pannello <span class="hcp1">Colorazioni elementi</span>. In blu vengono 
+ disegnati i nodi non interamente confinati, in verde gli altri. Il grado 
+ di confinamento viene valutato come indicato al par. 7.4.4.3 del D.M. 
+ 17/01/18.</p>
+<p>Per le strutture nuove&#160;e per tutti i nodi vengono progettate e 
+ verificate le staffe secondo i disposti del par. 7.4.4.3&#160;ed eseguiti 
+ i controlli del par. 7.4.6.2.3 del D.M. 17/01/18. Le verifiche vengono 
+ eseguite distintamente per le sollecitazioni agenti nelle due direzioni 
+ degli assi locali della sezione del pilastro.</p>
+<p>La verifica di resistenza a compressione del calcestruzzo (7.4.8) è 
+ espressa nella forma:</p>
+<p class="hcp2"><span class="hcp3">V<sub>jbd</sub></span> 
+ <span style="line-height: 115%; mso-fareast-font-family: Verdana; mso-bidi-font-family: Verdana;">&#8804;</span> 
+ <span class="hcp3">V<sub>jbR</sub></span></p>
+<p class="hcp4"><span class="hcp3">in cui V<sub>jbd</sub></span> è il 
+ taglio agente nel nucleo di calcestruzzo, ed è calcolato utilizzando la 
+ (7.4.6) per i nodi interni, cioè se nella direzione considerata per la 
+ verifica la trave è passante nel nodo, viceversa utilizzando la (7.4.7). 
+ Mentre<span class="hcp3"> 
+ V<sub>jbR</sub></span> è la resistenza a compressione del nucleo di calcestruzzo:<span class="hcp3"> V<sub>jbR</sub> 
+ =</span> <span class="hcp3">&#951;&#8729;f<sub>cd</sub>&#8729;b<sub>j</sub>&#8729;h<sub>jc</sub>&#8729;radq(1-&#957;<sub>d</sub>/&#951;).</span> 
+ Il significato dei simboli utilizzati è indicato nella normativa.</p>
+<p class="hcp4">Le citate 
+ formule permettono il calcolo del taglio agente nelle strutture nuove 
+ valutandolo secondo principi di gerarchia, con un coefficiente di sovraresistenza 
+ e l'azione calcolata in funzione del momento di snervamento della trave 
+ (sforzo nelle barre pari a F<sub>yd</sub>). Per le strutture esistenti 
+ la <span class="hcp5">Circolare del D.M. 14/01/08</span> 
+ prescrive nella tabella C8.4 di usare le azioni derivanti dall'analisi. 
+ Il taglio viene quindi in tal caso calcolato considerando il momento agente 
+ sulle travi (limitato al valore del momento di snervamento) e valutando 
+ lo sforzo nelle barre pari a M/(0.9h).</p>
+<p class="hcp4">La verifica 
+ di resistenza a trazione viene eseguita controllando inizialmente che 
+ non si verifichi fessurazione diagonale nel nodo, utilizzando la (7.4.10) 
+ espressa nella forma:</p>
+<p class="hcp2"><span class="hcp3">Rfni</span> 
+ <span class="hcp6">&#8805;</span> 
+ <span class="hcp3">Afni</span></p>
+<p class="hcp7">in cui Rfni ed Afni sono la resistenza 
+ e l'azione di fessurazione sul nodo integro ed hanno il valore delle tensioni 
+ a sinistra ed a destra della<span style="mso-spacerun: yes;">&#160;</span>(7.4.10). 
+ Se la disuguaglianza in oggetto è soddisfatta la resistenza a trazione 
+ del nodo si considera verificata, altrimenti viene controllata l'integrità 
+ del nodo a seguito della fessurazione diagonale applicando le (7.4.11) 
+ e (7.4.12) espresse nella forma:</p>
+<p class="hcp2"><span class="hcp3">V<sub>jwR</sub></span> 
+ <span class="hcp6">&#8805;</span> 
+ <span class="hcp3">V<sub>jwd</sub></span></p>
+<p class="hcp7">in cui V<sub>jwR</sub> ed V<sub>jwd</sub> 
+ sono la resistenza e l'azione di trazione diagonale sul nodo ed hanno 
+ il valore delle forze a sinistra ed a destra delle (7.4.11) e (7.4.12) 
+ secondo il tipo di nodo, interno o esterno.</p>
+<p class="hcp4"><span class="hcp5">Il 
+ controllo del punto 7.4.6.2.3 viene eseguito esprimendo la (7.4.29)</span> 
+ <span class="hcp3">nella 
+ forma:</span></p>
+<p style="text-align: center;"><span class="hcp5">Rgsn</span> 
+ <span class="hcp6">&#8805;</span> 
+ <span class="hcp3">1</span></p>
+<p>in cui Rgsn = [<span class="hcp8">n<sub>st</sub>&#8729;A<sub>st</sub>/(i&#8729;b<sub>j</sub>)]/[0.05&#8729;</span><span class="hcp9">f<sub>ck</sub></span><span class="hcp8">/</span><span class="hcp9">f<sub>yk</sub></span><span class="hcp8">)]</span> è il rapporto geometrico 
+ di staffatura nodo<span class="hcp8">. Il significato 
+ dei simboli utilizzati è indicato nella normativa.</span></p>
+<p class="hcp10">Per 
+ le strutture esistenti, sia in analisi lineari che non lineari vengono 
+ effettuate le verifiche di cui al par. C8.7.2.3.5 della Circolare n. 7 
+ del 21/01/19. Si fa notare che tali verifiche sono indipendenti dalla 
+ presenza o meno della staffatura, che viene quindi trascurata anche se 
+ presente.</p>
+<p class="hcp10">Tutte 
+ le verifiche possono essere disattivate se lo si ritiene necessario o 
+ per situazioni particolari attraverso il parametro <a href="CriPil.htm#Non_effettuare_verifiche_dei_nodi_trave-pilastro"><span class="hcp1">Non progettare e verificare i nodi fra 
+ trave e pilastro</span></a> dei criteri di progetto. Eventualmente si 
+ può applicare l'indicazione del par. 7.4.4.3.1 della Circolare del D.M. 
+ 17/01/18 <span class="hcp11">attraverso <b class="hcp12">il 
+ parametro </b></span><span class="hcp1"><a href="CriPil.htm#Progetta_e_verifica_elementi_nuovi_secondo_Circolare_n_7_del_21_01_19">Progetta 
+ e verifica secondo Circolare n. 7 del 21/01/19</a></span><span class="hcp11"> 
+ d<b class="hcp12">ei criteri di progetto.</b></span></p>
+<p class="hcp10">Poiché 
+ le verifiche richiedono la valutazione dell'armatura delle travi incidenti 
+ sul nodo, occorre che le travi risultino progettate.</p>
+<p style="mso-bidi-font-weight: normal; line-height: 115%; font-family: Verdana, sans-serif; 
+	 font-size: 10pt;"><b>Note<span style="font-weight: normal;">:</span></b></p>
+<ul>
+	<li class="p-Bullet1" style="font-family: Verdana, sans-serif; font-size: 10pt;"><p 
+		 class="Bullet1">Poiché le verifiche dipendono dal numero effettivo 
+	 di staffe presenti nel nodo in corrispondenza dell'incidenza delle 
+	 travi, la progettazione &quot;esatta&quot; della staffatura necessaria 
+	 nel caso in cui sul nodo si attestino travi di altezza diversa è particolarmente 
+	 complessa. In alcuni casi potrebbe accadere che a seguito della progettazione 
+	 automatica, alcune verifiche non siano soddisfatte. In tal caso sarà 
+	 sufficiente modificare il numero di staffe in progettazione interattiva.</p></li>
+	<li class="p-Bullet1" style="font-family: Verdana, sans-serif; font-size: 10pt;"><p 
+		 class="Bullet1" style="line-height: 115%; mso-fareast-font-family: Calibri;"><span class="hcp13">Non 
+	 vengono eseguite le verifiche dei nodi di pilastri modellati con muri/elementi 
+	 bidimensionali ed utilizzo pilastro.</span></p></li>
+	<li class="p-Bullet1" style="font-family: Verdana, sans-serif; font-size: 10pt;"><p 
+		 class="Bullet1" style="line-height: 115%; mso-fareast-font-family: Calibri;"><span class="hcp13">Non 
+	 vengono eseguite le verifiche dei nodi alla base del pilastro posizionato 
+	 sopra ad un isolatore.</span></p></li>
+</ul>
+</body>
+</html>

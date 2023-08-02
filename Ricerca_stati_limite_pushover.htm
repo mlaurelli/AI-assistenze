@@ -1,0 +1,163 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Ricerca stati limite pushover</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Ricerca stati limite</h1>
+<p>Al termine dell'analisi pushover ModeSt attiva la ricerca degli stati 
+ limite in funzione della capacità locale dei singoli elementi. Questa 
+ procedura fa riferimento a quanto indicato al paragrafo C8.7.2.2.3 e successivi 
+ della Circolare esplicativa n. 7 del 21/01/19. La ricerca degli stati 
+ limite in funzione della capacità locale dei singoli elementi è una più 
+ stringente (e largamente condivisa) interpretazione della normativa. Tale 
+ procedura definisce sulla curva di capacità gli step che individuano i 
+ diversi stati limite e calcola la bilineare equivalente, e quindi gli 
+ indici di sicurezza.</p>
+<p>In base a questi punti vengono valutati gli <a href="Calcolo_indicatori_di_rischio_ca.htm">indici 
+ di sicurezza</a>, sia in termini di accelerazione (PGA) che in termini 
+ di tempi di ritorno (Tr), come richiesto da alcuni Geni Civili e come 
+ risulta in alcune circolari delle regioni (<a href="http://www.rete.toscana.it/sett/pta/sismica/interventi_ord3728/ordinanza_3728-08_all2.pdf">http://www.rete.toscana.it/sett/pta/sismica/interventi_ord3728/ordinanza_3728-08_all2.pdf</a>). 
+ L'indice di sicurezza espresso in termini di tempi di ritorno è calcolato 
+ utilizzando la seguente formula: (Trc/Trd)^0.41 dove Trc e Trd sono rispettivamente 
+ i tempi di ritorno di capacità e domanda. Limitandosi a questa fase della 
+ procedura pushover si adotta quindi lo spirito al paragrafo C7.3.4.2 della 
+ Circolare esplicativa n. 7 del 21/01/19.</p>
+<p>La normativa non aiuta però nella stesura delle procedure di calcolo 
+ necessarie e nella interpretazione di come comportarsi in casi non previsti. 
+ Un primo esempio si ha quando parla di &quot;elementi/meccanismi&quot; 
+ duttili e fragili. Se è ovvio che la rottura a taglio è un &quot;meccanismo&quot; 
+ fragile, non lo è altrettanto per la rottura a momento che se avviene 
+ lato calcestruzzo, risulta essere una rottura fragile e non duttile.</p>
+<p>Questo appare evidente anche esaminando le formule C8.7.2.7a e C8.7.2.7b 
+ che sono in funzione della curvatura a snervamento della sezione. In caso 
+ di rottura lato calcestruzzo prima che si sia raggiunto lo snervamento 
+ dell'acciaio (ad esempio pilastri molto compressi) tale formula non è 
+ applicabile e quindi ovviamente non è calcolabile la duttilità della sezione. 
+ Tale rottura si configura essere quindi una rottura &quot;fragile&quot; 
+ anche se la normativa è completamente orientata a pensare che la rottura 
+ a momento sia sempre di tipo duttile e non dia indicazioni su come comportarsi 
+ in caso contrario.</p>
+<p>Poiché ovviamente lo sforzo normale cambia durante gli step di carico, 
+ la stessa sezione può passare da un comportamento duttile ad un comportamento 
+ fragile (ad esempio pilastro che si &quot;carica&quot; durante il pushover) 
+ ma anche viceversa.</p>
+<p>A complicare ulteriormente le cose succede poi che nell'analisi a fibre, 
+ a causa del regime di calcolo in grandi spostamenti, nascano degli sforzi 
+ normali (anche notevoli) nelle travi nonostante l'ipotesi di piano rigido. 
+ La trave si trova così ad avere a volte un comportamento fragile, nonostante 
+ che tutte le teorie e le ipotesi di calcolo abbiano sempre pensato (almeno 
+ dal lato flessionale) alla trave come un elemento duttile. Non per nulla 
+ la gerarchia Taglio-Momento nelle travi serve proprio ad ottenere una 
+ rottura duttile (lato momento) invece che una rottura fragile (lato taglio). 
+ Se però anche la rottura a momento è fragile, le cose non tornano.</p>
+<p>Altro punto poco chiaro è la verifica per gli stati limite di esercizio 
+ (SLO, SLD) anche se (forse) non richiesta per edifici esistenti. A cosa 
+ serve controllare se la rotazione rispetto alla corda è maggiore dei 3/4 
+ della rotazione ultima se i limiti degli stati limite sono valutati sugli 
+ spostamenti relativi d'interpiano?. Forse questo è un limite superiore 
+ rispetto agli spostamenti relativi d'interpiano?.</p>
+<p>Ai sensi di tutte queste considerazioni, sono state implementate in 
+ ModeSt le procedure di ricerca degli stati limite in funzione delle capacità 
+ locali secondo le seguenti ipotesi ed opzioni.</p>
+<p class="Titolo7">Sforzo normale</p>
+<p>È possibile specificare 
+ in un apposito criterio (<span class="hcp1">Sforzo normale 
+ di verifica per analisi pushover</span>) se lo sforzo normale di verifica 
+ sia quello derivante dall'analisi o quello derivante dal passo di carico 
+ per soli carichi verticali. Per le travi questo elimina il problema degli 
+ sforzi normali &quot;spuri&quot; e per i pilastri accelera notevolmente 
+ le procedure di calcolo (è necessario il calcolo del diagramma momento 
+ curvatura solo una volta invece che per ogni step). La scelta dello sforzo 
+ normale per carichi verticali, se per le travi è suffragata da considerazioni 
+ ingegneristiche (i diaframmi orizzontali ne impediscono in realtà l'insorgere), 
+ per i pilastri può essere una semplificazione accettabile come indicato 
+ anche in alcuni studi e ricerche universitarie (si veda ad esempio <a 
+	 href="http://www.iitk.ac.in/nicee/wcee/article/14_08-02-0025.PDF">http://www.iitk.ac.in/nicee/wcee/article/14_08-02-0025.PDF</a>).</p>
+<p>Si fa notare inoltre che lo sforzo normale nelle travi è influenzato 
+ anche dalla appartenenza o meno dei nodi interni all'impalcato rigido, 
+ e che è inoltre possibile ridurre drasticamente l'effetto citato sbloccando 
+ la resistenza a sforzo normale del pezzo centrale dell'asta, schematizzato 
+ come elastico (utilizzare i comandi per la definizione e per l'assegnazione 
+ del vincolo all'asta). In alcuni casi si è notato che l'eccessivo sforzo 
+ normale può portare ad una incongrua rottura fragile per sforzo normale. 
+ Si consiglia quindi di adottare uno dei metodi succitati per aggirare 
+ il problema.</p>
+<p class="Titolo7">Verifiche a Taglio</p>
+<p>Nel caso di analisi pushover su strutture esistenti la ricerca degli 
+ stati limite è fortemente influenzata dalle rotture fragili a taglio. 
+ La normativa contiene probabilmente un refuso, si raccomanda di leggere 
+ attentamente quanto riportato in nota nell'introduzione delle <a href="Introduzione_verifiche_edifici_esistenti_in_ca.htm">verifiche 
+ degli edifici esistenti in c.a.</a></p>
+<p class="Titolo7">Stati limite di esercizio</p>
+<p>Con un apposito criterio (<span class="hcp1">Considera 
+ rotazione massima di esercizio per determinare SLO e SLD</span>) è possibile 
+ stabilire se lo step in cui si raggiunge la capacità di rotazione allo 
+ stato limite di esercizio sia da considerare come un limite inferiore 
+ rispetto agli stati limite individuati con lo spostamento relativo d'interpiano 
+ (in pratica lo spostamento relativo d'interpiano individua correttamente 
+ lo SL solo se anche la verifica di rotazione in esercizio è soddisfatta).</p>
+<p class="Titolo7">Luce di taglio</p>
+<p>Il calcolo della luce di taglio, che la normativa indica come calcolabile 
+ con M/V, ma come corrispondente al punto di momento nullo, presenta numerosi 
+ problemi di calcolo. Infatti l'ipotesi sottesa è che la trave sia completamente 
+ in condizioni plastiche ad entrambi gli estremi, cosa che invece non accade 
+ sempre durante i diversi step. Se si tenta di calcolarla come M/V quando 
+ la trave è ancora tutta o in parte in fase elastica, si ottengono risultati 
+ completamente sbagliati. Il problema è stato affrontato in due modi:</p>
+<ol style="list-style: decimal;">
+	<li><p class="Elenco1">Quando in una sezione il momento è inferiore 
+	 al momento di snervamento, NON vengono effettuate verifiche di rotazione 
+	 che si intendono implicitamente soddisfatte.</p></li>
+	<li><p class="Elenco1">È 
+	 possibile specificare in un criterio (<span class="hcp1">Modalità 
+	 di calcolo luce di taglio Lv</span>) se la luce di taglio debba essere 
+	 calcolata come M/V (lettera della normativa) o andando ad individuare 
+	 il punto reale di nullo del momento (spirito della normativa). In 
+	 alternativa, è possibile utilizzare L/2, semplificazione considerata 
+	 accettabile anche nei documenti citati.</p></li>
+</ol>
+<p class="Titolo7">Considerazioni finali</p>
+<p>Alla luce di quanto sopra esposto, appare ovvio che durante l'elaborazione 
+ possa risultare raggiunto lo stato limite di collasso per rottura fragile 
+ a taglio o a momento PRIMA che il relativo stato limite di vita (o addirittura 
+ di esercizio) in termini di capacità rotazionale sia stato raggiunto. 
+ In tal caso ModeSt segnala che il relativo stato limite non è individuabile, 
+ e procede nella elaborazione, considerando eventualmente SLV coincidente 
+ con SLC (caso delle rotture fragili). Si noti che la rottura fragile a 
+ momento viene definita quando, non essendo possibile calcolare la curvatura 
+ a snervamento, risulti M&gt;Mu.</p>
+<p>Si noti che nel caso di elementi parete, che devono essere però a livello 
+ di modello schematizzati come pilastri, la normativa prevede diverse formulazioni 
+ o diversi coefficienti. Il parametro <span class="hcp1"><a 
+	 href="CriPil.htm#Considera_formulazione_per_pareti">Considera formulazione 
+ per pareti</a></span> dei criteri di progetto dei pilastri consente quindi 
+ di specificare se i calcoli vadano effettuati con riferimento alle formulazioni 
+ per pareti o a quelle per pilastri.</p>
+<p>Nei calcoli è possibile inoltre adottare sia la formulazione C8.7.2.1 
+ che la formulazione C8.7.2.5. Nel primo caso è lasciata all'utente la 
+ responsabilità di adottare i coefficienti riduttivi previsti, che tengono 
+ conto di considerazioni relative alla disposizione dell'armatura che ModeSt 
+ non può controllare in automatico. Si segnala inoltre una incongruenza 
+ della normativa che per il coefficiente C8.7.2.4 prevede la possibilità 
+ che valga zero. Questo è palesemente incongruo perché porterebbe l'intera 
+ formula ad annullarsi.</p>
+<p>Le due formulazioni C8.7.2.1 e C8.7.2.5 danno generalmente risultati 
+ abbastanza simili, anche se non è possibile stabilire a priori se una 
+ sia più o meno a favore di sicurezza rispetto all'altra. Da notare che 
+ la C8.7.2.1 non richiede il calcolo della rotazione a snervamento, quindi 
+ è applicabile anche nel caso di rotture fragili a momento.</p>
+</body>
+</html>

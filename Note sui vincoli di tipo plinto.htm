@@ -1,0 +1,107 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Note sui vincoli di tipo plinto</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-style:italic; }
+span.hcp2 { font-style:normal; }
+span.hcp3 { font-style:normal;
+font-weight:bold; }
+td.hcp4 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp5 { margin-bottom:0; }
+span.hcp6 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Note sui vincoli di tipo plinto</h1>
+<p>Fra i tipi di vincolo che è possibile definire come proprietà dei nodi, 
+ è possibile definire due tipi di vincolo denominati <span class="hcp1">pseudo-plinti.</span></p>
+<p><span class="hcp2">Questo tipo di vincolo è</span> <span class="hcp3">completamente indipendente 
+ dalla presenza o meno di plinti incidenti sul nodo</span><span class="hcp2">, 
+ anche se può essere correlato con essa.</span></p>
+<p><span class="hcp2">Lo scopo del vincolo di tipo</span> 
+ <span class="hcp1">pseudo-plinto</span> <span class="hcp2">è 
+ quello di consentire il calcolo automatico delle costanti elastiche per 
+ un vincolo nodale che simula la cedevolezza di un plinto.</span></p>
+<p><span class="hcp2">In quest'ottica è possibile definire 
+ due tipi di plinto: a rotazione bloccata e a rotazione libera.</span></p>
+<p><span class="hcp2">Detti:</span></p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt;" cellspacing="0" 
+		 width="100%">
+	<tr>
+		<td style="width:9%;" class="hcp4"><p class="hcp5">Kt</p></td>
+		<td style="width:91%;" class="hcp4"><p class="hcp5">costante elastica associata al plinto;</p></td>
+	</tr>
+	<tr>
+		<td style="width:9%;" class="hcp4"><p class="hcp5">A</p></td>
+		<td style="width:91%;" class="hcp4"><p class="hcp5">area del plinto;</p></td>
+	</tr>
+	<tr>
+		<td style="width:9%;" class="hcp4"><p class="hcp5"><span class="hcp2">alfa</span></p></td>
+		<td style="width:91%;" class="hcp4"><p class="hcp5"><span class="hcp2">rotazione 
+		 del plinto rispetto all'asse globale Z;</span></p></td>
+	</tr>
+	<tr>
+		<td style="width:9%;" class="hcp4"><p class="hcp5">Jx,Jy</p></td>
+		<td style="width:91%;" class="hcp4"><p class="hcp5">momenti di inerzia intorno agli 
+		 assi del rettangolo di dimensioni <span class="hcp2">pari 
+		 alle dimensioni del plinto, ruotati in modo da riportarsi al sistema 
+		 di riferimento globale;</span></p></td>
+	</tr>
+</table>
+<p>si ha:</p>
+<p class="Titolo7"><span class="hcp3">Plinto 
+ a rotazione bloccata</span></p>
+<p><span class="hcp2">Il nodo viene vincolato bloccando 
+ gli spostamenti in direzione X, Y e intorno agli assi X, Y e Z. L'unico 
+ movimento libero resta quello in direzione Z (verticale), schematizzato 
+ con una molla con costante elastica pari a:</span></p>
+<p><span class="hcp2">EZ = A*kt</span></p>
+<p class="Titolo7"><span class="hcp3">Plinto 
+ a rotazione libera</span></p>
+<p>Il nodo viene vincolato bloccando gli spostamenti in direzione X, Y 
+ e intorno al solo asse Z. I movimenti liberi restano quello in direzione 
+ Z (verticale) e le rotazioni intorno agli assi X e Y, schematizzati con 
+ tre molle con costante elastica pari a:</p>
+<p class="Normal3"><span style="font-style: normal; font-weight: normal;">EZ 
+ = A*kt</span></p>
+<p class="Normal3">ERX = <span class="hcp2">Jx*kt</span></p>
+<p class="Normal3">ERY = <span class="hcp2">Jy*kt</span></p>
+<p>Si fa notare che il grado di rigidezza rotazionale fornita da questo 
+ tipo di vincolo è molto basso e che usualmente non si è abituati a valutare 
+ le deformazioni e le sollecitazioni indotte dalle rotazioni nodali che 
+ ne derivano. Si consiglia di usare i plinti a rotazione libera ad esempio 
+ solo per fondazioni con plinti e cordoli di collegamento sufficientemente 
+ rigidi da poter assorbire le sollecitazioni indotte dalla sovrastruttura.</p>
+<p class="Titolo7"><span class="hcp2">V</span>incolo valutato 
+ in funzione della stratigrafia</p>
+<p>È possibile valutare automaticamente le costanti elastiche del vincolo 
+ nodale in funzione della stratigrafia di riferimento definita nel modello 
+ ed in funzione della geometria del plinto associato al nodo. Questo tipo 
+ di vincolo, a differenza del vincolo pseudo-plinto, è strettamente dipendente 
+ dalla presenza o meno di plinti incidenti sul nodo e permette di estendere 
+ i concetti espressi in questo paragrafo ai vincoli rappresentativi delle 
+ fondazioni su pali.</p>
+<p style="text-align: left; margin-bottom: 0;"><span class="hcp6">Argomenti 
+ correlati:</span> <span class="hcp6"><a href="Fondazioni%20su%20plinti.htm">Fondazioni 
+ su plinti</a></span>, <span class="hcp6"><a href="../Manuale_geotecnica/Vincoli_valutati_in_funzione_della_stratigrafia.htm">Vincoli 
+ valutati in funzione della stratigrafia</a></span></p>
+</body>
+</html>

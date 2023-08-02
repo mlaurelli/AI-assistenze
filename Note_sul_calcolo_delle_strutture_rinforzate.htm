@@ -1,0 +1,58 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Note sul calcolo delle strutture rinforzate</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Note sul calcolo delle strutture rinforzate</h1>
+<p>Nel caso di analisi statica e sismica statica o dinamica lineare si 
+ considerando per i pilastri sia l'aumento del peso sia della rigidezza 
+ del rinforzo dell'incamiciatura in c.a.</p>
+<p>Nel caso di analisi sismica statica non lineare (pushover) la fase di 
+ calcolo viene eseguita trascurando i rinforzi tranne quelli dei pilastri 
+ realizzati con incamiciature in c.a. (si veda a proposito quanto indicato 
+ in <a href="Linee_guida_sulla_modellazione_e_la_verifica.htm" style="font-weight: bold;">Linee 
+ guida sulla modellazione e la verifica</a>), ma la ricerca degli stati 
+ limite lungo la curva di pushover viene effettuata tenendo conto anche 
+ della presenza o meno di tali rinforzi. Poiché tale ricerca dipende anche 
+ ad esempio dalla staffatura negli elementi (l'analisi globale dipende 
+ solo dalle barre longitudinali) o dall'effetto confinamento (sempre trascurato 
+ nell'analisi globale), il programma consente, dopo aver modificato le 
+ armature o introdotto i rinforzi, di eseguire nuovamente la ricerca degli 
+ stati limite cliccando nel gruppo <span class="hcp1">Verifica</span> 
+ della scheda <span class="hcp1">Post-Processor</span> su<span class="hcp1"> Cemento</span> <img src="../Icone/32/cemento32.png" alt="" border="1" class="hcp2">&#160;e 
+ poi su <span class="hcp1">Ricerca stati limite pushover 
+ c.a.</span> <img src="../Icone/16/ricercaslpca.png" alt="" border="1" class="hcp2">. 
+ È responsabilità del progettista capire se sia sufficiente la sola nuova 
+ ricerca degli stati limite o se vada effettuata nuovamente l'analisi globale 
+ della struttura, obbligatoria a seguito della modifica delle barre d'armatura 
+ longitudinale o del rinforzo dei pilastri con incamiciature in c.a.</p>
+<p>Si fa notare che (nel caso di analisi pushover) se l'effetto confinamento 
+ nei pilastri fa in genere aumentare la duttilità della struttura, mentre 
+ il rinforzo a taglio delle travi sposta i problemi di rottura globale 
+ dal lato fragile al lato duttile, risulta generalmente poco efficace il 
+ rinforzo a flessione sia dei pilastri che delle travi. L'implementazione 
+ di tali verifiche in modo analitico conferma quindi indirettamente quanto 
+ indicato dalla normativa come considerazione generale, ossia che gli interventi 
+ di rinforzo aumentano in genere la duttilità, ma non la resistenza della 
+ struttura. Con analisi statiche<span style="mso-spacerun: yes;">&#160;</span>lineari 
+ l'effetto dei rinforzi ovviamente è finalizzato all'incremento di resistenza 
+ specifico richiesto (taglio o momento).</p>
+<p>&#160;</p>
+</body>
+</html>

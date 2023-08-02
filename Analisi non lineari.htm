@@ -1,0 +1,88 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Analisi non lineari</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Analisi non lineari</h1>
+<p>Quando la risposta di una struttura non è una funzione lineare dei carichi 
+ applicati, o si pensa che possa non esserlo, è necessaria un'analisi non 
+ lineare.</p>
+<p>Il comportamento non lineare di una struttura può essere dovuto a non 
+ linearità geometriche, di materiale o di condizioni al contorno o ad una 
+ combinazione di tutti questi ed altri fattori.</p>
+<p>Fra le non linearità geometriche citiamo ad esempio la dipendenza degli 
+ effetti dalle deformazioni, detta in genere effetto P-delta, o l'effetto 
+ delle grandi deformazioni, il cambiamento della risposta strutturale dovuto 
+ al cambiamento della geometria e all'orientamento degli elementi strutturali.</p>
+<p>I materiali possono a loro volta avere un comportamento elasto-plastico 
+ o fragile, ed i vincoli esterni o interni posso rappresentare problemi 
+ di contatto, viscosità, ecc.</p>
+<p>In una analisi non lineare il principio di sovrapposizione degli effetti 
+ non è applicabile. In altre parole, il risultato di differenti situazioni 
+ di carico non può esser scalato, fattorizzato o combinato come si fa normalmente 
+ nelle analisi lineari.</p>
+<p>Inoltre, nel caso di un problema non lineare, può succedere che ad una 
+ specifica situazione di carico corrisponda più di una soluzione, poiché 
+ il risultato dipende dalla &quot;storia&quot; del carico. In altre parole 
+ una diversa modalità di applicazione dello stesso carico può portare a 
+ differenti soluzioni. Quindi, quando si raggiunge una soluzione, questa 
+ potrebbe non essere la soluzione che ci si aspettava.</p>
+<p>Una conoscenza profonda della natura del problema è spesso necessaria 
+ per ottenere una soluzione che sia fisicamente significativa. Il livello 
+ di preparazione e l'esperienza dell'autore del modello conta quanto la 
+ qualità del programma utilizzato e delle procedure di calcolo.</p>
+<p>La tecnica di base per risolvere un problema non lineare è quella di 
+ linearizzare le equazioni che lo descrivono esprimendo il vettore totale 
+ delle forze per gli elementi come una funzione lineare non tanto dello 
+ spostamento finale dei nodi, ma come una funzione lineare dell'incremento 
+ degli spostamenti nodali. Viene quindi effettuata una analisi lineare 
+ per passi successivi, in cui ogni volta viene ricalcolata la matrice relativa 
+ al corrente stato di carico e deformazione, denominata generalmente come 
+ &quot;matrice tangente&quot;. Il vettore spostamento viene poi rivalutato 
+ usando la soluzione relativa a questa nuova matrice. Questo processo viene 
+ ripetuto fino a quando la condizione di equilibrio è soddisfatta o fino 
+ a quando successive iterazioni non portano a significative modifiche nella 
+ matrice di calcolo.</p>
+<p>Questo metodo richiede quindi che il carico esterno totale venga applicato 
+ gradualmente in un numero di incrementi sufficientemente piccoli in modo 
+ che la risposta del sistema possa essere considerata lineare nell'intervallo 
+ fra due incrementi di carico.</p>
+<p>La procedura di calcolo si considera terminata quando si raggiunge il 
+ carico finale e la deformazione totale della struttura è calcolata come 
+ la somma delle deformazioni di ogni incremento di carico o, a seconda 
+ dei metodi numerici utilizzati, come deformazione dell'ultimo passo di 
+ carico.</p>
+<p>ModeSt permette di indicare la sequenza logica di crescita dei carichi, 
+ lasciando normalmente al solutore il compito di suddividere in sotto-passi 
+ più piccoli la discretizzazione di crescita dei carichi. Restano comunque 
+ a disposizione dell'utente delle modalità per descrivere la storia di 
+ crescita di carichi sia in modo uniforme ma semplicemente più definito, 
+ che in modo completamente personalizzato. Si veda al proposito il capitolo 
+ <span class="hcp1"><a href="Tabelle%20delle%20storie%20di%20carico.htm">Tabelle 
+ delle storie di carico</a></span>.</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Nota</span>: 
+ in alcuni casi, alcuni controlli di normativa (spostamenti ai sensi del 
+ D.M. 17/01/18, spostamenti relativi ai sensi del D.M. 16/01/96) prevedono 
+ l'amplificazione dei soli spostamenti dovuti alle azioni sismiche, mentre 
+ le sollecitazioni sono quelle derivanti dal calcolo. In caso di analisi 
+ non lineare, non è ovviamente possibile separare i contributi dei diversi 
+ carichi e quindi tali amplificazioni non vengono effettuate.</p>
+</body>
+</html>

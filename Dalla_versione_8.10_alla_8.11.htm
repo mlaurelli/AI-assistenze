@@ -1,0 +1,117 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.10 alla 8.11</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+a.hcp1 { font-family:Verdana, sans-serif; }
+a.hcp2 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.10 alla 8.11</h1>
+<p>Generazione automatica di due puntoni diagonali equivalenti ad un pannello 
+ di tamponatura per tenere in conto dell'interazione con il resto della 
+ struttura. Questa schematizzazione è ovviamente opzionale e comporta numerose 
+ conseguenze. Si consiglia vivamente di leggere quanto riportato in <u 
+	 style="text-decoration: none; "><span style="font-weight: bold;"><a href="Puntoni_equivalenti.htm" class="hcp1">Puntoni 
+ equivalenti</a></span></u>.</p>
+<p>Inserimento di una o più aperture all'interno degli elementi bidimensionali. 
+ La meshatura dell'elemento terrà in conto della presenza delle aperture. 
+ Le aperture vengono esportate in IFC e importate da Revit (si veda <a href="Elementi_importabili_Revit_2022.htm" style="font-weight: bold; font-family: Verdana, sans-serif;">Elementi 
+ esportabili</a>).</p>
+<p>Completamente rinnovati i menu contestuali che appaiono col tasto destro 
+ sull'albero del progetto e nelle finestre di modellazione (sia sullo sfondo 
+ che sugli elementi). Oltre al menu contestuale, appare ora anche la cosiddetta 
+ <a href="Mini_barra_degli_strumenti.htm" class="hcp1">mini 
+ barra degli strumenti</a> che, come ad esempio in Word, raggruppa le operazioni 
+ principali eseguibili e che resta attiva finché il cursore del mouse è 
+ nelle vicinanze. In modellazione sono stati aggiunti dei comandi rapidi 
+ per cambiare i punti di vista della struttura facendo clic col <b><span 
+	 style="font-weight: normal;">tasto destro sullo sfondo della finestra</span></b>.</p>
+<p>Migliorata la procedura di integrazione delle tensioni sul piano e su 
+ linea nel caso in cui non intersechi gli elementi, questo consente di 
+ valutare le sollecitazioni in modo molto più preciso e controllabile manualmente. 
+ La procedura richiede la possibilità, durante il calcolo della struttura, 
+ di salvare anche le forze di equilibrio agenti sugli elementi bidimensionali. 
+ Questa possibilità è supportata da tutte le versioni del solutore SAP2000 
+ e dalla versione 2016 di Xfinest.</p>
+<p>Negli integrali sul piano viene ora trascurata la posizione dei bidimensionali 
+ in termini di filo fisso e scostamento dal filo fisso per determinare 
+ il baricentro di integrazione e la posizione delle forze, che restano 
+ concettualmente in corrispondenza dei nodi, sia che derivino dal calcolo 
+ che dall'integrazione delle tensioni. Per entrambi questi motivi quindi 
+ il calcolo delle sollecitazioni integrate e la riverifica di elementi 
+ costituiti da bidimensionali (pareti, nuclei, murature) potrà presentare 
+ delle differenze rispetto alle versioni precedenti.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Cambio vista e zoom in animazione, 
+	 per capire meglio in che punto della struttura si sta puntando lo 
+	 sguardo. Tale opzione è disattivabile nella scheda &quot;Aspetto&quot; 
+	 delle <a href="Opzioni.htm" class="hcp1">opzioni</a>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nella relazione di calcolo 
+	 è stata aggiunta la tabella riassuntiva dei cinematismi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nella relazione di calcolo 
+	 sintetica sono stati aggiunte le caratteristiche di resistenza dei 
+	 materiali in muratura, la tabella riassuntiva delle verifiche in cui 
+	 vengono riportate le minime sicurezze di tutti gli elementi, suddivise 
+	 per tipo di verifica (flessione, taglio, ecc.) e la minima sicurezza 
+	 di tutti gli elementi progettati e/o verificati (minimo dei minimi). 
+	 Questi dati agevolano la compilazione delle schede dell'Allegato B 
+	 della Regione Lazio e del Modulo 12 della Regione Lombardia.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Sono state introdotte nuove 
+	 opzioni per il calcolo dei cedimenti e delle costanti di sottofondo. 
+	 È possibile adesso indicare un particolare valore della pressione 
+	 di esercizio per valutare la costante di sottofondo (<a href="../Manuale_geotecnica/Criteri_generali_fondazioni_superficiali.htm#Calcola_costante_di_sottofondo_con_pressioni_di_esercizio" class="hcp2">Calcola 
+	 costante di sottofondo con pressioni di esercizio</a>), considerare 
+	 le pressioni responsabili del cedimento al netto delle pressioni litostatiche 
+	 (<a href="../Manuale_geotecnica/Criteri_generali_fondazioni_superficiali.htm#Considera_pressioni_di_esercizio_al_netto_delle_tensioni_litostatiche" class="hcp2">Considera pressioni di esercizio al 
+	 netto delle tensioni litostatiche</a>) e porre un limite superiore 
+	 al valore della costante di sottofondo (<a href="../Manuale_geotecnica/Criteri_generali_fondazioni_superficiali.htm#Limita_costante_di_sottofondo_ad_un_valore" class="hcp2">Limita 
+	 costante di sottofondo ad un valore</a>).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nel caso di terreni coesivi, 
+	 per il calcolo dei cedimenti col metodo edometrico, è possibile indicare 
+	 gli indici di compressione e ricompressione edometrica (<a href="../Manuale_geotecnica/Criteri_specifici_caratterizzazione_strati.htm#Definizione_indici_compressibilita_edometrica_per_terreni_coesivi" class="hcp2">Definizione indici compressibilità edometrica</a>), 
+	 oltreché il modulo edometrico come nelle precedenti versioni. È possibile 
+	 inoltre considerare un valore costante per la differenza fra la pressione 
+	 di sovraconsolidazione e la pressione verticale efficace (<a href="../Manuale_geotecnica/Criteri_specifici_caratterizzazione_strati.htm#Considera_incremento_preconsolidazione_costante" class="hcp2">Considera incremento preconsolidazione 
+	 costante</a>), oltreché un valore costante del grado di sovraconsolidazione 
+	 come nelle precedenti versioni.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">È possibile adesso calcolare 
+	 la coesione non drenata anche attraverso un moltiplicatore della pressione 
+	 verticale efficace (<a href="../Manuale_geotecnica/Criteri_specifici_caratterizzazione_strati.htm#Calcolata_da_sv0_con_moltiplicatore" class="hcp2">Calcolata da <span 
+	 style="font-family: Symbol, serif; font-weight: bold;">s</span>'v0 
+	 con moltiplicatore</a>).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nel calcolo dei pali è stata 
+	 introdotta la possibilità di considerare o meno il peso del palo nelle 
+	 verifiche di capacità portante per carichi verticali di compressione 
+	 (<a href="../Manuale_geotecnica/Criteri_generali_fondazioni_profonde.htm#Considera_peso_del_palo" class="hcp2">Considera peso del palo</a>), e di 
+	 specificare se il fattore di correlazione vada preso in considerazione 
+	 per il calcolo della resistenza caratteristica per carichi orizzontali 
+	 (<a href="../Manuale_geotecnica/Criteri_generali_fondazioni_profonde.htm#Considera_fattori_di_correlazione_anche_per_carichi_orizzontali" class="hcp2">Considera fattori di correlazione anche 
+	 per carichi</a>).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nel calcolo dei carichi e 
+	 nella verifica delle tamponature, se di forma quadrangolare, vengono 
+	 tenuti in conto le dimensioni degli elementi soprastanti e sottostanti 
+	 per determinare il reale ingombro della tamponatura.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nelle verifiche degli elementi 
+	 in muratura, il controllo sul coefficiente di riduzione per le combinazioni 
+	 delle condizioni di carico elementari sismiche (Trascura disposti 
+	 del cap. 4.5.6.2 per CC sismiche), è stato completamente eliminato 
+	 per le verifiche nel piano e per le verifiche ortogonali al piano 
+	 solo per le combinazioni delle condizioni di carico elementari sismiche.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nel calcolo degli indici di 
+	 sicurezza da analisi lineare è possibile selezionare anche eventuali 
+	 sezioni progettate con sollecitazioni automatiche.</p></li>
+</ul>
+</body>
+</html>

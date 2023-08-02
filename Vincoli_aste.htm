@@ -1,0 +1,61 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Vincoli aste</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-style:italic; }
+span.hcp2 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Vincoli aste</h1>
+<p>È possibile definire o modificare i tipi di vincoli interni delle aste. 
+ Il vincolo definito o modificato verrà automaticamente reso corrente se 
+ così è stato specificato nelle <a href="Opzioni.htm" style="font-weight: bold;">Opzioni</a>.</p>
+<p>Dal menu <span class="hcp1">Archivi</span> <font style="font-family: Wingdings;" 
+	 face="Wingdings">à</font> <span class="hcp1">Carica</span> 
+ è possibile definire il vincolo asta prelevandolo dall'archivio fornito 
+ con il programma. L'archivio è comunque personalizzabile come indicato 
+ nel paragrafo <span class="hcp2"><a href="Archivi%20dati.htm">Archivi 
+ dati</a></span>.</p>
+<p>Un vincolo definito ma non utilizzato nel modello può essere eliminato 
+ selezionando la corrispondente riga e premendo sul bottone &quot;Elimina&quot;.</p>
+<p>Si può essere associare anche un commento che se non specificato viene 
+ generato automaticamente in modo da riportare in breve le caratteristiche 
+ della proprietà stessa.</p>
+<p>I gradi di libertà sono espressi nel riferimento locale dell'asta.</p>
+<p>Si possono definire degli incastri parziali all'estremità delle aste 
+ specificando per My e Mz valori compresi tra 0 e 1. Specificando ad esempio 
+ 0.5 si ha una riduzione del 50% del momento di incastro. Se l'elemento 
+ è costituito da più aste occorre dividere il valore dell'incastro parziale 
+ per un coefficiente dato dal rapporto tra la lunghezza dell'elemento e 
+ la lunghezza dell'asta a cui è assegnato l'incastro parziale. Gli incastri 
+ parziali non sono gestiti da versioni di Xfinest precedenti alla 2014.</p>
+<p>Si possono definire delle cerniere plastiche a flessione e a taglio 
+ le cui caratteristiche sono automaticamente determinate dal programma 
+ come indicato nel paragrafo <span class="hcp2"><a href="Cerniere_plastiche.htm">Cerniere 
+ plastiche</a></span>.</p>
+<p>Se il tipo di vincolo è su suolo elastico alla Winkler è possibile valutare 
+ in modo automatico la costante di sottofondo in funzione della stratigrafia, 
+ si veda <a href="../Manuale_geotecnica/Vincoli_valutati_in_funzione_della_stratigrafia.htm">Vincoli 
+ valutati in funzione della stratigrafia</a>.</p>
+<p>Nel caso in cui nella struttura esista almeno un'asta con vincolo di 
+ tipo biella solo resistente a compressione o a trazione, sarà possibile 
+ effettuare solo un'analisi di tipo non lineare.</p>
+<p>ModeSt non è in grado di individuare tutte le possibili labilità che 
+ possono nascere introducendo svincolamenti incorretti.</p>
+<p><span class="hcp2">Utilizzo da linea di comando</span>: 
+ <span class="hcp2"><a href="../Comandi/DEVA.htm">DEVA</a></span> 
+ (Definisci vincoli interni asta), <span style="font-weight: bold; text-decoration: underline; "><a 
+	 href="../Comandi/_VA.htm">?VA</a></span> (Informazioni vincoli aste).</p>
+</body>
+</html>

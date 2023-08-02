@@ -1,0 +1,90 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Verifica interattiva sezioni pannelli</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+a.hcp3 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Verifica interattiva sezioni pannelli</h1>
+<p>Nell'ambiente di progettazione interattiva di sezioni pannelli X-LAM 
+ è possibile eseguire le verifiche di sezioni di pannelli X-LAM appartenenti 
+ a qualsiasi elemento della struttura. Alla progettazione interattiva si 
+ accede cliccando nel gruppo <span class="hcp1">Progettazione</span> 
+ della scheda <span class="hcp1">Post-Processor</span> su 
+ <span class="hcp1">Interattiva</span> <img src="../Icone/32/progint32.png" alt="" border="1" class="hcp2"> 
+ e poi su <span class="hcp1">Sollecitazioni integratori longitudinali&#160;<img src="../Icone/16/ALB_SEZIONEI.png" alt="" border="1" class="hcp2"></span>, viene 
+ richiesto di selezionare un integratore. Le sollecitazioni sono determinate 
+ integrando le sollecitazioni o le tensioni degli elementi bidimensionali&#160;(si 
+ veda <a href="Tecniche_di_integrazione.htm" class="hcp3">Tecniche 
+ di integrazione</a>).</p>
+<p>La sezione viene inizialmente creata ipotizzando le fibre longitudinali 
+ del pannello X-LAM orientate ortogonalmente alla sezione, con il comando 
+ <span class="hcp1">Inverti orientamento <img src="../Icone/16/invertidirstra.png" alt="" border="1" class="hcp2"></span> 
+ è comunque possibile invertire l'orientamento degli strati del pannello.</p>
+<p>Le verifiche vengono poi effettuate analogamente a quelle dei pannelli 
+ come indicato in <a href="Verifiche_effettuate_xlam.htm" class="hcp3">Verifiche 
+ effettuate</a>.</p>
+<p>Si riportano di seguito i comandi principali raggruppati per funzionalità:</p>
+<h2 class="Titolo5"><a name="Sezioni_Generali" id="Sezioni_Generali"></a>Generali</h2>
+<p><span class="hcp1"><a name="CALC" id="CALC"></a>Ricalcola 
+ <img src="../Icone/16/calc.png" alt="" border="1" class="hcp2"></span> 
+ effettua le verifiche segnalando le eventuali anomalie. È possibile impostare 
+ la modalità di ricalcolo automatica o manuale selezionando le relative 
+ opzioni del menu che compare cliccando sulla freccia a destra del comando, 
+ per maggiori informazioni si veda il capitolo <span class="hcp1"><a 
+	 href="Modalita_di%20ricalcolo.htm">Modalità di ricalcolo e verifica</a></span>.</p>
+<p><span class="hcp1"><a name="_REL"></a>Anteprima rel. <img src="../Icone/16/anteprimarel.png" alt="" border="1" class="hcp2"></span> visualizza 
+ l'anteprima della relazione di calcolo. È possibile visualizzare una relazione 
+ in forma sintetica oppure estesa selezionando le relative opzioni del 
+ menu che compare cliccando sulla freccia a destra del comando. È possibile 
+ specificare se creare la relazione con il sistema tecnico o con l'unità 
+ di misura corrente utilizzando l'opzione &quot;Usa sistema tecnico&quot; 
+ del menu che compare cliccando sulla freccia a destra del comando.</p>
+<p><span class="hcp1"><a name="INVE" id="INVE"></a>Inverti 
+ orientamento <img src="../Icone/16/invertidirstra.png" alt="" border="1" class="hcp2"></span> 
+ inverte l'orientamento degli strati del pannello nella verifica della 
+ sezione. La sezione viene inizialmente creata ipotizzando le fibre longitudinali 
+ del pannello X-LAM orientate ortogonalmente alla sezione.</p>
+<p><span class="hcp1">Mod. criteri <img src="../Icone/16/modcriteri.png" alt="" border="1" class="hcp2"></span> 
+ modifica i criteri di progetto posizionandosi automaticamente sul criterio 
+ specifico assegnato al tipo di bidimensionale.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/CALC.htm">CALC</a></span>&#160;(Ricalcola), 
+ <span class="hcp1"><a href="../Comandi/ELAR.htm">ELAR</a></span>&#160;(Elimina 
+ progettazione), <span class="hcp1"><a href="../Comandi/_REL.htm">?REL</a></span>&#160;(Anteprima 
+ relazione), <span class="hcp1"><a href="../Comandi/INVE.htm">INVE</a></span>&#160;(Inverte 
+ orientamento strati).</p>
+<h2 class="Titolo5"><a name="Nuclei_Risultati_num" id="Nuclei_Risultati_num"></a>Risultati 
+ num.</h2>
+<p><span class="hcp1"><a name="DESL_R"></a>Sollecitazioni 
+ <img src="../Icone/16/NSLN.png" alt="" border="1" class="hcp2"></span> 
+ visualizza le informazioni sui valori delle sollecitazioni nella sezione.</p>
+<h2 class="Titolo5"><a name="Sezioni_Diagrammi" id="Sezioni_Diagrammi"></a>Diagrammi</h2>
+<p><span class="hcp1"><a name="DTAU" id="DTAU"></a>Tau <img src="../Icone/16/dtausez.png" alt="" border="1" class="hcp2"></span> attiva 
+ o disattiva il disegno della tensione tangenziale.</p>
+<p><span class="hcp1"><a name="DSC" id="DSC"></a>Sigma <img src="../Icone/16/dsc.png" alt="" border="1" class="hcp2"></span> attiva 
+ o disattiva il disegno della tensione di compressione o trazione.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DTAU.htm">DTAU</a></span>&#160;(Disegna 
+ tau),<span class="hcp1">&#160;</span><span class="hcp1"><a 
+	 href="../Comandi/DSC.htm">DSC</a></span>&#160;(Disegna sigma).</p>
+<h2 class="Titolo5"><a name="Sezioni_Disegno" id="Sezioni_Disegno"></a>Disegno</h2>
+<p><span class="hcp1">Opzioni&#160;<img src="../Icone/16/opzioni.png" alt="" border="1" class="hcp2"></span> 
+ modifica le opzioni di disegno.</p>
+</body>
+</html>

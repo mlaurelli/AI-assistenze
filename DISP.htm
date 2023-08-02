@@ -1,0 +1,563 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>DISP - Disposizione disegni</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+span.hcp4 { font-style:italic; }
+td.hcp5 { padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp6 { text-align:left;
+margin-top:0pt;
+margin-bottom:0pt; }
+p.hcp7 { text-align:left;
+margin-bottom:0; }
+p.hcp8 { text-align:center;
+border:solid;
+padding:2.0pt;
+margin-bottom:0; }
+p.hcp9 { text-align:center;
+margin-bottom:0; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">DISP - Disposizione disegni</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Progettazione interattiva solette/platee</p>
+</td>
+<td style="width:28%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p>
+</td>
+</tr>
+</table>
+<p>Modifica la disposizione del disegno principale e dei disegni secondari d'armatura.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">DISP</span> <span class="hcp4"><font color="#0000FF">tipo</font></span></p>
+<p class="Normal2"><span class="hcp4"><font color="#0000FF">tipo</font></span> sono ammessi i seguenti tipi di disposizione:</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt;" cellspacing="0" width="100%">
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp3">1</span></p>
+</td>
+<td style="width:94%;" class="hcp5">
+<p class="ParametriComando" style="margin-top: 0pt; margin-bottom: 0pt;">Viene creato un unico disegno contenente le specifiche di&#160;tutte le armature (diffuse e concentrate) in direzione X&#160;e Y, superiore e inferiore.</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp3">2A</span></p>
+</td>
+<td style="width:94%;" class="hcp5">
+<p class="ParametriComando" style="margin-top: 0pt; margin-bottom: 0pt;">Vengono creati due schemi d'armatura affiancati, il primo con le armature superiori in direzione X e Y, il secondo&#160;con le armature inferiori in direzione X e Y.</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp3">2B</span></p>
+</td>
+<td style="width:94%;" class="hcp5">
+<p class="ParametriComando" style="margin-top: 0pt; margin-bottom: 0pt;">Vengono creati due schemi d'armatura uno sotto l'altro,&#160;il primo con le armature superiori in direzione X e Y, il&#160;secondo con le armature inferiori in direzione X e Y.</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp3">2C</span></p>
+</td>
+<td style="width:94%;" class="hcp5">
+<p class="ParametriComando" style="margin-top: 0pt; margin-bottom: 0pt;">Vengono creati due schemi d'armatura affiancati, il primo&#160;con le armature in direzione X superiori e inferiori, il&#160;secondo con le armature in direzione Y superiori e inferiori.</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp3">2D</span></p>
+</td>
+<td style="width:94%;" class="hcp5">
+<p class="ParametriComando" style="margin-top: 0pt; margin-bottom: 0pt;">Vengono creati due schemi d'armatura uno sotto l'altro,&#160;il primo con le armature in direzione X superiori e inferiori, il secondo con le armature in direzione Y superiori e inferiori.</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp3">3A</span></p>
+</td>
+<td style="width:94%;" class="hcp5">
+<p class="ParametriComando" style="margin-top: 0pt; margin-bottom: 0pt;">Vengono creati quattro schemi d'armatura: sopra i due&#160;schemi con le armature in direzione X superiore e inferiore, sotto i due schemi con le armature in direzione Y&#160;superiore e inferiore.</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp3">3B</span></p>
+</td>
+<td style="width:94%;" class="hcp5">
+<p class="ParametriComando" style="margin-top: 0pt; margin-bottom: 0pt;">Vengono creati quattro schemi d'armatura: sopra i due&#160;schemi con le armature superiori in direzione X e Y, sotto i due schemi con le armature inferiori in direzione X&#160;e Y.</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp3">4</span></p>
+</td>
+<td style="width:94%;" class="hcp5">
+<p class="ParametriComando" style="margin-top: 0pt; margin-bottom: 0pt;">Vengono creati quattro schemi d'armatura affiancati, ognuno per le diverse direzioni e posizioni d'armatura.</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp3">5</span></p>
+</td>
+<td style="width:94%;" class="hcp5">
+<p class="ParametriComando" style="margin-top: 0pt; margin-bottom: 0pt;">Vengono creati quattro schemi d'armatura uno sotto l'altro, ognuno per le diverse direzioni e posizioni d'armatura.</p>
+</td>
+</tr>
+</table>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Gli schemi seguenti spiegano più concisamente quanto sopra esposto: S indica armatura superiore, I indica armatura inferiore, X e Y indicano le direzioni d'armatura.</p>
+</li>
+</ul>
+<table wrapperparagraphselector="P.IndentBullet1" cellspacing="0" width="290">
+<tr>
+<td style="width:12%;" class="hcp1">
+<p class="hcp7"><span class="hcp3">1</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">SIXY</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp9">&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p class="hcp7"><span class="hcp3">2A</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">SXY</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">IXY</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp9">&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p class="hcp7"><span class="hcp3">2B</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">SXY</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">IXY</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp9">&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p class="hcp7"><span class="hcp3">2C</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">SIX</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">SIY</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp9">&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p class="hcp7"><span class="hcp3">2D</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">SIX</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">SIY</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp9">&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p class="hcp7"><span class="hcp3">3A</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">SX</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">IX</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">SY</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">IY</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp9">&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p class="hcp7"><span class="hcp3">3B</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">SX</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">SY</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">IX</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">IY</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp9">&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p class="hcp7"><span class="hcp3">4</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">SX</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">IX</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">SY</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">IY</span></p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp9">&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p class="hcp7"><span class="hcp3">5</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">SX</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">IX</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">SY</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+<tr>
+<td style="width:12%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p class="hcp8"><span class="hcp3">IY</span></p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+<td style="width:24%;" class="hcp1">
+<p>&#160;</p>
+</td>
+</tr>
+</table>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Eventuali particolari aggiunti con comandi di Ms-Cad in zone di disegno diverse dalla posizione di quello principale mantengono la loro posizione.</p>
+</li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+//]]>
+</script>
+</body>
+</html>

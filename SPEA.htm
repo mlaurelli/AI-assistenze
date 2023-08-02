@@ -1,0 +1,71 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>SPEA - Spezza asta</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+p.hcp3 { text-align:justify; }
+span.hcp4 { font-weight:bold; }
+span.hcp5 { font-style:italic; }
+span.hcp6 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">SPEA - Spezza asta</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p>
+</td>
+<td style="width:29%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p>
+</td>
+</tr>
+</table>
+<p class="hcp3">Il comando permette di dividere un'asta in due o più parti.</p>
+<p class="hcp3">Sintassi del comando:</p>
+<p class="Normal3" style="text-align: justify;"><span class="hcp4">SPEA</span> <font color="#0000FF"><span class="hcp5">Dimensione</span></font> <font color="#0000FF"><span class="hcp5">suddivisioni</span></font></p>
+<p class="Normal2" style="font-weight: bold; text-decoration: underline;"><a href="javascript:void(0);" id="a1" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/SetAste.htm');return false;"><span style="text-decoration: underline;">Selezionare le aste</span></a></p>
+<p class="hcp3">Occorre fornire la dimensione indicativa delle parti in cui dividere l'asta. ModeSt calcola automaticamente il numero di parti risultante. Specificando un numero negativo si intende il numero esatto di parti in cui dividere l'asta indipendentemente dalla loro dimensione.</p>
+<p class="hcp3">Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">I nuovi nodi creati automaticamente dal comando <span class="hcp4">SPEA</span> vengono numerati con una numerazione negativa e non vengono normalmente visualizzati <span class="hcp6"><a href="DNAG.htm">DNAG</a></span>; in realtà questi sono nodi a tutti gli effetti che possono essere cancellati, spostati, ecc.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Gli eventuali carichi agenti sull'asta vengono suddivisi e trasferiti alle nuove aste.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Gli eventuali solai che interessavano i nodi dell'asta vengono ad interessare anche i nuovi nodi.</p>
+</li>
+</ul>
+<p class="hcp3"><span class="hcp4">Comandi correlati:</span> <span class="hcp6"><a href="AGGA.htm">AGGA</a></span> aggiunge un'asta. <span class="hcp6"><a href="ORDA.htm">ORDA</a></span> ordisce le aste.</p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+        FilePopupInit('a1');
+//]]>
+</script>
+</body>
+</html>

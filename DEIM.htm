@@ -1,0 +1,95 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>DEIM - Definisci impalcati</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+td.hcp2 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp3 { margin-bottom:0; }
+span.hcp4 { font-style:italic; }
+td.hcp5 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp6 { text-align:left;
+margin-bottom:0; }
+p.hcp7 { text-align:justify;
+margin-bottom:0; }
+span.hcp8 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando"><span class="hcp1">DEIM - Definisci impalcati</span></p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp2">
+<p class="hcp3"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p>
+</td>
+<td style="width:28%;" class="hcp2">
+<p class="hcp3"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p>
+</td>
+</tr>
+</table>
+<p>Definisce il numero e le quote degli impalcati (orizzontamenti della struttura ed eventualmente piani infinitamente rigidi).</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp1">DEIM</span> <span class="hcp4"><font color="#0000FF">Numero degli impalcati</font></span> / <span class="hcp4"><font color="#0000FF">Quota dell'impalcato 1...n</font></span></p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt;" cellspacing="0" width="100%">
+<tr>
+<td style="width:27%;" class="hcp5">
+<p class="hcp6"><span class="hcp4"><font color="#0000FF">Numero degli impalcati</font></span></p>
+</td>
+<td style="width:73%;" class="hcp5">
+<p class="hcp7">è il numero degli impalcati, non contando il piano a quota 0.00</p>
+</td>
+</tr>
+<tr>
+<td style="width:27%;" class="hcp5">
+<p class="hcp6"><span class="hcp4"><font color="#0000FF">Quota dell'impalcato 1...n</font></span></p>
+</td>
+<td style="width:73%;" class="hcp5">
+<p class="hcp7">va ripetuto tante volte quanti sono gli impalcati da definire e rappresenta la quota dell'impalcato (il comando richiede automaticamente tanti valori di quota in funzione di numero).</p>
+</td>
+</tr>
+</table>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">È possibile definire o ridefinire il numero e le quote degli impalcati di una struttura semplicemente cliccando sui nodi alle quote desiderate.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">È possibile anche definire più impalcati alla stessa quota, per schematizzare ad esempio strutture con due parti non collegate fra di loro o comunque non collegate con solai ma solo con travi.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">È possibile definire ed utilizzare la definizione di impalcati anche per strutture in cui non siano presenti piani infinitamente rigidi. La correlazione fra impalcati definiti e piani infinitamente rigidi viene effettuata al momento del calcolo della struttura.</p>
+</li>
+</ul>
+<p style="text-align: justify;"><span class="hcp1">Comandi correlati:</span> <span class="hcp8"><a href="IMPA.htm">IMPA</a></span> definisce automaticamente gli impalcati. <span class="hcp8"><a href="IMC.htm">IMC</a></span> rende corrente un impalcato. <font color="#000000"><span class="hcp8"><a href="AIN.htm">AIN</a></span></font> assegna l'impalcato corrente. <span class="hcp8"><a href="LIMP.htm">LIMP</a></span> libera gli impalcati.</p>
+<p style="text-align: left; font-weight: bold;">Argomenti correlati: <a href="Guida.chm::/Impalcati_rigidi_non_orizzontali.htm">Impalcati rigidi non orizzontali</a></p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+//]]>
+</script>
+</body>
+</html>

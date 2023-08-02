@@ -1,0 +1,48 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Oggetto VincoloAsta</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:normal; }
+span.hcp3 { font-style:normal;
+font-weight:bold; }
+span.hcp4 { font-style:normal;
+font-weight:normal; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Oggetto VincoloAsta</h1>
+<p>L'oggetto è caratterizzato dalle seguenti proprietà:</p>
+<p class="Normal3"><span class="hcp1">Numero</span> numero del vincolo asta.</p>
+<p class="Normal3"><span class="hcp1">TipoDiVincolo</span> tipo di vincolo asta. Questa proprietà può assumere i seguenti valori:</p>
+<p class="script1"><span class="hcp1">TVA_STANDAR</span> <span class="hcp2">svincolamento interno standar;</span></p>
+<p class="script1"><span class="hcp1">TVA_WINKLER</span> <span class="hcp2">su suolo elastico</span> alla Winkler<span class="hcp2">;</span></p>
+<p class="script1"><span class="hcp1">TVA_BIELLA</span> biella (elemento TRUSS).</p>
+<p class="Normal3"><span class="hcp1">Resistenza</span> tipo di resistenza per il vincolo biella. Questa proprietà può assumere i seguenti valori:</p>
+<p class="script1"><span class="hcp1">TB_NORMALE</span> <span class="hcp2">resistente sia a trazione che a compressione;</span></p>
+<p class="script1"><span class="hcp1">TB_SOLATRAZIONE</span> resistente solo a trazione;</p>
+<p class="script1"><span class="hcp1">TB_SOLACOMPRESSIONE</span> resistente solo a compressione.</p>
+<p class="Normal3"><span class="hcp1">SuSuoloElastico</span> ritorna True se il vincolo è su suolo elastico alla Winkler.</p>
+<p class="Normal3"><span class="hcp1">TipoCoeffSottofondo</span> ritorna True se il vincolo su suolo elastico alla Winkler è valutato in funzione della stratigrafia.</p>
+<p class="Normal3"><span class="hcp1">CoeffSottofondo</span> costante di Winkler. Se il vincolo non è su suolo elastico setta un codice d'errore.</p>
+<p class="Normal3"><span class="hcp3">Commento</span> <span class="hcp4">ritorna il commento del tipo di vincolo asta.</span></p>
+<p>L'oggetto è caratterizzato dai seguenti metodi:</p>
+<p class="Normal3"><span class="hcp1">GradoDiLiberta (e)</span> oggetto <span style="font-weight: bold; text-decoration: none;"><a href="Oggetto%20C6D.htm">C6D</a></span> contenente il codice di rilascio corrispondenti all'estremo <span class="hcp1">e</span>. Se il vincolo è su suolo elastico setta un codice d'errore.</p>
+<p class="script1"><span class="hcp2">I</span> valori ammissibili per <span class="hcp1">e</span> sono:</p>
+<p class="script2"><span class="hcp1">FIRSTNODE</span> <span class="hcp2">restituisce</span> <span class="hcp4">i dati relativi al primo estremo dell'asta;</span></p>
+<p class="script2" style="margin-bottom: 0;"><span class="hcp3">SECONDNODE</span> <span class="hcp2">restituisce</span> <span class="hcp4">i dati relativi al secondo estremo dell'asta.</span></p>
+</body>
+</html>

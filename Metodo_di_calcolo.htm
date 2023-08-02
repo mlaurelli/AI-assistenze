@@ -1,0 +1,50 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Metodo di calcolo</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { text-align:center; }
+img.hcp2 { border:none; }
+span.hcp3 { vertical-align:Super; }
+span.hcp4 { vertical-align:Sub; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Metodo di calcolo</h1>
+<p>Le analisi dei singoli pali si basano sulla soluzione del problema elastoplastico di interazione palo-terreno attraverso il metodo delle differenze finite. Le analisi vengono effettuate disgiuntamente per carichi orizzontali e per carichi verticali.</p>
+<h2 class="Titolo5">Analisi per carichi orizzontali</h2>
+<p>L'analisi per carichi orizzontali si riconduce ad un problema piano. Il piano di progetto è definito dalla direzione dell'asse del palo e dalla direzione dal vettore somma delle sollecitazioni nodali di taglio. Il taglio di progetto T è dato dalla somma vettoriale delle sollecitazioni nodali mentre il momento di progetto M è dato dalla somma della proiezione delle sollecitazioni nodali rispetto alla direzione definita dal vettore somma dei tagli.</p>
+<p>I dati del problema sono: E, J ed L rispettivamente modulo elastico, inerzia della sezione e lunghezza del palo; kh(z) e pLim(z) rispettivamente la risposta elastica e la pressione limite orizzontale del terreno a lato del palo poi traslati rispetto a zP sistema di riferimento locale del palo; T ed M rispettivamente taglio e momento di progetto.</p>
+<p class="hcp1"><img src="Ver_pali_01.gif" alt="" width="486" height="384" border="0" class="hcp2"></p>
+<p>La soluzione del problema è data dal campo di spostamenti s(zP) dal quale, calcolate le pressioni di contatto, vengono ricavate le sollecitazioni T(zP) ed M(zP) di progetto per le singole sezioni del palo.</p>
+<p>Ipotizzando un comportamento elastico lineare del palo, le equazioni della linea elastica forniscono il legame fra la sollecitazione momento e la derivata seconda dello spostamento:</p>
+<p>d<span class="hcp3">2</span>s(zP)/d<span class="hcp3">2</span>zP = -M(zP)/EJ.</p>
+<p>Tale relazione differenziale, rappresentativa di un continuo, viene riscritta in termini finiti discretizzando il palo in n nodi che definiscono n-1 conci di lunghezza a = L/(n-1), per i nodi interni risulta:</p>
+<p>da i = 2 ad i = n-1 : (s<span class="hcp4">i+1</span> - 2s<span class="hcp4">i + si-1</span>)/a2 = -M<span class="hcp4">i</span>/EJ.</p>
+<p>In cui M<span class="hcp4">i</span> è dato dai carichi esterni e dalle reazioni delle molle, rappresentative delle pressioni sul terreno, agenti sui nodi che vanno da 1 a i-1.</p>
+<p>Il sistema così definito ha n incognite (s<span class="hcp4">i</span>) in n-2 equazioni e viene completato dalle seguenti condizioni al contorno: equilibrio alla traslazione ed alla rotazione nel caso di analisi con pali la cui testa è libera di ruotare; equilibrio alla traslazione e uguaglianza fra gli spostamenti dei due modi iniziali nel caso di analisi con pali la cui testa è impedita di ruotare.</p>
+<p>La soluzione del problema si basa quindi nella ricerca della condizione di equilibrio del sistema palo-terreno soggetto ai carichi di progetto. Analogamente, l'analisi in condizioni non lineari viene affrontata reiterando la ricerca della soluzione in cui, per ogni iterazione del calcolo vengono effettuate le correzioni delle pressioni di contatto al loro limite plastico. Le iterazioni si concludono, e la soluzione è definita, quando risulta una situazione di equilibrio in cui tutte le pressioni di contatto risultano minori o uguali al loro limite plastico.</p>
+<p>Il metodo utilizzato, basato sul presupposto della monotonicità della soluzione rispetto ai carichi di progetto per ogni singolo step di calcolo, ha il vantaggio di essere relativamente semplice e di veloce esecuzione e permette la generalizzazione nel caso non lineare in cui le ipotesi fatte nella scelta dell'equazione differenziale alla base del sistema risolutivo risultano comunque soddisfatte. Il metodo appena descritto non tiene in conto dell'effetto delle rotazioni delle sezioni, comunque, la comparazione dei risultati ottenuti utilizzando un solutore FEM, mostra che tali effetti risultano trascurabili anche per spostamenti rilevanti.</p>
+<h2 class="Titolo5">Analisi per carichi verticali</h2>
+<p>L'analisi per carichi verticali si riconduce ad un problema assialsimmetrico. I dati del problema sono: E, A ed L rispettivamente modulo elastico, area della sezione e lunghezza del palo; tLim,c(z), tLim,t(z), tLim,c(z), kL,c(z), kL,t(z) e kP,c sono rispettivamente l'attrito laterale limite per compressione, l'attrito laterale limite per trazione, la pressione limite alla base, l'attrito laterale limite per compressione, la risposta elastica laterale per carichi verticali di compressione, la risposta elastica laterale per carichi verticali di trazione e la risposta elastica alla punta, poi traslati rispetto a zP sistema di riferimento locale del palo; N carico assiale di progetto.</p>
+<p class="hcp1"><img src="Ver_pali_02.gif" alt="" width="486" height="384" border="0" class="hcp2"></p>
+<p>La soluzione del problema è analoga a quella utilizzata per carichi orizzontali, e fornisce il campo di spostamenti c(zP) dal quale, calcolate le tensioni tangenziali di contatto palo terreno, vengono ricavate le sollecitazioni N(zP) di progetto per le singole sezioni del palo.</p>
+<p>In questo caso la relazione differenziale di partenza è:</p>
+<p>d<span class="hcp3">1</span>c(zP)/d<span class="hcp3">1</span>zP = N(zP)/EA.</p>
+<p>La cui rappresentazione in termini finiti, sempre discretizzando il palo in n nodi che definiscono n-1 conci di lunghezza a = L/(n-1), per i nodi interni risulta:</p>
+<p>da i = 2 ad i = n : (c<span class="hcp4">i</span> + c<span class="hcp4">i-1</span>)/a = -Ni/EA.</p>
+<p>In cui Ni è dato dai carichi esterni e dalle reazioni delle molle, rappresentative delle tensioni tangenziali di contatto palo terreno e dalla pressione alla base del palo, agenti sui nodi che vanno da 1 a i-1.</p>
+<p>Il sistema così definito ha n incognite (c<span class="hcp4">i</span>) in n-1 equazioni e viene completato dall'equilibrio alla traslazione verticale.</p>
+<p>Le considerazioni relative al calcolo non lineare sono analoghe a quelle fatte per l'analisi per carichi orizzontali.</p>
+<p>In questo caso il metodo permette la modellazione di reazioni differenti delle molle per sollecitazioni di compressione e trazione, tali reazioni sono valutate disgiuntamente per i singoli nodi con cui è modellato il palo e variano in funzione dello stato di sollecitazione risultante da ogni singola iterazione del calcolo.</p>
+<p>Il peso del palo viene tenuto in conto in un'analisi lineare preliminare a quelle delle applicazioni dei carichi, da questa analisi viene valutato lo sforzo normale lungo il palo in condizioni iniziali di carico nullo. A seguito di tale analisi preliminare vengono annullati gli spostamenti risultanti in modo che le analisi con l'applicazione dei carichi esterni vengano effettuate partendo da una condizione di sollecitazione lungo il palo che tenga in conto l'effettivo peso proprio ma da una condizione di cedimenti nulli.</p>
+</body>
+</html>

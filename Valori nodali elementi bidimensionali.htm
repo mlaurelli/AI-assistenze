@@ -1,0 +1,90 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Valori nodali elementi bidimensionali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-style:italic; }
+span.hcp3 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Valori nodali elementi bidimensionali</h1>
+<p>Per la natura stessa del metodo agli elementi finiti i valori dello 
+ stato tensionale di due elementi bidimensionali in un nodo comune di incidenza 
+ sono normalmente diversi, anche se in misura maggiore o minore in funzione 
+ del solutore, del tipo di elemento selezionato per il calcolo e della 
+ bontà di meshatura. Inoltre in alcuni casi il solutore riporta un unico 
+ valore medio dello stato tensionale valido per tutto l'elemento, mentre 
+ altri forniscono valori estrapolati dai punti di integrazione ai nodi.</p>
+<p>Nella visualizzazione delle informazioni numeriche vengono riportati 
+ i valori nodali forniti dal solutore. In caso di valore unico i valori 
+ nodali saranno uguali fra di loro.</p>
+<p>Nella rappresentazione grafica con mappe a colori ed in genere in tutti 
+ i casi in cui occorra un valore nodale univoco per lo stato tensionale, 
+ occorre quindi stabilire un metodo per definire tale valore tramite una 
+ media dei dati disponibili.</p>
+<p>Con ModeSt è possibile eseguire tre tipi di medie:</p>
+<p class="Normal3"><span class="hcp1">Globali</span>: in 
+ ogni nodo viene considerato un unico valore pari alla media dei valori 
+ nodali di tutti gli elementi che vi incidono.</p>
+<p class="Normal3"><span class="hcp1">Locali</span>: ogni 
+ elemento viene considerato separatamente dagli altri e per ognuno dei 
+ nodi dell'elemento viene considerato il valore medio sull'elemento. Nel 
+ caso di mappe a colori avremo una visualizzazione &quot;<span class="hcp2">a 
+ scacchiera</span>&quot;, ma la differenza fra elementi adiacenti permette 
+ di valutare la bontà della mesh. Colori troppo distanti nella legenda 
+ ma applicati ad elementi adiacenti indicano che la mesh andrebbe resa 
+ più fitta.</p>
+<p class="Normal3"><span class="hcp1">Globale - Locale</span>: 
+ viene effettuata prima una media <span class="hcp1">locale</span> 
+ per avere un valore unico per ogni elemento, poi viene effettuata la media 
+ globale. Per solutori che forniscono solo il valore medio dello stato 
+ tensionale dell'elemento questo tipo di media coincide con quella globale. 
+ Negli altri casi si ha un <span class="hcp2">&quot;livellamento&quot;</span> 
+ dei valori che può servire per eliminare picchi anomali di tensione dovuti 
+ ad azioni puntiformi.</p>
+<p>Durante la visualizzazione di mappe a colori relative a elementi bidimensionali 
+ il tipo di media può essere modificato usando <span class="hcp2">Opzioni 
+ di disegno</span> dal menu a comparsa che si ottiene cliccando col tasto 
+ destro sullo sfondo della finestra.&#160;Nella casella di riepilogo a 
+ discesa &quot;Tipo media sollec. bidim.&quot; l'opzione <span class="hcp1">Globale</span> 
+ attiva la media di tipo globale, <span class="hcp1">Locale</span> 
+ attiva la media di tipo locale e <span class="hcp1">Globale-locale</span> 
+ attiva la media di tipo globale-locale.</p>
+<p>È importante notare che per mappe a colori <span class="hcp1">riferite 
+ al piano locale</span> degli elementi è possibile vengano eseguite medie 
+ fra componenti di sollecitazione completamente diverse. È compito dell'utente 
+ accertarsi attraverso la visualizzazione degli assi locali che le sollecitazioni 
+ usate nel calcolo siano le stesse per tutti gli elementi selezionati. 
+ Nel caso i cui il piano di tensione sia il piano di visualizzazione o 
+ un piano definito dall'utente ModeSt provvede a operare tutti i necessari 
+ cambi di sistema di riferimento prima di effettuare le medie, e gli elementi 
+ che non giacciono sul piano non vengono rappresentati. Si presti attenzione 
+ che qualora la selezione degli elementi per i quali viene richiesta la 
+ mappa non comprenda tutti gli elementi sul piano i valori sui &quot;bordi&quot; 
+ della mappa saranno ovviamente falsati dal calcolo della media non effettuato 
+ su tutti gli elementi necessari.</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Argomenti 
+ correlati:</span> <span><span class="hcp3"><a 
+	 href="Fattori%20di%20scala.htm">Fattori di scala</a></span></span><span 
+	 style="font-weight: normal;">,</span> <span class="hcp3"><a 
+	 href="Sollecitazioni%20prive%20di%20segno.htm">Sollecitazioni prive di segno</a></span><span 
+	 style="font-weight: normal; text-decoration: none; ">,</span> <span><span class="hcp3"><a href="Piano%20di%20tensione.htm">Piano 
+ di tensione</a></span></span></p>
+</body>
+</html>

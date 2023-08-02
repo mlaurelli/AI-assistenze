@@ -1,0 +1,75 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Combinazione risultati di più calcoli</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Introduzione</h1>
+<p>È possibile combinare 
+ fra loro i risultati di due calcoli effettuati con ipotesi diverse per 
+ gestire situazioni particolari cliccando sul menu dell'applicazione <span class="hcp1"><img src="../Icone/modest32.png" alt="" border="1" class="hcp2"></span> e poi su <span class="hcp1">Combina i risultati di due calcoli <img src="../Icone/32/comb2ris32.png" alt="" border="1" class="hcp2"></span>.</p>
+<p>L'opzione è attivabile solo se nel progetto aperto sono presenti almeno 
+ due strutture calcolate con il metodo FEM e se non c'è nessuna struttura 
+ corrente. Occorrerà quindi se necessario provvedere a chiudere la struttura 
+ corrente cliccando sul menu dell'applicazione <span class="hcp1"><img src="../Icone/modest32.png" alt="" border="1" class="hcp2"></span> e poi 
+ su <span class="hcp1">Chiudi <img src="../Icone/32/main_chiudi32.png" alt="" border="1" class="hcp2"></span>.</p>
+<p>È possibile combinare due risultati del calcolo se rispettano le condizioni 
+ seguenti:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">le due strutture devono avere 
+	 la stessa geometria in termini di numero e coordinate dei nodi, numero 
+	 di muri/elementi bidimensionali ed aste, possono invece variare i 
+	 vincoli dei nodi e delle aste ed il coefficiente di sottofondo;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">il calcolo delle sollecitazioni 
+	 con il metodo FEM deve essere eseguito con l'ipotesi di carichi variabili 
+	 uniformemente distribuiti;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">le strutture non devono essere 
+	 in muratura;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">le strutture non devono essere 
+	 calcolate solo in analisi modale;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">le strutture non devono avere 
+	 una o più combinazioni non lineari o di buckling;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">le strutture devono essere 
+	 calcolate con la stessa normativa.</p></li>
+</ul>
+<p>Si possono combinare anche due strutture variando la sezione delle aste, 
+ tuttavia occorre fare attenzione nel caso in cui la sezione sia di tipo 
+ fittizio o è stato effettuato il calcolo delle sollecitazioni con l'ipotesi 
+ che le zone d'intersezione tra pilastro e trave siano infinitamente rigide, 
+ poiché il tipo di sezione e la lunghezza delle zone rigide nella struttura 
+ combinata è quello della prima struttura selezionata.</p>
+<p>Dopo aver specificato i nomi delle due strutture da combinare fra di 
+ loro ed il nome della struttura risultante viene visualizzata una finestra 
+ suddivisa in tre parti. Nelle due parti laterali sono riportate le condizioni 
+ di carico elementari (CCE) definite nelle strutture o risultanti dal calcolo 
+ mentre nella parte centrale sono riportate le CCE o i modi selezionati 
+ dalle due strutture.</p>
+<p>Terminata la selezione sarà possibile modificare le combinazioni delle 
+ CCE (CC) con le stesse modalità specificate in <span style="font-weight: bold; 
+														 text-decoration: none; "><a 
+	 href="Combinazione%20delle%20condizioni%20di%20carico.htm">Combinazione delle 
+ condizioni di carico</a></span>.</p>
+<p style="margin-bottom: 0;">Per alcuni chiarimenti sulle possibilità offerte 
+ da questa procedura si veda anche <a href="Esempi.htm"><span class="hcp1">Esempi 
+ di combinazione di più calcoli</span><span style="text-decoration: none; ">.</span></a></p>
+</body>
+</html>

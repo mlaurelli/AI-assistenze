@@ -1,0 +1,164 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Layer</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:normal; }
+span.hcp3 { font-weight:bold;
+text-decoration:none; }
+td.hcp4 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp5 { margin-bottom:0; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Layer</h1>
+<p>Ms-Cad, come tutti i programmi di CAD, gestisce la suddivisione delle 
+ entità grafiche su diversi livelli (layer).</p>
+<p>I layer possono essere attivati e disattivati sia per la visualizzazione 
+ (solo le entità su alcuni layer sono visibili), sia per la modifica (solo 
+ le entità su alcuni layer sono selezionabili e quindi modificabili). Un 
+ layer è inoltre definito come <span class="hcp1">corrente</span> 
+ <span class="hcp2">e le nuove entità inserite apparterranno 
+ ad esso, nella consueta filosofia di ModeSt delle</span> <span class="hcp3"><a href="Proprieta_correnti.htm">Proprietà 
+ correnti</a></span><span class="hcp2">.</span></p>
+<p>La gestione dei layer visibili e modificabili si effettua tramite il 
+ comando <span class="hcp1"><a href="../Comandi/SL.htm">SL</a></span> 
+ digitandolo nella linea di comando mentre il layer corrente si imposta 
+ selezionandolo dalla casella di riepilogo a discesa relativa a &quot;Layer&quot; 
+ del pannello <span class="hcp1">Proprietà correnti</span>.</p>
+<p>Per garantire la congruenza con i disegni creati in automatico da ModeSt, 
+ la definizione dei layer è predefinita e non può essere modificata dall'utente, 
+ che non può attualmente creare layer personalizzati.</p>
+<p>Il significato dei nomi dei layer è il seguente:</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt;" cellspacing="0" 
+		 width="100%">
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">GEO1</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Entità geometriche da rappresentare 
+		 con penna fine e tratto continuo</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">GEO2</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Entità geometriche da rappresentare 
+		 con penna media e tratto continuo</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">GEO3</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Entità geometriche da rappresentare 
+		 con penna grossa e tratto continuo</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">TRATGEO1</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Entità geometriche da rappresentare 
+		 con penna fine e linea tratteggiata</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">TRATGEO2</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Entità geometriche da rappresentare 
+		 con penna media e linea tratteggiata</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">TRATGEO3</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Entità geometriche da rappresentare 
+		 con penna grossa e linea tratteggiata</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">CAMPITURE</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Campiture (penna fine e linea continua)</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">TALTI</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Testi classificati &quot;alti&quot; 
+		 (penna grossa)</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">TMEDI</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Testi classificati &quot;medi&quot; 
+		 (penna media)</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">TPICCOLI</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Testi classificati &quot;piccoli&quot; 
+		 (penna media)</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">TQUOTE</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Testi quotature (penna media)</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">TFERRI</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Testi che indicano diametri e lunghezze 
+		 dei ferri d'armatura (penna media)</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">LQUOTE</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Linee quotature (penna fine)</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">LQINCL</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Linee diagonali d'estremità delle 
+		 quotature (penna grossa)</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">LRIFER</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Linee che indicano un riferimento 
+		 ad un'altra entità (penna fine)</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">LINDSEZ</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Linee che indicano la posizione 
+		 di una sezione (penna grossa)</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">TINDSEZ</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Testi che indicano una sezione (penna 
+		 grossa)</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">LINTDIS</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Linee di interruzione del disegno 
+		 (penna fine)</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">CTESTI</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Cerchi intorno ai testi (penna media)</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">FERRI</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Ferri d'armatura (penna grossa)</p></td>
+	</tr>
+	<tr>
+		<td style="width:11%;" class="hcp4"><p class="hcp5"><span class="hcp1">RIFFERRI</span></p></td>
+		<td style="width:90%;" class="hcp4"><p class="hcp5">Linee di riferimento a ferri d'armatura 
+		 (penna fine)</p></td>
+	</tr>
+</table>
+<p>Pur restando libera al momento del plottaggio la associazione fra colori 
+ e spessori delle penne (si veda anche <span class="hcp3"><a 
+	 href="Stampa%20e%20plottaggio%20disegni.htm">Stampa e plottaggio disegni</a></span>) 
+ nella definizione di default dei layer ModeSt assume che il colore rosso 
+ sia associato ad una penna fine (0.1-0.2), il giallo ad una penna media 
+ (0.3-0.4) e il verde ad una penna grossa (0.5-0.6).</p>
+<p class="hcp5">Il colore e il tipo di penna associato ai 
+ diversi layer può essere modificato come indicato in <span class="hcp3"><a 
+	 href="Schemi%20di%20colore.htm">Schemi di colore</a></span>.</p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Continuità e posizionamento</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-style:italic; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Continuità e posizionamento</h1>
+<p>ModeSt riconosce automaticamente le aste allineate e per default le considera come continue. È possibile interrompere la continuità con il tasto destro del mouse sul nodo relativo al collegamento dove si vuole interrompere la continuità.</p>
+<p>Se viceversa ModeSt ha interrotto aste che si desiderava considerare come continue, questo significa che le aste non sono perfettamente allineate. Controllare il posizionamento dei nodi ed eventualmente definendo un sistema di riferimento personalizzato con l'asse X lungo l'asta continua (si veda <span class="hcp1"><a href="Sistema%20di%20riferimento%20attivo.htm">Sistema di riferimento attivo</a></span>), sarà possibile, dopo aver <span class="hcp1"><a href="Setnodi.htm">selezionato i nodi</a></span> lungo l'asse X, assegnare il valore 0 alle coordinate Y e Z in modo da eliminare errori dovuti a tolleranze o imprecisioni numeriche.</p>
+<p>In ognuno dei nodi costituenti una reticolare ModeSt cerca di definire una "<span class="hcp2">priorità</span>" delle aste che vi confluiscono, in modo da stabilire quali siano le aste che devono maggiormente avvicinarsi al nodo e stabilire così le relative lunghezze di taglio. Anche questa priorità è modificabile con il tasto destro del mouse sulle estremità delle aste con le opzioni "<span class="hcp2">avvicina</span>" e "<span class="hcp2">allontana</span>". A volte può sembrare che il comando non abbia effetto in quanto ha modificato solo priorità equivalenti; in questo caso sarà sufficiente avvicinare o allontanare di nuovo l'estremo dell'asta. Un breve suono segnala che l'asta non può essere ulteriormente allontanata o avvicinata al nodo.</p>
+<p style="margin-bottom: 0;">Sempre con il tasto destro del mouse sul nodo è possibile imporre che tutte le aste terminino ad una stessa distanza dal nodo.</p>
+</body>
+</html>

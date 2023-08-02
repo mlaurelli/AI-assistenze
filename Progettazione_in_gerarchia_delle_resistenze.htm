@@ -1,0 +1,153 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione in gerarchia delle resistenze</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { vertical-align:Sub; }
+font.hcp2 { font-family:Wingdings; }
+span.hcp3 { font-weight:bold; }
+img.hcp4 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+p.hcp5 { font-weight:bold; }
+span.hcp6 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progettazione in gerarchia delle resistenze</h1>
+<p>La progettazione in gerarchia delle resistenze dei pilastri con l'utilizzo 
+ diretto della formula 7.4.4 del D.M. 17/01/18 non è ovviamente possibile 
+ in quanto tale formula, essendo di verifica, prevede la conoscenza &quot;a 
+ priori&quot; dell'armatura sotto e sopra il nodo, mentre l'armatura viene 
+ normalmente progettata partendo dal piede del pilastro, progettando e 
+ poi proseguendo in successione con i piani superiori. ModeSt fa quindi 
+ riferimento all'espressione C.7.4.3 della Circolare esplicativa n. 7 del 
+ 21/01/19 che è equivalente alla formula di progetto riportata nell'OPCM 
+ 3431 (entrambe sono riprese direttamente dall'Eurocodice 8).</p>
+<p>Si fa notare che se fosse possibile progettare un'armatura esattamente 
+ uguale a quella necessaria per far diventare M<span class="hcp1">c,Rd</span> 
+ = M<span class="hcp1">c,Ed</span> , ossia momento resistente 
+ = momento sollecitante, le due formule sarebbero perfettamente equivalenti.</p>
+<p>La talvolta apparente eccessiva amplificazione dei momenti sollecitanti 
+ in alcune CC non deve trarre in inganno, la formula è infatti studiata 
+ dal normatore in modo che avvenga il seguente meccanismo:</p>
+<p>Momento agente piccolo <font face="Wingdings" class="hcp2">à</font> 
+ amplificazione grande <font face="Wingdings" class="hcp2">à</font> 
+ momento di calcolo M1</p>
+<p>Momento agente medio <font face="Wingdings" class="hcp2">à</font> 
+ amplificazione media <font face="Wingdings" class="hcp2">à</font> 
+ momento di calcolo M2</p>
+<p>Momento agente grande <font face="Wingdings" class="hcp2">à</font> 
+ amplificazione piccola <font face="Wingdings" class="hcp2">à</font> 
+ momento di calcolo M3</p>
+<p>Con il risultato che M1, M2 ed M3 sono praticamente uguali o comunque 
+ confrontabili.</p>
+<p>Nelle analisi dinamiche con componente priva di segno ci sono due momenti 
+ sollecitanti dall'altra parte del nodo da accoppiare con quello da amplificare. 
+ Il programma esegue le due amplificazioni e considera solo quella da cui 
+ risulta l'amplificazione minore.</p>
+<p>Questo si può agevolmente notare attivando la relazione estesa dei pilastri 
+ e controllando i diversi momenti di progetto risultanti nello stesso punto 
+ nelle diverse CC con i diversi coefficienti di amplificazione. A causa 
+ delle leggere differenze fra i vari momenti di progetto può capitare infatti 
+ che la relazione compatta sia ingannevole perché riporta un caso in cui 
+ il coefficiente di amplificazione è molto grande.</p>
+<p>Quello che provoca talvolta una forte armatura dei pilastri è spesso 
+ invece l'eccessivo sovra-dimensionamento delle travi, magari dovuto a 
+ motivi architettonici o di praticità, e la loro eccessiva armatura. Sul 
+ primo punto ModeSt non può ovviamente intervenire, ma per il secondo sono 
+ state studiate apposite tecniche di progettazione per cercare di ridurre 
+ al minimo strettamente indispensabile l'armatura sugli appoggi delle travi. 
+ A tal proposito si veda <span class="hcp3"><a href="Tecniche_di_progettazione_ai_sensi_DM08.htm">Tecniche 
+ di progettazione ai sensi D.M. 17/01/18</a></span>.</p>
+<p>In ogni caso è possibile capire se una trave è geometricamente sovradimensionata 
+ anche semplicemente aprendola in progettazione interattiva e visualizzare 
+ l'area di ferro strettamente necessaria e l'area di ferro effettivamente 
+ presente cliccando nel gruppo <span class="hcp3">Af teoriche</span> 
+ su <span class="hcp3">Aste <img src="../Icone/32/afteoaste32.png" alt="" border="1" class="hcp4"></span> e 
+ poi su <span class="hcp3">Aree di ferro <img src="../Icone/16/dafa.png" alt="" border="1" class="hcp4"></span>. 
+ Se il diagramma è &quot;piatto&quot;, cioè praticamente costante, la trave 
+ necessita solo dell'armatura minima di regolamento e quindi probabilmente 
+ è sovradimensionata.</p>
+<p>Un altro caso in cui la gerarchia della resistenza è fortemente penalizzante 
+ è quello in cui la struttura (o il telaio di cui fa parte il pilastro) 
+ non ha comportamento shear-type (il che significa che le sollecitazioni 
+ di calcolo sui pilastri non sono quelle tipiche dei telai) e quindi quando 
+ i momenti sotto e sopra il pilastro sono discordi. Comportamenti di questo 
+ tipo dovrebbero indurre il progettista a riflettere sulla necessità di 
+ rivedere lo schema strutturale o quanto meno la classificazione dell'edificio.</p>
+<p class="hcp5"><a name="Nota_1" id="Nota_1"></a>Nota 1</p>
+<p>Alcuni autori (si veda ad esempio E. COSENZA, G. MADDALONI, G. MAGLIULO, 
+ M. PECCE, R. RAMASCO – Progetto Antisismico di Edifici in Cemento Armato 
+ – IUSS Press Editore, Pavia 2007) danno una particolare interpretazione 
+ del punto 5.4.2.1, comma 5 dell'OPCM 3431 che qui si riporta per memoria: 
+ &quot;<span class="hcp6">Il fattore di amplificazione &#945; 
+ deve essere calcolato per entrambi i versi dell'azione sismica, applicando 
+ il fattore di amplificazione calcolato per ciascun verso ai momenti calcolati 
+ nei pilastri con l'azione agente nella medesima direzione</span>&quot;<span class="hcp6">.</span></p>
+<p>Al di là del guazzabuglio linguistico di difficile comprensione e al 
+ di là del fatto che una prescrizione simile non appare nel D.M. 17/01/18 
+ e nella relativa circolare, l'interpretazione che ne viene data è che 
+ i coefficienti di amplificazione possano essere adottati UNO alla volta, 
+ ossia sdoppiando le verifiche (a pressoflessione deviata) in due casi 
+ in cui viene amplificato una volta My lasciando invariato Mz e viceversa.</p>
+<p>A nostro avviso questo avrebbe un senso se gli effetti sismici fossero 
+ VERAMENTE nelle direzioni degli assi locali del pilastro. D'altra parte 
+ la normativa prevede l'indeterminazione della direzione dell'azione sismica 
+ proprio combinando le azioni in una direzione con il 30% delle azioni 
+ nell'altra, e quindi questo tipo di verifica è in fin dei conti una verifica 
+ a flessione &quot;semi-deviata&quot; in cui si cerca di disaccoppiare 
+ quello che la normativa prescrive di accoppiare.</p>
+<p>La questione è comunque dubbia, ma, vista la richiesta da parte di alcuni 
+ professionisti di potere operare in tal senso, è possibile attivare nei 
+ criteri di progetto il parametro &quot;<span class="hcp3"><a 
+	 href="CriGenPil.htm#Disaccoppia_sovraresistenza">Disaccoppia sovraresistenza</a></span>&quot; 
+ per adottare questa interpretazione. Il parametro per default è disattivo, 
+ si lasciano all'utente l'onere e la responsabilità di adottare tale interpretazione. 
+ Il nostro consiglio è di chiedere prima conferma al Genio Civile competente.</p>
+<p class="hcp5"><a name="Nota_2" id="Nota_2"></a>Nota 2</p>
+<p>In alcune dispense che circolano in rete, in alcuni dei tanti corsi 
+ che sono stati tenuti sul D.M. 17/01/18 ed in alcuni software di calcolo 
+ strutturale compare una particolare teoria. Si sostiene che il coefficiente 
+ di amplificazione <span style="font-family: Symbol, serif;">a</span> dell'espressione 
+ C7.4.3 della Circolare esplicativa n. 7 del 21/01/19 non possa mai essere 
+ superiore al fattore di comportamento q.</p>
+<p>Su questa affermazione sorgono alcune importanti considerazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Considerando che il fattore 
+	 di comportamento per edifici in c.a. generalmente oscilla fra 2 e 
+	 4, la limitazione ha spesso scarso effetto in quanto il momento di 
+	 calcolo deriva anche da situazioni in cui il momento sollecitante 
+	 è ottenuto con coefficienti di amplificazione 1.1-1.5 (si vedano le 
+	 considerazioni sopra riportate).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Ingegneristicamente è condivisibile 
+	 il fatto che i momenti agenti non potranno essere più grandi di quelli 
+	 risultanti da un calcolo effettuato con q=1, e quindi tale limitazione 
+	 avrebbe una sua logica. Tale assunzione va però sicuramente contro 
+	 i dettami espliciti della normativa che prescrive la gerarchia delle 
+	 resistenze trave-pilastro. Infatti l'armatura del pilastro risulterebbe 
+	 indipendente dalle dimensioni e dall'armatura delle travi che in esso 
+	 concorrono, senza garantire la gerarchia delle resistenze il cui spirito 
+	 è quello di pilotare la rottura per flessione sugli elementi orizzontali, 
+	 garantendo la progettazione di telai a collasso duttile.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">In ogni caso è possibile operare 
+	 secondo questa ipotesi, attivando nei criteri di progetto il parametro 
+	 &quot;<span class="hcp3"><a href="CriGenPil.htm#Limitare_il_valore_di_alfa_al_massimo_fattore_di_struttura">Limita 
+	 fattore di sovraresistenza al massimo valore di struttura</a></span>&quot;. 
+	 Nel caso di strutture con diversi coefficienti &quot;q&quot; nelle 
+	 due direzioni del sisma, come limite viene assunto il maggiore dei 
+	 due. Il parametro per default è disattivo, si lasciano all'utente 
+	 l'onere e la responsabilità di adottare tale interpretazione. Il nostro 
+	 consiglio è di chiedere prima conferma al Genio Civile competente.</p></li>
+</ul>
+</body>
+</html>

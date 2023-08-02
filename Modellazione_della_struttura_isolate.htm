@@ -1,0 +1,18 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Modellazione della struttura</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Modellazione della struttura</h1>
+<p>La presenza di un dispositivo di isolamento viene modellata con l'inserimento di elementi asta aventi sezione fittizia denominata "Isolatore", o sezione -2. È sufficiente introdurre un'asta con questa sezione per simulare la presenza di un isolatore. In fase di calcolo poi verranno richiesti tutti i dati per perfezionarne la definizione. Non è importante la lunghezza di tali aste, in quanto ModeSt gestisce automaticamente il calcolo delle rigidezze e degli altri parametri da trasferire al solutore. Si consiglia comunque di inserire aste con una lunghezza paragonabile a quella prevista come ingombro complessivo del sistema di isolamento. In sede di progettazione pilastri infatti i ferri verranno progettati immaginando una interruzione del pilastro di tale lunghezza, interruzione dove nel disegno esecutivo verrà inserita una rappresentazione schematica dell'isolatore. Gli isolatori possono essere inseriti anche a quote diverse, ma ModeSt ovviamente non può controllare se essi definiscono veramente un sistema di isolamento, in altre parole non può ad esempio accorgersi se l'utente ha dimenticato di inserirne alcuni.</p>
+<p>Non esiste alcun vincolo nella modellazione degli impalcati, è comunque opportuno definire il primo impalcato sull'orizzontamento presente alla quota dei nodi di testa degli isolatori. Tale impalcato, da un punto di vista progettuale, deve potersi considerare come rigido (modellazione col "Metodo Master-Slave") per un funzionamento ottimale del sistema di isolamento.</p>
+<p>La "<a href="Dati%20struttura.htm#Quota_di_riferimento">Quota di riferimento</a>" (Quota di inizio del sisma) viene automaticamente definita pari a quella dei nodi di testa degli isolatori, in questo modo le masse della sottostruttura vengono trascurate e quindi non influiscono nell'analisi modale della struttura isolata. Se la "Quota di riferimento" viene posta alla base della sottostruttura allora è opportuno impostare come "Recupero masse secondarie" un'opzione che non le trasferisca all'impalcato più vicino, in modo da evitare che le masse della sottostruttura vengano assegnate all'impalcato appartenente alla sovrastruttura.</p>
+</body>
+</html>

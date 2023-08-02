@@ -1,0 +1,24 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Modalità di progettazione</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Modalità di progettazione</h1>
+<p>L'approccio alla progettazione di collegamenti in acciaio è particolarmente complesso, data la possibilità di realizzare diverse configurazioni geometriche tutte valide per lo stesso collegamento, semplicemente variandone ad esempio dimensioni, numero e diametro dei bulloni, ecc.</p>
+<p>Per questo motivo in ModeSt è stato adottato un procedimento di progettazione in parte euristico ed in parte meccanico articolato in due fasi.</p>
+<p>In prima fase vengono generate una serie di possibili configurazioni geometriche attraverso delle regole che tenendo conto del tipo e delle dimensioni della sezione dell'asta del finale stabiliscono degli intervalli di tentativo ad esempio sugli spessori delle piastre, sul numero di bulloni ed il loro interasse, sulle dimensioni delle piastre, ecc.</p>
+<p>Le configurazioni così generate vengono controllate e classificate fra quelle geometricamente valide (prive di interferenze geometriche e rispettose dei limiti di normativa) e quelle non valide.</p>
+<p>Viene poi effettuato un ordinamento delle configurazioni dando la priorità a quelle "migliori", ossia più compatte, o con meno bulloni, o con spessori minori.</p>
+<p>Sono queste le configurazioni che vengono normalmente visualizzate nella finestra di dialogo "proprietà", utilizzando il bottone "Scegli". È possibile visualizzare anche quelle scartate con un apposito check di controllo: Mostra solo configurazioni geometricamente valide.</p>
+<p>In seconda fase tutte le configurazioni vengono testate dal punto di vista dello stato tensionale, effettuando tutte le verifiche necessarie. Viene poi scelta la prima fra le configurazioni le cui verifiche risultano soddisfatte.</p>
+<p>Da numerosi test effettuati si è evinto che il metodo porta ad una progettazione "ragionevole" per le sezioni di comune utilizzo e soggette ad un normale stato di sollecitazione. Può non riuscire a progettare un collegamento specialmente per sezioni molto piccole in cui risulta difficoltoso posizionare i bulloni o le piastre rispettando i limiti di normativa, o per sezioni sollecitate al limite della capacità portante dell'asta stessa a prescindere da problemi di stabilità e svergolamento.</p>
+<p>La progettazione interattiva consente comunque di adattare il collegamento generato in modo da tener conto di considerazioni personali o ingegneristiche che un programma non sarà mai in grado di fare in automatico; inoltre la possibilità di gestire un archivio in cui memorizzare le tipologie di uso più frequente permette anche il facile riutilizzo di soluzioni già studiate e personalizzate per i casi più complessi.</p>
+</body>
+</html>

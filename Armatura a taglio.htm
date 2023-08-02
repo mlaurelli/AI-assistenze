@@ -1,0 +1,108 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Armatura a taglio</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { margin-bottom:0; }
+font.hcp4 { font-family:Symbol; }
+span.hcp5 { vertical-align:sub; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Armatura a taglio</h1>
+<p><span class="hcp1">Calcolo col metodo degli stati limite</span></p>
+<p class="hcp2">In ognuna delle zone di staffatura, determinate 
+ secondo i dettami della normativa prescelta, viene valutato il contributo 
+ del calcestruzzo e, se non sufficiente per sopportare il taglio agente, 
+ viene valutata per differenza l'area delle staffe necessaria. Le valutazioni 
+ vengono effettuate indipendentemente per le due direzioni principali X 
+ e Y del pilastro con le rispettive componenti di taglio. Nel caso di pilastri 
+ a L o T vengono considerate le relative sezioni rettangolari ridotte nelle 
+ diverse direzioni. Nei pilastri circolari viene invece effettuata una 
+ sola verifica/progetto considerando il valore totale del taglio.</p>
+<p class="hcp2">Le verifiche a taglio con il metodo degli 
+ stati limite dipendono in linea generale, secondo le diverse formulazioni 
+ delle normative, dalla larghezza bw della membratura, dall'altezza utile 
+ della sezione e (per la verifica delle armature) dalla quantità di area 
+ di ferro tesa presente nella sezione e dalla quantità di staffe.</p>
+<p class="hcp2"><span class="hcp3">Nel caso di 
+ sezione generica o soggetta a pressoflessione deviata non esiste un metodo 
+ riportato in letteratura e la normativa non offre nessuna indicazione. 
+ Per analogia con quanto si usa fare per le sezioni rettangolari, ModeSt 
+ tenta di trovare un &quot;traliccio resistente&quot; che abbia un senso 
+ all'interno della sezione. Data la notevole variazione di risultati che 
+ comporta l'individuazione di tale traliccio, è possibile con gli appositi 
+ criteri di progetto modificare il comportamento del programma, che qui 
+ si riassume:</span></p>
+<ol style="list-style: decimal;">
+	<li><p class="Elenco1">L'altezza utile della sezione viene valutata 
+	 come la distanza fra il punto maggiormente compresso e la barra d'armatura 
+	 maggiormente tesa.</p></li>
+	<li><p class="Elenco1"><span class="hcp3">Le verifiche 
+	 vengono condotte per ogni fibra della sezione (discretizzata in strisce 
+	 parallele alla direzione dell'asse neutro) considerando solo le fibre 
+	 comprese fra la barra più tesa della sezione e la fibra maggiormente 
+	 compressa e trascurando le fibre che non intercettano staffatura.</span></p></li>
+	<li><p class="Elenco1">In ogni fibra viene calcolato il valore di bw 
+	 e viene valutata l'area di ferro delle staffe intercettate.</p></li>
+	<li><p class="Elenco1">Se richiesto dal criterio di progetto (vedi 
+	 <span class="hcp1"><a href="CriPil.htm#Considera_sempre_Af_Staffe_non_proiettata_in_direzione_del_taglio">Considera 
+	 sempre Af Staffe non proiettata in direzione del taglio</a></span>) 
+	 l'area delle staffe viene ridotta considerandone solo la componente 
+	 nella direzione ortogonale all'asse neutro. Nel progetto col metodo 
+	 delle tensioni ammissibili l'area viene sempre ridotta.</p></li>
+	<li><p class="Elenco1">L'area di ferro tesa viene valutata, secondo 
+	 quanto specificato nei criteri di progetto (vedi <span class="hcp1"><a 
+	 href="CriPil.htm#Classificazione_barre_tese_compresse">Classificazione 
+	 barre tese/compresse</a></span>), trascurando o meno le barre troppo 
+	 vicine all'asse neutro.</p></li>
+	<li><p class="Elenco1" style="margin-bottom: 0pt; margin-top: -10pt;"><span class="hcp3">Dopo aver valutato in tal modo il valore 
+	 del taglio resistente in tutte le fibre, viene scelto quello specificato 
+	 dal criterio di progetto Verifiche a taglio per sezioni generiche.</span></p></li>
+</ol>
+<p class="hcp2">Si fa notare come la possibile variazione 
+ dell'area delle staffe faccia sì che non ci sia necessariamente un rapporto 
+ diretto fra larghezza di bw e il valore della resistenza a taglio.</p>
+<p><span class="hcp1">Calcolo col metodo delle tensioni ammissibili</span></p>
+<p>Raramente nei pilastri viene superato il valore di <font face="Symbol" class="hcp4">t</font><span class="hcp5">c0</span>, comunque nel caso in cui ciò 
+ accada, ed anche se <font face="Symbol" class="hcp4">t</font> 
+ &gt; <font face="Symbol" class="hcp4">t</font><span class="hcp5">c1</span> 
+ (situazione che viene comunque segnalata nelle anomalie), ModeSt arma 
+ a taglio con staffe che vengono calcolate valutando lo sforzo di scorrimento 
+ unitario in ogni fibra (ogni 2 cm) della sezione pressoinflessa nella 
+ direzione dell'asse di flessione e decomponendolo nella direzione delle 
+ isostatiche di compressione (valutate fibra per fibra) e nella loro proiezione 
+ sul piano della sezione. Questo sforzo di scorrimento (che nel caso di 
+ pressoflessione deviata può essere diretto in una generica direzione), 
+ viene successivamente scomposto nelle due direzioni Y e Z locali dell'asta 
+ per valutare lo sforzo di scorrimento nella direzione delle staffe.</p>
+<p>Si noti che lo scorrimento unitario massimo può non essere nello stesso 
+ punto della <font face="Symbol" class="hcp4">t</font> 
+ massima, dato il diverso orientamento delle isostatiche di compressione.</p>
+<p>Questi sforzi di scorrimento unitari vengono poi integrati nelle prescelte 
+ zone di staffatura, interpolando linearmente per trovarne i valori nei 
+ punti intermedi dell'asta e quindi valutata la staffatura necessaria in 
+ funzione del massimo nelle due direzioni.</p>
+<p>Vengono progettate le staffe solo per i pilastri rettangolari, circolari, 
+ a T e a L. Non vengono considerate nel progetto dell'armatura a taglio 
+ sia le staffe che gli spilli utilizzati per il collegamento fra i ferri 
+ di due lati opposti. Nel caso di pilastri circolari lo scorrimento non 
+ viene ovviamente scomposto nelle due direzioni ed in sede di relazione 
+ di calcolo viene riportato come scorrimento in direzione Y.</p>
+</body>
+</html>

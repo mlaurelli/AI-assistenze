@@ -1,0 +1,96 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>AGGB - Aggiungi elemento bidimensionale</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+td.hcp2 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp3 { margin-bottom:0; }
+p.hcp4 { text-align:justify; }
+span.hcp5 { font-weight:bold;
+text-decoration:none; }
+span.hcp6 { font-style:italic; }
+span.hcp7 { font-weight:normal; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando"><span class="hcp1">AGGB - Aggiungi elemento bidimensionale</span></p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:70%;" class="hcp2">
+<p class="hcp3"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p>
+</td>
+<td style="width:29%;" class="hcp2">
+<p class="hcp3"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p>
+</td>
+</tr>
+</table>
+<p class="hcp4">Il comando permette di inserire uno o più elementi bidimensionali nella struttura.</p>
+<p class="hcp4">Sintassi del comando:</p>
+<p class="Normal3" style="text-align: justify;"><span class="hcp1">AGGB</span></p>
+<p class="Normal3">oppure:</p>
+<p class="Normal3"><span class="hcp1">AGGB</span> <font color="#0000FF">PER</font></p>
+<p class="Normal3">Nella prima forma viene inserito un elemento bidimensionale specificando i nodi della struttura e/o punti del lucido e/o punti della griglia.</p>
+<p class="Normal2">Nella seconda forma viene inserito un elemento bidimensionale semplicemente cliccando col mouse in un punto all'interno di un perimetro chiuso di aste. Questo metodo funziona solo se il piano di lavoro è posizionato sul piano dell'elemento bidimensionale da inserire e se le aste che individuano il perimetro sono già definite e complanari.</p>
+<p class="hcp4">Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Gli attributi di tipo <span class="hcp5"><a href="TBC.htm">TBC</a></span>, filo fisso <span class="hcp5"><a href="FBC.htm">FBC</a></span>, scostamento dal filo fisso <span class="hcp5"><a href="SFBC.htm">SFBC</a></span> e numero <span class="hcp5"><a href="NBC.htm">NBC</a></span> dell'elemento bidimensionale saranno quelli correnti.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">I nodi possono essere specificati con <span class="hcp6"><font color="#0000FF">N numero</font></span> o cliccando nodi della struttura e/o punti del lucido e/o punti della griglia.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Se <span class="hcp7"><font color="#0000FF"><span class="hcp6">nodo3</span></font></span> coincide con <span style="font-style: italic; font-weight: normal;"><font color="#0000FF">nodo4</font></span> l'elemento è a tre nodi. Accertarsi che il solutore utilizzato sia in grado di gestire elementi bidimensionali a tre nodi.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">L'ordine ed il verso di inserimento (orario o antiorario) dei nodi dell'elemento determinano il sistema di riferimento locale:</p>
+</li>
+</ul>
+<ol style="list-style: decimal;">
+<li>
+<p class="IndentBullet1">asse X dal primo al secondo nodo;</p>
+</li>
+<li>
+<p class="IndentBullet1">asse Y definito come prodotto vettoriale fra il versore dell'asse X e il versore della congiungente fra il primo e il quarto (o il terzo) nodo e quindi uscente dal piano dell'elemento;</p>
+</li>
+<li>
+<p class="IndentBullet1">asse <span class="hcp7">Z</span> a formare con gli altri una terna destrorsa.</p>
+</li>
+</ol>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Si consiglia di inserire gli elementi bidimensionali di uno stesso "particolare" strutturale (ad esempio di una platea) in modo che le normali agli elementi siano tutte rivolte dalla stessa parte; in caso contrario sarà praticamente impossibile interpretare correttamente i risultati relativi a questi elementi e ottenere mappe significative degli stati di tensione, di deformazione e delle aree di ferro <span class="hcp5"><a href="DALB.htm">DALB</a></span>, <span class="hcp5"><a href="MESH.htm">MESH</a></span> e <span class="hcp5"><a href="DSLB.htm">DSLB</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Si ricorda che per avere le normali agli elementi tutte rivolte dalla stessa parte occorre inserire questi ultimi tutti in senso orario o tutti in senso antiorario.</p>
+</li>
+</ul>
+<p><span class="hcp1">Comandi correlati:</span> <span class="hcp5"><a href="AGGM.htm">AGGM</a></span> aggiunge un muro. <span class="hcp5"><a href="MESH.htm">MESH</a></span> divide l'elemento bidimensionale. <span class="hcp5"><a href="RAME.htm">RAME</a></span> raffina la mesh.</p>
+<p style="text-align: left; margin-bottom: 0;"><span class="hcp1">Argomenti correlati:</span> <span class="hcp1"><a href="../Manuale/Visualizzazione%20di%20un%20lucido.htm">Visualizzazione di un lucido</a></span>, <span class="hcp1"><a href="../Manuale/Sistema%20di%20riferimento%20attivo.htm">Sistema di riferimento attivo</a></span>, <span class="hcp1"><a href="../Manuale/Coordinate%20relative.htm">Coordinate relative</a></span>, <span class="hcp1"><a href="../Manuale/Proprieta_correnti.htm">Attributi correnti</a></span>, <span class="hcp1"><a href="Guida.chm::/Inserimento_di_una_platea.htm">Inserimento di una platea</a></span></p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+//]]>
+</script>
+</body>
+</html>

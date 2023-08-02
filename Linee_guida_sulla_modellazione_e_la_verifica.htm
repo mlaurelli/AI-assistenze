@@ -1,0 +1,134 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Linee guida sulla modellazione e la verifica</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+p.hcp3 { font-style:italic;
+font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Linee guida sulla modellazione e la verifica</h1>
+<p class="Titolo7">Modellazione struttura - prima fase</p>
+<p class="Titolo7">Modellazione struttura - seconda fase</p>
+<p class="Titolo7">Inserimento armature</p>
+<p class="Titolo7">Controllo e ricerca parametri dell'analisi</p>
+<p>Questo è uno dei punti più critici di tutta l'analisi pushover, in quanto 
+ non esistono ricette su come impostare i parametri di calcolo, ma ogni 
+ struttura va calibrata in modo specifico.</p>
+<p>I valori da determinare sono:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Spostamento finale del punto 
+	 di controllo.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Massimo numero di passi totale.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Massimo numero di sotto-iterazioni.</p></li>
+</ul>
+<p>Un buon metodo di operare è il seguente:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Dalla finestra di dialogo 
+	 calcolo struttura con metodo FEM, dopo aver impostato l'analisi pushover 
+	 come tipo di analisi, nella scheda &quot;Opzioni pushover&quot; selezionare 
+	 una sola analisi pushover.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">In questa prima fase per i 
+	 parametri di calcolo possono essere lasciati i default. I parametri 
+	 successivi &quot;<a href="Opzioni_pushover.htm#Definisci_collasso">Definisci 
+	 collasso</a>&quot; servono per trascurare i passi di spostamento sicuramente 
+	 oltre il prevedibile collasso della struttura. ModeSt trascura i passi 
+	 successivi al primo dei due che rispettano i parametri indicati. Non 
+	 è infatti possibile far terminare l'analisi al solutore prima che 
+	 venga raggiunto lo spostamento totale o che non si abbia più la convergenza 
+	 del metodo.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nella finestra di calcolo, 
+	 nella scheda &quot;Dati struttura&quot; selezionare una qualsiasi 
+	 località (è ininfluente ai fini dell'analisi, si può scegliere un'isola, 
+	 è il metodo più veloce) e selezionate anche SLC (non serve nei calcoli 
+	 definitivi, ma aiuta in questa fase a interpretare i risultati).</p></li>
+</ul>
+<p>Al termine dell'analisi, la segnalazione che non è stato raggiunto un 
+ calo sufficiente del tagliante è già indice di mancata convergenza, ma 
+ anche se il calo c'è stato, è meglio controllare come si è comportata 
+ l'analisi.</p>
+<p>Se la percentuale di massa movimentata dai modi principali invece è 
+ insufficiente (ma avreste dovuto già controllarlo all'inizio con una analisi 
+ modale) il problema è proprio del modello non adatto all'analisi pushover. 
+ Ovvio che è possibile continuare l'analisi con le opportune valutazioni. 
+ Un conto è una massa movimentata del 74% ed un altro del 30%.</p>
+<p>Nel gruppo <span class="hcp1">Valori</span> della scheda 
+ <span class="hcp1">Risultati</span> cliccando su <span class="hcp1">Numerici</span> 
+ <img src="../Icone/32/risnumerici32.png" alt="" border="1" class="hcp2">, selezionando 
+ &quot;Risultati analisi&quot; e scegliendo i risultati dell'analisi pushover, 
+ una prima cosa è vedere quanti passi sono stati effettuati ed il valore 
+ dello spostamento massimo. Scorrendo i passi si possono vedere evidenziati 
+ in diversi colori i passi significativi (SLO, SLD, SLV, SLC). L'importante 
+ è che l'analisi sia riuscita a trovare lo SLV, corrispondente ad un calo 
+ percentuale del taglio pari all'85%.</p>
+<p>Possono presentarsi diversi casi, li riassumiamo con alcune indicazioni:</p>
+<p class="hcp3">L'analisi si è interrotta 
+ al primo passo</p>
+<p>Se è stato eseguito solo un passo il problema probabilmente è che l'analisi 
+ non converge neanche per carichi verticali oppure ci sono errori di modellazione. 
+ Si può tentare di aumentare il numero di sotto-iterazioni, ma in genere 
+ il problema è irrisolvibile, la struttura non è in grado di reggere neanche 
+ i carichi gravitazionali.</p>
+<p class="hcp3">L'analisi si è interrotta 
+ prima che siano stati effettuati tutti i passi</p>
+<p>Problemi di convergenza. Se il passo di SLV è stato raggiunto l'analisi 
+ può ritenersi comunque andata a buon fine, altrimenti si può tentare un 
+ nuovo calcolo aumentando il numero di sotto-iterazioni, oppure diminuendo 
+ il passo.</p>
+<p class="hcp3">Sono stati eseguiti tutti 
+ i passi richiesti, ma lo spostamento complessivo richiesto non è stato 
+ raggiunto.</p>
+<p>Se il passo di SLV è stato raggiunto l'analisi può ritenersi andata 
+ a buon fine, ed al limite si possono fare le considerazioni esposte nel 
+ caso successivo.</p>
+<p class="hcp3">Sono stati eseguiti tutti 
+ i passi richiesti, ed è stato raggiunto lo spostamento complessivo richiesto</p>
+<p>Se il passo di SLV è stato raggiunto l'analisi può ritenersi andata 
+ a buon fine, altrimenti occorre aumentare il numero di passi (eventualmente 
+ lasciando invariato il passo di calcolo) per cercare di andare oltre. 
+ Per velocizzare il calcolo si può controllare qual'è il passo in cui si 
+ è raggiunto lo SLV ed impostarne poco di più per le analisi successive. 
+ Sempre per velocizzare il calcolo si può tentare di aumentare il passo 
+ o diminuire il numero di sotto-iterazioni, ma questo potrebbe cambiare 
+ la convergenza. In questo caso fare attenzione a cambiare di conseguenza 
+ anche il numero di passi in modo che lo spostamento complessivo resti 
+ quello desiderato.</p>
+<p>Nel gruppo <span class="hcp1">Disegno</span> della scheda 
+ <span class="hcp1">Risultati</span> cliccando su <span class="hcp1">Curva 
+ c/s</span> <img src="../Icone/16/dccs.png" alt="" border="1" class="hcp2"> 
+ è possibile visualizzare la curva carico-spostamento e quindi avere utili 
+ indicazioni; infatti, dalla curva si nota subito se si è avuto un calo 
+ della resistenza e quindi se l'analisi converge o no.</p>
+<p>Quando si è raggiunta la convergenza per il sisma in direzione X, è 
+ possibile rilanciare il calcolo, andare nelle combinazioni e modificare 
+ i fattori di combinazione del sisma SX e SY inserendo 0 e 1 anziché 1 
+ e 0 come di default. In questo modo il calcolo di test verrà eseguito 
+ sul sisma Y invece che sul sisma X, consentendo di fare le stesse valutazioni 
+ sopra esposte.</p>
+<p>Quando sono stati ben definiti i parametri in termini di passo, numero 
+ iterazioni e sotto-iterazioni che sembrano far convergere l'analisi, sarà 
+ finalmente possibile (dopo aver effettuato nuovamente un calcolo non pushover) 
+ rientrare nelle progettazioni interattive e assegnare la vera armatura 
+ presente negli elementi. Assegnare le desiderate eccentricità, e provare 
+ un calcolo totale della struttura. Purtroppo l'effetto delle eccentricità 
+ e delle forze del secondo gruppo non è a priori determinabile e non è 
+ quindi detto che con i dati definitivi l'analisi vada a compimento in 
+ tutti i casi. Occorrerà quindi talvolta provvedere nuovamente allo studio 
+ del comportamento della struttura ed ad un nuovo affinamento dei parametri 
+ di analisi.</p>
+</body>
+</html>

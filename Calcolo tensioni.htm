@@ -1,0 +1,172 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Calcolo tensioni</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+font.hcp1 { font-family:Symbol; }
+span.hcp2 { vertical-align:sub; }
+p.hcp3 { text-align:center; }
+table.hcp4 { margin-top:14pt; }
+td.hcp5 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp6 { margin-bottom:0; }
+span.hcp7 { font-weight:bold; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Calcolo tensioni</h1>
+<p>Vengono valutate le <font face="Symbol" class="hcp1">s</font> per sforzo normale e flessione nei piani principali e le <font face="Symbol" class="hcp1">t</font> dovute a taglio (in entrambe le direzioni) e torsione.</p>
+<p>Nel calcolo delle <font face="Symbol" class="hcp1">s</font> per sforzo normale e flessione la sezione viene considerata completa di raccordi ed eventuali variazioni di spessore. Nel calcolo della <font face="Symbol" class="hcp1">t</font> per taglio e torsione e della corrispondente <font face="Symbol" class="hcp1">s</font> per sforzo normale e flessione necessaria per il calcolo della <font face="Symbol" class="hcp1">s</font><span class="hcp2">id</span>, i raccordi vengono immaginati lineari e gli spessori costanti. Vengono valutate le tensioni in tutti i vertici del perimetro della sezione, nel centro dei lati o in corrispondenza dei punti del perimetro allineati con il baricentro ed inoltre all'inizio e alla fine dei raccordi. Per sezioni prive di raccordi il punto d'attacco anima-ala viene verificato considerandolo una volta come appartenente all'anima ed una volta come appartenente all'ala.</p>
+<p>La tensione tangenziale per taglio viene calcolata sovrapponendo gli effetti del taglio in direzione Y e del taglio in direzione Z, immaginati come sollecitazioni pure (si considerano allineati centro di taglio, centro di torsione e baricentro). In ogni punto della sezione si ha quindi:</p>
+<p class="hcp3"><font face="Symbol" class="hcp1">t</font> = T*S/(b*J)</p>
+<p>dove:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="100%" class="hcp4">
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp7">T</span></p>
+</td>
+<td style="width:95%;" class="hcp5">
+<p class="hcp6">sforzo di taglio;</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp7">S</span></p>
+</td>
+<td style="width:95%;" class="hcp5">
+<p class="hcp6">momento statico della parte di sezione sovrastante o sottostante il punto di verifica;</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp7">b</span></p>
+</td>
+<td style="width:95%;" class="hcp5">
+<p class="hcp6">corda (larghezza della sezione);</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp7">J</span></p>
+</td>
+<td style="width:95%;" class="hcp5">
+<p class="hcp6">momento d'inerzia della sezione intorno all'asse normale alla direzione di azione di T.</p>
+</td>
+</tr>
+</table>
+<p>La tensione tangenziale per torsione si calcola sempre nell'ipotesi di torsione pura (uniforme). Per sezioni composte da profili sottili si ha quindi:</p>
+<p class="hcp3"><font face="Symbol" class="hcp1">t</font> = M<span class="hcp2">x</span>*t/J<span class="hcp2">x</span></p>
+<p>dove:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="100%" class="hcp4">
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp7">M<span class="hcp2">x</span></span></p>
+</td>
+<td style="width:95%;" class="hcp5">
+<p class="hcp6">momento torcente;</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp7">t</span></p>
+</td>
+<td style="width:95%;" class="hcp5">
+<p class="hcp6">spessore della sezione nel punto di verifica;</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp7">J<span class="hcp2">x</span></span></p>
+</td>
+<td style="width:95%;" class="hcp5">
+<p class="hcp6">momento d'inerzia torsionale.</p>
+</td>
+</tr>
+</table>
+<p>Nei punti di spigolo si suppone una tensione tangenziale per torsione nulla.</p>
+<p>Per sezioni circolari piene o cave si ha:</p>
+<p class="hcp3"><font face="Symbol" class="hcp1">t</font> = M<span class="hcp2">x</span>*r/J<span class="hcp2">x</span></p>
+<p>dove:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="100%" class="hcp4">
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp7">M<span class="hcp2">x</span></span></p>
+</td>
+<td style="width:95%;" class="hcp5">
+<p class="hcp6">momento torcente;</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp7">r</span></p>
+</td>
+<td style="width:95%;" class="hcp5">
+<p class="hcp6">raggio della sezione (interno o esterno per sezioni cave);</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp7">J<span class="hcp2">x</span></span></p>
+</td>
+<td style="width:95%;" class="hcp5">
+<p class="hcp6">momento d'inerzia torsionale.</p>
+</td>
+</tr>
+</table>
+<p>Per sezioni rettangolari sul lato lungo si ha:</p>
+<p class="hcp3"><font face="Symbol" class="hcp1">t</font> = M<span class="hcp2">x</span>*<font face="Symbol" class="hcp1">a</font>/(b*h)</p>
+<p>dove:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="100%" class="hcp4">
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp7">M</span><span class="hcp2"><span class="hcp7">x</span></span></p>
+</td>
+<td style="width:95%;" class="hcp5">
+<p class="hcp6">momento torcente;</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp7">b</span></p>
+</td>
+<td style="width:95%;" class="hcp5">
+<p class="hcp6">lato lungo della sezione;</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp7">h</span></p>
+</td>
+<td style="width:95%;" class="hcp5">
+<p class="hcp6">lato corto della sezione;</p>
+</td>
+</tr>
+<tr>
+<td style="width:5%;" class="hcp5">
+<p class="hcp6"><span class="hcp2"><font face="Symbol" class="hcp1"><span class="hcp7">a</span></font></span></p>
+</td>
+<td style="width:95%;" class="hcp5">
+<p class="hcp6">coefficiente suggerito da De Saint-Venant e pari a 3+1.8*n (con n = b/h).</p>
+</td>
+</tr>
+</table>
+<p>Sul lato corto si considera <font face="Symbol" class="hcp1">t</font><span class="hcp2">1</span> = k*<font face="Symbol" class="hcp1">t</font>, con k variabile fra 1 e 0.7425 per 1 &lt; n &lt; 4 e pari a 0.7425 per n &gt; 4.</p>
+<p>Da notare che per piatti allungati l'espressione citata tende a coincidere a&#160;quella definita per sezioni con spessori sottili.</p>
+<p class="hcp6">Nel caso di sollecitazioni dinamiche, per le verifiche a pressoflessione vengono controllate tutte le combinazioni possibili di N±N<span class="hcp2">d</span>, My±My<span class="hcp2">d</span> e Mz±Mz<span class="hcp2">d</span>,&#160;mentre per il taglio ed il momento torcente la componente dinamica viene considerata dello stesso segno della componente statica.</p>
+</body>
+</html>

@@ -1,0 +1,417 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Esempi</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+img.hcp4 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp5 { font-style:italic; }
+table.hcp6 { margin-top:14pt;
+border-collapse:separate; }
+font.hcp7 { font-family:Symbol; }
+span.hcp8 { text-decoration:none; }
+p.hcp9 { text-align:right;
+margin-bottom:0; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Esempi di combinazione di più calcoli</h1>
+<h2>Analisi di comportamenti strutturali in più fasi</h2>
+<p>Supponiamo di dover calcolare una struttura in cui le travi sono di 
+ tipo prefabbricato con completamento del getto in opera dei nodi e/o di 
+ parte della trave, in modo che il comportamento della struttura sia il 
+ seguente:</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt;" cellspacing="0" 
+		 width="100%">
+	<col style="width: 10%;">
+	<col style="width: 90%;">
+	<tr>
+		<td class="hcp1"><p class="hcp2"><span class="hcp3">prima fase</span></p></td>
+		<td class="hcp1"><p class="hcp2">carichi 
+		 permanenti e travi in semplice appoggio (prima del getto integrativo);</p></td>
+	</tr>
+	<tr>
+		<td class="hcp1"><p class="hcp2"><span class="hcp3">seconda fase</span></p></td>
+		<td class="hcp1"><p class="hcp2">carichi 
+		 accidentali e travi incastrate (dopo il getto integrativo).</p></td>
+	</tr>
+</table>
+<p>In pratica (per le travi) i momenti di campata sono dati dai carichi 
+ permanenti con l'ipotesi di semplice appoggio, mentre i momenti d'incastro 
+ sono dati dai carichi accidentali (eventualmente con il sisma).</p>
+<p>Schematizziamo la struttura CALC1 con le travi incernierate, definiamo 
+ le CCE dei carichi permanenti ed eseguiamo il calcolo statico per valutare 
+ i momenti di campata. Salviamo la struttura con nome CALC2 (cliccando 
+ sul menu dell'applicazione <span class="hcp3"><img src="../Icone/modest32.png" alt="" border="1" class="hcp4"></span> selezionando <span class="hcp3">Salva 
+ con nome</span> <span class="hcp5"><img src="../Icone/32/main_salvacome32.png" alt="" border="1" class="hcp4"></span> 
+ e poi <span class="hcp3">Struttura nel progetto</span> <span class="hcp5"><img src="../Icone/32/main_salvacome_struttura32.png" alt="" border="1" class="hcp4"></span>), aggiungiamo 
+ le CCE dei carichi accidentali, modifichiamo i vincoli delle travi ed 
+ eseguiamo il calcolo (supponiamo sismico).</p>
+<p>Ci troveremo quindi ad avere, per le due strutture, le seguenti CCE:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="360" align="center" border="1" class="hcp6">
+	<tr>
+		<td width="120" bgcolor="#808080" class="hcp1"><p class="hcp2">CALC1</p></td>
+		<td width="240" bgcolor="#808080" class="hcp1"><p class="hcp2">CALC2</p></td>
+	</tr>
+	<tr>
+		<td width="120" class="hcp1"><p class="hcp2">PESO 
+		 + QPS ALL</p></td>
+		<td width="240" class="hcp1"><p class="hcp2">PESO 
+		 + QPS ALL</p></td>
+	</tr>
+	<tr>
+		<td width="120" class="hcp1"><p class="hcp2">&#160;</p></td>
+		<td width="240" class="hcp1"><p class="hcp2">QA 
+		 ALL</p></td>
+	</tr>
+	<tr>
+		<td width="120" class="hcp1"><p class="hcp2">&#160;</p></td>
+		<td width="240" class="hcp1"><p class="hcp2">TAMPONAMENTI, 
+		 ecc.</p></td>
+	</tr>
+	<tr>
+		<td width="120" class="hcp1"><p class="hcp2">&#160;</p></td>
+		<td width="240" class="hcp1"><p class="hcp2">Sisma 
+		 statico dir <font face="Symbol" class="hcp7">a</font></p></td>
+	</tr>
+	<tr>
+		<td width="120" class="hcp1"><p class="hcp2">&#160;</p></td>
+		<td width="240" class="hcp1"><p class="hcp2">Sisma 
+		 statico dir <font face="Symbol" class="hcp7">a</font><font 
+		 style="font-family: Verdana;" face="Verdana">+90</font></p></td>
+	</tr>
+</table>
+<p>Clicchiamo sul menu dell'applicazione <span class="hcp3"><img src="../Icone/modest32.png" alt="" border="1" class="hcp4"></span> e poi 
+ su <span class="hcp3">Combina i risultati di due calcoli 
+ <img src="../Icone/32/comb2ris32.png" alt="" border="1" class="hcp4"></span> 
+ specificando di voler combinare la struttura CALC1 con la struttura CALC2 
+ nella struttura CALC3, selezioniamo adesso la CCE 1 della struttura CALC1 
+ e le CCE 2, 3, 4 e 5 della struttura CALC2 ottenendo in definitiva le 
+ seguenti CCE:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">PESO + QPS ALL [CALC1]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">QA ALL [CALC2]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">TAMPONAMENTI, ecc. [CALC2]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">SISMA STATICO DIR. <font face="Symbol" class="hcp7">a</font> [CALC2]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">SISMA STATICO DIR. <font face="Symbol" class="hcp7">a</font>+90 [CALC2]</p></li>
+</ol>
+<p>con la consueta tabella delle combinazioni delle CCE:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="360" align="center" border="1" class="hcp6">
+	<tr>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp2"><span class="hcp8">COND</span></p></td>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp9"><span class="hcp8">1</span></p></td>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp9"><span class="hcp8">2</span></p></td>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp9"><span class="hcp8">3</span></p></td>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp9"><span class="hcp8">4</span></p></td>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp9"><span class="hcp8">5</span></p></td>
+	</tr>
+	<tr>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp2">1</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">0.00</p></td>
+	</tr>
+	<tr>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp2">2</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">0.00</p></td>
+	</tr>
+	<tr>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp2">3</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">-1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">0.00</p></td>
+	</tr>
+	<tr>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp2">4</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+	</tr>
+	<tr>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp2">5</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">-1.00</p></td>
+	</tr>
+</table>
+<p>terremo conto del comportamento desiderato.</p>
+<p><span class="hcp3">Nota</span>: Occorre sia presente <span class="hcp3">PESO + QPS ALL</span> anche nella struttura 
+ CALC2 (anche se poi non viene considerato) perché il calcolo delle masse 
+ di piano per il calcolo sismico sia corretto. In caso di calcolo non sismico 
+ non serve ovviamente avere tale CCE nella struttura CALC2.</p>
+<h2>Inviluppo di diverse condizioni di vincolo</h2>
+<p>Supponiamo di voler valutare l'effetto provocato dalla presenza di cerniere 
+ all'incastro di alcune travi o pilastri di una struttura (ad esempio per 
+ cattiva messa in opera delle armature, per sovraccarichi che provocano 
+ l'insorgere di cerniere plastiche, ecc.) e di volersi cautelare progettando 
+ la struttura sia nell'ipotesi che in tali punti ci siano degli incastri, 
+ sia che ci siano delle cerniere.</p>
+<p>Schematizziamo la struttura CALC1 con gli incastri, definiamo le CCE 
+ necessarie ed eseguiamo il calcolo.</p>
+<p>Modifichiamo i vincoli, salviamo la struttura come CALC2 ed eseguiamo 
+ nuovamente il calcolo.</p>
+<p>Ci troveremo quindi ad avere, per le due strutture, le seguenti CCE:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="410" align="center" border="1" class="hcp6">
+	<tr>
+		<td width="180" bgcolor="#808080" class="hcp1"><p class="hcp2">CALC1</p></td>
+		<td width="230" bgcolor="#808080" class="hcp1"><p class="hcp2">CALC2</p></td>
+	</tr>
+	<tr>
+		<td width="180" class="hcp1"><p class="hcp2">PESO 
+		 + QPS ALL</p></td>
+		<td width="230" class="hcp1"><p class="hcp2">PESO 
+		 + QPS ALL</p></td>
+	</tr>
+	<tr>
+		<td width="180" class="hcp1"><p class="hcp2">QA 
+		 ALL</p></td>
+		<td width="230" class="hcp1"><p class="hcp2">QA 
+		 ALL</p></td>
+	</tr>
+	<tr>
+		<td width="180" class="hcp1"><p class="hcp2">TAMPONAMENTI, 
+		 ecc.</p></td>
+		<td width="230" class="hcp1"><p class="hcp2">TAMPONAMENTI, 
+		 ecc.</p></td>
+	</tr>
+</table>
+<p>selezioniamo adesso tutte le CCE della struttura CALC1 e tutte le CCE 
+ della struttura CALC2, ottenendo in definitiva le seguenti CCE:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">PESO + QPS ALL[CALC1]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">QA ALL [CALC1]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">TAMPONAMENTI, ecc. [CALC1]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">PESO + QPS ALL [CALC2]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">QA ALL [CALC2]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">TAMPONAMENTI, ecc. [CALC2]</p></li>
+</ol>
+<p>definendo la seguente tabella delle combinazioni delle CCE:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="419" align="center" border="1" class="hcp6">
+	<tr>
+		<td width="59" bgcolor="#808080" class="hcp1"><p class="hcp2"><span class="hcp8">COND</span></p></td>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp9"><span class="hcp8">1</span></p></td>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp9"><span class="hcp8">2</span></p></td>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp9"><span class="hcp8">3</span></p></td>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp9">4</p></td>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp9"><span class="hcp8">5</span></p></td>
+		<td width="60" bgcolor="#808080" class="hcp1"><p class="hcp9"><span class="hcp8">6</span></p></td>
+	</tr>
+	<tr>
+		<td width="59" bgcolor="#808080" class="hcp1"><p class="hcp2">1</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">0.00</p></td>
+	</tr>
+	<tr>
+		<td width="59" bgcolor="#808080" class="hcp1"><p class="hcp2">2</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">0.0</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td width="60" class="hcp1"><p class="hcp9">1.00</p></td>
+	</tr>
+</table>
+<p>avremo l'<span class="hcp3">inviluppo</span> dei due casi 
+ desiderati. In caso di calcolo sismico avremo analogamente le seguenti 
+ CCE complessive:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">PESO + QPS ALL [CALC1]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">QA ALL [CALC1]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">TAMPONAMENTI, ecc. [CALC1]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">PESO + QPS ALL [CALC2]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">QA ALL [CALC2]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">TAMPONAMENTI, ecc. [CALC2]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">SISMA STATICO DIR. <font face="Symbol" class="hcp7">a</font> [CALC1]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">SISMA STATICO DIR. <font face="Symbol" class="hcp7">a</font>+90 [CALC1]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">SISMA STATICO DIR. <font face="Symbol" class="hcp7">a</font> [CALC2]</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">SISMA STATICO DIR. <font face="Symbol" class="hcp7">a</font>+90 [CALC2]</p></li>
+</ol>
+<p>dovendo poi definire la seguente tabella delle combinazioni delle CCE:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="100%" border="1" class="hcp6">
+	<tr>
+		<td style="width:6%;" bgcolor="#808080" class="hcp1"><p class="hcp2"><span class="hcp8">COND</span></p></td>
+		<td style="width:5%;" bgcolor="#808080" class="hcp1"><p class="hcp9"><span class="hcp8">1</span></p></td>
+		<td style="width:5%;" bgcolor="#808080" class="hcp1"><p class="hcp9"><span class="hcp8">2</span></p></td>
+		<td style="width:5%;" bgcolor="#808080" class="hcp1"><p class="hcp9"><span class="hcp8">3</span></p></td>
+		<td style="width:5%;" bgcolor="#808080" class="hcp1"><p class="hcp9"><span class="hcp8">4</span></p></td>
+		<td style="width:5%;" bgcolor="#808080" class="hcp1"><p class="hcp9">5</p></td>
+		<td style="width:5%;" bgcolor="#808080" class="hcp1"><p class="hcp9">6</p></td>
+		<td style="width:5%;" bgcolor="#808080" class="hcp1"><p class="hcp9">7</p></td>
+		<td style="width:5%;" bgcolor="#808080" class="hcp1"><p class="hcp9">8</p></td>
+		<td style="width:5%;" bgcolor="#808080" class="hcp1"><p class="hcp9">9</p></td>
+		<td style="width:5%;" bgcolor="#808080" class="hcp1"><p class="hcp9"><span class="hcp8">10</span></p></td>
+	</tr>
+	<tr>
+		<td style="width:6%;" bgcolor="#808080" class="hcp1"><p class="hcp2">1</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+	</tr>
+	<tr>
+		<td style="width:6%;" bgcolor="#808080" class="hcp1"><p class="hcp2">2</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+	</tr>
+	<tr>
+		<td style="width:6%;" bgcolor="#808080" class="hcp1"><p class="hcp2">3</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">-1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+	</tr>
+	<tr>
+		<td style="width:6%;" bgcolor="#808080" class="hcp1"><p class="hcp2">4</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+	</tr>
+	<tr>
+		<td style="width:6%;" bgcolor="#808080" class="hcp1"><p class="hcp2">5</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">-1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+	</tr>
+	<tr>
+		<td style="width:6%;" bgcolor="#808080" class="hcp1"><p class="hcp2">6</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+	</tr>
+	<tr>
+		<td style="width:6%;" bgcolor="#808080" class="hcp1"><p class="hcp2">7</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+	</tr>
+	<tr>
+		<td style="width:6%;" bgcolor="#808080" class="hcp1"><p class="hcp2">8</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">-1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+	</tr>
+	<tr>
+		<td style="width:6%;" bgcolor="#808080" class="hcp1"><p class="hcp2">9</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+	</tr>
+	<tr>
+		<td style="width:6%;" bgcolor="#808080" class="hcp1"><p class="hcp2">10</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">1.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">0.00</p></td>
+		<td style="width:5%;" class="hcp1"><p class="hcp9">-1.00</p></td>
+	</tr>
+</table>
+<p>In tal caso non è possibile eseguire l'analisi sismica dinamica.</p>
+<p class="hcp2">In pratica nel paragrafo precedente si è fatta 
+ la <span class="hcp3">somma</span> di più CCE, mentre in 
+ questo caso si è fatto l'<span class="hcp3">inviluppo</span>.</p>
+</body>
+</html>

@@ -1,0 +1,82 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione plinti indipendenti ai sensi D.M. 17/01/18</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-family:Symbol, serif; }
+span.hcp2 { vertical-align:Sub; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progettazione plinti indipendenti ai sensi D.M. 17/01/18</h1>
+<p>La progettazione dei plinti può essere effettuata anche quando il progettista 
+ ha a disposizione solo le reazioni vincolari di una sovrastruttura calcolata 
+ da altri (caso classico dei prefabbricati). Nel caso di strutture calcolate 
+ sismicamente secondo il D.M. 17/01/18 occorre, in tal caso, procedere 
+ come segue:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">Inserire una serie di nodi 
+	 (la cui posizione non è rilevante), definire i plinti ad essi associati 
+	 ed i pilastri incidenti (le cui dimensioni sono comunque necessarie 
+	 per le verifiche a punzonamento) e procedere poi con l'inserimento 
+	 sia dei plinti che dei pilastri.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Definire un nuovo tipo di 
+	 CCE impostando come &quot;Tipologia&quot; l'opzione &quot;Permanente&quot;, 
+	 specificando per entrambi i coefficienti <span class="hcp1">g</span> 
+	 il valore unitario ed eventualmente un commento come ad esempio &quot;Reazioni 
+	 vincolari da prefabbricato&quot;.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Definire una nuova CCE assegnando 
+	 come tipo di CCE quella precedentemente definita.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Inserire le reazioni vincolari 
+	 come carichi sui nodi, assegnando il carico corrispondente alla reazione 
+	 vincolare lungo l'asse Z al nodo in sommità del pilastro.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Ripetere le operazioni del 
+	 punto 3 e 4 tante volte quante sono i gruppi di reazioni vincolari.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Se i plinti sono a bicchiere 
+	 e si vuole verificare il bicchiere con i tagli e i momenti resistenti 
+	 del pilastro soprastante occorre creare un file con lo stesso nome 
+	 della struttura con estensione MRP. Il file deve essere creato nella 
+	 cartella del progetto e deve contenere i seguenti dati separati dal 
+	 carattere &quot;;&quot;: numero del nodo al piede della struttura; 
+	 numero della combinazione delle condizioni di carico elementare di 
+	 tipo SLV o SND; valori dei tagli e dei momenti resistenti, espressi 
+	 in daN e daNm, eventualmente già amplificati&#160;di <span class="hcp1">g</span><span class="hcp2">Rd</span>: TY, TZ, MY, MZ. Un esempio 
+	 di file dati per la definizione dei tagli e dei momenti resistenti 
+	 potrebbe essere il seguente: 6;2;-74266;74266;154053;154053. Nota: 
+	 se il file MRP viene modificato occorre riverificare i plinti.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Lanciare il calcolo della 
+	 struttura con il metodo agli elementi finiti.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Affinché le reazioni vincolari 
+	 derivanti dai carichi nodali applicati siano amplificate di <span class="hcp1">g</span><span class="hcp2">Rd</span>, 
+	 impostare come tipo di calcolo &quot;Analisi sismica statica&quot; 
+	 e &quot;Nessun impalcato rigido&quot;, selezionare un qualsiasi sito 
+	 di costruzione, selezionare &quot;Struttura dissipativa&quot;, impostare 
+	 la classe di duttilità e lasciare tutte le altre opzioni impostate 
+	 per default.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Nella scheda &quot;Ambienti&quot; 
+	 eliminare l'ambiente 1 &quot;Calcolo sismico&quot;.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Ipotizzando che i dati forniti 
+	 siano già relativi alle combinazioni delle CCE, andrà definita una 
+	 matrice delle combinazioni diagonale quindi, nella scheda &quot;Combinazioni&quot; 
+	 aggiungere un numero di righe tali da avere il numero delle righe 
+	 (CC) uguale al numero delle colonne (CCE) e modificare la matrice 
+	 delle combinazioni in modo da ottenere una matrice diagonale.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Assegnare ad ogni CC il &quot;Tipo 
+	 di combinazione di carico&quot;. Ad esempio se nella prima CC è presente 
+	 la CCE relativa alle reazioni vincolari relative allo Stato limite 
+	 di vita selezionare SLV.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Eseguire il calcolo della 
+	 struttura in modo da trasformare i carichi nodali assegnati nelle 
+	 reazioni vincolari che verranno poi utilizzate nel progetto dei plinti.</p></li>
+</ol>
+</body>
+</html>

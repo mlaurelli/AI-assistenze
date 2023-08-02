@@ -1,0 +1,222 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>DTAU - Disegna tau</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+font.hcp4 { font-family:Symbol; }
+td.hcp5 { padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp6 { text-align:left;
+margin-bottom:0; }
+span.hcp7 { vertical-align:sub; }
+span.hcp8 { font-weight:bold;
+text-decoration:none; }
+span.hcp9 { font-style:italic; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">DTAU - Disegna tau</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Progettazione interattiva travi, plinti/pali, sezioni, collegamenti</p>
+</td>
+<td style="width:28%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p>
+</td>
+</tr>
+</table>
+<p class="AmbienteProgettazione"><span class="hcp3">Progettazione interattiva travi</span></p>
+<p>Attiva o disattiva il disegno del diagramma delle tensioni tangenziali nella travata.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">DTAU</span></p>
+<p>Viene visualizzato il diagramma delle tensioni tangenziali nell'anima ed eventualmente nell'ala della travata.</p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Nel caso in cui una o più aste costituenti la travata siano a T o a L vengono disegnati due diagrammi. Il diagramma inferiore si riferisce alle tensioni tangenziali massime nell'anima mentre il diagramma superiore si riferisce alle tensioni tangenziali nell'ala.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Gli sforzi tangenziali nell'anima, se è stato effettuato il progetto a torsione, sono rappresentati da due linee: la prima linea rappresenta la <font face="Symbol" class="hcp4">t</font> dovuta al taglio e può assumere i seguenti colori:</p>
+</li>
+</ul>
+
+<table wrapperparagraphselector="P.IndentBullet1" cellspacing="0" width="40%">
+<col>
+<col width="300">
+<tr>
+<td width="80" class="hcp5">
+<p class="hcp6">grigio</p>
+</td>
+<td width="300" class="hcp5">
+<p><font face="Symbol" class="hcp4">t</font> &lt; <font face="Symbol" class="hcp4">t</font><span class="hcp7">c0</span></p>
+</td>
+</tr>
+<tr>
+<td width="80" class="hcp5">
+<p class="hcp6">giallo</p>
+</td>
+<td width="300" class="hcp5">
+<p><font face="Symbol" class="hcp4">t</font><span class="hcp7">c0</span> &lt; <font face="Symbol" class="hcp4">t</font> &lt; <font face="Symbol" class="hcp4">t</font><span class="hcp7">c1</span></p>
+</td>
+</tr>
+<tr>
+<td width="80" class="hcp5">
+<p class="hcp6">rosso</p>
+</td>
+<td width="300" class="hcp5">
+<p><font face="Symbol" class="hcp4">t</font> &gt; <font face="Symbol" class="hcp4">t</font><span class="hcp7">c1</span></p>
+</td>
+</tr>
+</table>
+
+<p class="IndentBullet1" style="margin-top: 0pt;">La seconda linea rappresenta la somma algebrica di <font face="Symbol" class="hcp4">t</font> dovuta al taglio e di <font face="Symbol" class="hcp4">t</font> dovuta alla torsione e può assumere i seguenti colori:</p>
+<table wrapperparagraphselector="P.IndentBullet1" cellspacing="0" width="40%">
+<col>
+<col width="300">
+<tr>
+<td width="80" class="hcp5">
+<p class="hcp6">grigio</p>
+</td>
+<td width="300" class="hcp5">
+<p><font face="Symbol" class="hcp4">t</font> &lt; <font face="Symbol" class="hcp4">t</font><span class="hcp7">c0</span></p>
+</td>
+</tr>
+<tr>
+<td width="80" class="hcp5">
+<p class="hcp6">giallo</p>
+</td>
+<td width="300" class="hcp5">
+<p><font face="Symbol" class="hcp4">t</font><span class="hcp7">c0</span> &lt; <font face="Symbol" class="hcp4">t</font> &lt; <font face="Symbol" class="hcp4">t</font><span class="hcp7">c1</span>+10%</p>
+</td>
+</tr>
+<tr>
+<td width="80" class="hcp5">
+<p class="hcp6">rosso</p>
+</td>
+<td width="300" class="hcp5">
+<p><font face="Symbol" class="hcp4">t</font> &gt; <font face="Symbol" class="hcp4">t</font><span class="hcp7">c1</span>+10%</p>
+</td>
+</tr>
+</table>
+<p class="IndentBullet1" style="margin-top: 0pt;">Nel diagramma degli sforzi tangenziali nell'anima, considerando che le <font face="Symbol" class="hcp4">t</font> per taglio e le <font face="Symbol" class="hcp4">t</font> per torsione non hanno la stessa direzione, viene rappresentato il massimo fra la somma vettoriale e la somma algebrica delle due tensioni e l'unica linea che ne risulta può assumere i seguenti colori:</p>
+
+<table wrapperparagraphselector="P.IndentBullet1" cellspacing="0" width="40%">
+<col>
+<col width="300">
+<tr>
+<td width="80" class="hcp5">
+<p class="hcp6">grigio</p>
+</td>
+<td width="300" class="hcp5">
+<p><font face="Symbol" class="hcp4">t</font> &lt; <font face="Symbol" class="hcp4">t</font><span class="hcp7">c0</span></p>
+</td>
+</tr>
+<tr>
+<td width="80" class="hcp5">
+<p class="hcp6">giallo</p>
+</td>
+<td width="300" class="hcp5">
+<p><font face="Symbol" class="hcp4">t</font><span class="hcp7">c0</span> &lt; <font face="Symbol" class="hcp4">t</font> &lt; <font face="Symbol" class="hcp4">t</font><span class="hcp7">c1</span></p>
+</td>
+</tr>
+<tr>
+<td width="80" class="hcp5">
+<p class="hcp6">rosso</p>
+</td>
+<td width="300" class="hcp5">
+<p><font face="Symbol" class="hcp4">t</font> &gt; <font face="Symbol" class="hcp4">t</font><span class="hcp7">c1</span></p>
+</td>
+</tr>
+</table>
+
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">La posizione del diagramma può essere modificata con il comando <span class="hcp8"><a href="PDIA.htm">PDIA</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il diagramma non viene in nessun caso riportato nel file DXF.</p>
+</li>
+</ul>
+<p class="AmbienteProgettazione"><span class="hcp3">Progettazione interattiva plinti/pali</span></p>
+<p>Attiva o disattiva il disegno del diagramma delle tensioni tangenziali nella sezione del palo.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">DTAU</span></p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Il disegno della tensione viene effettuato nella finestra apribile con il comando <span class="hcp3"><a href="_VER.htm">?VER</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il disegno viene effettuato per la verifica corrente (<span class="hcp8"><a href="VERC.htm">VERC</a></span>), se compatibile con la visualizzazione richiesta.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Con il disegno oggetto attivo è possibile visualizzare il diagramma in vista prospettica.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il disegno viene effettuato mediante mappe a colori.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il numero dei colori della mappa può essere modificato usando <span class="hcp9">Proprietà e opzioni di disegno</span> <font style="font-family: Wingdings;" face="Wingdings">à</font> <span class="hcp9">Mappe e diagrammi</span> del menu a comparsa che si ottiene cliccando col tasto destro in un punto vuoto della finestra di editor.</p>
+</li>
+</ul>
+<p class="AmbienteProgettazione" style="font-weight: bold;">Progettazione interattiva sezioni</p>
+<p>Attiva o disattiva il disegno del diagramma delle tensioni tangenziali nella sezione.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">DTAU</span></p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Il disegno viene effettuato per la verifica corrente (<span class="hcp8"><a href="VERC.htm">VERC</a></span>), se compatibile con la visualizzazione richiesta.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Con il disegno oggetto attivo è possibile visualizzare il diagramma in vista prospettica.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il comando è attivo solo per verifiche alle tensioni ammissibili.</p>
+</li>
+</ul>
+<p class="AmbienteProgettazione"><span class="hcp3">Progettazione interattiva collegamenti</span></p>
+<p>Attiva o disattiva il disegno della mappa delle tensioni tangenziali nei bulloni o tirafondi e nella saldatura.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">DTAU</span></p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Il disegno viene effettuato per la verifica corrente (<span class="hcp8"><a href="VERC.htm">VERC</a></span>), se compatibile con la visualizzazione richiesta.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Con il disegno oggetto attivo è possibile visualizzare il diagramma in vista prospettica.</p>
+</li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+//]]>
+</script>
+</body>
+</html>

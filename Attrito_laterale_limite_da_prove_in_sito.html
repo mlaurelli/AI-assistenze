@@ -1,0 +1,371 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Attrito laterale limite da prove in sito</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { text-align:center; }
+img.hcp2 { border:none; }
+span.hcp3 { vertical-align:Sub; }
+span.hcp4 { font-weight:bold; }
+span.hcp5 { font-family:Symbol, serif;
+font-weight:bold; }
+span.hcp6 { vertical-align:Sub;
+font-weight:bold; }
+span.hcp7 { font-family:Symbol, serif; }
+table.hcp8 { vertical-align:top; }
+tr.hcp9 { vertical-align:top; }
+td.hcp10 { border:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp11 { font-weight:bold; }
+td.hcp12 { border-top:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp13 { text-align:center;
+font-weight:bold; }
+span.hcp14 { vertical-align:Super; }
+td.hcp15 { border-left:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+td.hcp16 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp17 { text-align:right; }
+span.hcp18 { font-weight:normal; }
+td.hcp19 { border-left:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px;
+vertical-align:center; }
+p.hcp20 { font-weight:bold;
+text-align:left; }
+p.hcp21 { text-align:left; }
+td.hcp22 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px;
+vertical-align:center; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Attrito laterale limite da prove in sito</h1>
+<p>Il valore dell'attrito limite da prove in sito, ad una generica profondità 
+ (z), è calcolato elaborando il risultato della misura più vicina, come 
+ descritto nella seguente figura:</p>
+<p class="hcp1"><img src="Ver_fond_prof_02.gif" alt="" width="415" height="384" border="0" class="hcp2"></p>
+<h2 class="Titolo5">Calcolo dell'attrito laterale limite da prove CPT</h2>
+<p>Vengono elaborati i risultati della prova penetrometrica statica CPT 
+ (Cone Penetration Test), rappresentati dalla tensione resistente laterale 
+ locale (f<span class="hcp3">s</span>) e dalla resistenza 
+ unitaria alla punta (q<span class="hcp3">c</span>). Sono 
+ implementate le seguenti possibilità:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp4">Calcolo 
+	 di</span> <span class="hcp5">t</span><span class="hcp6">s</span> <span class="hcp4">dal 
+	 rapporto con f</span><span class="hcp6">s</span>, 
+	 indicando il rapporto fra la tensione limite (<span class="hcp7">t</span><span class="hcp3">s</span>) e la tensione resistente laterale 
+	 locale misurata (fs). <span class="hcp4">Nota</span>: 
+	 in generale si pone <span class="hcp7">t</span><span class="hcp3">s</span> = f<span class="hcp3">s</span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp4">Calcolo 
+	 di</span> <span class="hcp5">t</span><span class="hcp6">s</span> <span class="hcp4">dal 
+	 rapporto con q</span><span class="hcp6">c</span>, 
+	 indicando il rapporto fra la tensione limite (<span class="hcp7">t</span><span class="hcp3">s</span>) e la resistenza unitaria alla 
+	 punta (q<span class="hcp3">c</span>). È possibile 
+	 stimare tale rapporto:</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="margin-top: 0pt;"><span class="hcp4">Secondo le indicazioni AGI (1984)</span>: 
+	 il valore del rapporto <span class="hcp7">t</span><span class="hcp3">s</span> / q<span class="hcp3">c</span> 
+	 è valutato in funzione di q<span class="hcp3">c</span> 
+	 secondo la tabella:</p></li>
+</ul>
+<table cellspacing="0" width="50%" align="center" class="hcp8">
+	<col style="width: 45%;">
+	<col style="width: 30%;">
+	<col style="width: 25%;">
+	<tr class="hcp9">
+		<td style="width:45%;" class="hcp10"><p class="hcp11">Stato di 
+		 addensamento</p></td>
+		<td style="width:30%;" class="hcp12"><p class="hcp13">q<span class="hcp3">c</span> &lt;kg/cm<span class="hcp14">2</span>&gt;</p></td>
+		<td style="width:25%;" class="hcp12"><p class="hcp13"><span class="hcp7">t</span><span class="hcp3">s</span> 
+		 / q<span class="hcp3">c</span></p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:45%;" class="hcp15"><p>Molto sciolto</p></td>
+		<td style="width:30%;" class="hcp16"><p class="hcp17">&lt; 
+		 20</p></td>
+		<td style="width:25%;" class="hcp16"><p class="hcp17">0.020</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:45%;" class="hcp15"><p>Sciolto</p></td>
+		<td style="width:30%;" class="hcp16"><p class="hcp17">20 
+		 - 50</p></td>
+		<td style="width:25%;" class="hcp16"><p class="hcp17">0.015</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:45%;" class="hcp15"><p>Medio</p></td>
+		<td style="width:30%;" class="hcp16"><p class="hcp17">50 
+		 - 150</p></td>
+		<td style="width:25%;" class="hcp16"><p class="hcp17">0.012</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:45%;" class="hcp15"><p>Denso</p></td>
+		<td style="width:30%;" class="hcp16"><p class="hcp17">150 
+		 - 200</p></td>
+		<td style="width:25%;" class="hcp16"><p class="hcp17">0.009</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:45%;" class="hcp15"><p>Molto denso</p></td>
+		<td style="width:30%;" class="hcp16"><p class="hcp17">&gt; 
+		 200</p></td>
+		<td style="width:25%;" class="hcp16"><p class="hcp17">0.007</p></td>
+	</tr>
+</table>
+<ul>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp4">Secondo 
+	 De Beer (1985)</span>: il valore del rapporto <span class="hcp7">t</span><span class="hcp3">s</span> / q<span class="hcp3">c</span> 
+	 è valutato in funzione di q<span class="hcp3">c</span> 
+	 secondo la tabella:</p></li>
+</ul>
+<table cellspacing="0" width="25%" align="center" class="hcp8">
+	<col style="width: 50%;">
+	<col style="width: 50%;">
+	<tr class="hcp9">
+		<td style="width:50%;" class="hcp10"><p class="hcp13">q<span class="hcp3">c</span> &lt;MPa&gt;</p></td>
+		<td style="width:50%;" class="hcp12"><p class="hcp13"><span class="hcp7">t</span><span class="hcp3">s</span> 
+		 / q<span class="hcp3">c</span></p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:50%;" class="hcp15"><p class="hcp17">=&lt; 10</p></td>
+		<td style="width:50%;" class="hcp16"><p class="hcp17">1/150</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:50%;" class="hcp15"><p class="hcp17">=&gt; 20</p></td>
+		<td style="width:50%;" class="hcp16"><p class="hcp17">1/200</p></td>
+	</tr>
+</table>
+<p style="margin-left: 80px;">in cui per valori di q<span class="hcp3">c</span> 
+ compresi fra 10 e 20 MPa i valori di <span class="hcp7">t</span><span class="hcp3">s</span> vengono interpolati.</p>
+<p>Nel caso di progettazione di <span class="hcp4">micropali</span> 
+ è possibile utilizzare il <span class="hcp4">Metodo di Bustamante 
+ e Doix (1985)</span>. Secondo tale metodo il valore del rapporto <span class="hcp7">t</span><span class="hcp3">s</span>/q<span class="hcp3">c</span> è pari a 1/100. Il diametro 
+ del palo utilizzato per il calcolo, pari a quello della zona iniettata 
+ (D<span class="hcp3">in</span>), è valutato in funzione 
+ del diametro della perforazione, ipotizzato pari a DP, e del tipo di iniezioni 
+ utilizzate. È <b><span class="hcp18">possibile</span></b> 
+ scegliere fra iniezioni ripetute, in cui verrà imposto D<span class="hcp3">in</span> 
+ = 1.50*DP, e iniezione unica, in cui verrà imposto D<span class="hcp3">in</span> 
+ = 1.15*DP.</p>
+<h2 class="Titolo5">Calcolo dell’attrito laterale limite da prove SPT</h2>
+<p>Vengono elaborati i risultati della prova SPT (Standard Penetration 
+ Test), rappresentati dai valori di N<span class="hcp3">spt</span>, 
+ secondo la relazione <span class="hcp7">t</span><span class="hcp3">s</span> = a + b*N<span class="hcp3">spt</span>. 
+ Si richiedono i valori del termine costante (a) e del termine variabile 
+ (b) delle tensioni di correlazione. Tali valori possono essere stimati 
+ secondo la seguente tabella:</p>
+<table cellspacing="0" width="50%" align="center" class="hcp8">
+	<col style="width: 30%;">
+	<col style="width: 30%;">
+	<col style="width: 20%;">
+	<col style="width: 20%;">
+	<tr class="hcp9">
+		<td style="width:30%;" class="hcp10"><p class="hcp11">Palo</p></td>
+		<td style="width:30%;" class="hcp12"><p class="hcp11">Terreno</p></td>
+		<td style="width:20%;" class="hcp12"><p class="hcp13">a 
+		 &lt;kPa&gt;</p></td>
+		<td style="width:20%;" class="hcp12"><p class="hcp13">b 
+		 &lt;kPa&gt;</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td rowspan="2" style="width:30%;" class="hcp19"><p>Battuto</p></td>
+		<td style="width:30%;" class="hcp16"><p>Coesivo</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp17">0</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp17">10</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:30%;" class="hcp16"><p>Incoerente</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp17">0</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp17">2</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td rowspan="2" style="width:30%;" class="hcp19"><p>Trivellato</p></td>
+		<td style="width:30%;" class="hcp16"><p>Coesivo</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp17">0</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp17">5</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:30%;" class="hcp16"><p>Incoerente</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp17">0</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp17">3.3</p></td>
+	</tr>
+</table>
+<p>oppure inseriti da opportune valutazioni del progettista.</p>
+<p><span class="hcp4">Nota</span>: nella seguente tabella 
+ sono riportate alcune tensioni di correlazione (Viggiani 1999):</p>
+<table cellspacing="0" width="100%" class="hcp8">
+	<col style="width: 25%;">
+	<col style="width: 15%;">
+	<col style="width: 10%;">
+	<col style="width: 10%;">
+	<col style="width: 20%;">
+	<col style="width: 20%;">
+	<tr class="hcp9">
+		<td style="width:25%;" class="hcp10"><p class="hcp20">Palo</p></td>
+		<td style="width:15%;" class="hcp12"><p class="hcp20">Terreno</p></td>
+		<td style="width:10%;" class="hcp12"><p class="hcp11">a &lt;kPa&gt;</p></td>
+		<td style="width:10%;" class="hcp12"><p class="hcp11">b &lt;kPa&gt;</p></td>
+		<td style="width:20%;" class="hcp12"><p class="hcp13">Note</p></td>
+		<td style="width:20%;" class="hcp12"><p class="hcp13">Fonte</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td rowspan="3" style="width:25%;" class="hcp19"><p class="hcp21">Battuto 
+		 prefabbricato</p></td>
+		<td style="width:15%;" class="hcp22"><p class="hcp21">Incoerente</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">0</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">2</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp1">-</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp21">Meyerhof 
+		 (1956)</p>
+		<p class="Normal3">Shioi, Fukui (1982)</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:15%;" class="hcp22"><p class="hcp21">Qualsiasi</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">10</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">3.3</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp1">3 
+		 &lt; N<span class="hcp3">spt</span> &lt; 50</p>
+		<p class="Normal3" style="text-align: center;"><span class="hcp7">t</span><span class="hcp3">s</span> &lt; 170 kPa</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp21">Decourt 
+		 (1982)</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:15%;" class="hcp22"><p class="hcp21">Coesivo</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">0</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">10</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp1">-</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp21">Shioi, 
+		 Fukui (1982)</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td rowspan="4" style="width:25%;" class="hcp19"><p class="hcp21">Battuto 
+		 gettato in opera</p></td>
+		<td rowspan="2" style="width:15%;" class="hcp22"><p class="hcp21">Incoerente</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">30</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">2</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp1"><span class="hcp7">t</span><span class="hcp3">s</span> 
+		 &lt; 200 kPa</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp21">Yamashita 
+		 (1987)</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:10%;" class="hcp22"><p class="hcp17">0</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">5</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp1">-</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp21">Shioi, 
+		 Fukui (1982)</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td rowspan="2" style="width:15%;" class="hcp22"><p class="hcp21">Coesivo</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">0</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">5</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp1"><span class="hcp7">t</span><span class="hcp3">s</span> 
+		 &lt; 150 kPa</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp21">Yamashita 
+		 (1987)</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:10%;" class="hcp22"><p class="hcp17">0</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">10</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp1">-</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp21">Shioi, 
+		 Fukui (1982)</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td rowspan="4" style="width:25%;" class="hcp19"><p class="hcp21">Trivellato</p></td>
+		<td rowspan="2" style="width:15%;" class="hcp22"><p>Incoerente</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">0</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">1</p></td>
+		<td style="width:20%;" class="hcp22"><p class="hcp1">-</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp21">Findlay 
+		 (1984)</p>
+		<p class="Normal3">Shioi, Fukui (1982)</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:10%;" class="hcp22"><p class="hcp17">0</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">3.3</p></td>
+		<td style="width:20%;" class="hcp22"><p class="hcp1">-</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp21">Wright, 
+		 Reese (1979)</p>
+		<p class="Normal3">Shioi, Fukui (1982)</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td rowspan="2" style="width:15%;" class="hcp22"><p class="hcp21">Coesivo</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">0</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">5</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp1">-</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp21">&#160;</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:10%;" class="hcp22"><p class="hcp17">10</p></td>
+		<td style="width:10%;" class="hcp22"><p class="hcp17">3.3</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp1">3 
+		 &lt; N<span class="hcp3">spt</span> &lt; 50</p>
+		<p class="Normal3" style="text-align: center;"><span class="hcp7">t</span><span class="hcp3">s</span> &lt; 170 kPa</p></td>
+		<td style="width:20%;" class="hcp16"><p class="hcp21">Decourt 
+		 (1982)</p>
+		<p class="Normal3">-pali in fango-</p></td>
+	</tr>
+</table>
+<p>Possono essere utilizzate le seguenti tensioni di correlazione (AGI 
+ 1984):</p>
+<table cellspacing="0" width="30%" align="center" class="hcp8">
+	<col style="width: 50%;">
+	<col style="width: 50%;">
+	<tr class="hcp9">
+		<td style="width:50%;" class="hcp10"><p class="hcp13">a 
+		 &lt;kg/cm<span class="hcp14">2</span>&gt;</p></td>
+		<td style="width:50%;" class="hcp12"><p class="hcp13">b 
+		 &lt;kg/cm<span class="hcp14">2</span>&gt;</p></td>
+	</tr>
+	<tr class="hcp9">
+		<td style="width:50%;" class="hcp15"><p class="hcp1">0</p></td>
+		<td style="width:50%;" class="hcp16"><p class="hcp1">1/50</p></td>
+	</tr>
+</table>
+<p>Nel caso di progettazione di <span class="hcp4">micropali</span> 
+ è possibile utilizzare il <span class="hcp4">Metodo di Bustamante 
+ e Doix (1985)</span>. Secondo tale metodo il valore dell'attrito laterale 
+ limite è dato dalla relazione <span class="hcp7">t</span><span class="hcp3">s</span> = (p<span class="hcp3">atm</span>/20)*N<span class="hcp3">spt</span>, in cui p<span class="hcp3">atm</span> 
+ è la pressione atmosferica. Il diametro del palo utilizzato per il calcolo, 
+ pari a quello della zona iniettata (D<span class="hcp3">in</span>), 
+ è valutato in funzione del diametro della perforazione, ipotizzato pari 
+ a DP, e del tipo di iniezioni utilizzate. È <b><span class="hcp18">possibile</span></b> 
+ scegliere fra iniezioni ripetute, in cui verrà imposto D<span class="hcp3">in</span> 
+ = 1.50*DP, e iniezione unica, in cui verrà imposto D<span class="hcp3">in</span> 
+ = 1.15*DP.</p>
+<p>Nel caso di progettazione di <span class="hcp4">pali trivellati 
+ di grande diametro</span> è possibile utilizzare il <span class="hcp4">Metodo 
+ di Wright e Reese (1977)</span>. Secondo tale metodo il valore di <span class="hcp7">t</span><span class="hcp3">s</span>, 
+ è pari al minimo risultante dalle relazioni <span class="hcp7">t</span><span class="hcp3">s</span> = 0.7*tan(<span class="hcp7">j</span>')*<span class="hcp7">s</span>'<span class="hcp3">vo</span> 
+ e un valore limite di <span class="hcp7">t</span><span class="hcp3">s</span> dato dal seguente grafico:</p>
+<p class="hcp1"><img src="Ver_fond_prof_03.gif" alt="" width="500" height="265" border="0" class="hcp2"></p>
+<p>Per <span class="hcp4">pali trivellati</span> è possibile 
+ ridurre la capacità portante per attrito laterale.</p>
+<p><span class="hcp4">Nota</span>: per pali trivellati si 
+ possono assumere valori di <span class="hcp7">t</span><span class="hcp3">s</span> pari a 1/2 di quelli corrispondenti 
+ ai pali battuti.</p>
+</body>
+</html>

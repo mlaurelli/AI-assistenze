@@ -1,0 +1,116 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Ripartizione dei carichi da solai</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+p.hcp2 { font-weight:bold; }
+p.hcp3 { font-weight:bold;
+text-align:center; }
+img.hcp4 { border:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Ripartizione dei carichi da solai</h1>
+<p>La ripartizione dei carichi, strutturali e da vento, sulle aste di perimetro 
+ del solaio può essere: <span class="hcp1">Unidirezionale</span>, 
+ <span class="hcp1">A piastra perimetrale</span>, <span class="hcp1">A 
+ piastra bisettrice</span>. In funzione del tipo di ripartizione, oltre 
+ a modificarsi la ripartizione dei carichi cambia anche il simbolo del 
+ solaio, come riportato nelle seguenti figure.</p>
+<p class="hcp2">Unidirezionale</p>
+<p>La ripartizione dei carichi viene effettuata secondo la seguente metodologia:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">il carico viene ripartito 
+	 fra le due aste che si fronteggiano nel senso dell'orditura del solaio. 
+	 Le aste vengono quindi classificate come &quot;terminali&quot; o &quot;interne&quot; 
+	 e il carico viene ripartito come indicato nella <a href="Tipi_solai.htm">definizione 
+	 del tipo di solaio</a>;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">una parte di carico viene 
+	 assegnata alle aste parallele all'orditura del solaio se è stata specificata 
+	 una &quot;Larghezza fascia laterale&quot; nella <a href="Tipi_solai.htm">definizione 
+	 del tipo di solaio</a>, in tal caso il carico sulle altre aste viene 
+	 ridotto per garantire che il carico totale del solaio non aumenti;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">eventuali aste di sezione 
+	 -1 non vengono caricate, la parte di solaio che ad esse compete viene 
+	 considerata a sbalzo ed il carico assegnato alle aste che le fronteggiano.</p></li>
+</ul>
+<p>Un'asta viene classificata come &quot;terminale&quot; se, oltre al solaio 
+ in esame:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">l'asta non è adiacente ad 
+	 un altro solaio;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">l'asta è adiacente anche ad 
+	 un altro solaio che però non è complanare con quello in esame;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">l'asta è adiacente anche ad 
+	 un altro solaio che però ha orditura diversa da quello in esame;</p></li>
+</ul>
+<p>altrimenti l'asta viene classificata come &quot;interna&quot;, cioè 
+ l'asta ha, da entrambi i lati, solai complanari e orditi nella stessa 
+ direzione.</p>
+<p>Due aste &quot;interne&quot; che si fronteggiano si ripartiscono sempre 
+ il carico al 50%, mentre negli altri casi vengono considerati i valori 
+ di ripartizione indicati nella <a href="Tipi_solai.htm">definizione del 
+ tipo di solaio</a>.</p>
+<p><span class="hcp1">A piastra perimetrale</span></p>
+<p>La ripartizione dei carichi viene effettuata secondo la seguente metodologia:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">il carico totale del solaio 
+	 (area per carico a mq del solaio) viene assegnato alle aste perimetrali 
+	 in modo proporzionale alla loro lunghezza;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">eventuali aste di sezione 
+	 -1 non vengono caricate, la parte di solaio che ad esse compete viene 
+	 ripartita sulle altre aste perimetrali.</p></li>
+</ul>
+<p class="hcp2">A piastra bisettrice</p>
+<p>La ripartizione dei carichi viene effettuata secondo la seguente metodologia:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">il solaio viene suddiviso 
+	 in aree d'influenza delimitate dall'asta perimetrale, dalle bisettrici 
+	 degli angoli agli estremi dell'asta e dall'eventuale congiungente 
+	 le bisettrici come riportato nella figura di esempio.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">utilizzabile solo per solai 
+	 composti da 4 lati e convessi;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">il carico assegnato all'asta 
+	 perimetrale è proporzionale all'area d'influenza;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">eventuali aste di sezione 
+	 -1 non vengono caricate, la parte di solaio che ad esse compete viene 
+	 ripartita sulle altre aste perimetrali.</p></li>
+</ul>
+<table class="SimpleGridBlack" cellspacing="0px" width="50%" align="center">
+	<col style="width: 35%;">
+	<col style="width: 15%;">
+	<col style="width: 50%;">
+	<tr class="t1Row">
+		<td>&#160;</td>
+		<td><p class="hcp3">Simbolo</p></td>
+		<td><p class="hcp3">Ripartizione 
+		 dei carichi</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="hcp2">Unidirezionale</p></td>
+		<td><p class="hcp3"><img src="Solaio_simbolo_ripartizione_unid.png" alt="" border="0" class="hcp4"></p></td>
+		<td><p class="hcp3"><img src="Solaio_carico_ripartizione_unid.png" alt="" width="300" height="175" border="0" class="hcp4"></p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p class="hcp2">A piastra perimetrale</p></td>
+		<td><p class="hcp3"><img src="Solaio_simbolo_ripartizione_piastra.png" alt="" border="0" class="hcp4"></p></td>
+		<td><p class="hcp3"><img src="Solaio_carico_ripartizione_piastra.png" alt="" width="300" height="161" border="0" class="hcp4"></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p class="hcp2">A piastra bisettrice</p></td>
+		<td><p class="hcp3"><img src="Solaio_simbolo_ripartizione_bisettrice.png" alt="" border="0" class="hcp4"></p></td>
+		<td><p class="hcp3"><img src="Solaio_carico_ripartizione_bisettrice.png" alt="" width="300" height="161" border="0" class="hcp4"></p></td>
+	</tr>
+</table>
+</body>
+</html>

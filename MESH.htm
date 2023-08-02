@@ -1,0 +1,140 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>MESH - Divide muro/elemento bidimensionale</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+p.hcp3 { text-align:justify; }
+span.hcp4 { font-weight:bold; }
+span.hcp5 { color:#0000ff; }
+span.hcp6 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">MESH - Divide muro/elemento bidimensionale</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" 
+		 width="100%" bgcolor="#C0C0C0">
+	<tr>
+		<td style="width:68%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p></td>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p></td>
+	</tr>
+</table>
+<p class="hcp3">Il comando permette di dividere (discretizzare) 
+ gli elementi bidimensionali in elementi più piccoli.</p>
+<p class="hcp3">Sintassi del comando:</p>
+<p class="Normal3" style="text-align: justify;"><span class="hcp4">MESH</span></p>
+<p class="Normal3">oppure:</p>
+<p class="Normal3"><span class="hcp4">MESH </span><span class="hcp5">A</span></p>
+<p class="Normal3">oppure:</p>
+<p class="Normal3"><span class="hcp4">MESH </span><span class="hcp5">R</span></p>
+<p class="Normal3">oppure:</p>
+<p class="Normal3"><span class="hcp4">MESH </span><span class="hcp5">D</span></p>
+<p class="Normal3">oppure:</p>
+<p class="Normal3"><span class="hcp4">MESH </span><span class="hcp5">N</span></p>
+<p class="Normal3"><span style="text-decoration: underline; "><a href="javascript:void(0);" id="a1" style="font-weight: bold;" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Setbidi.htm');return false;">Selezionare i muri/elementi bidimensionali</a></span></p>
+<p class="hcp3">Nella prima forma occorre fornire le dimensioni 
+ indicative (in direzione X e Z locale degli elementi) dei nuovi elementi 
+ che si vogliono creare. <span style="text-align: justify;">Un valore negativo 
+ delle dimensioni in X o in Z indica che la suddivisione relativa deve 
+ essere effettuata in un numero di parti pari al valore assoluto della 
+ dimensione specificata. Un valore pari a zero delle dimensioni in X o 
+ in Z indica che non deve essere effettuata la suddivisione relativa.</span></p>
+<p class="Normal2" style="text-align: justify;">Nella seconda&#160;e terza 
+ forma occorre fornire la dimensione indicativa dei nuovi elementi che 
+ si vogliono creare e la dimensione delle zone di raffittimento. Nella 
+ terza forma viene sempre creato il raffittimento mentre è nella seconda 
+ forma viene creato se la dimensione del raffittimento è diversa dalla 
+ dimensione della mesh.</p>
+<p class="Normal2" style="text-align: justify;">Nella quarta forma occorre 
+ fornire le dimensioni indicative (in direzione X e Z locale degli elementi) 
+ dei nuovi elementi che si vogliono creare. Un valore pari a zero delle 
+ dimensioni in X o in Z indica che non deve essere effettuata la suddivisione 
+ relativa.</p>
+<p class="Normal2" style="text-align: justify;">Nella quinta forma occorre 
+ fornire il numero di parti indicative (in direzione X e Z locale degli 
+ elementi) dei nuovi elementi che si vogliono creare. Un valore pari a 
+ zero delle dimensioni in X o in Z indica che non deve essere effettuata 
+ la suddivisione relativa.</p>
+<p class="hcp3">Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Il 
+	 comando ha effetto anche su elementi di tipo &quot;muro&quot; ma, 
+	 oltre a dividerli, li trasforma in elementi bidimensionali veri e 
+	 propri.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Se 
+	 vengono selezionati più elementi, la meshatura viene eseguita secondo 
+	 un ordine che non necessariamente rispetta l'ordine di inserimento. 
+	 Per sapere a priori l'ordine in cui verranno meshati gli elementi, 
+	 si può numerarli in ordine consecutivo con la sequenza di comandi 
+	 <span class="hcp6"><a href="NBC.htm">NBC</a></span> 
+	 -1 <span class="hcp6"><a href="ANB.htm">ANB</a></span> 
+	 <span class="hcp4">ALL</span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Gli 
+	 elementi vengono suddivisi secondo il seguente criterio: siano N1-N2-N3-N4 
+	 i nodi dell'elemento; inizialmente vengono esaminati i lati N1-N2 
+	 e N3-N4 ricercando gli eventuali nodi intermedi, dividendo quindi 
+	 per primo il lato contenente più nodi intermedi o, in caso di ugual 
+	 numero di nodi intermedi, il lato più corto. Nel caso di dimensione 
+	 di mesh positiva per ogni tratto (compreso fra eventuali nodi intermedi) 
+	 del lato così individuato viene calcolato il numero di nuove suddivisioni 
+	 come l'arrotondamento all'intero più vicino del rapporto fra la lunghezza 
+	 del tratto e la dimensione X della mesh. Il lato opposto viene poi 
+	 suddiviso imponendo un numero globale di divisioni uguale a quello 
+	 del lato già elaborato ed eventualmente dividendo prima i tratti più 
+	 lunghi. In modo analogo vengono poi trattati gli altri due lati (con 
+	 riferimento alla dimensione della mesh in direzione Z) ed infine vengono 
+	 creati per generazione i nodi interni.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">I 
+	 nuovi nodi creati automaticamente dal comando <span class="hcp4">MESH</span> 
+	 vengono numerati con una numerazione negativa e non vengono normalmente 
+	 visualizzati con <span class="hcp6"><a 
+	 href="DNAG.htm">DNAG</a></span>; in realtà questi sono nodi a tutti 
+	 gli effetti che possono essere cancellati, spostati, ecc.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Gli 
+	 eventuali carichi agenti sull'elemento bidimensionale vengono ripartiti 
+	 e trasferiti ai nuovi elementi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Le 
+	 eventuali aste presenti sul perimetro dell'elemento bidimensionale 
+	 vengono automaticamente suddivise e mantengono automaticamente i carichi 
+	 assegnati.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Gli 
+	 eventuali solai che interessavano i nodi dell'elemento vengono ad 
+	 interessare anche i nuovi nodi.</p></li>
+</ul>
+<p class="hcp3"><span class="hcp4">Comandi 
+ correlati:</span> <span class="hcp6"><a 
+	 href="AGGB.htm">AGGB</a></span> aggiunge un muro/elemento bidimensionale. 
+ <span class="hcp6"><a href="AGGM.htm">AGGM</a></span> 
+ aggiunge un muro. <span class="hcp6"><a 
+	 href="RAME.htm">RAME</a></span> raffina la mesh.</p>
+<p class="hcp3"><span class="hcp4">Argomenti 
+ correlati:</span> <span class="hcp4"><a href="Guida.chm::/Inserimento_di_una_platea.htm">Inserimento 
+ di una platea</a></span></p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a2');
+	FilePopupInit('a3');
+	FilePopupInit('a1');
+//]]></script>
+</body>
+</html>

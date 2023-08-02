@@ -1,0 +1,246 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione interattiva sezioni</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+a.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:bold; }
+img.hcp3 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+font.hcp4 { font-family:Symbol; }
+span.hcp5 { vertical-align:sub; }
+p.hcp6 { font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progettazione interattiva sezioni</h1>
+<p>Nell'ambiente di progettazione interattiva sezioni, se l'armatura della 
+ sezione era già stata precedentemente progettata e archiviata verrà richiamata, 
+ altrimenti verrà creato il solo disegno geometrico della sezione. È anche 
+ possibile consultare il tutorial: <a href="Guida.chm::/Progettazione_interattiva_armature_sezioni.htm" class="hcp1">Progettazione 
+ interattiva sezioni</a>.</p>
+<p>Si riportano di seguito i comandi principali raggruppati per funzionalità:</p>
+<h2 class="Titolo5">Proprietà correnti</h2>
+<p>Nella sezione <span class="hcp2">Ferri</span> del pannello 
+ <span class="hcp2">Proprietà correnti</span> è possibile: 
+ stabilire i diametri da utilizzare per aggiungere nuovi ferri o da assegnare 
+ a ferri esistenti; indicare la modalità di <span class="hcp2">Inserimento</span> 
+ (Automatica, Semiautomatica, Manuale, Passo); indicare il valore del <span class="hcp2">Passo</span> dei ferri longitudinali; specificare 
+ la modalità di <span class="hcp2">Completamento</span> (Adattata, 
+ Terminata, Nessuna), nel caso si utilizzi la modalità di inserimento a 
+ <span class="hcp4">P</span>asso occorre specificare come il programma 
+ debba comportarsi nel caso in cui la lunghezza del lato della sezione 
+ non sia un multiplo del passo. Per approfondimenti si veda il capitolo 
+ <span class="hcp2"><a href="Posizionamento%20armature.htm">Posizionamento 
+ armature</a></span>.</p>
+<p>Nella sezione <span class="hcp2">Staffe</span> del pannello 
+ <span class="hcp2">Proprietà correnti</span> è possibile 
+ stabilire la staffatura da utilizzare per aggiungere nuove staffe o da 
+ assegnare a staffe esistenti.</p>
+<p><span class="hcp2">Utilizzo da linea di comando</span>: 
+ <a href="../Comandi/FERC.htm" class="hcp1">FERC</a>&#160;(Ferro 
+ corrente), <a href="../Comandi/STAC.htm" class="hcp1">STAC</a>&#160;(Staffatura 
+ corrente).</p>
+<h2 class="Titolo5"><a name="Sezioni_Generali" id="Sezioni_Generali"></a>Generali</h2>
+<p><span class="hcp2"><a name="CALC" id="CALC"></a>Ricalcola 
+ <img src="../Icone/16/calc.png" alt="" border="1" class="hcp3"></span> 
+ effettua il controllo che la sezione sia verificata e che siano rispettati 
+ tutti i minimi di regolamento, segnalando le eventuali anomalie. È possibile 
+ impostare la modalità di ricalcolo automatica o manuale selezionando le 
+ relative opzioni del menu che compare cliccando sulla freccia a destra 
+ del comando, per maggiori informazioni si veda il capitolo <span class="hcp2"><a 
+	 href="Modalita_di%20ricalcolo.htm">Modalità di ricalcolo e verifica</a></span>.</p>
+<p><span class="hcp2"><a name="ELAR" id="ELAR"></a>Elimina 
+ prog. <img src="../Icone/16/eliminaprog.png" alt="" border="1" class="hcp3"></span> 
+ elimina completamente la progettazione lasciando solo il disegno geometrico 
+ della sezione.</p>
+<p><span class="hcp2"><a name="_REL"></a>Anteprima rel. <img src="../Icone/16/anteprimarel.png" alt="" border="1" class="hcp3"></span> visualizza 
+ l'anteprima della relazione di calcolo. È possibile visualizzare una relazione 
+ in forma sintetica oppure estesa selezionando la relativa opzione del 
+ menu che compare cliccando sulla freccia a destra del comando. È possibile 
+ specificare se creare la relazione con il sistema tecnico o con l'unità 
+ di misura corrente utilizzando l'opzione &quot;Usa sistema tecnico&quot; 
+ del menu che compare cliccando sulla freccia a destra del comando.</p>
+<p><span class="hcp2"><a name="DESL" id="DESL"></a>Def. sollecit. 
+ <img src="../Icone/16/definiscisollec.png" alt="" border="1" class="hcp3"></span> 
+ definisce le sollecitazioni. Il comando compare solo nella progettazione 
+ interattiva di sezioni con sollecitazioni manuali. Nella finestra di dialogo 
+ è possibile, cliccando sul bottone &quot;Aggiungi&quot; o &quot;Inserisci&quot; 
+ definirle manualmente oppure cliccando sul bottone &quot;Interattivo&quot; 
+ definirle graficamente selezionando le aste, anche con sezione e membratura 
+ diversa, o un'integratore trasversale nella finestra di modellazione oppure 
+ importarle da un file, in formato CSV. Per eliminare le sollecitazioni 
+ definite occorre selezionare la riga corrispondente e cliccare sul bottone 
+ &quot;Elimina&quot;.</p>
+<p>Nel file CSV devono essere contenuti i seguenti dati:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">Il tipo di normativa da utilizzare: 
+	 <span class="hcp2">TA</span> (Tensioni Ammissibili), 
+	 <span class="hcp2">SLU</span> (Stato Limite Ultimo), 
+	 <span class="hcp2">SLU S</span> (Stato Limite ultimo 
+	 Sismico per calcoli eseguiti secondo il D.M. 16/01/96), <span class="hcp2">SLO</span> 
+	 (Stato Limite di Operatività), <span class="hcp2">SLD</span> 
+	 (Stato Limite di Danno), <span class="hcp2">SLV</span> 
+	 (Stato Limite di salvaguardia della Vita),&#160;<span class="hcp2">SND</span> 
+	 (Stato limite di salvaguardia della vita Non Dissipativo), <span class="hcp2">SLC</span> 
+	 (Stato Limite di Collasso), <span class="hcp2">SLE R</span> 
+	 (Stato Limite di Esercizio per combinazioni RARE), <span class="hcp2">SLE 
+	 F</span> (Stato Limite di Esercizio per combinazioni FREQUENTI), <span class="hcp2">SLE Q</span> (Stato Limite di Esercizio 
+	 per combinazioni QUASI PERMANENTI),&#160;<span class="hcp2">SLU 
+	 I</span> (Stato Limite di resistenza al fuoco);</p></li>
+	<li class="p-Elenco1"><p class="Elenco1"><span style="text-align: justify;">I 
+	 valori delle cinque componenti di sollecitazione: N, Ty, Tz, My, Mz.</span></p></li>
+</ol>
+<p class="Rientro1">Da notare che i dati devono essere espressi in daN 
+ e m, separati da virgola o da punto e virgola, e non è possibile utilizzare 
+ normativa diverse. Un esempio di file dati potrebbe essere il seguente:</p>
+<p class="Rientro1" style="margin-top: 6pt; margin-bottom: 6pt;">SLU, -10800, 
+ 0, -900, -1800, 0</p>
+<p class="Rientro1" style="margin-top: 6pt; margin-bottom: 6pt;">SLU, -7000, 
+ 0, -900, -1800, 0</p>
+<p class="Rientro1" style="margin-top: 6pt; margin-bottom: 6pt;">SLU, -7500, 
+ 490, 0, 0, 860</p>
+<p><span class="hcp2"><a name="DESL_2" id="DESL_2"></a>Ridef. 
+ aste ass. <img src="../Icone/16/defeleass.png" alt="" border="1" class="hcp3"></span> 
+ ridefinisce le sollecitazioni di verifica attraverso la selezione, in 
+ modellazione, di un insieme di aste con la stessa sezione.&#160;Il comando 
+ compare solo nella progettazione interattiva di sezioni con sollecitazioni 
+ automatiche.</p>
+<p><span class="hcp2"><a name="DESL_3" id="DESL_3"></a>Ass. 
+ altre aste <img src="../Icone/16/assaltriele.png" alt="" border="1" class="hcp3"></span> 
+ associa le sollecitazioni di verifica attraverso la selezione, in modellazione, 
+ di altre aste con la stessa sezione.&#160;Il comando compare solo nella 
+ progettazione interattiva di sezioni con sollecitazioni automatiche.</p>
+<p><span class="hcp2"><a name="DEPV" id="DEPV"></a>Def. punti 
+ ver. <img src="../Icone/16/definiscipuntiver.png" alt="" border="1" class="hcp3"></span> 
+ definisce i punti in cui effettuare la verifica.&#160;Il comando compare 
+ solo nella progettazione interattiva di sezioni con sollecitazioni automatiche.</p>
+<p><span class="hcp2">Mod. criteri <img src="../Icone/16/modcriteri.png" alt="" border="1" class="hcp3"></span> 
+ modifica i criteri di progetto posizionandosi automaticamente sul criterio 
+ specifico assegnato alla sezione.</p>
+<p><span class="hcp2">Utilizzo da linea di comando</span>: 
+ <span class="hcp2"><a href="../Comandi/CALC.htm">CALC</a></span>&#160;(Ricalcola), 
+ <span class="hcp2"><a href="../Comandi/ELAR.htm">ELAR</a></span>&#160;(Elimina 
+ progettazione), <span class="hcp2"><a href="../Comandi/_REL.htm">?REL</a></span>&#160;(Anteprima 
+ relazione), <span class="hcp2"><a href="../Comandi/DESL.htm">DESL</a></span>&#160;(Definisci 
+ sollecitazioni), <span class="hcp2"><a href="../Comandi/DEPV.htm">DEPV</a></span>&#160;(Definisci 
+ punti di verifica).</p>
+<h2 class="Titolo5"><a name="Nuclei_Risultati_num" id="Nuclei_Risultati_num"></a>Risultati 
+ num.</h2>
+<p><span class="hcp2"><a name="DESL_R"></a>Sollecitazioni 
+ <img src="../Icone/16/NSLN.png" alt="" border="1" class="hcp3"></span> 
+ visualizza le informazioni sui valori delle sollecitazioni nella sezione.</p>
+<h2 class="Titolo5"><a name="Sezioni_Diagrammi" id="Sezioni_Diagrammi"></a>Diagrammi</h2>
+<p><span class="hcp2"><a name="DTAU" id="DTAU"></a>Tau <img src="../Icone/16/dtausez.png" alt="" border="1" class="hcp3"></span> attiva 
+ o disattiva il disegno della tensione tangenziale (solo per calcolo alle 
+ tensioni ammissibili).&#160;La mappa permette di controllare i valori 
+ di <font face="Symbol" class="hcp4">t</font> confrontandoli 
+ con <font face="Symbol" class="hcp4">t</font><span class="hcp5">c0</span> 
+ e <font face="Symbol" class="hcp4">t</font><span class="hcp5">c1</span>.</p>
+<p><span class="hcp2"><a name="DSCO" id="DSCO"></a>Scorrim. 
+ <img src="../Icone/16/dscosez.png" alt="" border="1" class="hcp3"></span> 
+ attiva o disattiva il disegno dello scorrimento (solo per calcolo alle 
+ tensioni ammissibili).</p>
+<p><span class="hcp2"><a name="DSC" id="DSC"></a>Sigma c. 
+ <img src="../Icone/16/dsc.png" alt="" border="1" class="hcp3"></span> 
+ attiva o disattiva il disegno della tensione di compressione nel calcestruzzo.</p>
+<p><span class="hcp2"><a name="DSF" id="DSF"></a>Sigma f. 
+ <img src="../Icone/16/dsf.png" alt="" border="1" class="hcp3">&#160;</span>attiva 
+ o disattiva il disegno della tensione nei ferri.</p>
+<p><span class="hcp2"><a name="DDOM" id="DDOM"></a>Dominio</span> 
+ <img src="../Icone/16/dominio.png" alt="" border="1" class="hcp3"> disegna 
+ il dominio di rottura, cliccando sulla freccia a destra del comando è 
+ possibile con <span class="hcp2">Dominio globale</span> 
+ <img src="../Icone/16/ddomglo.png" alt="" border="1" class="hcp3"> disegnare 
+ il dominio di rottura globale, con <span class="hcp2">Dominio 
+ a N costante</span> <img src="../Icone/16/ddomn.png" alt="" border="1" class="hcp3"> 
+ disegnare il dominio a sforzo normale costante, con <span class="hcp2">Dominio 
+ a My costante = 0</span> <img src="../Icone/16/ddommy.png" alt="" border="1" class="hcp3"> disegnare il dominio a My 
+ costante pari a zero e con <span class="hcp2">Dominio a 
+ Mz costante = 0</span> <img src="../Icone/16/ddommz.png" alt="" border="1" class="hcp3"> 
+ disegnare il dominio a Mz costante pari a zero.</p>
+<p><span class="hcp2"><a name="DEPS" id="DEPS"></a>Epsilon 
+ <img src="../Icone/16/depsnucsez.png" alt="" border="1" class="hcp3">&#160;</span>attiva 
+ o disattiva il disegno dello stato di deformazione allo stato limite ultimo.</p>
+<p><span class="hcp2">Mom./Curv. <img src="../Icone/16/depsnucsez.png" alt="" border="1" class="hcp3">&#160;</span>disegna 
+ il diagramma momento/curvatura.</p>
+<p><span class="hcp2"><a name="DTMP" id="DTMP"></a>Temperatura</span> 
+ <img src="../Icone/16/temperaturasez.png" alt="" border="1" class="hcp3"> attiva 
+ o disattiva la mappa delle temperature nella sezione al tempo specificato.</p>
+<p><span class="hcp2">Utilizzo da linea di comando</span>: 
+ <span class="hcp2"><a href="../Comandi/DTAU.htm">DTAU</a></span>&#160;(Disegna 
+ tau),<span class="hcp2">&#160;<a href="../Comandi/DSCO.htm">DSCO</a></span>&#160;(Disegna 
+ scorrimento), <span class="hcp2"><a href="../Comandi/DSC.htm">DSC</a></span>&#160;(Disegna 
+ sigma calcestruzzo),<span class="hcp2">&#160;<a href="../Comandi/DSF.htm">DSF</a></span>&#160;(Disegna 
+ sigma ferri), <span class="hcp2"><a href="../Comandi/DDOM.htm">DDOM</a></span>&#160;(Disegna 
+ dominio), <span class="hcp2"><a href="../Comandi/DEPS.htm">DEPS</a></span>&#160;(Disegna 
+ epsilon),&#160;<span class="hcp2"><a href="../Comandi/DTMP.htm">DTMP</a></span>&#160;(Disegna 
+ temperatura).</p>
+<h2 class="Titolo5"><a name="Sezioni_Ferri" id="Sezioni_Ferri"></a>Ferri</h2>
+<p class="hcp6"><span class="hcp2"><a name="AGGF" 
+	 id="AGGF"></a>Aggiungi <img src="../Icone/16/aggiungiferro.png" alt="" border="1" class="hcp3"></span> 
+ aggiunge un ferro.</p>
+<p class="hcp6"><span class="hcp2"><a name="AFER" 
+	 id="AFER"></a>Assegna <img src="../Icone/16/assegnaferro.png" alt="" border="1" class="hcp3"></span> 
+ assegna al ferro selezionato con il cursore grafico il diametro corrente.</p>
+<p><span class="hcp2"><a name="ELIF" id="ELIF"></a>Elimina 
+ <img src="../Icone/16/eliminaferro.png" alt="" border="1" class="hcp3">&#160;</span>elimina 
+ il ferro&#160;selezionato con il cursore grafico.</p>
+<p><span class="hcp2">Utilizzo da linea di comando</span>: 
+ <span class="hcp2"><a href="../Comandi/AGGF.htm">AGGF</a></span>&#160;(Aggiungi 
+ ferro), <span class="hcp2"><a href="../Comandi/Afer.htm">AFER</a></span>&#160;(Assegna 
+ ferro), <span class="hcp2"><a href="../Comandi/ELIF.htm">ELIF</a></span>&#160;(Elimina 
+ ferro).</p>
+<h2 class="Titolo5"><a name="Sezioni_Staffe" id="Sezioni_Staffe"></a>Staffe</h2>
+<p class="hcp6"><span class="hcp2"><a name="AGGT" 
+	 id="AGGT"></a>Aggiungi <img src="../Icone/16/aggiungistaffa.png" alt="" border="1" class="hcp3"></span> 
+ aggiunge una staffa di qualsiasi forma in modo manuale.</p>
+<p class="hcp6"><span class="hcp2"><a name="ASTA" 
+	 id="ASTA"></a>Assegna <img src="../Icone/16/assegnastaff.png" alt="" border="1" class="hcp3"></span> 
+ assegna o modifica la staffa.</p>
+<p><span class="hcp2"><a name="ELIT" id="ELIT"></a>Elimina 
+ <img src="../Icone/16/eliminastaff.png" alt="" border="1" class="hcp3"></span> 
+ elimina la staffa.</p>
+<p><span class="hcp2">Utilizzo da linea di comando</span>: 
+ <span class="hcp2"><a href="../Comandi/AGGT.htm">AGGT</a></span>&#160;(Aggiungi 
+ staffa), <span class="hcp2"><a href="../Comandi/ASTA.htm">ASTA</a></span>&#160;(Assegna 
+ staffatura),<span class="hcp2">&#160;<a href="../Comandi/ELIT.htm">ELIT</a></span>&#160;(Elimina 
+ staffatura).</p>
+<h2 class="Titolo5"><a name="Sezioni_Disegno" id="Sezioni_Disegno"></a>Disegno</h2>
+<p><span class="hcp2"><a name="DTEC" id="DTEC"></a>Tecnico/oggetto&#160;<img src="../Icone/16/distecnogg.png" alt="" border="1" class="hcp3"></span> attiva 
+ o disattiva il disegno tecnico.</p>
+<p><span class="hcp2"><a name="SHADE" id="SHADE"></a>3D&#160;<img src="../Icone/16/shading.png" alt="" border="1" class="hcp3"></span> apre 
+ una finestra con la visualizzazione tridimensionale della sezione progettata.</p>
+<p><span class="hcp2"><a name="DCMP" id="DCMP"></a>Computo&#160;<img src="../Icone/16/discomputo.png" alt="" border="1" class="hcp3"></span> attiva 
+ o disattiva il disegno del computo dei materiali. È possibile modificare 
+ la posizione della tabella del computo selezionando le relative opzioni 
+ del menu che compare cliccando sulla freccia a destra del comando.</p>
+<p><span class="hcp2">Opzioni&#160;<img src="../Icone/16/opzioni.png" alt="" border="1" class="hcp3"></span> 
+ modifica le opzioni di disegno.</p>
+<p><span class="hcp2">Utilizzo da linea di comando</span>: 
+ <span class="hcp2"><a href="../Comandi/DTEC.htm">DTEC</a></span>&#160;(Disegno 
+ tecnico), <span class="hcp2"><a href="../Comandi/SHAD.htm">SHADE</a></span>&#160;(Visualizzazione 
+ tridimensionale), <span class="hcp2"><a href="../Comandi/DCMP.htm">DCMP</a></span>&#160;(Disegna 
+ computo).</p>
+<h2 class="Titolo5"><a name="Sezioni_Animazioni" id="Sezioni_Animazioni"></a>Animazioni</h2>
+<p><span class="hcp2">Temperatura</span> <img src="../Icone/32/animazioni32.png" alt="" border="1" class="hcp3"> 
+ crea l'animazione dell'evoluzione della temperatura nella sezione al variare 
+ del tempo.</p>
+<p><span class="hcp2">Stop animazione <img src="../Icone/16/stop.png" alt="" border="1" class="hcp3"></span> 
+ termina la riproduzione del filmato di animazione.</p>
+</body>
+</html>

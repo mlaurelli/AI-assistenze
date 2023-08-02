@@ -1,0 +1,71 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.13 alla 8.14</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { mso-bidi-font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.13 alla 8.14</h1>
+<p>Nuove procedure per la gestione automatica dei carichi da vento e la 
+ generazione delle relative combinazioni di carico. Oltre alla preesistente 
+ utility per l'analisi dei carichi da vento, ne è stata introdotta una 
+ simile che richiede solo i dati essenziali e genera in automatico i carichi 
+ manuali da assegnare agli elementi. Specificando poi che una condizione 
+ di carico elementare contiene carichi da vento e indicandone la direzione, 
+ appositi comandi permettono di selezionare gli elementi sopravento e sottovento 
+ a cui assegnare i carichi. In sede di calcolo vengono poi generati in 
+ automatico gli ambienti di carico necessari.</p>
+<p>Nuove modalità di <a href="Ripartizione_dei_carichi_da_solai.htm">ripartizione 
+ dei carichi da solaio</a> in modo da poter considerare solai a doppia 
+ orditura o a piastra con possibilità di assegnare una quota parte di carico 
+ anche alle aste parallele all'orditura nel caso di solai unidirezionali.</p>
+<p>Nuove modalità di <a href="Ripartizione_dei_carichi_da_tamponature.htm">ripartizione 
+ dei carichi gravitazionali e da vento per le tamponature</a>, con possibilità 
+ di diversificarne il comportamento.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Visualizzazione 
+	 dei tassi di sfruttamento anche per le</span> <a href="Mappe_tassi_di_sfruttamento_ca.htm">pareti</a>, 
+	 i <a href="Mappe_tassi_di_sfruttamento_ca.htm">nuclei</a>, le <a href="Mappe_tassi_di_sfruttamento_ca.htm">solette/platee</a>, 
+	 i <a href="Mappe_tassi_di_sfruttamento_ca.htm">plinti/pali</a>, i 
+	 <a href="Mappe_tassi_di_sfruttamento_pannelli.htm">pannelli in legno</a> 
+	 e le <a href="Mappe_tassi_di_sfruttamento_tamponature.htm">tamponature</a><span class="hcp1">.</span>&#160;Per poter usare 
+	 questa funzionalità su strutture progettate con versioni precedenti, 
+	 occorre riverificare gli elementi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Nella 
+	 progettazione dell'armatura delle solette/platee è stato aggiunto 
+	 <b style="font-weight: normal;">nei criteri di progetto il parametro</b> 
+	 </span><span style="font-weight: bold;"><a href="Criteri%20di%20disegno%20solette%20e%20platee.htm#Progetto_e_verifica_con_metodo_d_integrazione">Progetto 
+	 e verifica con metodo d'integrazione</a></span><span class="hcp1">, 
+	 che permette di progettare e verificare l'armatura con la sollecitazione 
+	 agente valutata dall'integrazione delle tensioni nodali.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nella selezione avanzata dei 
+	 nodi è stata aggiunta la voce &quot;Plinti/Pali&quot; per consentire 
+	 di selezionare i nodi a cui sono collegati un plinto o un palo. Questo 
+	 per poter assegnare velocemente il corretto vincolo nodale.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nella selezione avanzata dei 
+	 nodi, aste, muri/elementi bidimensionali, solai e tamponature è stata 
+	 aggiunta la voce &quot;Carichi&quot; per consentire, nella condizione 
+	 di carico elementare corrente, di selezionare gli elementi ai quali 
+	 è stato assegnato un determinato tipo di carico.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nella verifica a taglio di 
+	 travate classificate come esistenti attraverso i criteri di progetto, 
+	 viene considerato anche il contributo dei ferri piegati per le sole 
+	 combinazioni delle condizioni di carico elementari di tipo statico. 
+	 In questo caso, in progettazione interattiva, vengono disegnati due 
+	 diagrammi del taglio: inferiormente relativo alle CC sismiche e superiormente 
+	 a quelle statiche.</p></li>
+</ul>
+</body>
+</html>

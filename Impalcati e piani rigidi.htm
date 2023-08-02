@@ -1,0 +1,32 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Impalcati e piani rigidi</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+font-style:italic; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Impalcati e piani rigidi</h1>
+<p>Rientra nella prassi comune del calcolo di strutture intelaiate in c.a. considerare gli impalcati dei piani come infinitamente rigidi, in modo da ridurre a 3 i 6 gradi di libertà che un nodo ha nello spazio e simulare l'effetto di distribuzione provocato dagli orizzontamenti, generalmente molto rigidi nel loro piano.</p>
+<p>ModeSt prevede questa ipotesi ed opera di default in tal senso prevedendo la possibilità di definire degli orizzontamenti e usando numerosi automatismi e convenzioni che facilitano l'inserimento dei dati.</p>
+<p>In fase di calcolo si potrà poi comunque stabilire se gli orizzontamenti definiti debbano comportarsi come piani infinitamente rigidi, ma resta ovviamente a disposizione dell'utente la possibilità di non definire nessun orizzontamento e di considerare tutti i nodi indipendenti l'uno dall'altro. La schematizzazione di piani rigidi in sede di calcolo viene normalmente effettuata con il cosiddetto metodo Master-Slave, ma può essere realizzata anche in altro modo.</p>
+<p>Gli orizzontamenti definiti nell'ambito di una struttura vengono denominati <span class="hcp1">impalcati</span> e l'impalcato cui appartiene un nodo risulta essere una delle <span class="hcp1">proprietà</span> del nodo. ModeSt prevede quindi i comandi necessari per la <a href="Definizione%20impalcati.htm">definizione degli impalcati</a> e per <a href="Modifica_delle_proprieta.htm">assegnarli</a> ai nodi.</p>
+<p>Risulta quindi che ogni nodo è caratterizzato da un impalcato di appartenenza e nodi appartenenti allo stesso impalcato potranno in sede di calcolo essere considerati come collegati da un piano rigido. Nodi appartenenti all'impalcato numero 0 (indeterminato) si intendono scollegati dagli altri indipendentemente da quale sia la loro coordinata Z e dalla eventuale schematizzazione di piano rigido. In un certo senso l'impalcato 0 è un impalcato fittizio privo in ogni caso di rigidità e la cui coordinata Z è indeterminata.</p>
+<p>I nodi con vincolo esterno devono quindi normalmente appartenere all'impalcato 0 qualunque sia la loro coordinata Z. In caso contrario si avrebbe infatti il trasferimento del vincolo a tutti gli altri nodi appartenenti allo stesso impalcato e questo oltre a essere raramente il comportamento richiesto è spesso anche incompatibile con le implementazioni del solutore FEM.</p>
+<p style="margin-bottom: 0;">Occorre notare inoltre che in alcuni casi il concetto di piano rigido è incompatibile con alcuni tipi di schematizzazione, come nelle travature reticolari in cui è necessario che i nodi possano avvicinarsi fra di loro per far nascere gli sforzi di trazioni e compressione o di travate schematizzate con mesh di elementi bidimensionali in cui è richiesto lo stesso tipo di comportamento. A questo proposito si veda anche l'esempio <span style="font-weight: bold;"><a href="Guida.chm::/Elementi_bidimensionali_e_piani_rigidi.htm">Elementi bidimensionali e piani rigidi</a></span>.</p>
+</body>
+</html>

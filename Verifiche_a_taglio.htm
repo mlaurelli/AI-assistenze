@@ -1,0 +1,47 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Verifiche a taglio</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Verifiche a taglio</h1>
+<p>Le verifiche a taglio vengono normalmente eseguite valutando le tensioni 
+ tangenziali (integrate se richiesto) su facce ortogonali alle direzioni 
+ di armatura. Questa tecnica è generalmente accettabile perché in genere 
+ localmente la direzione principale di flessione (e quindi di taglio) è 
+ congruente con le direzioni di armatura impostate.</p>
+<p>Diverso è il caso di carichi concentrati (tipicamente pilastri) in quanto 
+ in quella zona non esiste una direzione principale di taglio. Nei nodi 
+ di questi punti infatti la media delle tensioni tangenziali, per effetto 
+ dei cambi di segno è praticamente nulla. In funzione poi della mesh e 
+ del tipo di formulazione adottata per gli elementi bidimensionali, si 
+ avrà un picco di tensione tangenziale in punti poco distanti.</p>
+<p>Tenendo presente che in questi punti normalmente vengono eseguite le 
+ verifiche a punzonamento e quindi è possibile escludere tali punti dalle 
+ verifiche a taglio sia manualmente che tramite l'apposito criterio di 
+ progetto&#160;<span class="hcp1"><a href="CriPlat.htm#Escludi_punti_di_verifica_sotto_piramidi_di_punzonamento">Escludi 
+ punti di verifica sotto piramidi di punzonamento</a></span> è comunque 
+ possibile indicare attraverso il criterio di progetto <span class="hcp1"><a 
+	 href="Criteri%20di%20disegno%20solette%20e%20platee.htm#Verifica_con_taglio_totale">Verifica 
+ con taglio totale</a></span> di valutare lo sforzo di taglio utilizzando 
+ il taglio totale puntuale fuori piano. In questo caso l'eventuale integrazione 
+ delle tensioni&#160;tangenziale non viene effettuata.</p>
+<p>Proprio per questo motivo le sollecitazioni nelle eventuali travi virtuali 
+ presenti nella soletta vengono calcolate usando il taglio totale (si veda 
+ <a href="Tecniche_di_integrazione.htm" style="font-weight: bold;">Tecniche 
+ di integrazione</a>), visto che poi nella soletta le zone interessate 
+ verrano escluse totalmente dalle verifiche a taglio.</p>
+</body>
+</html>

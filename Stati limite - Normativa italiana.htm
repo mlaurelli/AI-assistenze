@@ -1,0 +1,222 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>D.M. 16/01/96 - Verifiche effettuate</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:normal; }
+span.hcp3 { vertical-align:sub; }
+span.hcp4 { font-style:italic; }
+span.hcp5 { font-style:normal; }
+img.hcp6 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+font.hcp7 { font-family:Symbol; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>D.M. 16/01/96 - Verifiche effettuate</h1>
+<p><span class="hcp1">Premessa</span></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Vengono effettuate le verifiche 
+	 relative ai successivi punti di normativa, con le relative note e 
+	 considerazioni.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Per i punti citati vengono 
+	 effettuati tutti i controlli non esplicitamente esclusi in queste 
+	 note.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Punti di normativa non citati 
+	 non vengono controllati.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">Non 
+	 viene effettuato nessun controllo e non vengono seguite specifiche 
+	 relative alle armature di precompressione.</span></p></li>
+</ul>
+<p><span class="hcp1">4 Norme di calcolo</span> <span class="hcp2">(e 
+ punti seguenti)</span></p>
+<p><span class="hcp2">Vengono effettuati i controlli previsti 
+ nel caso di calcolo elastico-lineare senza ridistribuzioni.</span></p>
+<p><span class="hcp1">4.0.2 Resistenze di calcolo</span></p>
+<p><span class="hcp2">La maggiorazione del 25% del coefficiente 
+ G</span><span class="hcp3"><span class="hcp2">c</span></span> 
+ <span class="hcp2">viene effettuata se la minima dimensione 
+ trasversale della sezione è minore di 5 cm. Per dimensione trasversale 
+ si intende la lunghezza del minimo lato compreso fra due spigoli che non 
+ siano interni ad una concavità della sezione.</span></p>
+<p><span class="hcp1">4.1.1.2 Calcolo elastico lineare senza 
+ ridistribuzioni</span></p>
+<p><span class="hcp2">Il controllo di x/d viene effettuato 
+ solo se richiesto dai criteri di progetto (vedi</span> <span class="hcp1"><a 
+	 href="Criteri%20di%20disegno%20armatura%20sezioni.htm#Controllo_rapporto_x_d">Controllo 
+ rapporto X/D</a></span><span class="hcp2">).</span></p>
+<p><span class="hcp1">4.2.1 Verifiche allo stato limite ultimo 
+ per sollecitazioni che provocano tensioni normali (sforzo normale, flessione 
+ semplice e composta)</span> <span class="hcp2">(e punti 
+ seguenti)</span></p>
+<p><span style="font-style: normal; font-weight: bold;">4.2.1.2. Sicurezza</span></p>
+<p>La normativa prescrive:</p>
+<p><span class="hcp4">(..omissis..)</span></p>
+<p><span class="hcp4">b) in ogni caso, per tenere conto 
+ delle incertezze sul punto di applicazione dei carichi si deve ipotizzare 
+ una eccentricità, prevista nella direzione più sfavorevole, da sommare 
+ a quella eventuale dei carichi e di entità pari al maggiore dei due valori 
+ h/30 e 20 mm, essendo h la dimensione nella direzione considerata per 
+ la eccentricità;</span></p>
+<p>Per effettuare questa verifica ModeSt calcola la dimensione h della 
+ sezione per tutte le posizioni dell'asse neutro che sono state considerate 
+ nel calcolo del dominio, per valutare un'eccentricità aggiuntiva nella 
+ direzione ortogonale a quella dell'asse neutro, da sommare (vettorialmente) 
+ all'eccentricità agente e ricavare così un nuovo valore del momento flettente. 
+ In questo modo si è certi di trovare anche la <span class="hcp4">direzione 
+ più sfavorevole,</span> <span class="hcp5">altrimenti di 
+ difficile determinazione.</span></p>
+<p>Per questi nuovi valori di sollecitazione non viene ovviamente calcolato 
+ il corrispondente valore ultimo, ma semplicemente calcolata la sicurezza 
+ in base a considerazioni geometriche (vedi <a href="Stati%20limite%20-%20Verifiche%20per%20tensioni%20normali.htm"><span class="hcp1">Verifiche per tensioni normali</span></a>). 
+ In relazione viene riportato il valore delle sollecitazioni ultime calcolate 
+ in riferimento alla sollecitazione principale agente e la minima sicurezza 
+ determinata sulla base delle sollecitazioni correlate.</p>
+<p>È possibile controllare visivamente il grado di sicurezza di tutti i 
+ punti disegnando il dominio di rottura cliccando nel gruppo <span class="hcp1">Diagrammi</span> 
+ su <span class="hcp1">Dominio <img src="../Icone/16/dominio.png" alt="" border="1" class="hcp6"></span>: 
+ nei vari casi di verifica (selezionabili nella casella di riepilogo a 
+ discesa del pannello <span class="hcp1">Stato verifiche</span>) 
+ oltre al punto di sollecitazione viene disegnata una rosa di punti che 
+ rappresentano le sollecitazioni correlate calcolate.</p>
+<p>Vengono effettuate le verifiche di cui al punto c) (elementi snelli) 
+ utilizzando il procedimento della colonna modello. Nel diagramma del dominio 
+ di rottura viene disegnato anche il dominio di rottura ridotto con il 
+ quale vengono effettuate le verifiche.</p>
+<p><span class="hcp1">4.2.1.3 Diagrammi di calcolo tensioni-deformazioni 
+ del calcestruzzo</span></p>
+<p><span class="hcp2">Viene sempre assunto il diagramma 
+ parabola-rettangolo.</span></p>
+<p><span class="hcp1">4.2.1.4 Diagrammi di calcolo tensioni-deformazioni 
+ dell'acciaio</span></p>
+<p><span class="hcp2">Vengono seguite le specifiche di 
+ normativa.</span></p>
+<p><span class="hcp1">4.2.2 Verifiche allo stato limite ultimo 
+ per sollecitazioni taglianti</span> <span class="hcp2">(e 
+ punti seguenti)</span></p>
+<p>La normativa prescrive:</p>
+<p><span class="hcp4">(..omissis..)</span></p>
+<p><span class="hcp4">4.2.2.2. Elementi senza armature trasversali 
+ resistenti a taglio.</span></p>
+<p><span class="hcp4">(..omissis..)</span></p>
+<p><span class="hcp4">4.2.2.2.2. Verifica dell'armatura 
+ longitudinale.</span></p>
+<p><span class="hcp4">La verifica comporta la traslazione 
+ del diagramma del momento flettente lungo l'asse longitudinale nel verso 
+ che dà luogo ad un aumento del valore assoluto del momento flettente.</span></p>
+<p><span class="hcp4">Le verifiche possono effettuarsi rispettando 
+ la condizione:</span></p>
+<p><span class="hcp4">Vsdu &lt;= 0.25 fctd * r (1 + 50 rol) 
+ * bw * d * delta</span></p>
+<p><span class="hcp4">(..omissis..)</span></p>
+<p><span class="hcp4">4.2.2.3. Elementi con armature trasversali 
+ resistenti al taglio.</span></p>
+<p><span class="hcp4">(..omissis..)</span></p>
+<p><span class="hcp4">4.2.2.3.3. Verifica dell'armatura 
+ longitudinale.</span></p>
+<p><span class="hcp4">La verifica comporta la traslazione 
+ del diagramma del momento flettente lungo l'asse longitudinale nel verso 
+ che dà luogo ad un aumento del valore assoluto del momento flettente.</span></p>
+<p><span class="hcp4">In altri termini, l'armatura longitudinale 
+ deve essere dimensionata per resistere al momento sollecitante Msdu (V) 
+ pari a:</span></p>
+<p><span class="hcp4">Msdu (V) = Msdu + Vsdu * a1</span></p>
+<p><span class="hcp4">con: a1 = 0,9 d (1 - cot a) e comunque: 
+ a1 &gt;= 0,2 d</span></p>
+<p>Si premette che ModeSt esegue le verifiche di cui al par. 4.2.2.2. se 
+ la sezione è priva di staffe, mentre se risulta presente un qualsiasi 
+ tipo di staffatura esegue quelle di cui al par. 4.2.2.3. (vedi anche <a 
+	 href="Stati_limite_-_Verifiche_a_taglio.htm"><span class="hcp1">Verifiche 
+ a taglio</span></a>).</p>
+<p>Come si può notare la normativa prescrive chiaramente come effettuare 
+ la traslazione del momento flettente nel par. 4.2.2.3, ma nel par. 4.2.2.2. 
+ non dice esplicitamente se la condizione da rispettare comprenda già <span class="hcp4">la traslazione del diagramma del momento 
+ flettente.</span> ModeSt quindi anche in tal caso opera la traslazione 
+ del momento secondo le specifiche del par. 4.2.2.3.3.</p>
+<p><span class="hcp5">Il valore di d (e quindi di a1) viene 
+ valutato nella direzione ortogonale a quella dell'asse neutro per la sollecitazione 
+ ultima corrispondente alla sollecitazione agente. Anche in tal caso si 
+ ha quindi un valore di sollecitazione correlato alla sollecitazione agente, 
+ anch'esso verificato e visualizzato come già sopra citato per le verifiche 
+ per tensioni normali.</span> La traslazione del momento non viene effettuata 
+ per sezioni con membratura di tipo &quot;pilastro&quot;.</p>
+<p><span class="hcp1">4.2.4 Elementi snelli</span> (e punti 
+ seguenti)</p>
+<p>Vengono effettuate le verifiche di stabilità con il procedimento della 
+ &quot;colonna modello&quot; come indicato al par. 4.2.4.8.2 solo per elementi 
+ con membratura di tipo &quot;pilastro&quot; o &quot;generica&quot; e nel 
+ caso di sollecitazioni automatiche. Il valore della lunghezza libera d'inflessione 
+ viene valutato con riferimento ai coefficienti ß indicati nei criteri 
+ di progetto (vedi <span class="hcp1"><a href="Criteri%20di%20disegno%20armatura%20sezioni.htm#Ver_di_stab_dir_Z_locale">Verifiche 
+ di stabilità in direzione Y/Z locale</a></span>) e viene assunta come 
+ snellezza il massimo tra i valori <font face="Symbol" class="hcp7">l</font><span class="hcp3">y</span> e <font face="Symbol" class="hcp7">l</font><span class="hcp3">z,</span>, valutati considerando la lunghezza 
+ dell'asta da nodo a nodo per sezioni con membratura di tipo &quot;pilastro&quot; 
+ e da inizio a fine zona rigida per sezioni di altro tipo. Nei vari casi 
+ di verifica (selezionabili nella casella di riepilogo a discesa del pannello 
+ <span class="hcp1">Stato verifiche</span>) è possibile visualizzare 
+ il diagramma del momento-curvatura usando <span class="hcp4">Disegna</span> 
+ <font style="font-family: Wingdings;" face="Wingdings">à</font> <span class="hcp4">Diagramma momento curvatura</span> del 
+ menu a comparsa che si ottiene cliccando col tasto destro sullo sfondo 
+ della finestra di progettazione interattiva. Si aprirà così una finestra 
+ in cui vengono disegnati i diagrammi del momento di curvatura, del momento 
+ ridotto, dello sforzo normale e la retta che individua la minima distanza 
+ tra il momento di curvatura e lo sforzo normale. Scorrendo con il cursore 
+ lungo l'asse della curvatura si visualizzano i valori corrispondenti alle 
+ grandezze disegnate e cliccando in un punto è possibile fissare sul diagramma 
+ tali valori. <span style="text-transform: uppercase;">è</span> possibile 
+ salvare l'immagine rappresentata nella finestra attraverso il menu <span class="hcp4">Esporta</span>. Durante l'esportazione 
+ si può utilizzare un diverso schema di colore (esempio con sfondo bianco 
+ anziché nero) semplicemente selezionandolo dalla casella di riepilogo 
+ a discesa della finestra di dialogo.</p>
+<p>Nel calcolo di <font face="Symbol" class="hcp7">l</font><span 
+	 style="vertical-align: super;">*</span> viene considerato il massimo 
+ valore dello sforzo di compressione.</p>
+<p><span class="hcp1">4.3 Verifiche allo stato limite d'esercizio</span> 
+ (e punti seguenti)</p>
+<p>Vengono effettuate le verifiche di cui punti 4.3.2 punto 1) come le 
+ specifiche di cui al punto 4.3.2.1 assumendo sempre lo stato fessurato.</p>
+<p><span class="hcp1">5.3.1 Armatura longitudinale</span></p>
+<p><span class="hcp2">La verifica della percentuale d'armatura 
+ viene sempre effettuata in relazione al tipo di barra. Non vengono effettuati 
+ i controlli relativi alla torsione e quelli sull'armatura all'estremità 
+ delle travi per taglio.</span></p>
+<p><span class="hcp1">5.3.2. Staffe</span></p>
+<p><span class="hcp2">Il valore di b viene valutato in 
+ tutte le fibre della sezione (vedi</span> <span class="hcp1"><a 
+	 href="Stati_limite_-_Verifiche_a_taglio.htm">Verifiche a taglio</a></span><span class="hcp2">) e viene effettuato il controllo più 
+ gravoso. Il valore dell'altezza utile viene valutato nella direzione ortogonale 
+ all'asse neutro. Non viene effettuato il controllo sul passo &lt;12Ø, 
+ non essendo possibile nella verifica della sezione determinare le zone 
+ d'appoggio. Non vengono effettuate le verifiche relative ai limiti da 
+ rispettare in presenza di torsione. Non viene controllato se le staffe 
+ sono collegate da armature longitudinali.</span></p>
+<p><span class="hcp1">5.3.4. Pilastri</span></p>
+<p><span class="hcp2">Non vengono effettuati i controlli 
+ sui tratti di giunzione per ricoprimento e sul numero di barre presenti 
+ nella sezione. Non vengono effettuati i controlli sui pilastri prefabbricati 
+ né quelli relativi a setti e pareti.</span></p>
+<p>Il controllo se le staffe sono chiuse non può essere sempre effettuato 
+ correttamente in caso di staffe inserite manualmente cliccando nel gruppo 
+ <span class="hcp1">Staffe</span> su<span class="hcp1"> 
+ Aggiungi <img src="../Icone/16/aggiungistaffa.png" alt="" border="1" class="hcp6"></span>. 
+ In tal caso sarà sufficiente ignorare il relativo messaggio d'errore.</p>
+<p style="margin-bottom: 0;"><span class="hcp2">ModeSt 
+ inoltre non può controllare se le staffe sono &quot;</span><span style="font-style: italic; 
+	 font-weight: normal;">conformate in modo da contrastare efficacemente...</span><span class="hcp2">&quot;.</span></p>
+</body>
+</html>

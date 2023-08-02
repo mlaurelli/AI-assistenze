@@ -1,0 +1,40 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Pressione limite alla base secondo formule statiche</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { vertical-align:Sub; }
+span.hcp3 { font-family:Symbol, serif; }
+p.hcp4 { text-align:center; }
+img.hcp5 { border:none; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Pressione limite alla base secondo formule statiche</h1>
+<p>Il <span class="hcp1">calcolo della pressione limite</span> (q<span class="hcp2">p</span>) viene effettuato utilizzando la seguente relazione generale derivante dalla relazione trinomia:</p>
+<p>q<span class="hcp2">p</span> = c'*N<span class="hcp2">c</span> + <span class="hcp3">s</span>'<span class="hcp2">v0</span>*N<span class="hcp2">q</span> in condizioni drenate</p>
+<p>q<span class="hcp2">p</span> = cu*N<span class="hcp2">cu</span> + <span class="hcp3">s</span><span class="hcp2">v0</span> in condizioni non drenate</p>
+<p>in cui devono essere specificati i coefficienti di capacità portante: N<span class="hcp2">c</span>, N<span class="hcp2">q</span> e N<span class="hcp2">cu</span></p>
+<p>In letteratura sono presenti varie relazioni per il calcolo della pressione limite, basate su differenti forme di valutazione dei coefficienti di portata.</p>
+<p>Come adattamenti dalle relazioni usate per le fondazioni superficiali sono state implementate le seguenti relazioni: <span class="hcp1">Terzaghi (1943)</span>; <span class="hcp1">Meyerhof (1963)</span>; <span class="hcp1">Hansen (1970)</span>; <span class="hcp1">Stagg e Zienkiewicz (1968)</span> (per pali attestati su rocce). Secondo tali relazioni, in condizioni drenate, per il calcolo delle pressioni efficaci alla base del palo verrà tenuto conto della profondità critica.</p>
+<p><span class="hcp1">Secondo Vesic (1975)</span> i coefficienti di capacità portante sono valutati in funzione dell'indice dell'indice di rigidezza (J. E. BOWLES - Fondazioni, progetto e analisi - McGraw-Hill, Milano 1991. Pagg. 810, 812).</p>
+<p><span class="hcp1">Secondo Berezantzev (1961)</span> il valore di q<span class="hcp2">p</span> è calcolato, solo in condizioni drenate, dalla relazione:</p>
+<p>q<span class="hcp2">p</span> = <span class="hcp3">s</span>'<span class="hcp2">v0</span>*N<span class="hcp2">q</span></p>
+<p>in cui N<span class="hcp2">q</span> è calcolato, come indicato nel seguente grafico, in funzione del rapporto fra la lunghezza e il diametro del palo (LP/DP) e del valore dell'angolo di attrito corretto in funzione del tipo di palo: <span class="hcp3">j</span>' = (<span class="hcp3">j</span>'+40°)/2 per pali battuti e <span class="hcp3">j</span>' = <span class="hcp3">j</span>'-3° per pali trivellati.</p>
+<p class="hcp4"><img src="Ver_fond_prof_05.gif" alt="" width="450" height="379" border="0" class="hcp5"></p>
+<p><span class="hcp1">Secondo Berezantzev (1965)</span> il valore di q<span class="hcp2">p</span> è calcolato, solo in condizioni drenate, dalla relazione:</p>
+<p>q<span class="hcp2">p</span> = <span class="hcp3">s</span>'<span class="hcp2">v0</span>*N<span class="hcp2">q</span></p>
+<p>in cui N<span class="hcp2">q</span> = N<span class="hcp2">q</span>*, riferito all'insorgere delle prime deformazioni plastiche, è calcolato, come indicato nel seguente grafico, in funzione del rapporto fra la lunghezza e il diametro del palo (LP/DP) e del valore dell'angolo di attrito corretto in funzione del tipo di palo: <span class="hcp3">j</span>' = (<span class="hcp3">j</span>'+40°)/2 per pali battuti e <span class="hcp3">j</span>' = <span class="hcp3">j</span>'-3° per pali trivellati.</p>
+<p class="hcp4"><img src="Ver_fond_prof_06.gif" alt="" width="325" height="483" border="0" class="hcp5"></p>
+<p>Per pali attestati su <span class="hcp1">terreni coesivi sovraconsolidati</span> (OCR &gt; 1), è possibile ridurre la capacità portante di punta secondo i seguenti fattori (Meyerhof): min{(DP+0.5)/(2*DP) ; 1} per pali battuti; min{(DP+1)/(2*DP+1) ; 1} per pali trivellati, con DP in metri.</p>
+</body>
+</html>

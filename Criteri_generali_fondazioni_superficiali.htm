@@ -1,0 +1,327 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Criteri generali fondazioni superficiali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-family:Symbol, serif;
+font-weight:bold; }
+span.hcp3 { font-family:Symbol, serif; }
+span.hcp4 { font-weight:normal; }
+span.hcp5 { font-weight:normal;
+font-family:Symbol, serif; }
+span.hcp6 { font-weight:normal;
+vertical-align:Sub; }
+p.hcp7 { margin-left:40px; }
+ol.hcp8 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Criteri generali fondazioni superficiali</h1>
+<p>Si tratta di criteri che stabiliscono i metodi per l'elaborazione dei 
+ parametri dell'intera colonna stratigrafica al fine di effettuare le verifiche 
+ di capacità portante e il calcolo dei cedimenti delle fondazioni superficiali 
+ presenti nella struttura. Tali metodi sono quindi stabiliti indipendentemente 
+ dal numero del criterio di progetto assegnato ai singoli strati della 
+ colonna stratigrafica.</p>
+<h2>Generali</h2>
+<p><span class="hcp1"><a name="Condizioni_di_calcolo_per_terreni_coesivi_sottofalda" 
+										 id="Condizioni_di_calcolo_per_terreni_coesivi_sottofalda"></a>Condizioni 
+ di calcolo per terreni coesivi</span>: specificare se devono essere ipotizzate 
+ condizioni <span class="hcp1">drenate</span>, <span class="hcp1">non 
+ drenate</span> oppure <span class="hcp1">sia drenate che 
+ non drenate</span>, in tal caso le capacità portanti saranno pari alle 
+ minori calcolate nei due modi.</p>
+<p><span class="hcp1"><a name="Calcolo_di_a_dal_rapporto_con_c" 
+										 id="Calcolo_di_a_dal_rapporto_con_c"></a>Calcolo 
+ di a' dal rapporto con c'</span>: il valore dell'adesione in condizioni 
+ drenate (a') fra terreno e fondazione è calcolata indicandone il rapporto 
+ con c' dello strato del piano di fondazione.</p>
+<p><a name="Calcolo_di_au_dal_rapporto_con_cu" id="Calcolo_di_au_dal_rapporto_con_cu"></a><span class="hcp1">Calcolo di au dal rapporto con cu</span>: 
+ il valore dell’adesione in condizioni non drenate (au) fra terreno e fondazione 
+ è calcolata indicandone il rapporto con cu dello strato del piano di fondazione.</p>
+<p><a name="Calcolo_di_delta_dal_rapporto_con_fi" id="Calcolo_di_delta_dal_rapporto_con_fi"></a><span class="hcp1">Calcolo di</span> <span class="hcp2">d</span><span class="hcp1">' dal rapporto con</span> <span class="hcp2">f</span><span class="hcp1">'</span>: 
+ il valore dell'attrito (<span class="hcp3">d</span>') 
+ fra terreno e fondazione è calcolato indicandone il rapporto con <span class="hcp3">f</span>' dello strato del piano 
+ di fondazione.</p>
+<p style="font-weight: bold;"><a name="Considera_angolo_attrito_in_deformazione_piana_per_fondazioni_nastriformi" 
+								 id="Considera_angolo_attrito_in_deformazione_piana_per_fondazioni_nastriformi"></a>Considera 
+ l'angolo d'attrito in deformazione piana per fondazioni nastriformi<span class="hcp4">: nel caso di fondazioni nastriformi 
+ i meccanismi di rottura alla base dei metodi utilizzati conseguono uno 
+ stato di deformazione piana (</span><span class="hcp5">j</span><span class="hcp6">ps</span><span class="hcp4">), 
+ per terreni incoerenti l'angolo d'attrito rappresentativo degli strati 
+ interessati (implicitamente considerato per stati di deformazione triassiali</span> 
+ <span class="hcp5">j</span><span class="hcp4">'=</span><span class="hcp5">j</span><span class="hcp6">tr</span><span class="hcp4">) 
+ può essere corretto utilizzando il fattore moltiplicativo 1.1-0.1*B/L 
+ se</span> <span class="hcp5">j</span><span class="hcp4">' &gt;= 30° (Lee, Meyerhof, 1970).</span></p>
+<p><span class="hcp1"><a name="Calcolo_dei_parametri_rappresentativi_per_terreni_stratificati" 
+										 id="Calcolo_dei_parametri_rappresentativi_per_terreni_stratificati"></a>Calcolo 
+ dei parametri rappresentativi per terreni stratificati</span>: specificare 
+ come devono essere determinati i valori rappresentativi dei parametri 
+ <span class="hcp3">f</span>', c' e cu dai dati 
+ degli strati interessati dalla superficie di rottura. Sono disponibili 
+ le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Valori 
+	 minori</span>: vengono considerati i valori relativi allo strato meno 
+	 resistente sia per coesione che per attrito.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Media 
+	 aritmetica</span>: vengono mediati i parametri degli strati interessati 
+	 dalla superficie di rottura.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Media 
+	 pesata</span>: viene fatta una media pesata dei parametri degli strati 
+	 interessati dalla superficie di rottura in funzione dello spessore 
+	 degli strati stessi.</p></li>
+</ul>
+<p style="margin-left: 24px;"><span class="hcp1"><a name="Calcola_i_valori_medi_dell_angolo_d_attrito_secondo_la_sua_tangente" 
+	 id="Calcola_i_valori_medi_dell_angolo_d_attrito_secondo_la_sua_tangente"></a>Calcola 
+ i valori medi dell'angolo d'attrito secondo la sua tangente</span>: selezionando 
+ questa opzione verrà calcolato il valore medio di tan(<span class="hcp3">j</span>') 
+ e non di <span class="hcp3">j</span>'.</p>
+<h2>Capacità portante in condizioni statiche</h2>
+<p><span class="hcp1"><a name="Calcolo_della_capacita_portante_per_rottura_generale" 
+										 id="Calcolo_della_capacita_portante_per_rottura_generale"></a>Calcolo 
+ della capacità portante per rottura generale</span>: specificare come 
+ calcolare la pressione limite attraverso formule trinomie. Sono disponibili 
+ le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Terzaghi 
+	 (1943)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Meyerhof 
+	 (1963)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Hansen 
+	 (1970)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Brinch 
+	 - Hansen (1970)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Vesic 
+	 (1973)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Indicazioni 
+	 EC7 (Allegato D)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Stagg 
+	 e Zienkiewicz</p></li>
+</ul>
+<p class="hcp7"><span class="hcp1"><a name="Combinazione_dei_fattori_di_forma_e_di_inclinazione_del_carico" 
+	 id="Combinazione_dei_fattori_di_forma_e_di_inclinazione_del_carico"></a>Combinazione 
+ dei fattori di forma e di inclinazione del carico</span>: specificare, 
+ dove sono presenti entrambi i fattori e in presenza di carico inclinato, 
+ la combinazione dei fattori di forma e dei i fattori di inclinazione del 
+ carico. Sono disponibili le seguenti opzioni:</p>
+<ol>
+	<li style="list-style: none; display: inline;"><ul>
+		<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+		 solo i fattori di forma</span>: nelle relazioni relative al metodo 
+		 scelto in precedenza verranno omessi i fattori di inclinazione 
+		 del carico.</p></li>
+		<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+		 solo i fattori di inclinazione del carico</span>: nelle relazioni 
+		 relative al metodo scelto in precedenza verranno omessi i fattori 
+		 di forma.</p></li>
+		<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+		 entrambi</span>: nelle relazioni relative ai metodi scelti in 
+		 precedenza verranno considerati entrambi i fattori in un'unica 
+		 formula.</p></li>
+		<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+		 entrambi separatamente</span>: nelle relazioni relative al metodo 
+		 scelto in precedenza verranno considerati entrambi i fattori in 
+		 due formule distinte.</p></li>
+	</ul></li>
+</ol>
+<p style="margin-left: 80px;">Nel caso di carichi puramente verticali verranno 
+ comunque considerati i fattori di forma.</p>
+<p class="hcp7"><span class="hcp1"><a name="Considera_il_fattore_di_riduzione_per_platee" 
+	 id="Considera_il_fattore_di_riduzione_per_platee"></a>Considera il 
+ fattore di riduzione per platee</span>: per fondazioni con B&gt;=2m è 
+ possibile, selezionando tale opzione, considerare un ulteriore fattore 
+ di riduzione del coefficiente di portata del termine rappresentativo del 
+ peso del terreno di fondazione (N<span class="hcp3">g</span>); 
+ tale fattore, proposto da Bowles (1999), è pari a: S<span class="hcp3">g</span>,plat 
+ = 1-0.25*log(B/2) &lt;m&gt; (Bowles, 1999).</p>
+<p class="hcp7"><span class="hcp1"><a name="Considera_gli_effetti_dell_eccentricita_del_carico_con_un_unico_fattore_riduttivo" 
+	 id="Considera_gli_effetti_dell_eccentricita_del_carico_con_un_unico_fattore_riduttivo"></a>Considera 
+ gli effetti dell'eccentricità del carico con un unico fattore riduttivo</span>: 
+ nel caso in cui i terreni interessati dalla superficie di rottura siano 
+ tutti di tipo coesivo o tutti di tipo incoerente, selezionando tale opzione, 
+ verrà trascurata l'eccentricità del carico nelle relazioni relative al 
+ metodo scelto in precedenza ed alla pressione limite calcolata verrà applicato 
+ un unico fattore riduttivo pari a fecc = [1-2*eB/B]*[1–2*eL/L] se i terreni 
+ interessati dalla superficie di rottura sono tutti di tipo coesivo e fecc 
+ = [1–(eB/B)0.5]*[1–(eL/L)0.5] se i terreni interessati dalla superficie 
+ di rottura sono tutti di tipo incoerente.</p>
+<p style="margin-left: 0px;"><span style="margin-left: 0px;"><span class="hcp1"><a 
+	 name="Considera_eccentricita_e_inclinazione_dei_carichi_attraverso_domini_di_interazione" 
+	 id="Considera_eccentricita_e_inclinazione_dei_carichi_attraverso_domini_di_interazione"></a>Considera 
+ eccentricità e inclinazione dei carichi attraverso domini di interazione</span>: 
+ selezionando tale opzione la verifica viene effettuata confrontando le 
+ sollecitazioni agenti col dominio di resistenza dell'insieme terreno fondazione. 
+ Dove lo sforzo normale massimo viene calcolato, per carico verticale centrato, 
+ come indicato in precedenza.</span></p>
+<p><span class="hcp1"><a name="Calcolo_della_capacita_portante_per_rottura_locale" 
+										 id="Calcolo_della_capacita_portante_per_rottura_locale"></a>Calcolo 
+ della capacità portante per rottura locale</span>: specificare, in caso 
+ di terreni di fondazione incoerenti mediamente o poco addensati, se e 
+ come calcolare la pressione limite ipotizzando un meccanismo di rottura 
+ locale. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Terzaghi 
+	 (1943)</p></li>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Vesic 
+	 (1975)</p></li>
+</ul>
+<p><span class="hcp1"><a name="Calcolo_della_capacita_portante_per_rottura_per_punzonamento" 
+										 id="Calcolo_della_capacita_portante_per_rottura_per_punzonamento"></a>Calcolo 
+ della capacità portante per rottura per punzonamento</span>: specificare 
+ se calcolare la capacità portante per punzonamento, tale calcolo verrà 
+ sviluppato secondo Vesic (1975).</p>
+<p><span class="hcp1"><a name="Calcolo_della_capacita_portante_per_scorrimento" 
+										 id="Calcolo_della_capacita_portante_per_scorrimento"></a>Calcolo 
+ della capacità portante per scorrimento</span>: specificare se calcolare 
+ la capacità portante per scorrimento. È possibile indicare:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Percentuale 
+	 di carico orizzontale assorbito dai cordoli</span>: vale a dire la 
+	 percentuale di H che si ritiene venga assorbita dai cordoli di collegamento.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Percentuale 
+	 di spinta passiva mobilitata</span>: vale a dire la percentuale di 
+	 spinta passiva del terreno a lato della fondazione che si ritiene 
+	 venga mobilitata dalla compressione a lato della fondazione.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Calcolo_della_capacita_portante_per_sollevamento" 
+										 id="Calcolo_della_capacita_portante_per_sollevamento"></a>Calcolo 
+ della capacità portante per sollevamento</span>: specificare se calcolare 
+ la capacità portante per sollevamento.</p>
+<h2>Capacità portante in condizioni sismiche</h2>
+<p><span class="hcp1"><a name="Calcolo_della_capacita_portante_per_rottura_generale_sisma" 
+										 id="Calcolo_della_capacita_portante_per_rottura_generale_sisma"></a>Calcolo 
+ della capacità portante per rottura generale</span>: specificare se e 
+ come calcolare la capacità portante sotto l’azione sismica. Sono disponibili 
+ le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Metodo 
+	 scelto per le condizioni statiche</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Richards 
+	 et al. (1993)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Paolucci 
+	 e Pecker (1995)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Indicazioni 
+	 EC8-5 (Allegato F)</span>: è richiesto il coeff. parziale del modello.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Riduzione_angolo_attrito_per_terreni_incoerenti_ben_addensati" 
+										 id="Riduzione_angolo_attrito_per_terreni_incoerenti_ben_addensati"></a>Riduzione 
+ dell'angolo d'attrito per terreni incoerenti ben addensati</span>: selezionando 
+ tale opzione l'angolo d'attrito rappresentativo viene ridotto di una quantità 
+ <span class="hcp3">D</span><span class="hcp3">j</span>' 
+ da specificare. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: specificare il valore di <span class="hcp3">D</span><span class="hcp3">j</span>'.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Dal 
+	 rapporto della tangente con ag/g</span>: specificare il rapporto fra 
+	 tan(<span class="hcp3">D</span><span class="hcp3">j</span>') 
+	 e l'accelerazione sismica normalizzata con l'accelerazione di gravità 
+	 (ag/g).</p></li>
+</ul>
+<p><span class="hcp1"><a name="Calcolo_della_capacita_portante_per_scorrimento_sismiche" 
+										 id="Calcolo_della_capacita_portante_per_scorrimento_sismiche"></a>Calcolo 
+ della capacità portante per scorrimento</span>: specificare se calcolare 
+ la capacità portante per scorrimento. È possibile indicare:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Percentuale 
+	 di carico orizzontale assorbito dai cordoli</span>: vale a dire la 
+	 percentuale di H che si ritiene venga assorbita dai cordoli di collegamento.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Percentuale 
+	 di spinta passiva mobilitata</span>: vale a dire la percentuale di 
+	 spinta passiva del terreno a lato della fondazione che si ritiene 
+	 venga mobilitata dalla compressione a lato della fondazione.</p></li>
+</ul>
+<h2>Cedimenti</h2>
+<p>Specificare come calcolare i cedimenti di fondazioni superficiali. Sono 
+ disponibili le seguenti opzioni:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Terzaghi_e_Peck" id="Terzaghi_e_Peck"></a>Terzaghi e Peck (1948)</span>, 
+	 è necessario specificare la <span class="hcp1">Costante 
+	 di sottofondo k1</span>, relativa ad una prova di carico su piastra 
+	 standard (di forma quadrata o circolare con lato o diametro di b = 
+	 0.3 m).</p></li>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Bowles" id="Bowles"></a>Bowles</span> (teoria dell'elasticità), 
+	 è necessario specificare:</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Spessore 
+	 del terreno responsabile del cedimento</span>. Sono disponibili le 
+	 seguenti opzioni:</p></li>
+</ol>
+<ul style="list-style: disc;">
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Dal 
+	 rapporto con le dimensioni della fondazione</span>: specificare H/B.</p></li>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Dalla 
+	 presenza di uno strato con modulo elastico maggiore di</span>: specificare 
+	 il valore della rigidezza degli strati tale da rendere trascurabili 
+	 i cedimenti dovuti alle loro deformazioni.</p></li>
+</ul>
+<ol start="3" class="hcp8">
+	<li class="p-Elenco1" style="font-weight: normal;"><p class="Elenco1" 
+															 style="font-weight: normal;"><a 
+	 name="Modulo_edometrico" id="Modulo_edometrico"></a><span class="hcp1">Modulo 
+	 edometrico</span></p></li>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Schmertmann" id="Schmertmann"></a>Schmertmann (1978)</span>: 
+	 verranno utilizzati i risultati delle prove CPT, è necessario specificare:</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tempo 
+	 di calcolo</span>, in anni, dal termine della costruzione a quando 
+	 si calcola il cedimento.</p></li>
+</ol>
+<ol start="5" class="hcp8">
+	<li class="p-Elenco1"><p class="Elenco1" style="margin-top: 0pt;"><span class="hcp1"><a name="Burland_e_Burbridge" id="Burland_e_Burbridge"></a>Burland 
+	 e Burbidge (1985)</span>: verranno utilizzati i risultati delle prove 
+	 SPT, è necessario specificare:</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Spessore 
+	 del terreno responsabile del cedimento</span>. Sono disponibili le 
+	 seguenti opzioni:</p>
+	<ul>
+		<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Dal 
+		 rapporto con le dimensioni della fondazione</span>: specificare 
+		 H/B.</p></li>
+		<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Dalla 
+		 presenza di uno strato con modulo elastico maggiore di</span>: 
+		 specificare il valore della rigidezza degli strati tale da rendere 
+		 trascurabili i cedimenti dovuti alle loro deformazioni.</p></li>
+	</ul></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Tempo_di_calcolo" id="Tempo_di_calcolo"></a>Tempo di calcolo</span>, 
+	 in anni, dal termine della costruzione a quando si calcola il cedimento.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Tipo_di_carico" id="Tipo_di_carico"></a>Tipo di carico</span>: 
+	 Costante o Ciclico.</p></li>
+</ol>
+<p><b><a name="Considera_pressioni_di_esercizio_al_netto_delle_tensioni_litostatiche"></a></b><span class="hcp1">Considera pressioni di esercizio al netto 
+ delle tensioni litostatiche</span>: per il calcolo dei cedimenti e della 
+ costante di sottofondo è possibile considerare le pressioni responsabili 
+ del cedimento al netto delle pressioni litostatiche, cioè decurtare la 
+ pressione risultante dal carico della sovrastruttura del valore della 
+ pressione verticale efficace presente in sito alla profondità del piano 
+ di posa delle fondazioni. Tale opzione è utile nella modellazione delle 
+ fondazioni compensate.</p>
+<p><a name="Calcola_costante_di_sottofondo_con_pressioni_di_esercizio"></a><span class="hcp1">Calcola costante di sottofondo con pressioni 
+ di esercizio</span>: per il calcolo della costante di sottofondo è possibile 
+ indicare un particolare valore della pressione di esercizio, oltreché 
+ considerarlo pari alla pressione ultima della fondazione come nelle precedenti 
+ versioni. Tale opzione è utile nell'utilizzo di metodi non lineari di 
+ stima dei cedimenti, dai quali può risultare una deformabilità eccessiva 
+ se la costante di sottofondo è stimata dalla pressione ultima della fondazione.</p>
+<p><a name="Limita_costante_di_sottofondo_ad_un_valore"></a><span class="hcp1">Limita 
+ costante di sottofondo ad un valore</span>: è possibile indicare un valore 
+ massimo delle costanti di sottofondo calcolate automaticamente. Tale opzione 
+ è utile per evitare che, nei limiti di applicabilità del metodo di Winkler, 
+ dalla stima automatica risulti una costante di sottofondo non corretta 
+ per l'analisi strutturale.</p>
+</body>
+</html>

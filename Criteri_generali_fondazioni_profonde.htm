@@ -1,0 +1,338 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Criteri generali fondazioni profonde</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+p.hcp2 { font-weight:bold; }
+span.hcp3 { font-weight:normal; }
+span.hcp4 { font-family:Symbol, serif; }
+span.hcp5 { vertical-align:Sub; }
+table.hcp6 { vertical-align:top; }
+tr.hcp7 { vertical-align:top; }
+td.hcp8 { border:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp9 { text-align:center; }
+td.hcp10 { border-top:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+td.hcp11 { border-left:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px;
+vertical-align:center; }
+td.hcp12 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp13 { text-align:right; }
+span.hcp14 { vertical-align:Super; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Criteri generali fondazioni profonde</h1>
+<p>Si tratta di criteri che stabiliscono i metodi per l'elaborazione dei 
+ parametri dell'intera colonna stratigrafica al fine di effettuare le verifiche 
+ di capacità portante e il calcolo dei cedimenti e degli spostamenti delle 
+ fondazioni profonde presenti nella struttura. Tali metodi sono quindi 
+ stabiliti indipendentemente dal numero del criterio di progetto assegnato 
+ ai singoli strati della colonna stratigrafica.</p>
+<h2>Generali</h2>
+<p><span class="hcp1"><a name="Calcola_capacita_portante_per_carichi_verticali" 
+										 id="Calcola_capacita_portante_per_carichi_verticali"></a>Calcola 
+ capacità portante per carichi verticali</span>: specificare se calcolare 
+ la capacità portante per carichi verticali <span class="hcp1">secondo 
+ formule statiche</span> oppure da <span class="hcp1">correlazioni 
+ da prove in sito</span> (se definite ed assegnate alla stratigrafia di 
+ progetto).</p>
+<p><span class="hcp1"><a name="Considera_capacita_portante" 
+										 id="Considera_capacita_portante"></a>Considera 
+ capacità portante</span>: specificare se calcolare la capacità portante 
+ per carichi verticali solo per attrito laterale, solo per pressione limite 
+ alla base oppure sia per attrito laterale che per pressione limite alla 
+ base.</p>
+<p><span class="hcp1"><a name="Condizioni_di_calcolo_per_terreni_coesivi_sottofalda" 
+										 id="Condizioni_di_calcolo_per_terreni_coesivi_sottofalda"></a>Condizioni 
+ di calcolo per terreni coesivi</span>: specificare se devono essere ipotizzate 
+ condizioni drenate, non drenate oppure sia drenate che non drenate, in 
+ tal caso le capacità portanti per carichi verticali ed orizzontali saranno 
+ pari alle minori calcolate nei due modi.</p>
+<p><span class="hcp1"><a name="Calcolo_della_profondita_critica" 
+										 id="Calcolo_della_profondita_critica"></a>Calcolo 
+ della profondità critica</span>: specificare, ai fini della capacità portante 
+ per carichi verticali con formule statiche in terreni incoerenti e per 
+ le relazioni che lo richiedono, se e come deve essere valutata la profondità 
+ dopo la quale risultano costanti le pressioni orizzontali efficaci lungo 
+ il fusto del palo. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: valore della profondità critica.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Come 
+	 un multiplo del diametro del palo pari a</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">In 
+	 funzione di densità relativa e diametro del palo</span></p></li>
+</ul>
+<p class="hcp2"><a name="Effettua_calcolo_elasto_plastico_per_cedimenti" 
+								 id="Effettua_calcolo_elasto_plastico_per_cedimenti"></a>Effettua 
+ calcolo elasto-plastico per cedimenti<span class="hcp3">: 
+ specificare se, ai fini della determinazione dei cedimenti, l'analisi 
+ dei pali deve essere effettuata non considerando il limite plastico delle 
+ tensioni di contatto fra il palo ed il terreno.</span></p>
+<p class="hcp2"><a name="Effettua_calcolo_elasto_plastico_per_spostamenti_orizzontali" 
+								 id="Effettua_calcolo_elasto_plastico_per_spostamenti_orizzontali"></a>Effettua 
+ calcolo elasto-plastico per spostamenti orizzontali<span class="hcp3">: 
+ specificare se, ai fini della determinazione degli spostamenti orizzontali, 
+ l’analisi dei pali deve essere effettuata non considerando il limite plastico 
+ delle pressioni orizzontali nel terreno.</span></p>
+<p><span class="hcp1"><a name="Rapporto_di_elasticita_trazione_compressione_pari_a" 
+										 id="Rapporto_di_elasticita_trazione_compressione_pari_a"></a>Rapporto 
+ di elasticità trazione/compressione pari a</span>: specificare, ai fini 
+ della determinazione della risposta elastica del terreno per carichi verticali 
+ di trazione, il rapporto di questa con la risposta elastica del terreno 
+ per carichi verticali di compressione, definibile come risposta elastica 
+ laterale nei criteri specifici relativi ai cedimenti.</p>
+<p><span class="hcp1"><a name="Fattori_di_correlazione" id="Fattori_di_correlazione"></a>Fattori 
+ di correlazione</span>: specificare, ai fini della determinazione della 
+ resistenza caratteristica per carichi verticali, il fattore di correlazione 
+ come indicato nella tabella 6.4.IV del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Considera_fattori_di_correlazione_anche_per_carichi_orizzontali" 
+										 id="Considera_fattori_di_correlazione_anche_per_carichi_orizzontali"></a>Considera 
+ fattori di correlazione anche per carichi orizzontali</span>: specificare 
+ se considerare il fattore di correlazione anche ai fini della determinazione 
+ della resistenza caratteristica per carichi orizzontali.</p>
+<p><span class="hcp1"><a name="Considera_peso_del_palo" id="Considera_peso_del_palo"></a>Considera 
+ peso del palo</span>: specificare se considerare il peso del palo anche 
+ nelle verifiche di capacità portante per carichi verticali di compressione.</p>
+<p><span class="hcp1"><a name="Divisore_del_raggio_del_palo_per_lunghezza_conci"></a>Divisore 
+ del raggio del palo per lunghezza conci</span>: indicare il numero con 
+ cui dividere il raggio del palo per determinare la lunghezza degli elementi 
+ in cui suddividere il palo.</p>
+<p><span class="hcp1"><a name="Max_num_discretizzazioni_palo" 
+										 id="Max_num_discretizzazioni_palo"></a>Max 
+ numero conci palo</span>: indicare il numero massimo di elementi in cui 
+ suddividere il palo.</p>
+<h2>Attrito laterale limite da prove in sito</h2>
+<p>Questi parametri vengono utilizzati per il calcolo dell'attrito laterale 
+ limite e sono attivi solo quando nei criteri generali è richiesto di calcolare 
+ la capacità portante per carichi verticali da correlazioni da prove in 
+ sito (vedi parametro <span class="hcp1"><a href="Criteri_generali_fondazioni_profonde.htm#Calcola_capacita_portante_per_carichi_verticali">Calcola 
+ capacità portante per carichi verticali</a></span>) e se non è stato scelto 
+ di considerare la capacità portante solo per pressione limite alla base 
+ (vedi parametro <span class="hcp1"><a href="Criteri_generali_fondazioni_profonde.htm#Considera_capacita_portante">Considera 
+ capacità portante</a></span>); in tal caso occorre specificare come calcolare 
+ l'attrito laterale limite <span class="hcp4">(t</span><span class="hcp5">s</span><span class="hcp4">)</span>. 
+ Sono disponibili le seguenti opzioni:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Correlato_con_prove_CPT" id="Correlato_con_prove_CPT"></a>Correlato 
+	 con prove CPT</span>: specificare se e come utilizzare le correlazioni 
+	 con prove CPT. Sono disponibili le seguenti opzioni:</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Dal 
+	 rapporto con fs pari a</span>: Indicare il rapporto fra la tensione 
+	 limite (<span class="hcp4">t</span><span class="hcp5">s</span>) 
+	 e la tensione resistente laterale locale misurata (fs).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Dal 
+	 rapporto con qc</span>: indicare il rapporto fra la tensione limite 
+	 (<span class="hcp4">t</span><span class="hcp5">s</span>) 
+	 e la resistenza unitaria alla punta (qc). Sono disponibili le seguenti 
+	 opzioni:</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Pari 
+	 a</span>: indicare il valore del rapporto <span class="hcp4">t</span><span class="hcp5">s</span> / qc.</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">AGI 
+	 (1984)</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">De 
+	 Beer (1985)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Metodo_di_Bustamante_e_Doix_CPT" id="Metodo_di_Bustamante_e_Doix_CPT"></a>Metodo 
+	 di Bustamante e Doix (1985) per micropali</span>: il valore di <span class="hcp4">t</span><span class="hcp5">s</span> 
+	 è calcolato in funzione del tipo di iniezioni utilizzate, è quindi 
+	 necessario specificare il tipo di iniezione utilizzata:</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">Iniezioni 
+	 ripetute</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">Iniezione 
+	 unica</p></li>
+</ol>
+<ol start="2">
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Correlato_con_prove_SPT" id="Correlato_con_prove_SPT"></a>Correlato 
+	 con prove SPT</span>: specificare se e come utilizzare i risultati 
+	 della prova SPT secondo la relazione <span class="hcp4">t</span><span class="hcp5">s</span> = a + b*Nspt. Si richiedono 
+	 i valori del termine costante (a) e del termine variabile (b) delle 
+	 tensioni di correlazione. Sono disponibili le seguenti opzioni:</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Tensioni_di_correlazione_secondo_tabella" id="Tensioni_di_correlazione_secondo_tabella"></a>Tensioni 
+	 di correlazione secondo tabella</span>: selezionando tale opzione 
+	 verranno scelti i parametri secondo la seguente tabella:</p></li>
+</ol>
+<table cellspacing="0" width="50%" align="center" class="hcp6">
+	<col style="width: 30%;">
+	<col style="width: 30%;">
+	<col style="width: 20%;">
+	<col style="width: 20%;">
+	<tr class="hcp7">
+		<td style="width:30%;" class="hcp8"><p class="hcp9">Palo</p></td>
+		<td style="width:30%;" class="hcp10"><p class="hcp9">Terreno</p></td>
+		<td style="width:20%;" class="hcp10"><p class="hcp9">a &lt;kPa&gt;</p></td>
+		<td style="width:20%;" class="hcp10"><p class="hcp9">b &lt;kPa&gt;</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td rowspan="2" style="width:30%;" class="hcp11"><p>Battuto</p></td>
+		<td style="width:30%;" class="hcp12"><p>Coesivo</p></td>
+		<td style="width:20%;" class="hcp12"><p class="hcp13">0</p></td>
+		<td style="width:20%;" class="hcp12"><p class="hcp13">10</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td style="width:30%;" class="hcp12"><p>Incoerente</p></td>
+		<td style="width:20%;" class="hcp12"><p class="hcp13">0</p></td>
+		<td style="width:20%;" class="hcp12"><p class="hcp13">2</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td rowspan="2" style="width:30%;" class="hcp11"><p>Trivellato</p></td>
+		<td style="width:30%;" class="hcp12"><p>Coesivo</p></td>
+		<td style="width:20%;" class="hcp12"><p class="hcp13">0</p></td>
+		<td style="width:20%;" class="hcp12"><p class="hcp13">5</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td style="width:30%;" class="hcp12"><p>Incoerente</p></td>
+		<td style="width:20%;" class="hcp12"><p class="hcp13">0</p></td>
+		<td style="width:20%;" class="hcp12"><p class="hcp13">3.3</p></td>
+	</tr>
+</table>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tensioni 
+	 di correlazione pari a</span>: indicare i valori del termine costante 
+	 e del termine variabile delle tensioni di correlazione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Metodo 
+	 di Wright e Reese (1977)<span class="hcp3">: valido 
+	 per pali trivellati di grande diametro.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Metodo_di_Bustamante_e_Doix_SPT" id="Metodo_di_Bustamante_e_Doix_SPT"></a>Metodo 
+	 di Bustamante e Doix (1985) per micropali</span>: il valore di <span class="hcp4">t</span><span class="hcp5">s</span> 
+	 è calcolato in funzione del tipo di iniezioni utilizzate, è quindi 
+	 necessario specificare il tipo di iniezione utilizzata:</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">Iniezioni 
+	 ripetute</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">Iniezione 
+	 unica</p></li>
+</ul>
+<p><span class="hcp1"><a name="Fattori_di_riduzione_attrito_laterale_per_pali_trivellati" 
+										 id="Fattori_di_riduzione_attrito_laterale_per_pali_trivellati"></a>Fattori 
+ di riduzione attrito laterale per pali trivellati</span>: specificare 
+ se e di quanto deve essere ridotto il valore di <span class="hcp4">t</span><span class="hcp5">s</span> nel caso di pali trivellati.</p>
+<h2>Pressione limite alla base da prove in sito</h2>
+<p>Questi parametri vengono utilizzati per il calcolo della pressione limite 
+ alla base del palo e sono attivi solo quando nei criteri generali è richiesto 
+ calcolare la capacità portante per carichi verticali da correlazioni da 
+ prove in sito (vedi parametro <span class="hcp1"><a href="Criteri_generali_fondazioni_profonde.htm#Calcola_capacita_portante_per_carichi_verticali">Calcola 
+ capacità portante per carichi verticali</a></span>) e se non è stato scelto 
+ di considerare la capacità portante solo per attrito laterale limite (vedi 
+ parametro <span class="hcp1"><a href="Criteri_generali_fondazioni_profonde.htm#Considera_capacita_portante">Considera 
+ capacità portante</a></span>); in tal caso occorre specificare come calcolare 
+ la pressione limite alla base del palo (qp). Sono disponibili le seguenti 
+ opzioni:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Correlato_con_prove_CPT_pressioni" id="Correlato_con_prove_CPT_pressioni"></a>Correlato 
+	 con prove CPT</span>: specificare se utilizzare i risultati della 
+	 prova CPT, è possibile calcolare qp:</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Dal 
+	 rapporto con qc pari a</span>: indicare il rapporto fra la pressione 
+	 limite (qp) e la resistenza unitaria alla punta (qc) misurata.</p></li>
+</ol>
+<ol start="2">
+	<li class="p-Elenco1" style="font-weight: normal;"><p class="Elenco1" 
+															 style="margin-top: 0pt;"><span class="hcp1"><a name="Correlato_con_prove_SPT_pressioni" 
+									 id="Correlato_con_prove_SPT_pressioni"></a>Correlato 
+	 con prove SPT</span>: specificare se e come utilizzare i risultati 
+	 della prova SPT. Si richiede il valore della tensione di correlazione 
+	 (c). Sono disponibili le seguenti opzioni:</p></li>
+</ol>
+<ol start="2">
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tensione 
+	 di correlazione secondo tabella</span>: selezionando tale opzione 
+	 verrà scelto il parametro secondo la seguente tabella:</p></li>
+</ol>
+<table cellspacing="0" width="40%" align="center" class="hcp6">
+	<col style="width: 37.5%;">
+	<col style="width: 37.5%;">
+	<col style="width: 25%;">
+	<tr class="hcp7">
+		<td style="width:37.5%;" class="hcp8"><p class="hcp9">Palo</p></td>
+		<td style="width:37.5%;" class="hcp10"><p class="hcp9">Terreno</p></td>
+		<td style="width:25%;" class="hcp10"><p class="hcp9">c &lt;kPa&gt;</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td rowspan="2" style="width:37.5%;" class="hcp11"><p>Battuto</p></td>
+		<td style="width:37.5%;" class="hcp12"><p>Coesivo</p></td>
+		<td style="width:25%;" class="hcp12"><p class="hcp13">300</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td style="width:37.5%;" class="hcp12"><p>Incoerente</p></td>
+		<td style="width:25%;" class="hcp12"><p class="hcp13">300</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td rowspan="2" style="width:37.5%;" class="hcp11"><p>Trivellato</p></td>
+		<td style="width:37.5%;" class="hcp12"><p>Coesivo</p></td>
+		<td style="width:25%;" class="hcp12"><p class="hcp13">100</p></td>
+	</tr>
+	<tr class="hcp7">
+		<td style="width:37.5%;" class="hcp12"><p>Incoerente</p></td>
+		<td style="width:25%;" class="hcp12"><p class="hcp13">150</p></td>
+	</tr>
+</table>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tensione 
+	 di correlazione pari a</span>: indicare il valore della tensione di 
+	 correlazione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Metodo 
+	 di Wright e Reese (1977)<span class="hcp3">: valido 
+	 per pali trivellati di grande diametro.</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Fattori_di_riduzione_pressione_limite_alla_base_per_pali_trivellati" 
+										 id="Fattori_di_riduzione_pressione_limite_alla_base_per_pali_trivellati"></a>Fattori 
+ di riduzione pressione limite alla base per pali trivellati</span>: specificare 
+ se e di quanto deve essere ridotto il valore di qp nel caso di pali trivellati.</p>
+<h2>Spostamenti orizzontali</h2>
+<p>Specificare come definire la risposta elastica del terreno per carichi 
+ orizzontali. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Risposta_elastica_in_funzione_della_stratigrafia" id="Risposta_elastica_in_funzione_della_stratigrafia"></a>Risposta 
+	 elastica in funzione della stratigrafia</span>: la costante elastica 
+	 orizzontale (kWh) rappresentativa del terreno viene calcolata, in 
+	 funzione della rigidezza degli strati interessati dall’infissione 
+	 del palo, secondo quanto indicato nei criteri specifici.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Binomia_esponenziale" id="Binomia_esponenziale"></a>Binomia 
+	 esponenziale</span>: la costante elastica orizzontale (kW<span class="hcp5">h</span>) 
+	 rappresentativa del terreno non varia in funzione dei parametri elastici 
+	 definiti nei singoli strati ma in funzione della profondità (z) adimensionalizzata 
+	 dal rapporto col diametro del palo (DP) secondo la relazione kW<span class="hcp5">h</span> = AW + BW*(z/DP)<span class="hcp14">nW</span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Binomia_trigonometrica" id="Binomia_trigonometrica"></a>Binomia 
+	 trigonometrica</span>: la costante elastica orizzontale (kW<span class="hcp5">h</span>) 
+	 rappresentativa del terreno non varia in funzione dei parametri elastici 
+	 definiti nei singoli strati ma in funzione della profondità (z) adimensionalizzata 
+	 dal rapporto col diametro del palo (DP) secondo la relazione kW<span class="hcp5">h</span> = AW + BW*arctan(z/DP).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Palmer_e_Thompson__1948_" id="Palmer_e_Thompson__1948_"></a>Palmer 
+	 e Thompson (1948)</span>: la costante elastica orizzontale (kW<span class="hcp5">h</span>) rappresentativa del terreno 
+	 non varia in funzione dei parametri elastici definiti nei singoli 
+	 strati ma in funzione della profondità (z) adimensionalizzata dal 
+	 rapporto con la lunghezza del palo (LP) secondo la relazione kW<span class="hcp5">h</span> = BW*(z/LP)<span class="hcp14">nW</span>.</p></li>
+</ul>
+</body>
+</html>

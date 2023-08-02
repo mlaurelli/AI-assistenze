@@ -1,0 +1,109 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Verifiche delle aste</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { vertical-align:Sub; }
+span.hcp2 { font-family:Symbol, serif; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Verifiche delle aste</h1>
+<p>Le verifiche sono eseguite, in riferimento alle UNI EN 1995-1-2:2005 
+ (EC5), con il metodo della sezione trasversale ridotta per il carico da 
+ incendio normalizzato. Tale metodo si basa sulla stima della parte di 
+ sezione carbonizzata, da decurtare per ottenere la sezione ridotta efficace 
+ da verificare per i carichi di progetto. La parte di sezione carbonizzata 
+ è definita dalla distanza d<span class="hcp1">ef</span> 
+ fra le superfici esposte della sezione integra e le superfici della sezione 
+ ridotta efficace. In generale si considera:</p>
+<p>d<span class="hcp1">ef</span> = d<span class="hcp1">char,n</span> 
+ + k<span class="hcp1">0</span>d<span class="hcp1">0</span></p>
+<p>dove d<span class="hcp1">char,n</span> è la profondità 
+ di carbonizzazione convenzionale di progetto, mentre k<span class="hcp1">0</span>d<span class="hcp1">0</span> (con d<span class="hcp1">0</span> 
+ = 7 mm costante) rappresenta un ulteriore strato a resistenza nulla.</p>
+<p>Nel caso di protezione assente risulta: d<span class="hcp1">char,n</span> 
+ = &#946;<span class="hcp1">n</span>t e k<span class="hcp1">0</span> 
+ = min[t/20,1], dove t è il tempo&#160;&#160;di verifica in minuti e &#946;<span class="hcp1">n</span> , in mm/minuti, è la velocità 
+ di carbonizzazione convenzionale di progetto, funzione del tipo di legno, 
+ stimata includendo gli effetti degli spigoli arrotondati e delle fessure.</p>
+<p>Nel caso di protezione al fuoco, per calcolare d<span class="hcp1">ef</span>, 
+ bisogna definire le seguenti grandezze proprie della protezione:</p>
+<p>t<span class="hcp1">ch</span> :&#160;tempo di inizio 
+ carbonizzazione della protezione;</p>
+<p>t<span class="hcp1">f</span> :&#160;tempo di rottura 
+ della protezione (t<span class="hcp1">f</span> &#8805; t<span class="hcp1">ch</span>);</p>
+<p>k<span class="hcp1">2</span> :&#160;moltiplicatore di 
+ &#946;<span class="hcp1">n</span> per t<span class="hcp1">ch</span>&#8805;t&gt;t<span class="hcp1">f</span> (k<span class="hcp1">2</span>&#8804;1);</p>
+<p>k<span class="hcp1">3</span> : moltiplicatore di &#946;<span class="hcp1">n</span> per t<span class="hcp1">f</span>&#8805;t&gt;t<span class="hcp1">a</span> (k<span class="hcp1">3</span>&#8805;1),</p>
+<p>con t<span class="hcp1">a</span> tempo di fine funzionamento 
+ della protezione, calcolabile dalle seguenti relazioni: t<span class="hcp1">a</span> 
+ = t<span class="hcp1">f</span>+(25/&#946;<span class="hcp1">n</span>-k<span class="hcp1">2</span>(t<span class="hcp1">f</span>-t<span class="hcp1">ch</span>))/k<span class="hcp1">3</span> 
+ se &#946;<span class="hcp1">nta</span> &gt; 25 mm, altrimenti 
+ t<span class="hcp1">a</span> = (k<span class="hcp1">3</span>t<span class="hcp1">f</span>-k<span class="hcp1">2</span>(t<span class="hcp1">f</span>-t<span class="hcp1">ch</span>))/(k<span class="hcp1">3</span>-1).</p>
+<p>Da tali grandezze si calcola quindi:</p>
+<p>d<span class="hcp1">char,n</span> = 0&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;se 
+ t&#8804;t<span class="hcp1">ch</span>;</p>
+<p>d<span class="hcp1">char,n</span> = k<span class="hcp1">2</span>&#946;<span class="hcp1">n</span>(t-t<span class="hcp1">ch</span>)&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;se 
+ t<span class="hcp1">ch</span>&lt;t&#8804;t<span class="hcp1">f</span>;</p>
+<p>d<span class="hcp1">char,n</span> = k<span class="hcp1">2</span>&#946;<span class="hcp1">n</span>(t<span class="hcp1">f</span>-t<span class="hcp1">ch</span>)+k<span class="hcp1">3</span>&#946;n(t-t<span class="hcp1">f</span>)&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;se 
+ t<span class="hcp1">f</span>&lt;t&#8804;t<span class="hcp1">a</span>;</p>
+<p>d<span class="hcp1">char,n</span> = k<span class="hcp1">2</span>&#946;<span class="hcp1">n</span>(t<span class="hcp1">f</span>-t<span class="hcp1">ch</span>)+k3&#946;n(t<span class="hcp1">a</span>-tf)+&#946;n(t-t<span class="hcp1">a</span>)&#160;se t&gt;t<span class="hcp1">a</span>.</p>
+<p>Si calcola inoltre:</p>
+<p>k<span class="hcp1">0</span> = min[t/max[t<span class="hcp1">ch</span>,20],1],</p>
+<p>ma, per superfici di legno affacciate su una cavità vuota, se il rivestimento 
+ protettivo consiste di uno o due strati di cartongesso di tipo A, di legno 
+ o di pannelli a base di legno allora si calcola:</p>
+<p>k<span class="hcp1">0</span> = 0.3t/t<span class="hcp1">f</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;se 
+ t&#8804;t<span class="hcp1">f</span>;</p>
+<p>k<span class="hcp1">0</span> = 0.3+0.7(t-t<span class="hcp1">f</span>)/15&#160;&#160;&#160;se 
+ tf&lt;t&#8804;t<span class="hcp1">f</span>+15;</p>
+<p>k<span class="hcp1">0</span> = 1&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;se 
+ t&gt;t<span class="hcp1">f</span>+15.</p>
+<p>Le resistenze e le rigidezze di progetto sono date dalla relazione X<span class="hcp1">d</span> = X<span class="hcp1">k</span>k<span class="hcp1">mod,fi</span>k<span class="hcp1">fi</span>/<span class="hcp2">g</span><span class="hcp1">m,fi</span>, 
+ in cui X<span class="hcp1">k</span> è il valore caratteristico 
+ della resistenza o rigidezza, kmod,fi è il coefficiente di durata del 
+ carico, <span class="hcp2">g</span><span class="hcp1">m,fi</span> 
+ è il coefficiente parziale di sicurezza e k<span class="hcp1">fi</span> 
+ è il fattore di conversione dal frattile 5% al frattile 20%, funzione 
+ del tipo di legno. I valori indicati nelle UNI EN 1995-1-2:2005 sono: 
+ per legno massiccio k<span class="hcp1">fi</span> = 1.25; 
+ per legno lamellare incollato e pannelli a base di legno k<span class="hcp1">fi</span> 
+ = 1.15; per LVL k<span class="hcp1">fi</span> = 1.10, 
+ in ogni caso kmod,fi = 1 e <span class="hcp2">g</span><span class="hcp1">m,fi</span> = 1. Eventuali incrementi 
+ dei valori caratteristici delle resistenze di cui al par. 11.7.1.1 del 
+ D.M.08 sono definiti considerando le dimensioni della sezione efficace 
+ integra. Nella verifica delle aste i parametri di rigidezza medi (E<span class="hcp1">0,mean</span> e G<span class="hcp1">mean</span>) 
+ non sono effettivamente utilizzati.</p>
+<p>Le verifiche per carico da incendio (analoghe a quelle di resistenza 
+ e stabilità richieste dalla normativa per gli stati limite ultimi) sono 
+ eseguite sulle aste con sezione efficace ridotta, sollecitate delle azioni 
+ risultanti dalla combinazione eccezionale (2.5.6) di cui al par. 2.5.3 
+ del D.M. 17/01/18.</p>
+<p>Le sollecitazioni di progetto sono comunque definite dall’analisi FEM 
+ della struttura con le rigidezze delle aste con la sezione integra.</p>
+<p>La velocità di carbonizzazione convenzionale di progetto può essere 
+ stimata dalla seguente tabella (UNI EN 1995-1-2:2005 prospetto 3.1):</p>
+<p style="text-align: center;"><img src="EC5_prospetto_31.png" alt="" border="0"></p>
+<p>dove, oltre a &#946;<span class="hcp1">n</span> , è indicato 
+ anche &#946;<span class="hcp1">0</span> velocità di carbonizzazione 
+ unidimensionale.</p>
+<p>Per protezione in pannelli di legno di spessore h<span class="hcp1">p</span> 
+ si può considerare t<span class="hcp1">ch</span> = h<span class="hcp1">p</span>/&#946;<span class="hcp1">0</span>; 
+ t<span class="hcp1">f</span> = t<span class="hcp1">ch</span>; 
+ k2 = 1 (ininfluente per t<span class="hcp1">f</span> = 
+ t<span class="hcp1">ch</span>); k<span class="hcp1">3</span> 
+ = 2.</p>
+<p>Per indicazioni sulle grandezze proprie delle protezioni in cartongesso 
+ o lana di roccia si rimanda alle indicazioni fornite nelle UNI EN 1995-1-2:2005.</p>
+</body>
+</html>

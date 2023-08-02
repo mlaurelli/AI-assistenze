@@ -1,0 +1,64 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Definizione nuclei</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-style:italic; }
+span.hcp2 { font-weight:bold; }
+span.hcp3 { text-decoration:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Definizione nuclei</h1>
+<p>L'utilizzo dei muri e soprattutto degli elementi bidimensionali consente 
+ di schematizzare agevolmente vani ascensore, corpi scale e pareti irrigidenti 
+ con una ottima corrispondenza fra lo schema strutturale numerico e la 
+ realtà del progetto.</p>
+<p>Resta però generalmente problematica la progettazione delle armature 
+ necessarie in quanto le sollecitazioni negli elementi forniscono solo 
+ indicazioni locali, con situazioni di trazione e compressione che in realtà 
+ dipendono dal comportamento globale del complesso di elementi come un'unica 
+ grande sezione pressoinflessa.</p>
+<p>Nel caso di progetto secondo il D.M. 17/01/18 occorre suddividere in 
+ nuclei diversi eventuali vani scale, ascensore, ecc. costituiti da più 
+ pareti, quindi i nuclei devono essere costituiti da pareti singole, per 
+ approfondimenti si veda <a href="Verifiche_secondo_il_DM_17_01_18.htm" 
+							 style="font-weight: bold;">Verifiche secondo 
+ il D.M. 17/01/18</a>.</p>
+<p>ModeSt consente di raggruppare logicamente fra loro un insieme di elementi 
+ bidimensionali in modo da formare un <span class="hcp1">nucleo</span>. 
+ Un nucleo è definito come un insieme di muri o elementi bidimensionali, 
+ verticali, che abbiano tutti il <span class="hcp2"><a href="Sistemi%20di%20riferimento%20locali.htm">sistema 
+ di riferimento locale</a></span> con l'asse X parallelo al piano coordinato 
+ XY e l'asse Z parallelo all'asse coordinato Z. Se nel nucleo sono presenti 
+ più orizzontamenti (&quot;fasce&quot; orizzontali derivanti dalla meshatura 
+ o semplicemente muri sovrapposti), il nucleo viene automaticamente suddiviso 
+ in <span class="hcp1">livelli</span> ed il progetto delle 
+ armature considererà la diversa configurazione geometrica ai diversi livelli.</p>
+<p>Con una accorta meshatura è quindi possibile schematizzare aperture, 
+ cambiamenti geometrici, ecc. in quanto le procedure di progettazione armatura 
+ operano una integrazione delle sollecitazioni per ognuno dei livelli presenti 
+ nel nucleo ed effettuano le verifiche considerando il nucleo come una 
+ unica sezione.</p>
+<p>Poiché la definizione di nucleo serve solo per il progetto delle armature, 
+ può ovviamente essere effettuata indifferentemente prima o dopo il calcolo 
+ della struttura.</p>
+<p style="margin-bottom: 0;"><span class="hcp2">Argomenti 
+ correlati: <span class="hcp3"><a href="Nuclei.htm">Nuclei</a></span></span><span 
+	 style="font-weight: normal;">,</span> <span class="hcp2"><span class="hcp3"><a href="Note%20sui%20nuclei.htm">Note 
+ sui nuclei</a></span></span></p>
+</body>
+</html>

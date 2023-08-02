@@ -1,0 +1,106 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Verifica automatica ed interattiva</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp3 { font-family:Symbol, serif; }
+span.hcp4 { vertical-align:Sub; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Verifica automatica ed interattiva</h1>
+<p>A seguito del calcolo della struttura in muratura ModeSt effettua automaticamente 
+ le verifiche per le azioni statiche (carichi verticali e/o da vento) e 
+ per le per azioni sismiche sia nel piano che fuori dal piano.</p>
+<p>Nell'ambiente di progettazione interattiva delle murature, apribile 
+ cliccando nel gruppo <span class="hcp1">Progettazioni</span> 
+ della scheda <span class="hcp1">Post-Processor</span> su 
+ <img src="../Icone/32/progint32.png" alt="" border="1" class="hcp2"> e poi su 
+ <span class="hcp1">Murature</span> <img src="../Icone/16/ALB_MURATURA.png" alt="" border="1" class="hcp2">, 
+ dopo aver attivato la visualizzazione dei maschi per verifiche statiche 
+ o sismiche cliccando nel gruppo <span class="hcp1">Modello</span> 
+ sulla freccia sottostante <span class="hcp1">Muratura</span> 
+ <img src="../Icone/32/muraturaON32.png" alt="" border="1" class="hcp2">, è possibile 
+ progettare interattivamente il maschio murario cliccando nel gruppo <span class="hcp1">Maschi</span> e poi su <span class="hcp1">Proprietà</span> 
+ <img src="../Icone/16/proprietamaschi.png" alt="" border="1" class="hcp2"> e quindi 
+ selezionando un maschio murario.</p>
+<p>Il comando <span class="hcp1">Ricalcola</span> <img src="../Icone/16/calc.png" alt="" border="1" class="hcp2"> come di consueto esegue le verifiche mentre dal pannello 
+ <span class="hcp1">Stato verifiche</span> è possibile impostare 
+ la verifica corrente, ossia quella per cui visualizzare i risultati. La 
+ relativa casella di riepilogo a discesa dà la possibilità di individuare 
+ tutte le verifiche effettuate sul maschio in oggetto.</p>
+<p>Il comando<span class="hcp1"> Anteprima rel. <img src="../Icone/16/anteprimarel.png" alt="" border="1" class="hcp2"></span> visualizza l'anteprima della relazione di calcolo. 
+ È possibile specificare se creare la relazione con il sistema tecnico 
+ o con l'unità di misura corrente utilizzando l'opzione &quot;Usa sistema 
+ tecnico&quot; del menu che compare cliccando sulla freccia a destra del 
+ comando.</p>
+<h2 class="Titolo5">Verifiche statiche</h2>
+<p>Le verifiche per azioni statiche, verticali e/o ortogonali al piano 
+ del maschio murario, dipendono dalla snellezza (<span class="hcp3">l</span>), 
+ dal valore del fattore laterale di vincolo (<span class="hcp3">r</span>), 
+ dall'eccentricità accidentale (e<span class="hcp4">a</span>) 
+ che sono funzione della geometria del maschio murario e dalle eccentricità 
+ dei carichi dovuti ai solai (e<span class="hcp4">s1</span>, 
+ e<span class="hcp4">s2</span>) che dipendono sia dai carichi 
+ verticali agenti (peso parete soprastante, peso del solaio) che della 
+ lunghezza dell'appoggio del solaio specificata nei criteri di progetto 
+ (<span class="hcp1"><a href="Criteri_di_verifica_murature.htm#Lunghezza_appoggio_solai">Lunghezza 
+ appoggio solai</a></span>).</p>
+<p>È possibile attivare e disattivare quali solai costituiscono un appoggio 
+ per le verifiche cliccando nel gruppo <span class="hcp1">Definisci</span> 
+ su <span class="hcp1">Appoggi</span> <img src="../Icone/16/definisciappoggio2.png" alt="" border="1" class="hcp2"> 
+ e poi rispettivamente su <span class="hcp1">Aggiungi</span> 
+ <img src="../Icone/16/aggiungiappoggio2.png" alt="" border="1" class="hcp2"> o su <span class="hcp1">Elimina</span>&#160;<img src="../Icone/16/eliminaappoggio2.png" alt="" border="1" class="hcp2">. 
+ Tali modifiche fanno cambiare ovviamente le snellezze, i punti di verifica 
+ e l'andamento del momento per carichi ortogonali al piano dell'elemento.</p>
+<p>Si fa notare che in questa sede vengono considerati come &quot;da vento&quot; 
+ tutti i carichi ortogonali alla parete, indipendentemente dal fatto che 
+ siano stati introdotti o meno in una CCE di tipologia classificata &quot;ufficialmente&quot; 
+ come da vento.</p>
+<p>La modifica delle lunghezze di appoggio dei solai, l'altezza di calcolo 
+ dell'interpiano, la presenza di irrigidimenti trasversali ed il loro interasse 
+ si effettua cliccando nel gruppo <span class="hcp1">Interpiano</span> 
+ su <span class="hcp1">Proprietà</span> <img src="../Icone/32/proprietaparete32.png" alt="" border="1" class="hcp2"> 
+ oppure attraverso l'opzione <span style="font-style: italic;">Proprietà</span> 
+ del tasto destro del mouse su una delle linee che identificano un maschio 
+ di interpiano o sul testo che specifica gli irrigidimenti.</p>
+<p>Si fa presente che tutti questi ultimi parametri influenzano solo le 
+ verifiche per carichi verticali ed ortogonali e non i meccanismi di collasso.</p>
+<p><span class="hcp1">Nota</span>: qualunque modifica venga 
+ fatta alla geometria e ai criteri di progetto <span class="hcp1"><a 
+	 href="Criteri_di_verifica_murature.htm#Lunghezza_appoggio_solai">Lunghezza 
+ appoggio solai</a></span> e <span class="hcp1"><a href="Criteri_di_verifica_murature.htm#Comportamento_maschi">Comportamento 
+ maschi</a></span>, comporta la perdita del modello di muratura e di tutte 
+ le eventuali modifiche e personalizzazione apportate ai maschi. Si consiglia 
+ quindi di procedere a tutte le modifiche succitate solo quando il modello 
+ base è ormai definitivo.</p>
+<h2 class="Titolo5">Verifiche sismiche</h2>
+<p>Nelle verifiche per le azioni sismiche ortogonali al piano, il maschio 
+ murario avrà uno schema con gli appoggi attivati o disattivati in funzione 
+ di quanto specificato nei criteri di progetto <span class="hcp1"><a 
+	 href="Criteri_di_verifica_murature.htm#Considera_appoggio_sui_solai_anche_per_carichi_sismici">Considera 
+ appoggio sui solai anche per carichi sismici</a></span> che ovviamente 
+ influenzeranno<span class="hcp1"> </span>l'andamento del 
+ momento flettente.</p>
+<p>È possibile attivare e disattivare quali solai costituiscono un appoggio 
+ per le verifiche cliccando nel gruppo <span class="hcp1">Definisci</span> 
+ su <span class="hcp1">Appoggi</span> <img src="../Icone/16/definisciappoggio2.png" alt="" border="1" class="hcp2"> 
+ e poi rispettivamente su <span class="hcp1">Aggiungi</span> 
+ <img src="../Icone/16/aggiungiappoggio2.png" alt="" border="1" class="hcp2"> o su <span class="hcp1">Elimina</span>&#160;<img src="../Icone/16/eliminaappoggio2.png" alt="" border="1" class="hcp2">. 
+ Tali modifiche fanno cambiare ovviamente lo schema statico e di conseguenza 
+ l'andamento del momento flettente.</p>
+</body>
+</html>

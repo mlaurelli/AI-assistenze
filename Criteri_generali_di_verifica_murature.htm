@@ -1,0 +1,374 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Criteri generali di verifica murature</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { mso-bidi-font-weight:bold; }
+b.hcp3 { font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Criteri generali di verifica murature</h1>
+<h2>Individuazione maschi per verifiche sismiche</h2>
+<p><span class="hcp1"><a name="Metodo_di_individuazione" 
+										 id="Metodo_di_individuazione"></a>Metodo 
+ di individuazione</span>: specificare quale metodo utilizzare per l'individuazione 
+ automatica dei maschi da verificare per le sollecitazioni sismiche. Sono 
+ disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Utilizza_modello_definito_per_pareti" id="Utilizza_modello_definito_per_pareti"></a>Assemblando 
+	 per ogni piano gli elementi continui tra due aperture</span>: i maschi 
+	 murari vengono individuati assemblando per ogni piano gli elementi 
+	 presenti tra due aperture (si veda <span class="hcp1"><a 
+	 href="Individuazione_dei_maschi_murari.htm">Individuazione dei maschi 
+	 murari</a></span><span class="hcp2"><b class="hcp3">)</b></span>. 
+	 I momenti indotti dall'azione sismica ortogonale al piano della parete 
+	 vengono sempre calcolati con metodo semplificato. Il valore del momento 
+	 flettente è quello di una trave incernierata all'estremità con carico 
+	 uniformemente distribuito. Se è stata deselezionata l'opzione <span class="hcp1"><a href="Criteri_di_verifica_murature.htm#Considera_appoggio_sui_solai_anche_per_carichi_sismici">Considera 
+	 appoggio sui solai anche per carichi sismici</a></span> dei criteri 
+	 di verifica murature, lo schema statico è quello di una mensola incastrata 
+	 al piede con un carico uniformemente distribuito e forze concentrate 
+	 in corrispondenza degli impalcati; l'altezza della mensola è uguale 
+	 all'altezza della parete in muratura. Il valore dell'intensità dei 
+	 carichi è calcolato come indicato dalla normativa Italiana.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Utilizza_modello_definito_per_maschi" id="Utilizza_modello_definito_per_maschi"></a>Assemblando 
+	 gli elementi continui da ogni impalcato fino a &quot;terra&quot;</span>: 
+	 i maschi murari vengono individuati assemblando gli elementi continui 
+	 da ogni impalcato fino a &quot;terra&quot;. Come &quot;terra&quot; 
+	 si considera il livello in cui uno o più dei suoi nodi hanno un qualche 
+	 vincolamento (si veda <span class="hcp1"><a href="Individuazione_dei_maschi_murari.htm">Individuazione 
+	 dei maschi murari</a></span><span class="hcp2"><b class="hcp3">). </b></span><span class="hcp1">Questa 
+	 opzione non può essere utilizzata per le strutture in muratura armata</span>. 
+	 I momenti indotti dall'azione sismica ortogonale al piano della parete 
+	 vengono sempre calcolati con metodo semplificato. Il valore del momento 
+	 flettente è quello di una trave incernierata all'estremità con carico 
+	 uniformemente distribuito. Se è stata deselezionata l'opzione <span class="hcp1"><a href="Criteri_di_verifica_murature.htm#Considera_appoggio_sui_solai_anche_per_carichi_sismici">Considera 
+	 appoggio sui solai anche per carichi sismici</a></span> dei criteri 
+	 di verifica murature, lo schema statico è quello di una mensola incastrata 
+	 al piede con un carico uniformemente distribuito e forze concentrate 
+	 in corrispondenza degli impalcati; l'altezza della mensola è uguale 
+	 all'altezza del maschio murario se l'opzione è attivata viceversa 
+	 è pari all'altezza totale: somma delle altezze dei maschi murari. 
+	 Il valore dell'intensità dei carichi è calcolato come indicato dalla 
+	 normativa Italiana.</p></li>
+</ul>
+<h2>Verifiche per azioni statiche</h2>
+<p><span class="hcp1"><a name="Calcolo_dei_momenti" id="Calcolo_dei_momenti"></a>Calcolo 
+ dei momenti</span>: specificare la modalità di calcolo del momento flettente 
+ da considerare nelle verifiche a pressoflessione per azioni ortogonali 
+ al maschio murario, modificandone eventualmente la quota parte dovuta 
+ al vento. Premesso che le azioni dovute al vento vanno introdotte nel 
+ modello come carichi ortogonali all'elemento, ed inserite in condizioni 
+ di carico elementari che non abbiano altri carichi, eventualmente combinate 
+ per tenere conto di diverse direzioni e versi dell'azione, con questo 
+ parametro si può indicare al programma come calcolare le sollecitazioni 
+ da esso provocate. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Con 
+	 momenti derivanti dal calcolo</span>: il valore del momento flettente 
+	 di verifica è determinato integrando le sollecitazioni o le tensioni 
+	 derivanti dal calcolo della struttura con metodo FEM dei muri/elementi 
+	 bidimensionali che compongono i maschi murari tenendo conto indistintamente 
+	 di tutte le CCE, eventuale vento compreso.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Con 
+	 quota parte dei momenti ricalcolata con metodo semplificato</span>: 
+	 il valore del momento flettente di verifica è determinato integrando 
+	 le sollecitazioni o le tensioni derivanti dal calcolo della struttura 
+	 con metodo FEM dei muri/elementi bidimensionali che compongono i maschi 
+	 murari, ma trascurando le CCE che contengono le azioni ortogonali 
+	 alle pareti. Al momento così calcolato (che può quindi derivare dal 
+	 comportamento della struttura nel suo insieme (volte, spinte, ecc.) 
+	 viene aggiunto il valore del momento flettente dovuto al vento calcolato 
+	 come quello di una trave incernierata all'estremità (o a mensola) 
+	 con carico uniformemente distribuito.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Con 
+	 momenti ricalcolati con metodo semplificato</span>: il valore del 
+	 momento flettente è solo quello eventuale dovuto al vento ed è quello 
+	 di una trave incernierata all'estremità (o a mensola) con carico uniformemente 
+	 distribuito. I momenti derivanti dal calcolo con metodo FEM vengono 
+	 ignorati. In assenza di vento si avranno quindi momenti nulli.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Esegui_verifiche_a_pressoflessione_e_a_taglio_nel_piano" 
+										 id="Esegui_verifiche_a_pressoflessione_e_a_taglio_nel_piano"></a>Esegui 
+ verifiche a pressoflessione e a taglio nel piano</span>: specificare se 
+ si debbano eseguire le verifiche a pressoflessione e a taglio nel piano. 
+ Tali verifiche devono essere eseguite nel caso in cui siano stati applicati 
+ carichi ortogonali alla parete come ad esempio i carichi da vento. </p>
+<p><span class="hcp1">Nota</span>: in questa sede vengono 
+ considerati come &quot;da vento&quot; tutti i carichi ortogonali alla 
+ parete, indipendentemente dal fatto che siano stati introdotti o meno 
+ in una CCE di tipologia classificata &quot;ufficialmente&quot; come da 
+ vento.</p>
+<p><span class="hcp1"><a name="Esegui_verifiche_anche_in_sommita_dell_ultimo_piano_statiche" 
+										 id="Esegui_verifiche_anche_in_sommita_dell_ultimo_piano_statiche"></a>Esegui 
+ verifiche anche in sommità dell'ultimo piano</span>: specificare se le 
+ verifiche si debbano eseguire anche in sommità del maschio murario dell'ultimo 
+ piano.&#160;Questa opzione non ha effetto sulle strutture in muratura 
+ armata per le quali viene sempre eseguita la verifica anche in sommità 
+ della parete.</p>
+<h2>Verifiche per azioni sismiche</h2>
+<p><span class="hcp1"><a name="Trascura_eccentricita_aggiuntive" 
+										 id="Trascura_eccentricita_aggiuntive"></a>Trascura 
+ eccentricità aggiuntive (D.M. 92/96)</span>: specificare se nella verifica 
+ a pressoflessione si debbano trascurare l'eccentricità dei carichi verticali. 
+ In caso affermativo, alla tensione indotta dai carichi verticali, privi 
+ di eccentricità aggiuntive, viene aggiunta quella provocata dal sisma 
+ ortogonale alla parte affetta dall'eccentricità e<span style="vertical-align: Sub;">v</span>.</p>
+<p><span class="hcp1"><a name="Trascura_tagli_e_momenti_statici_nel_piano" 
+										 id="Trascura_tagli_e_momenti_statici_nel_piano"></a>Trascura 
+ tagli e momenti statici nel piano</span>: specificare se nella verifica 
+ a pressoflessione e a taglio nel piano del maschio murario o della parete 
+ si debbano trascurare le componenti statiche dei tagli e dei momenti. 
+ In caso affermativo, vengono considerati solo quelli indotti dall'azione 
+ sismica.</p>
+<p><span class="hcp1"><a name="Esegui_verifiche_anche_in_sommita_dell_ultimo_piano_sismiche" 
+										 id="Esegui_verifiche_anche_in_sommita_dell_ultimo_piano_sismiche"></a>Esegui 
+ verifiche anche in sommità dell'ultimo piano</span>: specificare se le 
+ verifiche si debbano eseguire anche in sommità della parete dell'ultimo 
+ piano. Questa opzione non ha effetto sulle strutture in muratura armata 
+ per le quali viene sempre eseguita la verifica anche in sommità della 
+ parete.</p>
+<p><span class="hcp1"><a name="Considera_il_segno_della_sollecitazione_dinamica_uguale_a_quello_dell_azione_statica" 
+										 id="Considera_il_segno_della_sollecitazione_dinamica_uguale_a_quello_dell_azione_statica"></a>Considera 
+ il segno della sollecitazione dinamica uguale a quello dell'azione statica</span>: 
+ specificare se nella verifica a pressoflessione e a taglio nel piano del 
+ maschio murario, di strutture in calcolate con l'analisi sismica dinamica 
+ lineare, si debbano considerare le sollecitazioni della parte dinamica 
+ con lo stesso segno della parte statica.&#160;Questa opzione non ha effetto 
+ sulle strutture in calcolate con l'analisi sismica statica lineare o nel 
+ caso in cui sia stata selezionata l'opzione <span class="hcp1"><a 
+	 href="Ambienti%20di%20carico.htm#Considera_sollecitazioni_dinamiche_con_segno_dei_modi_principali">Considera 
+ sollecitazioni dinamiche con segno dei modi principali</a></span>.</p>
+<h2>Analisi simica statica non lineare (pushover)</h2>
+<p><span class="hcp1"><a name="Considera_collaboranti_anche_pilastri_ca_acciaio" 
+										 id="Considera_collaboranti_anche_pilastri_ca_acciaio"></a>Considera 
+ collaboranti anche pilastri in c.a. o acciaio</span>: specificare se considerare 
+ nell'analisi sismica statica non lineare (pushover) i pilastri in c.a. 
+ o in acciaio come elementi resistenti o soltanto ai fini della trasmissione 
+ dei carichi. I pilastri hanno rigidezza solo intorno alla direzione dell'asse 
+ locale Y (Jy) nel caso di analisi pushover. Nell'analisi pushover gli 
+ elementi in c.a. (se armati)&#160;hanno comportamento a taglio di tipo 
+ elastico-fragile ed elastico-plastico a momento (con riferimento al momento 
+ di prima plasticizzazione) con rottura regolata dalla rotazione ultima 
+ indicata al punto C8A.6. Elementi non armati hanno un comportamento elastico 
+ indefinito. Gli elementi in acciaio hanno comportamento elastico-plastico 
+ indefinito a taglio con riferimento alla formula [4.2.18] del punto 4.2.4.1.2 
+ del D.M. 17/01/18 ed elastico-plastico indefinito a momento, con riferimento 
+ al momento ultimo per flessione calcolato con formula [4.2.36] (trascurando 
+ le riduzioni dovute al taglio di cui alla [4.2.41]) come indicato al punto 
+ 4.2.4.1.2 del&#160;D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Considera_collaboranti_anche_pareti_ca" 
+										 id="Considera_collaboranti_anche_pareti_ca"></a>Considera 
+ collaboranti anche pareti in c.a.</span>: specificare se considerare nell'analisi 
+ sismica statica non lineare (pushover) le pareti in c.a. come elementi 
+ resistenti o soltanto ai fini della trasmissione dei carichi. La rigidezza 
+ corrisponde a quella dell'insieme di muri/elementi bidimensionali inseriti 
+ nel modello che compongono la parete. Il comportamento delle pareti in 
+ c.a. è indefinitamente elastico.</p>
+<p><span class="hcp1"><a name="Comportamento_cordoli" id="Comportamento_cordoli"></a>Comportamento 
+ cordoli in c.a. o acciaio</span>: specificare come debbano comportarsi 
+ i cordoli schematizzati con un'asta in c.a. o in acciaio. Sono disponibili 
+ le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Trascura 
+	 resistenza</span>: la resistenza degli elementi in c.a. o acciaio 
+	 viene trascurata anche se presenti nel modello della struttura.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Trascura 
+	 resistenza in presenza di fasce in muratura</span>: la resistenza 
+	 degli elementi in c.a. o acciaio viene trascurata se sono state modellate 
+	 le fasce in muratura con elementi bidimensionali.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 sempre la resistenza</span>: per le aste in acciaio la resistenza 
+	 è uguale al limite elastico della sezione mentre per le travi in c.a. 
+	 è uguale al momento resistente della sezione calcolato con l'armatura 
+	 salvata nella trave o nella progettazione interattiva della sezione.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Crea_collegamenti_fra_pareti" 
+										 id="Crea_collegamenti_fra_pareti"></a>Crea 
+ collegamenti fra pareti</span>: specificare se considerare o meno la collaborazione 
+ reciproca fra pareti ortogonali. In questo caso vengono creati collegamenti 
+ rigidi fra le estremità delle pareti incidenti fra di loro ed anche in 
+ questo caso i nodi necessari descrivono il comportamento in entrambi i 
+ piani verticali e nel piano orizzontale.</p>
+<p><span class="hcp1"><a name="Calcola_con_zone_rigide" id="Calcola_con_zone_rigide"></a>Calcola 
+ con zone rigide</span>: specificare se considerare o meno l'irrigidimento 
+ provocato dalle fasce di piano, facendo generare delle zone rigide alle 
+ estremità delle aste che rappresentano gli elementi in muratura verticali 
+ (maschi o pareti). Tali zone vengono generate immaginando un comportamento 
+ irrigidente degli architravi e dei sottofinestra con una diffusione a 
+ 30 gradi. Tale meccanismo è risultato il più adatto per simulare l'effetto 
+ irrigidente delle fasce di piano da numerosi studi condotti in merito 
+ (Prof. Dolce, Prof. Magenes). Se la ricerca delle zone rigide è attiva, 
+ viene in ogni caso considerata rigida la zona corrispondente allo spessore 
+ del solaio (se definito).</p>
+<p><span class="hcp1"><a name="Valuta_spostamenti_ultimi_dopo_la_plasticizzazione"></a>Calcola 
+ spostamenti per la rottura di maschi e fasce in muratura in modo incrementale</span>: 
+ premesso che un maschio o una fascia si considerano rotti solo dopo che 
+ si sono plasticizzati, specificare se considerare l'elemento rotto quando 
+ il limite di spostamento ultimo (drift) è superato dalla differenza tra 
+ lo spostamento e quello a cui corrisponde la plasticizzazione dell'elemento 
+ oppure dallo spostamento.</p>
+<p><span class="hcp1"><a name="Calcola_spostamenti_di_danno_e_operativita_a_livello_di_maschio_o_parete" 
+										 id="Calcola_spostamenti_di_danno_e_operativita_a_livello_di_maschio_o_parete"></a>Calcola 
+ spostamenti di danno e operatività a livello di maschio</span>: specificare 
+ se nelle verifiche per gli stati limite di danno e operatività, considerare 
+ lo spostamento del baricentro dell'impalcato o lo spostamento del maschio 
+ murario.</p>
+<h2>Verifiche dei cinematismi (meccanismi locali di collasso)</h2>
+<p><span class="hcp1"><a name="Tipo_di_analisi" id="Tipo_di_analisi"></a>Tipo 
+ di analisi</span>: specificare quale sia il metodo da utilizzare per la 
+ verifica dei cinematismi. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Esegui_analisi_cinematica_lineare" id="Esegui_analisi_cinematica_lineare"></a>Cinematica 
+	 lineare</span>: le verifiche dei meccanismi locali di collasso sono 
+	 effettuate utilizzando il metodo dell'analisi cinematica lineare. 
+	 Per la teoria del metodo si rimanda al par. C8A.4.1 della Circolare 
+	 del D.M. 14/01/08.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Esegui_analisi_cinematica_non_lineare" id="Esegui_analisi_cinematica_non_lineare"></a>Cinematica 
+	 non lineare</span>: le verifiche dei meccanismi locali di collasso 
+	 sono effettuate utilizzando il metodo dell'analisi cinematica non 
+	 lineare. Per la teoria del metodo si rimanda al par. C8A.4.2 della 
+	 Circolare del D.M. 14/01/08.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Entrambi</span>: 
+	 le verifiche dei meccanismi locali di collasso sono effettuate utilizzando 
+	 il metodo dell'analisi cinematica lineare e non lineare.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Verifica_cinematismi" id="Verifica_cinematismi"></a>Verifica 
+ cinematismi</span>: specificare se si debbano eseguire o meno le verifiche 
+ dei cinematismi. Nel caso in cui le verifiche sono da effettuare, sono 
+ disponibili una serie di opzioni, di seguito elencate, che consentono 
+ di specificare quali siano i cinematismi da verificare.</p>
+<p><span class="hcp1"><a name="Verifica_anche_stato_limite_di_danno" 
+										 id="Verifica_anche_stato_limite_di_danno"></a>Verifica 
+ anche stato limite di danno</span>: secondo quanto indicato nel par. C8A.4.2.3 
+ della Circolare del D.M. 14/01/08 non sono richieste le verifiche dei 
+ meccanismi locali di collasso per gli stati limite di danno. Questo parametro, 
+ disattivo nel caso di analisi cinematica non lineare, consente di eseguire 
+ anche le verifiche per gli stati limite di danno in modo che il progettista 
+ possa eventualmente controllare se sono soddisfatte.</p>
+<p><span class="hcp1"><a name="Verifica_cinematismi_con_cunei_di_rottura" 
+										 id="Verifica_cinematismi_con_cunei_di_rottura"></a>Verifica 
+ cinematismi con cunei di rottura (pareti ben ammorsate)</span>: specificare 
+ se si debbano eseguire o meno le verifiche di quei cinematismi che includono 
+ la collaborazione di una porzione degli eventuali pannelli murari ortogonali 
+ al maschio murario da verificare. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 per muratura nuova</span>: le verifiche vengono effettuate solo per 
+	 le murature in cui è stata deselezionata nei criteri di verifica murature 
+	 l'opzione <span class="hcp1"><a href="Criteri_di_verifica_murature.htm#Considera_come_elementi_esistenti_consolidata">Considera 
+	 come elementi esistenti</a></span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Sempre</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Mai</span></p></li>
+</ul>
+<p class="IndentBullet1"><span class="hcp1"><a name="Considera_solo_cunei_di_rottura_interessanti_tutto_il_cinematismo" 
+															 id="Considera_solo_cunei_di_rottura_interessanti_tutto_il_cinematismo"></a>Considera 
+ solo cunei di rottura interessanti tutto il cinematismo</span>: specificare 
+ se verificare solo quei cinematismi in cui il cuneo della muratura ortogonale 
+ alla parte da verificare è presente per tutti i piani interessati dal 
+ cinematismo.</p>
+<p class="IndentBullet1"><span class="hcp1"><a name="Angolo_di_generazione_del_cuneo_di_rottura" 
+															 id="Angolo_di_generazione_del_cuneo_di_rottura"></a>Angolo 
+ di generazione del cuneo di rottura</span>: specificare l'angolo, rispetto 
+ alla verticale, per l'individuazione del cuneo di muratura, ortogonale 
+ alla parte da verificare, che collabora al cinematismo. Generalmente si 
+ assume un angolo di 30 gradi.</p>
+<p><span class="hcp1"><a name="Verifica_cinematismi_senza_cunei_di_rottura" 
+										 id="Verifica_cinematismi_senza_cunei_di_rottura"></a>Verifica 
+ cinematismi senza cunei di rottura</span>: specificare se si debbano eseguire 
+ o meno le verifiche di quei cinematismi che non includono la collaborazione 
+ di una porzione delle eventuali pareti ortogonali al maschio murario da 
+ verificare. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 per muratura esistente</span>: le verifiche vengono effettuate solo 
+	 per le murature in cui è stata selezionata nei criteri di verifica 
+	 murature l'opzione <span class="hcp1"><a href="Criteri_di_verifica_murature.htm#Considera_come_elementi_esistenti_consolidata">Considera 
+	 come elementi esistenti</a></span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Sempre</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Mai</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Verifica_cinematismi_a_flessione_verticale" 
+										 id="Verifica_cinematismi_a_flessione_verticale"></a>Verifica 
+ cinematismi a flessione verticale</span>: specificare se si debbano eseguire 
+ o meno le verifiche dei cinematismi che prevedono il collasso della parete 
+ per flessione nel piano verticale. Questi cinematismi considerano che 
+ si formi una cerniera in corrispondenza dell'impalcato che determina una 
+ sorta di &quot;effetto ad arco verticale&quot;.</p>
+<h2>Parametri di disegno muratura armata</h2>
+<p>Nella creazione dei disegni delle murature armature oltre alle direttive 
+ dei <span style="font-weight: bold; text-decoration: none; "><a href="Criteri%20generali%20di%20disegno.htm">criteri 
+ generali di disegno</a></span> sono specificabili altre opzioni.</p>
+<p><span class="hcp1"><a name="Eliminare_le_quotature_esterne_e_interne" 
+										 id="Eliminare_le_quotature_esterne_e_interne"></a>Eliminare 
+ le quotature esterne e interne</span>: specificare se deve essere effettuata 
+ la quotatura degli elementi interni ed esterni della carpenteria.</p>
+<p><span class="hcp1"><a name="Eliminare_le_quotature_dei_pilastri" 
+										 id="Eliminare_le_quotature_dei_pilastri"></a>Eliminare 
+ le quotature dei pilastri</span>: specificare se riportare nel disegno 
+ anche la quotatura delle dimensioni dei pilastri.</p>
+<p><span class="hcp1"><a name="Eliminare_le_dimensioni_delle_travi_e_dei_muri" 
+										 id="Eliminare_i_testi_delle_travi_e_dei_muri"></a>Eliminare 
+ le dimensioni delle travi e dei muri</span>: specificare se riportare 
+ nel disegno le dimensioni delle travi e dei muri.</p>
+<p><span class="hcp1"><a name="Eliminare_la_numerazione_delle_travi_e_dei_muri" 
+										 id="Eliminare_la_numerazione_delle_travi_e_dei_muri"></a>Eliminare 
+ la numerazione delle travi e dei muri</span>: specificare se riportare 
+ nel disegno la numerazione delle travi e dei muri.</p>
+<p><span class="hcp1"><a name="Eliminare_le_campiture" id="Eliminare_le_campiture"></a>Eliminare 
+ le campiture</span>: specificare se deve essere effettuata la campitura 
+ dei pilastri e dei muri.</p>
+<p><span class="hcp1"><a name="Eliminare_il_disegno_del_cerchio_intorno_al_numero_del_pilastro" 
+										 id="Eliminare_il_disegno_del_cerchio_intorno_al_numero_del_pilastro"></a>Eliminare 
+ il disegno del cerchio intorno al numero del pilastro</span>: specificare 
+ se disegnare il cerchio intorno al numero del pilastro.</p>
+<h2>Stampe</h2>
+<p><span class="hcp1"><a name="Stampa_dettaglio_evoluzione_per_passi" 
+										 id="Stampa_dettaglio_evoluzione_per_passi"></a>Stampa 
+ dettaglio evoluzione per passi</span>: indicare se nella relazione di 
+ calcolo riportare per ogni singolo passo le sollecitazioni e lo stato 
+ in cui si trovano (elastico, plastico per taglio, ecc.) i diversi elementi 
+ del telaio equivalente (maschi murari, fasce di piano, ecc.).</p>
+<p><span class="hcp1"><a name="Stampa_dettaglio_evoluzione_per_elementi" 
+										 id="Stampa_dettaglio_evoluzione_per_elementi"></a>Stampa 
+ dettaglio evoluzione per elementi</span>: indicare se nella relazione 
+ di calcolo riportare per ogni singolo elemento del telaio equivalente 
+ (maschi murari, fasce di piano, ecc.) le sollecitazioni e lo stato in 
+ cui si trova (elastico, plastico per taglio, ecc.) nei singoli passi del 
+ calcolo. Sono disponibili inoltre le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Stampa 
+	 solo passi significativi</span>: vengono stampati i dati solo per 
+	 il primo e l'ultimo passo e i passi immediatamente precedenti e seguenti 
+	 un cambio di stato.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="margin-bottom: 0;"><span class="hcp1">Raggruppa in un'unica tabella</span>: tutte 
+	 le stampe dei singoli elementi vengono raggruppate in un'unica tabella.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Riporta_in_relazione_il_disegno_dello_schema_del_cinematismo" 
+										 id="Riporta_in_relazione_il_disegno_dello_schema_del_cinematismo"></a>Riporta 
+ in relazione il disegno dello schema del cinematismo</span>: specificare 
+ se riportare nella relazione di calcolo il disegno schematico del cinematismo 
+ verificato.</p>
+<p><span class="hcp1"><a name="Riporta_in_relazione_il_disegno_della_curva_carico_spostamento" 
+										 id="Riporta_in_relazione_il_disegno_della_curva_carico_spostamento"></a>Riporta 
+ in relazione il disegno della curva carico-spostamento</span>: specificare 
+ se riportare nella relazione di calcolo il disegno della curva di capacità 
+ con la bilineare equivalente nel caso di analisi sismica statica non lineare 
+ (pushover).</p>
+</body>
+</html>

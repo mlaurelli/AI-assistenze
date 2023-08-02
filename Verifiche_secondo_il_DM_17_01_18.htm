@@ -1,0 +1,143 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Verifiche secondo il D.M. 17/01/18</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold; }
+p.hcp2 { font-style:italic; }
+span.hcp3 { font-weight:bold; }
+span.hcp4 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Verifiche secondo il D.M. 17/01/18</h1>
+<p>La verifica dei nuclei secondo il D.M. 17/01/18 suscita numerosi problemi 
+ di interpretazione delle indicazioni della normativa, palesemente derivante 
+ dagli Eurocodici e quindi probabilmente impostata su metodi di calcolo 
+ e di modellazione tipici di molti anni fa (schemi a telaio, analisi sismica 
+ statica).</p>
+<p>In primo luogo si nota come tutte le indicazioni facciano sempre riferimento 
+ a &quot;pareti&quot;, con al più qualche indicazione su come far collaborare 
+ parti di pareti contigue. Ad oggi quindi il programma è in grado di verificare 
+ solo nuclei costituiti da una sola parete. Occorre quindi che l'utente 
+ provveda a suddividere in nuclei diversi eventuali vani scale, ascensore, 
+ ecc. costituiti da più pareti.</p>
+<p>I punti principali di controversa applicazione risultano quelli di valutazione 
+ delle sollecitazioni di calcolo (7.4.4.5.1). Si riporta un'analisi critica 
+ di quanto indicato in normativa con alcuni suggerimenti su come operare 
+ attraverso i criteri di progetto ed alcune spiegazioni su come si comporta 
+ ModeSt.</p>
+<p class="hcp1">Momento flettente</p>
+<p class="hcp2">Il diagramma dei momenti flettenti lungo 
+ l'altezza della parete è ottenuto per traslazione verso l'alto dell'inviluppo 
+ del diagramma dei momenti derivante dall'analisi.</p>
+<p>La traslazione verso l'alto è a favore di sicurezza solo per pareti 
+ con comportamento a mensola. In strutture appena più complesse si ha spesso 
+ un andamento dei momenti flettenti che nelle parti alte della parete comporterebbe 
+ con la traslazione verso l'alto ad una <span class="hcp3">diminuzione</span> 
+ del momento di verifica, il che pare contrario allo spirito della normativa.</p>
+<p class="hcp2">L'inviluppo può essere assunto lineare, 
+ se la struttura non presenta significative discontinuità in termini di 
+ massa, rigidezza e resistenza lungo l'altezza.</p>
+<p>Al di là dei noti problemi per capire se una struttura spaziale sia 
+ o meno regolare lungo l'altezza specialmente in termini di rigidezza (si 
+ vedano le note riportate nel comando <a href="../Comandi/_RIG.htm" style="font-weight: bold;">Informazioni 
+ spostamenti e rigidezze teoriche di impalcato</a>) questo comma fa pensare 
+ da un lato ad un metodo di calcolo semplificato (utilizzabile solo nelle 
+ condizioni citate) per l'individuazione delle sollecitazioni nelle varie 
+ sezioni della parete, e da un altro lato (se si fa riferimento ai diagrammi 
+ e alle note presenti nell'Eurocodice 8 e che la normativa non riporta) 
+ alla necessità di cautelarsi contro un sottodimensionamento delle armature 
+ nei piani intermedi della parete, poco sollecitate in caso di inversione 
+ del momento e nel caso di pareti accoppiate. Anche in questo caso inoltre 
+ talvolta la linearizzazione prima della traslazione può portare ad una 
+ diminuzione dei momenti di verifica.</p>
+<p class="hcp2">La traslazione deve essere in accordo con 
+ l'inclinazione degli elementi compressi nel meccanismo resistente a taglio 
+ e può essere assunta pari ad hcr (altezza della zona inelastica di base).</p>
+<p>Se è &quot;<span class="hcp3">l'entità</span>&quot; della 
+ traslazione che ... <span class="hcp4">deve essere in accordo</span> 
+ ... niente da eccepire, ma se si intende anche il verso, allora in caso 
+ di inversione del momento nella parte alta della parete, ne risulterebbe 
+ un'inversione dell'inclinazione degli elementi compressi e quindi la traslazione 
+ dovrebbe essere verso il basso, il che è in contraddizione con quanto 
+ detto poco prima.</p>
+<p>Se si aggiunge a quanto detto che l'Eurocodice riporta che tale inviluppo 
+ è da considerarsi per pareti snelle si comprende come sia ambiguo il metodo 
+ di calcolo da adottare. ModeSt consente attraverso i criteri di progetto 
+ di decidere se fare l'inviluppo e la traslazione (si veda i parametri 
+ <span class="hcp3"><a href="Criteri%20di%20progetto%20nuclei.htm#Inviluppo_e_traslazione_dei_momenti_flettenti">Inviluppo 
+ e traslazione dei momenti flettenti</a></span>, <span class="hcp3"><a 
+	 href="Criteri%20di%20progetto%20nuclei.htm#Usa_diagramma_linearizzato">Usa 
+ diagramma linearizzato</a></span> nei criteri di progetto armatura nuclei). 
+ <span style="text-decoration: underline; ">La traslazione viene sempre 
+ fatta verso l'alto, ma in ogni caso non vengono mai adottati momenti inferiori 
+ a quelli derivanti dal calcolo.</span></p>
+<p class="hcp1">Taglio</p>
+<p class="hcp2">Per strutture si deve tener conto del possibile 
+ incremento delle forze di taglio a seguito della formazione della cerniera 
+ plastica alla base della parete.</p>
+<p>Questa è una prescrizione generica che non presenta particolari problemi, 
+ ma che viene poi spiegata in modo abbastanza ambiguo.</p>
+<p class="hcp2">Nelle strutture miste, il taglio nelle pareti 
+ non debolmente armate deve tener conto delle sollecitazioni dovute ai 
+ modi di vibrare superiori. A tal fine, il taglio derivante dall'analisi 
+ può essere sostituito ...</p>
+<p>Nel caso di analisi dinamica con un sufficiente numero di modi, si è 
+ già tenuto conto dei modi di vibrare superiori? Considerando inoltre che 
+ l'Eurocodice riporta questa disposizione solo per le pareti snelle, si 
+ capisce come anche in questo caso ModeSt non possa decidere come comportarsi, 
+ come non può decidere se la struttura è mista e se la parete è &quot;non 
+ debolmente armata&quot;. Anche in questo caso la decisione è regolata 
+ da uno specifico criterio di progetto (si veda il parametro <span class="hcp3"><a 
+	 href="Criteri%20di%20progetto%20nuclei.htm#Inviluppo_e_traslazione_sforzi_di_taglio">Inviluppo 
+ e traslazione sforzi di taglio</a></span> nei criteri di progetto armatura 
+ nuclei).</p>
+<p class="hcp2">Il taglio deve essere incrementato del fattore 
+ ...</p>
+<p>Si noti come tutte le formule relative all'incremento del taglio facciano 
+ riferimento al fattore di comportamento q. Poiché la struttura può avere 
+ comportamento sismico diverso nelle due direzioni e poiché le pareti possono 
+ non essere allineate alle direzioni del sisma non è ben chiaro quale fattore 
+ vada preso. ModeSt effettua i calcoli dell'incremento con entrambi i fattori 
+ di struttura e un apposito criterio consente di decidere se prendere il 
+ valore massimo risultante o la proiezione in direzione della parete dei 
+ due valori (si veda il parametro <span class="hcp3"><a href="Criteri%20di%20progetto%20nuclei.htm#Modalita_di_valutazione_parametri_nel_caso_di_sisma_diverso_per_X_e_Y">Modalità 
+ di valutazione parametri nel caso di sisma diverso per X e Y</a></span> 
+ nei criteri di progetto armatura nuclei).</p>
+<p><span class="hcp3">Nota</span>: si fa presente che ad 
+ oggi non è possibile inserire in ModeSt armature inclinate diagonali nelle 
+ pareti e quindi il termine Vid della 7.4.18 è sempre nullo. Di conseguenza 
+ non viene controllato il disposto di normativa &quot;Per le pareti tozze 
+ deve risultare Vid&gt;VEd/2&quot;.</p>
+<p><span class="hcp3">Sforzo normale</span></p>
+<p class="hcp2">Per le <span class="hcp3">pareti 
+ estese debolmente armate</span>, occorre limitare le tensioni di compressione 
+ nel calcestruzzo per prevenire l’instabilità fuori dal piano, secondo 
+ quanto indicato nel § 4.1.2.3.9.2 per i pilastri singoli. Se il fattore 
+ di comportamento q è superiore a 2, si deve tener conto delle forza assiale 
+ dinamica aggiuntiva (...). In assenza di più accurate analisi ...</p>
+<p style="font-style: normal;">Anche in questo caso non è chiaro se l'aver 
+ effettuato una analisi dinamica della struttura possa essere considerata 
+ una &quot;<span class="hcp4">accurata analisi</span>&quot; 
+ e quindi la scelta se amplificare o meno lo sforzo normale è lasciata 
+ al progettista (si veda il parametro <span class="hcp3"><a 
+	 href="Criteri%20di%20progetto%20nuclei.htm#Incremento_del_50_delle_forze_assiali">Incremento 
+ del 50% delle forze assiali</a></span> nei criteri di progetto armatura 
+ nuclei). Se l'amplificazione è attivata, in caso di analisi sismica statica 
+ ogni caso di verifica ne genera due, rispettivamente con l'incremento 
+ ed il decremento dello sforzo normale e con le altre componenti di sollecitazione 
+ invariate. Nel caso di analisi sismica dinamica l'incremento di sforzo 
+ normale viene assunto con lo stesso segno con cui è stata considerata 
+ la componente dinamica derivante dal calcolo.</p>
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>File generati</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:normal; }
+span.hcp2 { font-weight:bold; }
+span.hcp3 { font-style:italic;
+font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>File generati</h1>
+<p class="hcp1">Il file generato, nel percorso definito 
+ dall'utente, prende il nome del file del progetto di Revit, con il prefisso 
+ &quot;rv_&quot;. Eventuali spazi presenti nel nome del file vengono sostituiti 
+ con il carattere &quot;_&quot;. Pertanto se in Revit il progetto ha nome 
+ &quot;<span class="hcp2">Struttura del palazzo.rvt</span>&quot;, 
+ dopo l'esportazione si avrà un file dal nome &quot;<span class="hcp2">rv_Struttura_del_palazzo.r2m</span>&quot;.</p>
+<p style="font-weight: bold;">ANOMALIE</p>
+<p class="hcp1">Oltre alla macro viene generato anche un 
+ altro file di nome &quot;<span class="hcp2">Anomalie.anr</span>&quot;. 
+ Tale file può essere aperto con qualsiasi editor di testo e contiene al 
+ suo interno, le anomalie relative all'esportazione della struttura da 
+ Revit.</p>
+<p class="hcp1"><span style="font-weight: normal;">In particolare 
+ le anomalie riscontrabili sono riferite a:</span></p>
+<ul>
+	<li class="p-Bullet1" style="font-weight: normal;"><p class="Bullet1">Non 
+	 esportazione delle aste curve. Nel file verrà visualizzato un messaggio 
+	 analogo al seguente: &quot;<span class="hcp2">Impossibile 
+	 generare asta curva con coordinate: Nodo 1 = 26.309 -7.542 2.82 Nodo 
+	 2 = 26.309 -9.299001 2.82</span>&quot;.</p></li>
+	<li class="p-Bullet1" style="font-weight: normal;"><p class="Bullet1">Non 
+	 esportazione di elementi bidimensionali con messaggi del tipo:</p></li>
+</ul>
+<p class="IndentBullet1">&quot;<span class="hcp3">Impossibile 
+ generare elemento bidimensionale: trovato muro con fori o con forma non 
+ rettangolare.</span>&quot;</p>
+<p class="IndentBullet1">&quot;<span class="hcp3">Impossibile 
+ generare elemento bidimensionale: modello analitico non definito.</span>&quot;</p>
+<p class="IndentBullet1">&quot;<span class="hcp3">Impossibile 
+ generare elemento bidimensionale: trovato muro curvo.</span>&quot;</p>
+</body>
+</html>

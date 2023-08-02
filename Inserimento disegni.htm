@@ -1,0 +1,70 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Inserimento disegni</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+img.hcp4 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp5 { font-weight:normal; }
+span.hcp6 { font-weight:bold;
+text-decoration:none; }
+span.hcp7 { font-style:normal; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Inserimento disegni</h1>
+<p>L'inserimento di un disegno all'interno di un altro (ad esempio un particolare di libreria) può essere effettuato in Ms-Cad in due modi che portano a due differenti gestioni del particolare inserito:</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; border-collapse: separate; border-collapse: separate;" cellspacing="0" width="100%" border="1">
+<tr>
+<td style="width:34%;" class="hcp1">
+<p class="hcp2">Comando <span class="hcp3">Inserisce <img src="../Icone/16/cadinse.png" alt="" border="1" class="hcp4"></span></p>
+</td>
+<td style="width:66%;" class="hcp1">
+<p class="hcp2">Il disegno viene inserito in modo <span class="hcp3">statico</span>, ossia tutte le entità presenti vengono <span class="hcp3">copiate</span> (eventualmente scalandole) nel disegno finale. Eventuali modifiche nel disegno originale non si riflettono <span class="hcp5">in tutti i disegni che lo contengono</span>.</p>
+</td>
+</tr>
+<tr>
+<td style="width:34%;" class="hcp1">
+<p class="hcp2"><span class="hcp6">Trascinamento</span> dall'albero del progetto</p>
+</td>
+<td style="width:66%;" class="hcp1">
+<p class="hcp2">Il disegno viene inserito in modo <span class="hcp3">dinamico</span><span class="hcp5">, viene cioè creato un</span> <span class="hcp3">collegamento</span> <span class="hcp5">(link) al file del disegno originale. Eventuali modifiche al disegno originale si riflettono automaticamente anche in tutti i disegni che lo contengono.</span></p>
+</td>
+</tr>
+</table>
+<p>Utilizzando il comando <span class="hcp3">Inserisce <img src="../Icone/16/cadinse.png" alt="" border="1" class="hcp4"></span> è possibile specificare un fattore di scala ed un'eventuale rotazione del disegno inserito, mentre col <span class="hcp3">Trascinamento</span> il fattore di scala viene calcolato automaticamente per adattare i due disegni e non è possibile specificare rotazioni.</p>
+<p>Quando è necessario effettuare una trasformazione di scala e se nel disegno sono contenute delle entità testo viene richiesto se devono essere mantenute le altezze dei testi. In caso affermativo i testi vengono riscalati in modo che al momento del plottaggio mantengano l'altezza originale, in caso contrario in sede di plottaggio avremo testi proporzionalmente più grandi o più piccoli.</p>
+<p>Attraverso il comando <span class="hcp3">Inserisce <img src="../Icone/16/cadinse.png" alt="" border="1" class="hcp4"></span> oppure mediante <span class="hcp3">Trascinamento</span> dalla finestra di dialogo delle Risorse del computer di Windows è possibile importare in ambiente Ms-Cad i disegni in formato DXF. In questo caso ModeSt effettua in modo automatico una trasformazione dei layer presenti nel file DXF in modo da adattarla alla definizione dei layer di ModeSt.</p>
+<p><span class="hcp5">La selezione dei disegni inseriti in modo dinamico avviene cliccando su una qualsiasi delle entità che lo compongono. Per gli spostamenti e le procedure rapide indicate in</span> <span class="hcp6"><a href="Modalita%20operative.htm">Modalità operative</a></span> <span class="hcp5">viene visualizzato un</span> <span class="hcp3">grip</span> <span class="hcp5">al centro del disegno.</span></p>
+<p>Il punto di inserimento e la rotazione dei disegni inseriti in modo dinamico possono essere cambiati anche successivamente con il tasto destro del mouse sul disegno <font style="font-family: Wingdings;" face="Wingdings"><span class="hcp7">à</span></font> <span style="font-style: italic;">Proprietà.</span></p>
+<p><span class="hcp7">Con lo stesso menu a comparsa si possono effettuare anche altre due importanti operazioni:</span></p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1"><span class="hcp3">Aprire il disegno</span>: per modificarlo lavorando nella sua scala originale e una volta salvate le modifiche sarà sufficiente un <span class="hcp3">Ridisegna <img src="../Icone/16/ridisegna.png" alt="" border="1" class="hcp4"></span> del disegno che lo contiene per vedere le modifiche apportate.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="margin-bottom: 0;"><span style="font-style: normal; font-weight: bold;">Scollegare il disegno</span><span style="font-style: normal; font-weight: normal;">: per trasformare l'inserimento dinamico in un inserimento statico.</span></p>
+</li>
+</ul>
+</body>
+</html>

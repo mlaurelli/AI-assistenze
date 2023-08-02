@@ -1,0 +1,38 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Oggetto VincoloNodo</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Oggetto VincoloNodo</h1>
+<p>L'oggetto è caratterizzato dalle seguenti proprietà:</p>
+<p class="Normal3"><span class="hcp1">Numero</span> numero del vincolo nodale.</p>
+<p class="Normal3"><span class="hcp1">Stratigrafia</span> ritorna True se il vincolo è valutato in funzione della stratigrafia.</p>
+<p class="Normal3"><span class="hcp1">PseudoPlinto</span> ritorna True se il vincolo è pseudo plinto.</p>
+<p class="Normal3"><span class="hcp1">RotazioneLibera</span> ritorna True se il vincolo pseudo plinto ha rotazione libera. Se il vincolo non è pseudo plinto setta un codice d'errore.</p>
+<p class="Normal3"><span class="hcp1">Ly</span>, <span class="hcp1">Lz</span> lunghezza in direzione Y, Z della base dello pseudo plinto. Se il vincolo non è pseudo plinto setta un codice d'errore.</p>
+<p class="Normal3"><span class="hcp1">CoeffSottofondo</span> costante di Winkler. Se il vincolo non è pseudo plinto setta un codice d'errore.</p>
+<p class="Normal3"><span class="hcp1">GradoDiLiberta</span> oggetto <span class="hcp1"><a href="Oggetto%20C6D.htm">C6D</a></span> contenente il codice dei gradi di libertà: 0 = libero, 1 = bloccato, 2 = elastico. Se il vincolo è pseudo plinto setta un codice d'errore.</p>
+<p class="Normal3"><span class="hcp1">GradoDiLiberta2 (e)</span> oggetto <span class="hcp1"><a href="Oggetto%20C6D.htm">C6D</a></span> contenente il codice dei gradi di libertà: 0 = libero, 1 = bloccato, 2 = elastico. Se il vincolo è pseudo plinto setta un codice d'errore.</p>
+<p class="script1">Le costanti ammissibili per <span class="hcp1">e</span> sono:</p>
+<p class="script2"><span class="hcp1">VN_SENZAPALI</span> restituisce i dati relativi al plinto senza pali;</p>
+<p class="script2"><span class="hcp1">VN_CONPALI</span> restituisce i dati relativi al palo o plinto con pali.</p>
+<p class="Normal3"><span class="hcp1">CostantiElastiche</span> oggetto <span class="hcp1"><a href="Oggetto%20C6D.htm">C6D</a></span> contenente il valore della costante elastica per i gradi di libertà classificati elastici. Se il vincolo è pseudo plinto setta un codice d'errore.</p>
+<p class="Normal3" style="margin-bottom: 0;"><span class="hcp1">Commento</span> commento inserito dall'utente o creato automaticamente dal programma.</p>
+</body>
+</html>

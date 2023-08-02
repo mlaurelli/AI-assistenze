@@ -1,0 +1,97 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Oggetto CaricoAsta</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Oggetto CaricoAsta</h1>
+<p>L'oggetto è caratterizzato dalle seguenti proprietà:</p>
+<p class="Normal3"><span class="hcp1">Numero</span> numero del tipo di carico asta.</p>
+<p class="Normal3"><span class="hcp1">Tipo</span> tipo di 
+ carico asta. Questa proprietà può assumere i seguenti valori:</p>
+<p class="script1"><span class="hcp1">CARICONULLO</span> 
+ <span class="hcp2">carico nullo;</span></p>
+<p class="script1"><span class="hcp1">A_UL</span> <span class="hcp2">carico 
+ uniformemente distribuito nel sistema di riferimento locale dell'asta;</span></p>
+<p class="script1"><span class="hcp1">A_TL</span> <span class="hcp2">carico 
+ variabile linearmente tra i due estremi nel sistema di riferimento locale 
+ dell'asta;</span></p>
+<p class="script1"><span class="hcp1">A_PL</span> <span class="hcp2">carico 
+ variabile linearmente tra due punti nel sistema di riferimento locale 
+ dell'asta;</span></p>
+<p class="script1"><span class="hcp1">A_CL</span> <span class="hcp2">carico 
+ concentrato in un punto nel sistema di riferimento locale dell'asta;</span></p>
+<p class="script1"><span class="hcp1">A_UG</span> <span class="hcp2">carico 
+ uniformemente distribuito nel sistema di riferimento globale;</span></p>
+<p class="script1"><span class="hcp1">A_TG</span> <span class="hcp2">carico 
+ variabile linearmente tra i due estremi nel sistema di riferimento globale;</span></p>
+<p class="script1"><span class="hcp1">A_PG</span> <span class="hcp2">carico 
+ variabile linearmente tra due punti nel sistema di riferimento globale;</span></p>
+<p class="script1"><span class="hcp1">A_CG</span> carico 
+ concentrato in un punto nel sistema di riferimento <span class="hcp2">globale</span>;</p>
+<p class="script1"><span class="hcp1">A_DT</span> dilatazione 
+ termica uniforme;</p>
+<p class="script1"><span class="hcp1">A_GT</span> gradiente 
+ di temperatura.</p>
+<p class="Normal3"><span class="hcp1">Locale</span> ritorna 
+ True se il carico è stato definito nel sistema <span class="hcp2">di 
+ riferimento locale dell'asta.</span></p>
+<p class="Normal3"><span class="hcp1">Distanza</span> distanza 
+ dal nodo iniziale del carico concentrato in un punto. Se il carico non 
+ è del tipo concentrato in un punto setta un codice d'errore.</p>
+<p class="Normal3"><span class="hcp1">Forza</span> oggetto 
+ <span class="hcp1"><a href="Oggetto%20C3D.htm">C3D</a></span> 
+ contenente i valori delle forze relativi al tipo di carico concentrato 
+ in un punto.</p>
+<p class="Normal3"><span class="hcp1">Momento</span> oggetto 
+ <span class="hcp1"><a href="Oggetto%20C3D.htm">C3D</a></span> 
+ contenente i valori dei momenti relativi al tipo di carico concentrato 
+ in un punto.</p>
+<p class="Normal3"><span class="hcp1">DistanzaIniziale</span> 
+ distanza iniziale. Se il carico non è del tipo variabile linearmente tra 
+ due punti setta un codice d'errore.</p>
+<p class="Normal3"><span class="hcp1">DistanzaFinale</span> 
+ distanza finale. Se il carico non è del tipo variabile linearmente tra 
+ due punti setta un codice d'errore.</p>
+<p class="Normal3"><span class="hcp1">CaricoIniziale</span> 
+ oggetto <span class="hcp1"><a href="Oggetto%20C3D.htm">C3D</a></span> 
+ contenente i valori dei carichi iniziali relativi al tipo di carico variabile 
+ tra i due estremi o tra due punti.</p>
+<p class="Normal3"><span class="hcp1">CaricoFinale</span> 
+ oggetto <span class="hcp1"><a href="Oggetto%20C3D.htm">C3D</a></span> 
+ contenente i valori dei carichi finali relativi al tipo di carico variabile 
+ tra i due estremi o tra due punti.</p>
+<p class="Normal3"><span class="hcp1">Carico</span> oggetto 
+ <span class="hcp1"><a href="Oggetto%20C3D.htm">C3D</a></span> 
+ contenente i valori dei carichi relativi al tipo di carico uniformemente 
+ distribuito.</p>
+<p class="Normal3"><span class="hcp1">GradY</span> gradiente 
+ ter<span class="hcp2">mico in dir. Y.</span> Se il carico 
+ non è del tipo gradiente di temperatura setta un codice d'errore.</p>
+<p class="Normal3"><span class="hcp1">GradZ</span> gradiente 
+ ter<span class="hcp2">mico in dir. Z.</span> Se il carico 
+ non è del tipo gradiente di temperatura setta un codice d'errore.</p>
+<p class="Normal3"><span class="hcp1">DeltaT</span> <span class="hcp2">incremento di temperatura.</span> Se 
+ il carico non è del tipo dilatazione termica uniforme setta un codice 
+ d'errore.</p>
+<p class="Normal3" style="margin-bottom: 0;"><span class="hcp1">Commento</span> 
+ commento inserito dall'utente o creato automaticamente dal programma.</p>
+</body>
+</html>

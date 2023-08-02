@@ -1,0 +1,205 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>DECA - Definisci carico asta</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+td.hcp2 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp3 { margin-bottom:0; }
+a.hcp4 { font-weight:bold; }
+span.hcp5 { font-style:italic; }
+span.hcp6 { font-style:italic;
+font-weight:normal; }
+td.hcp7 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp8 { text-align:left;
+margin-bottom:0; }
+p.hcp9 { line-height:12.0pt;
+margin-top:auto; }
+span.hcp10 { font-weight:normal; }
+p.hcp11 { text-align:center;
+margin-bottom:0; }
+img.hcp12 { margin-top:0px;
+margin-bottom:0px;
+margin-left:0px;
+margin-right:0px; }
+span.hcp13 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando"><span class="hcp1">DECA - Definisci 
+ carico asta</span></p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" 
+		 width="100%" bgcolor="#C0C0C0">
+	<tr>
+		<td style="width:70%;" class="hcp2"><p class="hcp3"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p></td>
+		<td style="width:29%;" class="hcp2"><p class="hcp3"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p></td>
+	</tr>
+</table>
+<p>Definisce i carichi da assegnare in seguito alle aste. Il carico definito 
+ o modificato verrà automaticamente reso corrente se così è stato specificato 
+ nelle <a href="../Manuale/Opzioni.htm" class="hcp4">Opzioni</a>.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp1">DECA</span> <span class="hcp5"><font 
+	 color="#0000FF">Numero del carico asta</font></span> <span class="hcp6"><font color="#000000">/</font></span> <font 
+	 color="#0000FF"><span class="hcp6">Tipo 
+ di carico</span></font> <font color="#000000">/</font> <font color="#0000FF"><span class="hcp6">Commento</span></font></p>
+<p style="text-align: justify;"><span class="hcp1">ATTENZIONE:</span> 
+ i carichi sono positivi se controversi agli assi di riferimento.</p>
+<p>I tipi di carico ammissibili ed i relativi dati da fornire sono i seguenti:</p>
+<table wrapperparagraphselector="P.Normal" style="border-collapse: separate; 
+		 border-collapse: separate;" cellspacing="0" width="100%" border="1">
+	<tr>
+		<td style="width:12%;" class="hcp7"><p class="hcp8"><span class="hcp1">TIPO 
+		 UL</span></p></td>
+		<td style="width:26%;" class="hcp7"><p class="hcp8"><font color="#0000FF">Uniforme 
+		 in coordinate locali</font></p></td>
+		<td style="width:39%;" class="hcp7"><p class="hcp9">carico costante 
+		 uniformemente distribuito su tutta l'asta.</p>
+		<p class="hcp9"><span class="hcp5">Dati 
+		 richiesti:</span></p>
+		<p class="Normal3" style="line-height: 12.0pt; margin-top: auto; 
+			 margin-bottom: 0;">componenti <span class="hcp10">Qx 
+		 Qy Qz</span> (in coordinate locali) del carico</p></td>
+		<td style="width:21%;" class="hcp7"><p class="hcp11"><img src="../help%20vecchi/dwg/unif-asta.jpg" alt="" width="116" height="36" border="0" class="hcp12"></p></td>
+	</tr>
+	<tr>
+		<td style="width:12%;" class="hcp7"><p class="hcp8"><span class="hcp1">TIPO 
+		 TL</span></p></td>
+		<td style="width:26%;" class="hcp7"><p class="hcp8"><font color="#0000FF">Trapezoidale 
+		 in coordinate Locali</font></p></td>
+		<td style="width:39%;" class="hcp7"><p class="hcp9">carico variabile 
+		 linearmente da un estremo all'altro dell'asta.</p>
+		<p class="hcp9"><span class="hcp5">Dati 
+		 richiesti:</span></p>
+		<p class="Normal3" style="line-height: 12.0pt; margin-top: auto; 
+			 margin-bottom: 0;">componenti <span class="hcp10">Q1X 
+		 Q1Y Q1Z</span> (in coordinate locali) del carico al nodo iniziale; 
+		 componenti <span class="hcp10">Q2X</span> <span class="hcp10">Q2Y</span> <span class="hcp10">Q2Z</span> 
+		 (in coordinate locali) del carico al nodo finale.</p></td>
+		<td style="width:21%;" class="hcp7"><p class="hcp11"><img src="../help%20vecchi/dwg/trap-asta.jpg" alt="" width="124" height="55" border="0" class="hcp12"></p></td>
+	</tr>
+	<tr>
+		<td style="width:12%;" class="hcp7"><p class="hcp8"><span class="hcp1">TIPO 
+		 PL</span></p></td>
+		<td style="width:26%;" class="hcp7"><p 
+			 style="text-align: left;"><font color="#0000FF">Parziale in 
+		 coordinate Locali</font></p>
+		<p class="ParametriComando" style="text-align: left; margin-bottom: 0;">&#160;</p></td>
+		<td style="width:39%;" class="hcp7"><p>carico 
+		 variabile linearmente su parte dell'asta.</p>
+		<p><span class="hcp5">Dati richiesti:</span></p>
+		<p class="Normal3" style="margin-bottom: 0;">componenti <span class="hcp10">Q1X 
+		 Q1Y Q1Z</span> (in coordinate locali) del carico nel punto in 
+		 cui inizia la zona caricata; distanza <span class="hcp10">X2</span> 
+		 dal nodo iniziale dell'asta del punto in cui finisce il carico; 
+		 componenti <span class="hcp10">QX QY QZ</span> 
+		 (in coordinate locali) del carico nel punto in cui termina la 
+		 zona caricata.</p></td>
+		<td style="width:21%;" class="hcp7"><p class="hcp11"><img src="../help%20vecchi/dwg/parz-asta.jpg" alt="" width="139" height="50" border="0" class="hcp12"></p></td>
+	</tr>
+	<tr>
+		<td style="width:12%;" class="hcp7"><p class="hcp8"><span class="hcp1">TIPO 
+		 CL</span></p></td>
+		<td style="width:26%;" class="hcp7"><p class="hcp8"><font color="#0000FF">Concentrato 
+		 in coordinate Locali</font></p></td>
+		<td style="width:39%;" class="hcp7"><p>carico 
+		 concentrato in un punto qualunque dell'asta.</p>
+		<p><span class="hcp5">Dati richiesti:</span></p>
+		<p class="Normal3" style="margin-bottom: 0;">distanza <span class="hcp10">X</span> 
+		 dal nodo iniziale dell'asta del punto di applicazione del carico; 
+		 componenti <span class="hcp10">Fx Fy Fz</span> 
+		 (in coordinate locali) della forza applicata; componenti <span class="hcp10">Mx My Mz</span> (in coordinate locali) 
+		 del momento applicato.</p></td>
+		<td style="width:21%;" class="hcp7"><p class="hcp11"><img src="../help%20vecchi/dwg/cc-asta.jpg" alt="" width="139" height="59" border="0" class="hcp12"></p></td>
+	</tr>
+	<tr>
+		<td style="width:12%;" class="hcp7"><p class="hcp8"><span class="hcp1">TIPO 
+		 DT</span></p></td>
+		<td style="width:26%;" class="hcp7"><p class="hcp8"><font color="#0000FF">Dilatazione 
+		 Termica</font></p></td>
+		<td style="width:39%;" class="hcp7"><p>dilatazione 
+		 termica uniforme dell'asta.</p>
+		<p><span class="hcp5">Dati richiesti:</span></p>
+		<p class="Normal3" style="margin-bottom: 0;">incremento di temperatura 
+		 in gradi centigradi in corrispondenza dell'asse dell'asta. La 
+		 temperatura positiva allunga l'asta.</p></td>
+		<td style="width:21%;" class="hcp7"><p class="hcp11"><img src="../help%20vecchi/dwg/dil-asta.jpg" alt="" width="70" height="58" border="0" class="hcp12"></p></td>
+	</tr>
+	<tr>
+		<td style="width:12%;" class="hcp7"><p class="hcp8"><span class="hcp1">TIPO 
+		 GT</span></p></td>
+		<td style="width:26%;" class="hcp7"><p class="hcp8"><font color="#0000FF">Gradiente 
+		 di Temperatura</font></p></td>
+		<td style="width:39%;" class="hcp7"><p>gradiente 
+		 di temperatura lungo uno od entrambi gli assi locali dell'asta. 
+		 Il gradiente è positivo se la temperatura sale nello stesso verso 
+		 dell'asse locale dell'asta.</p>
+		<p><span class="hcp5">Dati richiesti:</span></p>
+		<p class="Normal3" style="margin-bottom: 0;">gradiente termico 
+		 <span class="hcp10">Gy</span> in direzione locale 
+		 <span class="hcp10">Y</span> dell'asta; gradiente 
+		 termico <span class="hcp10">Gz</span> in direzione 
+		 locale <span class="hcp10">Z</span> dell'asta.</p></td>
+		<td style="width:21%;" class="hcp7"><p class="hcp11"><img src="../help%20vecchi/dwg/grad-asta.jpg" alt="" width="70" height="55" border="0" class="hcp12"></p></td>
+	</tr>
+</table>
+<p class="Normal" style="text-align: justify;">TIPI <span class="hcp10"><font 
+	 color="#0000FF"><span class="hcp5">UG</span></font></span><span class="hcp6">,</span><span class="hcp10"><font 
+	 color="#0000FF"><span class="hcp5">TG</span></font></span><span class="hcp6">,</span><span class="hcp10"><font 
+	 color="#0000FF"><span class="hcp5">PG</span></font></span><span class="hcp6">,</span><span class="hcp10"><font 
+	 color="#0000FF"><span class="hcp5">CG</span></font></span> 
+ corrispondenti ai tipi <span class="hcp10"><font color="#0000FF"><span class="hcp5">UL</span></font></span><span class="hcp6"><font color="#000000">,</font></span><span class="hcp10"><font 
+	 color="#0000FF"><span class="hcp5">TL</span></font></span><span class="hcp6"><font color="#000000">,</font></span><span class="hcp10"><font color="#0000FF"><span class="hcp5">PL</span></font></span><span class="hcp6"><font color="#000000">,</font></span><span class="hcp10"><font color="#0000FF"><span class="hcp5">CL</span></font></span> 
+ ma con riferimento alle coordinate globali dell'asta.</p>
+<p>Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Si 
+	 consiglia di utilizzare i tipi <span class="hcp10">UG,TG,PG,CG</span> 
+	 escluso casi particolari in cui i carichi non siano nella direzione 
+	 <span class="hcp10">Z</span> globale.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">È 
+	 possibile sapere quali sono i tipi di carichi delle aste definiti, 
+	 utilizzando il comando <span class="hcp13"><a 
+	 href="_TCA.htm">?TCA</a></span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Le 
+	 aste inserite nella struttura non avranno il carico definito. Occorre 
+	 sempre eseguire un comando <span class="hcp13"><a 
+	 href="ACA.htm">ACA</a></span> o <span class="hcp13"><a 
+	 href="AGCA.htm">AGCA</a></span> per assegnare il carico corrente alle 
+	 aste.</p></li>
+</ul>
+<p><span class="hcp1">Comandi correlati</span>: <a href="CAC.htm" class="hcp4">CAC</a> rende corrente un carico. <a href="ACA.htm" class="hcp4">ACA</a> assegna il carico corrente. <a href="AGCA.htm" class="hcp4">AGCA</a> aggiunge il carico 
+ corrente. <a href="DCA.htm" class="hcp4">DCA</a> disegna 
+ i carichi. <a href="_CA.htm" class="hcp4">?CA</a> elenca 
+ i carichi. <a href="_TCA.htm" class="hcp4">?TCA</a> elenca 
+ i tipi di carichi.</p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a2');
+	FilePopupInit('a3');
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione armature travi</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Introduzione</h1>
+<p>È possibile progettare come travi, tenendo conto delle sollecitazioni 
+ indotte dal momento My, dal taglio Tz, dallo sforzo normale e dal momento 
+ torcente tutte le aste che non siano verticali e che abbiano:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">numero diverso da zero;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">sezione con membratura trave 
+	 e verifica prevista c.a.;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">attiva l'opzione <span style="font-style: italic;">Trave</span> 
+	 del parametro <a href="CriTra.htm#Utilizzo" style="font-weight: bold;">Utilizzo</a> 
+	 dei criteri di progetto.</p></li>
+</ul>
+<p>Automaticamente è possibile progettare le armature e generare i disegni 
+ esecutivi oppure determinare, solo nel caso di calcolo con il metodo delle 
+ tensioni ammissibili, le armature teoriche strettamente necessarie, mentre 
+ interattivamente è possibile modificare l'armatura proposta o al limite 
+ armare in modo manuale la travata.</p>
+<p>Per strutture calcolate agli stati limite le armature vengono progettate 
+ tenendo conto solo delle sollecitazioni indotte dal momento My e dal taglio 
+ Tz, ed eventualmente verificate se richiesto anche tenendo conto dello 
+ sforzo normale N.</p>
+<p>Per strutture progettate ai sensi del D.M. 17/01/18 in zona sismica, 
+ ModeSt provvede automaticamente al calcolo secondo i criteri della gerarchia 
+ delle resistenze. L'obiettivo che si prefigge questo metodo di progettazione 
+ è quello di scongiurare l'instaurarsi dei meccanismi di rottura fragile 
+ prima dei meccanismi di rottura duttili. La procedura di progetto provvede 
+ quindi a calcolare le azioni per la progettazione a taglio (rottura fragile) 
+ in funzione dei momenti resistenti alle estremità della trave con i necessari 
+ coefficienti di sicurezza previsti dalla normativa per le strutture in 
+ classe A o B. Anche nel caso di progettazione interattiva, i valori del 
+ taglio vengono ricalcolati in tempo reale al cambiare dei momenti resistenti. 
+ Il taglio da gerarchia viene valutato considerando momenti resistenti 
+ calcolati in assenza di sforzo normale. Analogamente i momenti resistenti 
+ che vengono trasferiti ai pilastri per il calcolo in gerarchia sono calcolati 
+ in assenza di sforzo normale.</p>
+<p>Le travi di fondazione vengono progettate con le sollecitazioni provenienti 
+ dal calcolo maggiorate dei necessari coefficienti di sovraresistenza previsti 
+ dalla normativa per le strutture in classe A o B. Risultando ambigua in 
+ tal senso la normativa, è possibile specificare se la gerarchia delle 
+ resistenze Taglio-Momento debba essere rispettata anche per le travi di 
+ fondazione.</p>
+<p>Per consentire la possibilità di eseguire analisi o valutazioni di comportamento 
+ di strutture in cui l'azione sismica è sostenuta solo da alcuni elementi, 
+ mentre ad altri è richiesta solo una sufficiente duttilità, è possibile 
+ disabilitare sia il <a href="CriTra.htm#Trascura_gerarchia">progetto in 
+ gerarchia delle resistenze</a>, sia la <a href="CriTra.htm#Elemento_secondario">verifica 
+ per le combinazioni di carico sismiche</a>. Vengono in ogni caso adottate 
+ le limitazioni e prescrizioni di normativa relative alle zone sismiche. 
+ Si segnala che comunque non vengono attualmente effettuate da ModeSt verifiche 
+ sulla duttilità delle sezioni.</p>
+<p>ModeSt crea e mantiene aggiornate la relazione di calcolo ed il computo 
+ delle armature e se richiesto anche la distinta dei ferri.</p>
+</body>
+</html>

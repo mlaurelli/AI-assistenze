@@ -1,0 +1,141 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Oggetto Bidimensionale</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:normal; }
+span.hcp3 { font-style:normal;
+font-weight:normal; }
+span.hcp4 { font-style:normal;
+font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Oggetto Bidimensionale</h1>
+<p>L'oggetto è caratterizzato dalle seguenti proprietà:</p>
+<p class="Normal3"><span class="hcp1">Numero</span> numero 
+ del muro/elemento bidimensionale.</p>
+<p class="Normal3"><span class="hcp1">NumeroNucleo</span> 
+ numero del nucleo a cui appartiene il muro/elemento bidimensionale.</p>
+<p class="Normal3"><span class="hcp1">LivelloNucleo</span> 
+ numero del livello del nucleo a cui appartiene il muro/elemento bidimensionale.</p>
+<p class="Normal3"><span class="hcp1">Indice</span> numero 
+ dell'indice interno del nucleo.</p>
+<p class="Normal3"><span class="hcp1">Selezionato</span> 
+ ritorna True se il nucleo è selezionato.</p>
+<p class="Normal3"><span class="hcp1">Tipologia</span> numero 
+ del tipo di muro/elemento bidimensionale. Questa proprietà può assumere 
+ i seguenti valori:</p>
+<p class="script1"><span class="hcp1">MURONORMALE</span> 
+ <span class="hcp2">muro (vedi</span> <a href="Differenza%20fra%20muri%20ed%20elementi%20bidimensionali.htm"><span class="hcp1">Differenza fra muri ed elementi bidimensionali</span></a><span class="hcp2">);</span></p>
+<p class="script1"><span class="hcp1">MUROBIDIMENSIONALE</span> 
+ <span class="hcp2">elemento bidimensionale.</span></p>
+<p class="Normal3"><span class="hcp1">Tipo</span> oggetto 
+ <a href="Oggetto%20TipoBidimensionale.htm"><span class="hcp1">TipoBidimensionale</span></a>.</p>
+<p class="Normal3"><span class="hcp1">FiloFisso</span> codice 
+ del filo fisso del muro/elemento bidimensionale.</p>
+<p class="Normal3"><span class="hcp1">CoeffSottofondo</span> 
+ costante di Winkler.</p>
+<p>L'oggetto è caratterizzato dai seguenti metodi:</p>
+<p class="Normal3"><span class="hcp1">Nodo</span> <span class="hcp1">(e)</span> 
+ oggetto <span class="hcp1"><a href="Oggetto%20Nodo.htm">Nodo</a></span><span class="hcp2">.</span></p>
+<p class="script1">Le costanti ammissibili per <span class="hcp1">e</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">FIRSTNODE</span> <span class="hcp2">restituisce</span> <span class="hcp3">i 
+ dati relativi al primo vertice del</span> muro/elemento bidimensionale<span class="hcp3">;</span></p>
+<p class="script2"><span class="hcp4">SECONDNODE</span> 
+ <span class="hcp2">restituisce</span> <span class="hcp3">i 
+ dati relativi al secondo vertice del</span> muro/elemento bidimensionale<span class="hcp3">;</span></p>
+<p class="script2"><span class="hcp4">THIRDNODE</span> 
+ <span class="hcp2">restituisce</span> <span class="hcp3">i 
+ dati relativi al terzo vertice del</span> muro/elemento bidimensionale<span class="hcp3">;</span></p>
+<p class="script2"><span class="hcp4">FOURTHNODE</span> 
+ <span class="hcp2">restituisce</span> <span class="hcp3">i 
+ dati relativi al quarto vertice del</span> muro/elemento bidimensionale<span class="hcp3">.</span></p>
+<p class="Normal3"><span class="hcp1">Scostamenti (e)</span> 
+ scostamenti dal filo fisso corrispondenti al <span class="hcp2">nodo</span> 
+ <span class="hcp1">e</span> <span class="hcp2">del 
+ muro/elemento</span> bidimensionale<span class="hcp2">.</span></p>
+<p class="script1">Le costanti ammissibili per <span class="hcp1">e</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">FIRSTNODE</span> <span class="hcp2">restituisce</span> <span class="hcp3">i 
+ dati relativi al primo nodo</span> <span class="hcp2">del 
+ muro/elemento</span> bidimensionale<span class="hcp3">;</span></p>
+<p class="script2"><span class="hcp4">SECONDNODE</span> 
+ <span class="hcp2">restituisce</span> <span class="hcp3">i 
+ dati relativi al secondo nodo</span> <span class="hcp2">del 
+ muro/elemento</span> bidimensionale<span class="hcp3">.</span></p>
+<p class="Normal3"><span class="hcp1">SLM (e, sd)</span> 
+ oggetto <span style="font-weight: bold; text-decoration: none; "><a href="Oggetto%20C6D.htm">C6D</a></span> 
+ contenente le sollecitazioni nei muri corrispondenti all'estremo <span class="hcp1">e</span> ed al parametro <span class="hcp1">sd</span>. 
+ Se è un elemento bidimensionale setta un codice d'errore.</p>
+<p class="script1">Le costanti ammissibili per <span class="hcp1">e</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">FIRSTNODE</span> <span class="hcp2">restituisce</span> <span class="hcp3">i 
+ dati relativi al primo vertice del</span> muro/elemento bidimensionale<span class="hcp3">;</span></p>
+<p class="script2"><span class="hcp4">SECONDNODE</span> 
+ <span class="hcp2">restituisce</span> <span class="hcp3">i 
+ dati relativi al secondo vertice del</span> muro/elemento bidimensionale<span class="hcp3">;</span></p>
+<p class="script2"><span class="hcp4">THIRDNODE</span> 
+ <span class="hcp2">restituisce</span> <span class="hcp3">i 
+ dati relativi al terzo vertice del</span> muro/elemento bidimensionale<span class="hcp3">;</span></p>
+<p class="script2"><span class="hcp4">FOURTHNODE</span> 
+ <span class="hcp3">restituisce i dati 
+ relativi al quarto vertice del muro/elemento bidimensionale.</span></p>
+<p class="script1">Le costanti ammissibili per <span class="hcp1">sd</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">SIGNED</span> <span class="hcp2">restituisce</span> la parte con segno 
+ della sollecitazione;</p>
+<p class="script2"><span class="hcp1">UNSIGNED</span> <span class="hcp2">restituisce</span> l'eventuale parte 
+ priva di segno della sollecitazione.</p>
+<p class="Normal3"><span class="hcp1">SLB (e, sd)</span> 
+ oggetto <span class="hcp1"><a href="Ogetto%20SollecitazioneBidiNodale.htm">SollecitazioneBidiNodale</a></span> 
+ contenente le sollecitazioni negli elementi bidimensionali corrispondenti 
+ all'estremo <span class="hcp1">e</span> ed al parametro 
+ <span class="hcp1">sd</span>. Se è un muro setta un codice 
+ d'errore.</p>
+<p class="script1">Le costanti ammissibili per <span class="hcp1">e</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">FIRSTNODE</span> <span class="hcp2">restituisce</span> <span class="hcp3">i 
+ dati relativi al primo vertice del</span> muro/elemento bidimensionale<span class="hcp3">;</span></p>
+<p class="script2"><span class="hcp4">SECONDNODE</span> 
+ <span class="hcp2">restituisce</span> <span class="hcp3">i 
+ dati relativi al secondo vertice del</span> muro/elemento bidimensionale<span class="hcp3">;</span></p>
+<p class="script2"><span class="hcp4">THIRDNODE</span> 
+ <span class="hcp2">restituisce</span> <span class="hcp3">i 
+ dati relativi al terzo vertice del</span> muro/elemento bidimensionale<span class="hcp3">;</span></p>
+<p class="script2"><span class="hcp4">FOURTHNODE</span> 
+ <span class="hcp3">restituisce i dati 
+ relativi al quarto vertice del muro/elemento bidimensionale.</span></p>
+<p class="script1">Le costanti ammissibili per <span class="hcp1">sd</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">SIGNED</span> <span class="hcp2">restituisce</span> la parte con segno 
+ della sollecitazione;</p>
+<p class="script2"><span class="hcp1">UNSIGNED</span> <span class="hcp2">restituisce</span> l'eventuale parte 
+ priva di segno della sollecitazione.</p>
+<p class="Normal3"><span class="hcp1">Carico&#160;(nc, ncce)</span> 
+ oggetto <span class="hcp1"><a href="Oggetto%20CaricoBidimensionale.htm">CaricoBidimensionale</a></span> 
+ corrispondente al numero del carico sul muro/elemento bidimensionale <span class="hcp1">nc</span> della condizione di carico elementare 
+ <span class="hcp1">ncce</span>.</p>
+<p class="Normal3"><span class="hcp1">NumeroCarichi (ncce)</span> 
+ numero di carichi (automatici e manuali) sul muro/elemento bidimensionale&#160;presenti 
+ nella condizione di carico elementare <span class="hcp1">ncce</span>.</p>
+<p class="Normal3"><span class="hcp1">NumeroCarichiManuali&#160;(ncce)</span> 
+ numero di carichi manuali sul muro/elemento bidimensionale presenti nella 
+ condizione di carico elementare <span class="hcp1">ncce</span>.</p>
+</body>
+</html>

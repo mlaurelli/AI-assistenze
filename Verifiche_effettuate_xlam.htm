@@ -1,0 +1,185 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Verifiche effettuate</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold; }
+span.hcp2 { vertical-align:Super; }
+span.hcp3 { vertical-align:Sub; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Verifiche effettuate</h1>
+<h2>Pannelli X-LAM</h2>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-layout-grid-align: none; text-autospace: none;">Poiché non esiste 
+ ancora una normativa specifica per le verifiche dei pannelli X-LAM, il 
+ programma fa riferimento a quanto prescritto nel D.M. 17/01/18, integrate 
+ con quanto prescritto ai paragrafi 6.2.3, 6.2.4 e 6.3.2 dell'EC5, e con 
+ riferimento agli studi eseguiti presso l'Institute of Timber Engineering 
+ and Wood Technology - Graz University of Technology. L'Eurocodice 5, come 
+ gli altri Eurocodici, è attualmente in corso di revisione e la nuova versione, 
+ che verrà pubblicata presumibilmente entro il 2020, includerà le verifiche 
+ sui pannelli X-LAM, conseguentemente il programma verrà se necessario 
+ adeguato.</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-layout-grid-align: none; text-autospace: none;"><span style="line-height: normal; 
+	 mso-layout-grid-align: none; text-autospace: none;">Si fa presente 
+ che il coefficiente di sistema K<sub>sys</sub>, applicabile solo nel caso 
+ di tensioni sufficientemente costanti, viene assunto pari ad 1.00 a favore 
+ di sicurezza.</span></p>
+<p>Il coefficiente Km per le verifiche a flessione e pressoflessione viene 
+ assunto pari ad 1.00 secondo le indicazioni dell'EC5: &quot;<span style="font-style: italic;">Per 
+ altri prodotti strutturali a base di legno, per tutte le sezioni trasversali: 
+ km = 1,0&quot;</span>.</p>
+<p>Si fa inoltre presente che nelle verifiche dei pannelli (in cui è definibile 
+ una lunghezza di inflessione), in caso di sforzo normale di compressione 
+ le verifiche sono effettuate tenendo conto della stabilità e quindi con 
+ la sicurezza per compressione valutata senza l'elevazione al quadrato. 
+ Nelle verifiche di semplici sezioni la verifica lato compressione viene 
+ effettuata elevando al quadrato la sicurezza per compressione. Il tutto 
+ conformemente a quanto indicato sia nel <span style="mso-layout-grid-align: none; 
+												 text-autospace: none;">D.M. 
+ 14/01/08</span> che nell'Eurocodice 5.</p>
+<p>Le verifiche vengono eseguite per gli stati limite ultimi di Vita e 
+ statici.</p>
+<p class="Titolo7">Verifiche a flessione nel piano del pannello</p>
+<p>Viene semplicemente considerata una sezione resistente costituita dalle 
+ sole tavole disposte in senso ortogonale al piano di tensione.</p>
+<p class="Titolo7"><b style="mso-bidi-font-weight: normal;">Verifiche a 
+ taglio nel piano del pannello</b></p>
+<p>Viene considerato l'approccio suggerito dall'Università di Graz, e da 
+ altri, considerando il volume rappresentativo dell'elemento e il volume 
+ rappresentativo del sotto-elemento. Questo si rende necessario per poter 
+ valutare e verificare separatamente i meccanismi di taglio e di torsione 
+ che interessano le tavole di legno e gli strati di incollaggio delle tavole.</p>
+<p>Il volume rappresentativo è definito dallo spessore equivalente t* e 
+ da una superficie quadrata pari all'incrocio delle tavole. Lo spessore 
+ t* è dato dalla sommatoria degli spessori efficaci ti* in corrispondenza 
+ dei giunti, ossia le superfici di contatto fra le tavole. Per il primo 
+ e l'ultimo giunto, si considera come spessore efficace ti* il min(2*test, 
+ tint) per i giunti interni il min(ti, ti-1).</p>
+<p>Risulta quindi t* sempre &lt;= ttot.</p>
+<p>La tensione tangenziale nominale risulta comunque costante e definita 
+ in funzione del taglio unitario come: &#964;0* =&#160;Tu /t*.</p>
+<p class="hcp1">Meccanismo a taglio</p>
+<p>L'effettiva tensione tangenziale per taglio viene valutata come 2 volte 
+ la tensione ideale nominale: &#964;v*=2* &#964;0*.</p>
+<p>Questo perché viene ipotizzata una distribuzione costante, contrariamente 
+ ad una distribuzione quadratica.&#160;Le ipotesi della teoria di trave 
+ (deformazione a taglio libera sul confine) non sono infatti soddisfatte 
+ per l'interferenza data&#160;dalla struttura chiusa della piastra X-LAM.</p>
+<p class="hcp1">Meccanismo a torsione</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-layout-grid-align: none; text-autospace: none;">La tensione tangenziale 
+ per torsione della singola interfaccia può poi essere valutata assumendo 
+ una larghezza &quot;a&quot; delle tavole, attraverso il calcolo del Momento 
+ torsionale e del modulo di resistenza polare, e risulta essere pari a:</p>
+<p class="MsoNormal" style="margin-bottom: .0001pt; line-height: normal; 
+	 mso-layout-grid-align: none; text-autospace: none;">&#964;<sub>T</sub><sup>*</sup>=3* 
+ &#964;<sub>0</sub><sup>*</sup>*t<sub>i</sub><sup>*</sup>/a</p>
+<p class="Titolo7">Verifiche a flessione ortogonali al piano del pannello</p>
+<p>Gli studi in corso sui pannelli X-LAM prevedono numerosi metodi di verifica 
+ per le sollecitazioni ortogonali al pannello: metodo Gamma modificato 
+ (teoria di Mohler), Teoria dei compositi (k Method),&#160;Analogia del 
+ Taglio (Kreuzinger), Teoria di Timošenko, ecc.</p>
+<p>Per semplicità e comunque sempre dal lato della sicurezza è stato per 
+ ora adottato il cosiddetto k Method, che in pratica prevede l'ipotesi 
+ di conservazione delle sezioni piane, ma trascurando il contributo delle 
+ tavole con fibratura parallela al piano di flessione.</p>
+<p>In quest'ottica può essere calcolato un momento d’inerzia efficace:</p>
+<p>Jeff =&#931;[Ji]+&#931;[Ai*yi<span class="hcp2">2</span>]</p>
+<p>ed una area efficace:</p>
+<p>Aeff= &#931;[Ai]</p>
+<p>In cui gli indici variano solo sulle tavole con fibratura ortogonale 
+ al piano e da cui poi discende lo stato tensionale. Le altre tavole sono 
+ trascurate e risultano scariche.</p>
+<p class="Titolo7">Verifiche a taglio ortogonali al piano del pannello</p>
+<p>In accordo al metodo assunto per le verifiche flessionali, vengono effettuate 
+ con un metodo che è praticamente il metodo di Jourawsky opportunamente 
+ modificato, in cui nel calcolo dei momenti statici si trascurano le tavole 
+ con orientamento parallelo al piano di tensione. Si ha quindi un andamento 
+ della tensione da taglio che resta costante all'interno di tali tavole, 
+ cui è comunque demandato il trasferimento delle tensioni da scorrimento.</p>
+<p>Risultano quindi necessarie due verifiche: nelle tavole ortogonali al 
+ piano dovrà essere verificata la normale resistenza a taglio, mentre in 
+ quelle parallele si dovrà fare riferimento alla resistenza a taglio da 
+ rotolamento (rolling shear).</p>
+<p class="Titolo7">Verifiche di stabilità</p>
+<p>Vengono eseguite ai sensi delle NTC e dell'EC5, valutando Ncrit in accordo 
+ con le assunzioni effettuate per il calcolo delle tensioni.</p>
+<p>Viene definita una rigidezza equivalente a flessione:</p>
+<p>K<span class="hcp3">CLT,05</span>=&#931;[Ji*Ei]+&#931;[Ai*yi<span class="hcp2">2</span>*Ei]</p>
+<p>(estesa a tutte le tavole, ognuna con il relativo modulo elastico caratteristico 
+ (E<span class="hcp3">0,05</span> o E<span class="hcp3">90,05</span>))</p>
+<p>ed una rigidezza equivalente a taglio:</p>
+<p>S<span class="hcp3">CLT,05</span>= K*&#931;[Ai *Gi]</p>
+<p>anch'essa estesa a tutte le tavole, ognuna con il relativo modulo elastico 
+ tangenziale caratteristico (G<span class="hcp3">0,05</span> 
+ o G<span class="hcp3">90,05</span>) ed in cui K è un fattore 
+ di correzione rigidezza a taglio che può essere valutato analiticamente, 
+ ma che per le tipologie di pannelli in normale produzione ha un valore 
+ di circa 0.2-0.25. Il programma a favore di sicurezza adotta un valore 
+ pari a 0.2.</p>
+<p>Ciò premesso si ha:</p>
+<p><img src="Ver_XLAM_1.PNG" alt="" width="253" height="100" border="0"></p>
+<p>Da cui:</p>
+<p><img src="Ver_XLAM_2.PNG" alt="" width="318" height="250" border="0"></p>
+<p>La verifica viene poi effettuata come:</p>
+<p><img src="Ver_XLAM_3.PNG" alt="" style="border: none;" width="285" height="60" border="0"></p>
+<p>In cui le tensioni sono calcolate con riferimento a Jeff ed Aeff.</p>
+<p>Attualmente non viene valutata la snellezza nel piano della parete, 
+ generalmente molto minore ed ininfluente.</p>
+<p>Bibliografia parziale:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Blaß H.J., Fellmoser P., [2004]. 
+	 &quot;Design of solid wood panels with cross layers&quot;, 8th World 
+	 Conference on Timber Engineering WCTE, Lahti, Finland, p. 543-8.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Bogensperger T., Moosbrugger 
+	 T., Silly G., Verification of CLT-plates under loads in plane, WCTE 
+	 2010, 11th World Conference on Timber Engineering, Riva del Garda, 
+	 2010</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Alexandra Thiel,&#160;ULS 
+	 and SLS design of CLT and its implementation in the CLT designer, 
+	 Institute of Timber Engineering and Wood Technology -&#160;Graz University 
+	 of Technology</p></li>
+</ul>
+<h2>Giunzioni a taglio o a trazione (hold down)</h2>
+<p>Le verifiche delle giunzioni consistono semplicemente nel confronto 
+ fra le sollecitazioni in esse agenti e le resistenze indicate nei criteri 
+ di progetto.</p>
+<p>Normalmente la resistenza di una giunzione è valutata come la minima 
+ fra quelle che interessano i diversi meccanismi di rottura (piastra o 
+ angolare acciaio, chiodatura, tirafondi,&#160;ecc.) quindi in teoria ognuna 
+ con un Kmod diverso lato legno per ogni CC e con coefficienti di sicurezza 
+ diversi fra legno, acciaio e calcestruzzo. Normalmente, e nell'ottica 
+ di progettare una giunzione duttile, si fa in modo che il meccanismo dirimente 
+ sia quello della rottura lato chiodi.</p>
+<p>Resta comunque compito del progettista decidere che valore di resistenza 
+ vuole che venga controllato dal programma, che non modifica i valori forniti. 
+ Dato che la situazione di maggior stress è quella sismica, si suppone 
+ infatti che Kmod sia pari ad 1, e ci si aspetta che il progettista abbia 
+ valutato le resistenze lato legno con lo stesso coefficiente di sicurezza 
+ indicato nei criteri per le verifiche del pannello. Eurocodice e D.M. 
+ 14/01/08 hanno infatti valori molto diversi.</p>
+<p>Le sollecitazioni sulle giunzioni a taglio vengono valutate semplicemente 
+ dividendo la relativa sollecitazione del pannello per il numero di giunzioni 
+ (se concentrate) o riportandola a metro lineare (se distribuite). Non 
+ vengono messi in conto incrementi in direzione Z (Z della giunzione, quindi 
+ orizzontali) per valutare l'equilibrio con il momento torcente sul pannello, 
+ né incrementi verticali che si immagina siano assorbiti dalle giunzioni 
+ a trazione.</p>
+<p>Le sollecitazioni sulle giunzioni a trazione (hold down) vengono calcolate 
+ con considerazioni di equilibrio, trascurando il pannello, e non vengono 
+ verificate quelle compresse.</p>
+</body>
+</html>

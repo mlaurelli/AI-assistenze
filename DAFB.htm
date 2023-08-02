@@ -1,0 +1,90 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>DAFB - Disegna aree di ferro teoriche elementi bidimensionali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+td.hcp2 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp3 { margin-bottom:0; }
+span.hcp4 { font-style:italic;
+font-weight:normal; }
+p.hcp5 { text-align:justify; }
+span.hcp6 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando"><span class="hcp1">DAFB - Disegna aree di ferro teoriche elementi bidimensionali</span></p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp2">
+<p class="hcp3"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione, Progettazione interattiva solette/platee</p>
+</td>
+<td style="width:28%;" class="hcp2">
+<p class="hcp3"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>: + -</p>
+</td>
+</tr>
+</table>
+<p class="AmbienteProgettazione"><span class="hcp1">Modellazione</span></p>
+<p>Disegna nella finestra attiva la mappa delle armature teoriche o la differenza tra il taglio/momento agente e il taglio/momento ultimo di un insieme di elementi bidimensionali specificato.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp1">DAFB</span> <font color="#0000FF"><span class="hcp4">Tipo di mappa</span></font></p>
+<p class="Normal2" style="font-weight: bold; text-decoration: none;"><a href="javascript:void(0);" id="a1" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Setbidi.htm');return false;">Selezionare gli elementi bidimensionali</a></p>
+<p class="hcp5">Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Le aree di ferro possono essere valutate solo se la sollecitazione corrente nella finestra attiva è di tipo CC.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Il comando può essere eseguito anche per un singolo risultato fra quelli della sollecitazione corrente, ma la cosa viene segnalata come inconsueta in quanto il calcolo della armature va effettuato normalmente inviluppando tutti i risultati delle combinazioni delle condizioni elementari di carico.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Per approfondimenti si veda <span class="hcp6"><a href="../Manuale/Mappe%20armatura%20teorica%20elementi%20bidimensionali.htm">Mappe armatura teorica elementi bidimensionali</a></span>.</p>
+</li>
+</ul>
+<p class="hcp5"><span class="hcp1">Comandi correlati:</span> <span class="hcp6"><a href="_SLB.htm">?SLB</a></span> elenca le sollecitazioni negli elementi bidimensionali. <span class="hcp6"><a href="SOLC.htm">SOLC</a></span> rende corrente un tipo di sollecitazioni. <span class="hcp6"><a href="RISC.htm">RISC</a></span> rende corrente un risultato.</p>
+<p style="text-align: left;"><span class="hcp1">Argomenti correlati:</span> <span class="hcp1"><a href="../Manuale/Sollecitazione_e_risultato_corrente.htm">Sollecitazione e risultato corrente</a></span>, <span class="hcp1"><a href="../Manuale/Sollecitazioni%20prive%20di%20segno.htm">Sollecitazioni prive di segno</a></span>, <a href="../Manuale/Valori%20nodali%20elementi%20bidimensionali.htm"><span class="hcp1">Valori nodali elementi bidimensionali</span></a>, <span class="hcp1"><a href="../Manuale/Piano%20di%20tensione.htm">Piano di tensione</a></span></p>
+<p class="AmbienteProgettazione"><span class="hcp1">Progettazione interattiva solette/platee</span></p>
+<p>Disegna la mappa dell'armatura necessaria o la differenza tra il taglio/momento agente e il taglio/momento ultimo.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp1">DAFB</span> <font color="#0000FF"><span class="hcp4">Tipo di mappa</span></font></p>
+<p>Nel caso di progetto con il metodo agli stati limite i tipi di mappa <span class="hcp1">Xs</span>, <span class="hcp1">Xi</span>, <span class="hcp1">Ys</span>, <span class="hcp1">Yi</span> rappresentano l'area di ferro necessaria per le combinazioni relative ai soli stati limite di esercizio e per eventuali minimi di regolamento. Non è quindi sufficiente che l'area di ferro assegnata copra in ogni punto l'area teorica, ma occorre anche che il momento ultimo sia superiore ai momenti agenti per le combinazioni agli stati limite ultimi. Questo può essere controllato con i tipi di mappe <span class="hcp1">DX</span>+, <span class="hcp1">DX</span>-, <span class="hcp1">DY</span>+, <span class="hcp1">DY</span>-, <span class="hcp1">DX</span>, <span class="hcp1">DY</span> che permettono di visualizzare la differenza tra i momenti agenti e quelli ultimi. In questo modo, modificando l'area di ferro diffusa o concentrata presente in qualsiasi direzione e posizione, è possibile verificare se l'armatura inserita soddisfa le verifiche. Con i tipi di mappe <span class="hcp1">TX</span>, <span class="hcp1">TY</span> che permettono di visualizzare la differenza tra i tagli agenti e quelli ultimi è possibile individuare le zone in cui non risulta verificata a taglio la soletta/platea.</p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">In funzione del tipo di disposizione dei disegni (vedi comando <span class="hcp6"><a href="DISP.htm">DISP</a></span>) il comando può eliminare altre visualizzazioni già presenti.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il disegno viene effettuato mediante mappe a colori in cui il colore (generalmente blu) è dedicato alle zone in cui non necessita armatura.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Si ricorda che data la non ambiguità del piano di tensione, le diciture Superiore e Inferiore coincidono con l'effettiva giacitura dell'armatura.</p>
+</li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+        FilePopupInit('a1');
+//]]>
+</script>
+</body>
+</html>

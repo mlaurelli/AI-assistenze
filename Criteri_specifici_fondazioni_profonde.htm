@@ -1,0 +1,259 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Criteri specifici fondazioni profonde</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-family:Symbol, serif; }
+span.hcp3 { vertical-align:Sub; }
+span.hcp4 { font-family:Symbol, serif;
+font-weight:bold; }
+li.hcp5 { list-style:none;
+display:inline; }
+span.hcp6 { font-weight:bold;
+vertical-align:Sub; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Criteri specifici fondazioni profonde</h1>
+<p>Si tratta di criteri che stabiliscono i metodi per l'elaborazione dei 
+ parametri dei singoli strati della colonna stratigrafica al fine di effettuare 
+ le verifiche di capacità portante e il calcolo dei cedimenti e degli spostamenti 
+ delle fondazioni profonde presenti nella struttura.</p>
+<h2>Attrito laterale limite</h2>
+<p><span class="hcp1"><a name="Calcolo_dell_attrito_laterale_limite" 
+										 id="Calcolo_dell_attrito_laterale_limite"></a>Calcolo 
+ dell'attrito laterale limite</span>: questi parametri vengono utilizzati 
+ solo quando nei criteri generali è richiesto di calcolare la capacità 
+ portante per carichi verticali secondo formule statiche (vedi parametro 
+ <span class="hcp1"><a href="Criteri_generali_fondazioni_profonde.htm#Calcola_capacita_portante_per_carichi_verticali">Calcola 
+ capacità portante per carichi verticali</a></span>) e se non è stato scelto 
+ di considerare la capacità portante solo per pressione limite alla base 
+ (vedi parametro <span class="hcp1"><a href="Criteri_generali_fondazioni_profonde.htm#Considera_capacita_portante">Considera 
+ capacità portante</a></span>); in tal caso occorre specificare se e come 
+ calcolare l'attrito laterale limite (<span class="hcp2">t</span><span class="hcp3">s</span>) per gli strati interessati 
+ dall'infissione del palo ai quali è associato il criterio specifico. Sono 
+ disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Calcolo_di_alfa" id="Calcolo_di_alfa"></a>Calcolo di</span> 
+	 <span class="hcp4">a</span>: 
+	 questi parametri vengono utilizzati solo quando nei criteri generali 
+	 è richiesto di considerare condizioni di calcolo non drenate (o sia 
+	 drenate che non drenate) per terreni coesivi sottofalda. L'attrito 
+	 laterale limite è legato alla coesione non drenata (cu) secondo la 
+	 relazione <span class="hcp2">t</span><span class="hcp3">s</span> = <span class="hcp2">a</span>*cu 
+	 (metodo <span class="hcp2">a</span>). Sono 
+	 disponibili le seguenti opzioni:</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Pari 
+	 a</span>: indicare il valore di <span class="hcp2">a</span>.</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">AGI 
+	 (1984)</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">API 
+	 (1984)</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">Viggiani 
+	 (1999)</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">Olson 
+	 e Dennis (1982)</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">Stas 
+	 e Kulhavy (1984)</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">Skempton 
+	 (1986)</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">Reese 
+	 e O'Neill (1989)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Metodo_di_Bustamante_e_Doix__1985__per_micropali" id="Metodo_di_Bustamante_e_Doix__1985__per_micropali"></a>Metodo 
+	 di Bustamante e Doix (1985) per micropali</span>: questi parametri 
+	 vengono utilizzati solo quando nei criteri generali è richiesto di 
+	 considerare condizioni di calcolo non drenate (o sia drenate che non 
+	 drenate) per terreni coesivi sottofalda. Il valore di <span class="hcp2">t</span><span class="hcp3">s</span> è calcolato in funzione del 
+	 tipo di iniezioni utilizzate, è quindi necessario specificare il tipo 
+	 di iniezione utilizzata:</p></li>
+	<li class="p-IndentBullet2" style="font-weight: bold;"><p class="IndentBullet2">Iniezioni 
+	 ripetute</p></li>
+	<li class="p-IndentBullet2" style="font-weight: bold;"><p class="IndentBullet2">Iniezione 
+	 unica</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Calcolo_di_beta" id="Calcolo_di_beta"></a>Calcolo di</span> 
+	 <span class="hcp4">b</span>: 
+	 l'attrito laterale limite è calcolato, in condizioni drenate, in funzione 
+	 della pressione verticale efficace (<span class="hcp2">s</span>'<span class="hcp3">v0</span>) secondo la relazione: <span class="hcp2">t</span><span class="hcp3">s</span> 
+	 = <span class="hcp2">b</span>*<span class="hcp2">s</span>'<span class="hcp3">v0</span> (metodo <span class="hcp2">b</span>). 
+	 Sono disponibili le seguenti opzioni:</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Pari 
+	 a</span>: indicare il valore di <span class="hcp2">b</span>.</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">Reese 
+	 e O'Neill (1989)</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Calcolato</span>: 
+	 il valore di <span class="hcp2">b</span> è 
+	 calcolato secondo la relazione: <span class="hcp2">b</span> 
+	 = k*tan(<span class="hcp2">d</span>), dove 
+	 k rappresenta il coefficiente di spinta del terreno a lato del palo 
+	 e tan(<span class="hcp2">d</span>) è il coefficiente 
+	 di attrito palo terreno, per il calcolo delle pressioni efficaci lungo 
+	 il fusto del palo verrà tenuto conto della profondità critica.</p></li>
+	<li class="hcp5"><ul>
+		<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Calcolo 
+		 di k</span>: sono disponibili le seguenti opzioni:</p></li>
+		<li class="hcp5"><ul>
+			<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Pari a</span>: indicare il valore 
+			 di k.</p></li>
+		</ul>
+		<ul>
+			<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Dal rapporto con k</span><span class="hcp6">0</span>: 
+			 indicare il rapporto fra k e il coefficiente di spinta a riposo 
+			 del terreno (k<span class="hcp3">0</span>).</p></li>
+		</ul>
+		<ul>
+			<li class="p-IndentBullet2" style="font-weight: bold;"><p class="IndentBullet2">Fleming 
+			 (1985)</p></li>
+		</ul></li>
+		<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Calcolo 
+		 di</span> <span class="hcp4">d</span>: 
+		 sono disponibili le seguenti opzioni:</p></li>
+		<li class="hcp5"><ul>
+			<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Pari a</span>: indicare il valore 
+			 di k.</p></li>
+		</ul>
+		<ul>
+			<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Dal rapporto con k</span><span class="hcp6">0</span>: 
+			 indicare il rapporto fra k e il coefficiente di spinta a riposo 
+			 del terreno (k<span class="hcp3">0</span>).</p></li>
+			<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+			 name="Calcolo_di_a_dal_rapporto_con_c" id="Calcolo_di_a_dal_rapporto_con_c"></a>Calcolo 
+			 di a' dal rapporto con c'</span>: se il terreno, in condizioni 
+			 drenate, presenta un valore della coesione drenata (c') diverso 
+			 da zero allora al termine di attrito calcolato come sopra 
+			 si aggiunge un termine di tipo coesivo, risulta: <span class="hcp2">t</span><span class="hcp3">s</span> = <span class="hcp2">b</span>*<span class="hcp2">s</span>'<span class="hcp3">v0</span> 
+			 + a'. Il valore dell'adesione (a') è calcolata indicandone 
+			 il rapporto con c'.</p></li>
+		</ul></li>
+	</ul></li>
+</ul>
+<p><span class="hcp1"><a name="Calcolo_dell_attrito_laterale_limite_per_trazione" 
+										 id="Calcolo_dell_attrito_laterale_limite_per_trazione"></a>Calcolo 
+ dell'attrito laterale limite per trazione</span>: vengono considerati 
+ i risultati del calcolo relativo alla determinazione dell'attrito laterale 
+ limite per compressione, ridotti di un fattore specificato. È possibile 
+ calcolare l'attrito laterale limite per trazione (<span class="hcp2">t</span><span class="hcp3">s,t</span>), indipendentemente per le 
+ due condizioni di calcolo, seguendo i suggerimenti proposti da alcuni 
+ autori. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Sowa 
+	 (1970)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Bowles 
+	 (1991)</p></li>
+</ul>
+<p><span class="hcp1"><a name="Considera_l_effetto_dell_attrito_negativo" 
+										 id="Considera_l_effetto_dell_attrito_negativo"></a>Considera 
+ l'effetto dell'attrito negativo</span>: specificare se deve essere considerato 
+ l'effetto dell'attrito negativo secondo la relazione <span class="hcp2">t</span><span class="hcp3">s,n</span> = <span class="hcp2">b</span><span class="hcp3">L</span>*<span class="hcp2">s</span>'<span class="hcp3">v0,m</span>, in cui <span class="hcp2">s</span>'<span class="hcp3">v0,m</span> è la pressione efficace verticale 
+ mediata sullo strato considerato e <span class="hcp2">b</span><span class="hcp3">L</span> è un fattore empirico (coefficiente 
+ di Lambe) di cui deve essere specificato il valore.</p>
+<h2>Pressione limite alla base</h2>
+<p><span class="hcp1"><a name="Calcolo_della_pressione_limite_alla_base_del_palo" 
+										 id="Calcolo_della_pressione_limite_alla_base_del_palo"></a>Calcolo 
+ della pressione limite alla base del palo</span>: questi parametri vengono 
+ utilizzati solo quando nei criteri generali è richiesto di calcolare la 
+ capacità portante per carichi verticali secondo formule statiche (vedi 
+ parametro <span class="hcp1"><a href="Criteri_generali_fondazioni_profonde.htm#Calcola_capacita_portante_per_carichi_verticali">Calcola 
+ capacità portante per carichi verticali</a></span>) e se non è stato scelto 
+ di considerare la capacità portante solo per attrito laterale (vedi parametro 
+ <span class="hcp1"><a href="Criteri_generali_fondazioni_profonde.htm#Considera_capacita_portante">Considera 
+ capacità portante</a></span>); in tal caso occorre specificare se e come 
+ calcolare la pressione limite alla base del palo (qp) nel caso in cui 
+ il palo attesti nello strato a cui è associato il criterio specifico. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Terzaghi 
+	 (1943)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Meyerhof 
+	 (1963)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Hansen 
+	 (1970)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Vesic 
+	 (1975)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Berezantzev 
+	 (1961)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Berezantzev 
+	 (1965)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Stagg 
+	 e Zienkiewicz (1968)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Relazione 
+	 generale, coefficienti di capacità portante</span>: il valore di qp 
+	 è calcolato dalla relazione binomia generica in cui devono essere 
+	 specificati i coefficienti di capacità portante.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Fattore_di_riduzione_per_terreni_coesivi_sovraconsolidati" 
+										 id="Fattore_di_riduzione_per_terreni_coesivi_sovraconsolidati"></a>Fattore 
+ di riduzione per terreni coesivi sovraconsolidati</span>: specificare, 
+ per pali attestati su terreni coesivi sovraconsolidati (OCR &gt; 1), se 
+ ridurre la capacità portante di punta secondo i seguenti fattori di riduzione 
+ (Meyerhof): min{(DP+0.5)/(2*DP) ; 1} per pali battuti; min{(DP+1)/(2*DP+1) 
+ ; 1} per pali trivellati, con DP in metri.</p>
+<h2>Cedimenti</h2>
+<p><span class="hcp1"><a name="Risposta_elastica_laterale" 
+										 id="Risposta_elastica_laterale"></a>Risposta 
+ elastica laterale</span>: specificare come calcolare la risposta elastica 
+ del terreno lungo il fusto per carichi verticali di compressione sul palo. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Calcolata 
+	 dalla rigidezza dello strato</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: indicare il valore della rigidezza elastica laterale.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Risposta_elastica_al_piede" 
+										 id="Risposta_elastica_al_piede"></a>Risposta 
+ elastica alla base</span>: specificare come calcolare la risposta elastica 
+ del terreno al piede per carichi verticali sul palo. Sono disponibili 
+ le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Calcolata 
+	 dalla rigidezza dello strato</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: indicare il valore della rigidezza elastica al piede.</p></li>
+</ul>
+<h2>Spostamenti orizzontali</h2>
+<p><span class="hcp1"><a name="Risposta_elastica" id="Risposta_elastica"></a>Risposta 
+ elastica</span>: questi parametri vengono utilizzati solo quando nei criteri 
+ generali è richiesto calcolare la risposta elastica in funzione della 
+ stratigrafia (vedi <span class="hcp1"><a href="Criteri_generali_fondazioni_profonde.htm#Risposta_elastica_in_funzione_della_stratigrafia">Spostamenti 
+ orizzontali dei criteri generali</a></span>), in tal caso specificare 
+ come calcolare la risposta elastica del terreno per carichi orizzontali. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Vesic 
+	 (1961)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Broms 
+	 (1964)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Glick 
+	 (1961)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Chen 
+	 (1961)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Pari 
+	 a<span style="font-weight: normal;">: indicare il valore della risposta 
+	 elastica al piede.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Dal 
+	 modulo elastico</p></li>
+</ul>
+<p><span class="hcp1"><a name="Resistenza_limite" id="Resistenza_limite"></a>Resistenza 
+ limite</span>: specificare come calcolare il limite plastico dello stato 
+ tensionale indotto sul terreno. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Calcolata 
+	 dai parametri plastici</span></p></li>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Pari 
+	 a</p></li>
+</ul>
+</body>
+</html>

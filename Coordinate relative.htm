@@ -1,0 +1,47 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Coordinate relative</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+text-decoration:none; }
+span.hcp2 { font-weight:bold; }
+span.hcp3 { font-style:italic; }
+span.hcp4 { font-style:normal; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Coordinate relative</h1>
+<p>In alcuni comandi è possibile specificare le coordinate relative. In modellazione le coordinate relative sono utilizzabili solo se il <span class="hcp1"><a href="Visualizzazione%20struttura.htm">piano di visualizzazione</a></span> è normale all'asse Z del <span class="hcp1"><a href="Sistema%20di%20riferimento%20attivo.htm">sistema di riferimento attivo</a></span>.</p>
+<p>Le coordinate relative fanno sempre riferimento ad un punto o un nodo di riferimento che viene assunto come origine. Per i comandi che permettono l'inserimento di coordinate relative per la creazione di un nodo (generalmente il secondo di una coppia), il punto di riferimento è l'ultimo nodo precedentemente inserito. Se il comando sta chiedendo il primo nodo, è sufficiente cliccare sul nodo da considerare come punto di riferimento o digitare N numero_nodo.</p>
+<p>Per i comandi di Ms-Cad che attendono semplicemente coppie di punti grafici, il punto di riferimento è l'ultimo punto inserito. Se il comando sta chiedendo il primo punto, è sufficiente indicare il punto di riferimento.</p>
+<p>Le coordinate relative possono essere inserite in due modi:</p>
+<p class="Titolo7"><span class="hcp2">Coordinate relative cartesiane</span></p>
+<p class="Normal3"><span class="hcp3"><font color="#0000FF">DX valore</font></span> seguito da &lt;Invio&gt; o da un comando che non specifica coordinate relative indica solo il valore di DX. DY e DZ sono sottintesi =0.</p>
+<p class="Normal3"><span class="hcp3"><font color="#0000FF">DX valore DY valore</font></span> seguito da &lt;Invio&gt; o da un comando che non specifica coordinate relative indica solo i valori di DX e DY. DZ è sottinteso =0.</p>
+<p class="Normal3"><span class="hcp3"><font color="#0000FF">DX valore DY valore DZ valore</font></span> indica i valori di DX, DY e DZ.</p>
+<p class="Normal3"><span class="hcp3"><font color="#0000FF">DDY valore</font></span> seguito da &lt;Invio&gt; o da un comando che non specifica coordinate relative indica DX=0 e il valore di DY. DZ è sottinteso =0.</p>
+<p class="Normal3"><span class="hcp3"><font color="#0000FF">DDZ valore</font></span> seguito da &lt;Invio&gt; o da un comando che non specifica coordinate relative indica DX=0, DY=0 e il valore di DZ.</p>
+<p class="Normal3"><span style="font-style: italic; font-weight: normal;"><font color="#0000FF">@valore</font></span> seguito da &lt;Invio&gt; o da un comando che non specifica coordinate relative indica solo il valore di DX. DY e DZ sono sottintesi =0.</p>
+<p class="Normal3"><span class="hcp3"><font color="#0000FF">@valore @valore</font></span> seguito da &lt;Invio&gt; o da un comando che non specifica coordinate relative indica solo i valori di DX e DY. DZ è sottinteso =0.</p>
+<p>Nei casi in cui non si specifica la coordinata Z, viene assunta per default quella del <span class="hcp1"><a href="Visualizzazione%20struttura.htm">piano di visualizzazione</a></span> nella finestra attiva. Per i disegni Ms-Cad la coordinata Z è ovviamente sempre pari a 0 e non è possibile specificarla.</p>
+<p>Le coordinate sono ovviamente riferite al <span class="hcp1"><a href="Sistema%20di%20riferimento%20attivo.htm">sistema di riferimento attivo</a></span>.</p>
+<p class="Titolo7"><span class="hcp2">Coordinate relative polari</span></p>
+<p class="Normal3"><font color="#0000FF"><span class="hcp3">L valore ALFA angolo</span></font> <span class="hcp4">indica un punto a distanza</span> <font color="#0000FF"><span class="hcp3">valore</span></font> <span class="hcp4">dal punto di riferimento, con l'</span><font color="#0000FF"><span class="hcp3">angolo</span></font> <span class="hcp4">indicato rispetto all'asse X del piano di visualizzazione. Sia</span> <font color="#0000FF"><span class="hcp3">valore</span></font> <font color="#000000"><span class="hcp4">che</span></font> <font color="#0000FF"><span class="hcp3">angolo</span></font> <font color="#000000"><span class="hcp4">possono essere individuati mediante due punti. Nel primo caso si assume la come valore la distanza fra i due punti, nel secondo l'angolo individuato dalla direzione dei due punti.</span></font></p>
+<p class="Normal3"><font color="#0000FF"><span class="hcp3">L valore PERP angolo</span></font> <span class="hcp4">come nel caso precedente ma l'angolo indicato viene aumentato di 90°.</span></p>
+<p>In questo caso la coordinata Z viene assunta per default quella del <span class="hcp2"><a href="Visualizzazione%20struttura.htm">piano di visualizzazione</a></span> nella finestra attiva. Per i disegni Ms-Cad la coordinata Z è ovviamente sempre pari a 0.</p>
+<p style="margin-bottom: 0;"><span class="hcp2">Argomenti correlati:</span> <span class="hcp1"><a href="Sistema%20di%20riferimento%20attivo.htm">Sistema di riferimento attivo</a></span><span style="font-weight: normal;">,</span> <span class="hcp1"><a href="Visualizzazione%20struttura.htm">Visualizzazione struttura</a></span></p>
+</body>
+</html>

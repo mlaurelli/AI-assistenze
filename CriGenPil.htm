@@ -1,0 +1,394 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Criteri generali di progetto pilastri</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-style:italic; }
+font.hcp3 { font-family:Symbol; }
+span.hcp4 { font-weight:normal; }
+span.hcp5 { font-weight:bold;
+text-decoration:none; }
+span.hcp6 { font-family:Symbol, serif; }
+span.hcp7 { font-family:Verdana, sans-serif; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Criteri generali di progetto e disegno armatura pilastri</h1>
+<p>Si tratta di criteri che stabiliscono alcuni parametri validi per tutti 
+ i pilastri presenti nella struttura, indipendentemente quindi dal numero 
+ del criterio di progetto assegnato nella definizione della sezione.</p>
+<h2>Parametri di progetto</h2>
+<p><span class="hcp1"><a name="Pilastro_prefabbricato" id="Pilastro_prefabbricato"></a>Pilastro 
+ prefabbricato</span>: specificare se considerare i minimi di regolamento 
+ e lo stile di progettazione relativi ai pilastri prefabbricati o ai pilastri 
+ gettati in opera. Per i pilastri gettati in opera viene considerata una 
+ ripresa di getto in corrispondenza dei nodi appartenenti ad un impalcato 
+ ed anche in altri punti in funzione di quanto specificato nel parametro 
+ <span class="hcp1"><a href="CriPil.htm#Continuita_dei_ferri_nei_nodi_appartenenti_all_impalcato_0">Continuità 
+ dei ferri nei nodi appartenenti all'impalcato 0</a></span>, mentre per 
+ i pilastri prefabbricati vengono considerati ferri andanti dal piede fino 
+ alla testa della pilastrata con eventuali alleggerimenti di armatura (alcuni 
+ ferri proseguono ed altri no).</p>
+<p><span class="hcp1"><a name="Progettazione_dell_armatura_con_sollecitazioni_piu_gravose" 
+										 id="Progettazione_dell_armatura_con_sollecitazioni_piu_gravose"></a>Progettazione 
+ dell'armatura con sollecitazioni più gravose</span>: specificare se progettare 
+ l'armatura dei pilastri solamente con le sollecitazioni ritenute più gravose 
+ ai fini di rendere più veloce la fase di progettazione. Le armature così 
+ progettate vengono comunque verificate per tutte le combinazioni delle 
+ condizioni di carico elementari. Poiché è difficile numericamente determinare 
+ quali siano le sollecitazioni più gravose, è possibile che le armature 
+ progettate con tali sollecitazioni risultino poi non verificate relativamente 
+ alle sollecitazioni delle altre combinazioni. In tal caso, occorre deselezionare 
+ l'opzione e riprogettare solo i pilastri che risultano non verificati.</p>
+<p><span class="hcp1"><a name="Disaccoppia_sovraresistenza" 
+										 id="Disaccoppia_sovraresistenza"></a>Disaccoppia 
+ sovraresistenza</span>: questa opzione ha effetto solo per pilastri progettati 
+ a pressoflessione deviata in quanto il disaccoppiamento è implicito per 
+ verifiche a pressoflessione retta. Nel caso di progettazione secondo la 
+ gerarchia delle resistenze, i coefficienti di amplificazione dei momenti 
+ flettenti di calcolo dei pilastri (riferiti agli assi locali del pilastro 
+ e calcolati come da formula C7.2.1 della Circolare del D.M. 14/01/08) 
+ non vengono applicati direttamente ad entrambi i momenti agenti sul pilastro. 
+ Vengono invece creati due distinti casi di sollecitazione (sempre di pressoflessione 
+ deviata) in cui alternativamente viene amplificato o il solo momento My 
+ o il solo momento Mz. Per alcune considerazioni su questa opzione, si 
+ raccomanda di leggere anche <span class="hcp1"><a href="Progettazione_in_gerarchia_delle_resistenze.htm">Progettazione 
+ in gerarchia delle resistenze</a></span>, con particolare riferimento 
+ alla <a href="Progettazione_in_gerarchia_delle_resistenze.htm#Nota_1">Nota 
+ 1</a>.</p>
+<p><span class="hcp1"><a name="Limitare_il_valore_di_alfa_al_massimo_fattore_di_struttura" 
+										 id="Limitare_il_valore_di_alfa_al_massimo_fattore_di_struttura"></a>Limita 
+ fattore di sovraresistenza al massimo valore di struttura</span>: specificare 
+ se il valore del fattore di comportamento (q) debba essere considerato 
+ come un limite superiore nel calcolo dei coefficienti di amplificazione 
+ dei momenti flettenti di progettazione dei pilastri (riferiti agli assi 
+ locali del pilastro e calcolati come da formula C7.2.1 della Circolare 
+ del D.M. 14/01/08). Nel caso di strutture con diversi coefficienti &quot;q&quot; 
+ nelle due direzioni del sisma, come limite viene assunto il maggiore dei 
+ due. Per alcune considerazioni su questa opzione, si raccomanda di leggere 
+ anche <span class="hcp1"><a href="Progettazione_in_gerarchia_delle_resistenze.htm">Progettazione 
+ in gerarchia delle resistenze</a></span>, con particolare riferimento 
+ alla <a href="Progettazione_in_gerarchia_delle_resistenze.htm#Nota_2">Nota 
+ 2</a>.</p>
+<p><span class="hcp1"><a name="Tipo_verifica_di_stabilita" 
+										 id="Tipo_verifica_di_stabilita"></a>Tipo 
+ verifica di stabilità</span>: la normativa, con riferimento alle verifiche 
+ di stabilità, specifica che: &quot;<span class="hcp2">La 
+ verifica</span> <span style="font-style: normal;">[omissis]</span> <span class="hcp2">deve essere eseguita tenendo conto dello 
+ sforzo normale N*<font face="Symbol" class="hcp3">W</font> 
+ (con <font face="Symbol" class="hcp3">W</font> valutato 
+ per la massima snellezza) o del momento flettente c*M (con M momento effettivo 
+ massimo); allo sforzo normale N*<font face="Symbol" class="hcp3">W</font> 
+ si deve sostituire N se più sfavorevole.</span>&quot;.</p>
+<p>Poiché vengono date diverse interpretazioni di questo comma, è possibile 
+ specificare quali verifiche di stabilità effettuare in aggiunta alla verifica 
+ per i valori di N-M derivanti dal calcolo:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Per 
+	 N*</span><font face="Symbol" class="hcp3"><span class="hcp4">W</span></font><span class="hcp1">-M e per N-c*M (standard)</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Per 
+	 N*</span><font face="Symbol" class="hcp3"><span class="hcp4">W</span></font><span class="hcp1">-c*M (doppia)</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Per 
+	 N*</span><font face="Symbol" class="hcp3"><span class="hcp4">W</span></font> 
+	 <span class="hcp1">(sforzo normale, ma momento nullo)</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Per 
+	 c*M (momento, ma sforzo normale nullo)</span></p></li>
+</ul>
+<p>È possibile fare eseguire più tipi di verifiche specificando ad esempio: 
+ standard + doppia.</p>
+<p><span class="hcp1">Nota</span>: almeno un'opzione deve 
+ essere selezionata.</p>
+<p><span class="hcp1"><a name="Max_angolo_di_piegatura_ferri" 
+										 id="Max_angolo_di_piegatura_ferri"></a>Max 
+ angolo di piegatura ferri</span>: specificare il massimo angolo di piegatura 
+ del ferro per farlo proseguire nel pilastro superiore nel caso di rastremazione 
+ della sezione. L'angolo viene calcolato considerando una lunghezza di 
+ piegatura funzione dell'altezza degli elementi che incidono sul nodo in 
+ cui si ha la rastremazione della sezione. Se sul nodo non incidono elementi 
+ ModeSt inserirà opportuni ferri di ripresa senza sagomare il ferro. Nel 
+ solo caso di pilastri prefabbricati è possibile specificare con il parametro 
+ <span class="hcp5"><a href="#Lunghezza_piegatura_ferri_al_cambio_sezione">Lunghezza 
+ piegatura ferri al cambio sezione</a></span> la lunghezza di piegatura 
+ da considerare in mancanza di elementi incidenti.</p>
+<p><span class="hcp1"><a name="Progettazione_armatura_di_ripresa" 
+										 id="Progettazione_armatura_di_ripresa"></a>Progettazione 
+ armatura di ripresa</span>: specificare se ModeSt debba eseguire o meno 
+ il progetto dell'armatura di ripresa al piede del pilastro. Nel caso di 
+ fondazione con plinto a bicchiere ModeSt non effettua in nessun caso il 
+ progetto dell'armatura di ripresa, ma considera il pilastro più lungo 
+ di una quantità pari all'altezza del bicchiere del plinto.</p>
+<p><span class="hcp1"><a name="Minimizzazione_armatura_di_ripresa" 
+										 id="Minimizzazione_armatura_di_ripresa"></a>Minimizzazione 
+ armatura di ripresa</span>: specificare se l'armatura di ripresa al piede 
+ del pilastro vada progettata in funzione delle sole sollecitazioni ivi 
+ agenti o realizzate con ferri uguali a quelli del pilastro soprastante, 
+ ferri che possono essere sovrabbondanti perché progettati in funzione 
+ anche delle sollecitazioni in testa ed in taluni casi delle sollecitazioni 
+ al piede del pilastro al piano superiore.</p>
+<p><span class="hcp1"><a name="Minimizzazione_area_di_ferro_totale_nella_sezione" 
+										 id="Minimizzazione_area_di_ferro_totale_nella_sezione"></a>Minimizzazione 
+ area di ferro totale nella sezione</span>: specificare se l'area totale 
+ nella sezione del pilastro debba essere minimizzata. Se l'opzione è selezionata 
+ ModeSt considera tra gli schemi di armatura che soddisfino sia le verifiche 
+ a presso-tenso flessione sia le limitazioni della normativa quello che 
+ minimizza l'area di ferro totale nella sezione.</p>
+<p><span class="hcp1"><a name="Non_progettare_riprese_ma_estendi_solo_i_ferri" 
+										 id="Non_progettare_riprese_ma_estendi_solo_i_ferri"></a>Non 
+ progettare riprese ma estendi solo i ferri</span>: specificare se eseguire 
+ o meno il progetto dell'armatura di ripresa ad ogni impalcato oppure proseguire 
+ l'armatura inferiore.</p>
+<p><span class="hcp1"><a name="Verifiche_in_relazione" id="Verifiche_in_relazione"></a>Verifiche 
+ in relazione</span>: specificare quali sono le CC per cui riportare in 
+ relazione la stampa delle verifiche a flessione. Sono disponibili le seguenti 
+ opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tutte</span>: 
+	 vengono riportare le verifiche di tutte le CC.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Minimizzate</span>: 
+	 vengono riportate le verifiche relative alle CC che provocano la massima 
+	 tensione nel calcestruzzo e nel ferro. Se la CC nei due casi è la 
+	 stessa, viene riportata una sola volta.</p></li>
+</ul>
+<p>Per quanto riguarda le tensioni tangenziali, vengono in ogni caso riportate 
+ quelle massime, con l'indicazione della relativa CC.</p>
+<h2>Ancoraggi</h2>
+<p><span class="hcp1"><a name="Lunghezza_ancoraggi" id="Lunghezza_ancoraggi"></a>Lunghezza 
+ ancoraggi</span>: specificare la lunghezza minima degli ancoraggi. Sono 
+ disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Lunghezza 
+	 minima come multiplo del diametro</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Lunghezza 
+	 imposta come multiplo del diametro</span></p></li>
+</ul>
+<p>Selezionando <span class="hcp1">Lunghezza minima come 
+ multiplo del diametro</span>, viene effettuato il calcolo della lunghezza 
+ in funzione della tensione di snervamento nel ferro e dell'aderenza, ma 
+ viene comunque considerata una lunghezza maggiore di quella minima impostata, 
+ ad esempio specificando 40 gli ancoraggi devono avere in ogni caso lunghezza 
+ non inferiore a 40Ø, ma possono comunque essere più lunghi se necessario. 
+ Mentre specificando <span class="hcp1">Lunghezza imposta 
+ come multiplo del diametro</span>, non viene effettuato il calcolo della 
+ lunghezza d'ancoraggio, ma viene considerata la lunghezza imposta che 
+ può risultare anche inferiore a quella necessaria, ad esempio impostando 
+ 40 la lunghezza degli ancoraggi sarà 40Ø in ogni caso.</p>
+<p><span class="hcp1"><a name="Ancoraggi_tutti_uguali" id="Ancoraggi_tutti_uguali"></a>Ancoraggi 
+ tutti uguali</span>: specificare se si desidera o meno che gli ancoraggi 
+ dello stesso pilastro vengano ricondotti alla lunghezza massima, in modo 
+ da avere barre d'armatura tutte della stessa lunghezza.</p>
+<p><span class="hcp1"><a name="Piegatura_ancoraggi_per_discontinuità"></a>Piegatura 
+ ancoraggi per discontinuità</span>: specificare se risvoltare i ferri 
+ quando, a causa di discontinuità, non sia possibile inserire un ancoraggio 
+ della lunghezza necessaria (ad esempio in testa al pilastro). ModeSt tronca 
+ l'ancoraggio oppure lo piega per una lunghezza pari al lato minore della 
+ sezione del pilastro, in relazione a quanto specificato in questo parametro.</p>
+<p><span class="hcp1"><a name="Piegatura_ancoraggi_ferri_di_ripresa" 
+										 id="Piegatura_ancoraggi_ferri_di_ripresa"></a>Piegatura 
+ ancoraggi ferri di ripresa</span>: specificare se gli spezzoni di ripresa 
+ vadano piegati o troncati nel caso che lo spessore della fondazione non 
+ sia sufficiente per garantire l'ancoraggio. La piegatura, se richiesta, 
+ viene eseguita per una lunghezza pari al lato minore della sezione del 
+ pilastro.</p>
+<h2>Armatura a taglio</h2>
+<p><span class="hcp1"><a name="Staffatura_a_spirale_pilastri_circolari" 
+										 id="Staffatura_a_spirale_pilastri_circolari"></a>Staffatura 
+ a spirale pilastri circolari</span>: specificare se i pilastri circolari 
+ debbano essere staffati con staffe circolari o con spirale. Si noti che 
+ per quanto riguarda la progettazione del pilastro non vengono effettuate 
+ in nessun caso le considerazioni di cui al par. 3.1.11 del D.M. 14/02/92 
+ (pilastri cerchiati).</p>
+<p><span class="hcp1"><a name="Cambiare_le_staffe_nei_nodi_appartenenti_all_impalcato_0" 
+										 id="Cambiare_le_staffe_nei_nodi_appartenenti_all_impalcato_0"></a>Cambiare 
+ le staffe nei nodi appartenenti all'impalcato 0 se sul nodo incidono elementi</span>: 
+ specificare se in corrispondenza di nodi appartenenti all'impalcato 0 
+ ModeSt debba prevedere o meno un eventuale cambio di staffatura se sul 
+ nodo incidono elementi. Ai sensi del D.M. 17/01/18, se sul nodo incidono 
+ elementi attivi per la gerarchia delle resistenze, le zone superiori ed 
+ inferiori verranno trattate come zone critiche a tutti gli effetti.</p>
+<p><span class="hcp1"><a name="Considera_solo_la_zona_critica_alla_base_della_pilastrata__strutture_pendolari" 
+										 id="Considera_solo_la_zona_critica_alla_base_della_pilastrata__strutture_pendolari"></a>Considera 
+ solo la zona critica alla base della pilastrata (strutture pendolari)</span>: 
+ viene considerata sempre una sola zona critica alla base della pilastrata. 
+ Questa opzione, valida solo per le strutture calcolate in base al D.M. 
+ 17/01/2018, potrebbe essere utilizzata nelle strutture prefabbricate in 
+ cui il pilastro è una mensola e per il quale è ragionevole considerare 
+ che sia abbia una zona critica sola alla base del pilastro.</p>
+<p><span class="hcp1"><a name="Progetta_a_taglio_con_traliccio_ad_inclinazione_variabile" 
+										 id="Progetta_a_taglio_con_traliccio_ad_inclinazione_variabile"></a>Progetta 
+ a taglio con traliccio ad inclinazione variabile</span>: specificare se 
+ progettare e verificare l'armatura a taglio con il metodo del traliccio 
+ ad inclinazione variabile (1 &#8804; ctg <span class="hcp6">q</span> 
+ &#8804; 2.5) oppure se adottare sempre un traliccio con inclinazione delle bielle 
+ compresse di 45° a cui corrisponde ctg <span class="hcp6">q</span> 
+ = 1. Nel caso di progettazione con traliccio ad inclinazione variabile 
+ sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Classe 
+	 A</span>: specificare il valore massimo ammissibile della ctg <span class="hcp6">q</span> <span class="hcp7">sia 
+	 all'interno che all'esterno delle zone critiche. Valori accettabili 
+	 sono compresi tra 1 e 2.5.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Classe 
+	 B</span>: specificare il valore massimo ammissibile della ctg <span class="hcp6">q</span> <span class="hcp7">sia 
+	 all'interno che all'esterno delle zone critiche. Valori accettabili 
+	 sono compresi tra 1 e 2.5.</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Estendi_nel_nodo_staffe_sottostanti_anche_se_non_richiesto_dalla_normativa" 
+										 id="a1"></a>Estendi nel nodo staffe 
+ sottostanti anche se non richiesto dalla normativa</span>: specificare 
+ se staffare il pilastro anche nel tratto di intersezione con le travi 
+ utilizzando lo stesso passo e diametro delle staffe della pilastrata sottostante.</p>
+<h2>Prefabbricati</h2>
+<p><span class="hcp1"><a name="Lunghezza_piegatura_ferri_al_cambio_sezione" 
+										 id="Lunghezza_piegatura_ferri_al_cambio_sezione"></a>Lunghezza 
+ piegatura ferri al cambio sezione</span>: questo parametro viene utilizzato 
+ solo per i pilastri prefabbricati e consente di specificare la lunghezza 
+ del tratto nel quale piegare i ferri in caso di discontinuità di sezione. 
+ In funzione di questa lunghezza viene calcolato l'angolo di piegatura 
+ del ferro e confrontato con quanto specificato nel parametro <span class="hcp5"><a href="#Max_angolo_di_piegatura_ferri">Max. 
+ angolo di piegatura ferri</a></span>.</p>
+<p><span class="hcp1"><a name="Punti_di_alleggerimento_armatura" 
+										 id="Punti_di_alleggerimento_armatura"></a>Punti 
+ di alleggerimento armatura</span>: specificare i punti in cui alleggerire 
+ l'armatura (alcuni ferri terminano ed altri proseguono). Sono disponibili 
+ le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">In 
+	 corrispondenza del cambio di sezione</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">In 
+	 corrispondenza dell'impalcato</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">In 
+	 corrispondenza delle quote specificate</span></p></li>
+</ul>
+<p>Se entrambe le opzioni sono deselezionate non verranno mai eseguiti 
+ alleggerimenti nell'armatura. È possibile fare eseguire più tipi di alleggerimento 
+ ad esempio <span class="hcp1">In corrispondenza dell'impalcato</span> 
+ <span class="hcp4">e</span> <span class="hcp1">delle 
+ quote specificate</span>.</p>
+<p><span class="hcp1"><a name="Interruzione_ferri_ai_cambi_di_sezione" 
+										 id="Interruzione_ferri_ai_cambi_di_sezione"></a>Interruzione 
+ ferri ai cambi di sezione</span>: specificare se, nel caso di cambio sezione, 
+ tutti i ferri di spigolo nei punti di discontinuità debbano essere piegati 
+ per proseguire nel pilastro soprastante o se almeno uno debba proseguire 
+ lungo lo spigolo fino al punto di cambio sezione.</p>
+<h2>Parametri di disegno</h2>
+<p>Nella creazione dei disegni delle tabelle e armature dei pilastri oltre 
+ alle direttive dei <span class="hcp5"><a 
+	 href="Criteri%20generali%20di%20disegno.htm">criteri generali di disegno</a></span> 
+ sono specificabili numerose altre opzioni.</p>
+<p><span class="hcp1"><a name="Scala__disegno_sezioni_pilastri" 
+										 id="Scala__disegno_sezioni_pilastri"></a>Scala 
+ disegno sezioni pilastri</span>: specificare la scala con la quale disegnare 
+ le sezioni dei pilastri, sia nelle tabelle che nei disegni dei pilastri 
+ in vista proiettata.</p>
+<p><span class="hcp1"><a name="Scala_disegno_viste_pilastri" 
+										 id="Scala_disegno_viste_pilastri"></a>Scala 
+ disegno viste pilastri</span>: specificare la scala con la quale disegnare 
+ le viste proiettate dei pilastri (se richieste).</p>
+<p><span class="hcp1"><a name="Creazione_tabelle_pilastri" 
+										 id="Creazione_tabelle_pilastri"></a>Creazione 
+ tabelle pilastri</span>: specificare se devono essere create o meno le 
+ tabelle dei pilastri. Sono disponibili le seguenti opzioni:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Tipo_di_tabella" id="Tipo_di_tabella"></a>Tipo di tabella</span>: 
+	 indicare il tipo di tabella pilastri. Sono disponibili le seguenti 
+	 opzioni:</p></li>
+</ol>
+<ul>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Armature 
+	 disposte dal basso verso l'alto</span>: tabella pilastri complessiva 
+	 con armature disposte dal basso verso l'alto (armatura di ripresa 
+	 in basso).</p></li>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Armature 
+	 disposte dall'alto verso il basso</span>: tabella pilastri complessiva 
+	 con armature disposte dal basso verso l'alto (armatura di ripresa 
+	 in basso).</p></li>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Armature 
+	 disposte per impalcato</span>: viene creata una tabella per ogni impalcato 
+	 della struttura, più una per i ferri di ripresa.</p></li>
+</ul>
+<p class="Rientro1"><span class="hcp1">Nota</span>: tutte 
+ le tabelle potranno essere automaticamente divise in più parti se eccedono 
+ le dimensioni indicate per le tavole.</p>
+<ol start="2">
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Max_lunghezza_tavole" id="Max_lunghezza_tavole"></a>Max lunghezza 
+	 tavole</span>: specificare la massima lunghezza utilizzabile per il 
+	 disegno delle tabelle dei pilastri. Se necessario ModeSt disegnerà 
+	 più tavole.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Max_altezza_tavole" id="Max_altezza_tavole"></a>Max altezza 
+	 tavole</span>: specificare la massima altezza utilizzabile per il 
+	 disegno delle tabelle dei pilastri. Se necessario ModeSt disegnerà 
+	 più tavole.</p></li>
+</ol>
+<p><span class="hcp1"><a name="Creazione_viste_pilastri" 
+										 id="Creazione_viste_pilastri"></a>Creazione 
+ viste pilastri</span>: specificare cosa disegnare nelle due viste proiettate 
+ dei disegni delle armature dei pilastri. Sono disponibili le seguenti 
+ opzioni:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Disegno_ferri_dentro_pilastro_in_vista" id="Disegno_ferri_dentro_pilastro_in_vista"></a>Disegno 
+	 ferri dentro pilastro in vista</span>: specificare se nel disegno 
+	 del pilastro in vista proiettata devono essere disegnati internamente 
+	 anche i ferri longitudinali.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Disegno_staffe_dentro_pilastro_in_vista" id="Disegno_staffe_dentro_pilastro_in_vista"></a>Disegno 
+	 staffe dentro pilastro in vista</span>: specificare se nel disegno 
+	 del pilastro in vista proiettata devono essere disegnate internamente 
+	 anche le staffe o la spirale d'armatura.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Modalita_di_individuazione_ferri" id="Modalita_di_individuazione_ferri"></a>Modalità 
+	 di individuazione ferri</span>: specificare come ModeSt deve individuare 
+	 i ferri (linee di riferimento). Sono disponibili le seguenti opzioni:</p></li>
+</ol>
+<ul>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Per 
+	 posizione</span>: questa modalità è l'unica ammissibile nel caso vengano 
+	 creati i disegni del pilastro in vista proiettata.</p></li>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Per 
+	 simboli</span></p></li>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">In 
+	 modo diretto</span></p></li>
+</ul>
+<ol start="4">
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Modalita_di_indicazione_ferri" id="Modalita_di_indicazione_ferri"></a>Modalità 
+	 di indicazione ferri</span>: se la modalità di individuazione ferri 
+	 selezionata è <span class="hcp1">Per posizione</span> 
+	 o <span class="hcp1">Per simboli</span>, specificare 
+	 come devono essere indicati i ferri. Sono disponibili le seguenti 
+	 opzioni:</p></li>
+</ol>
+<ul>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">In 
+	 modo Diretto</span>: permette di indicare i ferri in modo diretto 
+	 immediatamente accanto alla loro individuazione.</p></li>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Mediante 
+	 una tabella</span>: permette di i ferri mediante una tabella riportata 
+	 sotto la sezione.</p></li>
+</ul>
+<ol start="5">
+	<li class="p-Elenco1"><p class="Elenco1" style="margin-bottom: 0;"><span class="hcp1"><a name="Minimizzazione_riferimenti" id="Minimizzazione_riferimenti"></a>Minimizzazione 
+	 riferimenti</span>: se la modalità di individuazione ferri selezionata 
+	 è <span class="hcp1">Per posizione</span>, indicare 
+	 se ModeSt deve cercare di alleggerire il disegno omettendo, qualora 
+	 ciò non crei ambiguità, l'individuazione specifica di alcuni ferri.</p></li>
+</ol>
+</body>
+</html>

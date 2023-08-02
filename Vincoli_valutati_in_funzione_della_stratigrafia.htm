@@ -1,0 +1,88 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Vincoli valutati in funzione della stratigrafia</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Vincoli valutati in funzione della stratigrafia</h1>
+<p>È possibile definire in modo automatico le condizioni vincolari della 
+ struttura in funzione della stratigrafia e della geometria delle fondazioni.</p>
+<p>Le condizioni vincolari vengono assegnate alla struttura attraverso 
+ attributi vincolari rappresentativi dell'interazione fra struttura di 
+ fondazione e terreno. Tali attributi vengono associati ai rispettivi elementi 
+ del modello: per plinti e pali nella <a href="../Manuale/Vincoli_nodi.htm">definizione 
+ del vincolo nodale</a>; per le aste nella <a href="../Manuale/Vincoli_aste.htm">definizione 
+ del vincolo asta</a>; per gli elementi bidimensionali nella <a href="../Manuale/Tipi_muri_bidimensionali.htm">definizione 
+ del tipo di muro/elemento bidimensionale</a>.</p>
+<p>L'impostazione: valutato in funzione della stratigrafia, permette di 
+ valutare automaticamente le costanti elastiche degli attributi vincolari 
+ in funzione della stratigrafia di riferimento definita nel modello ed 
+ in funzione della geometria dell'elemento di fondazione a cui vengono 
+ associati. La costante di sottofondo è calcolabile per gli elementi di 
+ fondazioni con numero diverso da zero.</p>
+<h2 class="Titolo5">Plinti/pali</h2>
+<p>Per i plinti superficiali le costanti elastiche (EZ, ERX, ERY) vengono 
+ calcolate, analogamente al vincolo pseudo-plinto, dalla costante di sottofondo 
+ (Kt). In questo caso tale costante viene definita automaticamente in base 
+ al metodo scelto per il calcolo dei cedimenti delle fondazioni superficiali.</p>
+<p>Per i pali ed i plinti su pali le costanti elastiche (EX, EY, EZ, ERX, 
+ ERY) vengono calcolate automaticamente in base ai risultati di analisi 
+ elastiche del singolo palo o dei singoli pali che compongono il plinto. 
+ Il calcolo viene effettuato ipotizzando che il terreno resti sempre in 
+ campo elastico e trascurando la resistenza della punta. Occorre quindi 
+ che la stratigrafia possa fornire un contributo per attrito laterale e 
+ che tale contributo non sia stato disattivato nei criteri di progetto. 
+ Le costanti elastiche equivalenti per pali e plinti su pali vengono calcolate 
+ applicando dei carichi unitari e valutando spostamenti e rotazioni della 
+ testa del plinto. Nel caso dei plinti su più pali la rotazione viene valutata 
+ considerando la differenza di spostamento verticale dei pali rispetto 
+ al centro del plinto. Se nella definizione del plinto è stato indicato 
+ di considerare bloccata la rotazione della testa, la rotazione totale 
+ del plinto non cambia. Il blocco della rotazione in testa influenza però 
+ il calcolo degli spostamenti orizzontali e quindi le relative costanti 
+ elastiche. Nel caso del palo singolo (o dei plinti su 2 soli pali nel 
+ verso ortogonale all'asse lungo), la rotazione viene valutata considerando 
+ la rotazione della testa del palo. Il calcolo non è quindi effettuabile 
+ se nella definizione del plinto/palo è stato indicato di considerare bloccata 
+ la rotazione della testa.</p>
+<p>In ogni caso le costanti elastiche valutate automaticamente dipendono 
+ dalla geometria degli elementi di fondazione, pertanto il vincolo nodale 
+ valutato in funzione della stratigrafia, a differenza del vincolo pseudo-plinto, 
+ dipende dalla presenza di plinti incidenti sul nodo.</p>
+<p>Per ogni singolo vincolo nodale valutato in funzione della stratigrafia 
+ è possibile indicare quali componenti sono ipotizzate bloccate, libere 
+ o con elasticità calcolata automaticamente.</p>
+<p>Per i plinti superficiali è possibile definire il vincolo elastico per 
+ spostamenti e rotazioni rispetto all'asse verticale del sistema di riferimento 
+ globale, in più, per i pali e plinti su pali, è possibile calcolare un 
+ grado di vincolo elastico anche per gli spostamenti orizzontali.</p>
+<h2 class="Titolo5">Travi di fondazione</h2>
+<p>Per le travi di fondazione, la costante di sottofondo valutata in funzione 
+ della stratigrafia viene definita automaticamente in base al metodo scelto 
+ per il calcolo dei cedimenti delle fondazioni superficiali. La geometria 
+ dell'impronta di contatto fra fondazione e terreno è rappresentata per 
+ ogni singola travata (cioè per ogni insieme di aste contigue ed allineate 
+ univocamente accomunate da medesima sezione e numero asta) dalla base 
+ della sezione e dalla lunghezza totale della travata stessa.</p>
+<h2 class="Titolo5">Platee di fondazione</h2>
+<p>Per le platee di fondazione, la costante di sottofondo valutata in funzione 
+ della stratigrafia viene definita automaticamente in base al metodo scelto 
+ per il calcolo dei cedimenti delle fondazioni superficiali. La geometria 
+ dell'impronta di contatto fra fondazione e terreno è rappresentata per 
+ ogni singola platea (cioè per ogni insieme di elementi bidimensionali 
+ contigui e complanari in un piano orizzontale, univocamente accomunati 
+ da medesimo tipo e numero di bidimensionale) dalla forma rettangolare 
+ equivalente calcolata dall'area totale dell'impronta, dalla direzione 
+ degli assi principali d'inerzia e dal rapporto fra le dimensioni pari 
+ al rapporto fra i raggi d'inerzia. L'impronta di verifica risulta quindi 
+ più compatta dell'impronta reale e quindi si ritiene che la verifica risulti 
+ a favore di sicurezza.</p>
+</body>
+</html>

@@ -1,0 +1,192 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>DEVA - Definisci vincoli interni asta</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style type="text/css">
+<!--
+td ol { margin-top:0;
+margin-bottom:0; }
+td ul { margin-top:0;
+margin-bottom:0; }
+-->
+</style>
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+td.hcp2 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp3 { margin-bottom:0; }
+span.hcp4 { font-style:italic; }
+td.hcp5 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp6 { text-align:left;
+margin-bottom:0; }
+p.hcp7 { text-align:justify;
+margin-bottom:0; }
+span.hcp8 { font-weight:normal; }
+span.hcp9 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando"><span class="hcp1">DEVA - Definisci 
+ vincoli interni asta</span></p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" 
+		 width="100%" bgcolor="#C0C0C0">
+	<tr>
+		<td style="width:68%;" class="hcp2"><p class="hcp3"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p></td>
+		<td style="width:29%;" class="hcp2"><p class="hcp3"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p></td>
+	</tr>
+</table>
+<p>Permette di definire o ridefinire i tipi di vincoli interni delle aste. 
+ Il vincolo definito o modificato verrà automaticamente reso corrente se 
+ così è stato specificato nelle <a href="../Manuale/Opzioni.htm" style="font-weight: bold;">Opzioni</a>.</p>
+<p>Il comando eseguito da <span class="hcp1"><a href="../Manuale/Linea%20di%20comando.htm">linea 
+ di comando</a></span> consente di definire solo alcuni tipi di vincoli 
+ interni delle aste. <span class="hcp1">Per accedere a tutti 
+ i tipi di vincoli usare la finestra di dialogo</span>.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3" style="text-align: justify;"><span class="hcp1">DEVA</span> 
+ <font color="#0000FF"><span class="hcp4">Numero del vincolo 
+ asta</span></font> / <span class="hcp4"><font color="#0000FF">Tipo 
+ di vincolo</font></span> / <span class="hcp4"><font color="#0000FF">Tipo 
+ di biella</font></span> / <font color="#0000FF"><span class="hcp4">Vincoli 
+ nodo iniziale</span></font> / <font color="#0000FF">V<span class="hcp4">incoli 
+ nodo finale</span></font> / <span class="hcp4"><font color="#0000FF">Coeff. 
+ di sottofondo</font></span> / <font color="#0000FF"><span class="hcp4">Commento</span></font></p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt;" cellspacing="0" 
+		 width="100%">
+	<tr>
+		<td style="width:26%;" class="hcp5"><p class="hcp6"><font color="#0000FF"><span class="hcp4">Numero del vincolo</span></font> <span class="hcp4"><font color="#0000FF">asta</font></span></p></td>
+		<td style="width:73%;" class="hcp5"><p class="hcp3"><font color="#000000">è il numero 
+		 del tipo di vincoli interni che si vuole definire o ridefinire. 
+		 Dovrà</font> essere uguale al numero di un tipo di vincolo interno 
+		 già definito per eventuali correzioni oppure uguale al numero 
+		 del prossimo tipo da definire.</p></td>
+	</tr>
+	<tr>
+		<td style="width:26%;" class="hcp5"><p class="hcp6"><span class="hcp4"><font 
+		 color="#0000FF">Tipo di vincolo</font></span></p></td>
+		<td style="width:73%;" class="hcp5"><p>rappresenta 
+		 la tipologia di vincolo:</p>
+		<ul>
+			<li class="p-ParametriComando"><p class="ParametriComando"><span class="hcp1">BIE</span> elemento biella.</p></li>
+			<li class="p-ParametriComando"><p class="ParametriComando"><span class="hcp1">SVI</span> definizione di vincolamenti 
+			 interni.</p></li>
+			<li class="p-ParametriComando"><p class="ParametriComando" 
+												 style="margin-bottom: 0;"><span class="hcp1">ELA</span> vincolo su suolo elastico 
+			 alla Winkler.</p></li>
+		</ul></td>
+	</tr>
+	<tr>
+		<td style="width:26%;" class="hcp5"><p class="hcp7"><span class="hcp4"><font 
+		 color="#0000FF">Tipo di biella</font></span></p></td>
+		<td style="width:73%;" class="hcp5"><p>viene 
+		 richiesto solo se la tipologia di vincolo è <span class="hcp1">BIE</span> 
+		 e rappresenta il tipo di biella:</p>
+		<ul>
+			<li class="p-ParametriComando"><p class="ParametriComando"><span class="hcp1">RTC</span> biella resistente a 
+			 trazione e a compressione.</p></li>
+			<li class="p-ParametriComando"><p class="ParametriComando"><span class="hcp1">RT</span> biella resistente solo 
+			 a trazione.</p></li>
+			<li class="p-ParametriComando"><p class="ParametriComando" 
+												 style="margin-bottom: 0;"><span class="hcp1">RC</span> biella resistente solo 
+			 a compressione.</p></li>
+		</ul></td>
+	</tr>
+	<tr>
+		<td style="width:26%;" class="hcp5"><p class="hcp6"><font color="#0000FF"><span class="hcp4">Vincoli nodo iniziale</span></font></p></td>
+		<td style="width:73%;" class="hcp5"><p class="hcp3">specificare i codici di rilascio 
+		 dei 6 g.d.l. nel nodo iniziale dell'asta. Codice 1 indica g.d.l. 
+		 bloccato mentre codice 0 indica g.d.l. rilasciato; per My e Mz 
+		 si possono specificare anche valori compresi tra 0 e 1 per definire 
+		 un'incastro parziale ad esempio, specificando 0.5 si ha una riduzione 
+		 del 50% del momento di incastro. Questi dati vengono richiesti 
+		 solo se la tipologia è <span class="hcp1">SVI</span><span class="hcp8">.</span></p></td>
+	</tr>
+	<tr>
+		<td style="width:26%;" class="hcp5"><p class="hcp6"><font color="#0000FF"><span class="hcp4">Vincoli nodo finale</span></font></p></td>
+		<td style="width:73%;" class="hcp5"><p class="hcp7">specificare 
+		 i codici di rilascio dei 6 g.d.l. nel nodo finale dell'asta. Codice 
+		 1 indica g.d.l. bloccato mentre codice 0 indica g.d.l. rilasciato; 
+		 per My e Mz si possono specificare anche valori compresi tra 0 
+		 e 1 per definire un'incastro parziale ad esempio, specificando 
+		 0.5 si ha una riduzione del 50% del momento di incastro. Questi 
+		 dati vengono richiesti solo se la tipologia è <span class="hcp1">SVI</span>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:26%;" class="hcp5"><p class="hcp6"><span class="hcp4"><font 
+		 color="#0000FF">Coeff. di sottofondo</font></span></p></td>
+		<td style="width:73%;" class="hcp5"><p class="hcp3">indicare il valore del coefficiente 
+		 di sottofondo del terreno su suolo elastico alla Winkler. Questo 
+		 dato viene richiesto solo se la tipologia è <span class="hcp1">ELA</span><span class="hcp8">.</span></p></td>
+	</tr>
+	<tr>
+		<td style="width:26%;" class="hcp5"><p class="hcp6"><font color="#0000FF"><span class="hcp4">Commento</span></font></p></td>
+		<td style="width:73%;" class="hcp5"><p class="hcp3">specificare un commento da associare 
+		 al tipo di vincoli interni.</p></td>
+	</tr>
+</table>
+<p>Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">I 
+	 g.d.l. sono espressi nel riferimento locale dell'asta.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">ModeSt 
+	 non è in grado di individuare tutte le possibili labilità che possono 
+	 nascere introducendo svincolamenti incorretti.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Se 
+	 l'elemento è costituito da più aste occorre dividere il valore dell'incastro 
+	 parziale per un coefficiente dato dal rapporto tra la lunghezza dell'elemento 
+	 e la lunghezza dell'asta a cui è assegnato l'incastro parziale.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Gli 
+	 svincolamenti parziali non sono gestiti da versioni di Xfinest precedenti 
+	 alla 2014.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Nel 
+	 caso in cui nella struttura esista almeno un'asta con vincolo di tipo 
+	 biella solo resistente a compressione o a trazione, sarà possibile 
+	 effettuare solo un analisi di tipo non lineare.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">I 
+	 vincoli interni definiti possono essere visualizzati con il comando 
+	 <span class="hcp9"><a href="_VA.htm">?TVA</a></span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Per 
+	 assegnare i vincoli interni alle aste occorre usare i comandi <span class="hcp1"><a href="VAC.htm">VAC</a></span> e <span class="hcp1"><a href="AVA.htm">AVA</a></span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Se 
+	 il tipo di vincolo è su suolo elastico alla Winkler è possibile valutare 
+	 in modo automatico la <span class="hcp1"><a href="../Manuale_geotecnica/Vincoli_valutati_in_funzione_della_stratigrafia.htm">costante 
+	 di sottofondo in funzione della stratigrafia</a></span>.</p></li>
+</ul>
+<p style="text-align: justify;"><span class="hcp1">Comandi 
+ correlati:</span> <span class="hcp9"><a 
+	 href="VAC.htm">VAC</a></span> rende corrente il vincolo. <span class="hcp9"><a href="AVA.htm">AVA</a></span> assegna 
+ il vincolo corrente. <span class="hcp9"><a 
+	 href="DVA.htm">DVA</a></span> disegna il numero del vincolo. <span class="hcp9"><a href="_VA.htm">?VA</a></span> 
+ elenca i di vincoli.</p>
+<p style="text-align: left; font-weight: bold;">Argomenti correlati: <a 
+	 href="Guida.chm::/Struttura_in_acciaio.htm">Vincoli aste nelle strutture 
+ in acciaio</a></p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a2');
+	FilePopupInit('a3');
+//]]></script>
+</body>
+</html>

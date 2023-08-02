@@ -1,0 +1,67 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Tipi muri/bidimensionali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Tipi muri/bidimensionali</h1>
+<p>Se si modificano le proprietà ad un tipo di elemento bidimensionale 
+ già definito, si modificano ovviamente tutti gli elementi di tale tipo 
+ nella struttura.</p>
+<p>Se si ridefiniscono uno o più tipi di elemento bidimensionale, <span class="hcp1">non</span> occorre correggere la condizione 
+ di carico elementare in cui erano stati memorizzati i carichi dovuti al 
+ peso proprio, poiché quest'ultimo viene automaticamente tenuto aggiornato.</p>
+<p>Se la tipologia dell'elemento bidimensionale è flessionale e membranale 
+ è possibile diversificare lo spessore flessionale da quello membranale. 
+ Questa opzione non è gestita da OpenSees e non è applicabile all'elemento 
+ ISOSHELL di Xfinest.</p>
+<p>Se la tipologia dell'elemento bidimensionale è su suolo elastico alla 
+ Winkler è possibile valutare in modo automatico la costante di sottofondo 
+ in funzione della stratigrafia, si veda <a href="../Manuale_geotecnica/Vincoli_valutati_in_funzione_della_stratigrafia.htm">Vincoli 
+ valutati in funzione della stratigrafia</a>.</p>
+<p>Se l'utilizzo dell'elemento bidimensionale è &quot;Generico&quot; è 
+ possibile specificare se è costituito da un materiale non lineare con 
+ criterio di plasticizzazione <a href="Legame_costitutivo_Drucker-Prager.htm">Drucker-Prager</a>, 
+ per il qual è necessario specificare l'angolo di attrito, la coesione 
+ e l'angolo di dilatanza. Questa opzione non è gestita da SAP2000, OpenSees 
+ e dalle versioni di Xfinest precedenti alla 2018. L'angolo di dilatanza, 
+ diverso dall'angolo di attrito, non è gestito dalle versioni di Xfinest 
+ precedenti alla 2019.</p>
+<p>Se l'utilizzo dell'elemento bidimensionale è &quot;Pannello X-LAM&quot; 
+ occorre specificare la composizione del pannello. Sono ammissibili solo 
+ un numero dispari di strati, con orientamenti alternati. I diversi spessori 
+ devono comunque essere simmetrici rispetto all'asse del pannello. Per 
+ pannelli che in sede di produzione hanno tavole accoppiate ma con stesso 
+ orientamento, va definito un unico strato dello spessore complessivo. 
+ Per i pannelli X-LAM non viene richiesto il materiale da usare per il 
+ calcolo della struttura, in quanto i dati necessari vengono automaticamente 
+ calcolati da quelli presenti nel criterio di progetto, come indicato in 
+ <u><span style="text-decoration: underline; "><a href="Caratteristiche_meccaniche_dei_pannelli_X-LAM.htm">Caratteristiche 
+ meccaniche dei pannelli X-LAM</a></span></u><span style="text-decoration: none; ">. 
+ Il materiale definito automaticamente dal programma, a cui viene assegnato 
+ un numero corrispondente al numero del tipo di elemento bidimensionale 
+ incrementato di 1000, non è riportato nell'elenco dei materiali ma nel 
+ paragrafo &quot;Elenco materiali&quot; della relazione di calcolo.</span></p>
+<p>Un tipo di muro/elemento bidimensionale definito ma non utilizzato nel 
+ modello può essere eliminato selezionando la corrispondente riga e premendo 
+ sul bottone &quot;Elimina&quot;.</p>
+<p>Si può essere associare anche un commento che se non specificato viene 
+ generato automaticamente in modo da riportare in breve le caratteristiche 
+ della proprietà stessa.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DETB.htm">DETB</a></span> 
+ (Definisci tipo muro/elemento bidimensionale).</p>
+</body>
+</html>

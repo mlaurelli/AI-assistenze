@@ -1,0 +1,134 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progetto armatura longitudinale</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+text-decoration:none; }
+span.hcp2 { font-weight:bold; }
+span.hcp3 { font-style:italic; }
+td.hcp4 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp5 { margin-bottom:0; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progetto armatura longitudinale</h1>
+<p>Per ognuna delle aste costituenti la travata ModeSt stabilisce se effettuare 
+ il progetto e le verifiche a pressoflessione o a flessione semplice.</p>
+<p>La pressoflessione viene attivata se nei criteri di progetto è stato 
+ selezionato il parametro <span class="hcp1"><a 
+	 href="CriTra.htm#Progetto_a_pressoflessione">Progetto a pressoflessione</a></span> 
+ e per le aste inclinate se è stato specificato &quot;Solo per le travi 
+ inclinate&quot; e l'inclinazione dell'asta supera il valore indicato al 
+ parametro <span class="hcp1"><a 
+	 href="CriTra.htm#Min__angolo_per_pressoflessione">Min. angolo per 
+ pressoflessione</a></span>. La pressoflessione viene comunque disattivata 
+ se la massima tensione teorica (di trazione o compressione) per solo sforzo 
+ normale nel calcestruzzo immaginato interamente reagente non supera la 
+ percentuale di <font style="font-family: Symbol;" face="Symbol">s</font>amm 
+ o Fck specificata nei criteri di progetto (vedi <a href="CriTra.htm#smax_amm__senza_progetto_a_pressoflessione"><span class="hcp2">Compressione massima senza progetto a pressoflessione</span></a>). 
+ In ogni caso ModeSt progetta comunque l'armatura anche a flessione semplice, 
+ in modo da cautelarsi da quei casi in cui il progetto a pressoflessione 
+ non sarebbe a favore di sicurezza.</p>
+<p>È possibile controllare in progettazione interattiva se in un'asta è 
+ attivata o meno la verifica a pressoflessione visualizzando il diagramma 
+ dello sforzo normale cliccando nel gruppo <span class="hcp2">Diagrammi</span> 
+ su <span class="hcp2">Sf. norm. <img src="../Icone/16/pn.png" alt="" style="border: Solid 1px #808080; 
+													 border-width: 1px; 
+													 border-style: solid;" border="1"></span>. 
+ Il diagramma viene disegnato con tratto continuo se la verifica a pressoflessione 
+ è attivata, a tratteggio in caso contrario.</p>
+<p>Attualmente la pressoflessione è disabilitata nel caso di calcolo col 
+ metodo degli stati limite.</p>
+<p>Nel caso di calcolo con il metodo delle tensioni ammissibili o per determinare 
+ l'armatura per le combinazioni agli stati limite di esercizio il progetto 
+ viene effettuato con riferimento a quanto specificato nei criteri di progetto 
+ ai parametri <span class="hcp1"><a 
+	 href="CriTra.htm#Tipo_di_progetto_in_doppia_armatura">Tipo di progetto 
+ in doppia armatura</a></span> e <span class="hcp1">Max 
+ rapporto AfComp/AfTesa</span> per determinare il rapporto d'armatura e 
+ considerando i minimi di regolamento secondo quanto specificato nei criteri 
+ di progetto al parametro <span class="hcp1"><a 
+	 href="CriGenTra.htm#Min__percentuale_di_regolamento">Min. percentuale 
+ di regolamento</a></span>. Nel calcolo agli stati limite ultimi il progetto 
+ viene effettuato in modo da bilanciare più possibile il punto di rottura 
+ e di mantenere il rapporto x/d ai valori di normativa. Possono infatti 
+ risultare più combinazioni di armatura, tutte comunque valide.</p>
+<p>Nel caso di progetto alle tensioni ammissibili del D.M. 14/02/92 o agli 
+ stati limite del D.M. 16/01/96, determinate in tal modo per ogni CC le 
+ aree di ferro necessarie per flessione, occorre considerare inferiormente 
+ il minimo d'armatura imposto dalla normativa al par. 5.3.1: &quot;<span class="hcp3">Alle estremità delle travi deve essere 
+ disposta una armatura inferiore, convenientemente ancorata, in grado di 
+ assorbire, allo stato limite ultimo, uno sforzo di trazione uguale al 
+ taglio.</span>&quot;.</p>
+<p>Non potendo determinare quanto si estendano le &quot;estremità&quot; 
+ di una trave, ma considerando che comunque l'effetto del taglio diminuisce 
+ verso il centro della campata, il controllo viene effettuato in tutti 
+ i punti.</p>
+<p>Il controllo viene effettuato o meno secondo quanto specificato nei 
+ criteri di progetto al parametro <span class="hcp1"><a 
+	 href="CriGenTra.htm#Min__di_armatura_per_taglio">Min. di armatura 
+ per taglio</a></span>.</p>
+<p>L'area di ferro risultante (determinata come rapporto fra taglio agente 
+ e tensione ammissibile nell'acciaio) in funzione di quanto specificato 
+ nei criteri di progetto al parametro <span class="hcp1"><a 
+	 href="CriGenTra.htm#Tipo_di_armatura_per_taglio">Tipo di armatura 
+ per taglio</a></span> può essere considerata nel modo seguente:</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; border-collapse: separate; 
+		 border-collapse: separate;" cellspacing="0" width="100%" border="1">
+	<tr>
+		<td style="width:19%;" class="hcp4"><p class="hcp5"><span class="hcp2">Integrativa</span></p></td>
+		<td style="width:80%;" class="hcp4"><p class="hcp5">viene considerata la maggiore fra 
+		 l'area calcolata per taglio e quella calcolata per flessione o 
+		 pressoflessione.</p></td>
+	</tr>
+	<tr>
+		<td style="width:19%;" class="hcp4"><p class="hcp5"><span class="hcp2">Aggiuntiva</span></p></td>
+		<td style="width:80%;" class="hcp4"><p class="hcp5">l'area calcolata per taglio viene 
+		 sommata a quella calcolata per flessione o pressoflessione.</p></td>
+	</tr>
+	<tr>
+		<td style="width:19%;" class="hcp4"><p class="hcp5"><span class="hcp2">Mista</span></p></td>
+		<td style="width:80%;" class="hcp4"><p class="hcp5">l'area calcolata per taglio viene 
+		 sommata a quella calcolata per flessione o pressoflessione se 
+		 nel punto in esame, nella CC corrispondente, la parte inferiore 
+		 della trave è tesa mentre se è compressa viene considerata la 
+		 maggiore delle due.</p></td>
+	</tr>
+</table>
+<p>L'ultimo metodo è suggerito dal fatto che la normativa parla di armatura 
+ in grado di assorbire uno <span class="hcp3">... sforzo 
+ di trazione ...</span>, sforzo che va a sommarsi a quello provocato dal 
+ momento in caso di momento positivo ma che ha l'effetto di diminuire la 
+ tensione nell'armatura nel caso di momento negativo (al contrario per 
+ le travi su suolo elastico).</p>
+<p class="hcp5">Nel caso di progetto col metodo agli stati 
+ limite l'armatura a taglio viene considerata sempre aggiuntiva e valutata 
+ in ogni caso per il massimo valore del taglio. Questo è reso necessario 
+ dall'esigenza di avere un unico dominio di rottura per tutte le CC da 
+ verificare e quindi un unico valore di duttilità, momento ultimo, ecc. 
+ In caso contrario le verifiche diventerebbero di difficile interpretazione 
+ e sarebbe impossibile valutare ad esempio il taglio di progetto per strutture 
+ in classe di duttilità A.</p>
+<p class="hcp5"><span class="hcp2">Utilizzo 
+ da linea di comando</span>: <span class="hcp2"><a href="../Comandi/DNOR.htm">DNOR</a></span> 
+ (Disegna sforzo normale).</p>
+</body>
+</html>

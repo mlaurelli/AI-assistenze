@@ -1,0 +1,202 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Selezione link su linea</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { text-align:justify; }
+span.hcp2 { font-weight:bold; }
+td.hcp3 { vertical-align:TOP;
+padding-left:3px;
+padding-top:3px;
+padding-right:3px;
+padding-bottom:3px; }
+p.hcp4 { margin-left:20.0pt;
+margin-bottom:0; }
+span.hcp5 { font-style:italic;
+font-weight:normal; }
+p.hcp6 { text-align:justify;
+margin-bottom:0; }
+span.hcp7 { font-style:italic; }
+p.hcp8 { margin-left:20.0pt; }
+p.hcp9 { margin-bottom:0; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Selezione link su linea</h1>
+<p class="hcp1">La specifica di un insieme di link su linea 
+ richiesta da alcuni dei comandi di ModeSt può avvenire in uno dei seguenti 
+ modi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">elencando 
+	 i numeri dei link su linea richiesti (verranno selezionati <span class="hcp2">TUTTI</span> 
+	 i link su linea con i numeri specificati).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">selezionando 
+	 con il cursore grafico il link su linea (una qualsiasi delle linee 
+	 che lo rappresentano); tenendo premuto il tasto Shift mentre si clicca 
+	 sul link su linea vengono selezionati automaticamente tutti i link 
+	 su linea con lo stesso numero.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">specificando 
+	 i seguenti <span style="text-decoration: none; "><a href="Sottocomandi.htm"><span class="hcp2">sottocomandi</span></a></span>:</p></li>
+</ul>
+
+<table wrapperparagraphselector="P" style="margin-left: 10.0pt; margin-top: 14pt; 
+		 border-collapse: separate;" cellspacing="0" width="100%" border="1">
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">IMP</span> 
+		 <font color="#0000FF"><span class="hcp5">numero</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutti i link 
+		 su linea appartenenti all'impalcato <font color="#0000FF"><span class="hcp5">numero</span></font>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">IMP 
+		 N</span> <font color="#0000FF"><span class="hcp5">numero</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutti i link 
+		 su linea con entrambi i nodi di estremità appartenenti all'impalcato 
+		 a cui appartiene il nodo <font color="#0000FF"><span class="hcp7">numero</span></font>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">IMP</span> 
+		 <span class="hcp5"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutti i link 
+		 su linea appartenenti all'impalcato a cui appartiene il nodo selezionato 
+		 con il cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">QQX</span> 
+		 <font color="#0000FF"><span class="hcp5">coordinata</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutti i link 
+		 su linea che hanno i nodi con X = <font color="#0000FF"><span class="hcp7">coordinata</span></font>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">QQX 
+		 N</span> <font color="#0000FF"><span class="hcp5">numero</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutti i link 
+		 su linea che hanno i nodi con la coordinata X uguale alla coordinata 
+		 X del nodo <font color="#0000FF"><span class="hcp7">numero</span></font>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">QQX</span> 
+		 <font color="#0000FF"><span class="hcp5">clic</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutti i link 
+		 su linea che hanno i nodi con la coordinata X uguale alla coordinata 
+		 X del nodo selezionato con il cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">QQY</span> 
+		 <span style="font-weight: normal;">e</span> <span class="hcp2">QQZ</span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Con le stesse 
+		 modalità sopra esposte per QQX ma con riferimento alle coordinate 
+		 Y e Z.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">DAA</span> 
+		 <font color="#0000FF"><span class="hcp5">numero1 
+		 numero2 passo</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutti i link 
+		 su linea da <font color="#0000FF"><span class="hcp7">numero1</span></font> 
+		 a <font color="#0000FF"><span class="hcp7">numero2</span></font> 
+		 con passo <font color="#0000FF"><span class="hcp7">passo</span></font>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">VIS</span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutti i link 
+		 su linea visibili al momento. Per elementi visibili si intendono 
+		 tutti i link su linea che sarebbero visualizzabili con un comando 
+		 <span class="hcp2"><a href="../Comandi/OTT.htm">OTT</a></span>. 
+		 Un comando <span class="hcp2"><a href="../Comandi/ZOOM.htm">ZOOM</a></span> 
+		 non cambia il numero di link su linea visibili.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp8"><span class="hcp2">TIP</span> 
+		 <span class="hcp5"><font color="#0000FF">numero</font></span></p>
+		<p class="hcp4"><span class="hcp2">TIP</span> 
+		 <span class="hcp5"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp9">Tutti i link su linea di tipo = 
+		 <span class="hcp7"><font color="#0000FF">numero</font></span> 
+		 o di tipo uguale a quello del link su linea selezionato con il 
+		 cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp8"><span class="hcp2">MAT</span> 
+		 <span class="hcp5"><font color="#0000FF">numero</font></span></p>
+		<p class="hcp4"><span class="hcp2">MAT</span> 
+		 <span class="hcp5"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp9">Tutti i link su linea con materiale 
+		 = <span class="hcp7"><font color="#0000FF">numero</font></span> 
+		 o con materiale uguale a quello del link su linea selezionato 
+		 col cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">ALL</span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutti i link 
+		 su linea della struttura.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">FIN</span> 
+		 <font color="#0000FF"><span class="hcp5">clic 
+		 clic</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp1">Tutti i link su linea visibili 
+		 e con i nodi compresi nella FINestra di cui si individuano due 
+		 vertici diagonalmente opposti mediante due punti video selezionati 
+		 con il cursore grafico. Dopo aver inserito il primo punto una 
+		 traccia a forma rettangolare segue automaticamente il cursore 
+		 per aiutare l'utente a determinare la finestra.</p>
+		<p class="hcp6">La selezione 
+		 tramite finestra può essere eseguita oltre che con una finestra 
+		 che si muove nel &quot;piano del monitor&quot;, anche con una 
+		 finestra che si muove nel <a href="Visualizzazione%20struttura.htm"><span class="hcp2">piano di visualizzazione attivo</span></a>. 
+		 È sufficiente tenere premuto il tasto Shift durante la definizione 
+		 dei vertici della finestra.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">FINC</span> 
+		 <font color="#0000FF"><span class="hcp5">clic 
+		 clic</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp1">Tutti i link su linea visibili 
+		 ed interamente ESTERNI (FINestra Complementare) alla finestra 
+		 di cui si individuano due vertici diagonalmente opposti mediante 
+		 due punti video selezionati con il cursore grafico. Dopo aver 
+		 inserito il primo punto una traccia a forma rettangolare segue 
+		 automaticamente il cursore per aiutare l'utente a determinare 
+		 la finestra.</p>
+		<p class="hcp6">La selezione 
+		 tramite finestra può essere eseguita oltre che con una finestra 
+		 che si muove nel &quot;piano del monitor&quot;, anche con una 
+		 finestra che si muove nel <a href="Visualizzazione%20struttura.htm"><span class="hcp2">piano di visualizzazione attivo</span></a>. 
+		 È sufficiente tenere premuto il tasto Shift durante la definizione 
+		 dei vertici della finestra.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">SEL</span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutti i link 
+		 su linea precedentemente selezionati con il comando <span class="hcp2"><a 
+		 href="../Comandi/SELKL.htm">SELK</a></span>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">I</span> 
+		 <span class="hcp5"><font color="#0000FF">numero</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Il link su 
+		 linea con indice interno = <span class="hcp5"><font 
+		 color="#0000FF">numero</font></span>. Da usare solo nelle Macro.</p></td>
+	</tr>
+</table>
+
+<p class="hcp1">Le specifiche possono essere ripetute in 
+ qualsiasi modo, in quanto i comandi che richiedono come argomento un insieme 
+ di link su linea restano attivi fino a quando non viene fornito un comando 
+ diverso da quelli riconoscibili come specificanti un insieme di link su 
+ linea.</p>
+<p class="hcp9"><span class="hcp2">Argomenti 
+ correlati:</span> <span style="font-weight: bold; text-decoration: none; "><a 
+	 href="Modificatori.htm">Modificatori</a></span></p>
+</body>
+</html>

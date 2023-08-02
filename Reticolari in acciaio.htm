@@ -1,0 +1,89 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Reticolari in acciaio</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Reticolari in acciaio</h1>
+<p>Non è corretto parlare di <span style="font-style: italic;">inserimento</span> 
+ delle reticolari in acciaio, in quanto le reticolari sono solo il raggruppamento 
+ logico di un insieme di aste che abbiano una sezione compatibile con il 
+ progetto delle unioni reticolari, ossia che consenta l'inserimento di 
+ una piastra di collegamento. ModeSt gestisce le sezioni a doppio L e a 
+ doppio C accoppiate dal lato della costola e le sezioni rettangolari e 
+ circolari cave. Le sezioni ad L non possono avere lo spessore variabile 
+ cioè il valore del dato % deve essere nullo.</p>
+<p>Le aste devono essere tutte complanari e il loro asse Y locale (o eventualmente 
+ l'asse Z per le sezioni rettangolari e circolari cave) deve essere parallelo 
+ alla normale al piano che definisce la reticolare.</p>
+<p>La definizione di una reticolare avviene attraverso la selezione dei 
+ nodi e delle aste che la caratterizzano. È importante tener presente che 
+ un'asta può appartenere ad una reticolare anche solamente con uno solo 
+ dei due nodi di estremità. Questo si rende necessario ad esempio quando 
+ la reticolare si attacca ad altri elementi strutturali con collegamenti 
+ di altro tipo.</p>
+<p>Le reticolari si inseriscono cliccando nel gruppo <span class="hcp1">Inserimento</span> 
+ della scheda <span class="hcp1">Modellazione</span> su <span class="hcp1">Reticolari <img src="../Icone/16/reticolariins.png" alt="" style="border: Solid 1px #808080; 
+												 border-width: 1px; border-style: solid;" border="1"></span> e 
+ specificando una <span class="hcp1"><a href="Selezioni.htm">selezione</a> 
+ di nodi</span> o di <span class="hcp1">aste</span>. Durante 
+ la selezione delle aste e dei nodi è quindi possibile specificare sia 
+ nodi che aste:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">La selezione di un nodo comporta 
+	 automaticamente la selezione delle aste che vi confluiscono e la attivazione 
+	 della progettazione della relativa estremità (ma non dell'altra). 
+	 Inizialmente ModeSt considera tutte le aste confluenti sul nodo, ma 
+	 non appena è possibile stabilire quale sia il piano che contiene la 
+	 reticolare (generalmente dopo la selezione del terzo nodo, se non 
+	 allineato ai primi due) vengono automaticamente considerate solo le 
+	 aste contenute in tale piano.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">La selezione di un'asta comporta 
+	 automaticamente anche la selezione di entrambe le estremità dell'asta.</p></li>
+</ul>
+<p><span class="hcp1">Note</span>:</p>
+<p>Le reticolari inserite saranno caratterizzate dalle <span class="hcp1"><a 
+	 href="Proprieta_correnti.htm">proprietà correnti</a></span>.</p>
+<p>Se il numero reticolare corrente è 0 (zero) o corrispondente ad un numero 
+ di reticolare non esistente il comando crea una nuova reticolare, altrimenti 
+ la reticolare esistente viene completamente ridefinita non appena si inizia 
+ la selezione di nodi o di aste.</p>
+<p>Per evitare di maldefinire le estremità delle aste conviene generalmente 
+ selezionare tutti gli elementi interessati mediante una selezione a finestra 
+ e poi eventualmente togliere le aste che non devono essere considerate. 
+ È molto semplice selezionare i nodi e le aste necessari per la definizione 
+ di una reticolare: basta infatti posizionarsi su un piano corrispondente 
+ al piano della reticolare e definire un <span class="hcp1">BOX</span> 
+ tale da vedere solo gli elementi interessati. A questo punto attivare 
+ una vista piana e aggiungere la reticolare selezionando con una finestra 
+ di selezione gli elementi necessari.</p>
+<p>Il numero e il tipo si modificano come indicato nel capitolo <span class="hcp1"><a 
+	 href="Modifica_delle_proprieta.htm">Modifica delle proprietà degli 
+ elementi</a></span>.</p>
+<p>Le reticolari sono caratterizzati da un <span class="hcp1"><a 
+	 href="Sistemi%20di%20riferimento%20locali.htm">sistema di riferimento locale</a></span>.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/AGGR.htm">AGGR</a></span> 
+ (Aggiungi reticolari).</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Argomenti 
+ correlati:</span> <span style="font-weight: bold; text-decoration: none; "><a 
+	 href="Definizione%20reticolari%20in%20acciaio.htm">Definizione reticolari 
+ in acciaio</a></span></p>
+</body>
+</html>

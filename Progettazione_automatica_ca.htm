@@ -1,0 +1,97 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione automatica</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+font.hcp3 { font-family:Wingdings; }
+span.hcp4 { font-style:italic; }
+p.hcp5 { margin-bottom:0; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progettazione automatica</h1>
+<p>La progettazione automatica delle armature delle travate, pilastrate, 
+ pareti, nuclei, solette/platee, plinti/pali può essere effettuata in diversi 
+ modi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nel gruppo <span class="hcp1">Progettazione</span> 
+	 della scheda <span class="hcp1">Post-Processor</span> 
+	 cliccando su <span class="hcp1">Automatica</span> <img src="../Icone/32/progaut32.png" alt="" border="1" class="hcp2"> e nella finestra 
+	 di dialogo scegliendo quali elementi progettare automaticamente.</p></li>
+</ul>
+<p class="IndentBullet1">Per le <span class="hcp1">Travate</span>, 
+ <span class="hcp1">Pilastrate</span> e <span class="hcp1">Plinti/Pali</span> 
+ è possibile scegliere se eseguire la progettazione esecutiva o teorica. 
+ Selezionando l'opzione <span class="hcp1">Prog. esecutivo</span> 
+ vengono progettate le barre d'armatura secondo i criteri di progetto e 
+ creati i disegni esecutivi mentre, selezionando l'opzione <span class="hcp1">Armatura 
+ teorica</span> vengono progettate esclusivamente le aree di ferro teoriche 
+ strettamente necessarie senza creare i disegni esecutivi.</p>
+<p class="IndentBullet1">È possibile progettare singoli elementi specificandone 
+ i numeri separati da spazio nella relativa casella di testo. La sintassi 
+ è la seguente: <span class="hcp1">n1 n2 n3 n4</span> per 
+ progettare gli elementi con numero n1, n2, n3, n4 (ad esempio 101 102 
+ 103 104). Solo per le travate è possibile utilizzare la sintassi <span class="hcp1">-n1 -n2 -n3 -n4</span> per progettare tutte 
+ le travate escluso quelle con numero n1, n2, n3, n4 (ad esempio -101 -102 
+ -103 -104)&#160;comunque non è possibile utilizzare contemporaneamente 
+ i due metodi (specifica ed esclusione). Per le <span class="hcp1" style="font-weight: bold;">Pareti</span> 
+ <span class="hcp1">e i</span> <span class="hcp1" style="font-weight: bold;">Nuclei</span> 
+ è possibile specificare i numeri dei muri/elementi bidimensionali appartenenti 
+ alle pareti o ai nuclei da progettare.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nel gruppo <span class="hcp1">Progettazione</span> 
+	 della scheda <span class="hcp1">Post-Processor</span> 
+	 cliccando sulla freccia sottostante <span class="hcp1">Automatica</span> 
+	 <img src="../Icone/32/progaut32.png" alt="" border="1" class="hcp2">&#160;e 
+	 poi su quali elementi progettare.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nelle <span class="hcp1"><a 
+	 href="Finestre%20di%20modellazione.htm">finestre di modellazione</a></span> 
+	 con il tasto destro sull'elemento <font face="Wingdings" class="hcp3">à</font> 
+	 <span class="hcp4">Elaborazioni e Ms-Cad</span> <font face="Wingdings" class="hcp3">à</font> <span class="hcp4">Progettazione 
+	 automatica.</span></p></li>
+</ul>
+<p class="IndentBullet1">In questo caso viene eseguita la progettazione 
+ automatica del solo elemento selezionato, eventualmente inviluppato con 
+ altri.</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nell'<span class="hcp1"><a 
+	 href="Albero_del_progetto.htm">albero del progetto</a></span> con 
+	 il tasto destro sul nome dell'elemento (che è stato precedentemente 
+	 progettato) <font face="Wingdings" class="hcp3">à</font> 
+	 <span class="hcp4">Progettazione automatica</span>.</p></li>
+</ul>
+<p class="IndentBullet1">In questo caso viene eseguita la ri-progettazione 
+ automatica dell'elemento selezionato, eventualmente inviluppato con altri.</p>
+<p class="hcp5">L'inviluppo di più elementi geometricamente 
+ uguali è effettuabile secondo i criteri ed i metodi indicati in <span class="hcp1"><a href="Definizione_inviluppi_ca.htm">Definizione 
+ degli inviluppi</a></span>.</p>
+<p class="hcp5">L'opzione &quot;Solo elementi non progettati&quot; 
+ consente di progettare le armature solo degli elementi non progettati.</p>
+<p class="hcp5"><span class="hcp1">Note</span>:</p>
+<p class="hcp5">Per le <span class="hcp1">Solette/platee</span> 
+ vengono esaminati tutti i disegni delle carpenterie di piano che sono 
+ stati creati ed eseguita la progettazione esecutiva delle relative solette/platee. 
+ Se il tasto destro è eseguito sul nome della carpenteria di piano in cui 
+ è stata disegnata la soletta/platea viene effettuata la progettazione 
+ delle armature.</p>
+<p class="hcp5"><span class="hcp1">Utilizzo 
+ da linea di comando</span>: <span class="hcp1"><a href="../Comandi/PROG.htm">PROG</a></span>&#160;(Progetta).</p>
+</body>
+</html>

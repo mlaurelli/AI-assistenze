@@ -1,0 +1,107 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.22 alla 8.23</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+u.hcp2 { text-decoration:none; }
+a.hcp3 { font-family:Verdana, sans-serif; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.22 alla 8.23</h1>
+<p>Nell'oggetto &quot;<span class="hcp1"><a href="Integratori.htm#Integratori_trasversali">integratori 
+ trasversali</a></span>&quot; che consente di pensare una fascia di elementi 
+ bidimensionali come costituente un unico elemento monodimensionale, è 
+ possibile definire all'interno di pareti verticali l'armatura di zone 
+ ritenute a comportamento a &quot;pilastro&quot;. In pratica, un &quot;pilastro 
+ virtuale&quot; all'interno di una parete verticale, analogamente a come 
+ è stato fatto per la &quot;trave virtuale&quot; all'interno di una soletta/platea.</p>
+<p>È possibile eliminare le proprietà degli elementi definite e non utilizzate 
+ nel modello, quali ad esempio i materiali, le sezioni, i vincoli, ecc. 
+ Le proprietà degli elementi non utilizzate vengono per comodità evidenziate 
+ nelle relative tabelle di informazioni.</p>
+<p>È possibile unire un insieme di elementi bidimensionali adiacenti al 
+ fine di ottenere un unico elemento bidimensionale, per approfondimenti 
+ si veda <u class="hcp2"><span class="hcp1"><a href="Unire_elementi_bidimensionali.htm" class="hcp3">Unifica 
+ gli elementi bidimensionali</a></span></u>.</p>
+<p>Analogamente all'implementazione precedente è possibile unire un insieme 
+ di aste consecutive al fine di ottenere un'unica asta, per approfondimenti 
+ si veda <u class="hcp2"><span class="hcp1"><a href="Unire_aste.htm" class="hcp3">Unifica 
+ le aste</a></span></u>.</p>
+<p>È possibile definire <a href="Gruppi.htm">gruppi</a> di elementi della 
+ struttura identificandoli con un nome e sui quali è possibile compiere 
+ tutte le operazioni consentite dal programma. La definizione dei gruppi 
+ può essere utile quando si ha a che fare con strutture con un numero di 
+ elementi elevato, in modo da poter operare solo su una parte di essi.</p>
+<p>È stata aggiunta, nel pannello delle <a href="Selezioni.htm">selezioni</a>, 
+ l'opzione di modellazione &quot;Solo su visibili&quot; in modo da agire 
+ solo sugli elementi visibili anche se facenti parte di un insieme più 
+ ampio. Con questa opzione è possibile ad esempio selezionare, tra i soli 
+ elementi visibili, tutti gli elementi selezionabili attraverso le opzioni 
+ nel pannello &quot;Selezioni&quot; ed in particolare tutti quelli con 
+ le specifiche proprietà elencate nelle selezioni &quot;Avanzate&quot;, 
+ come ad esempio solo le aste con una specifica sezione tra le visibili.</p>
+<p>È stata introdotta la possibilità di armare a punzonamento le solette 
+ e le platee con barre verticali disposte radialmente e di attivare o disattivare 
+ la verifica a punzonamento.</p>
+<p>Nella scheda <span class="hcp1">Generali</span> delle 
+ <span class="hcp1"><a href="Opzioni.htm">Opzioni</a></span> 
+ è stata aggiunta l'opzione &quot;Definizione e modifica dei carichi in 
+ tutte le CCE&quot; che consente che la definizione o la modifica di un 
+ carico manuale sia applicato in tutte le <a href="Condizioni%20di%20carico%20elementari.htm" 
+											 style="font-weight: bold;">CCE</a> 
+ definite. Per cui l'aggiunta o la modifica di un carico nella CCE corrente 
+ verrà applicata anche alle altre CCE definite. Per attivare l'opzione 
+ precedente su una struttura con carichi manuali già definiti, occorre 
+ che questi carichi siano uguali in tutte le CCE.</p>
+<p>È stata introdotta la possibilità di effettuare la verifica a pressoflessione 
+ retta delle travi in c.a. anziché solo a flessione retta.</p>
+<p>È stata implementata la verifica di resistenza in condizioni cicliche 
+ (azioni sismiche) di pilastri e travi esistenti, come indicato nel par. 
+ C8.7.2.3.5 della Circolare esplicativa n. 7 del 21/01/19. La verifica 
+ viene effettuata solo per le strutture calcolate con l'analisi sismica 
+ statica o dinamica lineare ai sensi del D.M. 17/01/18.</p>
+<p>Nella progettazione dell'armatura degli elementi in c.a. il programma 
+ non si limita più a segnalare che non trova un'armatura sufficiente a 
+ soddisfare le verifiche e lasciare l'elemento privo di armatura, ma inserisce 
+ la massima indicata nei criteri di progetto segnalando che le verifiche 
+ non sono soddisfatte.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Nell'analisi 
+	 non lineare delle strutture esistenti in muratura con comportamento 
+	 a rottura del tipo Drucker-Prager, abbiamo reso possibile differenziare 
+	 l'angolo di dilatanza dall'angolo di attrito. Questa funzionalità 
+	 non è gestita dalle versioni di Xfinest precedenti alla 2019.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Verifica 
+	 dei rinforzi a taglio nelle solette e platee con il metodo del traliccio 
+	 ad inclinazione variabile.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Calcolo 
+	 delle strutture anche con la versione 2020 di Xfinest.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Calcolo 
+	 delle strutture anche con la versione 22 di SAP2000.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Nel 
+	 disegno della deformata elastica di una struttura è possibile aggiungere 
+	 (si veda <a href="Deformata%20della%20struttura.htm">Deformata della struttura</a>) 
+	 anche i valori corrispondenti alle tre componenti di spostamento valutati 
+	 nel sistema di riferimento locale delle aste, riferiti sia alla configurazione 
+	 indeformata che alla configurazione dopo il loro spostamento rigido.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Nell'esportazione 
+	 a Revit delle strutture modellate con ModeSt tramite link diretto 
+	 vengono gestiti, oltre alle aste (travi, pilastri, ecc.), anche gli 
+	 elementi bidimensionali con il loro filo fisso, le inclinazioni, le 
+	 eventuali forature, ecc. Al momento non vengono gestiti i plinti, 
+	 i solai e le tamponature.</p></li>
+</ul>
+</body>
+</html>

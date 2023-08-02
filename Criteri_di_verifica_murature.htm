@@ -1,0 +1,508 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Criteri di verifica murature</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { vertical-align:Sub; }
+span.hcp3 { font-weight:bold;
+vertical-align:Sub; }
+font.hcp4 { font-family:Symbol; }
+span.hcp5 { font-family:Symbol, serif;
+font-weight:bold; }
+span.hcp6 { font-style:italic; }
+span.hcp7 { mso-bidi-font-weight:bold; }
+span.hcp8 { mso-spacerun:yes; }
+b.hcp9 { mso-bidi-font-weight:normal;
+font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Criteri di verifica murature</h1>
+<h2>Materiali</h2>
+<p><span class="hcp1"><a name="Considera_come_elementi_esistenti_consolidata" 
+										 id="Considera_come_elementi_esistenti_consolidata"></a>Considera 
+ come elementi esistenti</span>: specificare se la parete è una muratura 
+ esistente oppure nuova. Nel caso di murature esistenti è possibile selezionare 
+ il livello di conoscenza (<span class="hcp1">LC1</span>, 
+ <span class="hcp1">LC2</span>, <span class="hcp1">LC3</span>) 
+ da cui discende il valore del fattore di confidenza (<span class="hcp1">FC</span>). 
+ Il livello di conoscenza fornisce il metodo per la determinazione dei 
+ parametri meccanici della muratura mentre il fattore di confidenza, eventualmente 
+ modificabile dall'utente, viene utilizzato per ridurre solo le caratteristiche 
+ di resistenza della muratura e non i moduli elastici. Sono disponibili 
+ le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Tipo_muratura_consolidata" id="Tipo_muratura_consolidata"></a>Tipo 
+	 muratura</span>: selezionare il tipo di muratura tra quelle riportate 
+	 nella Tabella C8.5.I della Circolare esplicativa n. 7 del 21/01/19. 
+	 Automaticamente e in funzione del livello di conoscenza vengono determinati 
+	 i parametri meccanici della muratura. Si sottolinea che per il livello 
+	 di conoscenza LC3 si assumono i valori medi delle caratteristiche 
+	 di resistenza della muratura e dei moduli elastici mentre, per gli 
+	 altri livelli di conoscenza si seguono le indicazioni della normativa.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Parametri_migliorativi_consolidata" id="Parametri_migliorativi_consolidata"></a>Parametri 
+	 migliorativi</span>: cliccando sul bottone &quot;Carica&quot; si accede 
+	 ad una finestra che consente di specificare sia la tipologia che l'entità 
+	 dei parametri migliorativi. Tali valori non possono essere superiori 
+	 a quelli riportati nella Tabella C8.5.II della Circolare esplicativa 
+	 n. 7 del 21/01/19. Questi coefficienti correggono i valori delle caratteristiche 
+	 meccaniche ricavate in funzione dei precedenti parametri: <span class="hcp1">Tipo 
+	 muratura</span> e <span class="hcp1">Livello di conoscenza</span>.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Caratteristiche_meccaniche_consolidata" 
+										 id="Caratteristiche_meccaniche_consolidata"></a>Caratteristiche 
+ meccaniche</span>: cliccando sul bottone &quot;Calcola&quot; si accede 
+ ad una finestra che consente di determinare sia la resistenza a compressione 
+ e a taglio, sia la resistenza caratteristica massima a taglio, sia il 
+ modulo elastico ed elastico tangenziale della muratura. I valori sono 
+ determinati solo in base al D.M. 17/01/18. La resistenza a taglio (f<span class="hcp2">vk0</span>) è calcolata in base alla 
+ Tabella 11.10.VIII. La resistenza caratteristica massima a taglio (f<span class="hcp2">vk,lim</span>) è calcolata come indicato 
+ al par. 11.10.3.3 del D.M. 17/01/18. La resistenza a compressione (f<span class="hcp2">k</span>) è calcolata in base alla Tabella 
+ 11.10.VI o Tabella 11.10.VII. I moduli di elasticità sono determinati 
+ con le formule (E = 1000*fk , G = 0.4*E) del par. 11.10.3.4 del D.M. 17/01/18.</p>
+<p><span class="hcp1">Nota</span>: ogni volta che viene cambiato 
+ il <span class="hcp1">Tipo muratura</span>, il <span class="hcp1">Livello 
+ di conoscenza</span> o i <span class="hcp1">Parametri migliorativi</span> 
+ vengono ricalcolati automaticamente i valori dei parametri meccanici della 
+ muratura. È possibile variare successivamente tali valori per far lavorare 
+ la muratura anche a tassi diversi da quelli previsti dalla normativa.</p>
+<p style="font-weight: bold;"><a name="Resistenza_a_taglio" id="Resistenza_a_taglio"></a>Resistenza 
+ a taglio<span style="font-weight: normal;">: specificare la tipologia 
+ di verifica a taglio e i relativi coefficienti e resistenze. Sono disponibili 
+ le seguenti opzioni:</span></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Scorrimento</span>: 
+	 in questo caso viene considerata la rottura per scorrimento come indicato 
+	 nel par. 7.8.2.2.2 del D.M. 17/01/18.&#160;Sono disponibili le seguenti 
+	 opzioni:</p></li>
+</ul>
+<ul>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1"><a 
+	 name="Fvk0" id="Fvk0"></a>Resistenza&#160;caratteristica a compressione 
+	 nulla (f</span><span class="hcp3">vk0</span><span class="hcp1">)</span>: specificare il valore della resistenza 
+	 caratteristica a compressione nulla impiegata nella verifica a taglio 
+	 per scorrimento. Per una indicazione sui valori da assumere si veda 
+	 anche <span class="hcp1"><a href="Caratteristiche_meccaniche_della_muratura.htm">Caratteristiche 
+	 meccaniche della muratura</a></span>.</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1"><a 
+	 name="Fvklim" id="Fvklim"></a>Resistenza caratteristica massima a 
+	 taglio (f</span><span class="hcp3">vk,lim</span><span class="hcp1">)</span>: specificare il valore della resistenza 
+	 caratteristica massima a taglio impiegata nella verifica a taglio 
+	 per scorrimento. Per la muratura nuova il valore viene automaticamente 
+	 determinato, come indicato al par. 11.10.3.3 del D.M. 17/01/18, dalla 
+	 procedura del calcolo delle <span class="hcp1">Caratteristiche 
+	 meccaniche</span>. Per le murature esistenti non viene calcolata poiché 
+	 non esiste nel D.M. 17/01/18 una procedura per la sua determinazione. 
+	 Facciamo osservare che l'assenza di una procedura nel D.M. 17/01/18 
+	 non è una lacuna della normativa poiché la verifica a scorrimento 
+	 dovrebbe essere utilizzata solo per murature nuove.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Fessurazione 
+	 diagonale su tessitura irregolare</span>: in questo caso viene considerata 
+	 la rottura per taglio diagonale su tessitura irregolare come indicato 
+	 nella relazione C8.7.1.16 del par. C8.7.1.3.1.1 della Circolare esplicativa 
+	 n. 7 del 21/01/19. Sono disponibili le seguenti opzioni:</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1"><a 
+	 name="Tau0" id="Tau0"></a>Resistenza&#160;media a compressione nulla 
+	 (</span><font face="Symbol" class="hcp4"><span class="hcp1">t</span></font><span class="hcp3">0</span><span class="hcp1">)</span>: 
+	 specificare la resistenza media a taglio della muratura in assenza 
+	 di tensioni normali.&#160;Da utilizzare nel caso si esegua un calcolo 
+	 alle tensioni ammissibili secondo il D.M. 14/02/92 o agli stati limite 
+	 secondo il D.M. 9/01/96 in cui veniva chiamata <span class="hcp5">t</span><span class="hcp3">k</span>. Per una 
+	 indicazione sui valori da assumere si veda anche <span class="hcp1"><a 
+	 href="Caratteristiche_meccaniche_della_muratura.htm">Caratteristiche 
+	 meccaniche della muratura</a></span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Fessurazione 
+	 diagonale su tessitura regolare</span>: in questo caso viene considerata 
+	 la rottura per taglio diagonale su tessitura regolare come indicato&#160;nella 
+	 relazione C8.7.1.17 del par. C8.7.1.3.1.1 della Circolare esplicativa 
+	 n. 7 del 21/01/19.&#160;Sono disponibili le seguenti opzioni:</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1"><a 
+	 name="Fv0" id="Fv0"></a>Resistenza&#160;media a compressione nulla 
+	 (f</span><span class="hcp3">v0</span><span class="hcp1">)</span>: specificare la resistenza media 
+	 a taglio della muratura in assenza di tensioni normali. Per una indicazione 
+	 sui valori da assumere si veda anche <span class="hcp1"><a 
+	 href="Caratteristiche_meccaniche_della_muratura.htm">Caratteristiche 
+	 meccaniche della muratura</a></span>.</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1"><a 
+	 name="Coefficiente_di_attrito" id="Coefficiente_di_attrito"></a>Coefficiente 
+	 di attrito (</span><span class="hcp5">m</span><span class="hcp1">)</span>: specificare il coefficiente di 
+	 attrito della muratura.</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1"><a 
+	 name="Coefficiente_di_ingranamento" id="Coefficiente_di_ingranamento"></a>Coefficiente 
+	 di ingranamento (</span><span class="hcp5">f</span><span class="hcp1">)</span>: specificare il coefficiente di 
+	 ingranamento della muratura.</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1"><a 
+	 name="Fbtd" id="Fbtd"></a>Resistenza a trazione blocchi (f</span><span class="hcp3">bt</span><span class="hcp1">)</span>: 
+	 specificare la resistenza a trazione dei blocchi.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Fvk0_fasce" id="Fvk0_fasce"></a>Resistenza&#160;caratter. 
+ a compressione nulla fasce (f</span><span class="hcp3">vk0</span><span class="hcp1">)</span>: specificare il valore della resistenza 
+ caratteristica a compressione nulla impiegata nella verifica a taglio 
+ delle fasce di piano (espressione [7.8.4] del D.M. 17/01/18). Il valore 
+ della resistenza proposto dal programma nel caso di verifica a taglio 
+ per scorrimento è uguale al valore della Resistenza&#160;caratteristica 
+ a compressione nulla (f<span class="hcp2">vk0</span>),<span class="hcp1"> </span>nel caso di verifica rottura a 
+ taglio diagonale su tessitura irregolare è uguale al valore della Resistenza&#160;media 
+ a compressione nulla (<font face="Symbol" class="hcp4">t</font><span class="hcp2">0</span>) moltiplicato per 1.5 e nel 
+ caso di verifica rottura a taglio diagonale su tessitura regolare è uguale 
+ al valore della Resistenza media a compressione nulla (f<span class="hcp2">v0</span>) 
+ divisa per (1+<span style="font-family: Symbol, serif;">m*f</span>).</p>
+<p><span class="hcp1"><a name="Fk" id="Fk"></a>Resistenza 
+ a compressione (f</span><span class="hcp3">k</span><span class="hcp1">)</span>: specificare la resistenza a compressione 
+ della muratura. Da utilizzare nel caso si esegua un calcolo alle tensioni 
+ ammissibili secondo il D.M. 14/02/92 o agli stati limite secondo il D.M. 
+ 9/01/96 in cui veniva chiamata <span class="hcp5">s</span><span class="hcp3">k</span>. Per una 
+ indicazione sui valori da assumere si veda anche <span class="hcp1"><a 
+	 href="Caratteristiche_meccaniche_della_muratura.htm">Caratteristiche 
+ statiche delle pareti in muratura</a></span>.</p>
+<p><span class="hcp1"><a name="Resistenza_a_compressione_per_forze_orizzontale_consolidata" 
+										 id="Resistenza_a_compressione_per_forze_orizzontale_consolidata"></a>Resistenza 
+ a compressione per forze orizzontali (f</span><span class="hcp3">hk</span><span class="hcp1">)</span>: specificare la resistenza a compressione 
+ in direzione orizzontale dei blocchi. Per una indicazione sui valori da 
+ assumere si veda anche <span class="hcp1"><a href="Caratteristiche_meccaniche_della_muratura.htm">Caratteristiche 
+ statiche delle pareti in muratura</a></span>.</p>
+<p><span class="hcp1"><a name="Modulo_elastico_consolidata" 
+										 id="Modulo_elastico_consolidata"></a>Modulo 
+ elastico (E)</span>: specificare il modulo di elasticità della muratura. 
+ Per una indicazione sui valori da assumere si veda anche <span class="hcp1"><a 
+	 href="Caratteristiche_meccaniche_della_muratura.htm">Caratteristiche 
+ statiche delle pareti in muratura</a></span>. Questo parametro viene usato 
+ nell'analisi sismica statica non lineare (pushover). Nel caso di analisi 
+ FEM il modulo di elasticità è quello <span class="hcp1"><a 
+	 href="Definizione_materiali.htm">definito nei materiali</a></span>.</p>
+<p><span class="hcp1"><a name="Modulo_elastico_tangenziale_consolidata" 
+										 id="Modulo_elastico_tangenziale_consolidata"></a>Modulo 
+ elastico tangenziale (G)</span>: specificare il modulo di elasticità tangenziale 
+ della muratura. Per una indicazione sui valori da assumere si veda anche 
+ <span class="hcp1"><a href="Caratteristiche_meccaniche_della_muratura.htm">Caratteristiche 
+ statiche delle pareti in muratura</a></span>. Questo parametro viene usato 
+ nell'analisi sismica statica non lineare (pushover). Nel caso di analisi 
+ FEM il modulo di elasticità tangenziale è quello <span class="hcp1"><a 
+	 href="Definizione_materiali.htm">definito nei materiali</a></span>.</p>
+<p><span class="hcp1"><a name="Tipo_di_acciaio_DM08" id="Tipo_di_acciaio_DM08"></a>Tipo 
+ di acciaio (B450A÷B450C)</span>: selezionare il tipo di acciaio previsto 
+ dalla normativa Italiana. Ogni volta che questo dato viene modificato, 
+ viene modificato il valore della tensione caratteristica di snervamento 
+ dell'acciaio, valore che può successivamente essere modificato per far 
+ lavorare l'acciaio a tensioni inferiori a quelle previste dal regolamento.</p>
+<p><span class="hcp1"><a name="Modulo_elastico_acciaio_DM08" 
+										 id="Modulo_elastico_acciaio_DM08"></a>Modulo 
+ elastico</span>: specificare il valore del modulo elastico dell'acciaio.</p>
+<p><span class="hcp1"><a name="Fyk_DM08" id="Fyk_DM08"></a>Tensione 
+ caratteristica di snervamento (Fyk)</span>: specificare il valore della 
+ tensione caratteristica di snervamento dell'acciaio.</p>
+<p><span class="hcp1"><a name="Gs" id="Gs"></a><font face="Symbol" class="hcp4">g</font><span class="hcp2">s</span> 
+ per stati limite ultimi</span>: specificare il valore del coefficiente 
+ di sicurezza <font face="Symbol" class="hcp4">g</font> 
+ dell'acciaio. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Automatico</span>: 
+	 ModeSt sceglie il coefficiente di sicurezza <font face="Symbol" class="hcp4">g</font> 
+	 automaticamente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: valore del coefficiente di sicurezza <font face="Symbol" class="hcp4">g</font>.</p></li>
+</ul>
+<h2>Verifiche&#160;per azioni statiche</h2>
+<p><span class="hcp1"><a name="Coeff_gamma_carichi_verticali_DM08" 
+										 id="Coeff_gamma_carichi_verticali_DM08"></a>Coeff. 
+ <font face="Symbol" class="hcp4">g</font></span> <span class="hcp1">per verifiche per carichi verticali ai 
+ sensi D.M. 18</span>: specificare il valore del coefficiente parziale 
+ di sicurezza da utilizzare nelle verifiche relative a combinazioni di 
+ carico di tipo statico (vedi par. 4.5.6.1 del D.M. 17/01/18).</p>
+<p><span class="hcp1"><a name="Lunghezza_appoggio_solai" 
+										 id="Lunghezza_appoggio_solai"></a>Lunghezza 
+ appoggio solai</span>: specificare come calcolare la lunghezza dell'appoggio 
+ del solaio necessaria per calcolare l'eccentricità della reazione d'appoggio 
+ dei solai e<span class="hcp2">s2</span>. Sono disponibili 
+ le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: specificare il valore della lunghezza d'appoggio dei solai.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Come 
+	 multiplo dello spessore del maschio pari a</span>: un valore maggiore 
+	 di zero indica il numero di multipli dello spessore del maschio murario 
+	 in funzione dei quali calcolare la lunghezza dell'appoggio dei solai.</p></li>
+</ul>
+<p class="IndentBullet1"><span class="hcp1">Trascura eccentricità 
+ per solai continui</span>: specificare se trascurare per i solai continui 
+ l'eccentricità della reazione d'appoggio dei solai e<span class="hcp2">s2</span>.</p>
+<h2>Verifiche per azioni sismiche</h2>
+<p><span class="hcp1"><a name="Coeff_gamma_azioni_sismiche_DM08" 
+										 id="Coeff_gamma_azioni_sismiche_DM08"></a>Coeff. 
+ <font face="Symbol" class="hcp4">g</font></span> <span class="hcp1">per verifiche per azioni sismiche ai sensi 
+ D.M. 18</span>: specificare il valore del coefficiente parziale di sicurezza 
+ da utilizzare nelle verifiche relative a combinazioni di carico di tipo 
+ sismico (vedi par. 7.8.1.1 del D.M. 17/01/18: &quot;<span class="hcp6">I 
+ coefficienti parziali di sicurezza per la resistenza del materiale forniti 
+ nel Capitolo 4 possono essere ridotti del 20% e comunque fino ad un valore 
+ non inferiore a 2</span>&quot;).</p>
+<p><span class="hcp1"><a name="Considera_appoggio_sui_solai_anche_per_carichi_sismici" 
+										 id="Considera_appoggio_sui_solai_anche_per_carichi_sismici"></a>Considera 
+ appoggio sui solai anche per carichi sismici</span>: secondo la normativa 
+ Italiana, l'azione sismica ortogonale al piano dell'elemento è rappresentata 
+ da un carico uniformemente distribuito pari ad un multiplo del peso dell'elemento 
+ e da forze concentrate pari ad un multiplo del carico trasmesso dagli 
+ orizzontamenti che si appoggiano su di essa, questo parametro consente 
+ di specificare se il solaio costituisce un appoggio efficace per il pannello 
+ murario e di conseguenza trascurare la componente sismica dei carichi 
+ concentrati. Il momento flettente di verifica è quindi calcolato come 
+ una trave incernierata (ql<span style="vertical-align: Super;">2</span>/8) 
+ con luce pari all'altezza del maschio murario o della parete muraria (generalmente 
+ coincide con l'altezza d'interpiano) e caricata con carico uniformemente 
+ distribuito. In caso contrario il momento flettente è calcolato come una 
+ mensola incastrata al piede di altezza pari al maschio murario o alla 
+ parete muraria e caricata con un carico uniformemente distribuito e con 
+ delle forze concentrate in prossimità degli impalcati.</p>
+<h2>Comportamento maschi&#160;per azioni sismiche</h2>
+<p><span class="hcp1"><span class="hcp1"><a 
+	 name="Comportamento_maschi" id="Comportamento_maschi"></a></span>Comportamento 
+ maschi</span>: specificare come considerare un maschio murario ai fini 
+ della resistenza all'azione sismica.<span class="hcp7"> 
+ </span>Qualunque sia il suo comportamento, il maschio murario viene sempre 
+ verificato nei confronti dei carichi verticali. Sono disponibili le seguenti 
+ opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">R</span><span class="hcp1">esistente</span>: il maschio murario viene 
+	 considerato come resistente all'azione sismica.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Non 
+	 resistente</span>: il maschio murario non viene considerato come resistente 
+	 all'azione sismica.&#160;I muri/elementi bidimensionali che compongono 
+	 il maschio murario non vengono trasferiti al solutore <span class="hcp7">ma 
+	 vengono mantenute le loro masse trasferendole o all'impalcato o ai 
+	 nodi adiacenti.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Non 
+	 resistente se L/H è minore di</span>: il maschio murario non viene 
+	 considerato come resistente all'azione sismica se il rapporto tra 
+	 la lunghezza e l'altezza dell'elemento è inferiore al valore specificato. 
+	 I muri/elementi bidimensionali che compongono il maschio murario non 
+	 vengono trasferiti al solutore <span class="hcp7">ma 
+	 vengono mantenute le loro masse trasferendole o all'impalcato o ai 
+	 nodi adiacenti.</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Rottura_a_taglio_e_pressoflessione" 
+										 id="Rottura_a_taglio_e_pressoflessione"></a>Comportamento 
+ maschi nell'analisi sismica statica non lineare</span>: specificare quale 
+ sia il tipo di rottura del maschio murario nell'analisi sismica statica 
+ non lineare (pushover). Nel caso di strutture in muratura armata le opzioni 
+ relative al tipo di rottura a taglio sono trascurate, e utilizzate le 
+ espressioni riportate nel par. 7.8.2.2.2&#160;del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Spostamento_ultimo_per_rottura_a_taglio_maschi" 
+										 id="Spostamento_ultimo_per_rottura_a_taglio_maschi"></a>Spostamento 
+ ultimo per rottura a taglio</span>: specificare il valore dello spostamento 
+ ultimo da utilizzare nell'analisi sismica statica non lineare (pushover). 
+ Per una indicazione sul valore da assumere per le murature esistenti si 
+ veda il par. C8.7.1.3.1.1 della Circolare esplicativa n. 7 del 21/01/19: 
+ &quot;<span class="hcp6">Lo spostamento ultimo a SLC è 
+ definito in corrispondenza di una rotazione della corda, calcolata come 
+ sopra per la sezione di estremità di verifica, pari a 0.005</span>&quot;<span class="hcp6">.</span> Per le murature nuove si veda 
+ il par. 7.8.2.2.2 del D.M. 17/01/18: &quot;<span class="hcp6">l</span>o 
+ <span class="hcp6">spostamento ultimo allo SLC, a meno 
+ di moti rigidi del pannello, può essere assunto pari allo 0,5% dell’altezza 
+ del pannello</span>&quot;. Nel caso di muratura armata&#160;nuova si veda 
+ il par. 7.8.3.2.2 del D.M. 17/01/18: &quot;<span class="hcp6">lo 
+ spostamento ultimo può essere assunto pari allo 0,8% dell’altezza del 
+ pannello</span>&quot;.&#160;Nel caso di muratura armata esistente il D.M. 
+ 17/01/18 non indica il valore dello spostamento ultimo da assumere per 
+ cui spetta al progettista la scelta del valore da adottare.</p>
+<p><span class="hcp1"><a name="Plasticizzazione_per_taglio" 
+										 id="Plasticizzazione_per_taglio"></a>Plasticizzazione 
+ per taglio</span>: specificare se durante l'analisi sismica statica non 
+ lineare (pushover) il maschio murario si debba plasticizzare per taglio 
+ oppure rimanere elastico fino alla rottura.</p>
+<p><span class="hcp1"><a name="Spostamento_ultimo_per_rottura_a_pressoflessione_maschi" 
+										 id="Spostamento_ultimo_per_rottura_a_pressoflessione_maschi"></a>Spostamento 
+ ultimo per rottura a pressoflessione</span>: specificare il valore dello 
+ spostamento ultimo da utilizzare&#160;nell'analisi sismica statica non 
+ lineare (pushover). Per una indicazione sul valore da assumere per le 
+ murature esistenti si veda il par. C8.7.1.3.1.1 della Circolare esplicativa 
+ n. 7 del 21/01/19: &quot;<span class="hcp6">Lo spostamento 
+ ultimo a SLC è definito in corrispondenza di una rotazione della corda 
+ pari a 0,01</span>&quot;<span class="hcp6">.</span> Per 
+ le murature nuove si veda il par. 7.8.2.2.1 del D.M. 17/01/18: &quot;<span class="hcp6">lo spostamento ultimo allo SLC, a meno 
+ di moti rigidi del pannello, può essere assunto pari all'1,0% dell'altezza 
+ del pannello</span>&quot;. Nel caso di muratura armata&#160;nuova si veda 
+ il par. 7.8.3.2.1 del D.M. 17/01/18: &quot;<span class="hcp6">lo 
+ spostamento ultimo può essere assunto pari allo 1,6% dell’altezza del 
+ pannello</span>&quot;<span class="hcp6">. </span>Nel caso 
+ di muratura armata il D.M. 17/01/18 non indica il valore dello spostamento 
+ ultimo da assumere per cui spetta al progettista la scelta del valore 
+ da adottare.</p>
+<p><span class="hcp1"><a name="Plasticizzazione_per_pressoflessione" 
+										 id="Plasticizzazione_per_pressoflessione"></a>Plasticizzazione 
+ per pressoflessione</span>: specificare se durante l'analisi sismica statica 
+ non lineare (pushover) il maschio murario si debba plasticizzare per pressoflessione 
+ oppure rimanere elastico fino alla rottura.</p>
+<h2><a name="Comportamento_fasce_in_muratura" id="Comportamento_fasce_in_muratura"></a>Comportamento 
+ fasce per azioni sismiche</h2>
+<p><span class="hcp1"><a name="Elementi_in_muratura_sopra_il_piano" 
+										 id="Elementi_in_muratura_sopra_il_piano"></a>Fascia 
+ sopra il piano</span>: per elementi sopra il piano si intendono fasce 
+ schematizzate con muri/elementi bidimensionali posizionati al di sotto 
+ di un vano finestra (generalmente chiamati sotto-finestra). Questi elementi 
+ vengono verificati solo per le sollecitazioni sismiche. Nel caso di muratura 
+ armata i sotto-finestra sono considerati privi di armatura sia a flessione 
+ che a taglio per cui il loro comportamento è uguale ad un elemento in 
+ muratura ordinaria. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Resistente 
+	 ma non da verificare</span>: la fascia viene considerata nel calcolo 
+	 della struttura ma non viene verificata.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Non 
+	 resistente</span>: la fascia non viene considerata come resistente 
+	 all'azione sismica.&#160;Gli elementi bidimensionali che compongono 
+	 la fascia non vengono trasferiti al solutore <span class="hcp7">ma 
+	 vengono mantenute le loro masse trasferendole o all'impalcato o ai 
+	 nodi adiacenti.</span></p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 in presenza di cordolo/architrave sottostante in c.a. o acciaio</span>: 
+	 la fascia viene considerata come resistente all'azione sismica se 
+	 sotto di esso è presente un'asta con verifica prevista in cemento 
+	 armato o acciaio<span class="hcp8">&#160;</span>da cui 
+	 viene desunta la resistenza a trazione (si veda par. 7.8.2.2.4 del 
+	 D.M. 17/01/18). Si tenga presente che se si tratta di un elemento 
+	 in cemento armato, dovrà essere una trave con armatura. Gli elementi 
+	 bidimensionali che compongono la fascia non vengono trasferiti al 
+	 solutore <span class="hcp7">ma vengono mantenute 
+	 le loro masse trasferendole o all'impalcato o ai nodi adiacenti.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 ipotizzando elemento con resistenza a trazione pari a</span>: la fascia 
+	 può comunque essere considerata come resistente all'azione sismica 
+	 anche se non si inseriscono al di sotto di esso aste con verifica 
+	 prevista in cemento armato o acciaio semplicemente specificando il 
+	 valore della resistenza a trazione di tale elemento. Gli elementi 
+	 bidimensionali che compongono la fascia non vengono trasferiti al 
+	 solutore <span class="hcp7">ma vengono mantenute 
+	 le loro masse trasferendole o all'impalcato o ai nodi adiacenti.</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Elementi_in_muratura_sotto_il_piano" 
+										 id="Elementi_in_muratura_sotto_il_piano"></a>Fascia 
+ sotto il piano</span>: per elementi sotto il piano si intendono fasce 
+ schematizzate con muri/elementi bidimensionali posizionati al di sopra 
+ di un vano finestra (generalmente chiamati architravi). Questi elementi 
+ vengono verificati solo per le sollecitazioni sismiche. Nel caso di muratura 
+ armata gli architravi sono considerati privi di armatura sia a flessione 
+ che a taglio per cui il loro comportamento è uguale ad un elemento in 
+ muratura ordinaria. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Resistente 
+	 ma non da verificare</span>: la fascia viene considerata nel calcolo 
+	 della struttura ma non viene verificata.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Non 
+	 resistente</span>: la fascia non viene considerata come resistente 
+	 all'azione sismica. Gli elementi bidimensionali che compongono la 
+	 fascia non vengono trasferiti al solutore <span class="hcp7">ma 
+	 vengono mantenute le loro masse trasferendole o all'impalcato o ai 
+	 nodi adiacenti.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 in presenza di cordolo/architrave sottostante in c.a. o acciaio</span>: 
+	 la fascia viene considerata come resistente all'azione sismica se 
+	 sotto di esso è presente un'asta con verifica prevista in cemento 
+	 armato o acciaio da cui viene desunta la resistenza a trazione (si 
+	 veda par. 7.8.2.2.4 del D.M. 17/01/18). Si tenga presente che se si 
+	 tratta di un elemento in cemento armato, dovrà essere una trave con 
+	 armatura. Gli elementi bidimensionali che compongono la fascia non 
+	 vengono trasferiti al solutore <span class="hcp7">ma 
+	 vengono mantenute le loro masse trasferendole o all'impalcato o ai 
+	 nodi adiacenti.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 in presenza di cordolo/architrave sopra/sotto il piano in c.a. o acciaio</span>: 
+	 la fascia viene considerata come resistente all'azione sismica se 
+	 sotto o sopra di esso è presente un'asta con verifica prevista in 
+	 cemento armato o acciaio<span class="hcp8">&#160;</span>da 
+	 cui viene desunta la resistenza a trazione (si veda par. 7.8.2.2.4 
+	 del D.M. 17/01/18). Si tenga presente che se si tratta di un elemento 
+	 in cemento armato, dovrà essere una trave con armatura.&#160;Nel caso 
+	 in cui siano presenti elementi sia <b class="hcp9">sotto</b> 
+	 che <b class="hcp9">sopra</b> 
+	 l'architrave, verrà data priorità agli elementi <span style="mso-bidi-font-weight: normal;">sotto</span> 
+	 l'architrave. Gli elementi bidimensionali che compongono la fascia 
+	 non vengono trasferiti al solutore <span class="hcp7">ma 
+	 vengono mantenute le loro masse trasferendole o all'impalcato o ai 
+	 nodi adiacenti.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 ipotizzando elemento con resistenza a trazione pari a</span>: la fascia 
+	 può comunque essere considerata come resistente all'azione sismica 
+	 anche se non si inseriscono al di sotto di esso aste con verifica 
+	 prevista in cemento armato o acciaio semplicemente specificando il 
+	 valore della resistenza a trazione di tale elemento. Gli elementi 
+	 bidimensionali che compongono la fascia non vengono trasferiti al 
+	 solutore <span class="hcp7">ma vengono mantenute 
+	 le loro masse trasferendole o all'impalcato o ai nodi adiacenti.</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Comportamento_fasce_nell_analisi_sismica_statica_non_lineare"></a>Comportamento 
+ fasce nell'analisi sismica statica non lineare</span>: specificare il 
+ valore dello <span class="hcp1"><a name="Spostamento_ultimo_per_rottura_a_taglio_fasce" 
+													 id="Spostamento_ultimo_per_rottura_a_taglio_fasce"></a>Spostamento 
+ ultimo per rottura a taglio</span> e dello <span class="hcp1"><a 
+	 name="Spostamento_ultimo_per_rottura_a_pressoflessione_fasce" id="Spostamento_ultimo_per_rottura_a_pressoflessione_fasce"></a>Spostamento 
+ ultimo per rottura a pressoflessione</span> della fascia in muratura da 
+ utilizzare nell'analisi sismica statica non lineare (pushover). Per una 
+ indicazione sui valori da assumere per le murature esistenti si veda il 
+ par. C8.7.1.3.1.1 della Circolare esplicativa n. 7 del 21/01/19.</p>
+<h2><span>Parametri di progetto</span> muratura armata</h2>
+<p><span class="hcp1"><a name="Armatura_verticale_concentrata" 
+										 id="a2"></a>Armatura verticale 
+ concentrata negli incroci/spigoli</span>: specificare il tipo di armatura 
+ verticale concentrata da inserire in corrispondenza di ciascuna estremità 
+ della parete, ad ogni intersezione tra le pareti e all'interno della parete 
+ se la distanza tra l'armatura verticale concentrata è superiore ai 4 m. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Diametro</span>: 
+	 specificare il diametro dei ferri costituenti l'armatura verticale 
+	 concentrata.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Armatura 
+	 nella prima posizione</span>: specificare la tipologia di armatura 
+	 e la distanza tra i ferri all'interno della zona concentrata. La posizione 
+	 del baricentro dell'armatura è in corrispondenza dell'intersezione 
+	 degli assi delle pareti e con distanza dal bordo esterno pari al massimo 
+	 valore della metà degli spessori delle pareti che si intersecano. 
+	 Nelle estremità delle pareti la distanza del baricentro dell'armatura 
+	 dal bordo libero è quindi pari alla metà dello spessore della parete.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Armatura 
+	 nella seconda posizione</span>: specificare la tipologia di armatura, 
+	 la distanza tra i ferri all'interno della zona concentrata e la distanza 
+	 tra i baricentri dell'armatura tra la prima e la seconda posizione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Armatura 
+	 nella terza posizione</span>: specificare la tipologia di armatura, 
+	 la distanza tra i ferri all'interno della zona concentrata e la distanza 
+	 tra i baricentri dell'armatura tra la seconda e la terza posizione.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Armatura_distribuita" id="a1"></a>Armatura 
+ distribuita</span>: specificare il <span class="hcp1">diametro</span> 
+ e il <span class="hcp1">passo</span> dei ferri costituenti 
+ l'armatura verticale distribuita.</p>
+<p><span class="hcp1"><a name="Armatura_orizzontale" id="a3"></a>Armatura 
+ orizzontale</span>: specificare il <span class="hcp1">copriferro</span>, 
+ il <span class="hcp1">diametro</span> e il <span class="hcp1">passo</span> 
+ dei ferri costituenti l'armatura orizzontale. Il valore del copriferro, 
+ necessario per il posizionamento dei ferri orizzontali, è l'effettiva 
+ distanza fra il bordo esterno e il bordo del ferro orizzontale.</p>
+<p><span class="hcp1"><a name="Lunghezza_ancoraggi_armature" 
+										 id="Lunghezza_ancoraggi_armature"></a>Lunghezza 
+ ancoraggi armature</span>: specificare la lunghezza degli ancoraggi per 
+ i ferri d'armatura verticali.</p>
+</body>
+</html>

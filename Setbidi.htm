@@ -1,0 +1,263 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Selezione muri/elementi bidimensionali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { text-align:justify; }
+span.hcp2 { font-weight:bold;
+text-decoration:none; }
+td.hcp3 { vertical-align:TOP;
+padding-left:3px;
+padding-top:3px;
+padding-right:3px;
+padding-bottom:3px; }
+p.hcp4 { margin-left:20.0pt;
+margin-bottom:0; }
+span.hcp5 { font-weight:bold; }
+span.hcp6 { font-style:italic;
+font-weight:normal; }
+p.hcp7 { text-align:justify;
+margin-bottom:0; }
+span.hcp8 { font-weight:normal; }
+p.hcp9 { margin-left:20.0pt; }
+p.hcp10 { margin-bottom:0; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Selezione muri/elementi bidimensionali</h1>
+<p class="hcp1">La specifica di un insieme di elementi 
+ bidimensionali richiesta da alcuni dei comandi di ModeSt può avvenire 
+ in uno dei seguenti modi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">elencando 
+	 i numeri degli elementi richiesti;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">selezionando 
+	 con il cursore grafico il centro dell'elemento bidimensionale (dove 
+	 sono riportati il numero o le proprietà visualizzati con <span class="hcp2"><a href="../Comandi/DNB.htm">DNB</a></span>, 
+	 <span class="hcp2"><a href="../Comandi/DFB.htm">DFB</a></span>, 
+	 ecc.);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">specificando 
+	 i seguenti <span class="hcp2"><a 
+	 href="Sottocomandi.htm">sottocomandi</a></span>:</p></li>
+</ul>
+
+<table wrapperparagraphselector="P" style="margin-left: 10.0pt; margin-top: 14pt; 
+		 border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+		 width="100%" border="1">
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">IMP</span> 
+		 <font color="#0000FF"><span class="hcp6">numero</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp7">Tutti gli elementi 
+		 bidimensionali appartenenti all'impalcato <font color="#0000FF"><span class="hcp6">numero</span></font>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">IMP 
+		 N</span> <font color="#0000FF"><span class="hcp6">numero</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp7">Tutti gli elementi 
+		 bidimensionali con entrambi i nodi di estremità appartenenti all'impalcato 
+		 a cui appartiene il nodo <font color="#0000FF"><span class="hcp6">numero</span></font>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">IMP</span> 
+		 <span class="hcp6"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp7">Tutti gli elementi 
+		 bidimensionali appartenenti all'impalcato a cui appartiene il 
+		 nodo selezionato con il cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">QQX</span> 
+		 <font color="#0000FF"><span class="hcp6">coordinata</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp7">Tutti gli elementi 
+		 bidimensionali che hanno i nodi con X = <font color="#0000FF"><span class="hcp6">coordinata</span></font>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">QQX 
+		 N</span> <font color="#0000FF"><span class="hcp6">numero</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp7">Tutti gli elementi 
+		 bidimensionali che hanno i nodi con la coordinata X uguale alla 
+		 coordinata X del nodo <font color="#0000FF"><span class="hcp6">numero</span></font>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">QQX</span> 
+		 <font color="#0000FF"><span class="hcp6">clic</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp7">Tutti gli elementi 
+		 bidimensionali che hanno i nodi con la coordinata X uguale alla 
+		 coordinata X del nodo selezionato con il cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">QQY</span> 
+		 <span class="hcp8">e</span> <span class="hcp5">QQZ</span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp7">Con le stesse 
+		 modalità sopra esposte per QQX ma con riferimento alle coordinate 
+		 Y e Z.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">DAA</span> 
+		 <font color="#0000FF"><span class="hcp6">numero1 
+		 numero2 passo</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp7">Tutti gli elementi 
+		 bidimensionali da <font color="#0000FF"><span class="hcp6">numero1</span></font> 
+		 a <font color="#0000FF"><span class="hcp6">numero2</span></font> 
+		 con passo <font color="#0000FF"><span class="hcp6">passo</span></font>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">VIS</span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp7">Tutti gli elementi 
+		 bidimensionali visibili al momento. Per elementi visibili si intendono 
+		 tutti gli elementi bidimensionali che sarebbero visualizzabili 
+		 con un comando <span class="hcp2"><a 
+		 href="../Comandi/OTT.htm">OTT</a></span>. Un comando <span class="hcp2"><a href="../Comandi/ZOOM.htm">ZOOM</a></span> 
+		 non cambia il numero di elementi bidimensionali visibili.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp5">TIP</span> 
+		 <span class="hcp6"><font color="#0000FF">numero</font></span></p>
+		<p class="hcp4"><span class="hcp5">TIP</span> 
+		 <span class="hcp6"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutti gli elementi bidimensionali 
+		 di tipo = <span class="hcp6"><font 
+		 color="#0000FF">numero</font></span> o di tipo uguale a quello 
+		 dell'elemento bidimensionale selezionato con il cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp5">TPL</span> 
+		 <span class="hcp8"><font color="#0000FF">F/M/W</font></span></p>
+		<p class="hcp4"><span class="hcp5">TPL</span> 
+		 <span class="hcp8"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutti gli elementi bidimensionali 
+		 con tipologia Flessionale/Membranale/Winkler o con tipologia uguale 
+		 a quella dell'elemento bidimensionale selezionato col cursore 
+		 grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp5">UTI</span> 
+		 <span class="hcp8"><font color="#0000FF">I/P/S/N/M</font></span></p>
+		<p class="hcp4"><span class="hcp5">UTI</span> 
+		 <span class="hcp8"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutti gli elementi bidimensionali 
+		 con utilizzo Indeterminato/Parete/Soletta/Nucleo/Muro o con utilizzo 
+		 uguale a quello dell'elemento bidimensionale selezionato col cursore 
+		 grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp5">MAT</span> 
+		 <span class="hcp6"><font color="#0000FF">numero</font></span></p>
+		<p class="hcp4"><span class="hcp5">MAT</span> 
+		 <span class="hcp6"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutti gli elementi bidimensionali 
+		 con materiale = <span class="hcp6"><font 
+		 color="#0000FF">numero</font></span> o con materiale uguale a 
+		 quello dell'elemento bidimensionale selezionato col cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp5">CRI</span> 
+		 <span class="hcp6"><font color="#0000FF">numero</font></span></p>
+		<p class="hcp4"><span class="hcp5">CRI</span> 
+		 <span class="hcp6"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutti gli elementi bidimensionali 
+		 con criterio = <font color="#0000FF"><span class="hcp6">numero</span></font> 
+		 o con criterio uguale a quello dell'elemento bidimensionale selezionato 
+		 col cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">ALL</span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp7">Tutti gli elementi 
+		 bidimensionali della struttura.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">FIN</span> 
+		 <font color="#0000FF"><span class="hcp6">clic 
+		 clic</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp1">Tutti gli elementi bidimensionali 
+		 visibili e con i nodi compresi nella FINestra di cui si individuano 
+		 due vertici diagonalmente opposti mediante due punti video selezionati 
+		 con il cursore grafico. Dopo aver inserito il primo punto una 
+		 traccia a forma rettangolare segue automaticamente il cursore 
+		 per aiutare l'utente a determinare la finestra.</p>
+		<p class="hcp7">La selezione 
+		 tramite finestra può essere eseguita oltre che con una finestra 
+		 che si muove nel &quot;piano del monitor&quot;, anche con una 
+		 finestra che si muove nel <a href="Visualizzazione%20struttura.htm"><span class="hcp5">piano di visualizzazione attivo</span></a>. 
+		 È sufficiente tenere premuto il tasto Shift durante la definizione 
+		 dei vertici della finestra.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">FINC</span> 
+		 <font color="#0000FF"><span class="hcp6">clic 
+		 clic</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp1">Tutti gli elementi bidimensionali 
+		 visibili ed interamente ESTERNI (FINestra Complementare) alla 
+		 finestra di cui si individuano due vertici diagonalmente opposti 
+		 mediante due punti video selezionati con il cursore grafico. Dopo 
+		 aver inserito il primo punto una traccia a forma rettangolare 
+		 segue automaticamente il cursore per aiutare l'utente a determinare 
+		 la finestra.</p>
+		<p class="hcp7">La selezione 
+		 tramite finestra può essere eseguita oltre che con una finestra 
+		 che si muove nel &quot;piano del monitor&quot;, anche con una 
+		 finestra che si muove nel <a href="Visualizzazione%20struttura.htm"><span class="hcp5">piano di visualizzazione attivo</span></a>. 
+		 È sufficiente tenere premuto il tasto Shift durante la definizione 
+		 dei vertici della finestra.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">CROS</span> 
+		 <font color="#0000FF"><span class="hcp6">clic</span></font> 
+		 <font color="#0000FF"><span class="hcp6">clic</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp1">Tutti gli elementi bidimensionali 
+		 anche parzialmente compresi nella FINestra di cui si individuano 
+		 due vertici diagonalmente opposti mediante due punti video selezionati 
+		 con il cursore grafico. Dopo aver inserito il primo punto una 
+		 traccia a forma rettangolare segue automaticamente il cursore 
+		 per aiutare l'utente a determinare la finestra.</p>
+		<p class="hcp7">La selezione 
+		 tramite finestra può essere eseguita oltre che con una finestra 
+		 che si muove nel &quot;piano del monitor&quot;, anche con una 
+		 finestra che si muove nel <span class="hcp5"><a 
+		 href="Visualizzazione%20struttura.htm">piano di visualizzazione 
+		 attivo</a></span>. È sufficiente tenere premuto il tasto Shift 
+		 durante la definizione dei vertici della finestra.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">PER</span> 
+		 <font color="#0000FF"><span style="font-style: italic;">clic</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp7">Tutti gli elementi 
+		 bidimensionali interni ad un perimetro di aste giacente sul piano 
+		 di lavoro.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">SEL</span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp7">Tutti gli elementi 
+		 bidimensionali precedentemente selezionati con il comando <span class="hcp2"><a href="../Comandi/SELB.htm">SELB</a></span>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp5">I</span> 
+		 <span class="hcp6"><font color="#0000FF">numero</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp7">L'elemento 
+		 bidimensionale con indice interno = <span class="hcp6"><font 
+		 color="#0000FF">numero</font></span>. Da usare solo nelle Macro.</p></td>
+	</tr>
+</table>
+
+<p class="hcp1">Le specifiche possono essere ripetute in 
+ qualsiasi modo, in quanto i comandi che richiedono come argomento un insieme 
+ di elementi bidimensionali restano attivi fino a quando non viene fornito 
+ un comando diverso da quelli riconoscibili come specificanti un insieme 
+ di elementi bidimensionali.</p>
+<p class="hcp10"><span class="hcp5">Argomenti 
+ correlati:</span> <span class="hcp2"><a 
+	 href="Modificatori.htm">Modificatori</a></span></p>
+</body>
+</html>

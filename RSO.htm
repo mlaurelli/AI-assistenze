@@ -1,0 +1,113 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>RSO - Ricerca sezioni ottimizzanti</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+td.hcp4 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp5 { text-align:left;
+margin-bottom:0; }
+span.hcp6 { font-style:italic; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">RSO - Ricerca sezioni ottimizzanti</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p>
+</td>
+<td style="width:29%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>: ?</p>
+</td>
+</tr>
+</table>
+<p>Ricerca le sezioni in acciaio che ottimizzano un insieme di aste specificato.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">RSO</span></p>
+<p class="Normal2" style="font-weight: bold; text-decoration: underline;"><a href="javascript:void(0);" id="a1" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/SetAste.htm');return false;"><span style="text-decoration: underline;">Selezionare le aste</span></a></p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt;" cellspacing="0" width="100%">
+<tr>
+<td style="width:25%;" class="hcp4">
+<p class="hcp5"><span class="hcp6"><font color="#0000FF">Numero di risultati da riportare</font></span></p>
+</td>
+<td style="width:74%;" class="hcp4">
+<p class="hcp2">rappresenta il numero massimo di risultati da riportare nella finestra al termine della ricerca;</p>
+</td>
+</tr>
+<tr>
+<td style="width:25%;" class="hcp4">
+<p class="hcp5"><span class="hcp6"><font color="#0000FF">Caratteri della sezione</font></span></p>
+</td>
+<td style="width:74%;" class="hcp4">
+<p class="hcp2">rappresenta la sequenza dei primi caratteri contenuti nel nome del codice della sezione;</p>
+</td>
+</tr>
+<tr>
+<td style="width:25%;" class="hcp4">
+<p class="hcp5"><span class="hcp6"><font color="#0000FF">Tipi di sezioni</font></span></p>
+</td>
+<td style="width:74%;" class="hcp4">
+<p class="hcp2">costituisce l'elenco dei tipi di sezione utilizzabili per la ricerca della sezione ottimizzante;</p>
+</td>
+</tr>
+<tr>
+<td style="width:25%;" class="hcp4">
+<p class="hcp5"><span class="hcp6"><font color="#0000FF">Nome archivio</font></span></p>
+</td>
+<td style="width:74%;" class="hcp4">
+<p class="hcp2">rappresenta il nome dell'archivio in cui viene effettuata la ricerca della sezione.</p>
+</td>
+</tr>
+</table>
+<p style="text-align: justify;">Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Le aste selezionate devono avere gli stessi requisiti qui elencati: membratura, verifica, materiale, criterio di progetto, tipo di sezione.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Al termine della ricerca viene visualizzato l'elenco delle sezioni ordinate per tasso di sfruttamento e per peso ed è possibile definire ed assegnare automaticamente alle aste selezionate la sezione ritenuta ottimizzante: ovviamente, dato che cambiano i parametri d'inerzia della sezione, occorrerà ripetere il calcolo e controllare i risultati, ma generalmente le variazioni sono minime e la scelte effettuata viene confermata anche dalla riverifica.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Le tipologie di sezione da ricercare per default sono le stesse della sezione originale o quelle che la compongono se accoppiata.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Nel caso di sezioni a L (sia semplici che accoppiate), rettangolari e rettangolari cave, si può specificare l'obbligo di mantenere le differenze dimensionali in modo che una sezione a lati disuguali resti dello stesso tipo (ad esempio B&gt;H) o che venga mantenuta la condizione B=H.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">La ricerca nell'archivio può essere filtrata indicando eventualmente i primi caratteri del codice della sezione (ad esempio nel caso di sezioni a I indicando <span class="hcp3">I</span> nella casella di testo relativa a 'Caratteri della sezione' si impone la ricerca solo di sezioni di tipo <span class="hcp3">I</span>PE mentre indicando <span class="hcp3">HE</span> si escludono ovviamente le IPE consentendo le <span class="hcp3">HE</span>A, <span class="hcp3">HE</span>B, ecc.).</p>
+</li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+        FilePopupInit('a1');
+//]]>
+</script>
+</body>
+</html>

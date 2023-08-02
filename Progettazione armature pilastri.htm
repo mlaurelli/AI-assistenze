@@ -1,0 +1,78 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione armature pilastri</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Introduzione</h1>
+<p>È possibile progettare come pilastri, tenendo conto delle sollecitazioni 
+ indotte dai momenti My e Mz, dai tagli Ty e Tz e dallo sforzo normale, 
+ tutte le aste che siano verticali e che abbiano:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">numero diverso da zero;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">sezione con membratura pilastro 
+	 e verifica prevista c.a.</p></li>
+</ul>
+<p>Automaticamente è possibile progettare le armature e generare i disegni 
+ esecutivi (sia delle pilastrate che delle tabelle pilastri) oppure determinare, 
+ solo nel caso di calcolo con il metodo delle tensioni ammissibili, le 
+ armature teoriche strettamente necessarie (a presso-tenso flessione retta).</p>
+<p>È possibile schematizzare e far progettare come pilastri anche elementi 
+ muro/elemento bidimensionale purché siano isolati, costituiti da un unico 
+ elemento (in pianta) e che abbiamo come utilizzo &quot;Pilastro&quot;.</p>
+<p>Per strutture progettate ai sensi del D.M. 17/01/18 in zona sismica, 
+ ModeSt provvede automaticamente al calcolo secondo i criteri della gerarchia 
+ delle resistenze. L'obiettivo che si prefigge questo metodo di progettazione 
+ è quello di scongiurare l'instaurarsi dei meccanismi di rottura fragile 
+ prima dei meccanismi di rottura duttili. La procedura di progetto provvede 
+ quindi a calcolare le azioni per la progettazione a taglio (rottura fragile) 
+ in funzione dei momenti resistenti alle estremità del pilastro con i necessari 
+ coefficienti di sovraresistenza previsti dalla normativa per le strutture 
+ in classe A o B, mentre i valori dei momenti agenti alle estremità del 
+ pilastro vengono valutati in funzione dei momenti resistenti (calcolati 
+ in assenza di sforzo normale) delle travi in esso concorrenti. A livello 
+ di comportamento globale della struttura la normativa impone infatti che 
+ i pilastri abbiano una congrua sovraresistenza rispetto alle travi, in 
+ modo che le cerniere plastiche si formino in prima istanza alle estremità 
+ delle travi, garantendo così un maggior effetto dissipativo.</p>
+<p>Per ogni combinazione di condizione di carico elementare viene quindi 
+ determinato un coefficiente di amplificazione delle sollecitazioni flettenti 
+ nel pilastro. In base al segno del momento agente nel pilastro viene individuato 
+ il corrispondente meccanismo di plasticizzazione nelle travi ed i relativi 
+ momenti resistenti. Da considerazioni di equilibrio, considerando anche 
+ il segno del pilastro sovrastante, è agevole valutare il coefficiente 
+ amplificativo da adottare insieme ai coefficienti di sovraresistenza imposti 
+ dalla normativa per garantire l'adeguato momento resistente nel pilastro. 
+ Per alcune considerazioni ed opzioni attivabili per questa procedura, 
+ si veda anche &quot;<span style="font-weight: bold;"><a href="Progettazione_in_gerarchia_delle_resistenze.htm">Progettazione 
+ in gerarchia delle resistenze</a></span>&quot;.</p>
+<p>Questa procedura richiede ovviamente che le travi vengano progettate 
+ prima dei pilastri. ModeSt controlla che ciò sia stato fatto e segnala 
+ anche tutte le situazioni in cui a seguito di modifiche nell'armature 
+ delle travi, nei parametri di verifica, nelle sollecitazioni, ecc., l'armatura 
+ dei pilastri debba essere riprogettata.</p>
+<p>Per consentire la possibilità di eseguire analisi o valutazioni di comportamento 
+ di strutture in cui l'azione sismica è sostenuta solo da alcuni elementi, 
+ mentre ad altri è richiesta solo una sufficiente duttilità, è possibile 
+ disabilitare sia il <a href="CriPil.htm#Trascura_gerarchia">progetto in 
+ gerarchia delle resistenze</a>, sia la <a href="CriPil.htm#Elemento_secondario">verifica 
+ per le combinazioni di carico sismiche</a>. Vengono in ogni caso adottate 
+ le limitazioni e prescrizioni di normativa relative alle zone sismiche. 
+ Si segnala che comunque non vengono attualmente effettuate da ModeSt verifiche 
+ sulla duttilità delle sezioni.</p>
+<p style="margin-bottom: 0;">ModeSt crea e mantiene aggiornata la relazione 
+ di calcolo ed il computo delle armature e se richiesto anche la distinta 
+ dei ferri.</p>
+</body>
+</html>

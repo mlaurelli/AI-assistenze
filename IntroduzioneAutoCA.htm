@@ -1,0 +1,43 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Introduzione</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Importazione struttura da Auto_C.A.</h1>
+<p>Il collegamento fra Auto_C.A. e ModeSt avviene attraverso una procedura 
+ all'interno di AutoCAD con una funzione del menu Auto_C.A. che genera 
+ automaticamente un file per ModeSt. All'interno di ModeSt dopo aver creato 
+ una nuova struttura (vuota), dal menu dell'applicazione <span class="hcp1"><img src="../Icone/modest32.png" alt="" border="1" class="hcp2"></span> selezionando 
+ <span class="hcp1">Importa</span> <img src="../Icone/32/main_importa32.png" alt="" border="1" class="hcp2"> 
+ e poi <span class="hcp1">Struttura da Auto_C.A.</span> <span 
+	 style="font-style: italic;"><img src="../Icone/32/main_importa_AUTO_CA32.png" alt="" border="1" class="hcp2"></span> è possibile 
+ leggere tale file e generare automaticamente il modello corrispondente, 
+ completo di nodi, aste ed elementi bidimensionali.</p>
+<p>La generazione di elementi bidimensionali derivanti da solette o platee 
+ viene eseguita ricercando gli allineamenti dei punti definiti come nodi 
+ e generando dei macro elementi che li collegano e che seguono il perimetro 
+ della soletta o platea così come definito in Auto_C.A. Questo oltre a 
+ richiedere in ogni caso l'intervento dell'utente per raffinare la mesh 
+ a dimensioni consone all'analisi FEM, causa a volte la generazione di 
+ elementi con dimensioni molto piccole (tipico nel caso di nodi poco disallineati). 
+ In tal caso è preferibile togliere dal modello Auto_C.A. la definizione 
+ della soletta, e definirla successivamente in modo manuale all'interno 
+ di ModeSt.</p>
+</body>
+</html>

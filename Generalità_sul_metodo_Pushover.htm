@@ -1,0 +1,81 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Generalità sul metodo pushover</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Generalità sul metodo pushover</h1>
+<p>L'analisi sismica statica non lineare (pushover) è un metodo di calcolo 
+ volto a valutare la &quot;<span class="hcp1">capacità</span>&quot; globale 
+ di un edificio di rispondere alla &quot;<span class="hcp1">domanda</span>&quot; 
+ posta in essere dall'evento sismico.</p>
+<p>È un metodo in parte ancora allo studio a livello nazionale ed internazionale 
+ e sicuramente necessita di messe a punto specialmente dal punto vista 
+ realmente operativo, ma nel D.M. 17/01/18 tale metodo è stato comunque 
+ riconosciuto come metodo di calcolo utilizzabile non solo per la valutazione 
+ di edifici esistenti (per i quali era stato pensato), ma in teoria anche 
+ per l'analisi di edifici nuovi (par. 7.3.4.1 del D.M. 17/01/18 &quot;<span 
+	 style="font-style: italic;">come metodo di progetto per gli edifici 
+ di nuova costruzione sostitutivo dei metodi di analisi lineari</span>&quot;).</p>
+<p>A livello di calcolo l'analisi consiste concettualmente nell'incrementare 
+ un sistema di forze laterali, monitorando lo spostamento di un punto di 
+ controllo fino al raggiungimento del collasso della struttura (ovviamente 
+ tenendo conto delle non linearità del materiale). A livello pratico, non 
+ essendo possibile &quot;incrementare&quot; delle forze che ad un certo 
+ punto possono restare costanti a fronte di spostamenti infiniti (comportamento 
+ elastico perfettamente plastico) il calcolo viene eseguito imponendo alla 
+ struttura uno spostamento incrementale al punto di controllo e valutando 
+ lo spostamento di tutta la struttura con il vincolo di mantenere la distribuzione 
+ relativa delle forze di pushover.</p>
+<p>Per le strutture in muratura viene creato un telaio equivalente e durante 
+ l'analisi si tiene conto anche della fase post-elastica e delle rotture 
+ dei diversi elementi che compongono la struttura mentre per le strutture 
+ in c.a. il comportamento è elastico indefinitamente plastico. L'analisi 
+ si fa arrestare in genere quando la sua capacità di reazione scende sotto 
+ una certa soglia o quando la struttura diventa labile.</p>
+<p>In questo modo si ottiene una curva carico-spostamento, denominata curva 
+ di capacità del sistema n-GDL (n-Gradi Di Libertà), che rappresenta il 
+ legame tra la risultante delle forze applicate (taglio alla base) e lo 
+ spostamento di un punto di controllo della struttura, usualmente il baricentro 
+ dell'ultimo piano.</p>
+<p>Come secondo passo dell'analisi, attraverso il coefficiente di partecipazione 
+ modale relativo al modo principale della struttura nella direzione considerata, 
+ si traduce la curva n-GDL nella curva di un sistema 1-GDL (1-Grado Di 
+ Libertà).</p>
+<p>Attraverso considerazioni energetiche, con parametri che variano in 
+ funzione del tipo di struttura, la curva 1-GDL viene poi convertita in 
+ un sistema bilineare equivalente (ossia elastico-perfettamente plastico), 
+ attraverso il quale vengono poi effettuate le necessarie valutazioni di 
+ sicurezza dell'edificio.</p>
+<p>Determinato in questo modo il comportamento di un oscillatore semplice 
+ equivalente ed il suo periodo elastico e la sua duttilità, si può, attraverso 
+ i diversi spettri di risposta (Vita, Danno, ecc.) determinare le diverse 
+ domande di spostamento che il sistema deve soddisfare.</p>
+<p>Le capacità di spostamento si leggono direttamente sulla curva 1-GDL 
+ nel rispetto dei requisiti dei diversi stati limite. Dal confronto fra 
+ domanda e capacità di spostamento si ha la verifica della struttura.</p>
+<p>Al termine dell'analisi è possibile esaminare le curve carico-spostamento 
+ dei vari calcoli cliccando nel gruppo <b>Disegno</b> della scheda <b>Risultati</b> 
+ su <b>Curva c/s</b> <img src="../Icone/16/dccs.png" alt="" style="border: Solid 1px #808080; 
+							 border-width: 1px; border-style: solid;" border="1">. 
+ In tali diagrammi vengono riportati la curva di capacità e la bilineare 
+ equivalente. Inoltre è possibile visualizzare gli spettri ADRS di domanda 
+ e di capacità contestualmente alla curva bilineare equivalente di capacità 
+ (che prende il nome di Spettro di capacità 1-GDL). Tali diagrammi riportano 
+ sia gli spettri elastici che anelastici, fornendo così un'indicazione 
+ grafica del controllo in termini di spostamento indicato al C7.3.4.2 della 
+ Circolare esplicativa n. 7 del 21/01/19.</p>
+<p><b>Nota</b>: i diagrammi &quot;accelerazione-spostamento spettrale&quot;, 
+ detti anche diagrammi ADRS (Acceleration Displacement Response Spectrum), 
+ hanno la caratteristica che le rette uscenti dall'origine rappresentano 
+ comportamenti a periodo costante. In questi diagrammi la curva di capacità 
+ prende il nome di &quot;spettro di capacità&quot;.</p>
+</body>
+</html>

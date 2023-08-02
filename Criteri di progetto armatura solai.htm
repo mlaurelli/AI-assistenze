@@ -1,0 +1,370 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Criteri di progetto armatura solai</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+font.hcp2 { font-family:Symbol; }
+span.hcp3 { vertical-align:sub; }
+span.hcp4 { vertical-align:sub;
+font-weight:bold; }
+span.hcp5 { font-weight:normal; }
+span.hcp6 { vertical-align:super; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Criteri di progetto armatura solai</h1>
+<h2>Materiali</h2>
+<p><span class="hcp1"><a name="Tipo_di_calcestruzzo" id="Tipo_di_calcestruzzo"></a>Tipo 
+ di calcestruzzo</span>: selezionare il tipo di calcestruzzo previsto dalla 
+ normativa Italiana. Ogni volta che viene modificata la tipologia viene 
+ cambiata la classe del calcestruzzo e di conseguenza ricalcolati il modulo 
+ elastico e tutti i valori delle resistenze secondo le indicazioni della 
+ normativa.</p>
+<p><span class="hcp1"><a name="Rbk_calcestruzzo" id="Rbk_calcestruzzo"></a>Rck 
+ calcestruzzo</span>: specificare il valore della classe del calcestruzzo 
+ così come indicato dalla normativa Italiana. Ogni volta che questo valore 
+ viene modificato vengono ricalcolati il modulo elastico e tutti i valori 
+ delle resistenze secondo le indicazioni della normativa. È possibile variare 
+ successivamente tali valori per far lavorare il calcestruzzo a tassi inferiori 
+ a quelli previsti dal regolamento.</p>
+<p><a name="Modulo_elastico_cls" id="Modulo_elastico_cls"></a><span class="hcp1">Modulo 
+ elastico</span>: specificare il valore del modulo elastico del calcestruzzo. 
+ In mancanza di dati più esatti si può considerare il valore calcolato 
+ con l'espressione riportata nel par. 11.2.10.3 del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Fck" id="Fck"></a>Resistenza 
+ caratteristica cilindrica (Fck)</span>: specificare il valore della resistenza 
+ caratteristica cilindrica del calcestruzzo. In mancanza di dati più esatti 
+ si può considerare il valore calcolato con l'espressione riportata nel 
+ par. 11.2.10.1 del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Fctm" id="Fctm"></a>Resistenza 
+ caratteristica a trazione (Fctk)</span>: specificare il valore della resistenza 
+ caratteristica a trazione del calcestruzzo. In mancanza di dati più esatti 
+ si può considerare il valore calcolato con l'espressione riportata nel 
+ par. 11.2.10.2 del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Gc" id="Gc"></a><font face="Symbol" class="hcp2">g</font><span class="hcp3">c</span> 
+ per stati limite ultimi</span>: specificare il valore del coefficiente 
+ di sicurezza <font face="Symbol" class="hcp2">g</font> 
+ del calcestruzzo. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Automatico</span>: 
+	 ModeSt sceglie il coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font> 
+	 automaticamente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: valore del coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font>.</p></li>
+</ul>
+<p><span class="hcp1"><a name="samm_calcestruzzo" id="samm_calcestruzzo"></a></span><font face="Symbol" class="hcp2"><span class="hcp1">s</span></font><span class="hcp4">amm.</span> <span class="hcp1">calcestruzzo</span>: specificare il valore 
+ massimo della tensione a compressione alla quale far lavorare il calcestruzzo.</p>
+<p><span class="hcp1"><a name="tc0" id="tc0"></a><font face="Symbol" class="hcp2">t</font><span class="hcp3">c0</span>:</span> 
+ specificare il valore minimo per le tensioni tangenziali al disotto delle 
+ quali è sufficiente l'armatura a taglio minima di regolamento.</p>
+<p><span class="hcp1"><a name="tc1" id="tc1"></a></span><font face="Symbol" class="hcp2"><span class="hcp1">t</span></font><span class="hcp3"><span class="hcp1">c1</span></span><span class="hcp1">:</span> specificare il valore massimo 
+ ammissibile per le tensioni tangenziali. Quando si supera tale valore 
+ ModeSt lo segnala nelle anomalie, ma progetta ugualmente l'armatura a 
+ taglio.</p>
+<p><span class="hcp1"><a name="Tipo_di_acciaio" id="Tipo_di_acciaio"></a>Tipo 
+ di acciaio (FeB 22÷44k)</span>: selezionare il tipo di acciaio previsto 
+ dalla normativa Italiana. Ogni volta che questo dato viene modificato 
+ viene ricalcolato il valore della tensione ammissibile nell'acciaio, valore 
+ che può successivamente essere modificato per far lavorare l'acciaio a 
+ tensioni inferiori a quelle previste dal regolamento.</p>
+<p><span class="hcp1"><a name="Modulo_elastico_acciaio" id="Modulo_elastico_acciaio"></a>Modulo 
+ elastico</span>: specificare il valore del modulo elastico dell'acciaio.</p>
+<p><span class="hcp1"><a name="Fyk" id="Fyk"></a>Tensione 
+ caratteristica di snervamento (Fyk)</span>: specificare il valore della 
+ tensione caratteristica di snervamento dell'acciaio.</p>
+<p><span class="hcp1"><a name="samm_acciaio" id="samm_acciaio"></a></span><font face="Symbol" class="hcp2"><span class="hcp1">s</span></font><span class="hcp4">amm.</span> <span class="hcp1">acciaio</span>: specificare il valore massimo 
+ della tensione alla quale far lavorare l'acciaio.</p>
+<p><span class="hcp1"><a name="samm_reti_e_tralicci" id="samm_reti_e_tralicci"></a><font face="Symbol" class="hcp2">s</font></span><span class="hcp4">amm.</span> <span class="hcp1">reti 
+ e tralicci</span>: specificare il valore massimo della tensione alla quale 
+ far lavorare l'acciaio di reti elettrosaldate e tralicci. Si ricorda che 
+ per normativa non sono ammesse reti con f<span class="hcp3">yk</span> 
+ &lt; 4000 kg/cmq e f<span class="hcp3">tk</span> &lt; 
+ 4500 kg/cmq (D.M. 14/02/92 par. 2.2.5) a cui corrisponde <font face="Symbol" class="hcp2">s</font>amm = 2600 kg/cmq (D.M. 14/02/92 par. 3.1.7).</p>
+<p><span class="hcp1"><a name="Tipo_di_acciaio_DM08" id="Tipo_di_acciaio_DM08"></a>Tipo 
+ di acciaio (B450A÷B450C)</span>: selezionare il tipo di acciaio previsto 
+ dalla normativa Italiana. Ogni volta che questo dato viene modificato 
+ viene modificato il valore della tensione caratteristica di snervamento 
+ dell'acciaio, valore che può successivamente essere modificato per far 
+ lavorare l'acciaio a tensioni inferiori a quelle previste dal regolamento.</p>
+<p><span class="hcp1"><a name="Modulo_elastico_acciaio_DM08" 
+										 id="Modulo_elastico_acciaio_DM08"></a>Modulo 
+ elastico</span>: specificare il valore del modulo elastico dell'acciaio.</p>
+<p><span class="hcp1"><a name="Fyk_DM08" id="Fyk_DM08"></a>Tensione 
+ caratteristica di snervamento (Fyk)</span>: specificare il valore della 
+ tensione caratteristica di snervamento dell'acciaio.</p>
+<p><span class="hcp1"><a name="Gs" id="Gs"></a><font face="Symbol" class="hcp2">g</font><span class="hcp3">s</span> 
+ per stati limite ultimi</span>: specificare il valore del coefficiente 
+ di sicurezza <font face="Symbol" class="hcp2">g</font> 
+ dell'acciaio. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Automatico</span>: 
+	 ModeSt sceglie il coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font> 
+	 automaticamente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span>: valore del coefficiente di sicurezza <font face="Symbol" class="hcp2">g</font>.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Coeff__di_omogeneizzazione" 
+										 id="Coeff__di_omogeneizzazione"></a>Coeff. 
+ di omogeneizzazione</span>: specificare il fattore di amplificazione dell'acciaio 
+ per il progetto della sezione (indicato con n dalla normativa).</p>
+<h2>Parametri di calcolo</h2>
+<p><span class="hcp1"><a name="Tipo_di_solaio" id="Tipo_di_solaio"></a>Tipo 
+ di solaio</span>: selezionare il tipo di solaio fra uno dei seguenti: 
+ travetto, travetto abbinato, pannello a due nervature, pannello a tre 
+ nervature, lastra predalles da 60, 120, 200 e 250, gettato in opera e 
+ travetto precompresso.</p>
+<p><span class="hcp1"><a name="Elenco_ditte" id="Elenco_ditte"></a>Elenco 
+ ditte</span>: selezionare il nome della ditta da utilizzare nel progetto 
+ dei solai a travetti precompressi. L'elenco dei nomi delle ditte è quello 
+ presente nell'<a href="Archivi%20combinazioni%20ferri%20solai.htm">archivio 
+ delle combinazioni dei ferri</a>. I momenti resistenti, poiché sono forniti 
+ dalle ditte relativamente agli stati limite di esercizio, nelle verifiche 
+ agli stati limite ultimi vengono divisi per 1.5.</p>
+<p><span class="hcp1"><a name="Categoria_dei_carichi_concentrati" 
+										 id="Categoria_dei_carichi_concentrati"></a>Categoria 
+ dei carichi concentrati D.M. 92/96</span>: selezionare la categoria del 
+ sovraccarico accidentale per dedurre l'intensità e l'impronta del carico 
+ concentrato in funzione del Prospetto 5.1 della Cir. 16/01/96 &quot;<span 
+	 style="font-style: italic;">Criteri generali per la verifica di sicurezza 
+ delle costruzioni e dei carichi e sovraccarichi</span>&quot;.</p>
+<p><span class="hcp1"><a name="Categoria_dei_carichi_concentrati_DM08" 
+										 id="Categoria_dei_carichi_concentrati_DM08"></a>Categoria 
+ dei carichi concentrati D.M. 18</span>: selezionare la categoria del sovraccarico 
+ accidentale per dedurre l'intensità e l'impronta del carico concentrato 
+ in funzione della Tabella 3.1.II del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Tipo_di_autoportanza" id="Tipo_di_autoportanza"></a>Tipo 
+ di autoportanza</span>: selezionare il tipo di autoportanza fra uno dei 
+ seguenti: non autoportante, autoportante, autoportante a tralicci.</p>
+<p><span class="hcp1"><a name="Metodi_di_calcolo_per_autoportanza_con_tralicci" 
+										 id="Metodi_di_calcolo_per_autoportanza_con_tralicci"></a>Metodi 
+ di calcolo per l'autoportanza con tralicci</span>: specificare <span class="hcp5">il 
+ metodo di calcolo per l'autoportanza con tralicci.</span> Per maggiori 
+ dettagli si veda <span style="text-decoration: none; "><a href="Calcolo_dell_autoportanza.htm"><span class="hcp1">Calcolo dell'autoportanza</span></a></span><span 
+	 style="font-weight: normal; text-decoration: none; ">.</span> Sono 
+ disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">P-critico</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Omega 
+	 UNI 10011</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Omega 
+	 con contributo della suola inferiore</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Beton-Kalender</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Interasse_solaio" id="Interasse_solaio"></a>Interasse 
+ solaio</span>: specificare <span class="hcp5">l'interasse 
+ di calcolo del solaio.</span></p>
+<p><span class="hcp1"><a name="Larghezza_della_nervatura" 
+										 id="Larghezza_della_nervatura"></a>Larghezza 
+ della nervatura</span>: specificare <span class="hcp5">la 
+ larghezza della nervatura. Per nervatura si intende lo spazio esistente 
+ tra gli elementi in laterizio o la somma degli spazi tra i blocchi di</span> 
+ polistirolo<span class="hcp5">.</span> Ad esempio per 
+ la lastra predalles da 120 inserendo il valore di 40 cm risulta una larghezza 
+ del pane di polistirolo pari a 40 cm.</p>
+<p><span class="hcp1"><a name="Copriferro_teorico_superiore" 
+										 id="Copriferro_teorico_superiore"></a>Copriferro 
+ teorico superiore</span>: specificare il valore del copriferro teorico 
+ superiore da utilizzare per il progetto dei solai. Tale valore viene assunto 
+ come distanza del baricentro dell'armatura superiore dall'estradosso del 
+ solaio.</p>
+<p><span class="hcp1"><a name="Copriferro_teorico_inferiore" 
+										 id="Copriferro_teorico_inferiore"></a>Copriferro 
+ teorico inferiore</span>: specificare il valore del copriferro teorico 
+ inferiore da utilizzare per il progetto dei solai. Tale valore viene assunto 
+ come distanza del baricentro dell'armatura inferiore dall'intradosso del 
+ solaio.</p>
+<p><span class="hcp1"><a name="Spessore_lastra_predalles" 
+										 id="Spessore_lastra_predalles"></a>Spessore 
+ lastra predalles</span>: specificare lo spessore della soletta inferiore 
+ per i solai del tipo a lastra predalles.</p>
+<p><span class="hcp1"><a name="Numero_travetti_precompressi" 
+										 id="Numero_travetti_precompressi"></a>Numero 
+ travetti precompressi</span>: specificare il numero dei travetti precompressi.</p>
+<p><span class="hcp1"><a name="Min__momento_fittizio_agli_appoggi" 
+										 id="Min__momento_fittizio_agli_appoggi"></a>Min. 
+ momento fittizio agli appoggi</span>: specificare se calcolare un momento 
+ fittizio negativo applicato solo agli appoggi d'estremità dello schema 
+ di calcolo del solaio. In caso affermativo occorre specificare il denominatore. 
+ Ad esempio inserendo 14 ModeSt applicherà una coppia pari a ql<span class="hcp6">2</span>/14 
+ ai due appoggi d'estremità.</p>
+<p><span class="hcp1"><a name="Min__momento_fittizio_in_campata" 
+										 id="Min__momento_fittizio_in_campata"></a>Min. 
+ momento fittizio in campata</span>: specificare se calcolare un momento 
+ fittizio positivo in campata. In caso affermativo occorre specificare 
+ il denominatore. Ad esempio inserendo 14 ModeSt terrà conto, insieme alle 
+ altre CC, anche della parte positiva di un diagramma dei momenti che in 
+ campata presenta un momento pari a ql<span class="hcp6">2</span>/14.</p>
+<p><span class="hcp1"><a name="Spuntamento_parabole_travi" 
+										 id="Spuntamento_parabole_travi"></a>Spuntamento 
+ parabole travi</span>: specificare <span class="hcp5">se 
+ effettuare lo spuntamento parabolico dei momenti sugli appoggi in corrispondenza 
+ delle travi con conseguente ridefinizione del diagramma dei momenti flettenti.</span></p>
+<p><span class="hcp1"><a name="Spuntamento_parabole_muri" 
+										 id="Spuntamento_parabole_muri"></a>Spuntamento 
+ parabole muri</span>: specificare <span class="hcp5">se 
+ effettuare lo spuntamento parabolico dei momenti sugli appoggi in corrispondenza 
+ dei muri con conseguente ridefinizione del diagramma dei momenti flettenti.</span></p>
+<p><span class="hcp1"><a name="Massimo_banchinaggio" id="Massimo_banchinaggio"></a>Massimo 
+ banchinaggio</span>: specificare la massima distanza di arretramento del 
+ laterizio dal filo dell'appoggio. Tale arretramento è previsto realizzato 
+ con riempimento in getto di calcestruzzo.</p>
+<h2>Armatura a flessione e a taglio</h2>
+<p><span class="hcp1"><a name="Elenco_diametri_utilizzabili" 
+										 id="Elenco_diametri_utilizzabili"></a>Elenco 
+ diametri utilizzabili</span>: specificare l'elenco dei diametri utilizzabili 
+ per la progettazione dei ferri, separati da spazi (ad esempio 10 12 14 
+ 16 18). Sono ammessi anche valori non consecutivi.</p>
+<p><span class="hcp1"><a name="Tipo_di_tralicci" id="Tipo_di_tralicci"></a>Tipo 
+ di tralicci</span><span class="hcp5">: selezionare il 
+ tipo di traliccio da utilizzare nel progetto dell'armatura del solaio. 
+ L'elenco dei tipi di tralicci che compare nella casella di riepilogo a 
+ discesa coincide con quello definito nell'<a href="Archivi%20combinazioni%20ferri%20solai.htm">archivio 
+ combinazioni ferri solai</a>.</span></p>
+<p><span class="hcp1"><a name="Tipo_di_reti" id="Tipo_di_reti"></a>Tipo 
+ di reti</span><span class="hcp5">: selezionare il tipo 
+ di rete elettrosaldata da utilizzare nel progetto dell'armatura del solaio. 
+ L'elenco dei tipi di reti che compare nella casella di riepilogo a discesa 
+ coincide con quello definito nell'<a href="Archivi%20combinazioni%20ferri%20solai.htm">archivio 
+ combinazioni ferri solai</a>.</span></p>
+<p><span class="hcp1"><a name="Diametro_minimo_ferri_compressi" 
+										 id="Diametro_minimo_ferri_compressi"></a>Diametro 
+ minimo ferri compressi</span>: specificare il diametro minimo delle barre 
+ da adottare superiormente ed inferiormente nelle zone compresse nel solaio.</p>
+<p><span class="hcp1"><a name="Diametro_massimo_ferri_compressi" 
+										 id="Diametro_massimo_ferri_compressi"></a>Diametro 
+ massimo</span> <span class="hcp1">ferri compressi</span>: 
+ specificare il diametro massimo delle barre da adottare superiormente 
+ ed inferiormente nelle zone compresse nel solaio.</p>
+<p><span class="hcp1"><a name="Sporgenza_minima_ferri_agli_appoggi" 
+										 id="Sporgenza_minima_ferri_agli_appoggi"></a>Sporgenza 
+ minima ferri agli appoggi</span>: specificare la minima distanza di quanto 
+ i ferri all'estradosso debbano sporgere oltre il filo degli appoggi.</p>
+<p><span class="hcp1"><a name="Barre_di_ammaraggio_sugli_appoggi_centrali" 
+										 id="Barre_di_ammaraggio_sugli_appoggi_centrali"></a>Barre 
+ di ammaraggio sugli appoggi centrali</span>: specificare se inserire anche 
+ sugli appoggi centrali del solaio delle barre di ammaraggio.</p>
+<p><span class="hcp1"><a name="Armatura_inferiore_a_sbalzo" 
+										 id="a1"></a>Armatura inferiore 
+ a sbalzo</span>: specificare se piegare il ferro superiore nella parte 
+ inferiore degli sbalzi del solaio in modo da realizzare un ferro sagomato 
+ a forma di U generalmente chiamato &quot;mollone&quot;.</p>
+<p><span class="hcp1"><a name="Ferri_superiori_in_campata" 
+										 id="Ferri_superiori_in_campata"></a>Ferri 
+ superiori in campata</span>: specificare se devono essere inseriti e con 
+ che diametro dei ferri superiormente in campata.</p>
+<p><span class="hcp1"><a name="Lunghezza_minima_ferri_in_campata_come_percentuale_della_luce" 
+										 id="Lunghezza_minima_ferri_in_campata_come_percentuale_della_luce"></a>Lunghezza 
+ minima ferri in campata come percentuale della luce</span>: specificare 
+ la percentuale della luce netta per calcolare la lunghezza minima dei 
+ ferri in campata.</p>
+<p><span class="hcp1"><a name="Spezzoni_in_campata" id="Spezzoni_in_campata"></a>Spezzoni 
+ in campata</span>: selezionare la tipologia di spezzoni da inserire in 
+ campata. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Nessuno</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Massimo 
+	 due ferri di diversa lunghezza</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Massimo 
+	 un ferro</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Armatura_a_taglio" id="Armatura_a_taglio"></a>Armatura 
+ a taglio</span>: specificare il tipo d'armatura a taglio da utilizzare. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Ferri 
+	 sagomati a 45°</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Ferri 
+	 sagomati a greca</p></li>
+</ul>
+<p><span class="hcp1"><a name="Lunghezza_risvolto_ferri" 
+										 id="Lunghezza_risvolto_ferri"></a>Lunghezza 
+ risvolto ferri</span>: specificare la lunghezza dei risvolti dei ferri 
+ superiori all'estremità del solaio. ModeSt non controlla che il risvolto 
+ sia superiore all'altezza della trave o del solaio.</p>
+<p><span class="hcp1"><a name="Lunghezza_ganci_estremita_sup" 
+										 id="Lunghezza_ganci_estremita_sup"></a>Lunghezza 
+ ganci d'estremità superiori</span>: specificare la lunghezza dei ganci 
+ d'estremità superiori. ModeSt non controlla che la lunghezza del gancio 
+ sia superiore all'altezza del solaio.</p>
+<p><span class="hcp1"><a name="Lunghezza_ganci_estremita_inf" 
+										 id="Lunghezza_ganci_estremita_inf"></a>Lunghezza 
+ ganci d'estremità inferiori</span>: specificare la lunghezza dei ganci 
+ d'estremità inferiori. ModeSt non controlla che la lunghezza del gancio 
+ sia superiore all'altezza del solaio.</p>
+<h2>Verifiche di deformabilità e fessurazione</h2>
+<p><span class="hcp1"><a name="Condizioni_ambientali" id="Condizioni_ambientali"></a>Condizioni 
+ ambientali</span>: indicare le condizioni ambientali secondo la normativa 
+ Italiana per determinare i fattori di sicurezza negli stati limiti d'esercizio:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Ordinarie</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Aggressive</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Molto 
+	 aggressive</span></p></li>
+</ul>
+<p class="IndentBullet1"><span class="hcp1"><a name="Scelta_cemento" 
+															 id="Scelta_cemento"></a>Scelta 
+ cemento</span>: cliccando sul bottone &quot;Scelta cemento&quot;, sono 
+ accessibili all'utente le caratteristiche dei cementi relativi al produttore 
+ selezionato nella casella di riepilogo a discesa. Tecnisoft fornisce i 
+ dati relativi ai cementi di produzione industriale come uno strumento 
+ di utilità secondo le specifiche fornite dai relativi produttori, e non 
+ si assume alcuna responsabilità circa l'effettiva rispondenza alle specifiche 
+ di normativa. Nella tabella sono riportati i prodotti da utilizzare in 
+ funzione della classe d'esposizione, sono anche indicati l'ambiente con 
+ la sua descrizione, il massimo rapporto acqua/cemento e la minima resistenza 
+ del calcestruzzo. Cliccando sul nome del prodotto è possibile collegarsi 
+ al sito Internet del produttore per avere maggiori informazioni sulle 
+ sue caratteristiche.</p>
+<p><span class="hcp1"><a name="Armatura_sensibile" id="Armatura_sensibile"></a>Armatura 
+ sensibile</span>: specificare se l'armatura appartenga o meno al gruppo 
+ delle &quot;armature sensibili&quot; come indicato nel par. 4.1.2.2.4.4 
+ del D.M. 17/01/18. Il tipo di armatura influenza la scelta degli stati 
+ limite di fessurazione da considerare come indicato nella Tabella 4.1.IV 
+ del D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Modalita di calcolo della freccia"></a>Modalità 
+ di calcolo della freccia</span>: specificare come calcolare la freccia 
+ elastica e se determinare la freccia viscosa. Per maggiori dettagli si 
+ veda <span class="hcp1"><a href="Verifiche_di_deformabilit&agrave;_e_fessurazione.htm">Verifiche 
+ di deformabilità e fessurazione</a></span>. Sono disponibili le seguenti 
+ opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Con 
+	 sezione interamente reagente</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Con 
+	 sezione fessurata</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Con 
+	 metodo di integrazione</p></li>
+</ul>
+<p class="IndentBullet1" style="margin-left: 40px;"><span class="hcp1"><a 
+	 name="Calcolo_freccia_viscosa" id="Calcolo_freccia_viscosa"></a>Calcolo 
+ freccia viscosa</span>: specificare se determinare la freccia viscosa. 
+ In caso affermativo il metodo di calcolo è uguale a quello specificato 
+ precedentemente per la freccia elastica altrimenti, per strutture calcolate 
+ ai sensi del D.M. 17/01/18, viene verificato se la snellezza (&#955;=l/h) soddisfa 
+ l'espressione C4.1.13 del par. C4.1.2.2.2 della Circolare del D.M. 14/01/08. 
+ Il coefficiente di viscosità varia in funzione dell'umidità relativa e 
+ del tempo di applicazione del carico come indicato nel par. 11.2.10.7 
+ del D.M. 17/01/18. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold;">Grado 
+	 di umidità</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2"><span class="hcp1">Tempo 
+	 di applicazione del carico</span>: sono previsti solo i tempi di applicazione 
+	 di 15, 30 e 60 giorni.</p></li>
+</ul>
+</body>
+</html>

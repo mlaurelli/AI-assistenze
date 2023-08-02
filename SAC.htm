@@ -1,0 +1,79 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>SAC - Sezione asta corrente</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+p.hcp3 { text-align:justify; }
+span.hcp4 { font-weight:bold; }
+span.hcp5 { font-style:italic; }
+span.hcp6 { font-weight:bold;
+text-decoration:none; }
+span.hcp7 { font-weight:normal;
+text-decoration:none; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">SAC - Sezione asta corrente</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p>
+</td>
+<td style="width:29%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>: ?</p>
+</td>
+</tr>
+</table>
+<p class="hcp3">Stabilisce la sezione delle aste che verranno inserite o alle quali sarà assegnata.</p>
+<p class="hcp3">Sintassi del comando:</p>
+<p class="Normal3" style="text-align: justify;"><span class="hcp4">SAC</span> <font color="#0000FF"><span class="hcp5">Numero della sezione asta</span></font></p>
+<p class="Normal3" style="text-align: justify;"><span style="font-style: normal;">oppure:</span></p>
+<p class="Normal3" style="text-align: justify;"><span class="hcp4">SAC</span> <font color="#0000FF"><span class="hcp5">clic</span></font></p>
+<p class="hcp3">Nella prima forma numero può assumere i seguenti valori:</p>
+<p class="Elenco1" style="text-align: justify;">il numero di una sezione definita con <span class="hcp6"><a href="DESE.htm">DESE</a></span></p>
+<p class="Elenco1" style="text-align: justify;">il valore 0</p>
+<p class="Elenco1" style="text-align: justify;">il valore -1</p>
+<p class="Elenco1" style="text-align: justify;">il valore -2</p>
+<p class="hcp3">Nella seconda forma si intende che si vuole assumere come sezione corrente la stessa sezione dell'asta selezionata con il cursore grafico.</p>
+<p class="hcp3">Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Le aste di sezione 0 possono essere caricate. Queste vengono trasferite al solutore come aste incernierate e non resistenti a sforzo normale; il loro effetto è quindi solo quello di trasferire ai nodi di estremità il carico ad esse assegnato. Nel caso si voglia assegnare un carico su un lato di un elemento bidimensionale utilizzare un'asta di sezione 0. Il comando <span class="hcp6"><a href="AGGM.htm">AGGM</a></span> inserisce automaticamente in testa e al piede dell'elemento due aste di sezione 0 in modo che gli eventuali solai interessati dai nodi dell'elemento trasferiscano i carichi su queste aste e quindi sull'elemento bidimensionale.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Le aste di sezione -1 sono aste fittizie che non possono essere caricate e che non vengono trasferite al solutore. In presenza di queste aste i comandi <span class="hcp4"><a href="QPS.htm">QPS</a></span>, <span class="hcp4"><a href="QPN.htm">QPN</a></span>, <span class="hcp4"><a href="QA.htm">QA1</a></span>, <span class="hcp4"><a href="QA2.htm">QA2</a></span> e <span class="hcp4"><a href="QA3.htm">QA3</a></span> riportano il carico completamente sulle aste che fronteggiano (nel senso dell'orditura del solaio) le aste di sezione -1 (sono quindi molto utili per delimitare aree a sbalzo).</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">La aste di sezione -2 indicano la presenza di un dispositivo di isolamento sismico fra i due nodi di estremità.</p>
+</li>
+</ul>
+<p class="hcp3"><span class="hcp4">Comandi correlati:</span> <span class="hcp6"><a href="DESE.htm">DESE</a></span> <span class="hcp7">definisce le sezioni.</span> <span class="hcp6"><a href="ASA.htm">ASA</a></span> <span class="hcp7">assegna la sezione corrente.</span> <span class="hcp6"><a href="DSA.htm">DSA</a></span> <span class="hcp7">disegna il numero della sezione.</span> <span class="hcp6"><a href="_SA.htm">?SA</a></span> <span class="hcp7">elenca i tipi di sezioni.</span></p>
+<p style="text-align: left;"><span class="hcp4">Argomenti correlati: <a href="../Manuale/Aste%20con%20sezione%20fittizia.htm">Aste con sezione fittizia</a></span>, <span class="hcp4"><a href="Guida.chm::/Schematizzazione_aree_a_sbalzo.htm">Schematizzazione aree a sbalzo</a></span></p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Calcolo dell'autoportanza</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { margin-bottom:0; }
+p.hcp2 { margin-bottom:0;
+font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Calcolo dell'autoportanza</h1>
+<p>Il calcolo dell'autoportanza con i tralicci, in fase di getto, può essere 
+ eseguito con i metodi del P-critico, Omega UNI 10011, Omega con contributo 
+ della suola inferiore e Beton-Kalender. I metodi sono validi per i tipi 
+ di solai seguenti: travetto, lastra predalles da 120, 200 e 250 nei casi 
+ non autoportante o autoportante a tralicci.</p>
+<p class="hcp1">Se il solaio è autoportante il programma cercherà 
+ da un archivio predefinito di tralicci commerciali la tipologia tale da 
+ assicurare l'autoportanza del getto di calcestruzzo in prima fase senza 
+ la necessità di un puntellamento in campata; se l'esito della ricerca 
+ è negativo verrà segnalato nelle anomalie che l'autoportanza non può essere 
+ garantita.</p>
+<p class="hcp1">Il calcolo dell'autoportanza dei solai viene 
+ eseguito con i metodi seguenti:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Autoportanza 
+	 con tralicci</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Autoportanza 
+	 con getto in calcestruzzo</p></li>
+</ul>
+<p class="hcp2">Autoportanza con tralicci</p>
+<p class="hcp1">In prima fase il solaio in continuità viene 
+ suddiviso nelle singole campate che assumono uno schema statico di una 
+ trave in semplice appoggio. In questa fase viene considerato il peso proprio 
+ per il getto in opera con eventuale peso dell'operaio in mezzeria per 
+ le operazioni di getto.</p>
+<p class="hcp1">La verifica viene effettuata sul singolo traliccio 
+ considerando il carico totale della lastra diviso per il numero di tralicci 
+ presenti nella lastra.</p>
+<p class="hcp1">Se la verifica risulta non soddisfatta viene 
+ aggiunto un traliccio dello stesso tipo imposto nei criteri di progetto: 
+ viene tolta una fetta di polistirolo di 10 cm dalla sezione, viene ricalcolato 
+ il peso proprio del solaio con la nuova geometria della sezione e rieseguita 
+ la verifica dell'autoportanza. <span style="margin-bottom: 0;">Se aggiungendo 
+ tralicci si supera il numero massimo di tralicci inseribili nella sezione 
+ per soddisfare la verifica di autoportanza viene visualizzato un messaggio 
+ di errore: Tralicci insufficienti in autoportanza.</span></p>
+<p class="hcp1">Nel calcolo dell'autoportanza del traliccio 
+ si può scegliere i metodi: P-Critico, Omega UNI 10011, Omega con contributo 
+ della suola della suola inferiore, Beton-Kalender.</p>
+<p class="hcp2">Autoportanza con getto 
+ in calcestruzzo</p>
+<p class="hcp1">In prima fase il solaio in continuità viene 
+ suddiviso nelle singole campate che assumono uno schema statico di una 
+ trave in semplice appoggio. In questa fase viene considerato il peso proprio 
+ per il getto in opera con eventuale peso dell'operaio in mezzeria per 
+ le operazioni di getto.</p>
+<p class="hcp1">La verifica viene effettuata considerando 
+ la sezione della lastra con il getto in stabilimento della nervatura centrale 
+ tra i pani di polistirolo riempiti fino al filo superiore del pane di 
+ polistirolo.</p>
+<p class="hcp1">La sezione risulta sollecitata a flessione 
+ e verificata con le classiche formule delle sezioni in c.a.; la zona superiore 
+ risulta compressa mentre quella inferiore risulta tesa.</p>
+<p class="hcp1">In questo caso l'armatura a trazione resistente 
+ in fase di autoportanza è solo quella centrale (ferri, tralicci, rete 
+ inferiore se presente).</p>
+<p class="hcp1">Se la zona superiore compressa non soddisfa 
+ la tensione massima ammissibile sul calcestruzzo il programma prevede 
+ l'inserimento di armatura a compressione nella nervatura centrale e viene 
+ visualizzato un messaggio di avviso: Armatura a compressione in prima 
+ fase.</p>
+<p class="hcp1">Se il numero massimo di tondini inseribili 
+ o il diametro massimo ammesso non soddisfa la verifica viene visualizzato 
+ un messaggio di errore: Tondini insufficienti area richiesta XXX cmq.</p>
+</body>
+</html>

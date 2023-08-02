@@ -1,0 +1,94 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Propagazione del calore nell'elemento</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-family:Symbol, serif; }
+span.hcp2 { vertical-align:Super; }
+span.hcp3 { vertical-align:Sub; }
+span.hcp4 { font-weight:bold; }
+img.hcp5 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Propagazione del calore nell'elemento</h1>
+<p>La propagazione del calore in un mezzo omogeneo, isotropo e senza termini 
+ di generazione di energia al suo interno, è del tipo conduttivo ed è governata 
+ dall'equazione di Fourier:</p>
+<p><span class="hcp1">l*D</span><span class="hcp2">2</span>T 
+ = c*<span class="hcp1">r*</span>(<span class="hcp1">d</span>T/<span class="hcp1">d</span>t)</p>
+<p>In cui:</p>
+<p>T [K] temperatura</p>
+<p>t [s] tempo</p>
+<p><span class="hcp1">l</span> [W/(m*K)] conducibilità 
+ termica</p>
+<p>c [J/(kg*K)] calore specifico</p>
+<p><span class="hcp1">r</span> [kg/m<span class="hcp2">3</span>] 
+ densità</p>
+<p>La condizione al contorno su una superficie unitaria è:</p>
+<p><span class="hcp1">l*D</span>Tn = h<span class="hcp3">net</span></p>
+<p>In cui:</p>
+<p>n versore normale alla superficie</p>
+<p>h<span class="hcp3">net</span> [W/m<span class="hcp2">2</span>] 
+ flusso termico netto sulla superficie</p>
+<p>Se la superficie è direttamente esposta all'incendio il flusso termico 
+ netto è pari alla somma del flusso di calore per convezione (h<span class="hcp3">net,c</span>) 
+ e per irraggiamento (h<span class="hcp3">net,r</span>):</p>
+<p>h<span class="hcp3">net</span> = h<span class="hcp3">net,c</span>+h<span class="hcp3">net,r</span></p>
+<p>h<span class="hcp3">net,c</span> = <span class="hcp1">a</span><span class="hcp3">c</span>*(Tg-Ts)</p>
+<p>h<span class="hcp3">net,r</span> = <span class="hcp1">f 
+ * e</span><span class="hcp3">m</span> * <span class="hcp1">e</span><span class="hcp3">f</span> * <span class="hcp1">s 
+ *</span>((Tg+273)<span class="hcp2">4</span>-(Ts+273)<span class="hcp2">4</span>)</p>
+<p>In cui:</p>
+<p>Tg [°C] temperatura effettiva di irraggiamento della zona incendiata</p>
+<p>Ts [°C] temperatura della superficie</p>
+<p><span class="hcp1">a</span><span class="hcp3">c</span> 
+ [W/(m<span class="hcp2">2</span>*K)] coefficiente di 
+ convezione</p>
+<p><span class="hcp1">f</span> fattore di configurazione</p>
+<p><span class="hcp1">e</span><span class="hcp3">m</span> 
+ emissività superficiale</p>
+<p><span class="hcp1">e</span><span class="hcp3">f</span> 
+ emissività del fuoco</p>
+<p><span class="hcp1">s</span> [W/(m<span class="hcp2">2</span>*K<span class="hcp2">4</span>)] costante di Stephan Boltzmann 
+ (&#963; = 5.67*10<span class="hcp2">-8</span>)</p>
+<p>Se sulla superfice direttamente esposta all'incendio è presente un elemento 
+ isolante di spessore s<span class="hcp3">iso</span> [m] 
+ e conducibilità &#955;<span class="hcp3">iso</span> [W/(m*K)], 
+ allora il flusso di calore per convezione diventa:</p>
+<p>h<span class="hcp3">net,c</span> =(Tg-Ts)/(1/<span class="hcp1">&#61537;</span><span class="hcp3">c</span>+s<span class="hcp3">iso</span>/&#955;<span class="hcp3">iso</span>)</p>
+<p>Se la superficie non è esposta all'incendio il flusso termico netto 
+ è pari al solo flusso di calore per convezione, considerando compresi 
+ in esso anche gli effetti del trasferimento di calore per irraggiamento:</p>
+<p>h<span class="hcp3">net</span> = h<span class="hcp3">net,c'</span></p>
+<p>h<span class="hcp3">net,c'</span> = <span class="hcp1">a</span><span class="hcp3">c'</span>*(T0-Ts)</p>
+<p>In cui:</p>
+<p>T0 [°C] temperatura iniziale = temperatura ambiente</p>
+<p><span class="hcp1">a</span><span class="hcp3">c'</span> 
+ [W/(m<span class="hcp2">2</span>*K)] coefficiente di 
+ convezione a temperatura ambiente</p>
+<p>Se la superficie è adiabatica allora il flusso termico netto è nullo:</p>
+<p>h<span class="hcp3">net</span> = 0</p>
+<p>La condizione al contorno rispetto al tempo è:</p>
+<p>T(t=0) = T0</p>
+<p>L'analisi di propagazione del calore all'interno di una sezione viene 
+ eseguita attraverso l'integrazione dell'equazione di Fourier alle differenze 
+ finite e nell'ambiente di editor sezioni sono visualizzabili i seguenti 
+ risultati: nel gruppo <span class="hcp4">Diagrammi</span> 
+ cliccando su <span class="hcp4">Temperatura</span> <img src="../Icone/16/temperaturasez.png" alt="" border="1" class="hcp5"> si attiva la 
+ mappa delle temperature nella sezione; nel gruppo <span class="hcp4">Animazioni</span> 
+ cliccando su <span class="hcp4">Temperatura</span> <img src="../Icone/32/animazioni32.png" alt="" border="1" class="hcp5"> si crea l'animazione 
+ dell'evoluzione della temperatura nella sezione al variare del tempo.</p>
+</body>
+</html>

@@ -1,0 +1,138 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Definizione inviluppi</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+p.hcp3 { margin-bottom:0; }
+span.hcp4 { font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Definizione inviluppi</h1>
+<p>ModeSt è in grado di inviluppare fra loro più travate, pilastrate, plinti/pali 
+ con la stessa geometria in modo da progettare l'armatura in funzione delle 
+ sollecitazioni massime, producendo però un solo disegno e un'unica relazione 
+ di calcolo.</p>
+<p>La definizione degli inviluppi può essere effettuata in diversi modi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nel gruppo <span class="hcp1">Inviluppi</span> 
+	 della scheda <span class="hcp1">Post-Processor</span> 
+	 cliccando su <span class="hcp1">Definizione</span> <img src="../Icone/32/inviluppi32.png" alt="" border="1" class="hcp2">&#160;e poi 
+	 sull'elemento da inviluppare. Solo con questo metodo si possono modificare 
+	 e cancellare inviluppi già definiti.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nel gruppo <span class="hcp1">Progettazione</span> 
+	 della scheda <span class="hcp1">Post-Processor</span> 
+	 cliccando su <span class="hcp1">Automatica</span> <img src="../Icone/32/progaut32.png" alt="" border="1" class="hcp2">, attraverso 
+	 il bottone<span class="hcp1"> Modifica inviluppi</span> 
+	 relativo all'elemento da inviluppare.</p></li>
+</ul>
+<p>Nella casella relativa a <span class="hcp1">Inviluppo 
+ travate</span>, <span class="hcp1">pilastrate</span>, <span class="hcp1">plinti/pali</span> è possibile specificare 
+ i numeri delle travate, pilastrate, plinti/pali da inviluppare. Su ogni 
+ riga è possibile indicare un solo inviluppo, inserendo inizialmente il 
+ numero dell'elemento &quot;principale&quot; e successivamente i numeri 
+ degli altri elementi da inviluppare separati da spazio. La sintassi è 
+ la seguente: <span class="hcp1">n1 n2 n3 n4 ...</span> per 
+ creare il disegno relativo al solo elemento n1, ma progettando le armature 
+ tenendo conto anche delle sollecitazioni degli elementi n2, n3, n4, ... 
+ Per le travi ad esempio digitando 101 201 301 401, avremo il disegno della 
+ travata 101 ma progettata tenendo conto anche delle sollecitazioni delle 
+ travi 201, 301 e 401.</p>
+<p>Nella finestra di dialogo è possibile, cliccando sul bottone <span class="hcp1">Interattivo</span> 
+ definire graficamente gli inviluppi selezionando gli elementi nella finestra 
+ di modellazione oppure, cliccando sul bottone <span class="hcp1">Automatico</span> 
+ far definire gli inviluppi automaticamente al programma oppure, selezionando 
+ una riga di un inviluppo e poi cliccando sul bottone <span class="hcp1">Esplodi</span> 
+ far generare automaticamente al programma&#160;tutte le singole progettazioni 
+ facenti parte dell'inviluppo. Dopo aver effettuato una qualsiasi modifica 
+ agli inviluppi, occorre cliccare sul bottone <span class="hcp1">Applica</span> 
+ prima di procedere alla definizione automatica o interattiva degli inviluppi. 
+ Nel caso in cui si esploda un inviluppo è necessario effettuare la riverifica 
+ degli elementi che facevano parte dell'inviluppo.</p>
+<p>La correttezza degli inviluppi viene controllata al termine della loro 
+ definizione, evidenziando in rosso quelli non corretti. L'informazione 
+ sul motivo per cui l'inviluppo non è corretto si ottiene posizionandovi 
+ sopra il cursore del mouse.</p>
+<p>Per ogni elemento strutturale si riportano di seguito alcune note sulla 
+ correttezza degli inviluppi:</p>
+<p class="AmbienteProgettazione" style="font-weight: bold;"><span>T</span><span>ravi</span></p>
+<p>Non è possibile inviluppare travate costituite da un diverso numero 
+ di aste, con sezioni o lunghezze delle aste (da nodo a nodo) o luci nette 
+ superiori e/o inferiori non corrispondenti. Per l'individuazione di tutti 
+ i parametri che dipendono dalla configurazione geometrica della travata 
+ e dagli elementi incidenti su di essa ModeSt fa comunque sempre riferimento 
+ alla travata &quot;principale&quot;.</p>
+<p>ModeSt è in grado anche di inviluppare travate con diverso orientamento 
+ nella struttura, in quanto la corretta &quot;sovrapposizione&quot; è generalmente 
+ desumibile dalle asimmetrie della travata, asimmetrie che ModeSt fa corrispondere 
+ &quot;rigirando&quot; eventualmente le travi da inviluppare. Nel caso 
+ in cui le travate siano perfettamente simmetriche (come luci e sezioni) 
+ ModeSt segnala l'ambiguità dell'inviluppo ed il progettista è tenuto a 
+ controllarne la correttezza (basta controllare i numeri dei pilastri riportati 
+ nei disegni). Qualora una o più travate (ad esclusione della &quot;principale&quot;) 
+ siano da &quot;rigirare&quot; sarà sufficiente indicarne il numero come 
+ negativo e quindi ignorare il messaggio di ambiguità.</p>
+<p class="hcp3">Se l'inviluppo trovato da ModeSt invece è 
+ corretto sarà sufficiente ignorare la segnalazione.</p>
+<p class="AmbienteProgettazione" style="font-weight: bold;"><span class="hcp1">Pilastri</span></p>
+<p>Non è possibile inviluppare pilastrate costituite da un diverso numero 
+ di aste o con sezioni non corrispondenti. Inoltre le eventuali rastremazioni 
+ delle pilastrate devono essere esattamente le stesse in relazione al sistema 
+ di riferimento locale dell'asta di piede, traslato nel baricentro dell'asta 
+ stessa (il filo fisso è quindi ininfluente). Per inviluppare pilastrate 
+ d'angolo che rastremano occorre quindi definire le aste come quelle della 
+ pilastrata &quot;principale&quot; e poi assegnare la necessaria rotazione 
+ alle aste. Per l'individuazione di tutti i parametri che dipendono dalla 
+ geometria della pilastrata e dagli elementi incidenti su di essa ModeSt 
+ fa comunque sempre riferimento alla pilastrata &quot;principale&quot;.</p>
+<p class="AmbienteProgettazione" style="font-weight: bold;"><span class="hcp1">Plinti/Pali</span></p>
+<p class="hcp3">Non è possibile inviluppare plinti di tipo 
+ diverso, con sezione del pilastro soprastante diversa o diversamente disposta 
+ a causa di parametri di rotazione del plinto o del pilastro.</p>
+<p class="Titolo7"><span class="hcp1">Gestione dinamica degli 
+ inviluppi</span></p>
+<p><span class="hcp4">ModeSt gestisce gli inviluppi dei 
+ plinti in modo dinamico. Gli eventuali cambiamenti nella numerazione dei 
+ plinti si riflettono automaticamente nella definizione degli inviluppi. 
+ L'assegnazione di numero 0 ad un plinto/palo (che implica la non progettabilità) 
+ o la sua eliminazione comporta l'automatica cancellazione dall'inviluppo. 
+ La cancellazione resta temporanea e l'inviluppo viene ripristinato quando 
+ il plinto/palo viene nuovamente caratterizzato da un numero diverso da 
+ 0 o re-inserito nella struttura, a meno che l'utente non entri in</span> 
+ <span class="hcp1">Definizione inviluppi</span> <span style="font-style: normal; 
+	 font-weight: bold;">armature</span> <span class="hcp4">e 
+ confermi gli inviluppi che sono stati automaticamente modificati (mancanti 
+ del plinto con numero 0 o cancellato).</span></p>
+<p><span class="hcp4">Non è possibile modificare gli inviluppi 
+ con progettazioni interattive di plinti/pali aperte.</span></p>
+<p><span class="hcp4">Se è stata eseguita la progettazione 
+ di plinti/pali isolati (non inviluppati con altri), questi verranno comunque 
+ riportati nell'elenco degli inviluppi, come plinti/pali isolati. Se un 
+ plinto/palo isolato viene aggiunto in un inviluppo viene automaticamente 
+ eliminato dall'elenco. Ad esempio se erano stati progettati i plinti 1 
+ 2 3 isolatamente e poi definito l'inviluppo fra i plinti 1 e 2, il plinto 
+ 2 isolato verrà eliminato automaticamente.</span></p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DEIN.htm">DEIN</a></span>&#160;(Definisce 
+ inviluppi).</p>
+</body>
+</html>

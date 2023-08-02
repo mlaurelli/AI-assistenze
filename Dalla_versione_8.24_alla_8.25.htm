@@ -1,0 +1,101 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.24 alla 8.25</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { text-transform:uppercase; }
+span.hcp2 { mso-bidi-font-weight:bold; }
+span.hcp3 { font-weight:bold; }
+img.hcp4 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.24 alla 8.25</h1>
+<p>Nelle verifiche delle strutture in muratura ordinaria e armata sono 
+ state apportate una serie di modifiche, alcune apparentemente di minore 
+ importanza ma che agevolano l'utente nell'individuazione degli elementi 
+ in muratura che saranno oggetto di verifica, altre di maggiore importanza 
+ che intervengono sia nella definizione dei maschi e delle fasce di piano 
+ sia nella visualizzazione dei risultati delle verifiche (tassi di sfruttamento 
+ e relazione di calcolo).</p>
+<p>Nelle modifiche minori rientrano la colorazione dei maschi e delle fasce 
+ in muratura, non più a gradazione di colore ma bensì uniforme con una 
+ diversa colorazione in funzione del tipo di verifica, e la visualizzazione 
+ di un suggerimento a video (tooltip) con le informazioni associate all'elemento 
+ che variano in funzione della visualizzazione attiva.</p>
+<p>Le modifiche più importanti sono invece la separazione dei maschi in 
+ funzione del tipo di verifica e la definizione interattiva dei maschi 
+ e delle fasce di piano. L'utente si trova cosi ad avere maschi per le 
+ verifiche statiche, per le verifiche sismiche e per i cinematismi. Per 
+ ciascuno dei quali sarà possibile, in un'ambiente di progettazione interattiva 
+ appositamente studiato, modificare la forma di quelli definiti automaticamente 
+ dal programma oppure <a href="Inserimento_eliminazione_dei_maschi_e_delle_fasce_manuali.htm">inserire</a>, 
+ <a href="Selezione_e_modifica_dei_maschi_e_delle_fasce_manuali.htm">modificare</a> 
+ e <a href="Inserimento_eliminazione_dei_maschi_e_delle_fasce_manuali.htm">cancellare</a> 
+ i maschi e le fasce di piano. In progettazione interattiva l'utente ha 
+ quindi la possibilità di definire maschi murari con forma rettangolare, 
+ trapezoidale, triangolare, pentagonale che gli permettono di modellare 
+ ad esempio i timpani della struttura. In progettazione interattiva delle 
+ murature sono stati introdotti durante l'inserimento dei maschi e delle 
+ fasce di piano dei messaggi che aiutano a capire il motivo per cui non 
+ viene definito. A questi si aggiungono altri controlli sul telaio equivalente 
+ e su maschi e sulle fasce manuali.</p>
+<p><span class="hcp1">è</span> stata introdotta la 
+ possibilità, solo per le strutture calcolate agli stati limite secondo 
+ il D.M. 17/01/18, di progettare i <a href="Cordoli_e_solette_rampanti.htm">cordoli 
+ e le solette rampanti</a> quest'ultime modellate con elementi bidimensionali.</p>
+<p><span class="hcp1">è</span> stata introdotta la 
+ possibilità, solo per le strutture esistenti calcolate agli stati limite 
+ secondo il D.M. 17/01/18, di <a href="Rinforzi_dei_nodi_trave-pilastro.htm">rinforzare 
+ i nodi trave-pilastro</a>. <span class="hcp1">è</span> 
+ stato scelto di non implementare un determinato tipo di rinforzo ma bensì 
+ uno generico in modo da consentire all'utente di utilizzare una qualsiasi 
+ tipologia di rinforzo tra quelli che la tecnica e il mercato mette a disposizione.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">è</span> 
+	 stata aggiunta la possibilità di proiettare i nodi degli elementi 
+	 selezionati (aste, muri/elementi bidimensionali, tamponature) su di 
+	 un piano verticale passante per i due nodi di estremità. <span class="hcp2">L'operazione 
+	 si effettua c</span>liccando nel gruppo <span class="hcp3"><a 
+	 href="Strumenti.htm">Strumenti</a></span> su <span class="hcp3">Proietta 
+	 nodi <img src="../Icone/16/proi.png" alt="" border="1" class="hcp4"></span> 
+	 e poi su <span class="hcp3">Su un piano verticale <img src="../Icone/16/alnpv2n.png" alt="" border="1" class="hcp4"></span>. Spostare 
+	 i nodi degli elementi su un piano verticale risulta utile per risolvere 
+	 problemi di non perfetta complanarità come ad esempio nei maschi o 
+	 nelle fasce in muratura, nelle pareti o nei nuclei in c.a.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">è</span> 
+	 stato implementato un nuovo collegamento delle aste in acciaio: &quot;Flangia 
+	 su flangia di elevazione&quot;. Il collegamento è composto da una 
+	 piastra saldata sul finale e bullonata, con fori filettati, ad un'altra 
+	 piastra saldata sull'ospite. Il principale utilizzo è il collegamento 
+	 tra una colonna e una trave con sezione rettangolare cava.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">è</span> 
+	 stata introdotta la possibilità di inserire un muro fino alla quota 
+	 dell'ultimo impalcato spezzandolo in corrispondenza degli impalcati 
+	 intermedi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">è</span> 
+	 stata implementata l'importazione delle strutture da SCIA AutoConverter 
+	 (prodotto da Nemetschek Group) che converte automaticamente i progetti 
+	 realizzati da qualsiasi software architettonico (in particolare Allplan) 
+	 e offre la possibilità di apportare modifiche al modello. <span class="hcp2">L'importazione 
+	 della struttura si effettua cliccando dal menu dell'applicazione</span>&#160;<span class="hcp3"><img src="../Icone/modest32.png" alt="" border="1" class="hcp4"></span> selezionando 
+	 <span class="hcp3">Importa</span> <img src="../Icone/32/main_importa32.png" alt="" border="1" class="hcp4"> 
+	 e poi <span class="hcp3">Struttura da</span> <span class="hcp3">SCIA 
+	 AutoConverter</span> <span style="font-style: italic;"><img src="../Icone/32/main_importa_ALLPLAN32.png" alt="" border="1" class="hcp4">.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1">C<span class="hcp2">alcolo 
+	 delle strutture anche con la versione 2022 di Xfinest.</span></p></li>
+</ul>
+</body>
+</html>

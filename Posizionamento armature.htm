@@ -1,0 +1,105 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Posizionamento armature</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Posizionamento armature</h1>
+<p>Nella progettazione interattiva il posizionamento delle armature viene 
+ gestito dinamicamente in modo che la posizione delle barre sia esattamente 
+ quella che si riscontrerà nell'oggetto reale.</p>
+<p>Una volta stabilito il valore del copriferro delle barre più esterne 
+ (ad esempio le staffe) le altre barre vengono posizionate adiacenti ad 
+ esse e qualunque cambiamento nel diametro delle barre esterne o delle 
+ barre interne comporta automaticamente il ricalcolo di tutte le posizioni.</p>
+<p>Anche le barre disposte su più strati mantengono automaticamente la 
+ mutua distanza indipendentemente dal valore dei diametri.</p>
+<p>In alcuni casi è possibile inserire ferri anche in modo manuale, specificandone 
+ le coordinate o comunque individuandone manualmente la posizione. Tali 
+ ferri ovviamente non risentono delle modifiche negli altri ferri e non 
+ vengono gestiti dinamicamente.</p>
+<p>Se da un lato la gestione dei ferri con il loro esatto posizionamento 
+ è indiscutibilmente più precisa e consente di introdurre meno errori ed 
+ approssimazioni nella fase di verifica (errori ed approssimazioni che 
+ andrebbero a sommarsi a quelli inevitabili su carichi e caratteristiche 
+ dei materiali), d'altro lato può in taluni casi portare a situazioni apparentemente 
+ paradossali.</p>
+<p>Alcuni esempi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">una sezione che con staffe 
+	 Ø6 è perfettamente verificata, con staffe Ø8 può non soddisfare le 
+	 verifiche a flessione (infatti è cambiato il baricentro delle barre 
+	 longitudinali e quindi è diminuita l'altezza utile);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">un plinto quadrato soggetto 
+	 a carico centrato è armato in modo diverso nelle due direzioni (infatti 
+	 le barre in una direzione giacciono sopra le altre e quindi anche 
+	 in questo caso diminuisce l'altezza utile).</p></li>
+</ul>
+<p style="margin-bottom: 0;">Per risolvere in modo più &quot;ingegneristico&quot; 
+ questi ed altri problemi simili mantenendo intatta la possibilità di operare 
+ sulla rappresentazione reale dell'oggetto ModeSt consente di operare le 
+ verifiche anche considerando le <span class="hcp1">posizioni 
+ teoriche</span> delle barre, in funzione di un copriferro teorico specificabile 
+ dall'utente. In questo caso le verifiche vengono effettuate con il baricentro 
+ delle barre posizionato alla distanza specificata dal bordo, indipendentemente 
+ dal loro diametro e dal diametro di altri ferri che ne condizionano la 
+ reale posizione.</p>
+<p>Le modalità di inserimento sono le seguenti:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Automatica</span>: 
+	 i ferri seguono le <span class="hcp1"><a href="Linee%20guida.htm">linee 
+	 guida</a></span> definite dagli angoli delle staffe e dai lati delle 
+	 staffe in modo da dividere il lato in parti uguali. La loro posizione 
+	 viene gestita in modo dinamico. Aggiungendo altri ferri sul lato, 
+	 i ferri già presenti si spostano di conseguenza.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Semiautomatica</span>: 
+	 i ferri seguono le <span class="hcp1"><a href="Linee%20guida.htm">linee 
+	 guida</a></span> definite dagli angoli delle staffe e dai lati delle 
+	 staffe. Viene mantenuta in modo dinamico (in caso di cambiamento delle 
+	 dimensioni della sezione) la proporzione fra le distanze dagli estremi 
+	 del lato della staffa.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Manuale</span>: 
+	 i ferri possono essere inseriti in qualunque punto della sezione e 
+	 non vengono gestiti dinamicamente.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Passo</span>: 
+	 i ferri seguono le <span class="hcp1"><a href="Linee%20guida.htm">linee 
+	 guida</a></span> e vengono posizionati automaticamente in modo da 
+	 rispettare una distanza fra i ferri pari al passo.</p></li>
+</ul>
+<p>Nel caso si utilizzi la modalità di inserimento a <span class="hcp1">Passo</span> 
+ occorre specificare come il programma debba comportarsi nel caso in cui 
+ la lunghezza del lato della sezione non sia un multiplo del passo. <span 
+	 style="text-transform: uppercase;">è</span> possibile utilizzare tre 
+ modalità di completamento:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Adattata</span>: 
+	 il passo dei ferri viene ridotto in modo da posizionare il primo e 
+	 l'ultimo ferro della parete adiacenti all'estremità interna della 
+	 staffa.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Terminata</span>: 
+	 il passo dei ferri non viene cambiato e vengono aggiunti due ferri 
+	 adiacenti all'estremità interna della staffa.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Nessuna</span>: 
+	 il passo dei ferri non viene cambiato e non vengono aggiunti ferri 
+	 all'estremità del lato della sezione.</p></li>
+</ul>
+</body>
+</html>

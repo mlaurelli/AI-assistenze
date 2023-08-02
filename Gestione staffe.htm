@@ -1,0 +1,102 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Gestione staffe</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-style:italic; }
+span.hcp2 { font-style:normal; }
+span.hcp3 { font-weight:bold; }
+img.hcp4 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp5 { font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Gestione staffe</h1>
+<p>Quando viene avviata una nuova progettazione interattiva di una sezione, 
+ il programma definisce automaticamente delle staffe <span class="hcp1">immaginarie</span> 
+ <span class="hcp2">che nel caso di sezioni predefinite 
+ rappresentano quelle che sono normalmente le staffe standard, mentre nel 
+ caso di sezioni generiche sono semplicemente equivalenti al contorno della 
+ sezione e degli eventuali fori presenti all'interno.</span></p>
+<p>Queste staffe <span class="hcp1">immaginarie</span> hanno 
+ diametro pari al diametro teorico specificato nei criteri di progetto 
+ (vedi <a href="Criteri%20di%20disegno%20armatura%20sezioni.htm#Diametro_staffa_teorica" 
+			 style="font-weight: bold;">Diametro staffa teorica</a>) e 
+ sono posizionate ad una distanza dal bordo della sezione pari al copriferro 
+ al bordo staffa, indicato sempre nei criteri di progetto (vedi <a href="Criteri%20di%20disegno%20armatura%20sezioni.htm#Copriferro_reale_al_bordo_staffa"><span class="hcp3">Copriferro reale al bordo staffa</span></a>).</p>
+<p><span class="hcp2">Utilizzando queste staffe come guida 
+ è possibile inserire ferri in modo automatico o semiautomatico garantendone 
+ il corretto posizionamento anche in assenza di una vera armatura a taglio.</span></p>
+<p>Le staffe reali nella sezione possono essere definite in due modi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Assegnando alle staffe immaginarie 
+	 una staffa cliccando nel gruppo <span class="hcp3">Staffe</span> 
+	 su <span class="hcp3">Assegna <img src="../Icone/16/assegnastaff.png" alt="" border="1" class="hcp4"></span> 
+	 con diametro, passo ed un numero di bracci impostato nella sezione 
+	 <span class="hcp3">Staffe</span> del pannello <span class="hcp3">Proprietà correnti</span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Inserendo manualmente una 
+	 staffa di qualsiasi forma cliccando nel gruppo <span class="hcp3">Staffe</span> 
+	 su <span class="hcp3">Aggiungi <img src="../Icone/16/aggiungistaffa.png" alt="" border="1" class="hcp4"></span> 
+	 con diametro e passo impostato nella sezione <span class="hcp3">Staffe</span> 
+	 del pannello <span class="hcp3">Proprietà correnti</span>.</p></li>
+</ul>
+<p>L'inserimento manuale delle staffe avviene con le stesse modalità del 
+ comando <span class="hcp3">Linea&#160;<img src="../Icone/32/cadlinea32.png" alt="" border="1" class="hcp4"></span> 
+ in Ms-Cad ed è possibile (e consigliato) utilizzare le opzioni presenti 
+ nel pannello <span class="hcp3">Parametri Ms-Cad</span> 
+ (<span class="hcp3">Snap</span>, <span class="hcp3">Estremità</span>, 
+ <span class="hcp3">Intersezione</span>, ecc.). Per agevolare 
+ l'inserimento delle staffe il programma visualizza delle linee guida già 
+ posizionate in funzione del diametro della staffa corrente lungo i lati 
+ ed i prolungamenti dei lati della sezione. Seguire tali linee con <span class="hcp3">Snap</span> e <span class="hcp3">Estremità</span> 
+ attivi nel pannello <span class="hcp3">Parametri Ms-Cad</span> 
+ consente generalmente di inserire le staffe nel modo più rapido e corretto.</p>
+<p>È importante notare che ognuno dei segmenti che costituiscono una staffa 
+ è caratterizzato da un <span class="hcp3">lato esterno</span> 
+ e da un <span class="hcp3">lato interno</span>. Tale definizione 
+ influenza due comportamenti:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">in caso di cambiamento del 
+	 diametro della staffa il <span class="hcp3">lato esterno</span> 
+	 resta fermo e lo spessore della staffa cresce o decresce dalla parte 
+	 del <span class="hcp3">lato interno</span><span class="hcp5">;</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1">il posizionamento dei ferri 
+	 automatici e semiautomatici viene effettuato sul <span class="hcp3">lato 
+	 interno</span> della staffa.</p></li>
+</ul>
+<p>Nelle staffe chiuse il lato esterno viene definito automaticamente in 
+ funzione del verso di inserimento. Per staffe inserite in senso <span class="hcp3">orario</span> il lato esterno risulta essere 
+ quello realmente <span class="hcp1">esterno</span> al poligono. 
+ Per staffe aperte viene effettuata la classificazione di esterno/interno 
+ solo per il primo e per l'ultimo segmento in funzione del verso del primo 
+ e dell'ultimo angolo di piegatura della staffa. Gli altri segmenti vengono 
+ definiti come <span class="hcp3">lati doppi</span><span class="hcp5">. In corrispondenza dei lati doppi la 
+ staffa cresce o decresce da entrambe le parti e sarà possibile posizionare 
+ i ferri</span> su entrambi i lati<span class="hcp5">.</span></p>
+<p><span class="hcp5">Gli ancoraggi vengono posizionati 
+ nella parte interna del relativo lato della staffa.</span></p>
+<p><span class="hcp5">La classificazione dei diversi lati</span> 
+ della staffa è facilmente controllabile aggiungendo i ferri<span class="hcp5">. 
+ Le linee guida per il posizionamento dei ferri vengono infatti tracciate 
+ sul</span> <span class="hcp3">lato interno</span> <span class="hcp5">della staffa. Se un lato presenta linee 
+ guida da entrambe le parti, significa che è classificato come</span> <span class="hcp3">lato doppio</span><span class="hcp5">.</span></p>
+<p style="margin-bottom: 0;"><span class="hcp5">Tutte le 
+ definizioni effettuate in automatico dal programma possono essere modificate 
+ con il tasto destro sulla staffa.</span></p>
+</body>
+</html>

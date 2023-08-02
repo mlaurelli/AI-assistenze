@@ -1,0 +1,140 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Trasformazione file IFC in lucido</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+p.hcp3 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Trasformazione file IFC in lucido</h1>
+<p>La trasformazione dei file IFC si effettua cliccando nel gruppo <span class="hcp1">Lucido</span> della scheda <span class="hcp1">Modellazione</span> 
+ su <span class="hcp1">Lucido <img src="../Icone/32/cad32.png" alt="" border="1" class="hcp2"></span> e 
+ poi su <span class="hcp1">Trasforma <img src="../Icone/16/trasforma.png" alt="" border="1" class="hcp2"></span>&#160;e 
+ quindi su <span class="hcp1">IFC <img src="../Icone/16/ifc2luc.png" alt="" border="1" class="hcp2"></span>.</p>
+<p style="text-align: center;"><img src="Trasfo_IFC.png" alt="" border="0"></p>
+<p>La finestra di dialogo si presenta suddivisa essenzialmente in una parte 
+ in cui viene riportato il nome del file IFC, il nome del file del lucido, 
+ l'elenco degli interpiani, l'elenco del tipo di elemento e alcune opzioni 
+ ed una parte composta da una finestra di anteprima con bottoni che consentono 
+ di modificare i punti di visualizzazione del disegno e una casella di 
+ controllo per attivare il disegno degli assi. Nella finestra di anteprima 
+ vengono visualizzate le entità grafiche contenute nei layer selezionati 
+ e riportate le coordinate minime e massime dei punti.</p>
+<p>I parametri richiesti nella finestra di dialogo hanno il seguente significato:</p>
+<p><span class="hcp1">File IFC:</span> nome del file IFC 
+ da trasformare in lucido. Il bottone &quot;Sfoglia&quot; apre la finestra 
+ di dialogo che permette di selezionare il nome del file IFC sia nello 
+ standard IFC2x3 che IFC4.</p>
+<p><span class="hcp1">File LUC:</span> nome del file LUC. 
+ Il bottone &quot;Sfoglia&quot; apre la finestra di dialogo che permette 
+ di specificare il nome del file lucido e per visualizzare quelli già presenti 
+ nel progetto.</p>
+<p><span class="hcp1">Interpiani:</span> riporta l'elenco 
+ dei nomi degli interpiani contenuti nel file IFC. L'interpiano rappresenta 
+ l'insieme di elementi che giacciono sul piano (ad esempio travi e solai) 
+ e che spiccano dal piano (ad esempio pilastri e pareti). Selezionare gli 
+ interpiani dove sono contenuti i tipi di elementi da convertire (utilizzare 
+ i tasti Ctrl e Alt per la selezione multipla).</p>
+<p><span class="hcp1">Tipo elementi:</span> riporta l'elenco 
+ dei nomi dei tipi di elementi contenuti nell'interpiano. Selezionare i 
+ tipi di elementi da convertire (utilizzare i tasti Ctrl e Alt per la selezione 
+ multipla).</p>
+<p><span class="hcp1">Fattore di conversione in metri:</span> 
+ ModeSt presume che i dati contenuti nel file IFC siano in metri, quindi 
+ è possibile specificare un fattore di scala per tenere conto dell'unità 
+ di misura realmente adottata nel file IFC.</p>
+<p><span class="hcp1">Precisione di arrotondamento al:</span> 
+ selezionare la precisione a cui arrotondare le coordinate dei punti del 
+ lucido da considerare durante la conversione del file IFC. Nei disegni 
+ IFC le coordinate dei punti sono a volte espresse con un numero elevato 
+ di decimali che se considerate come rappresentative delle coordinate dei 
+ nodi, possono portare a problemi numerici durante il calcolo della struttura 
+ con metodo FEM.</p>
+<p><span class="hcp1">Calcola intersezioni:</span> attivare 
+ la casella di controllo per individuare il punto di intersezione di due 
+ rette complanari. Per IFC tridimensionali di grande dimensione l'attivazione 
+ di tale opzione può richiedere tempi di elaborazione lunghi.</p>
+<p><span class="hcp1">Spostare il punto minimo nell'origine:</span> 
+ attivare la casella di controllo per riportare tutto il disegno nel primo 
+ quadrante spostando il punto di minimo nell'origine.</p>
+<p><span class="hcp1">Creare la macro per la trasformazione 
+ di linee-aste:</span> attivare la casella di controllo per creare la macro 
+ che inserisce i nodi nei punti e trasforma le linee in aste. Il nome della 
+ macro coincide con quello del file del lucido e per <a href="Uso%20delle%20macro%20da%20ModeSt.htm">eseguirla</a> 
+ occorre digitarne il nome dalla linea di comando.</p>
+<p><span class="hcp1">Importa sezioni aste</span>: attivare 
+ la casella di controllo per creare le sezioni delle aste definite nel 
+ file IFC. Nella seguente tabella è riportato l'elenco delle classi delle 
+ sezioni importabili e delle corrispondenti sezioni di ModeSt:</p>
+<table class="SimpleGridBlack" style="mso-border-top-alt: solid black .75pt; 
+		 mso-border-left-alt: solid black .75pt; mso-yfti-tbllook: 1184; 
+		 mso-padding-alt: 0cm 0cm 0cm 0cm; border-left-style: Solid; border-left-width: 1px; 
+		 border-right-style: Solid; border-right-width: 1px; border-top-style: Solid; 
+		 border-top-width: 1px; border-bottom-style: Solid; border-bottom-width: 1px;" cellspacing="0px" width="500" align="center">
+	<tr class="t1Row">
+		<td><p class="hcp3">Classe IFC</p></td>
+		<td><p class="hcp3">Sezione ModeSt</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p>IfcRectangleProfileDef</p></td>
+		<td><p>Rettangolare</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p>IfcRectangleHollowProfileDef</p></td>
+		<td><p>Rettangolare cava</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p>IfcCircleProfileDef</p></td>
+		<td><p>Circolare</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p>IfcCircleHollowProfileDef</p></td>
+		<td><p>Circolare cava</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p>IfcTShapeProfileDef</p></td>
+		<td><p>T</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p>IfcLShapeProfileDef</p></td>
+		<td><p>L</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p>IfcIShapeProfileDef</p></td>
+		<td><p>I</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p>IfcUShapeProfileDef</p></td>
+		<td><p>U</p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p>IfcZShapeProfileDef</p></td>
+		<td><p>Z</p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p>IfcArbitraryClosedProfileDef</p></td>
+		<td><p>Per coordinate</p></td>
+	</tr>
+</table>
+<p><span class="hcp1">Importa solo unifilare se presente 
+ nel file IFC4</span>: attivare la casella di controllo importare solo 
+ l'unifilare se presente nel file IFC4.</p>
+<p><span class="hcp1">Oggetti da estrarre:</span> specificare 
+ se si desidera la trasformazione totale o l'estrazione delle sole entità 
+ contenute su piani prefissati.</p>
+</body>
+</html>

@@ -1,0 +1,82 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.9 alla 8.10</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.9 alla 8.10</h1>
+<p>Calcolo automatico degli indici di sicurezza in analisi lineare con 
+ fattore di struttura. Oltre al calcolo degli indici di sicurezza della 
+ struttura in analisi lineare, fino ad oggi effettuabile solo manualmente, 
+ ModeSt è ora in grado di valutare anche in modo automatico gli indici 
+ di sicurezza separatamente per i diversi elementi strutturali, divisi 
+ in categorie omogenee e per tipologia di rottura. Ad esempio è possibile 
+ valutare separatamente flessione/pressoflessione (rottura duttile), taglio 
+ (e altre rotture fragili), stabilità, rottura dei nodi (sia quelli trave-pilastro 
+ in c.a. che quelli di strutture in acciaio), rottura nel piano o fuori 
+ piano o per cinematismi (per le strutture in muratura), ecc. La possibilità 
+ di valutare indici di sicurezza separati consente di individuare in modo 
+ più consapevole eventuali interventi di consolidamento o di rinforzo. 
+ La creazione di una tabella degli elementi critici permette infatti di 
+ individuare gli elementi non verificati per il sisma di domanda con il 
+ relativo sfruttamento e tipo di rottura, nonché il valore dello sfruttamento 
+ per il sisma di capacità individuato. Diventa così semplice e veloce l'individuazione 
+ dei punti della struttura su cui converrebbe intervenire per aumentare 
+ l'indice di sicurezza. Inoltre con la valutazione separata è possibile 
+ effettuare la compilazione della &quot;SCHEDA DI SINTESI DELLA VERIFICA 
+ SISMICA DI EDIFICI STRATEGICI AI FINI DELLA PROTEZIONE CIVILE O RILEVANTI 
+ IN CASO DI COLLASSO A SEGUITO DI EVENTO SISMICO - (Ordinanza n. 3274/2003 
+ - Articolo 2, commi 3 e 4, DM 14/01/2008)&quot;. Tale scheda o altre simili 
+ vengono richieste da numerosi Geni Civili. </p>
+<p>Creazione automatica di una relazione di confronto tra due strutture, 
+ in cui vengono riportati gli indici di sicurezza in termini di accelerazione 
+ e di periodo di ritorno, riportandone le differenze. Nel caso di analisi 
+ pushover vengono messe a confronto anche le curve carico-spostamento e 
+ gli spettri ADRS delle due strutture. L'uso tipico di tale procedura è 
+ riassumere in modo chiaro anche per il Genio Civile l'effetto di interventi 
+ di rinforzo o modifiche su strutture esistenti, ma può essere utile anche 
+ nel caso di cambio di destinazione d'uso, sopraelevazioni, ecc. Infatti 
+ le strutture possono anche essere diverse, purché siano state calcolate 
+ con gli stessi metodi (entrambe pushover o entrambe in analisi lineare 
+ con fattore di struttura e valutazione degli indici di sicurezza) e che 
+ in entrambe sia stato richiesto il calcolo degli stessi stati limite. 
+ Ad esempio, si pensi ad un intervento classico su una struttura in muratura 
+ in cui si chiudono alcune aperture aprendone altre. Con questa relazione 
+ di confronto è agevole dimostrare che si è comunque effettuato un miglioramento, 
+ anche se la struttura risulta ancora non verificata.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nella progettazione solette/platee 
+	 è possibile disabilitare da criterio le verifiche a taglio nei nodi 
+	 che cadono all'interno delle piramidi di punzonamento e sotto elementi 
+	 bidimensionali verticali.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Sono state aggiunte nuove 
+	 opzioni per la relazione di calcolo e per la relazione di confronto, 
+	 con la possibilità di dare uno sfondo alle intestazioni delle tabelle 
+	 per una maggiore leggibilità.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">È stato implementato il calcolo 
+	 delle strutture con la versione 18 del solutore SAP2000.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">È stata introdotta la possibilità 
+	 di cancellare tutti i disegni e le progettazioni della struttura con 
+	 un unico comando.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">È stata eliminata la limitazione 
+	 al valore di ± 32767 del numero assegnabile a nodi ed elementi. </p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Sono state potenziate e riviste 
+	 le procedure di creazione delle carpenterie di piano e di esportazione 
+	 in formato DXF 2D e 3D della struttura.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Sono state notevolmente migliorate 
+	 ed ampliate le possibilità di importazione da Revit e di esportazione 
+	 nel formato IFC. Sono state aggiunte nuove opzioni per il riconoscimento 
+	 dei fili fissi e degli scostamenti dai fili fissi di travi e pilastri. 
+	 È stata introdotta la possibilità di importare muri, solette/solai 
+	 e platee contenenti aperture di qualsiasi forma.</p></li>
+</ul>
+</body>
+</html>

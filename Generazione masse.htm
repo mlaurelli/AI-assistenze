@@ -1,0 +1,33 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Generazione masse</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Generazione masse</h1>
+<p>Sia per l'analisi modale che per l'analisi sismica statica o dinamica, ModeSt deve calcolare, in funzione dei carichi assegnati, le masse da applicare alla struttura, per eseguire l'analisi degli autovalori, o per valutare le forze statiche equivalenti ai sensi della normativa Italiana.</p>
+<p>Il calcolo viene effettuato trasformando tutti i carichi in direzione Z globale (kg peso) della struttura in masse.</p>
+<p>Vengono generate le 6 componenti di massa dividendo il carico per l'accelerazione di gravità e moltiplicandolo per i moltiplicatori per la generazione delle masse specificati al momento dell'archiviazione delle CCE. Solo i carichi nodali di tipo massa vengono considerati già espressi in kgmassa e quindi non risentono né dell'accelerazione di gravità né dei moltiplicatori per la generazione delle masse.</p>
+<p>I carichi accidentali provenienti dai solai vengono moltiplicati per il coefficiente di riduzione proprio del solaio, mentre i carichi inseriti manualmente dall'utente vengono moltiplicati per il coefficiente di riduzione specificato al momento in cui è stata archiviata la CCE in cui sono stati memorizzati. Nel caso in cui le componenti di massa X e Y vengano riportate al baricentro di piano (come necessario nel caso di <span class="hcp1"><a href="Schematizzazione%20piani%20rigidi.htm">schematizzazione piani rigidi</a></span>) viene anche tenuto conto del momento d'inerzia polare sia proprio della massa (per le masse derivanti dai solai) che di quello di trasporto.</p>
+<p>Viene considerato il coefficiente di riduzione in funzione del tipo di normativa adottato. Nel caso di calcolo con il metodo degli stati limite i carichi vengono moltiplicati per il coefficiente specificato dalla normativa.</p>
+<p>La massa derivante dai solai viene calcolata in funzione dell'area effettiva del solaio per quanto riguarda la componente permanente (somma dei permanenti strutturali e non strutturali) del carico, ed in funzione della proiezione del solaio sull'orizzontale per la componente accidentale.</p>
+<p>Tutti i carichi distribuiti vengono comunque riportati in masse concentrate sui nodi e quindi per valutare i modi di vibrazione in direzione Z di un'asta occorrerà suddividere l'asta in un numero di parti sufficiente a individuare le varie forme modali.</p>
+<p style="margin-bottom: 0;"><span style="font-weight: bold;">Argomenti correlati:</span> <span class="hcp1"><a href="Recupero%20masse%20secondarie.htm">Recupero masse secondarie</a></span></p>
+</body>
+</html>

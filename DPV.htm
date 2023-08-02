@@ -1,0 +1,111 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>DPV - Disegna punti/piani di verifica</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">DPV - Disegna punti/piani di verifica</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" 
+		 width="100%" bgcolor="#C0C0C0">
+	<tr>
+		<td style="width:68%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Progettazione 
+		 interattiva travi, pareti, solette/platee, plinti/pali</p></td>
+		<td style="width:28%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p></td>
+	</tr>
+</table>
+<p class="AmbienteProgettazione"><span class="hcp3">Progettazione 
+ interattiva travi</span></p>
+<p>Attiva o disattiva la visualizzazione dei punti in cui verranno riportate 
+ in relazione le verifiche relative all'armatura longitudinale (flessione, 
+ pressoflessione, taglio e torsione).</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">DPV</span></p>
+<p>Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">I punti di verifica vengono 
+	 visualizzati come linee verticali arancione solo se è attivo il disegno 
+	 di qualche diagramma.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Le verifiche relative all'armatura 
+	 per taglio e torsione vengono riportate in relazione sempre per tutte 
+	 le zone di staffatura presenti nella travata.</p></li>
+</ul>
+<p class="AmbienteProgettazione"><span class="hcp3">Progettazione 
+ interattiva pareti</span></p>
+<p>Attiva o disattiva la visualizzazione dei punti in cui verranno riportate 
+ in relazione le verifiche relative all'armatura verticale e orizzontale 
+ (flessione e taglio).</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">DPV</span></p>
+<p>Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">I punti di verifica vengono 
+	 visualizzati come linee verticali e/o orizzontali arancione.</p></li>
+</ul>
+<p class="AmbienteProgettazione" style="font-weight: bold;">Progettazione 
+ interattiva solette/platee</p>
+<p>Attiva o disattiva la visualizzazione dei punti in cui verranno riportate 
+ in relazione le verifiche relative all'armatura longitudinale a flessione.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">DPV</span></p>
+<p>Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">I punti di verifica vengono 
+	 visualizzati con un simbolo che indica la direzione di verifica che 
+	 può assumere i seguenti colori:</p></li>
+</ul>
+<p class="IndentBullet1">Verde: le verifiche sono soddisfatte;</p>
+<p class="IndentBullet1">Rosso: le verifiche non sono soddisfatte;</p>
+<p class="IndentBullet1">Blu: le verifiche sono da aggiornare (eseguire 
+ il comando <span class="hcp3"><a href="DPV.htm">CALC</a></span>).</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Il simbolo è un cerchio per 
+	 verifiche alle tensioni ammissibili o agli stati limite di esercizio, 
+	 un triangolo per le verifiche al limite elastico, un quadrato per 
+	 verifiche agli stati limite ultimi, una &quot;X&quot; quando è classificato 
+	 come &quot;Non verificare&quot;.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Attivando il disegno dei punti 
+	 di verifica si genera, in alto a destra del disegno della carpenteria 
+	 di piano, una tabella in cui sono riportati sia i simboli che la loro 
+	 descrizione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">La rappresentazione dei punti 
+	 di verifica viene effettuata rispettando la disposizione dei disegni 
+	 (comando <a href="DISP.htm"><span class="hcp3">DISP</span></a>). 
+	 Nel caso in cui le armature in direzione X ed Y siano riportate in 
+	 un unico disegno si può quindi avere una sovrapposizione dei simboli.</p></li>
+</ul>
+<p class="AmbienteProgettazione"><span class="hcp3">Progettazione 
+ interattiva plinti/pali</span></p>
+<p>Attiva o disattiva la visualizzazione dei piani in cui verranno riportate 
+ in relazione le verifiche relative all'armatura longitudinale a flessione.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">DPV</span></p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a2');
+	FilePopupInit('a3');
+//]]></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Tabelle delle storie di carico</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Tabelle delle storie di carico</h1>
+<p>Quando si esegue un'analisi non lineare, occorre definire la legge secondo 
+ la quale i carichi vengono nel &quot;tempo&quot; considerati agenti sulla 
+ struttura. Non è un concetto di &quot;tempo&quot; in senso stretto, ma 
+ semplicemente una crescita (o decrescita) per passi (step) successivi.</p>
+<p>Se nella struttura è stata effettuata la classificazione dei carichi 
+ e le corrette assegnazioni al momento della archiviazione delle CCE (si 
+ veda <span class="hcp1"><a href="Carichi.htm">Gestione dei 
+ carichi</a></span>) ModeSt crea in automatico per ogni combinazione di 
+ carico una storia così definita:</p>
+<p>Step 1: Solo i carichi classificati come permanenti</p>
+<p>Step 2: Carichi classificati come permanenti e accidentali</p>
+<p>Step 3: Carichi classificati come permanenti, accidentali e azioni Sismiche 
+ (se presenti)</p>
+<p>Se non esiste classificazione ModeSt crea un unico step in cui vengono 
+ assegnati tutti i carichi.</p>
+<p>Sarà comunque possibile modificare la storia inserendo o cancellando 
+ step intermedi espliciti nella griglia della tabella ed inserendovi i 
+ valori desiderati. Infatti la crescita dei carichi non deve necessariamente 
+ essere uniforme. Per comodità comunque l'inserimento di uno step viene 
+ effettuato con per default i valori intermedi fra quelli degli step adiacenti.</p>
+<p>Per esigenze di calcolo numerico o per avere dei risultati intermedi 
+ più distribuiti è comunque possibile indicare a ModeSt di creare internamente 
+ dei passi intermedi uniformemente distribuiti fra quelli espliciti riportati 
+ nella tabella della storia di carico.</p>
+<p style="margin-bottom: 0;"><span style="text-transform: uppercase;">è</span> 
+ inoltre possibile imporre la memorizzazione di tutti i risultati intermedi, 
+ per valutare anche graficamente o numericamente l'evolversi della situazione 
+ strutturale. Fare molta attenzione nell'attivazione di questa opzione 
+ perché i file dei risultati possono diventare enormi richiedendo molto 
+ spazio su disco. Non è possibile attivare questa opzione se è richiesta 
+ l'<span class="hcp1"><a href="Analisi_di_buckling.htm">analisi 
+ di buckling</a></span> in quanto se richiesto di calcolare il buckling 
+ solo sull'ultimo step di carico la presenza di step impliciti renderebbe 
+ ambiguo il valore del carico su cui si esegue la ricerca del moltiplicatore.</p>
+</body>
+</html>

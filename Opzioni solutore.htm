@@ -1,0 +1,308 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Opzioni solutore</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-style:italic; }
+span.hcp3 { font-weight:normal; }
+span.hcp4 { mso-spacerun:yes; }
+span.hcp5 { mso-bidi-font-weight:normal; }
+b.hcp6 { font-weight:bold;
+mso-bidi-font-weight:normal; }
+b.hcp7 { mso-bidi-font-weight:normal; }
+i.hcp8 { mso-bidi-font-style:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Opzioni solutore</h1>
+<p>Le opzioni solutore rappresentano dati o opzioni tipiche del solutore 
+ adottato e che l'utente può modificare e che vengono associati al calcolo 
+ della struttura. Tutti i dati sono associati al calcolo in corso e vengono 
+ automaticamente memorizzati. Quando si calcola per la prima volta una 
+ struttura o quando si cambia solutore vengono automaticamente impostati 
+ i valori di default. Possono essere modificati all'inizio della procedura 
+ di calcolo attraverso l'opzione Opzioni <font style="font-family: Wingdings;" 
+												 face="Wingdings">à</font> 
+ Solutore.</p>
+<p style="line-height: 115%; mso-bidi-language: AR-SA;">Per ogni solutore 
+ si riportano l'elenco dei parametri modificabili ed alcune considerazioni.</p>
+<h2><span class="hcp1">XFINEST</span></h2>
+<p><span class="hcp1"><a name="Trascura_deformabilita_a_taglio_delle_aste" 
+										 id="Trascura_deformabilita_a_taglio_delle_aste"></a>Trascura 
+ deformabilità a taglio delle aste</span>: specificare se trascurare in 
+ analisi lineare la deformabilità a taglio delle aste. Nel caso di analisi 
+ non lineare o d'instabilità (buckling) la deformabilità a taglio non viene 
+ messa in conto sia nel calcolo della matrice di rigidezza elastica che 
+ di quella geometrica.</p>
+<p>Si rimanda al manuale del solutore per informazioni aggiuntive.</p>
+<p><span class="hcp1"><a name="Lanczos" id="Lanczos"></a>Analisi 
+ dinamica con metodo di Lanczos</span>: specificare se effettuare l'analisi 
+ dinamica con il metodo dell'iterazione nel sottospazio o con il metodo 
+ di Lanczos, generalmente più accurato. Con questo parametro è possibile 
+ specificare se si vuole utilizzare tale metodo.</p>
+<p>Si rimanda al manuale del solutore per informazioni aggiuntive.</p>
+<p><span class="hcp1"><a name="Sturm" id="Sturm"></a>Check 
+ sequenza di Sturm</span>: specificare se, al termine del calcolo degli 
+ autovalori, effettuare il check della sequenza di Sturm, che conferma 
+ la validità degli autovalori estratti.</p>
+<p>Si rimanda al manuale del solutore per informazioni aggiuntive.</p>
+<p><span class="hcp1"><a name="Usa_formulazione_secante_per_Buckling" 
+										 id="Usa_formulazione_secante_per_Buckling"></a>Usa 
+ formulazione secante per buckling</span>: specificare se in <a href="Analisi_di_buckling.htm"><span class="hcp1">analisi di buckling</span></a> non lineare 
+ si debba utilizzare la formulazione <span class="hcp2">secante</span>. 
+ Nel caso di approccio non lineare, l'analisi può essere condotta adottando 
+ due differenti formulazioni del problema di buckling: <span class="hcp2">classica</span> 
+ o <span class="hcp2">secante</span>. La formulazione <span class="hcp2">secante</span> può risultare più veloce 
+ della formulazione <span class="hcp2">classica</span> ma 
+ in molti casi può portare a risultati non corretti (ad esempio non è in 
+ grado di determinare il carico critico che provoca l'instabilità laterale 
+ nel caso di travi a mensola), per cui i risultati vanno sempre analizzati 
+ attentamente. D'altra parte la formulazione <span class="hcp2">secante</span> 
+ permette di determinare il carico critico di un carico incrementale (ultimo 
+ step di carico della combinazione delle condizioni di carico elementari), 
+ cosa non possibile con la formulazione <span class="hcp2">classica</span>.</p>
+<p>Si rimanda al manuale del solutore per informazioni aggiuntive.</p>
+<p><span class="hcp1"><a name="Trascura_Buckling_torsionale" 
+										 id="Trascura_Buckling_torsionale"></a>Trascura 
+ buckling torsionale</span>: specificare se in analisi di buckling si debba 
+ eliminare dalla matrice di rigidezza dell'elemento BEAM il termine legato 
+ all'instabilità torsionale.</p>
+<p>Si rimanda al manuale del solutore per informazioni aggiuntive.</p>
+<p><span class="hcp1"><a name="Avvertenze_su_file_e_non_a_video" 
+										 id="Avvertenze_su_file_e_non_a_video"></a>Avvertenze 
+ su file e non a video</span>: specificare se memorizzare sul file con 
+ estensione ERR i messaggi di avvertenza segnalati dal solutore durante 
+ l'esecuzione del calcolo FEM della struttura oppure se visualizzarli a 
+ video. I file con estensione ERR risiedono all'interno della cartella 
+ del progetto.</p>
+<p><span class="hcp1"><a name="Intervento_manuale_sul_file_di_input" 
+										 id="Intervento_manuale_sul_file_di_input"></a>Intervento 
+ manuale sul file di input</span>: specificare se interrompere il calcolo 
+ della struttura per poter intervenire manualmente nella modifica del file 
+ di input per il solutore.</p>
+<p>Si rimanda al manuale del solutore per maggiori informazioni per quanto 
+ riguarda la modifica del file di input.</p>
+<p><span class="hcp1"><span class="hcp1"><a 
+	 name="Tipo_di_elem_bid" id="Tipo_di_elem_bid"></a></span>Tipo di elemento 
+ bidimensionale</span>: specificare il tipo di elemento bidimensionale 
+ da usare nel calcolo. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">ISOSHELL</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">QF46</span></p></li>
+</ul>
+<p>Per l'elemento ISOSHELL il parametro DRIL è settato pari a 1. Si rimanda 
+ al manuale del solutore per informazioni aggiuntive sulle caratteristiche 
+ degli elementi.</p>
+<p><span class="hcp1"><a name="Sforzi_nei_nodi" id="Sforzi_nei_nodi"></a>Calcolo 
+ sforzi nei nodi</span>: se il tipo di elemento bidimensionale da utilizzare 
+ nel calcolo è QF46, specificare se devono essere valutati gli sforzi nei 
+ nodi o se per l'elemento devono essere considerati sforzi costanti pari 
+ a quelli calcolati nel centroide.</p>
+<p><span class="hcp1"><a name="Opzioni_per_analisi_P-Delta" 
+										 id="Opzioni_per_analisi_P-Delta"></a>Opzioni 
+ per analisi P-Delta</span>: specificare nel caso di <a href="Analisi_P-Delta.htm">analisi 
+ P-Delta</a> il valore del &quot;<span class="hcp1">Numero 
+ massimo di iterazioni</span>&quot; e del &quot;<span class="hcp1">Valore 
+ della norma euclidea degli spostamenti</span>&quot;.&#160;Si rimanda al 
+ manuale del solutore per informazioni aggiuntive sulle precedenti opzioni 
+ &quot;PARAM NITMAX&quot; e &quot;PARAM DISPNORM&quot;.</p>
+<p><span class="hcp1"><a name="Opzioni_per_analisi_pushover" 
+										 id="Opzioni_per_analisi_pushover"></a>Opzioni 
+ per analisi pushover</span>: l'analisi pushover sia delle strutture in 
+ c.a. sia in muratura può essere eseguita in regime di grandi o piccoli 
+ spostamenti attraverso l'opzione &quot;<span class="hcp1">Esegui 
+ analisi in regime di piccoli spostamenti</span>&quot;.&#160;Si consiglia 
+ di selezionare l'opzione nell'analisi pushover delle strutture in muratura. 
+ Si rimanda al manuale del solutore per informazioni aggiuntive sull'opzione 
+ &quot;USE SMALL DISPLACEMENT&quot;.</p>
+<p><span class="hcp1"><a name="Opzioni_per_analisi_pushover_murature" 
+										 id="Opzioni_per_analisi_pushover_murature"></a>Opzioni 
+ per analisi pushover murature</span>: nell'analisi pushover delle strutture 
+ in muratura sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Interrompi 
+	 analisi nel caso di plasticizzazione per carichi statici</span>:&#160;specificare 
+	 se interrompere l'analisi pushover nel caso in cui negli elementi 
+	 in muratura (maschi o fasce) si formino delle cerniere plastiche a 
+	 causa delle sollecitazioni relative ai carichi statici. Si rimanda 
+	 al manuale del solutore per informazioni aggiuntive sull'opzione &quot;WARNING 
+	 ON PREPUSHOVER ANALYSYS&quot;.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Utilizza 
+	 sforzo normale medio</span>:&#160;specificare se nelle verifiche a 
+	 pressoflessione degli estremi degli elementi in muratura si debba 
+	 utilizzare come valore dello sforzo normale quello medio oppure quello 
+	 corrispondente all'estremità. Si rimanda al manuale del solutore per 
+	 informazioni aggiuntive sull'opzione &quot;MIDAS PLAST HINGE POSITION&quot;.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Metodo_di_convergenza" id="Metodo_di_convergenza"></a>Metodo 
+ di convergenza</span>:&#160;il metodo di convergenza utilizzabili nelle 
+ analisi non lineari sono i seguenti: <span class="hcp1">Energia 
+ (E)</span> (convergenza in base all'energia), <span class="hcp1">Forze 
+ e momenti residui (F)</span> (convergenza in base alle forze e momenti 
+ residui),<span class="hcp1"> Spostamenti (D)</span> (convergenza 
+ in base agli spostamenti). Per ciascun metodo è possibile specificare 
+ il valore della norma euclidea. Deve essere selezionato al meno un metodo 
+ ed è possibile selezionare entrambi i metodi <span class="hcp1">F</span> 
+ e <span class="hcp1">D</span>. Si rimanda al paragrafo &quot;ANALISI 
+ NONLINEARE&quot; del manuale del solutore per informazioni aggiuntive.</p>
+<p><span class="hcp1"><a name="Opzioni_aggiuntive" id="Opzioni_aggiuntive"></a>Opzioni 
+ aggiuntive</span>: specificare le opzioni aggiuntive riportate sul manuale 
+ del solutore.</p>
+<p><span class="hcp1"><a name="Opzioni_aggiuntive_Druker-Prager" 
+										 id="Opzioni_aggiuntive_Druker-Prager"></a>Opzioni 
+ aggiuntive per analisi non lineari in presenza di elementi bidimensionali 
+ con comportamento Drucker-Prager</span>: modificare o specificare le opzioni 
+ aggiuntive riportate sul manuale del solutore. Tali opzioni aggiuntive 
+ valgono solo per le strutture con elementi bidimensionali con comportamento 
+ Drucker-Prager ed analisi non lineari.</p>
+<h2><span class="hcp1">SAP2000</span></h2>
+<p><span class="hcp1"><a name="Lunghezza_max_elementi_trave_su_suolo_elastico" 
+										 id="Lunghezza_max_elementi_trave_su_suolo_elastico"></a>Lunghezza 
+ max elementi trave su suolo elastico</span><span class="hcp3">: 
+ SAP2000 non possiede l'elemento trave su suolo elastico</span> alla Winkler<span class="hcp3">, ma prevede l'attribuzione di molle 
+ distribuite lungo una linea (line springs) e la suddivisione automatica 
+ delle travi (automatic frame subdivide). ModeSt provvede ad assegnare 
+ la costante della molla (come prodotto della costante di sottofondo dell'asta 
+ e della larghezza della trave) e ad impostare i criteri di suddivisione 
+ automatica delle travi in SAP2000.</span> È possibile specificare con 
+ questo parametro la lunghezza indicativa dei conci in cui suddividere 
+ le aste.</p>
+<p><span class="hcp1"><a name="Numero_min_di_conci_per_trave_su_suolo_elastico" 
+										 id="Numero_min_di_conci_per_trave_su_suolo_elastico"></a>Numero 
+ min. di conci per trave su suolo elastico</span>: indicare il numero minimo 
+ di conci in cui suddividere la trave su suolo elastico. Nel caso in cui 
+ la trave ha una lunghezza inferiore a quanto specificato nel precedente 
+ parametro e quindi non suddivisibile, questo parametro permette comunque 
+ di suddividerla in un certo numero di conci.</p>
+<p><span class="hcp1"><a name="Usare_bidimensionali_con_deformabilita_a_taglio" 
+										 id="Usare_bidimensionali_con_deformabilita_a_taglio"></a>Usare 
+ bidimensionali con deformabilità a taglio</span><span class="hcp3">:</span> 
+ specificare se usare la formulazione di Mindlin/Reissner (con deformabilità 
+ a taglio fuori dal piano) anziché la formulazione di Kirchhoff/Love. La 
+ deformabilità a taglio diviene importante per piastre in cui lo spessore 
+ supera 1/8 circa della luce. La formulazione Mindlin/Reissner è in generale 
+ più accurata anche per piastre sottili, ma è più sensibile a mesh distorte 
+ o con rapporto fra i lati degli elementi lontano da 1.</p>
+<p><span class="hcp1"><a name="Intervento_manuale_in_SAP2000" 
+										 id="Intervento_manuale_in_SAP2000"></a>Intervento 
+ manuale in SAP2000</span>: specificare se interrompere il calcolo della 
+ struttura per poter intervenire manualmente nella modifica della struttura 
+ all'interno di SAP2000. Dovrà essere cura dell'utente lanciare manualmente 
+ l'analisi e chiudere SAP2000 per permettere a ModeSt di riprendere l'elaborazione.</p>
+<p><span class="hcp1"><a name="Chiudere_SAP2000_al_termine_del_calcolo" 
+										 id="Chiudere_SAP2000_al_termine_del_calcolo"></a>Chiudere 
+ SAP2000 al termine del calcolo</span>: specificare se chiudere SAP2000 
+ al termine del calcolo della struttura. Dovrà essere cura dell'utente 
+ chiudere SAP2000 per permettere a ModeSt di riprendere l'elaborazione.</p>
+<p><span class="hcp1"><a name="Esegui_Buckling_sul_carico_totale" 
+										 id="Esegui_Buckling_sul_carico_totale"></a>Esegui 
+ buckling sul carico totale</span>: specificare se eseguire il buckling 
+ lineare sul carico totale anche per le analisi non lineari (i moltiplicatori 
+ critici si riferiscono così al carico totale) anziché sull'ultimo step 
+ di carico (in tal caso i moltiplicatori si riferiscono a tale step di 
+ carico).</p>
+<p><span class="hcp1"><a name="Tipo_di_non_linearita_geometrica" 
+										 id="Tipo_di_non_linearita_geometrica"></a>Tipo 
+ di non linearità geometrica</span>: specificare il tipo di non linearità 
+ geometrica da considerare nelle analisi non lineari. Sono disponibili 
+ le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Nessuna 
+	 (solo aste non resistenti a trazione/compressione)</span>: vengono 
+	 considerate solo le non linearità dovute alle aste non-resistenti 
+	 a trazione/compressione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Effetto 
+	 P-Delta</span>: le non linearità geometriche sono incluse solo in 
+	 maniera approssimata.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Effetto 
+	 P-Delta e grandi spostamenti</span>: le non linearità geometriche 
+	 sono valutate in modo più accurato.</p></li>
+</ul>
+<p style="margin-bottom: 0;">Si rimanda al manuale del solutore per informazioni 
+ aggiuntive.</p>
+<h2><span class="hcp1">OPENSEES</span></h2>
+<p>La documentazione ed il supporto per lo sviluppo del collegamento con 
+ OpenSees sono risultate molto carenti essendo questo solutore un progetto 
+ di tipo opensource, e siamo quindi disponibili a modifiche e variazioni 
+ su suggerimento degli utenti.</p>
+<p><span style="line-height: 115%; mso-fareast-font-family: Calibri; mso-fareast-language: EN-US; 
+		 mso-bidi-language: AR-SA;">Con OpenSees non sono supportate le 
+ analisi non lineari, le analisi di buckling, i link su linea, il calcolo 
+ dei modi di vibrare con il metodo dei Ritz-vectors. A livello di modello 
+ non sono supportate le bielle monolatere e gli elementi su suolo elastico 
+ monolatero (che richiederebbero analisi non lineari), gli svincolamenti 
+ <b style="mso-bidi-font-weight: normal; font-weight: normal;">parziali</b> 
+ delle aste e gli svincolamenti a taglio. Come carichi non sono gestiti 
+ i carichi termici sugli elementi bidimensionali.</span></p>
+<p>Si segnala che sono stati notati notevoli problemi nel calcolo degli 
+ autovalori<span class="hcp4">&#160;</span>e quindi dei modi 
+ propri per strutture appena più complicate del normale. L'analisi modale 
+ considerando le zone rigide può in alcuni casi dare risultati non corretti.</p>
+<p style="line-height: 115%; mso-fareast-font-family: Calibri;"><span style="mso-fareast-language: EN-US; 
+	 mso-bidi-language: AR-SA;">OpenSees trascura la deformabilità a taglio 
+ delle aste.</span></p>
+<p>In ogni caso i parametri gestiti esplicitamente sono i seguenti:</p>
+<p><span class="hcp5"><a name="Lung_elem_trave_su_suolo_elastico_OPENSEES" 
+													 id="Lung_elem_trave_su_suolo_elastico_OPENSEES"></a></span><span class="hcp1">Lunghezza max elementi trave su suolo elastico</span>: 
+ OpenSees non possiede l'elemento trave su suolo elastico alla Winkler, 
+ ModeSt provvede a suddividere le aste di fondazione in conci e inserisce 
+ sui nodi così creati delle molle con costante elastica calcolata automaticamente 
+ in funzione della larghezza della trave e della costante di sottofondo 
+ dell'asta. Dai valori di deformazione dei nodi di estremità viene poi 
+ ricostruita l'equazione del momento sulla trave su suolo elastico alla 
+ Winkler. È possibile specificare con questo parametro la lunghezza indicativa 
+ dei conci in cui suddividere le aste. Valori consigliati sono compresi 
+ fra 0.50 e 1.00 m. Con valori bassi si ottiene una maggior precisione 
+ di calcolo purché la rigidezza delle travi non sia eccessiva. ModeSt provvede 
+ comunque automaticamente, per divisioni di lunghezza maggiore di 0.60 
+ m, a creare due conci di 0.15 m in prossimità dei nodi per una valutazione 
+ più accurata delle sollecitazioni.</p>
+<p><b class="hcp6"><a name="Solver" 
+	 id="Solver"></a>Solver<span class="hcp3">:</span></b> 
+ OpenSees propone la possibilità di utilizzare diversi metodi per l'inversione 
+ della matrice di rigidezza della struttura. Il più affidabile e veloce 
+ sembra essere &quot;<b class="hcp7"><i class="hcp8">UmfPack<span class="hcp3">&quot;</span></i></b>, ma richiede la 
+ necessità di imporre la quantità di memoria utilizzabile, modificabile 
+ con il parametro <span class="hcp5">&quot;</span><b class="hcp7"><i class="hcp8">LvalueFact</i><span 
+	 style="mso-bidi-font-weight: normal; font-weight: normal;">&quot;</span><span class="hcp3">.</span><span class="hcp4">&#160;</span></b>Gli 
+ altri solver (sempre molto più lenti in termini di calcolo), si sono rivelati 
+ migliori solo per alcuni tipi<span class="hcp4">&#160;</span>di 
+ strutture, specialmente se<span class="hcp4">&#160;</span>regolari.</p>
+<p><b class="hcp6"><a name="Numberer" 
+	 id="Numberer"></a>Numberer</b>: il metodo di rinumerazione dei nodi 
+ &quot;<b class="hcp7"><i class="hcp8">RCM</i></b>&quot; 
+ pare in alcuni casi migliorare le possibilità di calcolo per strutture 
+ grandi ma molto regolari.</p>
+<p><b class="hcp6"><a name="Constraints" 
+	 id="Constraints"></a>Constraints</b>: il tipo di vincolo migliore 
+ sembra essere <span class="hcp5">&quot;</span><b class="hcp7"><i class="hcp8">Lagrange</i></b><span class="hcp5">&quot;</span>, ma per alcune 
+ strutture (ad esempio prive di elementi sul suolo elastico) il vincolo 
+ <span class="hcp5">&quot;</span><b class="hcp7"><i class="hcp8">Plain</i></b><span class="hcp5">&quot;</span> 
+ sembra fornire più possibilità di portare il calcolo a buon fine.</p>
+<p><b class="hcp6"><a name="Opzioni_sostitutive" 
+	 id="Opzioni_sostitutive"></a>Opzioni sostitutive</b>: è possibile 
+ sostituire tutta la parte di opzioni relative a &quot;Solver&quot;, &quot;Numberer” 
+ e &quot;Constraints&quot; inserendo i relativi comandi in questa sezione. 
+ Le opzioni precedentemente indicate verranno ignorate.</p>
+<p><span class="hcp1"><a name="Intervento_manuale_sul_file_di_input1" 
+										 id="a1"></a>Intervento manuale 
+ sul file di input</span>: specificare se interrompere il calcolo della 
+ struttura per poter intervenire manualmente nella modifica del file di 
+ input per il solutore. In ogni caso intervenendo sul file di input è possibile 
+ personalizzare le modalità di calcolo da trasferire ad OpenSees.</p>
+</body>
+</html>

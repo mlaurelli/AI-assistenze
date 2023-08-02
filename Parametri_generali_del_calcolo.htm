@@ -1,0 +1,326 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Parametri generali del calcolo</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:normal; }
+span.hcp3 { font-weight:normal;
+text-decoration:none; }
+span.hcp4 { font-weight:bold;
+text-decoration:none; }
+span.hcp5 { margin-bottom:0; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Parametri generali del calcolo</h1>
+<p>La procedura di calcolo con metodo FEM o struttura in muratura presenta 
+ varie opzioni. Alcune opzioni potranno non essere attive per particolari 
+ solutori.</p>
+<p><span class="hcp1"><a name="Normativa" id="Normativa"></a>Normativa</span><span class="hcp2">:</span> specificare il tipo di normativa. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tensioni 
+	 ammissibili D.M. 92</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Stati 
+	 limite D.M. 96</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Stati 
+	 limite D.M. 18</p></li>
+</ul>
+<p><span class="hcp1"><a name="Tipo_di_isolatore" id="Tipo_di_isolatore"></a>Tipo 
+ di isolatore</span>: specificare il tipo di isolatore e se presente selezionare 
+ il nome del Produttore. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Elastomerici</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">A 
+	 pendolo</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">A 
+	 pendolo inverso</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">A 
+	 pendolo doppio</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;"><span class="hcp1">Produttore</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Tipo_di_calcolo" id="Tipo_di_calcolo"></a>Tipo 
+ di calcolo</span><span class="hcp2">:</span> specificare 
+ il tipo di calcolo. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">S</span><span class="hcp1">tatico</span>: la struttura viene calcolata 
+	 con i soli carichi inseriti dall'utente. La combinazione delle CCE 
+	 generata automaticamente come indicato in <span class="hcp1"><a 
+	 href="Combinazione%20CCE.htm">Combinazioni</a></span> potrà comunque 
+	 essere modificata come indicato in <span class="hcp1"><a 
+	 href="Combinazione%20delle%20condizioni%20di%20carico.htm">Combinazione delle 
+	 condizioni di carico</a></span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 modi di vibrare</span>: viene effettuato il calcolo dei soli modi 
+	 propri di vibrare della struttura. Vengono comunque calcolate anche 
+	 le percentuali di massa che vengono interessate da ogni modo. Non 
+	 sarà possibile ottenere le forze statiche equivalenti né le sollecitazioni 
+	 spettrali dei vari modi. Sarà comunque possibile in modellazione ottenere 
+	 la rappresentazione grafica dei vari modi di vibrare cliccando nel 
+	 gruppo <span class="hcp1">Disegno</span> della scheda 
+	 <span class="hcp1">Risultati</span> su <span class="hcp1">Def. 
+	 nodale <img src="../Icone/16/QDn.png" alt="" style="border: Solid 1px #808080; 
+				 border-width: 1px; border-style: solid;" border="1"></span>. 
+	 Non è definita in questo caso la combinazione delle CCE.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">S</span><span class="hcp1">ismica statica</span>: viene effettuata 
+	 l'analisi sismica statica equivalente secondo la normativa Italiana. 
+	 Le combinazioni e le CCE aggiuntive che vengono create dipendono dalla 
+	 presenza o meno di azioni sismiche verticali e dal rapporto fra i 
+	 lati della struttura.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">S</span><span class="hcp1">ismica dinamica</span>: viene effettuata 
+	 l'analisi sismica dinamica secondo la normativa Italiana. Se nella 
+	 struttura sono presenti masse con componente Z diversa da zero, ModeSt 
+	 calcola le azioni sismiche verticali e le combina con le azioni sismiche 
+	 orizzontali nei modi previsti dalla normativa specificata. Come previsto 
+	 dal D.M. 14/02/92 e D.M. 16/01/96, l'azione sismica verticale potrà 
+	 essere calcolata sia in analisi dinamica che applicando l'analisi 
+	 statica in funzione di quanto specificato in <a href="Dati%20di%20calcolo.htm#Sisma_verticale_in_analisi_dinamica">Sisma 
+	 verticale in analisi dinamica</a>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Sismica 
+	 statica non lineare (pushover a fibre)</span>: viene effettuata l'analisi 
+	 sismica statica non lineare (pushover) utilizzando il metodo a plasticità 
+	 diffusa detto anche &quot;a fibre&quot;. Non è possibile effettuare 
+	 l'analisi pushover se nella struttura sono presenti masse con componente 
+	 Z diversa da zero.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Sismica 
+	 statica non lineare (pushover a plasticità concentrata)</span>: viene 
+	 effettuata l'analisi sismica statica non lineare (pushover)&#160;utilizzando 
+	 il metodo a plasticità concentrata. Non è possibile effettuare l'analisi 
+	 pushover se nella struttura sono presenti masse con componente Z diversa 
+	 da zero.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Vincoli_esterni" id="Vincoli_esterni"></a>Vincoli 
+ esterni</span>: specificare quale sia il tipo di vincolo nodale da considerare 
+ nel caso di analisi sismica sia statica che dinamica della struttura. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 sempre vincoli assegnati in modellazione</span><span class="hcp2">:</span> 
+	 la struttura viene calcolata con i vincoli nodali assegnati in modellazione<span class="hcp3">.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 incastrate fondazioni per analisi sismiche</span>: la struttura viene 
+	 calcolata due volte: con i vincoli nodali assegnati in modellazione 
+	 per i soli carichi inseriti dall'utente e successivamente per le azioni 
+	 sismiche incastrando i nodi appartenenti ad elementi della fondazione.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Generazione_combinazioni" 
+										 id="Generazione_combinazioni"></a>Generazione 
+ combinazioni</span>: indicare secondo quali modalità ModeSt debba effettuare 
+ la generazione automatica delle combinazioni delle condizioni di carico 
+ elementare secondo i default previsti per il tipo di calcolo richiesto. 
+ Sarà in ogni caso possibile intervenire poi sulle combinazioni create 
+ per modificarle adattandole alle proprie necessità. Sono disponibili le 
+ seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Lineari</span>: 
+	 vengono generate semplici combinazioni lineari. Questa scelta può 
+	 essere inattiva se nella struttura sono presenti delle non linearità 
+	 geometriche intrinseche, come ad esempio aste resistenti a sola trazione 
+	 o compressione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Non 
+	 lineari</span>: vengono generate combinazioni non lineari e per ognuna 
+	 viene creata in automatico la tabella che descrive la modalità di 
+	 crescita dei carichi durante l'analisi. Se è stata effettuata la classificazione 
+	 delle condizioni di carico elementari, la tabella viene creata applicando 
+	 in primo luogo i carichi permanenti, poi gli accidentali e successivamente 
+	 l'eventuale azione sismica. Alcune combinazioni non verranno create 
+	 come non lineari se ciò non è possibile, come ad esempio nel caso 
+	 di analisi dinamiche.</p></li>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">P-Delta<span class="hcp2">:&#160;indicare se per default debba 
+	 essere attivato il calcolo <a href="Analisi_P-Delta.htm">P-Delta</a> 
+	 per le combinazioni generate.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Valuta 
+	 spostamenti e non sollecitazioni</span>: questo parametro influenza 
+	 solamente eventuali analisi non lineari. Nel caso si esegua il calcolo 
+	 agli <span class="hcp1">Stati limite D.M. 18</span> 
+	 gli spostamenti e le sollecitazioni devono infatti essere valutati 
+	 con coefficienti di struttura diversi (si veda par. 7.3.3.3 del D.M. 
+	 17/01/18). Questa modalità di calcolo viene gestita automaticamente 
+	 per le analisi lineari, ma in quelle non lineari, dovendo assegnare 
+	 a priori i fattori moltiplicativi delle azioni occorre specificare 
+	 se utilizzare quelli necessari per la valutazione degli spostamenti 
+	 o quelli necessari per la valutazione delle sollecitazioni.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Numero 
+	 step intermedi</span>: indica quanti step intermedi vadano aggiunti 
+	 automaticamente fra quelli indicati in tabella per rendere più lenta 
+	 la crescita dei carichi. La tabella degli step non riporterà questi 
+	 valori intermedi che vengono gestiti automaticamente. <span style="text-transform: uppercase;">è</span> 
+	 comunque possibile intervenire manualmente sulle tabelle di carico 
+	 aggiungendo o eliminando step di carico.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Salva 
+	 risultati intermedi</span>: è possibile indicare a ModeSt di salvare 
+	 oltre che i risultati finali delle analisi non lineari anche i risultati 
+	 progressivi di tutti gli step di carico, sia di quelli riportati nella 
+	 tabella, sia di quelli eventualmente generati automaticamente. Si 
+	 potrà in questo modo visualizzare l'evolversi dello stato di deformazione 
+	 della struttura. L'attivazione di questa opzione può però portare 
+	 alla generazione di file di risultati molto grandi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Buckling</span>: 
+	 indicare se per default debba essere attivato il calcolo di <a href="Analisi_di_buckling.htm"><span class="hcp1">buckling</span></a> per le combinazioni 
+	 generate.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Numero 
+	 forme di buckling</span>: indicare quante forme modali ricercare per 
+	 default per ognuna delle combinazioni generate.</p></li>
+</ul>
+<p><span class="hcp4"><a name="Piani_rigidi" 
+	 id="Piani_rigidi"></a>Piani rigidi</span><span class="hcp3">:</span> 
+ specificare <span class="hcp3">il 
+ tipo di schematizzazione dei piani rigidi.</span> Sono disponibili le 
+ seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp4">Nessun 
+	 impalcato rigido</span><span class="hcp3">: 
+	 non vengono considerati rigidi gli impalcati definiti. Nel caso di 
+	 analisi sismica le masse o le forze vengono applicate su ogni nodo.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp4">Metodo 
+	 Master-Slave</span><span class="hcp3">: 
+	 viene utilizzato il metodo Master-Slave per schematizzare gli impalcati 
+	 rigidi.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp4">Metodo 
+	 Master-Slave solo per forze sism.</span><span class="hcp3">: 
+	 viene utilizzato il metodo Master-Slave per schematizzare gli impalcati 
+	 come rigidi solo per le forze sismiche orizzontali sia statiche che 
+	 dinamiche.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp4">Controventatura 
+	 solai</span><span class="hcp3">: 
+	 viene utilizzato il metodo della controventatura per schematizzare 
+	 gli impalcati come rigidi.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp4">Controventatura 
+	 solai solo per forze sism.</span><span class="hcp3">: 
+	 viene utilizzato il metodo della controventatura per schematizzare 
+	 gli impalcati come rigidi solo per le forze sismiche orizzontali sia 
+	 statiche che dinamiche.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp4">Avanzate</span><span class="hcp3">: questa opzione 
+	 permette di applicare agli impalcati diversi metodi di schematizzazione 
+	 dei piani rigidi.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Selezione 
+	 solai controventati</span>: questa è attiva solo se è stata selezionata 
+	 l'opzione <span class="hcp1">Avanzate</span> e consente 
+	 di indicare a quali solai applicare il metodo della controventatura 
+	 per schematizzare gli impalcati come rigidi. <span class="hcp5">Le 
+	 specifiche per la selezione sono quelle riportate in <a href="javascript:void(0);" id="a6" style="font-weight: bold;" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('Setsolai.htm');return false;">Selezione 
+	 solai</a></span><span class="hcp5">.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Selezione 
+	 solai controventati solo per forze</span> <span class="hcp1">sism.</span>: 
+	 questa è attiva solo se è stata selezionata l'opzione <span class="hcp1">Avanzate</span> 
+	 e consente di indicare a quali solai applicare il metodo della controventatura 
+	 per schematizzare gli impalcati come rigidi solo per le forze sismiche 
+	 orizzontali sia statiche che dinamiche.&#160;<span class="hcp5">Le 
+	 specifiche per la selezione sono quelle riportate in <a href="javascript:void(0);" id="a61" style="font-weight: bold;" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('Setsolai.htm');return false;">Selezione 
+	 solai</a></span><span class="hcp5">.</span></p></li>
+</ul>
+<p><span class="hcp3">Per approfondimenti 
+ si veda anche</span> <span class="hcp4"><a 
+	 href="Schematizzazione%20piani%20rigidi.htm">Schematizzazione piani rigidi</a></span><span class="hcp3">.</span></p>
+<p><span class="hcp4"><a name="Recupero_masse_secondarie" 
+	 id="Recupero_masse_secondarie"></a>Recupero masse secondarie</span><span class="hcp3">: in analisi 
+ statica o sismica statica o dinamica lineare è possibile specificare come 
+ devono essere trattate le masse o le forze che non sono automaticamente 
+ riferibili ad un impalcato. Sono disponibili le seguenti opzioni:</span></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Trasferire 
+	 le masse </p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold; 
+									 margin-bottom: 7pt; margin-left: 10pt;">All'impalcato 
+	 più vicino in assoluto</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold; 
+									 margin-top: 0pt; margin-bottom: 7pt; 
+									 margin-left: 10pt;">Anche sui nodi 
+	 degli impalcati non rigidi</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold; 
+									 margin-top: 0pt; margin-bottom: 7pt; 
+									 margin-left: 10pt;">Modificare coordinate 
+	 baricentro impalcati rigidi</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="margin-top: 0pt; 
+									 font-weight: bold; margin-bottom: 7pt; 
+									 margin-left: 20pt;">XY</p></li>
+	<li class="p-IndentBullet2"><p class="IndentBullet2" style="font-weight: bold; 
+									 margin-top: 0pt; margin-bottom: 7pt; 
+									 margin-left: 20pt;"><span class="hcp1">XYZ</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Mantenere 
+	 sul nodo masse e forze relative</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: bold;">Annullare 
+	 masse e forze relative</p></li>
+</ul>
+<p class="Bullet1" style="font-weight: bold;">Individuazione perimetri 
+ impalcato<span class="hcp2">: se è stata selezionata l'opzione 
+ </span>Trasferire le masse<span class="hcp2"> è possibile 
+ specificare come vengono costruiti i perimetri di impalcato. Sono disponibili 
+ le seguenti opzioni:</span></p>
+<ul>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Dagli 
+	 elementi appartenenti all'impalcato<span class="hcp2">: 
+	 per individuare il perimetro vengono presi in considerazione solo 
+	 le aste ed i bordi di elementi bidimensionali che </span>appartengono<span class="hcp2"> all'impalcato.</span></p></li>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Dagli 
+	 elementi giacenti sull'impalcato<span class="hcp2">: 
+	 per individuare il perimetro vengono presi in considerazione solo 
+	 le aste ed i bordi di elementi bidimensionali i cui nodi </span>giacciono<span class="hcp2"> alla quota dell'impalcato, anche se 
+	 appartenenti all'impalcato 0.</span></p></li>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1"><span class="hcp1">Dai solai appartenenti all'impalcato</span><span class="hcp2">: per individuare il perimetro vengono 
+	 presi in considerazione solo le aste di perimetro dei solai i cui 
+	 nodi appartengono all'impalcato.</span></p></li>
+</ul>
+<p>Per approfondimenti si veda anche <span class="hcp1"><a 
+	 href="Recupero%20masse%20secondarie.htm">Recupero masse secondarie</a></span>.</p>
+<p class="AmbienteProgettazione"><span class="hcp4">I 
+ seguenti parametri valgono solo per il calcolo di strutture in muratura</span></p>
+<p><span class="hcp1"><a name="Tipo_di_calcolo_muratura" 
+										 id="Tipo_di_calcolo_muratura"></a>Tipo 
+ di calcolo</span>: specificare il tipo di calcolo. Sono disponibili le 
+ seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">S</span><span class="hcp1">tatico</span>: la struttura viene calcolata 
+	 con i soli carichi inseriti dall'utente utilizzando il metodo FEM. 
+	 La combinazione delle CCE generata automaticamente come indicato in 
+	 <span class="hcp1">Combinazioni</span> potrà comunque 
+	 essere modificata come indicato in <span class="hcp1"><a 
+	 href="Combinazione%20delle%20condizioni%20di%20carico.htm">Combinazione delle 
+	 condizioni di carico</a></span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">S</span><span class="hcp1">ismica statica</span>: viene effettuata 
+	 l'analisi sismica statica equivalente secondo la normativa Italiana 
+	 utilizzando il metodo FEM. Le combinazioni e le CCE aggiuntive che 
+	 vengono create dipendono dalla presenza o meno di azioni sismiche 
+	 verticali e dal rapporto fra i lati della struttura.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Sismica 
+	 dinamica</span>: viene effettuata l'analisi sismica dinamica secondo 
+	 la normativa Italiana utilizzando il metodo FEM. Se nella struttura 
+	 sono presenti masse con componente Z diversa da zero, ModeSt calcola 
+	 le azioni sismiche verticali e le combina con le azioni sismiche orizzontali 
+	 nei modi previsti dalla normativa specificata. Come previsto dal D.M. 
+	 14/02/92 e D.M. 16/01/96, l'azione sismica verticale potrà essere 
+	 calcolata sia in analisi dinamica che applicando l'analisi statica 
+	 in funzione di quanto specificato in <a href="Dati%20di%20calcolo.htm#Sisma_verticale_in_analisi_dinamica">Sisma 
+	 verticale in analisi dinamica</a>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Sismica 
+	 statica non lineare (pushover a telaio equivalente)</span>: viene 
+	 effettuata l'analisi sismica statica non lineare (pushover) utilizzando 
+	 come modello semplificato il telaio equivalente. Sia le forze sismiche 
+	 che le azioni verticali vengono calcolate in funzione di tutte le 
+	 CCE inserite dall'utente. Oltre all'analisi sismica statica non lineare 
+	 viene eseguita anche un'analisi per soli carichi verticali utilizzando 
+	 il metodo FEM. Per approfondimenti si veda anche <span class="hcp1"><a 
+	 href="Generalit&agrave;_sul_metodo_Pushover.htm">Generalità sul metodo pushover</a></span>.</p></li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a6');
+	FilePopupInit('a61');
+//]]></script>
+</body>
+</html>

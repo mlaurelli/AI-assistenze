@@ -1,0 +1,157 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Il metodo degli stati limite</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+font.hcp2 { font-family:Symbol; }
+span.hcp3 { font-style:italic;
+font-weight:bold; }
+span.hcp4 { vertical-align:sub; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Il metodo degli stati limite</h1>
+<p>È possibile effettuare il calcolo della struttura secondo il metodo 
+ degli stati limite, in alternativa al consueto metodo delle tensioni ammissibili. 
+ Il calcolo è effettuabile solo se sono state definite le tipologie di 
+ CCE e se ad ogni CCE è stato associata una tipologia.</p>
+<p>Si ricorda la differenza concettuale fra i due metodi:</p>
+<p class="Normal3"><span class="hcp1">Tensioni ammissibili</span>: 
+ dai carichi previsti si risale alle sollecitazioni di progetto e da queste 
+ alle tensioni nelle membrature, dopodiché le tensioni vengono confrontate 
+ con le tensioni &quot;ammissibili&quot; nel materiale, ossia con tensioni 
+ ridotte rispetto a quelle di rottura mediante opportuni coefficienti di 
+ sicurezza.</p>
+<p class="Normal3"><span class="hcp1">Stati limite</span>: 
+ dai carichi previsti, tramite opportuni coefficienti probabilistici di 
+ amplificazione, si risale alle sollecitazioni massime presumibilmente 
+ agenti sulla struttura e si confrontano queste ultime con le sollecitazioni 
+ di rottura, determinando così il coefficiente di sicurezza.</p>
+<p>Il metodo delle tensioni ammissibili ha il vantaggio di più semplici 
+ operazioni di calcolo contro l'impossibilità di conoscere l'effettivo 
+ grado di sicurezza rispetto ai carichi agenti, mentre il metodo degli 
+ stati limite consente di sapere con certezza il grado di sicurezza rispetto 
+ ai carichi previsti sulla struttura, restando però incognito il tasso 
+ di lavoro dei materiali e al prezzo di più onerose procedure di calcolo, 
+ sicuramente non più effettuabili con metodi manuali o tradizionali.</p>
+<p>Attualmente, secondo la normativa Italiana, è possibile operare la verifica 
+ delle strutture secondo i seguenti metodi:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">metodo delle tensioni ammissibili 
+	 (D.M. 14/02/92);</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">metodo delle tensioni ammissibili 
+	 (D.M. 17/01/18);</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">metodo degli stati limite 
+	 secondo la normativa Italiana <span style="font-weight: normal;">(D.M. 
+	 9/01/96);</span></p></li>
+	<li class="p-Elenco1"><p class="Elenco1">metodo degli stati limite 
+	 secondo gli Eurocodici, seguendo le direttive del DAN (Documento di 
+	 Attuazione Nazionale) che specifica o sostituisce alcuni parametri 
+	 degli Eurocodici;</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">metodo degli stati limite 
+	 secondo D.M. 17/01/18.</p></li>
+</ol>
+<p>In ModeSt la determinazione delle sollecitazioni viene effettuata in 
+ modo automatico durante il calcolo della struttura. La sola parte demandata 
+ all'utente è la &quot;classificazione&quot; delle condizioni di carico 
+ elementari (CCE), classificazione che consente di stabilire quei dati 
+ di carattere probabilistico che identificano i carichi.</p>
+<p>In questo senso ModeSt prevede 4 tipi di carichi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">carichi permanenti (codificati 
+	 con la lettera <span class="hcp1">G</span>) in cui rientrano 
+	 sia quelli strutturali che non strutturali;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">carichi variabili (codificati 
+	 con la lettera <span class="hcp1">Q</span>);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">carichi eccezionali (codificati 
+	 con la lettera <span class="hcp1">A</span>) di raro 
+	 utilizzo in quanto corrispondenti a esplosioni, urti o altri eventi 
+	 eccezionali;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">carichi di precompressione 
+	 (codificati con la lettera <span class="hcp1">P</span>), 
+	 previsti solo per ragioni di completezza visto che ModeSt non gestisce 
+	 direttamente la precompressione;</p></li>
+</ul>
+<p>ModeSt prevede inoltre una quinta categoria di carichi, codificati con 
+ la lettera <span class="hcp1">I</span>, per indicare i carichi 
+ che devono essere ignorati per quanto riguarda la determinazione delle 
+ azioni sulla struttura (ad esempio le sole azioni di massa).</p>
+<p>Come previsto dal metodo degli stati limite ognuna di queste &quot;tipologie&quot; 
+ di carico è caratterizzata da due diversi coefficienti (<font face="Symbol" class="hcp2">g</font>) da utilizzare uno nel caso in cui il carico 
+ aumenti la sicurezza della struttura ed uno nel caso in cui la diminuisca.</p>
+<p>Purtroppo nella realtà di una struttura molto complessa non è facile 
+ determinare a priori se certi carichi aumentino o no la sicurezza della 
+ struttura e quindi ModeSt consente di operare in entrambe le ipotesi. 
+ Si pensi ai carichi accidentali in un capannone in cui i pilastri si comportano 
+ come mensole: associati alle azioni sismiche sono (forse) a favore di 
+ sicurezza in quanto diminuiscono l'eccentricità dello sforzo normale, 
+ mentre senza le azioni sismiche gli stessi carichi aumentano semplicemente 
+ la compressione nel pilastro e quindi sono a sfavore di sicurezza.</p>
+<p>Resta inevitabilmente compito dell'utente operare le necessarie distinzioni 
+ per limitare il numero di casi da esaminare da parte di ModeSt. Ogni condizione 
+ di carico può quindi all'interno di ModeSt essere classificata come a 
+ <span class="hcp3">Favore di sicurezza</span>, 
+ a <span class="hcp3">Sfavore di sicurezza</span> 
+ o <span class="hcp3">Ambigua</span>. 
+ In quest'ultimo caso ModeSt genera entrambi i casi di sollecitazione (se 
+ i due coefficienti <font face="Symbol" class="hcp2">g</font> 
+ sono diversi), creando però un notevole numero di combinazioni da esaminare.</p>
+<p>I carichi di tipo variabile possono inoltre essere considerati come 
+ <span class="hcp3">di base</span> o 
+ come carichi <span class="hcp3">indipendenti</span>. 
+ Anche in questo caso ModeSt consente di operare la corretta classificazione 
+ dei carichi, introducendo anche la tipologia <span class="hcp3">Ambigua</span> 
+ che comporta la creazione di entrambe le combinazioni.</p>
+<p>In sede di calcolo occorre poi definire gli <span class="hcp1">ambienti 
+ di carico</span>, concettualmente simili alle &quot;Combinazioni di Carico&quot; 
+ del metodo delle tensioni ammissibili, ma che più in generale definiscono 
+ le diverse situazioni di carico e quali stati limite valutare. Le vere 
+ e proprie combinazioni di carico verranno poi generate in automatico da 
+ ModeSt in funzione della classificazione e dei coefficienti delle varie 
+ CCE.</p>
+<p>Nel caso di carichi variabili classificati come <span style="font-style: normal; 
+														 font-weight: normal;">&quot;Ambigui</span>&quot; 
+ ossia sia di base che indipendenti, è poi possibile indicare insieme a 
+ quali altri carichi debbano essere <span class="hcp1">accoppiati</span> 
+ (ossia considerati sempre dello stesso tipo) o <span class="hcp1">disaccoppiati</span> 
+ (ossia considerati sempre di tipo diverso).</p>
+<p>Ad esempio le CCE dovute alla neve e al vento possono essere definite 
+ come ambigue, in modo che vengano considerate sia di base che indipendenti, 
+ ma occorre imporre che non siano contemporaneamente dello stesso tipo, 
+ devono cioè essere <span class="hcp1">disaccoppiate</span>. 
+ Al contrario se per motivi di convenienza di modellazione un certo carico 
+ è stato diviso in due o più CCE diverse (ad esempio vento radente e vento 
+ in pressione), occorre imporre che le due CCE siano considerate di volta 
+ in volta dello stesso tipo (ossia <span class="hcp1">accoppiate</span>) 
+ in quanto concettualmente rappresentano una sola condizione di carico.</p>
+<p>Attraverso l'opzione <span class="hcp1">Genera le combinazioni 
+ con un solo carico di tipo variabile come di base</span> presente nella 
+ scheda &quot;Ambienti di carico&quot; della finestra del calcolo è possibile 
+ creare le combinazioni di carico con al massimo un carico di tipo variabile 
+ considerato come di base.</p>
+<p style="margin-bottom: 0;">Si noti inoltre che, oltre ai coefficienti 
+ <font face="Symbol" class="hcp2">Y</font><span class="hcp4">0</span>, 
+ <font face="Symbol" class="hcp2">Y</font><span class="hcp4">1</span>, 
+ <font face="Symbol" class="hcp2">Y</font><span class="hcp4">2</span> 
+ previsti dal metodo agli stati limite, la normativa Italiana D.M. 96 per 
+ i carichi variabili considera un coefficiente <font face="Symbol" class="hcp2">Y</font> 
+ diverso in caso di calcolo sismico. Pertanto è stato introdotto in ModeSt 
+ anche il coefficiente <font face="Symbol" class="hcp2">Y<span class="hcp4">0</span></font><span class="hcp4">,s</span> 
+ (D.M. 96) che viene utilizzato per gli stati limite ultimi sismici secondo 
+ il D.M. 16/01/96.</p>
+</body>
+</html>

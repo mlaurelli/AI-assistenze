@@ -1,0 +1,113 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Modellazione della struttura</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+a.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:bold; }
+img.hcp3 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Modellazione della struttura</h1>
+<p>Prima di procedere si consiglia di eseguire le analisi preliminari di 
+ semplificazione e controllo del modello come indicato in &quot;<u><span 
+	 style="text-decoration: none; "><a href="Suggerimenti_per_la_modellazione_della_struttura.htm" class="hcp1">Suggerimenti 
+ per la modellazione della struttura</a>&quot;.</span></u></p>
+<p>Dopo avere modellato la struttura, le aste devono essere suddivise in 
+ modo da individuare gli elementi in cui si vuole cogliere il comportamento 
+ elasto-plastico e che quindi devono essere trasferiti al solutore come 
+ elementi a fibre. Durante il lavoro è buona prassi quella di eseguire 
+ più volte &quot;salva con nome&quot; per eventualmente ripartire da un 
+ modello iniziale o intermedio.</p>
+<p>Per operare in modo corretto è bene comprendere come si comporta ModeSt 
+ per la definizione delle sezioni a fibre:</p>
+<p>ModeSt esamina tutte le travi e i pilastri di cui sia stata effettuata 
+ la progettazione esecutiva delle armature. Se le &quot;campate&quot; delle 
+ travi o gli &quot;interpiani&quot; dei pilastri sono stati suddivisi in 
+ almeno 3 aste, la prima e l'ultima di tali aste sono gestite come elementi 
+ a fibre e ModeSt ne recupera l'armatura per trasferirla al solutore. Se 
+ il numero di suddivisioni è almeno pari a 5, vengono considerati con comportamento 
+ a fibre anche il 2° e 4° elemento costituenti la &quot;campata&quot; o 
+ l'&quot;interpiano&quot;. Vengono trasferite come elementi a fibre anche 
+ eventuali aste con sezione di membratura &quot;generica&quot; di cui sia 
+ stata inserita l'armatura con l'editor sezioni con sollecitazioni automatiche. 
+ Questi elementi possono essere utili per imporre un comportamento elasto-plastico 
+ a parti della struttura particolarmente critiche.</p>
+<p>Come si può capire, la lunghezza di tali elementi definisce la lunghezza 
+ delle zone a plasticità diffusa e quindi delle zone in cui si formeranno 
+ eventuali cerniere plastiche. Tale lunghezza è oggetto ancora di numerosi 
+ studi, ma in genere si consiglia un valore pari a 1-2 volte la dimensione 
+ significativa della membratura. Se per una trave tale dimensione è ovviamente 
+ l'altezza, per un pilastro ciò non è immediatamente ovvio. Valori di tentativo 
+ potrebbero essere riferiti alla dimensione media della sezione.</p>
+<p>Tenendo conto di eventuali nodi intermedi già presenti a livello di 
+ &quot;campata&quot; o di &quot;interpiano&quot; e tenendo presente quanto 
+ detto, possiamo a questo punto suddividere le aste cliccando nel gruppo 
+ <span class="hcp2">Modifica</span> della scheda <span class="hcp2">Modellazione</span> 
+ su <span class="hcp2">Spezza</span> <img src="../Icone/16/spezza.png" alt="" border="1" class="hcp3"> 
+ e poi su <span class="hcp2">Spezza aste in 3 parti (estremità 
+ imposta)</span> <img src="../Icone/16/spezzaaste3ei.png" alt="" border="1" class="hcp3"> 
+ che divide le aste in 3 parti con degli elementi di estremità di lunghezza 
+ prefissata oppure su <span class="hcp2">Spezza aste in 3 
+ parti (estremità = nH)</span> <img src="../Icone/16/spezzaaste3nh.png" alt="" border="1" class="hcp3"> che le divide con elementi 
+ di lunghezza pari ad un multiplo dell'altezza. Utilizzando i comandi più 
+ volte sulla stessa asta si possono volendo ottenere agevolmente anche 
+ 5 suddivisioni. Un buon metodo di operare è quello di <span class="hcp2"><a 
+	 href="Selezioni.htm">selezionare</a></span> le aste su cui operare 
+ in modo uguale e lanciare il comando desiderato. Fare attenzione a non 
+ usare il comando <span class="hcp2">Spezza aste in 3 parti 
+ (estremità = nH)</span> <img src="../Icone/16/spezzaaste3nh.png" alt="" border="1" class="hcp3"> su 
+ pilastri di grosse dimensioni (tipicamente quelli che sostituiscono le 
+ pareti) in quanto, operando sulla massima delle due dimensioni dell'asta, 
+ non effettuerebbe una corretta suddivisione o non la farebbe affatto.</p>
+<p>Va tenuto presente che l'analisi pushover viene sempre effettuata <span class="hcp2">senza zone rigide</span>, ma è ugualmente 
+ da evitare la divisione di aste in elementi che risultino completamente 
+ immersi negli altri. La posizione delle cerniere plastiche potrebbe risultarne 
+ falsata rispetto alla realtà.</p>
+<p>Per determinare le caratteristiche delle cerniere plastiche e i domini 
+ di interazione N-M nelle travi e pilastri in c.a. è necessario seguire 
+ la procedura indicata nel paragrafo <span class="hcp2"><a 
+	 href="Inserimento_armature.htm">Inserimento armature</a></span>.</p>
+<p>Al termine dell'inserimento delle armature, attivando il disegno della 
+ colorazione delle aste selezionando &quot;Zone a fibre pushover c.a.&quot; 
+ nella sezione &quot;Aste&quot; del pannello <span class="hcp2">Colorazioni 
+ elementi</span> ci permetterà di controllare se ModeSt ha individuato 
+ nel modo da noi desiderato il posizionamento degli elementi a fibre.</p>
+<p>L'analisi viene effettuata trascurando la presenza di rinforzi in FRP 
+ o incamiciature in acciaio o con il sistema CAM, si veda a proposito anche 
+ quanto indicato in &quot;<a href="Note_sul_calcolo_delle_strutture_rinforzate.htm" class="hcp1">Note sul calcolo 
+ delle strutture rinforzate</a>&quot;, che verranno comunque messi in conto 
+ durante la ricerca dei diversi stati limite, si considerano invece i rinforzi 
+ dei pilastri realizzati con incamiciature in c.a. e trasferiti al solutore 
+ Xfinest nel seguente modo:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Dimensioni della sezione corrispondete 
+	 a quella esterna del rinforzo.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Caratteristiche meccaniche 
+	 del calcestruzzo e dell'acciaio relative all'incamiciatura (ipotesi 
+	 di estensione delle proprietà come indicato nel paragrafo C8.7.4.2.1 
+	 della <span style="line-height: 115%;">Circolare n. 7 del 21/01/19</span>) 
+	 e specificate nei criteri di progetto (vedi <span class="hcp2"><a 
+	 href="CriPil.htm#Dati_per_verifiche_incamiciature_in_ca">Dati per 
+	 verifiche incamiciature in c.a.</a></span>).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Copriferro della sezione relativa 
+	 all'incamiciatura.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Fattore confinamento nucleo 
+	 interno specificato nei criteri di progetto (vedi <span class="hcp2"><a 
+	 href="CriPil.htm#Fattore_di_confinamento_nucleo_interno">Fattore di 
+	 confinamento nucleo interno</a></span>).</p></li>
+</ul>
+</body>
+</html>

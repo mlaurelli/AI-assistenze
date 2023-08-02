@@ -1,0 +1,119 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Elementi importabili in Revit</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+b.hcp2 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Elementi importabili in Revit</h1>
+<p>Si fa presente che l'importazione degli elementi in Revit è basata sulla 
+ definizione del modello analitico associato agli elementi stessi. Non 
+ è possibile quindi aggiornare in Revit elementi a cui non è stato associato 
+ il modello analitico.</p>
+<p>Con le limitazioni suddette, è comunque possibile <span style="mso-bidi-font-weight: bold;">importare</span> 
+ le informazioni relative agli Impalcati, alle Travi, ai Pilastri, ai Muri, 
+ alle Solette/Platee, ai Solai ed alle Tamponature. Non sono importabili 
+ aste con membratura generica sia nella generazione che nell'aggiornamento 
+ del disegno.</p>
+<p>All'interno di Revit, cliccando nel gruppo <span class="hcp1">Importa</span> 
+ della scheda <span class="hcp1">Moduli aggiuntivi</span> 
+ su <span class="hcp1">ModeSt</span> <span class="hcp1"><img src="../modest32.png" alt="" style="border: Solid 1px #808080; border-width: 1px; 
+	 border-style: solid;" border="1"></span> compare la finestra di 
+ dialogo riportata nella figura sottostante.</p>
+<p style="text-align: center;"><img src="Revit_07.png" alt="" style="border: none;" border="0"></p>
+<p>Prima di procedere all'importazione, occorre indicare se generare o 
+ aggiornare un disegno, selezionare quali elementi importare ed impostare 
+ le cartelle in cui ricercare le &quot;famiglie&quot;. Successivamente 
+ selezionare il file da importare.</p>
+<p>La procedura di importazione si comporta come segue:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">Individua gli elementi di 
+	 ModeSt e dei dati necessari per descriverli in Revit.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Individua ed associa le famiglie 
+	 da utilizzare per ciascuna sezione in c.a., legno e acciaio presente 
+	 nel file da importare e visualizza una finestra di dialogo, chiamata 
+	 &quot;Mappatura sezioni aste&quot;, con il risultato dell'associazione. 
+	 Nella &quot;Mappatura sezioni aste&quot; è possibile controllare e 
+	 modificare la famiglia associata cliccando sul bottone &quot;Sfoglia&quot;.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Trasforma la struttura in 
+	 un modello analitico costituito da nodi ed elementi.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Definisce i parametri che 
+	 caratterizzano a livello di Revit gli elementi in modo da valutare 
+	 la loro reale posizione rispetto al modello analitico e quindi ai 
+	 nodi (fili fissi, scostamenti dai fili fissi).</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">Aggiorna solo le aste (travi 
+	 e pilastri), sia in termini di sezione e/o posizione (filo fisso e 
+	 scostamento dal filo fisso), che hanno la stessa posizione sia in 
+	 Revit che in ModeSt (con le stesse coordinate dei nodi iniziale e 
+	 finale) e aggiorna gli impalcati (aggiungendo i nuovi impalcati e 
+	 cancellando e rinominando quelli esistenti).</p></li>
+	<li class="p-Elenco1"><p class="Elenco1" style="margin-bottom: 0pt;">Genera 
+	 un file con nome &quot;Report.txt&quot; contenente l'elenco degli 
+	 elementi creati, eliminati, modificati e tutte le anomalie relative 
+	 all'importazione della struttura in Revit.</p></li>
+</ol>
+<p>L'opzione <span class="hcp1">Cancella elemento e reinseriscilo 
+ (ciò comporterà cambiamento ID)</span> consente di eliminare tutti gli 
+ elementi e di rigenerarli con un nuovo ID. La suddetta opzione può essere 
+ deselezionata solo nel caso in cui Revit non segnali errori nell'importazione 
+ della struttura. Gli errori possono essere causati dalla modifica della 
+ sezione delle travi. La modifica del filo fisso e/o dello scostamento 
+ dal filo fisso dei pilastri comporta sempre la loro eliminazione e la 
+ rigenerazione con un nuovo ID. Così come la rotazione di travi e pilastri.</p>
+<p>L'opzione <span class="hcp1">Mostra messaggi di errore 
+ nella creazione degli oggetti</span> consente di visualizzare gli errori 
+ segnalati da Revit nella creazione dell'elemento. In questo caso l'elemento 
+ non verrà creato.</p>
+<p>L'opzione <span class="hcp1">Mostra avvisi di Revit</span> 
+ consente di visualizzare gli avvertimenti segnalati da Revit nella creazione 
+ del singolo elemento. In questo caso l'elemento verrà creato ed inserito.</p>
+<p class="Titolo7">MODALITÀ DI DEFINIZIONE DELLE SEZIONI DI TRAVI E PILASTRI</p>
+<p>La cosa fondamentale per la definizione delle sezioni di travi e pilastri 
+ è che in Revit siano presenti le &quot;famiglie&quot; dei &quot;tipi&quot; 
+ di membrature (travi o pilastri).</p>
+<p><span class="hcp1">Per questo motivo è necessario installare 
+ il programma &quot;RVT_20<font color="#FF0000"><b style="font-style: italic; 
+													 font-weight: bold;">xx</b></font></span><span class="hcp1">_ITA_Libraries.exe&quot;</span> scaricabile 
+ dal seguente link: https://knowledge.autodesk.com/it/support/revit-products/downloads/caas/downloads/downloads/ITA/content/autodesk-revit-20<font 
+	 color="#FF0000"><b class="hcp2">xx</b></font>-content.html.</p>
+<p><span class="hcp1">N.B.</span> sostituire <font color="#FF0000"><b class="hcp2">xx</b></font> con il numero dell'anno 
+ relativo alla versione di Revit: 19, 20, 21, ecc.</p>
+<p>Facciamo osservare che le aste con membratura generica vengono esportate 
+ in Revit come pilastri se perfettamente verticali, altrimenti come travi.</p>
+<p>Per la <span class="hcp1">definizione delle sezioni in 
+ c.a.</span> se la forma della sezione appartiene alle tipologie rettangolare, 
+ circolare, T, T rovescia, L, la sezione viene definita con la forma e 
+ le dimensioni specificate in ModeSt, altrimenti viene definita una sezione 
+ rettangolare fittizia.</p>
+<p>Per la <span class="hcp1">definizione delle sezioni in 
+ acciaio</span> viene utilizzato il file sezmgt.csv (si veda quanto descritto 
+ a riguardo in <span class="hcp1"><a href="Elementi_importabili_Revit_2022.htm">Elementi 
+ esportabili da Revit</a></span>). Per le sezioni con verifica prevista 
+ acciaio, viene individuato il codice presente nella colonna di Revit dal 
+ corrispondente codice della sezione di ModeSt e lo usa per vedere se è 
+ presente nella famiglia di Revit in base al tipo di membratura (trave 
+ o pilastro) e alla forma della sezione (rettangolare, circolare, ecc.). 
+ Se viene trovato, la sezione viene associata al codice di Revit, altrimenti 
+ se la forma della sezione appartiene alle tipologie rettangolare, rettangolare 
+ cava, circolare, circolare cava, I stondata, T, T stondata, L, L stondata, 
+ C stondata, la sezione viene definita con la forma e le dimensioni specificate 
+ in ModeSt. Nel caso invece che la forma della sezione non appartenga alle 
+ tipologie precedenti viene definita una sezione rettangolare fittizia.</p>
+<p>Per la <span class="hcp1">definizione delle sezioni in 
+ legno</span> se la forma della sezione appartiene alla tipologia rettangolare, 
+ la sezione viene definita con la forma e le dimensioni specificate in 
+ ModeSt, altrimenti viene definita una sezione rettangolare fittizia.</p>
+</body>
+</html>

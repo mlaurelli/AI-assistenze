@@ -1,0 +1,39 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Inserimento armature</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Inserimento armature</h1>
+<p>L'inserimento delle armature presenti (o presunte, visto che in genere 
+ si parla di edifici esistenti) all'interno degli elementi va effettuato 
+ con la struttura calcolata, quindi in prima istanza occorre effettuare 
+ un'analisi (sismica o non sismica, ma in ogni caso col metodo degli stati 
+ limite) con riferimento al D.M. 16/01/96 o al D.M. 17/01/18.</p>
+<p>Visto che uno dei punti critici dell'analisi non è tanto questo, quanto 
+ la ricerca della corretta convergenza, può essere utile eseguire alcuni 
+ calcoli di tentativo per capire il comportamento della struttura. A tale 
+ scopo una buona e veloce strada da seguire è quella di far progettare 
+ in prima istanza direttamente da ModeSt le armature negli elementi. A 
+ questo proposito si fa notare che per impedire a ModeSt di calcolare in 
+ automatico i ferri di ripresa nei pilastri in funzione delle sollecitazioni 
+ agenti, occorre impostare nei criteri generali di progetto dei pilastri 
+ il parametro <span style="font-weight: bold;"><a href="CriGenPil.htm#Non_progettare_riprese_ma_estendi_solo_i_ferri">Non 
+ progettare riprese ma estendo solo i ferri</a></span>. Scelta quindi la 
+ normativa di riferimento dell'epoca di costruzione della struttura ed 
+ aggiustati i criteri di progetto, si può procedere ad una progettazione 
+ automatica delle armature (progettazione simulata). Qualora qualche pilastro 
+ non sia progettabile, si potrà intervenire in progettazione interattiva 
+ per inserire forzatamente l'armatura desiderata.</p>
+<p>Quando tutti i parametri di calcolo saranno poi calibrati, al momento 
+ dell'analisi definitiva occorrerà ovviamente in progettazione interattiva 
+ intervenire per rendere l'armatura congruente con lo stato di fatto.</p>
+</body>
+</html>

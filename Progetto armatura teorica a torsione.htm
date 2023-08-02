@@ -1,0 +1,84 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progetto armatura teorica a torsione</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+font.hcp1 { font-family:Symbol; }
+span.hcp2 { vertical-align:sub; }
+span.hcp3 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progetto armatura teorica a torsione</h1>
+<p>Attualmente le verifiche a torsione sono effettuate solo per le sezioni 
+ rettangolari nel caso di calcolo col metodo degli stati limite.</p>
+<p>In ognuna delle aste costituenti la travata il progetto e le verifiche 
+ a torsione vengono attivati solo se nei criteri di progetto, il parametro 
+ <span style="font-weight: bold; text-decoration: none; "><a href="CriTra.htm#Progetto_a_torsione">Progetto 
+ a torsione</a></span> è stato selezionato e se la massima tensione tangenziale 
+ (per sola torsione) nella sezione è superiore alla percentuale di trazione 
+ ammissibile nel calcestruzzo <font face="Symbol" class="hcp1"><span 
+	 style="font-weight: normal;">t</span></font><span class="hcp2">c0</span> 
+ o F<span class="hcp2">ctm</span> specificata nei criteri 
+ di progetto al parametro <a href="CriTra.htm#tmax_amm__senza_progetto_a_torsione"><span class="hcp3">Trazione senza progetto a torsione</span></a>.</p>
+<p>È possibile controllare in progettazione interattiva se in un'asta è 
+ attivata o meno la verifica a torsione visualizzando il diagramma del 
+ momento torcente cliccando nel gruppo <span class="hcp3">Diagrammi</span> 
+ su <span class="hcp3">Torsione <img src="../Icone/16/pmt.png" alt="" style="border: Solid 1px #808080; 
+													 border-width: 1px; 
+													 border-style: solid;" border="1"></span>. 
+ Il diagramma viene disegnato con tratto continuo se la verifica è attivata, 
+ a tratteggio in caso contrario.</p>
+<p>L'attivazione delle verifiche a torsione comporta il controllo dei seguenti 
+ minimi di regolamento:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">i ferri lungo il perimetro 
+	 devono essere disposti a distanze mutue non superiori a 35 cm e deve 
+	 essere presente almeno un ferro in ognuno degli spigoli;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">l'area delle staffe (per torsione) 
+	 deve essere almeno 0.15*b cmq/m (barre ad aderenza migliorata) o 0.25*b 
+	 cmq/m (barre lisce) con b spessore minimo dell'anima;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">il passo delle staffe deve 
+	 essere inferiore a 20 cm ed a 1/8 della linea media della sezione 
+	 anulare resistente.</p></li>
+</ul>
+<p>Nel seguito quanto specificato con riferimento all'&quot;anima&quot; 
+ delle travi a T e a L è valido anche per le sezioni rettangolari.</p>
+<p>L'armatura a torsione (staffe e ferri longitudinali) viene calcolata 
+ per ognuno dei due rettangoli costituenti la sezione e quindi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">nell'anima l'area delle staffe 
+	 necessaria per torsione viene sommata all'area necessaria per taglio;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">nell'ala l'area delle staffe 
+	 necessaria per torsione viene sommata a quella eventualmente necessaria 
+	 per flessione dovuta alla tensione sul terreno (travi su suolo elastico);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">l'area dei ferri longitudinali 
+	 necessari per ognuno dei rettangoli viene suddivisa in proporzione 
+	 alla lunghezza dei lati del rettangolo interessati alla &quot;circolazione&quot; 
+	 delle <font face="Symbol" class="hcp1">t</font>;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">nelle &quot;pareti&quot; dell'anima 
+	 l'area dei ferri di parete necessari per torsione viene sommata a 
+	 quella dei ferri necessari per taglio;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="margin-bottom: 0;">nei 
+	 lati corrispondenti alle &quot;basi&quot; superiori ed inferiori l'area 
+	 dei ferri longitudinali necessari per torsione viene sommata all'area 
+	 dei ferri necessari per flessione o pressoflessione.</p></li>
+</ul>
+<p><span class="hcp3">Utilizzo da linea di comando</span>: 
+ <span class="hcp3"><a href="../Comandi/DTOR.htm">DTOR</a></span> 
+ (Disegna momento torcente).</p>
+</body>
+</html>

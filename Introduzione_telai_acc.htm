@@ -1,0 +1,302 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Introduzione</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+p.hcp2 { font-weight:bold; }
+td.hcp3 { border-left:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp4 { text-align:center; }
+img.hcp5 { border:Solid 1px #808080;
+margin-left:2px;
+margin-right:2px;
+margin-top:2px;
+margin-bottom:2px;
+border-width:1px;
+border-style:solid; }
+td.hcp6 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp7 { text-align:left; }
+p.hcp8 { margin-bottom:0; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Introduzione</h1>
+<p>È possibile progettare i collegamenti del tipo a squadretta, flangia, 
+ coprigiunto, piastra di fondazione, saldatura a cordone d'angolo e continuità 
+ con saldatura a completo ripristino.</p>
+<p>Nella progettazione dei collegamenti per strutture intelaiate in acciaio 
+ si è reso necessario definire in modo congruente una serie di denominazioni 
+ che consentano, sia nell'utilizzo del programma (messaggi di errore, anomalie, 
+ segnalazioni) che nella stesura della presente documentazione, di fare 
+ riferimento senza ambiguità alle varie parti che costituiscono il collegamento.</p>
+<p>Si è quindi adottata la seguente terminologia:</p>
+<p><span class="hcp1">Collegamento</span>: indica l'insieme 
+ di tutte le parti che vengono progettate e disegnate (saldature, bullonature, 
+ ecc.).</p>
+<p><span class="hcp1">Finale</span>: indica la parte terminale 
+ dell'asta a cui è stato assegnato il tipo di collegamento prescelto.</p>
+<p><span class="hcp1">Ospite</span>: indica l'asta alla quale 
+ il finale si attacca tramite il collegamento.</p>
+<p><span class="hcp1">Bullonatura</span>: indica un insieme 
+ di bulloni che deve essere verificato come oggetto unitario. In un collegamento 
+ possono quindi esserci più bullonature (ad esempio nel giunto a squadretta).</p>
+<p><span class="hcp1">Saldatura</span>: indica un insieme 
+ di cordoni di saldature che deve essere verificato come oggetto unitario. 
+ In un collegamento possono quindi in teoria esserci più saldature, anche 
+ se questo attualmente non avviene in nessuno dei collegamenti effettuati 
+ da ModeSt.</p>
+<p>I collegamenti sono identificati mediante un nome che è definito come 
+ la coppia dei numeri dei nodi separati dal simbolo &quot;_&quot; (ad esempio 
+ 1_101) dove il primo numero indica il nodo su cui insiste il collegamento, 
+ mentre il secondo nodo indica l'altro estremo dell'asta a cui appartiene 
+ il collegamento. Ad esempio il nome del collegamento definito al primo 
+ estremo dell'asta che va dal nodo 5 al 105 sarà 5_105, mentre il nome 
+ del collegamento eventualmente presente sull'altro estremo dell'asta sarà 
+ 105_5.</p>
+<p>Il tipo di sezione dell'asta a cui è possibile assegnare il collegamento 
+ è funzione del tipo di collegamento ed è riassunto nella tabella seguente:</p>
+<table class="SimpleGridBlack" style="border: Solid 1px #ffffff; vertical-align: top;" cellspacing="0px" width="90%" align="center">
+	<col style="width: 6%;">
+	<col style="width: 37.653%;">
+	<col style="width: 56.347%;">
+	<tr class="t1Row" style="vertical-align: top;">
+		<td colspan="2" style="border: Solid 1px #000000; padding-right: 10px; 
+			 padding-left: 10px;"><p class="hcp2"><span class="hcp1">Tipologia 
+		 collegamento</span></p></td>
+		<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+			 border-bottom: Solid 1px #000000; padding-right: 10px; padding-left: 10px;"><p class="hcp2">Tipologia sezione asta</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_F_.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Flangia</p></td>
+		<td class="hcp6"><p>I, T, C, Circolare 
+		 cava, Rettangolare cava, L</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_FEI.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Flangia estesa 
+		 inferiormente</p></td>
+		<td class="hcp6"><p>I</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_FES_.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Flangia estesa 
+		 superiormente</p></td>
+		<td class="hcp6"><p>I</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_FESI.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Flangia estesa 
+		 inferiormente e superiormente</p></td>
+		<td class="hcp6"><p>I</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_FF.png" alt="" style="border: Solid 1px #808080; 
+												 margin-left: 2px; margin-right: 2px; 
+												 margin-top: 2px; margin-bottom: 2px;" border="1"></p></td>
+		<td class="hcp6"><p>Flangia su flangia 
+		 di elevazione</p></td>
+		<td class="hcp6"><p>I, T, C, Circolare 
+		 cava, Rettangolare cava, L</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_FR_.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Flangia rinforzata</p></td>
+		<td class="hcp6"><p>I</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_FREI.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Flangia rinforzata 
+		 e estesa inferiormente</p></td>
+		<td class="hcp6"><p>I</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_FRES_.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Flangia rinforzata 
+		 e estesa superiormente</p></td>
+		<td class="hcp6"><p>I</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_FRESI.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Flangia rinforzata 
+		 e estesa inferiormente e superiormente</p></td>
+		<td class="hcp6"><p>I</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_FRM_.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Flangia rinforzata 
+		 con mensola</p></td>
+		<td class="hcp6"><p>I</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_FRMES.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Flangia rinforzata&#160;con 
+		 mensola e estesa superiormente</p></td>
+		<td class="hcp6"><p>I</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_FFT.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Flangia su flangia 
+		 a T</p></td>
+		<td class="hcp6"><p>I, T, C, Circolare 
+		 cava, Rettangolare cava, L</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_S.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Squadretta</p></td>
+		<td class="hcp6"><p>I</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_SA.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Saldatura a cordone 
+		 d'angolo</p></td>
+		<td class="hcp6"><p>I, T, C, Circolare 
+		 cava, Rettangolare cava, L, Rettangolare</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_SAR.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Saldatura a cordone 
+		 d'angolo rinforzata</p></td>
+		<td class="hcp6"><p>I</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_FP.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Piastra d'anima</p></td>
+		<td class="hcp6"><p class="hcp7">I*, 
+		 L,&#160;C, Rettangolare, Circolare, Circolare cava, Rettangolare 
+		 cava, doppia L lato costole, doppia C lato costole</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_CA_.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Coprigiunto d'anima</p></td>
+		<td class="hcp6"><p class="hcp7">I</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_CAA.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Coprigiunto d'anima 
+		 e ali</p></td>
+		<td class="hcp6"><p class="hcp7">I</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_CC.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Coprigiunto completo</p></td>
+		<td class="hcp6"><p class="hcp7">I</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_CF_.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Continuità con 
+		 flangia</p></td>
+		<td class="hcp6"><p>I, T, C, Circolare 
+		 cava, Rettangolare cava, L</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_CFR.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Continuità con 
+		 flangia e rinforzi</p></td>
+		<td class="hcp6"><p>Circolare cava</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_CS.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Continuità con 
+		 saldatura a completa penetrazione</p></td>
+		<td class="hcp6"><p>I, T, C, Circolare 
+		 cava, Rettangolare cava, L</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_PF_.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Piastra di fondazione</p></td>
+		<td class="hcp6"><p class="hcp7">I, 
+		 2I, T, C, Circolare cava, Rettangolare cava, L</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_PFR.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Piastra di fondazione 
+		 rinforzata</p></td>
+		<td class="hcp6"><p>Circolare cava, 
+		 Rettangolare cava</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_PF2.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Piastra di fondazione 
+		 con 1 rinforzo</p></td>
+		<td class="hcp6"><p>I</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_PF2.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Piastra di fondazione 
+		 con 2 rinforzi</p></td>
+		<td class="hcp6"><p>I</p></td>
+	</tr>
+	<tr class="t2Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_PF3.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Piastra di fondazione 
+		 con 3 rinforzi</p></td>
+		<td class="hcp6"><p>I</p></td>
+	</tr>
+	<tr class="t1Row" style="vertical-align: top;">
+		<td class="hcp3"><p class="hcp4"><img src="../Icone/20x16/TC_PF4.png" alt="" border="1" class="hcp5"></p></td>
+		<td class="hcp6"><p>Piastra di fondazione 
+		 con 4 rinforzi</p></td>
+		<td class="hcp6"><p>I</p></td>
+	</tr>
+</table>
+<p>* Collegamento progettabile solo nel caso in cui le aste finale ed ospite 
+ sono ortogonali.</p>
+<p>Si fa notare che è possibile assegnare ad un'asta anche il collegamento 
+ di tipo &quot;Asta continua&quot; <img src="../Icone/20x16/TC_C_.png" alt="" border="1" class="hcp5">. Questo tipo di 
+ collegamento è bene venga assegnato almeno ad uno degli ospiti del collegamento. 
+ Questo consente al programma sia a livello di disegno che a livello di 
+ verifica di operare in modo corretto in quanto indica che l'asta prosegue 
+ (ovviamente se è presente l'asta) dopo l'incidenza con quella interessata 
+ dal finale. Inoltre all'ospite con collegamento di &quot;Asta continua&quot; 
+ viene data la priorità per la ricerca delle configurazioni ed interferenze 
+ geometriche necessarie alla progettazione. Questo può rendersi necessario 
+ nel caso di cambi sezione o ambiguità nella scelta fra le aste incidenti 
+ sul finale. In alcuni casi, senza questa indicazione, non sono inoltre 
+ calcolabili in modo corretto uno o più parametri di tipo geometrico (ad 
+ esempio la distanza dai bordi liberi) per effettuare alcune verifiche 
+ come quelle da rifollamento. È necessario dare questa informazione anche 
+ ad aste che non proseguono nel modello oltre il finale come ad esempio 
+ per giunti fra due aste orizzontali ad angolo fra di loro. In questo caso 
+ l'asta ospite è univoca e non ci sono ambiguità, ma con questa indicazione 
+ il programma comprende che l'asta va comunque pensata estesa oltre il 
+ nodo fino al bordo esterno della sezione del finale per essere in grado 
+ di &quot;ospitare&quot; realmente il finale dell'altra e compiere le verifiche 
+ con una configurazione geometrica corretta.</p>
+<p>Per strutture calcolate sia ai sensi del D.M. 14/02/92 che del D.M. 
+ 16/01/96, le verifiche vengono effettuate con il metodo delle tensioni 
+ ammissibili e agli stati limite secondo le Norme Tecniche CNR 10011/85 
+ e successive modifiche.</p>
+<p>Per strutture calcolate ai sensi del D.M. 17/01/18, il progetto e la 
+ verifica dei collegamenti vengono effettuati sempre al limite elastico, 
+ ossia confrontando la resistenza con le sollecitazioni derivanti dal calcolo; 
+ non vengono quindi effettuati i controlli che garantiscono un comportamento 
+ dissipativo del collegamento. Pertanto le sollecitazioni di progetto sono 
+ ottenute dall'analisi eseguita in ipotesi di comportamento strutturale 
+ non dissipativo.</p>
+<p>È possibile generare in automatico i disegni esecutivi completi ma modificabili 
+ in progettazione interattiva, oppure progettare in modo completamente 
+ o parzialmente manuale i collegamenti.</p>
+<p class="hcp8">ModeSt crea e mantiene aggiornata la relazione 
+ di calcolo.</p>
+<p class="hcp8">È anche possibile consultare il tutorial: 
+ <span class="hcp1"><a href="Guida.chm::/Progettazione_interattiva_collegamenti_struttura_intelaiata.htm">Progettazione 
+ interattiva collegamenti struttura intelaiata</a></span><span style="font-style: italic;">.</span></p>
+</body>
+</html>

@@ -1,0 +1,61 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Oggetto ModeSt</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-size:14.0pt; }
+span.hcp3 { font-weight:bold;
+text-decoration:none; }
+span.hcp4 { font-weight:normal; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Oggetto ModeSt</h1>
+<p>L'oggetto ModeSt accessibile nei VBScript lanciati da ModeSt contiene diversi metodi ed oggetti. Per un uso ottimale si consiglia di <span class="hcp1">includere sempre nelle macro il file ModeSt.vbs</span> che contiene la definizione delle costanti, i codici d'errore utilizzati ed alcune funzioni di utilità.</p>
+<p><span class="hcp2">Metodi e proprietà generali</span></p>
+<p class="Normal3"><span class="hcp1">Esegui (cmd)</span> esegue le istruzioni contenute nella variabile <span class="hcp1">cmd</span> sulla linea comando di ModeSt. Si veda <span class="hcp3"><a href="Sintassi.htm">Sintassi</a></span> per le specifiche utilizzabili.</p>
+<p class="Normal3"><span class="hcp1">Errore ()</span> ritorna l'eventuale codice di errore dell'ultimo metodo o proprietà utilizzato dall'oggetto ModeSt. Ritorna 0 se il metodo è stato eseguito correttamente. Se il valore di ritorno è diverso da 0 consultare la tabella dei codici di errore per informazioni aggiuntive.</p>
+<p class="Normal3" style="font-weight: bold;">CreaArchivio (TipArch, FileArch, FileCSV) <span class="hcp4">ritorna True se è stato trasformato l'archivio del tipo</span> TipArch <span class="hcp4">e con nome</span> FileArch <span class="hcp4">in formato CVS con nome</span> FileCSV<span class="hcp4">.</span></p>
+<p class="script1">I valori ammissibili per <span class="hcp1">TipArch</span> sono:</p>
+<p class="script2"><span class="hcp1">Materiali</span>;</p>
+<p class="script2"><span class="hcp1">Vincoli Nodi</span>;</p>
+<p class="script2"><span class="hcp1">Vincoli Aste</span>;</p>
+<p class="script2"><span class="hcp1">Sez. Aste</span>;</p>
+<p class="script2"><span class="hcp1">Param. aggiuntivi Aste</span>;</p>
+<p class="script2"><span class="hcp1">Tipi Plinti</span>;</p>
+<p class="script2"><span class="hcp1">Tipi Solai</span>;</p>
+<p class="script2"><span class="hcp1">Tipi CCE</span>.</p>
+<p class="Normal3" style="margin-top: -7pt;"><span class="hcp1">Var (nomevar)</span> legge una variabile con nome <span class="hcp1">nomevar</span> da ModeSt.</p>
+<p class="Normal3"><span class="hcp1">Configurazione</span> oggetto <span class="hcp1"><a href="Oggetto%20Configurazione.htm">Configurazione</a></span> contenente le informazioni relative alla configurazione di ModeSt.</p>
+<p class="Normal3"><span class="hcp1">OpzioniGenerali</span> oggetto <a href="Oggetto%20OpzioniGenerali.htm"><span class="hcp1">OpzioniGenerali</span></a> contenente le informazioni relative sia alle cartelle che all'unità di misura di ModeSt.</p>
+<p class="Normal3"><span class="hcp1">Progetto</span> oggetto <span class="hcp1"><a href="Oggetto%20Progetto.htm">Progetto</a></span>. Se il progetto è chiuso ritorna Null.</p>
+<p class="Normal3"><span class="hcp1">SetCurModel (nomemodel)</span> ritorna True se è stata resa corrente la struttura <span class="hcp1">nomemodel</span> dal progetto.</p>
+<p class="Normal3"><span class="hcp1">ModelDialog (titolo)</span> <font color="#000000"><span class="hcp4">ritorna True se è stata selezionata una struttura nella finestra di dialogo con titolo</span> <span class="hcp1">titolo</span><span class="hcp4">.</span></font></p>
+<p><span class="hcp2">Proprietà relative alla struttura corrente</span></p>
+<p><span class="hcp1">ModelName</span> ritorna il nome della struttura corrente completo di percorso.</p>
+<p class="Normal3"><span class="hcp1">CurBSection</span> ritorna il numero della sezione corrente (<span style="font-style: normal; font-weight: bold; text-decoration: none;"><a href="../Comandi/SAC.htm">SAC</a></span>), 0, -1, -2 per le corrispondenti sezioni fittizie, -3 se non esistono sezioni nella struttura.</p>
+<p class="Normal3"><span class="hcp1">Level</span> <span class="hcp1">(numimpalcato)</span> <span class="hcp4">oggetto</span> <span class="hcp3"><a href="Oggetto%20Impalcato.htm">Impalcato</a></span> <span class="hcp4">corrispondente</span> all'impalcato con numero <span class="hcp1">numimpalcato</span>.</p>
+<p class="Normal3"><span class="hcp1">Material</span> <span class="hcp1">(nummateriale)</span> <span class="hcp4">oggetto</span> <span class="hcp3"><a href="Oggetto%20Materiale.htm">Materiale</a></span> <span class="hcp4">corrispondente</span> al materiale con numero <span class="hcp1">nummateriale</span>.</p>
+<p class="Normal3"><span class="hcp1">Node</span> <span class="hcp1">(numnodo)</span> <span class="hcp4">oggetto</span> <span class="hcp3"><a href="Oggetto%20Nodo.htm">Nodo</a></span> <span class="hcp4">corrispondente al nodo con numero</span> <span class="hcp1">numnodo</span>.</p>
+<p class="Normal3"><span class="hcp1">NConstraint</span> <span class="hcp1">(numvincnodo)</span> <span class="hcp4">oggetto</span> <span class="hcp3"><a href="Oggetto%20VincoloNodo.htm">VincoloNodo</a></span> <span class="hcp4">corrispondente</span> al vincolo nodo con numero <span class="hcp1">numvincnodo</span>.</p>
+<p class="Normal3"><span class="hcp1">Beam</span> <span class="hcp1">(numnodo1</span><span class="hcp4">,</span> <span class="hcp1">numnodo2)</span> <span class="hcp4">oggetto</span> <span class="hcp3"><a href="Oggetto%20Asta.htm">Asta</a></span> <span class="hcp4">corrispondente all'asta fra i nodi con numero</span> <span class="hcp1">numnodo1</span> <span class="hcp4">e</span> <span class="hcp1">numnodo2</span>.</p>
+<p class="Normal3"><span class="hcp1">BConstraint</span> <span class="hcp1">(numvincasta)</span> <span class="hcp4">oggetto</span> <span class="hcp3"><a href="Oggetto%20VincoloAsta.htm">VincoloAsta</a></span> <span class="hcp4">corrispondente al vincolo asta con numero</span> <span class="hcp1">numvincasta</span>.</p>
+<p class="Normal3"><span class="hcp1">BSection</span> <span class="hcp1">(numsezione)</span> oggetto <span class="hcp3"><a href="Oggetto%20Sezione.htm">Sezione</a></span> corrispondente alla sezione con numero <span class="hcp1">numsezione</span>.</p>
+<p><span class="hcp2">Metodi relativi alla struttura corrente</span></p>
+<p><span class="hcp1">SetSoll (soll)</span> stabilisce il tipo di sollecitazioni <span class="hcp1">soll</span> da considerare nei metodi che richiedono risultati del calcolo. Ritorna il numero di risultati (condizioni elementari, combinazioni, ecc.) disponibili nel tipo di sollecitazione selezionato. Analogo al comando <span class="hcp3"><a href="../Comandi/SOLC.htm">SOLC</a></span> in modellazione.</p>
+<p style="margin-bottom: 0;"><span class="hcp1">SetRis (numris)</span> stabilisce il numero del risultato <span class="hcp1">numris</span> da considerare all'interno delle sollecitazioni selezionate con <span class="hcp1">SetSoll</span>. Ritorna False se il numero di risultato specificato non è valido o se non è stato effettuato un valido <span class="hcp1">SetSoll</span>. Analogo al comando <span class="hcp3"><a href="../Comandi/RISC.htm">RISC</a></span> in modellazione.</p>
+</body>
+</html>

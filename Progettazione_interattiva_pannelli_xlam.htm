@@ -1,0 +1,166 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione interattiva pannelli</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp3 { font-weight:bold;
+margin-bottom:0; }
+p.hcp4 { font-weight:normal; }
+p.hcp5 { font-weight:bold; }
+span.hcp6 { font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progettazione interattiva pannelli</h1>
+<p>Nell'ambiente di progettazione interattiva pannelli X-LAM, se le connessioni 
+ del pannello erano già state precedentemente assegnate ed archiviate verranno 
+ richiamate, altrimenti verrà creato il solo disegno geometrico del pannello. 
+ Al termine della progettazione è possibile archiviare il panello e creare 
+ o aggiornare i file necessari.</p>
+<p>Si riportano di seguito i comandi principali raggruppati per funzionalità:</p>
+<h2 class="Titolo5">Proprietà correnti</h2>
+<p>Nella sezione <span class="hcp1">Giunzioni a taglio</span> 
+ del pannello <span class="hcp1">Proprietà correnti</span> 
+ è possibile: indicare il <span class="hcp1">Tipo</span> 
+ (Distribuito o Concentrato) e la <span class="hcp1">Posizione</span>&#160;(Anteriore 
+ o Posteriore) di giunzione da assegnare; specificare per ciascun grado 
+ di libertà se sono liberi, bloccati od elastici (i gradi di libertà rotazionali 
+ Ry loc e Rz loc sono definiti solo in termini locali e possono essere 
+ solo liberi o bloccati) e per i gradi di libertà liberi e bloccati specificare 
+ se attivare il Controllo ed specificare il valore della Resistenza (il 
+ valore della resistenza deve essere quella di progetto e quindi comprensiva 
+ del Kmod e del coefficiente di sicurezza); indicare una<span class="hcp1"> 
+ Descrizione</span> della giunzione da riportare nei disegni esecutivi.</p>
+<p>Nella sezione <span class="hcp1">Giunzioni a trazione</span> 
+ del pannello <span class="hcp1">Proprietà correnti</span> 
+ è possibile: indicare la <span class="hcp1">Posizione</span>&#160;(Anteriore 
+ o Posteriore) di giunzione da assegnare; specificare il valore della resistenza 
+ a trazione <span class="hcp1">Rtr</span> (il valore della 
+ resistenza deve essere quella di progetto e quindi comprensiva del Kmod 
+ e del coefficiente di sicurezza); indicare una<span class="hcp1"> 
+ Descrizione</span> della giunzione da riportare nei disegni esecutivi.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/GIUC.htm">GIUC</a></span>&#160;(Giunzione 
+ a taglio corrente), <span class="hcp1"><a href="../Comandi/HDC.htm">HDC</a></span>&#160;(Giunzione 
+ a trazione corrente).</p>
+<h2 class="Titolo5"><a name="XLAM_Generali" id="XLAM_Generali"></a>Generali</h2>
+<p><span class="hcp1"><a name="ARMA" id="ARMA"></a>Assegna 
+ connessioni <img src="../Icone/16/assegnaconn.png" alt="" border="1" class="hcp2"></span> 
+ assegna le connessioni al pannello dal criterio di progetto.</p>
+<p><span class="hcp1"><a name="CALC" id="CALC"></a>Ricalcola 
+ <img src="../Icone/16/calc.png" alt="" border="1" class="hcp2"></span> 
+ effettua il controllo che il pannello e le connessioni siano verificati, 
+ segnalando le eventuali anomalie.</p>
+<p><span class="hcp1"><a name="ELAR" id="ELAR"></a>Elimina 
+ prog. <img src="../Icone/16/eliminaprog.png" alt="" border="1" class="hcp2"></span> 
+ elimina completamente le connessioni lasciando solo il disegno geometrico 
+ del pannello.</p>
+<p><span class="hcp1"><a name="_REL"></a>Anteprima rel. <img src="../Icone/16/anteprimarel.png" alt="" border="1" class="hcp2"></span> visualizza 
+ l'anteprima della relazione di calcolo. È possibile visualizzare una relazione 
+ in forma sintetica oppure estesa selezionando la relativa opzione del 
+ menu che compare cliccando sulla freccia a destra del comando. È possibile 
+ specificare se creare la relazione con il sistema tecnico o con l'unità 
+ di misura corrente utilizzando l'opzione &quot;Usa sistema tecnico&quot; 
+ del menu che compare cliccando sulla freccia a destra del comando.</p>
+<p><span class="hcp1">Mod. criteri <img src="../Icone/16/modcriteri.png" alt="" border="1" class="hcp2"></span> 
+ modifica i criteri di progetto posizionandosi automaticamente sul criterio 
+ specifico assegnato al pannello.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/ARMA.htm">ARMA</a></span>&#160;(Progetta), 
+ <span class="hcp1"><a href="../Comandi/CALC.htm">CALC</a></span>&#160;(Ricalcola), 
+ <span class="hcp1"><a href="../Comandi/ELAR.htm">ELAR</a></span>&#160;(Elimina 
+ progettazione), <span class="hcp1"><a href="../Comandi/_REL.htm">?REL</a></span>&#160;(Anteprima 
+ relazione).</p>
+<h2 class="Titolo5"><a name="XLAM_Mappe" id="XLAM_Mappe"></a>Mappe</h2>
+<p><span class="hcp3">Tensioni normali</span> 
+ <span class="hcp1"><img src="../Icone/32/sigmabidi32.png" alt="" border="1" class="hcp2"></span> disegna le 
+ tensioni normali nel pannello.</p>
+<p><span class="hcp3">Tensioni tangenziali</span> 
+ <span class="hcp1"><img src="../Icone/32/taubidi32.png" alt="" border="1" class="hcp2"></span> disegna le 
+ tensioni tangenziali nel pannello.</p>
+<p><span class="hcp3">Sollecitazioni unitarie</span> 
+ <span class="hcp1"><img src="../Icone/32/sollecbidi32.png" alt="" border="1" class="hcp2"></span> disegna gli 
+ sforzi normali, i tagli ed i momenti unitari nel pannello.</p>
+<p>Selezionando un caso di verifica dalla casella di riepilogo a discesa 
+ del pannello <span class="hcp1">Stato verifiche</span> è 
+ possibile controllare le sollecitazioni e le tensioni nelle singole combinazioni 
+ delle CCE.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DSLB.htm">DSLB</a></span>&#160;(Disegna 
+ sollecitazioni elementi bidimensionali), <span class="hcp1"><a 
+	 href="../Comandi/VERC.htm">VERC</a></span>&#160;(Verifiche correnti).</p>
+<h2 class="Titolo5"><a name="XLAM_Dimensioni" id="XLAM_Dimensioni"></a>Dimensioni</h2>
+<p class="hcp4"><span class="hcp1"><a name="DSX" 
+	 id="DSX"></a>Stira lato sx <img src="../Icone/16/stirapansx.png" alt="" border="1" class="hcp2"></span> stira il lato 
+ sinistro del pannello. Valori positivi dello spostamento accorciano il 
+ pannello mentre valori negativi allungano il pannello.</p>
+<p class="hcp4"><span class="hcp1"><a name="DDX" 
+	 id="DDX"></a>Stira lato dx <img src="../Icone/16/stirapandx.png" alt="" border="1" class="hcp2"></span> stira il lato 
+ sinistro del pannello.&#160;Valori positivi dello spostamento allungano 
+ il pannello mentre valori negativi accorciano il pannello.</p>
+<p class="hcp4">La modifica delle dimensioni si rende necessaria 
+ quando il programma non ha individuato automaticamente la forma del pannello 
+ che il progettista intende far realizzare. Nel caso in cui si apportino 
+ modifiche al pannello, si consiglia di controllare le dimensioni dei pannelli 
+ che vi incidono ortogonalmente.</p>
+<p class="hcp4"><span class="hcp1">Utilizzo 
+ da linea di comando</span>: <span class="hcp1"><a href="../Comandi/DSX.htm">DSX</a></span>&#160;(Stira 
+ lato sinistro), <span class="hcp1"><a href="../Comandi/DDX.htm">DDX</a></span>&#160;(Stira 
+ lato destro).</p>
+<h2 class="Titolo5"><a name="Pareti_Giunzioni_a_taglio" id="Pareti_Giunzioni_a_taglio"></a>Giunzioni 
+ a taglio</h2>
+<p class="hcp4"><span class="hcp1"><a name="AGIU" 
+	 id="AGIU"></a>Assegna <img src="../Icone/16/assegnagiunz.png" alt="" border="1" class="hcp2"></span> 
+ assegna una giunzione a taglio.</p>
+<p class="hcp5"><a name="ELIG" id="ELIG"></a>Elimina <span class="hcp6"><img src="../Icone/16/eliminagiunz.png" alt="" border="1" class="hcp2"> elimina una giunzione 
+ a taglio.</span></p>
+<p class="hcp4"><span class="hcp1">Utilizzo 
+ da linea di comando</span>: <span class="hcp1"><a href="../Comandi/AGIU.htm">AGIU</a></span>&#160;(Assegna 
+ giunzione a taglio), <span class="hcp1"><a href="../Comandi/ELIG.htm">ELIG</a></span>&#160;(Elimina 
+ giunzione a taglio).</p>
+<h2 class="Titolo5"><a name="Pareti_Giunzioni_a_trazione" id="Pareti_Giunzioni_a_trazione"></a>Giunzioni 
+ a trazione</h2>
+<p class="hcp4"><span class="hcp1"><a name="AGHD" 
+	 id="AGHD"></a>Aggiungi <img src="../Icone/16/aggiungihodow.png" alt="" border="1" class="hcp2"></span> 
+ aggiunge una giunzione a trazione (hold down).</p>
+<p class="hcp4"><span class="hcp1"><a name="AHD" 
+	 id="AHD"></a>Assegna <img src="../Icone/16/assegnahodow.png" alt="" border="1" class="hcp2"></span> 
+ assegna&#160;una giunzione a trazione (hold down).</p>
+<p class="hcp5"><a name="ELHD" id="ELHD"></a>Elimina <span class="hcp6"><img src="../Icone/16/eliminahodow.png" alt="" border="1" class="hcp2"> elimina una giunzione 
+ a trazione (hold down).</span></p>
+<p class="hcp5"><span class="hcp6"><a name="SPHD" 
+	 id="SPHD"></a></span>Sposta <span class="hcp6"><img src="../Icone/16/spostahodow.png" alt="" border="1" class="hcp2"> sposta una 
+ giunzione a trazione (hold down).</span></p>
+<p class="hcp4"><span class="hcp1">Utilizzo 
+ da linea di comando</span>: <span class="hcp1"><a href="../Comandi/AGHD.htm">AGHD</a></span>&#160;(Aggiungi 
+ giunzione a trazione),&#160;<span class="hcp1"><a href="../Comandi/AHD.htm">AHD</a></span>&#160;(Assegna 
+ giunzione a trazione), <span class="hcp1"><a href="../Comandi/ELHD.htm">ELHD</a></span>&#160;(Elimina 
+ giunzione a trazione), <span class="hcp1"><a href="../Comandi/SPHD.htm">SPHD</a></span>&#160;(Sposta 
+ giunzione a trazione).</p>
+<h2 class="Titolo5"><a name="Pannelli_Disegno" id="Pannelli_Disegno"></a>Disegno</h2>
+<p><span class="hcp1"><a name="DPV" id="DPV"></a>Zone ver. 
+ <img src="../Icone/16/dpv.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno delle sezioni di verifica.</p>
+<p><span class="hcp1"><a name="SHADE" id="SHADE"></a>3D&#160;<img src="../Icone/16/shading.png" alt="" border="1" class="hcp2"></span> apre 
+ una finestra con la visualizzazione tridimensionale del pannello progettato.</p>
+<p><span class="hcp1">Opzioni&#160;<img src="../Icone/16/opzioni.png" alt="" border="1" class="hcp2"></span> 
+ modifica le opzioni di disegno.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DPV.htm">DPV</a></span>&#160;(Disegna 
+ punti/piani di verifica), <span class="hcp1"><a href="../Comandi/SHAD.htm">SHADE</a></span>&#160;(Visualizzazione 
+ tridimensionale).</p>
+</body>
+</html>

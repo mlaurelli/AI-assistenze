@@ -1,0 +1,55 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Sistemi di riferimento e verifiche</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Sistemi di riferimento e verifiche</h1>
+<p>Le sollecitazioni di verifica per pressoflessione (N, My, Mz) sono riferite al sistema di riferimento visibile in editor interattivo nella sezione verticale presente a destra della parete, mentre per le verifiche a taglio le sollecitazioni vengono sempre indicate con una sola notazione (Vsdu).</p>
+<p><span style="margin-bottom: 0;">Utilizzando</span> uno dei tre bottoni del gruppo <span class="hcp1">Mappe</span> in editor interattivo è possibile visualizzare le mappe delle sollecitazioni sui bidimensionali, la cui integrazione fornisce le sollecitazioni di verifica. Tali mappe vanno lette in funzione del sistema di riferimento che appare in basso a sinistra della parete quando si esegue il comando.</p>
+<p>Per l'armatura distribuita vengono eseguite le verifiche relative alle seguenti sollecitazioni, integrate per l'intera estensione della parete:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">pressoflessione ortogonale al piano della parete (N, My). Con tali sollecitazioni vengono progettate le barre verticali;</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">taglio ortogonale al piano della parete come sezione non armata a taglio, se indicato nei criteri di progetto (<a href="CriPareti.htm#Controllare_resistenza_a_taglio_trasversale_come_sezione_priva_di_armatura_a_taglio" style="font-weight: bold;">Controllare resistenza a taglio trasversale come sezione priva di armatura a taglio</a>). Con tali sollecitazioni vengono verificate le barre verticali;</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">pressoflessione nel piano della parete (N, Mz), se indicato nei criteri di progetto (<span class="hcp1"><a href="CriPareti.htm#Effettuare_le_verifiche_nel_piano_forte_della_parete">Effettuare le verifiche nel piano della parete</a></span>). Con tali sollecitazioni vengono verificate le barre verticali;</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">taglio nel piano della parete come sezione armata a taglio, se indicato nei criteri di progetto (<span class="hcp1"><a href="CriPareti.htm#Effettuare_le_verifiche_nel_piano_forte_della_parete">Effettuare le verifiche nel piano della parete</a></span>). Con tali sollecitazioni vengono progettate le barre orizzontali;</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">taglio nel piano della parete con verifica a scorrimento, se indicato nei criteri di progetto (<span class="hcp1"><a href="CriPareti.htm#Effettuare_le_verifiche_nel_piano_forte_della_parete">Effettuare le verifiche nel piano della parete</a></span>), per condizioni di carico sismiche e solo per pareti debolmente armate. Con tali sollecitazioni vengono verificate le barre verticali.</p>
+</li>
+</ul>
+<p>Per l'armatura concentrata vengono eseguite le verifiche relative alle sollecitazioni di pressoflessione ortogonale al piano della parete (N, My), integrate sui bidimensionali interessati dalla zona. Con tali sollecitazioni vengono progettate le barre verticali dell'armatura concentrata, calcolata trascurando l'armatura distribuita presente. Inoltre è possibile definire zone senza posizionare armatura concentrata, in tale modo vengono eseguite le verifiche delle barre verticali dell'armatura distribuita interessate dalla zona.</p>
+<p>Nel caso di armatura solo al centro della parete vengono eseguite solamente le verifiche relative alle seguenti sollecitazioni integrate per l'intera estensione della parete:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">taglio nel piano della parete come sezione armata a taglio. Con tali sollecitazioni vengono progettate le barre orizzontali;</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">taglio nel piano della parete con verifica a scorrimento, per condizioni di carico sismiche. Con tali sollecitazioni vengono verificate le barre verticali;</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">pressoflessione nel piano della parete (N, Mz). Con tali sollecitazioni vengono verificate le barre verticali.</p>
+</li>
+</ul>
+<p><span class="hcp1">Nota</span>: nel caso di armatura solo al centro della parete le barre verticali non vengono progettate, ma vengono semplicemente verificate (pressoflessione e taglio per scorrimento) con l'armatura minima posizionata in base alle opzioni di "Armatura distribuita", o con la rete elettrosaldata risultante dalla progettazione a taglio delle barre orizzontali della rete. Si consiglia quindi di eseguire tale tipo di progettazione su pareti modellate con elementi bidimensionali con utilizzo membranale.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: <span class="hcp1"><a href="../Comandi/DSLB.htm">DSLB</a></span>&#160;(Disegna sollecitazioni elementi bidimensionali).</p>
+</body>
+</html>

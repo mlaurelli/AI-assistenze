@@ -1,0 +1,149 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>DETS - Definisci tipo solaio</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+td.hcp2 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp3 { margin-bottom:0; }
+span.hcp4 { font-style:italic; }
+td.hcp5 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp6 { text-align:left;
+margin-bottom:0; }
+p.hcp7 { text-align:justify;
+margin-bottom:0; }
+span.hcp8 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando"><span class="hcp1">DETS - Definisci tipo solaio</span></p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp2">
+<p class="hcp3"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p>
+</td>
+<td style="width:29%;" class="hcp2">
+<p class="hcp3"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p>
+</td>
+</tr>
+</table>
+<p>Permette di definire o ridefinire i tipi di solaio. Il tipo di solaio definito o modificato verrà automaticamente reso corrente se così è stato specificato nelle Opzioni.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp1">DETS</span> <font color="#0000FF"><span class="hcp4">Numero del tipo di solaio</span></font> / <font color="#0000FF"><span class="hcp4">Qps Qpn</span></font> <span class="hcp4"><font color="#0000FF">Qacc1</font></span> <span class="hcp4"><font color="#0000FF">Qacc2</font></span> <span class="hcp4"><font color="#0000FF">Qacc3</font></span> / <font color="#0000FF"><span class="hcp4">Ripartizione su aste terminali</span></font> / <font color="#0000FF"><span class="hcp4">Coeff. di riduzione</span></font> / <font color="#0000FF"><span class="hcp4">Altezza solaio</span></font> / <font color="#0000FF"><span class="hcp4">Spessore cappa</span></font> / <font color="#0000FF"><span class="hcp4">Criterio di progetto</span></font> / <font color="#0000FF"><span class="hcp4">Commento</span></font></p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt;" cellspacing="0" width="100%">
+<tr>
+<td style="width:20%;" class="hcp5">
+<p class="hcp6"><font color="#0000FF"><span class="hcp4">Numero del solaio</span></font></p>
+</td>
+<td style="width:80%;" class="hcp5">
+<p class="hcp3">è il numero del tipo di solaio che si vuole ridefinire oppure il numero del prossimo solaio da definire.</p>
+</td>
+</tr>
+<tr>
+<td style="width:20%;" class="hcp5">
+<p style="text-align: left; margin-bottom: 0; font-style: italic; color: #0000ff;">Qps Qpn Qacc1 Qacc2 Qacc3</p>
+</td>
+<td style="width:80%;" class="hcp5">
+<p class="hcp7">rappresentano il carico permanente strutturale, non strutturale e il primo, secondo e terzo carico accidentale.</p>
+</td>
+</tr>
+<tr>
+<td style="width:20%;" class="hcp5">
+<p class="hcp6"><font color="#0000FF"><span class="hcp4">Ripartizione su aste terminali</span></font></p>
+</td>
+<td style="width:80%;" class="hcp5">
+<p class="hcp3">rappresenta la percentuale di carico assegnata alle aste terminali.</p>
+</td>
+</tr>
+<tr>
+<td style="width:20%;" class="hcp5">
+<p class="hcp6"><font color="#0000FF"><span style="font-style: italic; font-weight: normal;">Coeff. di riduzione</span></font></p>
+</td>
+<td style="width:80%;" class="hcp5">
+<p class="hcp7">rappresenta il coefficiente di riduzione dei carichi accidentali del solaio in direzione Z globale da utilizzare per il calcolo dei pesi di piano nel caso delle Tensioni ammissibili o Stati limite D.M. 96.</p>
+</td>
+</tr>
+<tr>
+<td style="width:20%;" class="hcp5">
+<p class="hcp6"><font color="#0000FF"><span class="hcp4">Altezza solaio</span></font></p>
+</td>
+<td style="width:80%;" class="hcp5">
+<p class="hcp7">rappresenta l'altezza del solaio comprensiva dello spessore della cappa.</p>
+</td>
+</tr>
+<tr>
+<td style="width:20%;" class="hcp5">
+<p class="hcp6"><font color="#0000FF"><span class="hcp4">Spessore cappa</span></font></p>
+</td>
+<td style="width:80%;" class="hcp5">
+<p class="hcp7">rappresenta lo spessore della cappa.</p>
+</td>
+</tr>
+<tr>
+<td style="width:20%;" class="hcp5">
+<p class="hcp6"><font color="#0000FF"><span class="hcp4">Criterio di progetto</span></font></p>
+</td>
+<td style="width:80%;" class="hcp5">
+<p class="hcp3">numero del criterio di progetto da associare al tipo di solaio per il tipo di verifica prevista.</p>
+</td>
+</tr>
+<tr>
+<td style="width:20%;" class="hcp5">
+<p class="hcp6"><font color="#0000FF"><span class="hcp4">Commento</span></font></p>
+</td>
+<td style="width:80%;" class="hcp5">
+<p class="hcp3">specificare un commento da associare al tipo di solaio.</p>
+</td>
+</tr>
+</table>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">È possibile continuare a definire tipi di solaio senza uscire dal comando.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">I carichi sono positivi se controversi agli assi di riferimento quindi generalmente <font color="#0000FF"><span class="hcp4">Qps,</span></font> <font color="#0000FF"><span class="hcp4">Qpn</span></font> e <font color="#0000FF"><span class="hcp4">Qacc</span></font> hanno valori positivi.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Per solai non orizzontali il carico permanente è considerato agente sulla superficie reale del solaio, mentre il carico accidentale è considerato agente sulla proiezione orizzontale del solaio.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Se si ridefiniscono tipi di solaio dopo che sono stati effettuati i comandi <a href="QPS.htm"><span class="hcp1">QPS</span></a>, <span class="hcp1"><a href="QPN.htm">QPN</a></span>, <a href="QA.htm"><span class="hcp1">QA1</span></a>, <span class="hcp1"><a href="QA2.htm">QA2</a></span> e <span class="hcp1"><a href="QA3.htm">QA3</a></span> non occorre correggere la condizione di carico elementare in cui erano stati memorizzati i carichi dovuti ai solai, dato che tali carichi vengono tenuti automaticamente aggiornati.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Il coefficiente di riduzione dei carichi accidentali eventualmente introdotto al momento dell'archiviazione dei carichi con il comando <span class="hcp1"><a href="CCEC.htm">CCEC</a></span>, non influenza i carichi calcolati automaticamente con <a href="QPS.htm"><span class="hcp1">QPS</span></a>, <span class="hcp1"><a href="QPN.htm">QPN</a></span>, <a href="QA.htm"><span class="hcp1">QA1</span></a>, <span class="hcp1"><a href="QA2.htm">QA2</a></span> e <span class="hcp1"><a href="QA3.htm">QA3</a></span>, poiché quest'ultimi fanno riferimento sempre al coefficiente di riduzione specificato con <span class="hcp1">DETS</span>.</p>
+</li>
+</ul>
+<p style="text-align: justify;"><span class="hcp1">Comandi correlati:</span> <span class="hcp8"><a href="TSC.htm">TSC</a></span> rende corrente il tipo di solaio. <span class="hcp8"><a href="ATS.htm">ATS</a></span> assegna il tipo di solaio corrente. <span class="hcp8"><a href="DTS.htm">DTS</a></span> disegna il numero del tipo di solaio. <span class="hcp8"><a href="_S.htm">?S</a></span> elenca i solai. <span class="hcp8"><a href="_TS.htm">?TS</a></span> elenca i tipi di solai.</p>
+<p><span class="hcp1">Sinonimi:</span> <span class="hcp1">DESO</span></p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+//]]>
+</script>
+</body>
+</html>

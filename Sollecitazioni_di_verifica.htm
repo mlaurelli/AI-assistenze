@@ -1,0 +1,26 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Sollecitazioni di verifica</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+a.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Sollecitazioni di verifica</h1>
+<p>Per la verifica dei collegamenti vengono adottate le sollecitazioni agenti sull'asta (riportate nel <a href="Sistemi_di_riferimento.htm">sistema di riferimento</a> del collegamento) con alcune considerazioni e possibilità di intervento da parte dell'utente. Le verifiche delle <a href="Piastre_di_fondazione.htm">piastre di fondazione</a> possono in alternativa essere eseguite con le reazioni vincolari del nodo.</p>
+<p>Le sollecitazioni vengono valutate nel punto in cui è applicato il collegamento, punto che non necessariamente è il nodo dell'asta. Si pensi ad una trave che insiste su una colonna con il nodo che è in asse alla colonna stessa. Il collegamento si trova arretrato rispetto al nodo di una quantità pari a metà della dimensione della colonna.</p>
+<p>Nel caso di calcolo senza zone rigide, questo può portare alla nascita di sollecitazioni che il collegamento non è in grado di sostenere, anche se lo schema di calcolo comprendeva degli appropriati svincolamenti. È possibile intervenire per ovviare a questo inconveniente utilizzando l'apposito criterio di progetto (<a href="Criteri%20di%20progetto%20reticolari%20in%20acciaio.htm#Trascura_sollecitazioni_teoricamente_nulle" class="hcp1">Trascura sollecitazioni teoricamente nulle</a>). Attivando questo parametro vengono in ogni caso annullate le sollecitazioni relative agli svincoli dell'asta.</p>
+<p>In altri casi sollecitazioni secondarie possono nascere ad esempio da un calcolo effettuato senza piani infinitamente rigidi, ma che di fatto sono assorbite da elementi non modellati (ad esempio solai). In questo caso è possibile forzare esplicitamente ModeSt a trascurare tali sollecitazioni con il criterio di progetto (<a href="Criteri%20di%20progetto%20reticolari%20in%20acciaio.htm#Componenti_sollecitazioni_da_trascurare" class="hcp1">Componenti sollecitazioni da trascurare</a>). Fare attenzione a non trascurare sollecitazioni che invece sono di primaria importanza per la verifica del collegamento. ModeSt non è ovviamente in grado di effettuare controlli in tal senso. Le sollecitazioni trascurate e considerate sono quelle nel sistema di riferimento dell'asta.</p>
+<p>In ogni caso se sul collegamento risultano agenti delle componenti di sollecitazione non assorbibili dal collegamento stesso, ModeSt segnala l'anomalia e le trascura nelle verifiche.</p>
+<p>Nelle varie parti del collegamento vengono poi valutate le sollecitazioni indotte da considerazioni geometriche. Tali effetti vengono illustrati nella documentazione relativa ai vari tipi di collegamento.</p>
+</body>
+</html>

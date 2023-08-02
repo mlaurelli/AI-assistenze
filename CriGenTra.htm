@@ -1,0 +1,618 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Criteri generali di progetto armatura travi</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-style:normal;
+font-weight:bold; }
+span.hcp3 { font-weight:normal; }
+span.hcp4 { font-family:Symbol, serif; }
+span.hcp5 { font-family:Verdana, sans-serif; }
+font.hcp6 { font-family:Symbol; }
+span.hcp7 { vertical-align:sub; }
+span.hcp8 { font-style:italic; }
+span.hcp9 { font-style:normal; }
+span.hcp10 { font-weight:bold;
+text-decoration:none; }
+td.hcp11 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp12 { margin-bottom:0; }
+img.hcp13 { margin-top:0px;
+margin-bottom:0px;
+margin-left:0px;
+margin-right:0px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Criteri generali di progetto e disegno armatura travi</h1>
+<p>Si tratta di criteri che stabiliscono alcuni parametri validi per tutte 
+ le travi presenti nella struttura, indipendentemente quindi dal numero 
+ del criterio di progetto assegnato nella definizione della sezione.</p>
+<h2>Parametri di progetto</h2>
+<p><span class="hcp1"><a name="Passo_di_progettazione" id="Passo_di_progettazione"></a>Passo 
+ di progettazione</span>: specificare il passo con il quale ModeSt deve 
+ effettuare la progettazione dell'armatura teorica necessaria per flessione 
+ o pressoflessione. Come minimo le travi vengono comunque progettate in 
+ 6 punti. Utilizzare un passo troppo corto porta a maggiori tempi di elaborazione. 
+ Valori consigliati variano da 0.3 a 0.8 m.</p>
+<p><span class="hcp1"><a name="Tipo_di_sollecitazioni_zone_rigide" 
+										 id="Tipo_di_sollecitazioni_zone_rigide"></a>Tipo 
+ di sollecitazioni zone rigide</span>: specificare come devono essere calcolate 
+ le sollecitazioni all'interno delle zone rigide delle aste. Sono disponibili 
+ le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Proseguite</span>: 
+	 le sollecitazioni vengono valutate proseguendo l'andamento della funzione 
+	 che le definisce nella parte flessibile della trave (ad esempio la 
+	 parabola che definisce il momento flettente).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">Costanti</span><span 
+	 style="font-style: normal; font-weight: normal;">:</span> le sollecitazioni 
+	 vengono valutate considerandole costanti dal punto di inizio della 
+	 zona rigida fino al nodo.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">Smorzate</span><span class="hcp3">:</span> le sollecitazioni vengono valutate 
+	 smorzando la funzione (media fra il valore calcolato con <span class="hcp2">Proseguite</span> e il valore calcolato con <span class="hcp2">Costanti</span>).</p></li>
+</ul>
+<p><span class="hcp1"><a name="Min__angolo_per_spinte_a_vuoto" 
+										 id="Min__angolo_per_spinte_a_vuoto"></a>Min. 
+ angolo per spinte a vuoto</span>: specificare l'angolo nel piano verticale 
+ che può compiere la trave senza che vengano considerate le spinte a vuoto 
+ e quindi vengano invertiti i ferri in corrispondenza delle concavità.</p>
+<p><span class="hcp1"><a name="Invertire_i_ferri_anche_in_presenza_di_pilastro_sottostante" 
+										 id="Invertire_i_ferri_anche_in_presenza_di_pilastro_sottostante"></a>Invertire 
+ i ferri anche in presenza di pilastro sottostante</span>: specificare 
+ se invertire i ferri in corrispondenza delle concavità in cui è presente 
+ un pilastro sottostante che in questo caso annullerebbe la spinta a vuoto.</p>
+<p><span class="hcp1"><a name="Max_differenza_larghezza_travi_continue" 
+										 id="Max_differenza_larghezza_travi_continue"></a>Max 
+ differenza larghezza travi continue</span>: specificare la massima differenza 
+ fra la larghezza di due travi della stessa travata oltre la quale non 
+ è più possibile ammettere la continuità dei ferri. Ad esempio, specificando 
+ 10 cm, due travi contigue larghe rispettivamente 70 e 80 cm, vengono considerate 
+ continue a tutti gli effetti in fase di progettazione armature, anche 
+ se allineate da un lato, mentre una trave di 70 cm ed una di 90 cm allineate 
+ da un lato vengono considerate discontinue, cioè i ferri della trave di 
+ 70 cm possono proseguire nella trave di 90 cm, ma non viceversa.</p>
+<h2>Armatura a taglio</h2>
+<p><span class="hcp1"><a name="Progetta_a_taglio_con_traliccio_ad_inclinazione_variabile" 
+										 id="Progetta_a_taglio_con_traliccio_ad_inclinazione_variabile"></a>Progetta 
+ a taglio con traliccio ad inclinazione variabile</span>: specificare se 
+ progettare e verificare l'armatura a taglio con il metodo del traliccio 
+ ad inclinazione variabile (1 &#8804; ctg <span class="hcp4">q</span> 
+ &#8804; 2.5) oppure se adottare sempre un traliccio con inclinazione delle bielle 
+ compresse di 45° a cui corrisponde ctg <span class="hcp4">q</span> 
+ = 1. Nel caso di progettazione con traliccio ad inclinazione variabile 
+ sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Classe 
+	 A</span>: specificare il valore massimo ammissibile della ctg <span class="hcp4">q</span> <span class="hcp5">sia 
+	 all'interno che all'esterno delle zone critiche. Valori accettabili 
+	 sono compresi tra 1 e 2.5.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Classe 
+	 B</span>: specificare il valore massimo ammissibile della ctg <span class="hcp4">q</span> <span class="hcp5">sia 
+	 all'interno che all'esterno delle zone critiche. Valori accettabili 
+	 sono compresi tra 1 e 2.5.</span></p></li>
+</ul>
+<h2>Lunghezze e arrotondamenti</h2>
+<p><span class="hcp1"><a name="Max_lunghezza_barre" id="Max_lunghezza_barre"></a>Max 
+ lunghezza barre</span>: specificare la massima lunghezza ammissibile per 
+ le barre d'armatura.</p>
+<p><span class="hcp1"><a name="Arrotondamento_lunghezze_ferri" 
+										 id="Arrotondamento_lunghezze_ferri"></a>Arrotondamento 
+ lunghezze ferri</span>: specificare l'arrotondamento nelle lunghezze dei 
+ ferri. Ad esempio, specificando 50 cm, si otterranno soltanto ferri di 
+ lunghezza totale pari a multipli di 50 cm (200, 250, 300, ecc.). Ovviamente 
+ il ferro viene arrotondato (allungandolo) solo quando la geometria della 
+ travata e la posizione del ferro lo permettono (non viene ad esempio effettuato 
+ nessun arrotondamento in caso di reggistaffe lunghi quanto tutta la travata).</p>
+<p><span class="hcp1"><a name="Lunghezza_ferri_nei_muri_d_estremità"></a>Lunghezza 
+ ferri nei muri d'estremità</span>: specificare di quanto prolungare i 
+ ferri in eventuali muri presenti alle estremità della travata e giacenti 
+ sullo stesso piano verticale. Si ricorda che è comunque preferibile inserire 
+ in testa al muro un'asta con sezione pari al cordolo che normalmente viene 
+ inserito in corrispondenza del solaio. In questo modo, adottando per questa 
+ sezione un opportuno criterio di progetto, verranno progettati e computati 
+ anche i ferri del cordolo.</p>
+<p><span class="hcp1"><a name="Min__interferro_ammissibile" 
+										 id="Min__interferro_ammissibile"></a>Min. 
+ interferro ammissibile</span>: specificare il valore ammissibile della 
+ distanza fra i ferri. Si ricorda che il D.M. 16/01/96 indica che l'interferro 
+ deve essere almeno una volta il diametro delle barre e, in ogni caso, 
+ non minore di 2 cm e che nel D.M. 17/01/18 non è presente nessun limite 
+ ma solo un'indicazione generica nel par. 4.1.6.1.3. Durante la fase di 
+ minimizzazione degli ingombri ModeSt calcola l'ingombro complessivo dei 
+ ferri considerando una mutua distanza pari al massimo fra questo parametro 
+ e l'eventuale prescrizione di normativa. Se l'ingombro complessivo è maggiore 
+ della larghezza della sezione (diminuita del diametro delle staffe e del 
+ valore specificato nei criteri di disegno armatura travi per il parametro 
+ &quot;<span class="hcp1"><a href="CriTra.htm#Copriferro_reale_al_bordo_staffa">Copriferro 
+ reale al bordo staffa</a></span>&quot;) ModeSt tenta di ridurre l'ingombro 
+ dei ferri usando meno ferri di maggior diametro.</p>
+<p><span class="hcp1"><a name="Elenco_diametri_minimiz__interferri" 
+										 id="Elenco_diametri_minimiz__interferri"></a>Elenco 
+ diametri minimizzazione interferri</span>: specificare l'elenco dei diametri, 
+ separati da spazi, che ModeSt può utilizzare per tentare la minimizzazione 
+ dell'interferro quando risulti necessario. In questa fase vengono considerati 
+ ammissibili questi diametri indipendentemente da quelli indicati nel criterio 
+ di progetto. Sono ammessi anche valori non consecutivi (ad esempio 6 10).</p>
+<p><span class="hcp1"><a name="Riduzione_ancoraggi" id="Riduzione_ancoraggi"></a>Riduzione 
+ ancoraggi</span>: specificare in quale caso non applicare la riduzione 
+ di <font face="Symbol" class="hcp6">t</font><span class="hcp7">c0</span> 
+ o di F<span class="hcp7">bd </span>per il calcolo della 
+ lunghezza d'ancoraggio. Risulteranno di conseguenza ancoraggi più corti. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">Nella 
+	 zona compressa per flessione</span><span class="hcp3">: 
+	 permette di ridurre</span> gli ancoraggi nei punti in cui il calcestruzzo 
+	 risulti sempre compresso per flessione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Nei 
+	 punti inferiori della travata</span><span class="hcp3">: 
+	 permette di ridurre</span> gli ancoraggi nei punti inferiori della 
+	 travata (il ferro risulta compresso ai fini dell'ancoraggio dalla 
+	 massa di calcestruzzo soprastante).</p></li>
+</ul>
+<p>Se entrambe le opzioni sono deselezionate non verranno ridotti gli ancoraggi, 
+ mentre se sono entrambe selezionate verranno ridotti gli ancoraggi nei 
+ punti inferiori della travata in cui il calcestruzzo risulti sempre <span class="hcp3">c</span>ompresso per flessione.</p>
+<p>La normativa cita: &quot;<span class="hcp8">... i valori 
+ di</span> <font face="Symbol" class="hcp6"><span class="hcp8">t</span></font><span class="hcp7"><span class="hcp8">b</span></span> 
+ <span class="hcp9">[omissis]</span> <span class="hcp8">si 
+ applicano a barre</span> <span class="hcp8">ancorate in</span> 
+ <span class="hcp8">zona di conglomerato compatto utilmente 
+ compressa ai</span> <span class="hcp8">fini</span> <span class="hcp8">dell'ancoraggio (barre</span> <span class="hcp8">ancorate 
+ nella metà inferiore della trave</span> <span class="hcp9">[omissis]</span> 
+ <span class="hcp8">ed allontanate</span> <span class="hcp8">dal 
+ lembo teso ...</span>&quot;. L'interpretazione più restrittiva della normativa 
+ è quindi <span class="hcp3">rappresentata dalla selezione 
+ di entrambe le opzioni.</span></p>
+<p><span class="hcp1"><a name="Considerare_nel_calcolo_degli_ancoraggi_i_risvolti_specificati_nei_criteri_generali_di_disegno" 
+										 id="Considerare_nel_calcolo_degli_ancoraggi_i_risvolti_specificati_nei_criteri_generali_di_disegno"></a>Considerare 
+ nel calcolo degli ancoraggi i risvolti specificati nei criteri generali 
+ di disegno</span>: specificare se considerare nel calcolo degli ancoraggi 
+ anche i risvolti del tipo e di lunghezza specificato nei <span class="hcp1"><a 
+	 href="Criteri%20generali%20di%20disegno.htm#Disegno_ganci_estremita">criteri 
+ generali di disegno</a></span>.</p>
+<p><span class="hcp1"><a name="Risvoltare_i_ferri_per_garantire_l_ancoraggio_agli_estremi_della_trave" 
+										 id="Risvoltare_i_ferri_per_garantire_l_ancoraggio_agli_estremi_della_trave"></a>Risvoltare 
+ i ferri per garantire l'ancoraggio agli estremi della trave</span>: specificare 
+ se risvoltare i ferri per garantire l'ancoraggio all'estremità della trave 
+ o nei punti in cui non possono essere prolungati. Se il parametro è disattivato, 
+ ModeSt risvolta i ferri dentro la trave e rinuncia alla verifica dell'ancoraggio.</p>
+<h2>Reggistaffe</h2>
+<p><span class="hcp1"><a name="Interruzione_reggistaffe_campata" 
+										 id="Interruzione_reggistaffe_campata"></a>Interruzione 
+ reggistaffe campata</span>: specificare se si desidera che i reggistaffe 
+ vengano interrotti e sovrapposti in campata. Sono disponibili le seguenti 
+ opzioni:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="In_funzione_della_posizione" id="In_funzione_della_posizione"></a>In 
+	 funzione della posizione</span><span class="hcp3">: 
+	 specificare in quale posizione interrompere i reggistaffe. Sono disponibili 
+	 le seguenti opzioni:</span></p></li>
+</ol>
+<ul>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Solo 
+	 superiori</span>: permette di interrompere solo i reggistaffe superiori 
+	 (inferiori per travi su suolo elastico).</p></li>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Tutti</span>: 
+	 permette di interrompere tutti i reggistaffe sia superiori che inferiori.</p></li>
+</ul>
+<ol start="2">
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="In_funzione_dello_stato_tensionale" id="In_funzione_dello_stato_tensionale"></a>In 
+	 funzione dello stato tensionale</span><span class="hcp3">: 
+	 specificare in quale zona interrompere i reggistaffe. Sono disponibili 
+	 le seguenti opzioni:</span></p></li>
+</ol>
+<ul>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Zona 
+	 compressa</span>: permette di interrompere i reggistaffe solo nelle 
+	 zone in cui la flessione comporta compressione nel calcestruzzo in 
+	 tutte le CC.</p></li>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Zona 
+	 utile d'ancoraggio</span>: permette di interrompere i reggistaffe 
+	 solo nelle zone in cui il calcestruzzo risulti utilmente compresso 
+	 ai fini dell'ancoraggio, come specificato al parametro precedente.</p></li>
+	<li class="p-IndentBullet1"><p class="IndentBullet1"><span class="hcp1">Indipendentemente 
+	 dallo stato tensionale</span>: permette di interrompere i reggistaffe 
+	 indipendentemente dallo stato tensionale nel calcestruzzo.</p></li>
+</ul>
+<p class="Rientro1">Si fa notare che alcune combinazioni possono rendere 
+ impossibile l'interruzione dei reggistaffe (ad esempio <span class="hcp1">Solo 
+ superiori</span> <span class="hcp3">e</span> <span class="hcp1">Zona 
+ utile d'ancoraggio</span> o <span class="hcp1">Solo superiori</span> 
+ <span class="hcp3">e</span> <span class="hcp1">Zona 
+ compressa</span> in combinazione con <span class="hcp1">Indipendentemente 
+ dallo stato tensionale</span> per travi in elevazione). La progettazione 
+ con ferri solo sugli appoggi, con sovrapposizioni in campata, può essere 
+ ottenuta (senza controllo sullo stato tensionale nel calcestruzzo e sulla 
+ posizione dei ferri), anche impostando fra le <span class="hcp10"><a 
+	 href="Fasi%20di%20progetto.htm">fasi di progetto</a></span> solo la fase 
+ <span class="hcp1">PFA</span> (<span class="hcp1">P</span>rogetto 
+ <span class="hcp1">F</span>erri <span class="hcp1">A</span>ppoggi).</p>
+<ol start="3">
+	<li class="p-Elenco1"><p class="Elenco1"><span class="hcp1"><a 
+	 name="Interruzione_anche_prima_e_ultima_campata" id="Interruzione_anche_prima_e_ultima_campata"></a>Interruzione 
+	 anche prima e ultima campata</span>: specificare se l'interruzione 
+	 dei reggistaffe in campata secondo i parametri inseriti al parametro 
+	 precedente debba essere effettuata anche nella prima ed ultima campata 
+	 della travata.</p></li>
+</ol>
+<p><span class="hcp1"><a name="Modalita_di_sovrapposizione_reggistaffe" 
+										 id="Modalita_di_sovrapposizione_reggistaffe"></a>Modalità 
+ di sovrapposizione reggistaffe</span>: specificare <span class="hcp3">la 
+ modalità</span> di sovrapposizione dei reggistaffe in corrispondenza dei 
+ pilastri. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 per la larghezza del pilastro</span>: i reggistaffe vengono sovrapposti 
+	 solo per la larghezza del pilastro ed il momento negativo viene coperto 
+	 mediante spezzoni aggiuntivi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Per 
+	 garantire la copertura del momento negativo</span>: i reggistaffe 
+	 vengono sovrapposti di quanto serve per garantire la copertura del 
+	 momento negativo (eventualmente integrando l'armatura con spezzoni).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Oltre 
+	 il pilastro di</span>: permette d'imporre che i reggistaffe oltrepassino 
+	 il pilastro della quantità specificata. Anche in questo caso il momento 
+	 negativo viene coperto con spezzoni aggiuntivi.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Modalita_di_unificazione_reggistaffe" 
+										 id="Modalita_di_unificazione_reggistaffe"></a>Modalità 
+ di unificazione reggistaffe</span>: specificare la modalità di copertura 
+ del momento negativo. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 se la geometria della travata e la lunghezza totale delle barre lo 
+	 consentono</span>: i reggistaffe di due campate adiacenti vengono 
+	 unificati ogni qualvolta la geometria della travata e la lunghezza 
+	 totale delle barre lo consentono ed il momento negativo viene coperto 
+	 sempre con spezzoni aggiuntivi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 se la loro area copre il momento negativo</span>: i reggistaffe vengono 
+	 unificati solo se la loro area copre il momento negativo, altrimenti 
+	 vengono sovrapposti con i criteri precedenti e aggiunti spezzoni per 
+	 coprire l'area di ferro ancora mancante.</p></li>
+</ul>
+<h2>Minimi di regolamento</h2>
+<p><span class="hcp1"><a name="Min__percentuale_di_regolamento" 
+										 id="Min__percentuale_di_regolamento"></a>Min. 
+ percentuale di regolamento</span>: specificare in quali casi considerare 
+ la prescrizione di normativa relativa alla percentuale di armatura longitudinale 
+ in zona tesa. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Per 
+	 le travi di fondazione</span>: permette di considerare il minimo percentuale 
+	 per le travi di fondazione (su suolo elastico).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Per 
+	 le travi di elevazione</span>: permette di considerare il minimo percentuale 
+	 per le travi in elevazione.</p></li>
+</ul>
+<p>Se entrambe le opzioni sono deselezionate non verranno mai considerati 
+ i minimi percentuali, mentre se sono entrambe selezionate verranno sempre 
+ considerati i minimi percentuali per tutte le travi.</p>
+<p><span class="hcp1"><a name="Min__di_armatura_per_taglio" 
+										 id="Min__di_armatura_per_taglio"></a>Min. 
+ di armatura per taglio&#160;(T.A. o S.L. D.M. 96)</span>: specificare 
+ in quali casi considerare la prescrizione di normativa (D.M. 16/01/96) 
+ relativa all'armatura inferiore in grado di assorbire uno sforzo di trazione 
+ uguale al taglio. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Per 
+	 le travi di fondazione</span>: permette di considerare l'armatura 
+	 per le travi di fondazione (su suolo elastico).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Per 
+	 le travi di elevazione</span>: permette di considerare l'armatura 
+	 per le travi in elevazione.</p></li>
+</ul>
+<p>Se entrambe le opzioni sono deselezionate non verrà mai considerata 
+ l'armatura per taglio, mentre se sono entrambe selezionate verrà sempre 
+ considerata l'armatura per taglio.</p>
+<p><span class="hcp1">Nota</span>: si fa presente che per 
+ le travi di fondazione il termine &quot;inferiore&quot; viene interpretato 
+ come &quot;superiore&quot;.</p>
+<p><span class="hcp1"><a name="Tipo_di_armatura_per_taglio" 
+										 id="Tipo_di_armatura_per_taglio"></a>Tipo 
+ di armatura per taglio (T.A.)</span>: specificare il metodo di calcolo 
+ dell'armatura in grado di assorbire uno sforzo di trazione uguale al taglio.</p>
+<p>Posto:</p>
+<p class="Normal3">Af<span class="hcp7">F</span> = area 
+ di ferro necessaria per flessione.</p>
+<p class="Normal3">Af<span class="hcp7">T</span> = area 
+ di ferro necessaria per taglio (T/<font face="Symbol" class="hcp6">s</font>f).</p>
+<p class="Normal3">Af<span class="hcp7">C</span> = area 
+ di ferro complessivamente necessaria.</p>
+<p>Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Integrativa</span>: 
+	 l'armatura per taglio si considera integrativa, ossia si ha: Af<span class="hcp7">C</span> = max(Af<span class="hcp7">F</span>,Af<span class="hcp7">T</span>)</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Aggiuntiva</span>: 
+	 l'armatura per taglio si considera aggiuntiva, ossia si ha: Af<span class="hcp7">C</span> = Af<span class="hcp7">F</span>+Af<span class="hcp7">T</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Mista</span>: 
+	 l'armatura per taglio viene calcolata in modo misto, ossia per ogni 
+	 CC se Af<span class="hcp7">F</span> è tesa si considera 
+	 un'armatura aggiuntiva, se Af<span class="hcp7">F</span> 
+	 è compressa si considera un'armatura integrativa.</p></li>
+</ul>
+<p>Nel calcolo agli Stati limite con il D.M. 16/01/96 l'armatura a taglio 
+ viene sempre considerata aggiuntiva e pari alla massima necessaria nelle 
+ varie CC.</p>
+<p><span class="hcp1"><a name="Controllo_passo_e_12" id="Controllo_passo_e_12"></a>Controllo 
+ passo e 12Ø</span>: specificare se durante la progettazione delle staffe 
+ debba essere controllato che il passo non superi il valore di 12 Ø, dove 
+ Ø è il diametro minimo dell'armatura longitudinale. Il controllo viene 
+ effettuato durante la fase di progettazione staffe (<span class="hcp1">PST</span>) 
+ sui ferri già presenti nella travata e ripetuto al termine della progettazione, 
+ segnalando fra le anomalie se la limitazione non è rispettata.</p>
+<p><span class="hcp1"><a name="Min__di_regolamento_a_torsione_nell_ala" 
+										 id="Min__di_regolamento_a_torsione_nell_ala"></a>Min. 
+ di regolamento a torsione nell'ala</span>: specificare se i minimi di 
+ regolamento relativi alle staffe nel caso di progetto a torsione vadano 
+ rispettati anche per quanto riguarda la staffatura dell'ala di travi a 
+ T e a L.</p>
+<p><span class="hcp1"><a name="Min_reg_staffe_ala" id="Min_reg_staffe_ala"></a>Min. 
+ di regolamento nell'ala</span>: specificare se i minimi di regolamento 
+ relativi alle staffe vadano rispettati anche per quanto riguarda la staffatura 
+ dell'ala di travi a T e a L.</p>
+<h2>Stampe</h2>
+<p><span class="hcp1"><a name="Verifiche_a_flessione_in_relazione" 
+										 id="Verifiche_a_flessione_in_relazione"></a>Verifiche 
+ a flessione in relazione</span>: specificare quali sono le CC per cui 
+ riportare in relazione la stampa delle verifiche a flessione ed i controlli 
+ sulle armature longitudinali per taglio e torsione. Sono disponibili le 
+ seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tutte</span>: 
+	 riportare le verifiche di tutte le CC.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Max 
+	 area di ferro teorica superiore e inferiore per flessione</span>: 
+	 riportare le verifiche solo per le CC che comportano la massima area 
+	 di ferro teorica superiore e inferiore per flessione (le due CC possono 
+	 anche coincidere).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Max 
+	 area di ferro teorica complessiva per flessione</span>: riportare 
+	 la verifica solo per la CC che comporta la massima area di ferro teorica 
+	 complessiva per flessione (superiore + inferiore).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Max 
+	 tensione nell'acciaio</span>: riportare la verifica solo per la CC 
+	 che comporta la massima tensione nell'acciaio, con riferimento alle 
+	 aree di ferro effettivamente presenti per flessione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Minimizzate</span>: 
+	 viene riportata la verifica scelta con la modalità <span class="hcp1">Max 
+	 tensione nell'acciaio</span>, senza i dati relativi alla torsione 
+	 ed al taglio.</p></li>
+</ul>
+<p>Vengono in ogni caso riportate le verifiche non soddisfatte.</p>
+<p><span class="hcp1"><a name="Verifiche_a_taglio_in_relazione" 
+										 id="Verifiche_a_taglio_in_relazione"></a>Verifiche 
+ a taglio in relazione</span>: specificare per quali CC riportare in relazione 
+ la stampa delle verifiche a taglio e torsione nell'anima ed eventualmente 
+ nell'ala. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tutte</span>: 
+	 riportare le verifiche di tutte le CC.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Max 
+	 scorrimento per taglio</span>: riportare le verifiche solo per la 
+	 CC che comporta il massimo sforzo di scorrimento per solo taglio.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Max 
+	 scorrimento per taglio e torsione</span>: riportare la verifica solo 
+	 per la CC che comporta il massimo sforzo di scorrimento per taglio 
+	 e torsione (scorrimento fittizio).</p></li>
+</ul>
+<p>Nel caso di progetto non esecutivo vengono stampate nei casi <span class="hcp1">Max 
+ scorrimento per taglio</span> e <span class="hcp1">Max scorrimento 
+ per taglio e torsione</span> le CC che provocano le massime aree di ferro 
+ per staffe, ferri di parete e sagomati.</p>
+<p>Si fa notare che ai fini della stampa delle verifiche nell'ala di travi 
+ a T o a L le opzioni <span class="hcp1">Max scorrimento 
+ per taglio</span> e <span class="hcp1">Max scorrimento per 
+ taglio e torsione</span> sono equivalenti.</p>
+<p>In tutte le verifiche le armature necessarie per torsione (siano esse 
+ staffe, ferri di parete) vengono considerate come coperte per prime dalle 
+ armature presenti. Solo (e tutta) l'eccedenza viene considerata per le 
+ altre verifiche.</p>
+<p>Ad esempio:</p>
+<p class="Normal3">Area ferri di parete necessaria per torsione: 3 cmq</p>
+<p class="Normal2">Area ferri di parete necessaria per taglio: 5 cmq</p>
+<p>Se nella sezione sono presenti 2 cmq di ferri di parete ModeSt considera:</p>
+<p class="Normal3">Area ferri di parete inserita per torsione: 2 cmq</p>
+<p class="Normal2">Area ferri di parete inserita per taglio: 0 cmq</p>
+<p>Se nella sezione sono presenti 4 cmq di ferri di parete ModeSt considera:</p>
+<p class="Normal3">Area ferri di parete inserita per torsione: 3 cmq</p>
+<p class="Normal2">Area ferri di parete inserita per taglio: 1 cmq</p>
+<p>Se nella sezione sono presenti 10 cmq di ferri di parete ModeSt considera:</p>
+<p class="Normal3">Area ferri di parete inserita per torsione: 3 cmq</p>
+<p class="Normal2">Area ferri di parete inserita per taglio: 7 cmq</p>
+<p>Vengono in ogni caso riportate le verifiche non soddisfatte.</p>
+<h2>Parametri di disegno</h2>
+<p>Nella creazione dei disegni delle armature delle travi oltre alle direttive 
+ dei <span class="hcp10"><a href="Criteri%20generali%20di%20disegno.htm">criteri 
+ generali di disegno</a></span> sono specificabili numerose altre opzioni.</p>
+<p><span class="hcp1"><a name="Scala_disegno_travi" id="Scala_disegno_travi"></a>Scala 
+ disegno travi</span>: specificare la scala con la quale disegnare le armature 
+ delle travi.</p>
+<p><span class="hcp1"><a name="Scala_disegno_sezioni" id="Scala_disegno_sezioni"></a>Scala 
+ disegno sezioni</span>: specificare la scala con la quale disegnare le 
+ sezioni delle travi.</p>
+<p><span class="hcp1"><a name="Campitura_sezioni" id="Campitura_sezioni"></a>Campitura 
+ sezioni</span>: specificare se effettuare ed il tipo di campitura da utilizzare 
+ per le sezioni delle travi, con riferimento a quanto specificato nei criteri 
+ generali di disegno. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Rada</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Fitta</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Disegno_sezione_travi_in_falso" 
+										 id="Disegno_sezione_travi_in_falso"></a>Disegno 
+ sezione travi in falso</span>: specificare se agli estremi delle travate 
+ e nei punti in cui manca il pilastro inferiore (o superiore per travi 
+ su suolo elastico) deve essere disegnata la sezione di eventuali travi 
+ incidenti.</p>
+<p><span class="hcp1"><a name="Disegna_sezioni" id="a1"></a>Disegna 
+ sezioni</span>: specificare se lateralmente alle travate debbano essere 
+ disegnate le sezioni. Il programma individua tutti i punti in cui è necessario 
+ disegnare la sezione della travata perché differentemente armati e crea 
+ le sezioni.</p>
+<p><span class="hcp1"><a name="Disegno_ferri_nelle_sezioni" 
+										 id="Disegno_ferri_nelle_sezioni"></a>Disegno 
+ ferri nelle sezioni</span>: specificare se disegnare nella sezione della 
+ travata la posizione dei ferri longitudinali.</p>
+<p><span class="hcp1"><a name="Campitura_travi_in_falso" 
+										 id="Campitura_travi_in_falso"></a>Campitura 
+ travi in falso</span>: specificare se effettuare ed il tipo di campitura 
+ da utilizzare per la sezione delle travi incidenti sulla travata, con 
+ riferimento a quanto specificato nei criteri generali di disegno. Sono 
+ disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Rada</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Fitta</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Campitura_muri" id="Campitura_muri"></a>Campitura 
+ muri</span>: specificare se effettuare ed il tipo di campitura da utilizzare 
+ per i muri giacenti sopra e sotto la travata, con riferimento a quanto 
+ specificato nei criteri generali di disegno. Sono disponibili le seguenti 
+ opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Rada</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Fitta</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Tipo_di_quotatura_luci_nette_trave" 
+										 id="Tipo_di_quotatura_luci_nette_trave"></a>Tipo 
+ di quotatura luci nette trave</span>: specificare come deve essere effettuata 
+ la quotatura delle luci nette delle travi. Sono disponibili le seguenti 
+ opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Con 
+	 riferimento ai pilastri superiori</span><span class="hcp3">:</span> 
+	 quotare le luci nette con riferimento ai pilastri superiori.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Con 
+	 riferimento ai pilastri inferiori</span><span class="hcp3">:</span> 
+	 quotare le luci nette con riferimento ai pilastri inferiori.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Lunghezza_monconi_di_pilastro" 
+										 id="Lunghezza_monconi_di_pilastro"></a>Lunghezza 
+ monconi di pilastro</span>: specificare la lunghezza con cui rappresentare 
+ gli eventuali pilastri sopra e sotto la trave.</p>
+<p><span class="hcp1"><a name="Quotatura_zone_di_staffatura" 
+										 id="Quotatura_zone_di_staffatura"></a>Quotatura 
+ zone di staffatura</span>: specificare se riportare nella parte superiore 
+ del disegno della trave la quotatura delle zone di staffatura.</p>
+<p><span class="hcp1"><a name="Unire_punti_indicazione_zone_staffatura" 
+										 id="Unire_punti_indicazione_zone_staffatura"></a>Unire 
+ punti di indicazione delle zone di staffatura</span>: specificare se unire 
+ le quote delle zone di staffatura. In una campata di una travata suddivisa 
+ in tre zone di staffatura, se l'opzione è deselezionata, viene quotato 
+ solo le zone di staffatura e non i tratti compresi fra due zone, mentre 
+ se l'opzione è selezionata le linee delle quote della zona di staffatura 
+ vengono estese fino al punto medio del tratto intermedio alle due zone, 
+ eliminando così i tratti non quotati.</p>
+<p><span class="hcp1"><a name="Linee_di_riferimento_quote" 
+										 id="Linee_di_riferimento_quote"></a>Linee 
+ di riferimento quote</span>: specificare se le linee dei pilastri inferiori 
+ devono essere prolungate in modo da avere un riferimento più evidente 
+ sulla posizione e le quotature dei ferri.</p>
+<p><span class="hcp1"><a name="Indicazione_numero_bracci_staffe" 
+										 id="Indicazione_numero_bracci_staffe"></a>Indicazione 
+ numero bracci staffe</span>: specificare se riportare il numero di bracci 
+ delle staffe. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Sempre</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 se il numero è maggiore di due</span></p></li>
+</ul>
+<h2>Disegno ferri longitudinali</h2>
+<p><span class="hcp1"><a name="Disegno_ferri_dentro_la_trave" 
+										 id="Disegno_ferri_dentro_la_trave"></a>Disegno 
+ ferri dentro la trave</span>: specificare se dentro la trave devono essere 
+ disegnati o meno i ferri realmente presenti nella trave.</p>
+<p><span class="hcp1"><a name="Disegno_esploso_ferri_di_parete" 
+										 id="Disegno_esploso_ferri_di_parete"></a>Disegno 
+ esploso ferri di parete</span>: specificare se nell'esploso dei ferri 
+ della trave vadano disegnati anche i ferri di parete sul fianco e sull'ala. 
+ I ferri vengono computati anche se non disegnati.</p>
+<p><span class="hcp1"><a name="Distanza_fra_ferri_esplosi" 
+										 id="Distanza_fra_ferri_esplosi"></a>Distanza 
+ fra ferri esplosi</span>: specificare la distanza da lasciare tra un ferro 
+ e l'altro nel disegno dell'esploso dei ferri.</p>
+<p><span class="hcp1"><a name="Disegno_reggistaffe_aggiuntivi_per_travi_a_T_e_L" 
+										 id="Disegno_reggistaffe_aggiuntivi_per_travi_a_T_e_L"></a>Disegno 
+ reggistaffe aggiuntivi per travi a T e L</span>: specificare il numero 
+ di reggistaffe aggiuntivi da inserire negli spigoli e nei punti di intersezione 
+ delle staffe nelle travi a T e a L (ferri di suola). Sono disponibili 
+ le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Solo 
+	 se non necessari per torsione</span>: vengono inseriti reggistaffe 
+	 aggiuntivi solo se necessari per torsione.</p></li>
+</ul>
+<table wrapperparagraphselector="P" style="margin-top: 14pt;" cellspacing="0" 
+		 width="100%">
+	<tr>
+		<td style="width:100%;" class="hcp11"><p>nelle 
+		 travi a L viene aggiunto come minimo un reggistaffe, nelle travi 
+		 a T due reggistaffe;</p>
+		<p class="hcp12"><img src="rgstfagg1.jpg" alt="" width="432" height="92" border="0" class="hcp13"></p></td>
+	</tr>
+	<tr>
+		<td style="width:100%;" class="hcp11"><p>nelle 
+		 travi a L ed a T vengono aggiunti come minimo due reggistaffe;</p>
+		<p class="hcp12"><img src="rgstfagg2.jpg" alt="" width="429" height="93" border="0" class="hcp13"></p></td>
+	</tr>
+	<tr>
+		<td style="width:100%;" class="hcp11"><p>nelle 
+		 travi a L vengono aggiunti come minimo tre reggistaffe, nelle 
+		 travi a T vengono aggiunti due reggistaffe;</p>
+		<p class="hcp12"><img src="rgstfagg3.jpg" alt="" width="429" height="97" border="0" class="hcp13"></p></td>
+	</tr>
+	<tr>
+		<td style="width:100%;" class="hcp11"><p>nelle 
+		 travi a L vengono aggiunti come minimo tre reggistaffe, nelle 
+		 travi a T vengono aggiunti quattro reggistaffe;</p>
+		<p class="hcp12"><img src="rgstfagg4.jpg" alt="" width="427" height="94" border="0" class="hcp13"></p></td>
+	</tr>
+</table>
+<p>Nel caso che la trave sia soggetta a torsione, il numero di ferri nella 
+ suola può essere automaticamente incrementato da ModeSt. Vengono considerati 
+ come resistenti a torsione solo i ferri degli spigoli convessi ed i ferri 
+ posizionati sulla suola.</p>
+<p>Viene preso come diametro dei ferri aggiuntivi il minimo valore tra 
+ l'elenco dei ferri di parete.</p>
+<h2>Disegno staffe</h2>
+<p><span class="hcp1"><a name="Posizione_staffe_esterne" 
+										 id="Posizione_staffe_esterne"></a>Posizione 
+ staffe esterne</span>: specificare dove deve essere posizionata la staffa 
+ disegnata esternamente alla sezione. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Lateralmente 
+	 al disegno</span>: la staffa viene disegnata lateralmente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Inferiormente 
+	 al disegno</span>: la staffa viene disegnata inferiormente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">In 
+	 automatico</span>: la staffa viene disegnata in modo automatico e 
+	 cioè lateralmente se la sezione è alta e stretta, inferiormente in 
+	 caso contrario.</p></li>
+</ul>
+<p class="hcp12"><span class="hcp1"><a name="Disegno_staffe_dentro_la_sezione" 
+	 id="Disegno_staffe_dentro_la_sezione"></a>Disegno staffe dentro la 
+ sezione</span>: specificare se dentro la sezione della trave deve essere 
+ disegnata la staffa.</p>
+</body>
+</html>

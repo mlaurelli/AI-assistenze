@@ -1,0 +1,109 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Punti di blocco</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+img.hcp4 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Punti di blocco</h1>
+<p>In corrispondenza dei nodi della travata ModeSt individua dei punti 
+ che&#160;identificano i cosiddetti &quot;punti di blocco&quot;. Questi 
+ sono i punti in cui i ferri non possono proseguire ma devono essere ancorati, 
+ a causa di discontinuità nelle sezioni o nel posizionamento delle aste.</p>
+<p>In ogni nodo vengono definiti quattro punti:</p>
+<ol style="list-style: decimal;">
+	<li><p class="Elenco1">blocco per ferri superiori provenienti da destra;</p></li>
+	<li><p class="Elenco1">blocco per ferri superiori provenienti da sinistra;</p></li>
+	<li><p class="Elenco1">blocco per ferri inferiori provenienti da destra;</p></li>
+	<li><p class="Elenco1">blocco per ferri inferiori provenienti da sinistra.</p></li>
+</ol>
+<p>I blocchi vengono visualizzati in progettazione interattiva come brevi 
+ linee verticali che si protendono verso la parte superiore o inferiore 
+ della travata (linee che identificano punti di blocco per ferri superiori 
+ o inferiori). Un piccolo triangolino indica, con la direzione della punta, 
+ la direzione nella quale agisce il blocco.</p>
+<p>Ogni punto di blocco è caratterizzato dai seguenti parametri:</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt; border-collapse: separate; 
+		 border-collapse: separate;" cellspacing="0" width="100%" border="2">
+	<tr>
+		<td style="width:27%;" class="hcp1"><p class="hcp2"><span class="hcp3">Posizione</span></p></td>
+		<td style="width:73%;" class="hcp1"><p class="hcp2">è la coordinata (X globale misurata 
+		 dal primo nodo della travata) in cui il blocco ha effetto.</p></td>
+	</tr>
+	<tr>
+		<td style="width:27%;" class="hcp1"><p class="hcp2"><span class="hcp3">Tipo 
+		 di blocco</span></p></td>
+		<td style="width:73%;" class="hcp1"><p>può 
+		 essere uno dei seguenti:</p>
+		<p class="Normal2"><span class="hcp3">Completamente 
+		 libero</span>: il ferro è libero di proseguire e quindi il blocco 
+		 in realtà non ha&#160;effetto. Le linee relative a blocchi di 
+		 questo tipo non vengono normalmente&#160;visualizzate.</p>
+		<p class="Normal2" style="margin-bottom: 0;"><span class="hcp3">Bloccato 
+		 solo il ferro</span>: il ferro può proseguire dritto ma solo per 
+		 ancoraggio. Le linee relative a blocchi di questo tipo vengono 
+		 visualizzate tratteggiate.</p>
+		<p class="Normal2">&#160;</p>
+		<p class="Normal2"><span class="hcp3">Bloccato il 
+		 ferro e l'ancoraggio</span>: il ferro non può proseguire e deve 
+		 essere risvoltato. Le linee relative a blocchi di questo tipo 
+		 vengono visualizzate a tratto continuo.</p></td>
+	</tr>
+	<tr>
+		<td style="width:27%;" class="hcp1"><p class="hcp2"><span class="hcp3">Altezza 
+		 risvolto</span></p></td>
+		<td style="width:73%;" class="hcp1"><p class="hcp2">indica di quanto viene risvoltato 
+		 il ferro che non prosegue.</p></td>
+	</tr>
+	<tr>
+		<td style="width:27%;" class="hcp1"><p class="hcp2"><span class="hcp3">Lunghezza 
+		 allungamento</span></p></td>
+		<td style="width:73%;" class="hcp1"><p class="hcp2">indica di quanto può essere allungato 
+		 il ferro prima&#160;che debba essere obbligatoriamente risvoltato.</p></td>
+	</tr>
+</table>
+<p class="hcp2">La posizione ed i parametri associati ai punti 
+ di blocco possono essere controllati e modificati in progettazione interattiva 
+ cliccando nel gruppo <span class="hcp3">Altri</span> su 
+ <span class="hcp3">Modifica blocco <img src="../Icone/16/modblocco.png" alt="" border="1" class="hcp4"></span>, 
+ mentre i blocchi stessi possono essere resi inattivi cliccando nel gruppo 
+ <span class="hcp3">Altri</span> su <span class="hcp3">Forza 
+ blocco <img src="../Icone/16/forzablocco.png" alt="" border="1" class="hcp4"></span>; 
+ in questo caso durante l'editing e la progettazione delle armature ModeSt 
+ non rispetterà i punti di discontinuità. I punti di blocco che non creano 
+ interruzioni dei ferri (blocchi di tipo Completamente libero) possono 
+ essere visualizzati cliccando nel gruppo <span class="hcp3">Disegno</span> 
+ su <span class="hcp3">Blocchi inattivi <img src="../Icone/16/blocchiinattivi.png" alt="" border="1" class="hcp4"></span>; 
+ questo può essere utile per poterli selezionare e modificare con il comando 
+ <span class="hcp3">Modifica blocco <img src="../Icone/16/modblocco.png" alt="" border="1" class="hcp4"></span>.</p>
+<p class="hcp2"><span class="hcp3">Utilizzo 
+ da linea di comando</span>: <span class="hcp3"><a href="../Comandi/MPBL.htm">MPBL</a></span> 
+ (Modifica proprietà blocco), <span class="hcp3"><a href="../Comandi/FBL.htm">FBL</a></span> 
+ (Forza blocchi), <span class="hcp3"><a href="../Comandi/DBLI.htm">DBLI</a></span>&#160;(Disegna 
+ blocchi inattivi).</p>
+</body>
+</html>

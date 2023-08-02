@@ -1,0 +1,166 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Carichi manuali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { mso-bidi-language:AR-SA; }
+span.hcp2 { font-weight:bold; }
+img.hcp3 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+a.hcp4 { font-weight:bold; }
+span.hcp5 { text-transform:uppercase; }
+span.hcp6 { font-family:Verdana, sans-serif;
+font-size:10pt; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Carichi manuali</h1>
+<p>L'assegnazione dei carichi manuali nella CCE corrente si esegue in primo 
+ luogo <span class="hcp1">definendo le tipologie di 
+ carico necessarie cliccando</span> nel gruppo <span class="hcp2">Definizioni</span> 
+ della scheda <span class="hcp2">Carichi</span> su&#160;<span class="hcp2">Tipi carichi</span> <img src="../Icone/32/tc32.png" alt="" border="1" class="hcp3"> 
+ e quindi sul tipo di carico.</p>
+<p>Una volta definite le tipologie di carico sarà sufficiente selezionare 
+ gli elementi desiderati e nel pannello <span class="hcp2">Proprietà 
+ elementi selezionati</span> dalla casella di riepilogo a discesa relativa 
+ ai carichi manuali selezionare il carico desiderato.</p>
+<p>Un tipo di carico definito ma non utilizzato nel modello può essere 
+ eliminato selezionando la corrispondente riga e premendo sul bottone &quot;Elimina&quot;.</p>
+<p>Se nella scheda <span class="hcp2">Generali</span> delle 
+ <span class="hcp2"><a href="Opzioni%20generali.htm">Opzioni</a></span> 
+ è attiva l'opzione &quot;Definizione e modifica dei carichi in tutte le 
+ CCE&quot; la definizione o la modifica di un carico si ripercuote in tutte 
+ le <a href="Condizioni%20di%20carico%20elementari.htm" class="hcp4">CCE</a> 
+ definite. Per cui l'aggiunta o la modifica di un carico nella CCE corrente 
+ verrà applicata anche alle altre CCE definite. Per attivare l'opzione 
+ precedente su una struttura con carichi manuali già definiti, occorre 
+ che questi carichi siano uguali in tutte le CCE.</p>
+<p>Se alla CCE corrente è stata assegnata un tipo di CCE variabile con 
+ selezionata l'opzione &quot;Da vento&quot;, le tipologie dei carichi per 
+ i muri/elementi bidimensionali, i solai e le tamponature vengono generate 
+ automaticamente nel caso in cui sia stato eseguito il calcolo della pressione 
+ del vento come indicato in <a href="Analisi_dei_carichi_da_neve_e_vento.htm#VENTO" class="hcp4">Analisi dei 
+ carichi da neve e vento</a>.</p>
+<p><span class="hcp5">è</span> importante sottolineare 
+ che per i carichi da vento viene utilizzata la normale ed usuale tecnica 
+ che viene usata quando si calcolano manualmente i carichi da vento. Se 
+ un elemento risulta selezionato come investito dal vento, il suo carico 
+ è in totale quello previsto dall'analisi, indipendentemente dalla sua 
+ inclinazione rispetto alla direzione del vento. Il carico quindi NON viene 
+ scomposto e/o modificato in funzione dell'angolo di incidenza. Un elemento 
+ se viene selezionato come sopravento o sottovento riceve TUTTA la pressione 
+ derivante dall'analisi, indipendentemente dall'angolo reale di incidenza.</p>
+<p>Nelle CCE di tipo vento la selezione degli elementi può essere velocizzata 
+ <span class="hcp1">cliccando</span> nel gruppo <span class="hcp2">Strumenti</span> della scheda <span class="hcp2">Carichi</span> 
+ su&#160;<span class="hcp2">Vento <img src="../Icone/32/vento32.png" alt="" border="1" class="hcp3"> </span>e 
+ quindi su <span class="hcp2">Seleziona elementi sopravento</span>&#160;<img src="../Icone/16/ventoselsopra.png" alt="" border="1" class="hcp3">&#160;o su <span class="hcp2">Seleziona elementi sottovento</span>&#160;<img src="../Icone/16/ventoselsotto.png" alt="" border="1" class="hcp3">. Gli elementi 
+ selezionati sono quelli che sono totalmente visibili dalla direzione del 
+ vento specificata nella <a href="Condizioni%20di%20carico%20elementari.htm">definizione 
+ della CCE</a>.</p>
+<p><span class="hcp5">è</span> bene controllare ed 
+ eventualmente modificare la selezione individuata automaticamente, in 
+ quanto il programma può essere tratto in inganno da situazioni particolari, 
+ come aperture o elementi quasi paralleli alla direzione del vento.</p>
+<p>I carichi da vento per gli elementi sopravento e sottovento di &quot;Tettoie 
+ e pensiline isolate&quot; devono essere archiviati in due diverse <a href="Condizioni%20di%20carico%20elementari.htm" class="hcp4">CCE</a> per ogni direzione del vento e 
+ specificare come tipologia della pressione quella Massimizzata.</p>
+<p>Si ricorda che anche i carichi definiti in questo modo sono caratteristici 
+ della <a href="Condizioni%20di%20carico%20elementari.htm" class="hcp4">CCE</a> 
+ corrente e quindi rendere corrente una CCE comporta anche la possibilità 
+ di modificare le tipologie di carichi definite all'interno di essa.</p>
+<p>La gestione e l'inserimento dei carichi avviene quindi con una filosofia 
+ molto simile a quella della <a href="Modifica_delle_proprieta.htm">assegnazione 
+ delle proprietà agli elementi</a>, ma con le seguenti importanti differenze:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">i nuovi elementi inseriti 
+	 <span class="hcp2">non</span> sono automaticamente caratterizzati 
+	 dal carico corrente, in quanto il carico non è una proprietà;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">i carichi oltre che <span class="hcp2">assegnati</span> possono anche essere <span class="hcp2">aggiunti</span> agli elementi, il che è 
+	 impensabile per una proprietà;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">un elemento può essere privo 
+	 di carichi, mentre non può ovviamente essere privo delle sue proprietà.</p></li>
+</ul>
+<p>Attraverso la <span class="hcp6">casella 
+ di riepilogo a discesa relativa ai carichi manuali del pannello</span> 
+ <span class="hcp2">Proprietà elementi selezionati</span> 
+ <span class="hcp6">è possibile:</span> 
+ <span class="hcp2">eliminare</span> i carichi assegnati 
+ ad un elemento selezionando la tipologia &quot;Nessun carico&quot;, <span class="hcp2">aggiungere</span> un carico ai carichi 
+ già agenti sull'elemento selezionando dalla casella di riepilogo <span class="hcp6">sottostante 
+ a quella dell'ultimo carico applicato il tipo di carico da aggiungere,</span> 
+ <span class="hcp2">sostituire</span> il carico corrente 
+ scegliendo un'altra tipologia di carico.</p>
+<p>Si noti che anche i carichi manuali vengono gestiti in modo dinamico: 
+ è possibile modificare il valore o l'andamento di un carico manuale anche 
+ dopo l'assegnazione a nodi o elementi oppure modificare i dati dell'analisi 
+ dei carichi da vento, senza la necessità di dover riassegnare il carico.</p>
+<p>In alcuni casi inoltre ModeSt può generare automaticamente dei carichi 
+ manuali. Questo può sembrare un controsenso, ma si rende necessario quando 
+ ad un'asta è stato assegnato un carico parziale o un carico concentrato 
+ in campata. Se l'asta viene suddivisa in più parti (si veda <span class="hcp2"><a 
+	 href="Spezza_aste_e_muri.htm">Spezza aste e muri</a></span>), ModeSt 
+ ridefinisce correttamente i valori dei carichi e delle coordinate di inizio 
+ e fine carico per le parti di asta interessate, e di conseguenza genera 
+ dei nuovi carichi che vengono classificati come carichi manuali. In questo 
+ caso la modifica del valore del carico originale <span class="hcp2">non</span> 
+ si riflette sui carichi dell'asta che è stata spezzata e che è caratterizzata 
+ da dei nuovi carichi.</p>
+<p>I carichi concentrati in campata possono comunque essere introdotti 
+ semplicemente spezzando l'asta nel punto di applicazione ed inserendo 
+ un carico nodale, e anche la gestione di carichi fortemente variabili 
+ può essere migliorata spezzando l'asta in modo che ogni pezzo verrà considerato 
+ con un carico uniforme diverso (schema a &quot;gradini&quot;). In sede 
+ di calcolo armature la &quot;trave&quot; viene comunque ricomposta.</p>
+<p>Fra i diversi tipi di carico nodale che è possibile definire in ModeSt 
+ ci sono anche carichi di tipo massa, caratterizzati da diversi componenti. 
+ Un motivo per l'utilizzo di carichi nodali di tipo massa (nella sola direzione 
+ Z) è quello di valutare gli effetti del sisma in direzione verticale (statico 
+ o dinamico) definendo direttamente le sole masse che lo generano. I carichi 
+ nodali di tipo massa non sono influenzati dai moltiplicatori per la generazione 
+ delle masse specificati nella <a href="Condizioni%20di%20carico%20elementari.htm">definizione 
+ della CCE</a> e sono da inserire in kg. <span class="hcp2">Facciamo 
+ osservare che ad una massa di 100 kg corrisponde una forza peso P = m*g 
+ = 100*9.81 = 981 N = 98.1 daN quindi, ad una forza peso P = 100 daN = 
+ 1000 N corrisponde una massa m = P/g = 1000/9.81 = 101.9 kg</span>.</p>
+<p><span class="hcp2">Utilizzo da linea di comando</span>: 
+ <span class="hcp2"><a href="../Comandi/DCCE.htm">DCCE</a></span> 
+ (Definisce condizione di carico elementare), <span class="hcp2"><a 
+	 href="../Comandi/DECN.htm">DECN</a></span> (Definisci carico nodo), 
+ <span class="hcp2"><a href="../Comandi/DECA.htm">DECA</a></span> 
+ (Definisci carico asta), <span class="hcp2"><a href="../Comandi/DECB.htm">DECB</a></span> 
+ (Definisci carico muro/elemento bidimensionale),&#160;<span class="hcp2"><a 
+	 href="../Comandi/DECO.htm">DECO</a></span> (Definisci carico solaio),&#160;<span class="hcp2"><a href="../Comandi/DECT.htm">DECT</a></span> 
+ (Definisci carico tamponatura), <span class="hcp2"><a href="../Comandi/CNC.htm">CNC</a></span> 
+ (Carico nodo corrente), <span class="hcp2"><a href="../Comandi/CAC.htm">CAC</a></span> 
+ (Carico asta corrente), <span class="hcp2"><a href="../Comandi/CBC.htm">CBC</a></span> 
+ (Carico muro/elemento bidimensionale corrente),&#160;<span class="hcp2"><a 
+	 href="../Comandi/CSC.htm">CSC</a></span> (Carico solaio corrente),&#160;<span class="hcp2"><a href="../Comandi/CTC.htm">CTC</a></span> 
+ (Carico tamponatura corrente), <span class="hcp2"><a href="../Comandi/ACN.htm">ACN</a></span> 
+ (Assegna carico nodo), <span class="hcp2"><a href="../Comandi/ACA.htm">ACA</a></span> 
+ (Assegna carico asta), <span class="hcp2"><a href="../Comandi/ACB.htm">ACB</a></span> 
+ (Assegna carico muro/elemento bidimensionale), <span class="hcp2"><a 
+	 href="../Comandi/ACS.htm">ACS</a></span> (Assegna carico solaio), 
+ <span class="hcp2"><a href="../Comandi/ACT.htm">ACT</a></span> 
+ (Assegna carico tamponatura), <span class="hcp2"><a href="../Comandi/AGCN.htm">AGCN</a></span> 
+ (Aggiungi carico nodo), <span class="hcp2"><a href="../Comandi/AGCA.htm">AGCA</a></span> 
+ (Aggiungi carico asta), <span class="hcp2"><a href="../Comandi/AGCB.htm">AGCB</a></span> 
+ (Aggiungi carico muro/elemento bidimensionale),&#160;<span class="hcp2"><a 
+	 href="../Comandi/AGCS.htm">AGCS</a></span> (Aggiungi carico solaio),&#160;<span class="hcp2"><a href="../Comandi/AGCT.htm">AGCT</a></span> 
+ (Aggiungi carico tamponatura), <span class="hcp2"><a href="../Comandi/SELV.htm">SELV</a></span> 
+ (Seleziona elementi da vento).</p>
+</body>
+</html>

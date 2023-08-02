@@ -1,0 +1,320 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Selezione aste</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { text-align:justify; }
+span.hcp2 { font-weight:bold; }
+td.hcp3 { vertical-align:TOP;
+padding-left:3px;
+padding-top:3px;
+padding-right:3px;
+padding-bottom:3px; }
+p.hcp4 { margin-left:20.0pt;
+margin-bottom:0; }
+span.hcp5 { font-style:italic;
+font-weight:normal; }
+p.hcp6 { text-align:justify;
+margin-bottom:0; }
+span.hcp7 { font-weight:normal; }
+span.hcp8 { font-weight:bold;
+text-decoration:none; }
+p.hcp9 { margin-left:20.0pt; }
+p.hcp10 { margin-bottom:0; }
+span.hcp11 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Selezione aste</h1>
+<p class="hcp1">La specifica di un insieme di aste richiesta 
+ da alcuni dei comandi di ModeSt può avvenire in uno dei seguenti modi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">elencando 
+	 i numeri delle aste richieste (verranno selezionate <span class="hcp2">TUTTE</span> 
+	 le aste con i numeri specificati).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">selezionando 
+	 con il cursore grafico l'asta (una qualsiasi delle linee che la rappresentano); 
+	 tenendo premuto il tasto Shift mentre si clicca sull'asta vengono 
+	 selezionate automaticamente tutte le altre aste con lo stesso numero. 
+	 Questo permette ad esempio di modificare il filo fisso o la sezione 
+	 di una intera travata o pilastrata con un semplice clic.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">specificando 
+	 i seguenti <span style="text-decoration: none; "><a href="Sottocomandi.htm"><span class="hcp2">sottocomandi</span></a></span>:</p></li>
+</ul>
+
+<table wrapperparagraphselector="P" style="margin-left: 10.0pt; margin-top: 14pt; 
+		 border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+		 width="100%" border="1">
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">N</span> 
+		 <span class="hcp5"><font color="#0000FF">numero1</font></span> 
+		 <span class="hcp2">N</span> <span class="hcp5"><font 
+		 color="#0000FF">numero2</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">L'asta che 
+		 ha un estremo nel nodo <span class="hcp5"><font 
+		 color="#0000FF">numero1</font></span> e l'altro nel nodo <span class="hcp5"><font color="#0000FF">numero2</font></span>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">IMP</span> 
+		 <font color="#0000FF"><span class="hcp5">numero</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutte le aste 
+		 con entrambi i nodi di estremità appartenenti all'impalcato <font 
+		 color="#0000FF"><span class="hcp5">numero</span></font>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">IMP 
+		 N</span> <font color="#0000FF"><span class="hcp5">numero</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutte le aste 
+		 con entrambi i nodi di estremità appartenenti all'impalcato a 
+		 cui appartiene il nodo <font color="#0000FF"><span class="hcp5">numero</span></font>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">IMP</span> 
+		 <span class="hcp5"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutte le aste 
+		 con entrambi i nodi di estremità appartenenti all'impalcato a 
+		 cui appartiene il nodo selezionato con il cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">QQX</span> 
+		 <font color="#0000FF"><span class="hcp5">coordinata</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutte le aste 
+		 giacenti sul piano con X = <font color="#0000FF"><span class="hcp5">coordinata</span></font>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">QQX 
+		 N</span> <font color="#0000FF"><span class="hcp5">numero</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutte le aste 
+		 giacenti sul piano la coordinata X uguale alla coordinata X del 
+		 nodo <font color="#0000FF"><span class="hcp5">numero</span></font>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">QQX</span> 
+		 <font color="#0000FF"><span class="hcp5">clic</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutte le aste 
+		 giacenti sul piano la coordinata X uguale alla coordinata X del 
+		 nodo selezionato con il cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">QQY</span> 
+		 <span class="hcp7">e</span> <span class="hcp2">QQZ</span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Con le stesse 
+		 modalità sopra esposte per QQX ma con riferimento alla coordinata 
+		 Y o Z.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">DAA</span> 
+		 <font color="#0000FF"><span class="hcp5">numero1</span></font> 
+		 <font color="#0000FF"><span class="hcp5">numero2</span></font> 
+		 <font color="#0000FF"><span class="hcp5">passo</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutte le aste 
+		 da <font color="#0000FF"><span class="hcp5">numero1</span></font> 
+		 a <font color="#0000FF"><span class="hcp5">numero2</span></font> 
+		 con passo <font color="#0000FF"><span class="hcp5">passo</span></font>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">VIS</span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutte le aste 
+		 totalmente visibili al momento. Per aste visibili si intendono 
+		 tutte le aste che sarebbero visualizzabili con un comando <span class="hcp8"><a href="../Comandi/OTT.htm">OTT</a></span>. 
+		 Un comando <span class="hcp8"><a 
+		 href="../Comandi/ZOOM.htm">ZOOM</a></span> non cambia il numero 
+		 di aste visibili.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp2">SEZ</span> 
+		 <font color="#0000FF"><span class="hcp5">numero</span></font></p>
+		<p class="hcp4"><span class="hcp2">SEZ</span> 
+		 <span class="hcp5"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutte le aste con sezione = <font 
+		 color="#0000FF"><span class="hcp5">numero</span></font> 
+		 o con sezione uguale a quella dell'asta selezionata con il cursore 
+		 grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp2">MEM</span> 
+		 <font color="#0000FF"><span class="hcp5">G/T/P</span></font></p>
+		<p class="hcp4"><span class="hcp2">MEM</span> 
+		 <span class="hcp5"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutte le aste con tipo di membratura 
+		 Generica/Trave/Pilastro o con tipo di membratura uguale a quella 
+		 dell'asta selezionata col cursore grafico. Come sinonimo di <span class="hcp2">MEM</span> si può usare <span class="hcp2">TIP</span><span class="hcp7">.</span></p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp2">VIN</span> 
+		 <font color="#0000FF"><span class="hcp5">numero</span></font></p>
+		<p class="hcp4"><span class="hcp2">VIN</span> 
+		 <span class="hcp5"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutte le aste con vincolo interno 
+		 = <font color="#0000FF"><span class="hcp5">numero</span></font> 
+		 o con vincolo interno uguale a quello dell'asta selezionata col 
+		 cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp2">VER</span> 
+		 <span class="hcp5"><font color="#0000FF">N/C/A/L</font></span></p>
+		<p class="hcp4"><span class="hcp2">VER</span> 
+		 <span class="hcp5"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutte le aste con verifica prevista 
+		 Nessuna/Cemento armato/Acciaio/Legno o con verifica prevista uguale 
+		 a quella dell'asta selezionata col cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp2">MAT</span> 
+		 <span class="hcp5"><font color="#0000FF">numero</font></span></p>
+		<p class="hcp4"><span class="hcp2">MAT</span> 
+		 <span class="hcp5"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutte le aste con materiale = <font 
+		 color="#0000FF"><span class="hcp5">numero</span></font> 
+		 o con materiale uguale a quello dell'asta selezionata col cursore 
+		 grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp2">CRI</span> 
+		 <span class="hcp5"><font color="#0000FF">numero</font></span></p>
+		<p class="hcp4"><span class="hcp2">CRI</span> 
+		 <span class="hcp5"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutte le aste con criterio = <font 
+		 color="#0000FF"><span class="hcp5">numero</span></font> 
+		 o con criterio uguale a quello dell'asta selezionata col cursore 
+		 grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp2">SOL</span> 
+		 <span class="hcp5"><font color="#0000FF">numero</font></span></p>
+		<p class="hcp4"><span class="hcp2">SOL</span> 
+		 <span class="hcp5"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutte le aste appartenenti al solaio 
+		 = <font color="#0000FF"><span class="hcp5">numero</span></font> 
+		 o uguale a quello del solaio selezionato col cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp2">RET</span> 
+		 <span class="hcp5"><font color="#0000FF">numero</font></span></p>
+		<p class="hcp4"><span class="hcp2">RET</span> 
+		 <span class="hcp5"><font color="#0000FF">clic</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutte le aste appartenenti alla 
+		 reticolare = <font color="#0000FF"><span class="hcp5">numero</span></font> 
+		 o uguale a quella della reticolare selezionata col cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp2">PAA</span> 
+		 <span class="hcp5"><font color="#0000FF">numero</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutte le aste con parametro aggiuntivo 
+		 = <font color="#0000FF"><span class="hcp11">numero</span></font> 
+		 o uguale a quella dell'asta selezionata col cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp2">ISO</span> 
+		 <span class="hcp5"><font color="#0000FF">numero</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutte le aste con isolante = <font 
+		 color="#0000FF"><span class="hcp11">numero</span></font> 
+		 o uguale a quella dell'asta selezionata col cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp9"><span class="hcp2">ESP</span> 
+		 <span class="hcp5"><font color="#0000FF">numero</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp10">Tutte le aste con esposizione = 
+		 <font color="#0000FF"><span class="hcp11">numero</span></font> 
+		 o uguale a quella dell'asta selezionata col cursore grafico.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">ALL</span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutte le aste 
+		 della struttura.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">FIN</span> 
+		 <font color="#0000FF"><span class="hcp5">clic</span></font> 
+		 <font color="#0000FF"><span class="hcp5">clic</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp1">Tutte le aste visibili ed interamente 
+		 comprese nella FINestra di cui si individuano due vertici diagonalmente 
+		 opposti mediante due punti video selezionati con il cursore grafico. 
+		 Dopo aver inserito il primo punto una traccia a forma rettangolare 
+		 segue automaticamente il cursore per aiutare l'utente a determinare 
+		 la finestra.</p>
+		<p class="hcp6">La selezione 
+		 tramite finestra può essere eseguita oltre che con una finestra 
+		 che si muove nel &quot;piano del monitor&quot;, anche con una 
+		 finestra che si muove nel <a href="Visualizzazione%20struttura.htm"><span class="hcp2">piano di visualizzazione attivo</span></a>. 
+		 È sufficiente tenere premuto il tasto Shift durante la definizione 
+		 dei vertici della finestra.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">FINC</span> 
+		 <font color="#0000FF"><span class="hcp5">clic</span></font> 
+		 <font color="#0000FF"><span class="hcp5">clic</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp1">Tutte le aste visibili ed interamente 
+		 ESTERNE (FINestra Complementare) alla finestra di cui si individuano 
+		 due vertici diagonalmente opposti mediante due punti video selezionati 
+		 con il cursore grafico. Dopo aver inserito il primo punto una 
+		 traccia a forma rettangolare segue automaticamente il cursore 
+		 per aiutare l'utente a determinare la finestra.</p>
+		<p class="hcp6">La selezione 
+		 tramite finestra può essere eseguita oltre che con una finestra 
+		 che si muove nel &quot;piano del monitor&quot;, anche con una 
+		 finestra che si muove nel <a href="Visualizzazione%20struttura.htm"><span class="hcp2">piano di visualizzazione attivo</span></a>. 
+		 È sufficiente tenere premuto il tasto Shift durante la definizione 
+		 dei vertici della finestra.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">CROS</span> 
+		 <font color="#0000FF"><span class="hcp5">clic</span></font> 
+		 <font color="#0000FF"><span class="hcp5">clic</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp1">Tutte le aste anche parzialmente 
+		 comprese nella FINestra di cui si individuano due vertici diagonalmente 
+		 opposti mediante due punti video selezionati con il cursore grafico. 
+		 Dopo aver inserito il primo punto una traccia a forma rettangolare 
+		 segue automaticamente il cursore per aiutare l'utente a determinare 
+		 la finestra.</p>
+		<p class="hcp6">La selezione 
+		 tramite finestra può essere eseguita oltre che con una finestra 
+		 che si muove nel &quot;piano del monitor&quot;, anche con una 
+		 finestra che si muove nel <span class="hcp2"><a 
+		 href="Visualizzazione%20struttura.htm">piano di visualizzazione 
+		 attivo</a></span>. È sufficiente tenere premuto il tasto Shift 
+		 durante la definizione dei vertici della finestra.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">PER</span> 
+		 <font color="#0000FF"><span class="hcp11">clic</span></font></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutte le aste 
+		 interne ad un perimetro di aste giacente sul piano di lavoro.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">SEL</span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">Tutte le aste 
+		 precedentemente selezionate con il comando <span class="hcp8"><a 
+		 href="../Comandi/SELA.htm">SELA</a></span>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:40%;" class="hcp3"><p class="hcp4"><span class="hcp2">I</span> 
+		 <span class="hcp5"><font color="#0000FF">numero</font></span></p></td>
+		<td style="width:60%;" class="hcp3"><p class="hcp6">L'asta con 
+		 indice interno = <font color="#0000FF"><span class="hcp5">numero</span></font>. 
+		 Da usare solo nelle Macro.</p></td>
+	</tr>
+</table>
+
+<p class="hcp1">Le specifiche possono essere ripetute in 
+ qualsiasi modo, in quanto i comandi che richiedono come argomento un insieme 
+ di aste restano attivi fino a quando non viene fornito un comando diverso 
+ da quelli riconoscibili come specificanti un insieme di aste.</p>
+<p class="hcp10"><span class="hcp2">Argomenti 
+ correlati:</span> <span class="hcp8"><a 
+	 href="Modificatori.htm">Modificatori</a></span></p>
+</body>
+</html>

@@ -1,0 +1,103 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Caratteristiche litostatiche_modellazione</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { vertical-align:Sub; }
+span.hcp2 { font-weight:bold; }
+span.hcp3 { font-family:Symbol, serif; }
+span.hcp4 { vertical-align:Super; }
+p.hcp5 { text-align:center; }
+img.hcp6 { border:none; }
+span.hcp7 { font-family:Verdana, sans-serif; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Caratteristiche litostatiche</h1>
+<p>In seguito sono riportate le correlazioni fra i risultati delle prove in sito e OCR.</p>
+<h2 class="Titolo5">Correlazioni con prove SPT</h2>
+<p>Il valore rappresentativo di N<span class="hcp1">SPT</span> è ottenuto mediando i risultati delle misure ottenute nello strato definito. Le pressioni litostatiche sono intese come medie nello strato definito. È disponibile la seguente opzione:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp2">Mayne e Kemper (1988)</span>, viene utilizzata la seguente relazione (valida per terreni coesivi):</p>
+</li>
+</ul>
+<p class="IndentBullet1">OCR = 0.193*(N<span class="hcp1">SPT</span>/<span class="hcp3">s</span>'<span class="hcp1">v0</span>)<span class="hcp4">0.689</span></p>
+<p class="IndentBullet1">con <span class="hcp3">s</span>'<span class="hcp1">v0</span> e in MPa</p>
+<h2 class="Titolo5">Correlazioni con prove CPT</h2>
+<p>Il valore rappresentativo di qc è ottenuto mediando i risultati delle misure ottenute nello strato definito. Le pressioni litostatiche sono intese come medie nello strato definito. È disponibile la seguente opzione:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp2">Mayne e Kemper (1988)</span>, viene utilizzata la seguente relazione (valida per terreni coesivi):</p>
+</li>
+</ul>
+<p class="IndentBullet1">OCR = 0.37*[(qc - <span class="hcp3">s</span><span class="hcp1">v0</span>)/<span class="hcp3">s</span>'<span class="hcp1">v0</span>]<span class="hcp4">1.01</span></p>
+<p>In seguito sono riportate le relazioni disponibili per il calcolo del <span class="hcp2">Coefficiente di spinta a riposo</span>, secondo la relazione: k<span class="hcp1">0</span> = k<span class="hcp1">0</span>(NC)*OCR<span style="font-family: Symbol, serif; vertical-align: Super;">a</span>:</p>
+<p>Per il <span class="hcp2">Calcolo di k</span><span style="vertical-align: Sub; font-weight: bold;">0</span><span class="hcp2">(NC)</span> sono disponibili le seguenti opzioni:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp2">Jaky (1936)</span>, viene utilizzata la seguente relazione:</p>
+</li>
+</ul>
+<p class="IndentBullet1">k<span class="hcp1">0</span>(NC) = 1-sen(<span class="hcp3">j</span>')</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp2">Brooker e Ireland (1965)</span>, viene utilizzata la seguente relazione (valida per terreni coesivi):</p>
+</li>
+</ul>
+<p class="IndentBullet1">k<span class="hcp1">0</span>(NC) = 0.95- sen(<span class="hcp3">j</span>')</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp2">Alpan (1967)</span>, viene utilizzata la seguente relazione (valida per terreni coesivi per i quali è noto l'indice di plasticità):</p>
+</li>
+</ul>
+<p class="IndentBullet1">k<span class="hcp1">0</span>(NC) = 0.19+0.233*Log(Ip)</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp2">Massarsch (1979)</span>, viene utilizzata la seguente relazione (valida per terreni coesivi per i quali è noto l'indice di plasticità):</p>
+</li>
+</ul>
+<p class="IndentBullet1">k<span class="hcp1">0</span>(NC) = 0.44+0.42*(Ip/100)</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp2">correlazione con Dr</span>, viene utilizzato il legame fra k<span class="hcp1">0</span> e Dr relativo al seguente grafico (valido per terreni incoerenti):</p>
+</li>
+</ul>
+<p class="hcp5"><img src="Caratt_litostatic_01.gif" alt="" width="310" height="205" border="0" class="hcp6"></p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1"><span class="hcp2">Calcolato dal coefficiente di Poisson, secondo la seguente relazione</span>: k<span class="hcp1">0</span>(NC)=<span class="hcp3">n</span>/(1-<span class="hcp3">n</span>)</p>
+</li>
+</ul>
+<p>Per il <span class="hcp2">Calcolo di</span> <span style="font-family: Symbol, serif; font-weight: bold;">&#61537;</span> sono disponibili le seguenti opzioni:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1"><span class="hcp2">Pari a</span>: specificare il valore di <span class="hcp3">a</span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp2">Kulhawy (1989)</span>: <span class="hcp3">a</span> <span class="hcp7">=</span> sen(<span class="hcp3">j</span>')</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp2">Alpan (1967)</span>, per terreni coesivi: <span class="hcp3">a</span> <span class="hcp7">=</span> 0.54*10<span class="hcp4">-Ip/281</span></p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp2">Alpan (1967)</span>, per terreni incoerenti, verrà considerato il legame fra <span class="hcp3">a</span> e Dr relativo al seguente grafico:</p>
+</li>
+</ul>
+<p class="hcp5"><img src="Caratt_litostatic_02.gif" alt="" width="365" height="333" border="0" class="hcp6"></p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp2">correlazione con Dr</span>, per terreni incoerenti, verrà considerato il legame fra <span class="hcp3">a</span> e Dr relativo al seguente grafico:</p>
+</li>
+</ul>
+<p class="hcp5"><img src="Caratt_litostatic_03.gif" alt="" width="291" height="207" border="0" class="hcp6"></p>
+</body>
+</html>

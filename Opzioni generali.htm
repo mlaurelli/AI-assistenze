@@ -1,0 +1,216 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Opzioni generali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-style:italic; }
+span.hcp2 { font-weight:bold; }
+span.hcp3 { vertical-align:Super; }
+p.hcp4 { text-align:center; }
+img.hcp5 { margin-top:0px;
+margin-bottom:0px;
+margin-left:0px;
+margin-right:0px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Opzioni generali</h1>
+<p>Le opzioni generali di calcolo rappresentano dati, opzioni o interpretazioni 
+ di normativa che l'utente può modificare e che vengono associati al calcolo 
+ della struttura. Solo in alcuni casi dipendono dal tipo di solutore. Tutti 
+ i dati sono associati al calcolo in corso e vengono automaticamente memorizzati. 
+ Quando si calcola per la prima volta una struttura o quando si cambia 
+ solutore vengono automaticamente impostati i valori di default. Possono 
+ essere modificati all'inizio della procedura di calcolo attraverso il 
+ menu <span class="hcp1">Opzioni</span> <font style="font-family: Wingdings;" 
+															 face="Wingdings">à</font> 
+ <span class="hcp1">Generali</span>.</p>
+<p><span class="hcp2"><a name="Zone_rigide" id="Zone_rigide"></a>Calcolo 
+ con zone rigide</span><span style="font-weight: normal;">:</span> specificare 
+ se effettuare o meno il calcolo considerando infinitamente rigide le interconnessioni 
+ fra travi e pilastri.</p>
+<p>Il calcolo delle zone rigide viene effettuato solo per le aste prive 
+ di parametri aggiuntivi o per le quali non è stato specificato un tipo 
+ di calcolo zone rigide diverso da &quot;default&quot; (si veda <span class="hcp2"><a 
+	 href="Parametri_aste.htm">Parametri aste</a></span>, <span class="hcp2"><a 
+	 href="Modifica_delle_proprieta.htm">Modifica delle proprietà</a></span>). 
+ Analogamente, specificando di <span class="hcp2">non</span> 
+ effettuare il calcolo con zone rigide, esso verrà comunque effettuato 
+ per le aste per le quali ciò è stato espressamente richiesto nei parametri 
+ aggiuntivi.</p>
+<p>Per approfondimenti si veda anche <a href="Zone%20rigide%20e%20offset%20dai%20nodi.htm"><span class="hcp2">Zone rigide e offset dai nodi</span></a>.</p>
+<p><span class="hcp2"><a name="Riduzione_zone_rigide" id="Riduzione_zone_rigide"></a>Fattore 
+ di riduzione zone rigide</span>: specificare una percentuale di riduzione 
+ della zona rigida per evitare un aumento eccessivo della rigidezza dell'asta. 
+ Nel trasferimento al solutore la zona rigida verrà ridotta della percentuale 
+ specificata, ma i momenti e i tagli alle estremità verranno comunque forniti 
+ al filo della zona rigida totale. Valori consigliati vanno dal 20 al 50% 
+ di riduzione.</p>
+<p>Per approfondimenti si veda anche <a href="Zone%20rigide%20e%20offset%20dai%20nodi.htm"><span class="hcp2">Zone rigide e offset dai nodi</span></a>.</p>
+<p><span class="hcp2"><a name="Rigidezza_asta_controventatura_solai" 
+										 id="Rigidezza_asta_controventatura_solai"></a>Rigidezza 
+ asta controventatura solai</span>: specificare la rigidezza dell'asta, 
+ con vincolo biella, aggiunta in direzione ortogonale al piano del solaio. 
+ Valori consigliati vanno dal 1*10<span class="hcp3">-10</span> 
+ a 1*10<span class="hcp3">-8</span>.</p>
+<p>Per approfondimenti si veda anche <span class="hcp2"><a 
+	 href="Schematizzazione%20piani%20rigidi.htm#Piano_rigido_con_controventatura_solai">Piano 
+ rigido con controventatura solai</a></span>.</p>
+<p><span class="hcp2"><a name="Offset" id="Offset"></a>Calcolo 
+ con offset rigidi dai nodi</span>: con alcuni solutori è possibile considerare 
+ il completo disassamento dell'asse baricentrico delle aste rispetto alla 
+ congiungente i nodi. In questo modo vengono considerati nel calcolo anche 
+ i momenti indotti dalle eccentricità di posizionamento. Ad esempio una 
+ trave molto larga appoggiata eccentricamente sul pilastro (con il filo 
+ fisso e/o lo scostamento dal filo fisso) provocherà sul pilastro stesso 
+ un momento flettente in direzione ortogonale al piano definito dalla trave 
+ e dal pilastro ed analogamente un pilastro che rastrema mantenendo a filo 
+ uno dei lati provocherà un momento aggiuntivo sul pilastro sottostante 
+ a causa dell'eccentricità di carico. Il calcolo viene effettuato solo 
+ per le aste prive di parametri aggiuntivi o per le quali non è stato specificato 
+ un tipo di calcolo con offset rigidi diverso da &quot;default&quot; (si 
+ veda <span class="hcp2"><a href="Parametri_aste.htm">Parametri 
+ aste</a></span>, <span class="hcp2"><a href="Modifica_delle_proprieta.htm">Modifica 
+ delle proprietà</a></span>). Analogamente, specificando di <span class="hcp2">non</span> 
+ effettuare il calcolo con offset rigidi, esso verrà comunque effettuato 
+ per le aste per le quali ciò è stato espressamente richiesto nei parametri 
+ aggiuntivi. <span style="text-transform: uppercase;">è</span> disponibile 
+ la seguente opzione:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">Solo 
+	 per i pilastri</span>: il calcolo viene effettuato solo per le aste 
+	 con membratura pilastro e prive di parametri aggiuntivi o per le quali 
+	 non è stato specificato un tipo di calcolo con offset rigidi diverso 
+	 da &quot;default&quot; (si veda <span class="hcp2"><a 
+	 href="Parametri_aste.htm">Parametri aste</a></span>, <span class="hcp2"><a 
+	 href="Modifica_delle_proprieta.htm">Modifica delle proprietà</a></span>).</p></li>
+</ul>
+<p>Per approfondimenti si veda anche <a href="Zone%20rigide%20e%20offset%20dai%20nodi.htm"><span class="hcp2">Zone rigide e offset dai nodi</span></a>.</p>
+<p><a name="Uniformizzare_i_carichi_variabili" id="Uniformizzare_i_carichi_variabili"></a><span class="hcp2">Uniformizzare i carichi variabili</span>: 
+ specificare se rendere uniformi gli eventuali carichi variabili presenti 
+ sulle aste. Questo può essere necessario per effettuare confronti con 
+ calcoli effettuati con versioni precedenti di ModeSt in cui i carichi 
+ venivano sempre resi uniformi, o per solutori che lo richiedano espressamente.</p>
+<p>Il carico uniforme equivalente viene calcolato ridistribuendo la risultante 
+ ottenuta tramite una previa massimizzazione o meno dei carichi.</p>
+<p>I carichi vengono comunque resi uniformi per le travi su suolo elastico 
+ e per aste con verifica richiesta &quot;acciaio&quot; o verifica richiesta 
+ &quot;Cemento armato&quot; e membratura &quot;Pilastro&quot;.</p>
+<p>Nelle aste in cui vengono resi uniformi i carichi, vengono perduti anche 
+ eventuali carichi concentrati in campata. Si ricorda comunque che per 
+ considerare ugualmente i carichi concentrati sulle aste è sufficiente 
+ <span class="hcp2"><a href="Spezza_aste_e_muri.htm">spezzare 
+ le aste</a></span> introducendo uno o più nodi sui quali assegnare il 
+ carico.</p>
+<p>Il carico uniforme equivalente viene calcolato ridistribuendo la risultante 
+ ottenuta tramite una previa massimizzazione o meno dei carichi.</p>
+<p><span class="hcp2"><a name="Massimizzare_i_carichi_variabili" 
+										 id="Massimizzare_i_carichi_variabili"></a>Massimizzare 
+ i carichi variabili</span>: specificando di massimizzare i carichi variabili 
+ il carico uniforme agente è pari alla risultante del carico variabile 
+ calcolata considerando un carico costante pari al massimo del carico, 
+ ridistribuita su tutta l'asta:</p>
+<p class="hcp4"><img src="equaz2.jpg" alt="" width="222" height="51" border="0" class="hcp5"></p>
+<p>Se i carichi non vengono massimizzati il carico uniforme agente è pari 
+ alla risultante del carico variabile calcolata considerando un carico 
+ costante pari alla media del carico, ridistribuita su tutta l'asta:</p>
+<p class="hcp4"><img src="equaz1.jpg" alt="" width="177" height="50" border="0" class="hcp5"></p>
+<p>dove X0 indica il punto iniziale del carico, X1 quello finale, Q0 il 
+ valore del carico in X0, Q1 quello in X1 e L la lunghezza dell'asta.</p>
+<p>Nel caso in cui si abbiano carichi con forte variabilità lungo l'asse 
+ dell'asta, per i quali l'uniformizzazione risulti troppo penalizzante, 
+ si ricorda che è comunque possibile <span class="hcp2"><a 
+	 href="Spezza_aste_e_muri.htm">suddividere l'asta</a></span> in più 
+ parti per diminuire l'errore introdotto.</p>
+<p><span class="hcp2"><a name="Recupero_carichi_zone_rigide" 
+										 id="Recupero_carichi_zone_rigide"></a>Recupero 
+ carichi zone rigide</span>: specificare se si intende recuperare la quota 
+ parte di carico corrispondente ai tratti rigidi dell'asta (che il solutore 
+ in alcuni casi trascura) inserendo degli opportuni carichi nodali equivalenti. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">Taglio</span>: 
+	 specificare se recuperare il taglio. Vengono aggiunte forze nodali 
+	 pari a Qx*L1, Qy*L1, Qz*L1, Qx*L2, Qy*L2, Qz*L2.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">Momento 
+	 flettente</span>: specificare se recuperare il momento flettente. 
+	 Vengono aggiunti momenti nodali pari a Qy*L12/2, Qz*L12/2, Qy*L22/2, 
+	 Qz*L22/2.</p></li>
+</ul>
+<p class="IndentBullet1">Dove:</p>
+<p class="IndentBullet1"><span class="hcp2">Qx</span> carico 
+ agente sull'asta in direzione X locale reso uniforme e massimizzato come 
+ specificato nei parametri di calcolo</p>
+<p class="IndentBullet1"><span class="hcp2">Qy</span> come 
+ sopra in direzione Y locale</p>
+<p class="IndentBullet1"><span class="hcp2">Qz</span> come 
+ sopra in direzione Z locale</p>
+<p class="IndentBullet1"><span class="hcp2">L1</span> lunghezza 
+ zona rigida in corrispondenza del primo nodo</p>
+<p class="IndentBullet1"><span class="hcp2">L2</span> lunghezza 
+ zona rigida in corrispondenza del secondo nodo</p>
+<p>Se tutte le opzioni sono deselezionate non verrà recuperato nessun carico, 
+ mentre se sono entrambe selezionate verranno aggiunte sia forze che momenti 
+ nodali.</p>
+<p>Questo parametro viene richiesto solo per i solutori che trascurano 
+ la quota parte di carico sulle zone rigide delle aste.</p>
+<p><span class="hcp2"><a name="Modalita_di_combinazione_momento_torcente" 
+										 id="Modalita_di_combinazione_momento_torcente"></a>Modalità 
+ di combinazione momento torcente</span>: nel caso in cui nella struttura 
+ siano presenti masse con componente Z (sisma verticale) e contemporaneamente 
+ si abbia un rapporto fra i lati superiore a 2.5, la normativa non è chiara 
+ su come debbano essere combinate fra loro le azioni sismiche risultanti. 
+ Questa opzione è utilizzata solo nel calcolo delle strutture alle tensioni 
+ ammissibili secondo il D.M. 14/02/92 o agli stati limite secondo il D.M. 
+ 16/01/96. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">Disaccoppiare 
+	 le azioni</span>: per ogni azione orizzontale risultano due azioni 
+	 sismiche complessive con una parte priva di segno:</p></li>
+</ul>
+<p class="IndentBullet1-2"><img src="equaz3_4.jpg" alt="" width="145" height="75" border="0" class="hcp5"></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">Accoppiare 
+	 i momenti torcenti</span>: per ogni azione orizzontale risultano due 
+	 azioni sismiche complessive prive di segno:</p></li>
+</ul>
+<p class="IndentBullet1-2"><img src="equaz5_6.jpg" alt="" width="150" height="80" border="0" class="hcp5"></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp2">Combinare 
+	 quadraticamente le azioni</span>: per ogni azione orizzontale risulta 
+	 una sola azione sismica complessiva priva di segno:</p></li>
+</ul>
+<p class="IndentBullet1-2"><img src="equaz7.jpg" alt="" width="152" height="34" border="0" class="hcp5"></p>
+<p class="IndentBullet1">Dove:</p>
+<p class="IndentBullet1"><span class="hcp2">S</span> azione 
+ sismica complessiva</p>
+<p class="IndentBullet1"><span class="hcp2">M</span> azione 
+ fittizia torcente</p>
+<p class="IndentBullet1"><span class="hcp2">O</span> azione 
+ orizzontale (X o Y)</p>
+<p class="IndentBullet1"><span class="hcp2">V</span> azione 
+ verticale</p>
+<p style="margin-bottom: 0;"><span class="hcp2"><a name="Cancellazione_file" 
+	 id="Cancellazione_file"></a>Cancellazione file di calcolo intermedi</span>: 
+ specificare se si intendono conservare i file intermedi del calcolo creati 
+ dal solutore. La conservazione dei file intermedi può essere utile per 
+ controllare la procedura di calcolo in caso di errori, mentre la cancellazione 
+ impedisce l'eccessiva occupazione del disco fisso. Nei casi in cui ModeSt 
+ riconosce che il calcolo non è stato portato a termine i file intermedi 
+ non vengono comunque cancellati per consentire un esame dei messaggi eventualmente 
+ riportati dal solutore.</p>
+</body>
+</html>

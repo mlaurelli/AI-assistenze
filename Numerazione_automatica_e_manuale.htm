@@ -1,0 +1,197 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Numerazione automatica e manuale</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp3 { font-style:italic; }
+span.hcp4 { text-decoration:none; }
+span.hcp5 { font-weight:bold;
+text-decoration:underline; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Numerazione automatica e manuale</h1>
+<p>È possibile eseguire la numerazione automatica di tutti gli elementi 
+ presenti nella struttura cliccando nel gruppo <span class="hcp1">Modifica</span> 
+ della scheda <span class="hcp1">Modellazione</span> su <span class="hcp1">Numera <img src="../Icone/16/numera.png" alt="" border="1" class="hcp2"></span> e poi 
+ su <span class="hcp1">Tutto&#160;<img src="../Icone/16/numall.png" alt="" border="1" class="hcp2"></span>. 
+ La numerazione automatica dei singoli elementi si effettua invece cliccando 
+ sul comando relativo all'elemento da numerare.</p>
+<p style="margin-bottom: 0;"><span style="text-transform: capitalize;">I</span>l 
+ modulo di numerazione ed altre opzioni per la numerazione automatica possono 
+ essere settate attraverso la scheda <span class="hcp1">Numerazioni</span> 
+ delle <span class="hcp1"><a href="Opzioni%20generali.htm">Opzioni</a></span> 
+ sia per quanto riguarda i dati di default che per la struttura corrente.</p>
+<p>È possibile assegnare manualmente un numero ad un elemento utilizzando 
+ il metodo riportato nel capitolo <span class="hcp1"><a href="Modifica_delle_proprieta.htm">Modifica 
+ delle proprietà degli elementi</a></span> tuttavia esistono delle limitazioni 
+ di seguito elencate.</p>
+<p class="Titolo7">Nodi</p>
+<p>I nodi in ModeSt possono essere numerati in qualsiasi modo, anche non 
+ consecutivo, purché non esistano nodi con lo stesso numero o con numero 
+ zero.</p>
+<p>I nodi con numero negativo vengono denominati <span class="hcp1">nodi 
+ aggiuntivi</span>, ma si comportano a tutti gli effetti come gli altri 
+ nodi. È possibile però disattivarne la visualizzazione selezionando &quot;Nascondi 
+ nodi di mesh&quot; nella sezione &quot;<span class="hcp1">Nodi</span>&quot; 
+ nel pannello <span class="hcp1">Colorazioni elementi</span>, 
+ il che permette di trascurare la rappresentazione ad esempio di tutti 
+ i nodi necessari per le mesh di elementi bidimensionali, alleggerendo 
+ e rendendo più leggibili le visualizzazioni delle strutture.</p>
+<p>In qualunque momento è possibile cambiare la numerazione dei nodi, ma 
+ questo comporta la perdita dei risultati del calcolo.</p>
+<p>Sia durante l'inserimento dei nodi che a struttura definita è possibile 
+ utilizzare una convenzione di numerazione molto agevole per l'interpretazione 
+ dei dati e dei risultati. Stabilito un <span class="hcp3">modulo 
+ di numerazione</span> ModeSt numera in modo che i numeri dei nodi ad ogni 
+ impalcato siano tutti compresi fra il modulo prescelto ed il valore successivo, 
+ e che nodi posti sulla stessa verticale abbiano numeri congrui fra loro 
+ rispetto al modulo di numerazione.</p>
+<p>Ad esempio usando modulo di numerazione pari a 100 i nodi del primo 
+ impalcato avranno numero compreso fra 100 e 199, mentre i nodi del secondo 
+ avranno numero compreso fra 200 e 299, ecc. Inoltre due nodi sulla stessa 
+ verticale avranno numero ad es. 101 e 201 o 102 e 202, ecc.</p>
+<p>Con questo criterio e tenendo conto anche della presenza degli elementi 
+ e delle loro caratteristiche le procedure di <span><span class="hcp4">numerazione 
+ automatica</span></span> eseguono una numerazione che permette di esaminare 
+ agevolmente dati e risultati e di correlare in modo intuitivo nodi, impalcati 
+ ed elementi.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>:&#160;<span class="hcp1"><a href="../Comandi/NAN.htm">NAN</a></span> 
+ (Numerazione automatica nodi), <span class="hcp1"><a href="../Comandi/NNC.htm">NNC</a></span> 
+ (Numero nodo corrente),&#160;<span class="hcp5"><a 
+	 href="../Comandi/ANN.htm">ANN</a></span> (Assegna numero nodo).</p>
+<p class="Titolo7">Aste</p>
+<p>Le aste in ModeSt possono essere numerate in qualsiasi modo, anche non 
+ consecutivo, con numeri positivi o con numero zero. Risulta particolarmente 
+ comodo assegnare lo stesso numero ad aste consecutive ed allineate, in 
+ quanto questo consente ai moduli di progettazione e verifica di considerare 
+ quando necessario l'insieme di aste come un unico elemento, con le conseguenze 
+ del caso (armatura come travata o pilastrata, verifiche di stabilità globale). 
+ Le aste con numero zero verranno in ogni caso ignorate dalle procedure 
+ di progettazione e verifica.</p>
+<p>In qualunque momento è possibile cambiare la numerazione delle aste, 
+ senza la perdita dei risultati del calcolo, ma con l'eventuale perdita 
+ dei dati relativi alle verifiche delle aste.</p>
+<p>È possibile utilizzare una convenzione di numerazione molto agevole 
+ per l'interpretazione dei dati e dei risultati. Stabilito un <span class="hcp3">modulo 
+ di numerazione</span> ModeSt numera in modo che i numeri delle aste ad 
+ ogni impalcato siano tutti compresi fra il modulo prescelto ed il valore 
+ successivo, e che aste poste sulla stessa verticale abbiano (quando possibile) 
+ numeri congrui fra loro rispetto al modulo di numerazione.</p>
+<p>Ad esempio usando modulo di numerazione pari a 100 le aste del primo 
+ impalcato avranno numero compreso fra 100 e 199, mentre le aste del secondo 
+ avranno numero compreso fra 200 e 299, ecc. Inoltre due aste sulla stessa 
+ verticale avranno se possibile numero ad es. 101 e 201 o 102 e 202, ecc.</p>
+<p>Con questo criterio e tenendo conto anche della presenza degli altri 
+ elementi e delle loro caratteristiche le procedure di <span><span class="hcp4">numerazione 
+ automatica</span></span> eseguono una numerazione che permette di esaminare 
+ agevolmente dati e risultati e di correlare in modo intuitivo nodi, impalcati 
+ ed elementi.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>:&#160;<span class="hcp1"><a href="../Comandi/NAA.htm">NAA</a></span> 
+ (Numerazione automatica aste), <span class="hcp1"><a href="../Comandi/NAC.htm">NAC</a></span> 
+ (Numero asta corrente),&#160;<span class="hcp5"><a 
+	 href="../Comandi/ANA.htm">ANA</a></span> (Assegna numero asta).</p>
+<p class="Titolo7">Muri/elementi bidimensionali</p>
+<p>I muri/elementi bidimensionali possono essere numerati in qualsiasi 
+ modo, anche non consecutivo, con numeri positivi o con numero zero. Risulta 
+ particolarmente comodo assegnare lo stesso numero a muri/elementi bidimensionali 
+ consecutive e complanari, in quanto questo consente ai moduli di progettazione 
+ e verifica di considerare quando necessario l'insieme di muri/elementi 
+ bidimensionali come un unico elemento, con le conseguenze del caso (armatura 
+ come pareti, nuclei, solette/platee). I muri/elementi bidimensionali con 
+ numero zero verranno in ogni caso ignorate dalle procedure di progettazione 
+ e verifica.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>:&#160;<span class="hcp1"><a href="../Comandi/NAB.htm">NAB</a></span> 
+ (Numerazione automatica muri/elementi bidimensionali), <span class="hcp1"><a 
+	 href="../Comandi/NBC.htm">NBC</a></span> (Numero muro/elemento bidimensionale 
+ corrente),&#160;<span class="hcp5"><a 
+	 href="../Comandi/ANB.htm">ANB</a></span> (Assegna numero muro/elemento 
+ bidimensionale).</p>
+<p class="Titolo7">Solai</p>
+<p>I solai in ModeSt possono essere numerati in qualsiasi modo, anche non 
+ consecutivo, con numeri positivi o con numero zero.</p>
+<p>In qualunque momento è possibile cambiare la numerazione dei solai, 
+ senza la perdita dei risultati del calcolo.</p>
+<p>È possibile utilizzare una convenzione di numerazione molto agevole 
+ per l'individuazione dei solai. Stabilito un <span class="hcp3">modulo 
+ di numerazione</span> ModeSt numera in modo che i numeri dei solai giacenti 
+ alla quota di ogni impalcato siano tutti compresi fra il modulo prescelto 
+ ed il valore successivo.</p>
+<p>Ad esempio usando modulo di numerazione pari a 100 i solai giacenti 
+ sul piano del primo impalcato avranno numero compreso fra 100 e 199, mentre 
+ quelli del secondo avranno numero compreso fra 200 e 299, ecc.</p>
+<p>Con questo criterio e tenendo conto anche della presenza degli altri 
+ elementi e delle loro caratteristiche le procedure di <span><span class="hcp4">numerazione 
+ automatica</span></span> eseguono una numerazione che permette di individuare 
+ e selezionare agevolmente i solai.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>:&#160;<span class="hcp1"><a href="../Comandi/NAS.htm">NAS</a></span> 
+ (Numerazione automatica solai), <span class="hcp1"><a href="../Comandi/NSC.htm">NSC</a></span> 
+ (Numero solaio corrente),&#160;<span class="hcp5"><a 
+	 href="../Comandi/ANS.htm">ANS</a></span> (Assegna numero solaio).</p>
+<p class="Titolo7">Tamponature</p>
+<p>Le tamponature in ModeSt possono essere numerate in qualsiasi modo, 
+ anche non consecutivo, con numeri positivi o con numero zero.</p>
+<p>In qualunque momento è possibile cambiare la numerazione delle tamponature, 
+ senza la perdita dei risultati del calcolo.</p>
+<p>È possibile utilizzare una convenzione di numerazione molto agevole 
+ per l'individuazione delle tamponature. Stabilito un <span class="hcp3">modulo 
+ di numerazione</span> ModeSt numera in modo che i numeri delle tamponature 
+ giacenti ad uno stesso interpiano siano tutte comprese fra il modulo prescelto 
+ ed il valore successivo.</p>
+<p>Ad esempio usando modulo di numerazione pari a 100 le tamponature giacenti 
+ dal piano terra al primo impalcato avranno numero compreso fra 100 e 199, 
+ mentre quelli del secondo avranno numero compreso fra 200 e 299, ecc.</p>
+<p>Con questo criterio e tenendo conto anche della presenza degli altri 
+ elementi e delle loro caratteristiche le procedure di <span class="hcp4">numerazione 
+ automatica</span> eseguono una numerazione che permette di individuare 
+ e selezionare agevolmente le tamponature.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>:&#160;<span class="hcp1"><a href="../Comandi/NAT.htm">NAT</a></span> 
+ (Numerazione automatica tamponature), <span class="hcp1"><a 
+	 href="../Comandi/NTC.htm">NTC</a></span> (Numero tamponatura corrente),&#160;<span class="hcp5"><a href="../Comandi/ANT.htm">ANT</a></span> 
+ (Assegna numero tamponatura).</p>
+<p class="Titolo7">RETICOLARI</p>
+<p>Le reticolari in ModeSt possono essere numerate in qualsiasi modo, anche 
+ non consecutivo, con numeri positivi o con numero zero.</p>
+<p>In qualunque momento è possibile cambiare la numerazione delle reticolari, 
+ senza la perdita dei risultati del calcolo.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>:&#160;<span class="hcp1"><a href="../Comandi/NAR.htm">NAR</a></span> 
+ (Numerazione automatica reticolari), <span class="hcp1"><a 
+	 href="../Comandi/NRC.htm">NRC</a></span> (Numero reticolare corrente),&#160;<span class="hcp5"><a href="../Comandi/ANR.htm">ANR</a></span> 
+ (Assegna numero reticolare).</p>
+<p class="Titolo7">LINK SU LINEA</p>
+<p>I link su linea in ModeSt possono essere numerati in qualsiasi modo, 
+ anche non consecutivo, con numeri positivi o con numero zero.</p>
+<p>In qualunque momento è possibile cambiare la numerazione dei link su 
+ linea, senza la perdita dei risultati del calcolo.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>:&#160;<span class="hcp1"><a href="../Comandi/NAKL.htm">NAKL</a></span> 
+ (Numerazione automatica link su linea), <span class="hcp1"><a 
+	 href="../Comandi/NKLC.htm">NKLC</a></span> (Numero link su linea corrente),&#160;<span class="hcp5"><a href="../Comandi/ANKL.htm">ANKL</a></span> 
+ (Assegna numero link su linea).</p>
+<p class="Titolo7">INTEGRATORI</p>
+<p>Gli integratori in ModeSt possono essere numerati in qualsiasi modo, 
+ anche non consecutivo, con numeri positivi o con numero zero.</p>
+<p>La numerazione automatica assegna lo stesso numero agli <a href="Integratori.htm#Integratori_longitudinali_multi_linea">integratori 
+ lineari Multi-Linea</a>.</p>
+<p>La numerazione automatica degli <a href="Integratori.htm#Integratori_trasversali">integratori 
+ trasversali</a> a cui è assegnata una sezione non fittizia deve essere 
+ eseguita con le procedure indicate per le <span class="hcp1">ASTE</span>, 
+ e per tal motivo segue le regole indicate nelle aste.</p>
+<p>In qualunque momento è possibile cambiare la numerazione degli integratori, 
+ senza la perdita dei risultati del calcolo.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>:&#160;<span class="hcp1"><a href="../Comandi/NAI.htm">NAI</a></span> 
+ (Numerazione automatica integratori).</p>
+</body>
+</html>

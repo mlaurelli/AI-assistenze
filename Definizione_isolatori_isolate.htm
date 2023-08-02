@@ -1,0 +1,96 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Definizione isolatori</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Definizione isolatori</h1>
+<p>Al termine dell'analisi preliminare viene presentata una finestra di 
+ dialogo dove è possibile definire in modo compiuto gli isolatori presenti 
+ nella struttura.</p>
+<p><span class="hcp1">Importante</span>: si fa presente che 
+ la scelta degli isolatori, sia effettuata manualmente che automaticamente, 
+ ha come riferimento come carico agente la componente statica dei carichi 
+ in condizioni quasi permanenti, normalmente pari alla parte statica delle 
+ CC sismiche. Può accadere a volte che poi, in sede di calcolo definitivo, 
+ lo sforzo normale sia superiore per l'effetto sismico e che quindi l'isolatore 
+ non sia in grado di reggerlo. Al di là delle considerazioni riportate 
+ in <span class="hcp1"><a href="Controlli_di_normativa_isolate.htm">Controlli 
+ di normativa</a></span>, occorre quindi a volte prendere nota degli isolatori 
+ non verificati e, rilanciato il calcolo, andare a cambiare il modello 
+ adottato.</p>
+<p>Nella finestra viene rappresentato uno schema della disposizione degli 
+ isolatori, indicando in colore blu quelli di cui non sono stati definiti 
+ i parametri ed in verde gli altri. In colore arancio è indicato l'isolatore 
+ &quot;corrente&quot; di cui in basso sono riportati i valori di carico 
+ e le caratteristiche. Si passa da un isolatore all'altro semplicemente 
+ cliccandoci sopra. Nel disegno è riportato anche il baricentro complessivo 
+ delle masse dell'edificio e il baricentro delle rigidezze degli isolatori, 
+ consentendo così di valutarne l'eccentricità.</p>
+<p>Nella parte alta della finestra di dialogo sono riportati alcuni dati 
+ relativi al calcolo della struttura a base fissa e vengono richiesti i 
+ parametri fondamentali del sistema di isolamento. Esaminiamo i diversi 
+ casi:</p>
+<p class="Titolo7">Isolatori elastomerici</p>
+<p>Vengono richiesti il periodo di riferimento che si intende ottenere 
+ ed il valore di smorzamento degli isolatori. Al cambiare di questi dati 
+ in automatico viene calcolato la rigidezza complessiva necessaria per 
+ ottenere tale periodo e lo spostamento che ne risulta.</p>
+<p>ModeSt riporta anche la rigidezza teorica che dovrebbe avere il singolo 
+ isolatore. È possibile 
+ trasformare alcuni isolatori in scivolatori per modificare le singole 
+ rigidezze e/o per ricentrarne il baricentro.</p>
+<p>In assenza di un archivio è possibile adottare degli isolatori teorici 
+ con rigidezza pari a quella necessaria, o specificare manualmente la rigidezza 
+ di ognuno degli isolatori definiti. In presenza di un archivio (si veda 
+ <span class="hcp1"><a href="Archivio_isolatori.htm">Archivio 
+ isolatori</a></span>) invece è possibile scegliere manualmente i singoli 
+ isolatori o chiedere a ModeSt di effettuare una definizione automatica 
+ prelevando dall'archivio gli isolatori e gli scivolatori compatibili in 
+ termini di rigidezza, carichi e spostamenti ammissibili. Vengono scelti 
+ gli isolatori con rigidezza più vicina possibile a quella teorica richiesta.</p>
+<p>Quando i dati sono completi ModeSt fornisce informazioni sulla rigidezza 
+ complessiva inserita, il periodo e lo spostamento che ne risultano ed 
+ il valore di Ag derivante dallo spettro di calcolo opportunamente modificato.</p>
+<p>In qualunque momento è possibile annullare tutta la definizione effettuata 
+ per ripartire con altre scelte o altre considerazioni. Viene comunque 
+ mantenuta la scelta effettuata in merito alla presenza di eventuali scivolatori.</p>
+<p class="Titolo7">Isolatori a pendolo</p>
+<p>Viene richiesto il valore del raggio di curvatura (univoco) dell'isolatore.</p>
+<p>Inserendo anche un valore per il coefficiente di attrito, in assenza 
+ di un archivio è possibile adottare degli isolatori teorici con le caratteristiche 
+ indicate, mentre in presenza di un archivio è possibile chiedere a ModeSt 
+ di effettuare una definizione automatica prelevando dall'archivio gli 
+ isolatori compatibili in termini di raggio di curvatura, coefficiente 
+ d'attrito nominale, carichi e spostamenti ammissibili.</p>
+<p>Si fa notare che gli isolatori a pendolo possono avere attrito (e quindi 
+ rigidezza) variabile in funzione del carico se nell'archivio è presente 
+ l'esponente che ne caratterizza l'andamento:</p>
+<p>detto &quot;&#956;&quot; il coefficiente d'attrito nominale e &quot;&#949;&quot; 
+ l'esponente, l'attrito efficace corrispondente ad un certo carico Ned 
+ è dato dalla curva:</p>
+<p>&#956; eff = &#956; *(Ned/Nrd)^(- &#949;)</p>
+<p>dove Nrd è il massimo sforzo normale assorbibile dall'isolatore in condizioni 
+ statiche.</p>
+<p>In presenza di un archivio è possibile scegliere manualmente i singoli 
+ isolatori. Vengono proposti in tal caso solo gli isolatori compatibili 
+ in termini di raggio di curvatura. In tal caso ogni volta che si sceglie 
+ un isolatore viene valutato il suo coefficiente d'attrito (se variabile), 
+ e viene ricalcolato e visualizzato l'attrito medio (pesato sui carichi 
+ verticali dei singoli isolatori) e analogamente il coefficiente di smorzamento 
+ pesato, dal quale si risale al periodo teorico della struttura, alla rigidezza 
+ complessiva ed al baricentro delle rigidezze.</p>
+</body>
+</html>

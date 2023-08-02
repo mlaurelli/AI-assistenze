@@ -1,0 +1,81 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Asta virtuale</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-style:italic; }
+span.hcp2 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Asta virtuale</h1>
+<p>Quando viene assegnata una sezione non fittizia ad un <a href="Integratori.htm#Integratori_trasversali">integratore 
+ trasversale</a> lo si trasforma in un'<span class="hcp1">asta 
+ virtuale</span> che, anche se considerata a tutti gli effetti come un'asta 
+ facente parte della struttura, non ha alcun effetto nel calcolo della 
+ struttura e quindi può essere inserite anche dopo che il calcolo è stato 
+ eseguito.</p>
+<p>Quindi ad esempio gli automatismi di numerazione automatica aste la 
+ trattano al pari delle altre e si può operare su essa con i normali comandi 
+ che si userebbero per le aste.</p>
+<p>Si fa notare che per comodità durante l'inserimento di un <a href="Integratori.htm#Integratori_trasversali">integratore 
+ trasversale</a>, se la sezione corrente non è una sezione fittizia, l'integratore 
+ viene trasformato automaticamente in <span class="hcp1">asta 
+ virtuale</span>.</p>
+<p>La posizione (come ad esempio il filo fisso) e le dimensioni non influenzano 
+ le sollecitazioni che restano calcolate in funzione della larghezza dell'area 
+ di integrazione.</p>
+<p>Non è necessario che la sezione abbia lo stesso spessore dei bidimensionali 
+ associati all'integratore ed una larghezza corrispondente all'area di 
+ integrazione, anche se per coerenza normalmente sarà necessario procedere 
+ in tal senso.</p>
+<p>Se l'asta virtuale ha una sezione con membratura trave e tipo di verifica 
+ cemento armato può quindi essere poi normalmente progettata ed armata 
+ con le usuali procedure. Si possono in questo modo progettare come travi 
+ in c.a. anche scale, travi parete, ecc. se si ritiene accettabile un comportamento 
+ di tipo monodimensionale &quot;a trave&quot;. Il programma deduce dal 
+ tipo di bidimensionale associato se debbano essere rispettati gli aspetti 
+ normativi che riguardano le fondazioni.</p>
+<p>Se oltre al progetto della trave, si procede poi anche alla progettazione 
+ della soletta vera e propria, le zone occupate dall'integratore (se orientato 
+ in una delle due direzioni di armatura della soletta) verranno automaticamente 
+ considerate come verificate e i relativi punti interni non verranno considerati 
+ per la progettazione e la verifica della soletta stessa. In particolare 
+ non verranno effettuate le verifiche a flessione nella direzione dell'integratore 
+ (ma lasciando attive quelle nell'altro senso) e le verifiche a taglio. 
+ Questo consente di armare &quot;a trave&quot; le zone delle solette o 
+ platee con un comportamento flessionale prevalentemente monodirezionale, 
+ riservando la normale armatura diffusa per le zone rimanenti. Queste &quot;travi&quot; 
+ se non diversamente specificato nei criteri di progetto, verranno ovviamente 
+ considerate anche nei pilastri incidenti per il calcolo della gerarchia 
+ delle resistenze quando necessario.</p>
+<p>Si presti attenzione al fatto che usando una sezione rettangolare di 
+ altezza maggiore della soletta o addirittura una sezione a T, apparentemente 
+ si simula una soletta nervata. Si ricorda che l'integratore, anche se 
+ inserito prima del calcolo della struttura, non fornisce nessuna rigidezza 
+ aggiuntiva e quindi di fatto si esegue solo una progettazione con le sollecitazioni 
+ della soletta ed una sezione diversa.</p>
+<p>Se la sezione associata ad un integratore trasversale ha membratura 
+ pilastro&#160;e tipo di verifica cemento armato è possibile progettare 
+ l'asta come pilastro. Il pilastro può anche proseguire con un'asta vera 
+ e propria a costituire una pilastrata &quot;mista&quot; purché l'asta 
+ virtuale e l'asta reale incidano sullo stesso nodo. Si noti che (contrariamente 
+ alle travi virtuali all'interno di una soletta o platea) la presenza di 
+ questi pilastri virtuali viene ignorata nell'eventuale progetto di pareti 
+ o nuclei interessati dagli elementi bidimensionali associati all'integratore. 
+ Attualmente per i pilastri realizzati con un un'asta virtuale non viene 
+ eseguita la gerarchia della resistenza e la verifica dei nodi in corrispondenza 
+ delle travi ad essa incidenti.</p>
+<p style="text-align: left;"><span class="hcp2">Argomenti 
+ correlati:</span> <span class="hcp2"><a href="Integratori.htm">Integratori</a></span></p>
+</body>
+</html>

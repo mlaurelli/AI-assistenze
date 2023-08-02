@@ -1,0 +1,150 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>AGGF - Aggiungi ferro</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+span.hcp4 { font-style:italic; }
+span.hcp5 { font-style:normal;
+font-weight:normal; }
+span.hcp6 { font-weight:normal; }
+span.hcp7 { font-weight:bold;
+text-decoration:none; }
+span.hcp8 { font-style:italic;
+font-weight:normal; }
+span.hcp9 { font-style:normal; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">AGGF - Aggiungi ferro</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Progettazione interattiva travi, nuclei, plinti/pali, sezioni</p>
+</td>
+<td style="width:28%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p>
+</td>
+</tr>
+</table>
+<p class="AmbienteProgettazione"><span class="hcp3">Progettazione interattiva travi</span></p>
+<p>Permette di inserire un nuovo ferro longitudinale, di parete, di fianco o di suola nella travata.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">AGGF</span> <font color="#0000FF"><span class="hcp4">Punto iniziale del ferro</span></font> / <font color="#0000FF"><span class="hcp4">Punto finale del ferro</span></font></p>
+<p class="Normal3">oppure:</p>
+<p class="Normal3"><span class="hcp3">AGGF</span> <font color="#0000FF"><span class="hcp5">P</span></font> <span class="hcp6"><font color="#0000FF"><span class="hcp4">clic</span></font></span></p>
+<p class="Normal3">oppure:</p>
+<p class="Normal3"><span class="hcp3">AGGF</span> <font color="#0000FF"><span class="hcp5">F</span></font> <span class="hcp6"><font color="#0000FF"><span class="hcp4">clic</span></font></span></p>
+<p class="Normal3">oppure:</p>
+<p class="Normal3"><span class="hcp3">AGGF</span> <span class="hcp5"><font color="#0000FF">S</font></span> <span class="hcp6"><font color="#0000FF"><span class="hcp4">clic</span></font></span></p>
+<p>Nella prima forma il primo punto selezionato con il cursore grafico indica la posizione iniziale del ferro longitudinale (escluso l'ancoraggio), il secondo punto indica la posizione finale del ferro (escluso l'ancoraggio).</p>
+<p class="Normal2">Nelle altre forme si inseriscono rispettivamente i ferri di parete, di fianco o di suola. Il punto selezionato con il cursore grafico indica la campata nella quale si vuole inserire i ferri di parete, di fianco o di suola.</p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Se in prossimità del primo punto si trova una linea di blocco, il ferro viene fatto partire in corrispondenza di quest'ultima. Nel caso di linee di blocco molto vicine l'una dall'altra, si consiglia di ingrandire la zona per individuare un punto immediatamente a destra o a sinistra della linea di blocco corretta in funzione della direzione in cui si intende inserire il ferro.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Durante l'inserimento del ferro NON viene effettuato il controllo se la lunghezza del ferro supera quanto specificato nei criteri di progetto (vedi <a href="../Manuale/CriGenTra.htm#Max_lunghezza_barre"><span class="hcp3">Max lunghezza barre</span></a>).</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Se il ferro raggiunge una linea di blocco, non sarà possibile prolungarlo oltre, a meno che non si disattivino i blocchi con il comando <span class="hcp3"><span style="text-decoration: underline;"><a href="FBL.htm">FBL</a></span></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il ferro che viene inserito sarà un ferro superiore o inferiore in funzione della scelta effettuata con i comandi <span class="hcp7"><a href="FINF.htm">FINF</a></span> e <span class="hcp7"><a href="FSUP.htm">FSUP</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il ferro viene inserito con la combinazione di diametri corrente specificata con il comando <span class="hcp7"><a href="FERC.htm">FERC</a></span>. Durante l'inserimento del ferro è possibile cambiare la combinazione di diametri con il comando <span class="hcp3">FERC</span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">In qualunque momento è possibile piegare il ferro per realizzare un sagomato usando i tasti <span class="hcp3">I</span> o <span class="hcp3">F</span> e "Invio" che consentono di specificare il punto iniziale o finale di piegatura.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">In qualunque momento è possibile annullare l'ultima piegatura del ferro usando il tasto <span class="hcp3">U</span> e "Invio".</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">In corrispondenza dei cambi di pendenza della travata, il ferro inverte automaticamente la posizione se incontra una concavità. Se il ferro incontra una convessità normalmente non inverte la posizione. È possibile modificare questo comportamento con il comando <span class="hcp3"><a href="IPF.htm">IPF</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Se è stato settato un passo di arrotondamento ferri con il comando <span class="hcp7"><a href="PASSO.htm">PASSO</a></span>, il ferro inserito avrà una lunghezza multipla di tale valore. Sarà però in tal caso difficoltoso inserire punti di piegatura.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il ferro di parete, di fianco o di suola viene inserito con la combinazione dei diametri corrente specificata con il comando <span class="hcp7"><a href="FERC.htm">FERC</a></span>. Viene considerata solo la prima combinazione dei diametri (ad esempio se la combinazione dei diametri corrente è 2Ø12+2Ø14 viene considerato 2Ø12), ed interpretata come i ferri da inserire sulle pareti, sul fianco o sulla suola della sezione.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il ferro di parete, di fianco o di suola inserito è sempre un ferro che lavora a taglio e torsione.</p>
+</li>
+</ul>
+<p class="AmbienteProgettazione"><span class="hcp3">Progettazione interattiva nuclei</span></p>
+<p>Permette di inserire un nuovo ferro nel nucleo.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">AGGF</span> <font color="#0000FF"><span class="hcp8">Punto di inserimento</span></font></p>
+<p class="Normal3">oppure:</p>
+<p class="Normal3"><span class="hcp3">AGGF</span> <span class="hcp9"><font color="#0000FF"><span class="hcp6">Y Z</span></font></span></p>
+<p>Nella prima forma il punto selezionato con il cursore grafico indica la posizione di inserimento del ferro. Se il ferro corrente (<span class="hcp7"><a href="FERC.htm">FERC</a></span>) ha modalità di inserimento semiautomatica o passo la posizione farà riferimento alle <span class="hcp7"><a href="../Manuale/Linee%20guida.htm">linee guida</a></span> altrimenti il ferro verrà inserito nella posizione indicata.</p>
+<p class="Normal2">Nella seconda forma occorre specificare le coordinate del baricentro del ferro.</p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Il ferro viene inserito con il diametro corrente e con la modalità (semiautomatica, manuale, passo) specificati con il comando <span class="hcp7"><a href="FERC.htm">FERC</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il primo metodo è utilizzabile in tutte le modalità di inserimento. Il secondo metodo funziona solamente in modalità di inserimento manuale.</p>
+</li>
+</ul>
+<p class="AmbienteProgettazione"><span class="hcp3">Progettazione interattiva plinti/pali</span></p>
+<p>Permette di inserire un nuovo ferro nel plinto/palo.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">AGGF</span> <font color="#0000FF"><span class="hcp8">Punto di inserimento</span></font></p>
+<p>Il punto selezionato con il cursore grafico indica la posizione di inserimento del ferro in relazione alle <span class="hcp7"><a href="../Manuale/Linee%20guida.htm">linee guida</a></span>.</p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Il ferro viene inserito con il diametro corrente e con la modalità (automatica, semiautomatica, manuale) specificati con il comando <span class="hcp7"><a href="FERC.htm">FERC</a></span>.</p>
+</li>
+</ul>
+<p class="AmbienteProgettazione" style="font-weight: bold;">Progettazione interattiva sezioni</p>
+<p>Permette di inserire un nuovo ferro nella sezione.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">AGGF</span> <font color="#0000FF"><span class="hcp8">Punto di inserimento</span></font></p>
+<p class="Normal3">oppure:</p>
+<p class="Normal3"><span class="hcp3">AGGF</span> <span class="hcp9"><font color="#0000FF"><span class="hcp6">Y Z</span></font></span></p>
+<p>Nella prima forma il punto selezionato con il cursore grafico indica la posizione di inserimento del ferro. Se il ferro corrente (<span class="hcp7"><a href="FERC.htm">FERC</a></span>) ha modalità di inserimento automatica o semiautomatica la posizione farà riferimento alle <span class="hcp7"><a href="../Manuale/Linee%20guida.htm">linee guida</a></span> altrimenti il ferro verrà inserito nella posizione indicata.</p>
+<p class="Normal2">Nella seconda forma occorre specificare le coordinate del baricentro del ferro.</p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Il ferro viene inserito con il diametro corrente e con la modalità (automatica, semiautomatica, manuale) specificati con il comando <span class="hcp7"><a href="FERC.htm">FERC</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Il primo metodo è utilizzabile in tutte le modalità di inserimento. Il secondo metodo funziona solamente in modalità di inserimento manuale.</p>
+</li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+//]]>
+</script>
+</body>
+</html>

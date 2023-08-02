@@ -1,0 +1,157 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Carichi automatici</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Carichi automatici</h1>
+<p>In ModeSt esistono cinque tipi di carichi automatici:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">il peso proprio degli elementi;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">i carichi permanenti strutturali 
+	 provenienti dai solai;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">i carichi permanenti non strutturali 
+	 provenienti dai solai;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">i carichi accidentali (detti 
+	 anche variabili) provenienti dai solai;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">i carichi permanenti non strutturali 
+	 provenienti dalle tamponature.</p></li>
+</ul>
+<p>Occorre notare che tutti i carichi automatici vengono gestiti da ModeSt 
+ in modo dinamico, ossia completamente automatico.</p>
+<p>Una volta che è stato calcolato il peso proprio, esso verrà automaticamente 
+ calcolato nella CCE in cui è stato archiviato tenendo conto automaticamente 
+ di tutte le variazioni di materiale, modifica delle sezioni aste o degli 
+ spessori dei bidimensionali.</p>
+<p>Se per un solaio è stato specificato il calcolo dei carichi permanenti 
+ o accidentali, il calcolo sarà sempre tenuto aggiornato anche in seguito 
+ a modifiche della forma del solaio, della tipologia del solaio o dei valori 
+ di carico in essa specificati. Solo la cancellazione del solaio o l'eliminazione 
+ della CCE in cui sono stati archiviati i carichi comporterà la perdita 
+ del relativo carico sugli elementi di perimetro del solaio.</p>
+<p class="Titolo7">Peso proprio</p>
+<p>Il calcolo e l'archiviazione del PESO della struttura in una CCE si 
+ effettua spuntando la casella &quot;Peso&quot; nell'elenco delle <a href="Condizioni%20di%20carico%20elementari.htm" 
+	 style="font-weight: bold;">CCE</a> (ModeSt per default lo attiva nella 
+ prima CCE che viene creata). Il peso proprio del materiale viene considerato 
+ per tutte le aste e per tutti gli elementi bidimensionali. Se per qualche 
+ ragione si desidera non considerare il peso di alcuni elementi, occorrerà 
+ <a href="Definizione_materiali.htm">definire un materiale</a> privo di 
+ peso ed associarlo alle sezioni o alle tipologie di elementi bidimensionali 
+ da utilizzare come proprietà per gli elementi da considerare privi di 
+ peso. Il peso proprio può essere tolto da una CCE in cui era stato archiviato.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/PESO.htm">PESO</a></span> 
+ (Calcola peso proprio), <span class="hcp1"><a href="../Comandi/DEMA.htm">DEMA</a></span> 
+ (Definisci materiale).</p>
+<p class="Titolo7">Solai</p>
+<p>I carichi permanenti strutturali provenienti dai solai vengono calcolati 
+ cliccando nel gruppo <span class="hcp1">Automatici solai</span> 
+ della scheda <span class="hcp1">Carichi</span> su&#160;<span class="hcp1">Permanente strutturale</span> <img src="../Icone/16/carichistrutt.png" alt="" border="1" class="hcp2"> specificando quali sono i solai di cui si desidera sia 
+ valutato il carico, cliccando su&#160;<span class="hcp1">Permanente 
+ non strutturale</span> <img src="../Icone/16/carichinonstrutt.png" alt="" border="1" class="hcp2"> si calcolano 
+ invece i carichi permanenti non strutturali.</p>
+<p><span class="hcp1">Nota</span>: la differenziazione dei 
+ carichi permanenti in strutturali e non strutturali è eventualmente richiesta 
+ solo se si adotta il D.M. 17/01/18, se si adottano le altre normative 
+ è sufficiente nella <a href="Tipi_solai.htm">definizione dei tipi di solai</a> 
+ specificare solo il valore dei carichi permanenti strutturali (ovviamente 
+ questo carico sarà il carico permanente totale comprensivo del peso proprio 
+ del solaio) ed utilizzare solo il comando per calcolare i carichi permanenti 
+ strutturali derivanti dai solai.</p>
+<p>I carichi accidentali provenienti dai solai vengono calcolati&#160;cliccando 
+ <span>nel gruppo</span> <span class="hcp1">Automatici solai</span> 
+ <span>della scheda</span> <span class="hcp1">Carichi</span> 
+ <span>su&#160;</span><span class="hcp1">Accidentale 1</span> 
+ <span><img src="../Icone/16/carichiacc1.png" alt="" border="1" class="hcp2"> o</span> 
+ <span class="hcp1">Accidentale 2</span> <span><img src="../Icone/16/carichiacc2.png" alt="" border="1" class="hcp2"> o</span> <span class="hcp1">Accidentale 
+ 3</span> <span><img src="../Icone/16/carichiacc3.png" alt="" border="1" class="hcp2"></span> 
+ specificando quali sono i solai di cui si desidera sia valutato il carico.</p>
+<p>Nella CCE corrente è possibile annullare i carichi provenienti dai solai 
+ cliccando nel gruppo <span class="hcp1">Automatici solai</span> 
+ della scheda <span class="hcp1">Carichi</span> su&#160;<span class="hcp1">Nessuno</span> <img src="../Icone/16/qn.png" alt="" border="1" class="hcp2"> specificando 
+ quali sono i solai di cui si desidera sia annullato il carico.</p>
+<p>Le differenze principali fra la componente permanente (sia strutturali 
+ che non strutturali) e la componente accidentale dei carichi da solaio 
+ sono le seguenti:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">i carichi permanenti sono 
+	 carichi in direzione Z globale ed agiscono sulla reale superficie 
+	 del solaio, mentre i carichi accidentali, sempre in direzione Z globale, 
+	 agiscono sulla proiezione orizzontale della superficie del solaio;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">nella determinazione delle 
+	 masse per l'analisi sismica, per strutture calcolate alle Tensioni 
+	 ammissibili o Stati limite D.M. 96., i carichi accidentali vengono 
+	 moltiplicati per il coefficiente di riduzione che caratterizza la 
+	 tipologia del solaio da cui sono stati generati.</p></li>
+</ul>
+<p>I carichi automatici vengono <a href="Ripartizione_dei_carichi_da_solai.htm">ripartiti</a> 
+ sulle aste di perimetro del solaio con il metodo specificato nella <a 
+	 href="Tipi_solai.htm">definizione dei tipi di solai</a>.</p>
+<p>I carichi automatici dai solai si possono anche calcolare selezionando 
+ i solai interessati e poi nel pannello <span class="hcp1">Proprietà 
+ elementi selezionati</span>, scegliendo dalla casella di riepilogo a discesa 
+ &quot;Carichi automatici&quot; il tipo di carico da calcolare. Con l'uso 
+ di quest'ultimo metodo è possibile togliere i carichi automatici dai solai 
+ selezionati.</p>
+<p>Nella stessa CCE non possono essere calcolati sia carichi permanenti 
+ che carichi accidentali e non è possibile calcolare lo stesso tipo di 
+ carichi per gli stessi solai se questi carichi sono già stati archiviati 
+ in una CCE. In altre parole i carichi permanenti ed i carichi accidentali 
+ devono essere archiviati in CCE diverse e non è possibile calcolare due 
+ volte nessun tipo di carico. ModeSt controlla che venga rispettata questa 
+ regola, necessaria anche per il corretto calcolo con il metodo degli stati 
+ limite.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/QPS.htm">QPS</a></span>&#160;(Calcolo 
+ carico permanente strutturale dai solai), <span class="hcp1"><a 
+	 href="../Comandi/QPN.htm">QPN</a></span>&#160;(Calcolo carico permanente 
+ non strutturale dai solai), <span class="hcp1"><a href="../Comandi/QA.htm">QA1</a></span>, 
+ <span class="hcp1"><a href="../Comandi/QA2.htm">QA2</a></span>, 
+ <span class="hcp1"><a href="../Comandi/QA3.htm">QA3</a></span> 
+ (Calcolo primo/secondo/terzo carico accidentale dai solai), <span class="hcp1"><a 
+	 href="../Comandi/DETS.htm">DETS</a></span>&#160;(Definisci tipo di 
+ solaio).</p>
+<p class="Titolo7">Tamponature</p>
+<p>I carichi permanenti non strutturali provenienti dalle tamponature vengono 
+ calcolati cliccando nel gruppo <span class="hcp1">Automatici 
+ tamponature</span> della scheda <span class="hcp1">Carichi</span> 
+ su&#160;<span class="hcp1">Permanente non strutturale <img src="../Icone/16/carichinonstrutt.png" alt="" border="1" class="hcp2"></span> specificando 
+ quali sono le tamponature di cui si desidera sia valutato il carico.</p>
+<p>Nella CCE corrente è possibile annullare i carichi provenienti dalle 
+ tamponature cliccando nel gruppo <span class="hcp1">Automatici 
+ tamponature</span> della scheda <span class="hcp1">Carichi</span> 
+ su&#160;<span class="hcp1">Nessuno</span> <img src="../Icone/16/qn.png" alt="" border="1" class="hcp2"> specificando quali sono le tamponature di cui si desidera 
+ sia annullato il carico.</p>
+<p>I carichi automatici dalle tamponature si possono anche calcolare selezionando 
+ le tamponature interessate e poi nel pannello <span class="hcp1">Proprietà 
+ elementi selezionati</span>, scegliendo dalla casella di riepilogo a discesa 
+ &quot;Carichi automatici&quot; il tipo di carico da calcolare. Con l'uso 
+ di quest'ultimo metodo è possibile togliere i carichi automatici dalle 
+ tamponature selezionate.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/QTPN.htm">QTPN</a></span>&#160;(Calcolo 
+ carico permanente non strutturale dalle tamponature), <span class="hcp1"><a 
+	 href="../Comandi/DETT.htm">DETT</a></span>&#160;(Definisci tipo di 
+ tamponatura).</p>
+</body>
+</html>

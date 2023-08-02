@@ -1,0 +1,70 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>DSEZ - Disegna sezioni travata</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">DSEZ - Disegna sezioni travata</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Progettazione interattiva travi</p>
+</td>
+<td style="width:28%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p>
+</td>
+</tr>
+</table>
+<p>Crea o ricrea i disegni delle sezioni della travata.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">DSEZ</span></p>
+<p>Il programma individua tutti i punti in cui è necessario disegnare la sezione della trave perché differentemente armati e crea le sezioni.</p>
+<p>Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Vengono disegnate tutte le sezioni della travata che risultino diverse per dimensioni, tipo di staffatura (numero bracci), diametro e numero dei ferri di parete, di fianco e di suola.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">I ferri di parete, di fianco e di suola vengono disegnati solo se nella zona corrispondente alla sezione sono definite le staffe.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">La posizione della staffa disegnata esternamente alla sezione dipende dai criteri di progetto (vedi <span class="hcp3"><a href="../Manuale/CriGenTra.htm#Posizione_staffe_esterne">Posizione staffe esterne</a></span>).</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">I disegni delle sezioni, se presenti, verranno ricreati ogni volta che saranno eseguiti comandi che modificano l'armatura in esse riportate (staffe, ferri di parete, di fianco e di suola). In tal caso eventuali modifiche effettuate con comandi Ms-Cad verranno perdute.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1">Poiché la sezione viene generalmente disegnata in una scala diversa da quella della travata (scala principale del disegno), eventuali informazioni grafiche richieste sul disegno della sezione (ad esempio distanza fra due punti) non saranno in coordinate reali, ma dipenderanno dal rapporto fra i due fattori di scala.</p>
+</li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+//]]>
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>AGGS - Aggiungi solaio</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+td.hcp2 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp3 { margin-bottom:0; }
+p.hcp4 { text-align:justify; }
+span.hcp5 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando"><span class="hcp1">AGGS - Aggiungi solaio</span></p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:70%;" class="hcp2">
+<p class="hcp3"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p>
+</td>
+<td style="width:29%;" class="hcp2">
+<p class="hcp3"><a href="javascript:void(0);" id="a4" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p>
+</td>
+</tr>
+</table>
+<p class="hcp4">Permette di inserire nella struttura una o più maglie di solaio.</p>
+<p class="Normal2" style="text-align: justify;">La definizione delle maglie può essere effettuata selezionando i nodi di perimetro delle singole maglie, oppure selezionando le aste che circondano le maglie da definire (vengono riconosciute automaticamente tutte le maglie chiuse) o indicando un punto interno ad una maglia circondata da aste.</p>
+<p class="hcp4">Sintassi del comando:</p>
+<p class="Normal3" style="text-align: justify;"><span class="hcp1">AGGS</span></p>
+<p class="Normal2" style="text-decoration: none;"><span style="text-decoration: underline;"><a href="javascript:void(0);" style="font-weight: bold;" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Setnodi.htm');return false;">Selezionare i nodi</a></span> <font color="#0000FF">o un insieme</font> <font color="#0000B0"><span class="hcp1"><a href="javascript:void(0);" id="a1" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/SetAste.htm');return false;">di aste</a></span></font> <a href="javascript:ActivePopup.CurrentURL=self.location;ActivePopup.Target='../Manuale/Setnodi.htm';ActivePopup.SizeX=600;ActivePopup.SizeY=350;ActivePopup.DoClick()"><span style="font-style: italic; text-decoration: none;"><font style="font-family: Verdana;" color="#0000FF" face="Verdana">o un punto interno alla maglia</font></span></a></p>
+<p class="hcp4">Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Gli attributi di tipo <span class="hcp5"><a href="TSC.htm">TSC</a></span> e numero <span class="hcp5"><a href="NSC.htm">NSC</a></span> del solaio saranno quelli correnti.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">L'inserimento dei solai utilizzando la selezione delle aste o specificando un punto è utilizzabile solo se il piano di lavoro è posizionato sul piano del solaio da inserire e se le aste che individuano il perimetro del solaio sono già definite e complanari.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">I nodi devono essere inseriti in modo consecutivo girando intorno alla maglia del solaio da definire, in senso orario o antiorario. È possibile fornire i nodi di perimetro del solaio mediante cursore grafico o elencandone i numeri da tastiera. L'elenco dei nodi che compongono il solaio si considera terminato quando viene inserito nuovamente il primo nodo. Non sono ammessi solai con fori. I nodi selezionati cambiano colore per evidenziare l'avvenuta selezione. Utilizzare aste di sezione -1 (<span class="hcp1"><a href="SAC.htm">SAC</a></span>) per definire aree a sbalzo.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">È possibile annullare l'ultimo nodo selezionato digitando <span class="hcp1">U</span> e premendo "Invio".</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Se si commette un errore durante l'inserimento dei nodi che definiscono il solaio, è sufficiente ripetere il comando <span class="hcp1">AGGS</span> per annullare l'elenco parziale già introdotto.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Nell'elenco dei nodi che definiscono il solaio è possibile omettere i nodi intermedi di un unico allineamento.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Occorre naturalmente un minimo di 3 nodi o 3 aste per definire una maglia di solaio.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Non è richiesta la presenza delle aste che delimitano il solaio durante la sua definizione. Tutte le aste dovranno però essere presenti al momento dell'esecuzione dei comandi <span class="hcp1"><a href="QPS.htm">QPS</a></span>, <span class="hcp1"><a href="QPN.htm">QPN</a></span>, <a href="QA.htm"><span class="hcp1">QA1</span></a>, <span class="hcp1"><a href="QA2.htm">QA2</a></span> e <span class="hcp1"><a href="QA3.htm">QA3</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">L'angolo di orditura del solaio è quello specificato in <span class="hcp5"><a href="OSC.htm">OSC</a></span>; è possibile modificarlo anche in un secondo momento utilizzando il comando <span class="hcp5"><a href="AOS.htm">AOS</a></span>.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Non sono ammessi solai ad orditura incrociata. Due solai definiti contemporaneamente nella stessa maglia (eventualmente con orditure diverse) sommano i loro carichi.</p>
+</li>
+</ul>
+<p><span class="hcp1">Comandi correlati:</span> <span class="hcp5"><a href="ELIS.htm">ELIS</a></span> elimina i solai. <span class="hcp5"><a href="COPS.htm">COPS</a></span> copia i solai.</p>
+<p style="text-align: left;"><span class="hcp1">Argomenti correlati:</span> <span class="hcp1"><a href="../Manuale/Proprieta_correnti.htm">Attributi correnti</a></span>, <span class="hcp1"><a href="../Manuale/Solai.htm">Solai</a></span>, <span class="hcp1"><a href="../Manuale/Aste%20con%20sezione%20fittizia.htm">Aste con sezione fittizia</a></span>, <span class="hcp1"><a href="Guida.chm::/Schematizzazione_aree_a_sbalzo.htm">Schematizzazione aree a sbalzo</a></span></p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a3');
+        FilePopupInit('a4');
+        FilePopupInit('a2');
+        FilePopupInit('a1');
+//]]>
+</script>
+</body>
+</html>

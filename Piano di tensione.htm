@@ -1,0 +1,112 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Piano di tensione</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-style:italic; }
+span.hcp3 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Piano di tensione</h1>
+<p>Nella visualizzazione delle mappe a colori dello stato tensionale e 
+ delle armature teoriche degli elementi bidimensionali è importante tenere 
+ presente i concetti di <span class="hcp1">piano di tensione</span> 
+ e del suo sistema di riferimento.</p>
+<p>Il piano di tensione è il piano nel quale vengono valutate le tensioni 
+ degli elementi bidimensionali e può coincidere col piano di visualizzazione, 
+ col piano locale degli elementi o essere liberamente definito dall'utente.</p>
+<p>Anche la definizione di <span class="hcp1">superiore</span> 
+ ed <span class="hcp1">inferiore</span> utilizzata per le 
+ armature e le tensioni normali fa riferimento al sistema di riferimento 
+ del piano di tensione:</p>
+<p class="Normal3"><span class="hcp1">superiore</span> significa 
+ <span class="hcp2">dalla parte positiva della normale al 
+ piano</span> (asse Y del sistema di riferimento);</p>
+<p class="Normal3"><span class="hcp1">inferiore</span> significa 
+ <span class="hcp2">dalla parte negativa della normale al 
+ piano</span> (asse Y del sistema di riferimento).</p>
+<p class="Titolo7">Piano di visualizzazione</p>
+<p>Nelle <span class="hcp3"><a href="Finestre%20di%20modellazione.htm">finestre 
+ di modellazione</a></span> il piano di tensione coincide per default col 
+ piano di visualizzazione selezionato per la <span><span class="hcp3"><a 
+	 href="Visualizzazione%20struttura.htm">visualizzazione della struttura</a></span></span>. 
+ In questo caso il sistema di riferimento del piano di tensione viene settato 
+ per default con l'asse X corrispondente ed equiverso alla proiezione dell'asse 
+ coordinato X sul piano stesso, l'asse Y normale al piano e l'asse Z definito 
+ in modo da ottenere una terna cartesiana destrorsa. Nel caso di piano 
+ parallelo all'asse coordinato Y l'asse X del piano di tensione viene posto 
+ parallelo ed equiverso all'asse coordinato Y.</p>
+<p>Quando gli stati tensionali e le armature sono riferiti al piano di 
+ visualizzazione ModeSt prima di procedere a qualunque tipo di calcolo 
+ degli elementi provvede ad effettuare le necessarie trasformazioni dello 
+ stato tensionale dal sistema di riferimento locale dell'elemento a quello 
+ del piano. Questo può essere effettuato solo su elementi con la normale 
+ locale <span class="hcp1">parallela</span> (equiversa o 
+ controversa) alla normale del piano e quindi elementi diversamente orientati 
+ vengono scartati.</p>
+<p class="Titolo7">Piano locale</p>
+<p>Coincide col piano in cui giace l'elemento ed il suo sistema di riferimento 
+ coincide col sistema di riferimento locale dell'elemento stesso. Non viene 
+ effettuata nessuna trasformazione dello stato tensionale e quindi è compito 
+ dell'utente accertarsi che non ci siano incongruenze dovute ai diversi 
+ orientamenti degli assi locali. Risultano comunque utili visualizzazioni 
+ di stati tensionali riferiti al piano locale in alcune situazioni. Si 
+ pensi ad un gruppo di pareti di taglio variamente orientate ma inserite 
+ in modo che tutti gli elementi abbiano l'asse Z locale rivolto verso l'alto; 
+ in questo caso la visualizzazione delle tensioni normali agli assi locali 
+ Z di tutti gli elementi è perfettamente legittima e non dà luogo a nessun 
+ errore mentre la tensione normale agli assi locali X negli spigoli fra 
+ due pareti adiacenti è diretta lungo direzioni diverse e quindi è assurdo 
+ ad esempio calcolarne il valore medio.</p>
+<p class="Titolo7">Piano utente</p>
+<p>Un qualunque piano definito dall'utente. Anche in questo caso le visualizzazioni 
+ vengono effettuate solo per elementi con la normale locale <span class="hcp1">parallela</span> 
+ (equiversa o controversa) alla normale del piano e quindi elementi diversamente 
+ orientati vengono scartati.</p>
+<p class="Titolo7"><span class="hcp1">Modifica piano di tensione</span></p>
+<p>Durante la visualizzazione di mappe a colori relative a elementi bidimensionali, 
+ nella sezione &quot;Opzioni mappe&quot; del pannello <span class="hcp1">Parametri 
+ risultati</span> è possibile stabilire dalla casella di riepilogo a discesa 
+ &quot;Piano&quot; il piano ed il sistema a cui riferire la mappa:</p>
+<p class="Normal3"><span class="hcp1">Visualizzazione</span>: 
+ le mappe a colori sono riferite al piano di visualizzazione e al sistema 
+ di riferimento di default;</p>
+<p class="Normal3"><span class="hcp1">Locale</span>: le mappe 
+ a colori sono riferite al piano dell'elemento ed al riferimento locale 
+ dell'elemento;</p>
+<p class="Normal3"><span class="hcp1">Utente</span>: le mappe 
+ a colori sono riferite ad un piano definito dall'utente. Vengono richiesti 
+ i dati necessari per la definizione di un sistema di riferimento il cui 
+ piano XZ verrà a costituire il piano di tensione e quindi <span class="hcp1">l'asse 
+ Y indicato risulta essere la normale al piano.</span></p>
+<p>Durante le visualizzazioni nelle <span class="hcp3"><a 
+	 href="Finestre%20di%20modellazione.htm">finestre di modellazione</a></span> 
+ viene sempre disegnato il sistema di riferimento del piano di tensione 
+ quando è attiva una mappa a colori che necessita della definizione di 
+ piano di tensione e se il piano di tensione non è il piano locale.</p>
+<p>Per l'esame delle problematiche che possono incorrere utilizzando i 
+ vari tipi di piani di tensione, si veda anche <span class="hcp1"><a 
+	 href="Guida.chm::/Comando_DSLB_e_sistemi_di_riferimento.htm">Sollecitazioni 
+ negli elementi bidimensionali e sistemi di riferimento</a></span>.</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Argomenti 
+ correlati:</span> <span><span class="hcp3"><a 
+	 href="Valori%20nodali%20elementi%20bidimensionali.htm">Valori nodali elementi 
+ bidimensionali</a></span></span></p>
+</body>
+</html>

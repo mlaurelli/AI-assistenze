@@ -1,0 +1,70 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.4 alla 8.5</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.4 alla 8.5</h1>
+<p>Verifica delle aste in acciaio in conformità alla normativa Eurocodice 
+ 3 (EC3) di strutture calcolate agli stati limite in base al D.M. 17/01/18.</p>
+<p>Determinazione dei modi di vibrare della struttura con il metodo di 
+ Ritz-vectors. Con questo metodo si trovano i modi di vibrare utilizzando 
+ come vettori di partenza un insieme di carichi definiti dall'utente andando 
+ quindi a determinare i modi di vibrare nella &quot;direzione&quot; di 
+ applicazione del carico. I modi di vibrare determinati con il metodo di 
+ Ritz costituiscono un'ottima approssimazione delle frequenze naturali 
+ e dei corrispondenti modi di vibrare della struttura inoltre, rispetto 
+ al metodo degli Autovalori presenta il vantaggio di poter estrarre i modi 
+ principali della struttura molto più rapidamente evitando l'estrazione 
+ di modi &quot;locali&quot; che interessano solo parte della struttura 
+ (a meno che il carico applicato non vada ad eccitare proprio il modo locale 
+ di quella parte della struttura). Il metodo di Ritz-vectors non è gestito 
+ dalle versioni di Xfinest precedenti alla 2013.</p>
+<p>Definizione di incastri parziali all'estremità delle aste specificando 
+ per My e Mz valori compresi tra 0 e 1. Specificando ad esempio 0.5 si 
+ ha una riduzione del 50% del momento di incastro. Gli incastri parziali 
+ non sono gestiti dalle versioni di Xfinest precedenti alla 2014. Per maggiori 
+ informazioni si veda <span class="hcp1"><a href="Vincoli_aste.htm">Vincoli 
+ aste</a></span>.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Negli <span class="hcp1"><a 
+	 href="Strumenti.htm">strumenti</a></span> di modellazione è stato 
+	 aggiunto <span class="hcp1">Unisci struttura <img src="../Icone/16/merge.png" alt="" style="border: Solid 1px #808080; border-width: 1px; border-style: solid;" border="1"></span> che consente di inserire una struttura in quella 
+	 corrente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nel modulo per la progettazione 
+	 dei collegamenti delle strutture intelaiate in acciaio è stata introdotta 
+	 una nuova tipologia per la flangia. Per le flange sia estese superiormente 
+	 che inferiormente o solo estese inferiormente è possibile utilizzare 
+	 una mensola per rinforzare la piastra inferiore.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nel progetto dell'armatura 
+	 dei solai è possibile riportare il disegno dell'esploso dei ferri 
+	 relativi agli schemi dei solai progettati lateralmente alla carpenteria 
+	 di piano utilizzando il parametro dei criteri generali di progetto 
+	 <span class="hcp1"><a href="Criteri%20di%20disegno%20solai.htm#Disegnare_esploso_armatura_ferri_lateralmente_alla_carpenteria">Disegnare 
+	 esploso armatura ferri lateralmente alla carpenteria</a></span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Semplificazione dei criteri 
+	 di progetto delle murature: per uniformare la verifica delle murature 
+	 agli standard utilizzati anche in altri ambiti dal programma, sono 
+	 state eliminate tutte le doppie sezioni relative al materiale consolidato. 
+	 Analogamente è stata eliminata nella fase di calcolo l'opzione &quot;Consolidata 
+	 quando previsto&quot;. Attualmente quindi per modellare in una struttura 
+	 dei pannelli murari caratterizzati dallo stesso materiale che in alcuni 
+	 casi è consolidato ed in altri no, è necessario duplicare il tipo 
+	 di elemento bidimensionale assegnandogli un criterio in cui il materiale 
+	 risulta essere consolidato.</p></li>
+</ul>
+</body>
+</html>

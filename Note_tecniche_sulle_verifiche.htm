@@ -1,0 +1,49 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Note tecniche sulle verifiche</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Note tecniche sulle verifiche</h1>
+<p>Le verifiche vengono eseguite in accordo con UNI EN 1992-1-2:2005, al 
+ quale il D.M. 17/01/18 fa esplicito riferimento.</p>
+<p>Le verifiche vengono eseguite considerando il calo di resistenza dell'acciaio 
+ e del calcestruzzo come indicato in UNI EN 1992-1-2:2005, e/o la riduzione 
+ della sezione resistente.</p>
+<p>In particolare per le verifiche a flessione si valutano i momenti ultimi 
+ integrando su tutta la sezione effettiva lo stato tensionale in funzione 
+ della deformazione e della temperatura, con i coefficienti di riduzione 
+ previsti nel prospetto 3.1 e 3.2 del citato Eurocodice.</p>
+<p>Si può notare, esaminando la tabella, come con l'aumentare della temperatura 
+ il calcestruzzo diventi meno resistente, ma molto più duttile. Questo 
+ porta ad un comportamento particolare nel caso in cui la zona compressa 
+ sia quella ad alta temperatura e la zona tesa sia più fredda (ad esempio 
+ all'appoggio di travi esposte al fuoco solo nella parte inferiore). Se 
+ si considera come deformazione ultima quella relativa alla temperatura 
+ di bordo, succede che le fibre interne della sezione (più fredde e quindi 
+ più fragili) risultino rotte prima della fibra più compressa. Questo anche 
+ se matematicamente corretto pare ingegneristicamente poco realistico e 
+ non a favore di sicurezza. Nella ricerca della curvatura ultima si è quindi 
+ optato per considerare come deformazione massima quella corrispondente 
+ alla temperatura minima della sezione. Le resistenze sono poi valutate 
+ con la riduzione relativa alle temperature effettive.</p>
+<p>Le verifiche a taglio vengono effettuate con il metodo della sezione 
+ ridotta indicato nel punto B.2 dell'Eurocodice. Nel caso più generale 
+ la temperatura del calcestruzzo viene valutata in tutti i punti medi compresi 
+ fra due lati opposti esposti al fuoco e prendendo il minor coefficiente 
+ riduttivo che ne deriva. La temperatura nelle staffe e quindi la resistenza 
+ lato acciaio viene valutata calcolando la linea A-A di figura D.2 come 
+ indicato in UNI EN 1992-1-1:2005.</p>
+<p>Nella verifica a taglio di travi e pilastri, a favore di sicurezza la 
+ temperatura viene valutata come la maggiore fra le due che si ottengono 
+ quando la sezione è tesa superiormente o inferiormente.</p>
+<p>Le verifiche a torsione non sono attualmente implementate.</p>
+</body>
+</html>

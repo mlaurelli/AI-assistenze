@@ -1,0 +1,276 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>DESE - Definisci sezione</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style type="text/css">
+<!--
+td ol { margin-top:0;
+margin-bottom:0; }
+td ul { margin-top:0;
+margin-bottom:0; }
+-->
+</style>
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+span.hcp4 { font-style:italic; }
+table.hcp5 { margin-top:14pt;
+border-collapse:separate; }
+td.hcp6 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp7 { text-align:left;
+margin-bottom:0; }
+span.hcp8 { font-weight:normal; }
+img.hcp9 { margin-top:0px;
+margin-bottom:0px;
+margin-left:0px;
+margin-right:0px; }
+span.hcp10 { color:#000000; }
+p.hcp11 { text-align:justify; }
+span.hcp12 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">DESE - Definisci sezione</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" 
+		 width="100%" bgcolor="#C0C0C0">
+	<tr>
+		<td style="width:70%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p></td>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p></td>
+	</tr>
+</table>
+<p>Permette di definire o ridefinire le sezioni da utilizzare per le aste. 
+ La sezione definita o modificata verrà automaticamente resa corrente se 
+ così è stato specificato nelle <a href="../Manuale/Opzioni.htm" style="font-weight: bold;">Opzioni</a>.</p>
+<p>Il comando eseguito da <span class="hcp3"><a href="../Manuale/Linea%20di%20comando.htm">linea 
+ di comando</a></span> consente di definire solo alcuni tipi di sezione. 
+ <span class="hcp3">Per accedere a tutti i tipi di sezione 
+ usare la finestra di dialogo</span>.</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">DESE</span> <font color="#0000FF"><span class="hcp4">Numero della sezione</span></font> / <font 
+	 color="#0000FF"><span class="hcp4">Membratura</span></font> 
+ / <span class="hcp4"><font color="#0000FF">Verifica</font></span> 
+ / <span class="hcp4"><font color="#0000FF">Tipo</font></span> 
+ / <font color="#0000FF"><span class="hcp4">Criterio di 
+ progetto</span></font> / <font color="#0000FF"><span class="hcp4">Materiale</span></font> 
+ / <font color="#0000FF"><span class="hcp4">Commento</span></font></p>
+<table wrapperparagraphselector="P" cellspacing="0" width="100%" border="1" class="hcp5">
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><font color="#0000FF"><span class="hcp4">Numero della sezione da definire</span></font></p></td>
+		<td style="width:79%;" class="hcp6"><p class="hcp2">dovrà essere uguale al numero di 
+		 una sezione già definita per eventuali correzioni oppure uguale 
+		 al numero della prossima sezione da definire.</p></td>
+	</tr>
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><span class="hcp4"><font 
+		 color="#0000FF">Membratura</font></span></p></td>
+		<td style="width:79%;" class="hcp6"><p>codice 
+		 che rappresenta il tipo di membratura per cui verrà utilizzata 
+		 la sezione:</p>
+		<ul>
+			<li class="p-Normal2"><p class="Normal2"><span class="hcp3">T</span> 
+			 per elementi di tipo trave,</p></li>
+			<li class="p-Normal2"><p class="Normal2"><span class="hcp3">P</span> 
+			 per elementi di tipo pilastro,</p></li>
+			<li class="p-Normal2"><p class="Normal2" style="margin-bottom: 0;"><span class="hcp3">G</span> per elementi generici.</p></li>
+		</ul></td>
+	</tr>
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><span class="hcp4"><font 
+		 color="#0000FF">Verifica</font></span></p></td>
+		<td style="width:79%;" class="hcp6"><p>codice 
+		 che rappresenta il tipo di verifica prevista per gli elementi 
+		 per cui verrà utilizzata la sezione:</p>
+		<ul>
+			<li class="p-Normal2"><p class="Normal2"><span class="hcp3">C</span> 
+			 per verifica cemento armato,</p></li>
+			<li class="p-Normal2"><p class="Normal2"><span class="hcp3">A</span> 
+			 per verifica aste in acciaio,</p></li>
+			<li class="p-Normal2"><p class="Normal2"><span class="hcp3">N</span> 
+			 per nessuna verifica.</p></li>
+		</ul>
+		<p class="Normal2" style="margin-bottom: 0;">Non sarà possibile 
+		 inserire verifiche di tipo <span class="hcp3">C</span> 
+		 per elementi generici.</p></td>
+	</tr>
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><span class="hcp4"><font 
+		 color="#0000FF">Tipo</font></span></p></td>
+		<td style="width:79%;" class="hcp6"><p class="hcp2">sono ammessi i seguenti tipi di 
+		 sezione:</p></td>
+	</tr>
+</table>
+<div width="100%" align="right">
+<table wrapperparagraphselector="P" cellspacing="0" width="100%" border="1" class="hcp5">
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><span class="hcp3">R</span> 
+		 <span class="hcp8">- Rettangolare</span></p></td>
+		<td style="width:12%;" class="hcp6"><p class="hcp7"><span class="hcp4"><font 
+		 color="#0000FF">B,H</font></span></p></td>
+		<td style="width:67%;" class="hcp6"><p 
+			 style="text-align: left; margin-left: 6.0pt; margin-bottom: 0;"><img src="../help%20vecchi/dwg/rettangolare.jpg" alt="" width="179" height="121" border="0" class="hcp9"></p></td>
+	</tr>
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><span class="hcp3">T</span> 
+		 <span class="hcp8">- a T</span></p></td>
+		<td style="width:12%;" class="hcp6"><p class="hcp7"><span class="hcp4"><font 
+		 color="#0000FF">B,H,b,h</font></span></p></td>
+		<td style="width:67%;" class="hcp6"><p class="hcp7"><img src="../help%20vecchi/dwg/t.jpg" alt="" width="210" height="129" border="0" class="hcp9"><img src="../help%20vecchi/dwg/t1.jpg" alt="" width="210" height="131" border="0" class="hcp9"></p></td>
+	</tr>
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><span class="hcp3">L</span> 
+		 <span class="hcp8">- a L (sinistra)</span></p></td>
+		<td style="width:12%;" class="hcp6"><p class="hcp7"><span class="hcp4"><font 
+		 color="#0000FF">B,H,b,h</font></span></p></td>
+		<td style="width:67%;" class="hcp6"><p class="hcp2"><img src="../help%20vecchi/dwg/l2.jpg" alt="" width="209" height="131" border="0" class="hcp9"><img src="../help%20vecchi/dwg/l.jpg" alt="" width="210" height="131" border="0" class="hcp9"></p></td>
+	</tr>
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><span class="hcp3">LD</span> 
+		 <span class="hcp8">- a L (destra)</span></p></td>
+		<td style="width:12%;" class="hcp6"><p class="hcp7"><span class="hcp4"><font 
+		 color="#0000FF">B,H,b,h</font></span></p></td>
+		<td style="width:67%;" class="hcp6"><p class="hcp2"><img src="../help%20vecchi/dwg/ls2.jpg" alt="" width="212" height="131" border="0" class="hcp9"><img src="../help%20vecchi/dwg/ls1.jpg" alt="" width="210" height="132" border="0" class="hcp9"></p></td>
+	</tr>
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><span class="hcp3">C</span> 
+		 <span class="hcp8">- Circolare (non ammesso per 
+		 membrature di tipo</span> <span class="hcp3">T</span><span class="hcp8">)</span></p></td>
+		<td style="width:12%;" class="hcp6"><p class="hcp7"><span class="hcp4"><font 
+		 color="#0000FF">r</font></span></p></td>
+		<td style="width:67%;" class="hcp6"><p class="hcp2"><img src="../help%20vecchi/dwg/circ.jpg" alt="" width="200" height="113" border="0" class="hcp9"></p></td>
+	</tr>
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><span class="hcp3">Q</span> 
+		 <span class="hcp8">- Qualunque a inerzie assegnate 
+		 (non ammesso per verifiche di tipo</span> <span class="hcp3">T</span> 
+		 <span class="hcp8">o</span> <span class="hcp3">P</span><span class="hcp8">)</span></p></td>
+		<td style="width:12%;" class="hcp6"><p class="hcp7"><span class="hcp4"><font 
+		 color="#0000FF">Area Jx,Jy,Jz Chy,Chz</font></span></p></td>
+		<td style="width:67%;" class="hcp6"><p class="hcp2">Inserire i parametri statici necessari 
+		 alla definizione della sezione, riferiti agli assi locali. <font 
+		 color="#0000FF"><span class="hcp4">Chy</span> <span class="hcp10">e</span></font> <font color="#0000FF"><span class="hcp4">Chz</span> <span class="hcp10">sono 
+		 i fattori di taglio.</span></font></p></td>
+	</tr>
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><span class="hcp3">K</span> 
+		 <span class="hcp8">- Per coordinate (non ammesso 
+		 per verifiche di tipo</span> <span class="hcp3">T</span> 
+		 <span class="hcp8">o</span> <span class="hcp3">P</span><span class="hcp8">)</span></p></td>
+		<td style="width:12%;" class="hcp6"><p class="hcp7"><span class="hcp4"><font 
+		 color="#0000FF">Inserire il numero dei punti, Punto</font></span></p></td>
+		<td style="width:67%;" class="hcp6"><p class="hcp2">Inserire il numero dei punti e le 
+		 relative coordinate riferite agli assi locali.</p></td>
+	</tr>
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><span class="hcp3">A</span> 
+		 <span class="hcp8">- Dall'archivio (non ammesso 
+		 per verifiche di tipo</span> <span class="hcp3">T</span> 
+		 <span class="hcp8">o</span> <span class="hcp3">P</span><span class="hcp8">)</span></p></td>
+		<td style="width:12%;" class="hcp6"><p class="hcp7"><span class="hcp4"><font 
+		 color="#0000FF">Nome archivio, Codice sezione</font></span></p></td>
+		<td style="width:67%;" class="hcp6"><p class="hcp2">Inserire il nome dell'archivio e 
+		 il codice della sezione.</p></td>
+	</tr>
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><span class="hcp3">AA</span> 
+		 <span class="hcp8">- Accoppiate dall'archivio 
+		 (non ammesso per verifiche di tipo</span> <span class="hcp3">T</span> 
+		 <span class="hcp8">o</span> <span class="hcp3">P</span><span class="hcp8">)</span></p></td>
+		<td style="width:12%;" class="hcp6"><p class="hcp7"><span class="hcp4"><font 
+		 color="#0000FF">Nome archivio, Codice sezione, distanza fra sezioni</font></span></p></td>
+		<td style="width:67%;" class="hcp6"><p class="hcp2">Inserire il nome dell'archivio, 
+		 il codice della sezione e la distanza di accoppiamento della sezione.</p></td>
+	</tr>
+</table>
+</div>
+
+<table wrapperparagraphselector="P" cellspacing="0" width="100%" border="1" class="hcp5">
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><font color="#0000FF"><span class="hcp4">Criterio di progetto</span></font></p></td>
+		<td style="width:79%;" class="hcp6"><p class="hcp2">numero del criterio di progetto 
+		 da associare alla sezione per il tipo di verifica prevista. Questo 
+		 dato non viene richiesto se il tipo di verifica è <span class="hcp3">N</span>.</p></td>
+	</tr>
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><span class="hcp4"><font 
+		 color="#0000FF">Materiale</font></span></p></td>
+		<td style="width:79%;" class="hcp6"><p class="hcp2">numero del materiale da associare 
+		 alla sezione.</p></td>
+	</tr>
+	<tr>
+		<td style="width:21%;" class="hcp6"><p 
+			 style="text-align: left; margin-bottom: 0; font-style: italic; 
+			 color: #0000ff;">Codice</p></td>
+		<td style="width:79%;" class="hcp6"><p class="hcp2">eventuale codice da associare alla 
+		 sezione. Il codice viene utilizzato per la <a href="../Manuale/Classificazione_delle_sezioni.htm">classificazione 
+		 delle sezioni</a> in acciaio.</p></td>
+	</tr>
+	<tr>
+		<td style="width:21%;" class="hcp6"><p class="hcp7"><span class="hcp4"><font 
+		 color="#0000FF">Commento</font></span></p></td>
+		<td style="width:79%;" class="hcp6"><p class="hcp2">eventuale commento da associare 
+		 alla sezione.</p></td>
+	</tr>
+</table>
+
+<p class="hcp11">Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">La 
+	 base è il lato parallelo all'asse <span class="hcp8">Y</span> 
+	 locale, quindi per i pilastri privi di rotazione è parallela anche 
+	 all'asse <span class="hcp8">Y</span> globale.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Se 
+	 si modificano i parametri di una sezione già definita, si modificano 
+	 ovviamente tutte le aste che hanno tale sezione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Se 
+	 è già stato effettuato il comando <span class="hcp12"><a 
+	 href="PESO.htm">PESO</a></span> e si ridefiniscono una o più sezioni, 
+	 <span class="hcp3">non</span> occorre correggere la 
+	 condizione di carico elementare in cui erano stati memorizzati i carichi 
+	 dovuti al peso proprio, che viene automaticamente tenuto aggiornato.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Occorre 
+	 specificare le sezioni a <span class="hcp8">L</span> 
+	 e <span class="hcp8">LS</span> solo per una corretta 
+	 visualizzazione, ai fini del calcolo sono equivalenti.</p></li>
+</ul>
+<p class="hcp11"><span class="hcp3">Comandi 
+ correlati:</span> <span class="hcp12"><a 
+	 href="SAC.htm">SAC</a></span> rende corrente la sezione. <span class="hcp12"><a href="ASA.htm">ASA</a></span> assegna 
+ la sezione corrente. <span class="hcp12"><a 
+	 href="DSA.htm">DSA</a></span> disegna il numero della sezione. <span class="hcp12"><a href="_SA.htm">?SA</a></span> 
+ elenca i tipi di sezioni.</p>
+<p style="text-align: left;"><span class="hcp3">Argomenti 
+ correlati:</span> <span class="hcp3"><a href="../Manuale/Sezioni.htm">Definizione 
+ sezioni</a></span>, <span class="hcp3"><a href="../Manuale/Aste%20con%20sezione%20fittizia.htm">Aste 
+ con sezione fittizia</a></span>, <span class="hcp3"><a href="Guida.chm::/Schematizzazione_aree_a_sbalzo.htm">Schematizzazione 
+ aree a sbalzo</a></span></p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a2');
+	FilePopupInit('a3');
+//]]></script>
+</body>
+</html>

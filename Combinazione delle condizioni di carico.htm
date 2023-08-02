@@ -1,0 +1,218 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Combinazione delle condizioni di carico</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+table.hcp2 { margin-top:14pt;
+border-collapse:separate; }
+td.hcp3 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp4 { text-align:center;
+margin-bottom:0; }
+span.hcp5 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Combinazione delle condizioni di carico</h1>
+<p>Le CCE definite e le CCE create automaticamente in fase di calcolo devono 
+ essere combinate fra loro con coefficienti moltiplicativi.</p>
+<p>Al momento del calcolo ModeSt propone una serie di combinazioni standard 
+ delle CCE, combinazioni che possono essere comunque ridefinite. Spostamenti 
+ e sollecitazioni verranno forniti quindi non per le CCE ma per le combinazioni 
+ così definite. Per ridefinire le combinazioni delle CCE è sufficiente 
+ modificare i fattori moltiplicativi ed eventualmente aggiungere o eliminare 
+ combinazioni. Se il calcolo della struttura è già stato effettuato con 
+ gli stessi parametri e con lo stesso numero di CCE, (conteggiando sia 
+ quelle fornite dall'utente che quelle calcolate in automatico), ModeSt 
+ rilegge automaticamente le combinazioni definite precedentemente.</p>
+<p>Anche quando il calcolo è già stato eseguito, le combinazioni delle 
+ CCE sono comunque modificabili cliccando nel gruppo <span class="hcp1">Combinazioni</span> 
+ della scheda <span class="hcp1">Analisi</span> su <span class="hcp1">Modifica</span> <img src="../Icone/32/modcombina32.png" alt="" style="border: Solid 1px #808080; 
+													 border-width: 1px; 
+													 border-style: solid;" border="1">.</p>
+<p><span class="hcp1">Nota</span>: la differenziazione dei 
+ carichi permanenti in strutturali e non strutturali è eventualmente richiesta 
+ solo se si adotta il D.M. 17/01/18, se si adottano le altre normative 
+ è sufficiente nella definizione dei tipi di solai specificare solo il 
+ valore dei carichi permanenti strutturali (ovviamente questo carico sarà 
+ il carico permanente totale comprensivo del peso proprio del solaio) e 
+ calcolare solo i carichi permanenti strutturali per avere i carichi permanenti 
+ derivanti dai solai. In seguito assumeremo che i carichi permanenti siano 
+ la somma dei carichi permanenti strutturali e non strutturali.</p>
+<p>Supponiamo ad esempio che siano state create le seguenti CCE:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">peso proprio e carichi permanenti 
+	 dovuti ai solai</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">carichi accidentali dovuti 
+	 ai solai</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">carichi dovuti alla neve</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">carichi dovuti al vento</p></li>
+</ol>
+<p>e supponiamo che sia stato selezionato il calcolo statico della struttura 
+ (senza analisi sismica). La tabella delle combinazioni delle CCE proposta 
+ è la seguente:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="60%" align="center" border="1" class="hcp2">
+	<tr>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">COND.</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">2</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">3</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">4</p></td>
+	</tr>
+	<tr>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+	</tr>
+</table>
+<p>e cioè come combinazione viene proposta la somma di tutte le CCE definite 
+ (ognuna con coefficiente moltiplicativo pari ad 1.00). I valori numerici 
+ sono ovviamente modificabili all'interno della tabella.</p>
+<p>Cambiando il numero di combinazioni è possibile modificarne la definizione; 
+ ad esempio aggiungendo due ulteriori combinazioni viene proposta la seguente 
+ tabella:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="60%" align="center" border="1" class="hcp2">
+	<tr>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">COND.</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">2</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">3</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">4</p></td>
+	</tr>
+	<tr>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+	</tr>
+	<tr>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">2</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">0.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">0.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">0.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">0.00</p></td>
+	</tr>
+	<tr>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">3</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">0.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">0.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">0.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">0.00</p></td>
+	</tr>
+</table>
+<p>Muovendosi nella tabella e modificando i valori dei coefficienti moltiplicativi 
+ possiamo ottenere ad esempio la seguente tabella:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="60%" align="center" border="1" class="hcp2">
+	<tr>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">COND.</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">2</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">3</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">4</p></td>
+	</tr>
+	<tr>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+	</tr>
+	<tr>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">2</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">0.00</p></td>
+	</tr>
+	<tr>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">3</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">0.00</p></td>
+		<td style="width:20%;" class="hcp3"><p class="hcp4">1.00</p></td>
+	</tr>
+</table>
+<p>In definitiva abbiamo creato le seguenti combinazioni delle CCE:</p>
+<ol>
+	<li class="p-Elenco1"><p class="Elenco1">tutti i carichi compreso vento 
+	 e neve</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">permanenti + accidentali + 
+	 neve (senza vento)</p></li>
+	<li class="p-Elenco1"><p class="Elenco1">permanenti + accidentali + 
+	 vento (senza neve)</p></li>
+</ol>
+<p>È chiaro quindi che operando con accortezza nel definire le CCE è possibile 
+ definire agevolmente le più svariate combinazioni delle CCE (ad esempio 
+ carichi a scacchiera sui solai).</p>
+<p>Nel caso in cui la tabella delle combinazioni sia particolarmente complessa 
+ è anche possibile rileggerla da un file scritto manualmente. Il file può 
+ essere creato sia con Excel sia con il Blocco note (Notepad), nel primo 
+ caso dovrà essere salvato in formato CSV mentre nel secondo caso avere 
+ come estensione ASC. Il file deve essere costituito da tante righe/linee 
+ quante sono le combinazioni da definire e su ogni riga/linea devono essere 
+ presenti un codice identificativo del tipo di combinazione (sulla prima 
+ colonna), tante colonne quante sono le CCE della struttura (comprese quelle 
+ create in automatico in caso di analisi sismica) e, fra virgolette, il 
+ commento della CC. Per entrambi i formati CSV e ASC, i dati devono essere 
+ separati da virgola o da punto e virgola.</p>
+<p>I codici dei tipi di combinazioni ammissibili sono i seguenti:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">TA (Tensioni Ammissibili);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">SLU (Stato Limite Ultimo);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">SLU S (Stato Limite Ultimo 
+	 Sismico);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">SLO (Stato Limite d'esercizio 
+	 di Operatività);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">SLD (Stato Limite d'esercizio 
+	 di Danno);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">SLV (Stato Limite ultimo di 
+	 salvaguardia della Vita);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">SND (Stato limite di salvaguardia 
+	 della vita Non Dissipativo);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">SLC (Stato Limite ultimo di 
+	 prevenzione del Collasso);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">SLE R (Stato Limite di Esercizio 
+	 per combinazioni Rare);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">SLE F (Stato Limite di Esercizio 
+	 per combinazioni Frequenti);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">SLE Q (Stato Limite di Esercizio 
+	 per combinazioni Quasi permanenti);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">SLU I (Stato Limite di resistenza 
+	 al fuoco).</p></li>
+</ul>
+<p>Sulle righe della tabella non possono coesistere codici identificativi 
+ di combinazioni agli stati limite e alle tensioni ammissibili. Se in una 
+ delle righe esiste il codice identificativo TAM questo deve essere ripetuto 
+ anche sulle altre righe.</p>
+<p>Se si rilancia il calcolo e si cambia tipo di analisi o altri parametri 
+ (ad esempio il rapporto dei lati) le combinazioni precedentemente modificate 
+ si perdono. Comunque se il numero di CCE è compatibile sarà possibile 
+ dopo il calcolo ricaricare il file CMB.</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Argomenti 
+ correlati:</span> <span class="hcp5"><a 
+	 href="Carichi.htm">Gestione dei carichi</a></span><span style="font-weight: normal;">,</span> 
+ <span class="hcp5"><a href="Sollecitazione_e_risultato_corrente.htm">Sollecitazioni 
+ e risultati</a></span></p>
+</body>
+</html>

@@ -1,0 +1,73 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.26 alla 8.27</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { mso-bidi-font-weight:bold; }
+span.hcp2 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.26 alla 8.27</h1>
+<p class="hcp1">Nelle verifiche delle strutture 
+ in muratura ordinaria e armata è stata introdotta la possibilità, attraverso 
+ i parametri presenti nelle schede <span class="hcp2"><a 
+	 href="Criteri_di_verifica_murature.htm#Comportamento_maschi">Comportamento 
+ maschi&#160;per azioni sismiche</a></span> e <span class="hcp2"><a 
+	 href="Criteri_di_verifica_murature.htm#Comportamento_fasce_in_muratura">Comportamento 
+ fasce per azioni sismiche</a></span> dei criteri di progetto specifici 
+ delle murature, di trascurare i maschi e le fasce sia nell'analisi sismica 
+ statica o dinamica lineare, che nella determinazione dei modi di vibrare 
+ dell'analisi sismica statica non lineare (pushover). Nel calcolo della 
+ struttura non vengono considerate le rigidezze dei muri/elementi bidimensionali 
+ che costituiscono i maschi e le fasce da trascurare, ma mantenute le loro 
+ masse che vengono trasferite o all'impalcato o ai nodi adiacenti in base 
+ a quanto impostato nei parametri di calcolo. Nel <a href="Controllo%20congruenza%20dati.htm">controllo 
+ congruenza dati</a> vengono elencati i muri/elementi bidimensionali che 
+ non vengono trasferiti al solutore per controllare l'eventuale presenza 
+ di porzioni di elementi che fuoriescono dal perimetro dei maschi o delle 
+ fasce, e decidere se modificare la mesh in modo che gli elementi bidimensionali 
+ siano tutti contenuti all'interno del loro perimetro.</p>
+<p>È stata introdotta la possibilità di considerare l'eccentricità aggiuntiva 
+ anche sugli impalcati non rigidi, per approfondimenti si veda <u style="text-decoration: none; "><span class="hcp2"><a href="Dati%20di%20piano.htm" style="font-family: Verdana, sans-serif;">Dati 
+ di piano</a></span></u>.</p>
+<p>È stata introdotta la possibilità di progettare i micropali di tipo 
+ Radice e Tubfix.</p>
+<p class="hcp1">È stata introdotta la possibilità 
+ di esportare tramite link diretto da ModeSt a Revit anche le armature 
+ di travi, pilastri, pareti, nuclei, solette/platee e murature armate.</p>
+<p>Nella progettazione interattiva delle sezioni in c.a. con sollecitazioni 
+ manuali è stata introdotta la possibilità di selezionare una o più aste 
+ presenti nel modello, aventi anche sezione differente, dalle quali prelevare 
+ le sollecitazioni, oltre alla possibilità di definire manualmente le sollecitazioni.</p>
+<p><span style="mso-bidi-font-weight: bold;">È </span>stata introdotta 
+ la possibilità di visualizzare le mappe a colori negli elementi bidimensionali 
+ relative all'inviluppo delle tensioni e delle sollecitazioni unitarie. 
+ L'inviluppo può essere eseguito sui valori massimi, massimi in valore 
+ assoluto e minimi.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">È stata introdotta la possibilità 
+	 di visualizzare le mappe a colori negli elementi bidimensionali relative 
+	 alle sollecitazioni unitarie di Nx, Nz, Txz, Txy, Tzy.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nella legenda relativa alle 
+	 mappe a colori degli elementi bidimensionali viene indicato il numero 
+	 del nodo nel quale si verifica il valore massimo e la relativa combinazione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nella relazione di confronto 
+	 fra lo stato attuale e di progetto di strutture calcolate con l'analisi 
+	 sismica statica o dinamica lineare, viene riportato l'incremento dell'indice 
+	 di sicurezza allo SLV, in modo da individuare più velocemente se l'edificio 
+	 è stato migliorato sismicamente.</p></li>
+</ul>
+<p>&#160;</p>
+</body>
+</html>

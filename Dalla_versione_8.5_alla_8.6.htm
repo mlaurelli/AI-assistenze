@@ -1,0 +1,135 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.5 alla 8.6</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+img.hcp1 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp2 { font-weight:normal; }
+b.hcp3 { font-weight:normal; }
+a.hcp4 { font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.5 alla 8.6</h1>
+<p>Verifica delle strutture in muratura armata (ad esclusione di quelle 
+ progettate secondo i principi di gerarchia delle resistenze) e completa 
+ revisione delle procedure di verifica delle strutture in muratura ordinaria. 
+ Non è più necessario avere una mesh regolare perché il programma individua 
+ i maschi murari con sofisticate procedure geometriche e perché l'integrazione 
+ sul piano adottata fino ad ora per determinare le sollecitazioni, è stata 
+ sostituita con l'integrazione su linea, che è in grado di trovare le sollecitazioni 
+ anche senza incidere sui nodi, ma estrapolando e interpolando le sollecitazioni 
+ negli elementi bidimensionali intercettati. L'unica limitazione è che 
+ il maschio murario in corrispondenza della linea di integrazione, contenga 
+ almeno un elemento bidimensionale.</p>
+<p>Con questa nuova tecnologia, se gli impalcati sono definiti correttamente, 
+ è possibile anche verificare le parti di maschio murario di sottotetto. 
+ La rappresentazione grafica immagina il maschio come rettangolare e quindi 
+ può trarre in inganno, ma al di là del fatto che in genere non si riesce 
+ a fare il calcolo delle sollecitazioni in testa (che generalmente non 
+ sono comunque richieste se non diversamente specificato), resta l'indiscutibile 
+ vantaggio di poter verificare la parte di muratura compresa fra il solaio 
+ plafone ed il tetto, quantomeno al piede e in mezzeria e che il maschio 
+ sotto il solaio plafone viene verificato in modo più corretto tenendo 
+ conto delle sollecitazioni soprastanti. Volendo, è ovviamente sempre possibile 
+ assegnare un utilizzo generico o numero 0 a tali elementi per non effettuarne 
+ la verifica.</p>
+<p>Fra la vecchia e la nuova versione potranno nascere delle differenze 
+ di verifica (anche a parità di mesh) essenzialmente dovute al fatto che 
+ adesso maschi di spessore o tipologia diversa vengono considerati separati, 
+ mentre prima veniva adottato uno spessore medio ponderato e le caratteristiche 
+ della muratura venivano prese dal primo degli elementi costituenti il 
+ maschio, con scarse possibilità di controllo. È ora compito dell'utente 
+ eventualmente unificare tali maschi adottando uno spessore medio e le 
+ opportune caratteristiche dei materiali.</p>
+<p>Si tenga presente inoltre che nelle precedenti versioni le sollecitazioni 
+ nella mezzeria del maschio murario venivano calcolate in modo semplificato 
+ come la media fra quelle di testa e quelle di piede, mentre nella nuova 
+ versione viene effettuato l'integrale delle tensioni presenti a quella 
+ quota. Per maschi adiacenti ad aperture non estese da piano a piano, si 
+ può avere quindi una concentrazione di tensioni e di conseguenza uno sforzo 
+ normale maggiore, più aderente al reale comportamento della muratura.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span>I</span>nserimento di 
+	 un elemento bidimensionale semplicemente cliccando col mouse in un 
+	 punto interno ad un perimetro chiuso di aste. Per utilizzare il metodo 
+	 l'utente dovrà cliccare sulla freccia a destra di&#160;<b>Bidi <img src="../Icone/16/astains.png" alt="" border="1" class="hcp1"> <span class="hcp2">e 
+	 poi su</span></b>&#160;<b>Interno a perimetro <span class="hcp2"><img src="../Icone/16/bidiinsp.png" alt="" border="1" class="hcp1"></span></b> 
+	 e successivamente specificare un punto. Questo metodo funziona solo 
+	 se il piano di lavoro è posizionato sul piano dell'elemento bidimensionale 
+	 da inserire e se le aste che individuano il perimetro sono già definite 
+	 e complanari.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Revisione del pannello delle 
+	 <span style="font-weight: bold;"><a href="Selezioni.htm">Selezioni</a></span> 
+	 e introduzione di nuovi comandi per la selezione degli elementi. La 
+	 voce &quot;Deseleziona tutto&quot; è stata sostituita con l'icona 
+	 <b><span class="hcp2"><img src="../Icone/32/sel_nulla32.png" alt="" border="1" class="hcp1">, introdotto 
+	 il comando&#160;<img src="../Icone/32/sel_inv32.png" alt="" border="1" class="hcp1"></span> 
+	 <span class="hcp2">che consente di invertire la selezione 
+	 corrente e il comando&#160;</b><b><img src="../Icone/32/sel_inper32.png" alt="" border="1" class="hcp1"> che consente 
+	 di s</b></span>elezionare gli elementi interni ad un perimetro chiuso 
+	 di aste giacente sul piano di lavoro (questa selezione non è utilizzabile 
+	 quando è attivo come tipo di oggetto da selezionare &quot;Plinti/Pali&quot;, 
+	 &quot;Solai&quot; o &quot;Reticolari&quot;).</p></li>
+	<li class="p-Bullet1" style="font-weight: normal;"><p class="Bullet1" 
+															 style="font-weight: normal;"><b class="hcp3">Nella progettazione interattiva dell'armatura 
+	 dei pilastri è possibile estendere sia l'armatura verticale assegnata 
+	 ad una sezione della pilastrata sia la staffatura assegnata ad una 
+	 campata all'intera pilastrata utilizzando le opzioni presenti nelle 
+	 finestre di dialogo relative alla modifica dei ferri verticali e alle 
+	 zone di staffatura.</b></p></li>
+	<li class="p-Bullet1" style="font-weight: normal;"><p class="Bullet1" 
+															 style="font-weight: normal;"><b class="hcp3">Nella progettazione interattiva dell'armatura 
+	 delle travi è stata modificata la procedura per l'assegnazione delle 
+	 staffe alle travi a T e a L. L'assegnazione non avviene più nella 
+	 finestra che compariva dopo aver selezionato la zona di staffatura 
+	 ma attraverso due comandi che consentono di assegnare le staffe verticali 
+	 o orizzontali.</b></p></li>
+	<li class="p-Bullet1" style="font-weight: normal;"><p class="Bullet1" 
+															 style="font-weight: normal;"><span class="hcp2"><b class="hcp3">Nelle 
+	 verifiche delle aste in acciaio e in legno è stato introdotto nei 
+	 criteri di progetto il parametro <a href="Criacc.htm#Considerare_anche_spostamento_relativo_nodi_per_calcolo_freccia" class="hcp4">Considerare 
+	 anche spostamento relativo nodi per calcolo freccia</a></b> <b class="hcp3">che 
+	 consente di specificare se nel calcolo della freccia vada messo in 
+	 conto anche lo spostamento relativo fra i nodi o se vada calcolata 
+	 solo come la massima deformazione rispetto alla congiungente i nodi 
+	 nella configurazione deformata. Facciamo notare che per le aste in 
+	 acciaio verticali con membratura pilastro viene sempre preso in considerazione 
+	 anche lo spostamento relativo e quindi il parametro è sempre considerato 
+	 attivo. Il parametro deve essere selezionato per le aste con un comportamento 
+	 a mensola altrimenti si sottostima il valore della freccia.</b></span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: normal;">Nelle 
+	 verifiche delle aste in acciaio e in legno è stato introdotto il parametro 
+	 <a href="Criacc.htm#Considerare_solo_la_verifica_di_deformabilita_delle_membrature" class="hcp4">Considerare solo la verifica di deformabilità 
+	 delle membrature</a> che consente di specificare se valutare e riportare 
+	 in relazione solo la verifica di deformabilità delle membrature (se 
+	 definite). Per aste facenti parte di una membratura e caratterizzate 
+	 da questo parametro non verrà valutata la freccia, intendendo che 
+	 abbia senso solo quella della membratura di cui fanno parte. Se l'asta 
+	 è singola, occorre disattivare il parametro per avere la verifica 
+	 di deformabilità.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="font-weight: normal;"><b><span class="hcp2">Con i tasti funzione F9 e F10 è possibile 
+	 aumentare o diminuire rapidamente la scatola di visualizzazione mantenendo 
+	 invariato il fattore di zoom e restando nella stessa zona di struttura.</span></b></p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Con i tasti funzione F11 e 
+	 F12 è possibile passare rapidamente dalla visualizzazione di un impalcato 
+	 ad un altro mantenendo invariato il fattore di zoom e restando nella 
+	 stessa zona di struttura.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><b><span class="hcp2">Aggiunto 
+	 nell'archivio Profilumbra.sez le sezioni di tipo ORP EV prodotte dall'azienda 
+	 Profilumbra S.p.A.</span></b></p></li>
+</ul>
+</body>
+</html>

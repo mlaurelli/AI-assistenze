@@ -1,0 +1,76 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Calcolo struttura</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Calcolo struttura</h1>
+<p>Al momento del lancio del calcolo FEM ModeSt riconosce la presenza degli 
+ isolatori e automaticamente impostata come normativa di riferimento il 
+ D.M. 17/01/18 e come tipo di calcolo l'analisi sismica dinamica. Non è 
+ possibile effettuare altri tipi di analisi od utilizzare diverse normative. 
+ La valutazione dei risultati viene sempre effettuata, a valle della combinazione 
+ quadratica dei modi di vibrare, considerando come segno delle sollecitazioni, 
+ spostamenti, ecc., il segno che ha la relativa componente nel modo principale 
+ della direzione sismica in esame.</p>
+<p>È importante sottolineare 
+ che può essere eseguito il calcolo per un solo Stato Limite alla volta 
+ (SLO, SLD, SLV, SLC), quindi al termine della progettazione degli isolatori, 
+ i relativi controlli andranno effettuati ricalcolando la struttura (eventualmente 
+ &quot;salvata con nome&quot;) e andando ad esaminare le diverse relazioni 
+ di calcolo. Questo è dovuto principalmente anche al fatto che nel caso 
+ degli isolatori a pendolo, la rigidezza dipende dallo spettro e quindi 
+ dallo stato limite in esame.</p>
+<p>Normalmente le verifiche agli spostamenti per la sovrastruttura vanno 
+ eseguite allo SLD, le verifica di resistenza della sovrastruttura vanno 
+ eseguite allo SLV, le verifiche degli isolatori con forze allo SLV e spostamenti 
+ allo SLC. Quando si sceglie di effettuare un calcolo allo SLV ModeSt imposta 
+ automaticamente le combinazioni di carico come di tipo non dissipativo, 
+ di modo che poi tutte le verifiche degli elementi vengono effettuate in 
+ campo sostanzialmente elastico come previsto da normativa.</p>
+<p>Dopo aver scelto il tipo di isolatori che si intende adottare ed eventualmente 
+ (se sono presenti gli archivi dei produttori), aver scelto quale archivio 
+ utilizzare per la progettazione guidata, e dopo aver introdotto o confermato 
+ gli altri dati necessari al calcolo, ModeSt esegue un'analisi preliminare 
+ in cui determina il comportamento della struttura a base fissa calcolandone 
+ i modi di vibrare e le sollecitazioni per carichi verticali in condizioni 
+ statiche e sismiche. Come carichi verticali vengono adottati quelli della 
+ prima combinazione di tipo Quasi Permanente (SLE Q) presente nella tabella 
+ delle combinazioni. Quando gli isolatori sono stati definiti (si veda 
+ <span style="font-weight: bold;"><a href="Definizione_isolatori_isolate.htm">Definizione 
+ isolatori</a></span>) viene rieseguito il calcolo per valutare sforzi 
+ e spostamenti ed infine vengono create in automatico delle condizioni 
+ di carico elementari aggiuntive per considerare nella sovrastruttura e 
+ nella sotto-struttura i seguenti effetti:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Peso proprio degli isolatori 
+	 (può essere nullo se gli isolatori sono solo teorici o se il dato 
+	 relativo al peso non è presente negli archivi).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Momento aggiuntivo agente 
+	 sulla sotto-struttura per l'eccentricità dei carichi verticali statici 
+	 a seguito dello spostamento risultante nello stato limite in esame. 
+	 Si noti che nel caso di isolatori a pendolo rovescio il momento è 
+	 applicato alla sovrastruttura e nel caso di isolatori a doppia superficie 
+	 di scorrimento il momento si ripartisce fra la sovra e la sotto-struttura.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Momento aggiuntivo per l'eccentricità 
+	 dei carichi verticali sismici. Vale quanto detto per i carichi statici.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Forze taglianti aggiuntive 
+	 (solo per isolatori a pendolo) per considerare l'effetto di incremento 
+	 di rigidezza&#160;dato dallo spostamento dell'isolatore. Le forze 
+	 taglianti sono applicate in parti uguali alla sovra e sotto-struttura 
+	 e per ogni isolatore sono calcolate valutando l'incremento di rigidezza 
+	 locale in funzione del carico sismico, del coefficiente di attrito 
+	 (nominale o valutato in funzione del carico statico) e dello spostamento. 
+	 La variazione di rigidezza e lo spostamento risultante dal calcolo 
+	 sismico permettono di valutare la forza tagliante aggiuntiva.</p></li>
+</ul>
+<p>Definite queste azioni, viene eseguito il calcolo finale della struttura.</p>
+</body>
+</html>

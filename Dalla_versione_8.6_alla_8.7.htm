@@ -1,0 +1,94 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.6 alla 8.7</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { mso-bidi-font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp3 { font-weight:bold; }
+b.hcp4 { font-weight:normal; }
+a.hcp5 { font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.6 alla 8.7</h1>
+<p><span style="background: #ffffff;">Completa revisione delle procedure 
+ di progettazione automatica ed interattiva delle pareti.</span> La definizione 
+ delle pareti è ora <span class="hcp1">completamente 
+ indipendente dalla regolarità della mesh. Inoltre nelle pareti è possibile 
+ gestire aperture come porte e finestre, verificandone le relative architravi 
+ o armandole con altri criteri. Sono state aggiunte anche le verifiche 
+ per flessione intorno all'asse verticale della parete, necessarie per 
+ pareti molto lunghe e/o per serbatoi. Le pareti possono avere anche la 
+ parte superiore non orizzontale (timpani). Fra la vecchia e la nuova versione 
+ potranno nascere delle differenze di verifica (anche a parità di mesh) 
+ essenzialmente dovute al fatto che mentre prima le verifiche venivano 
+ fatte sui livelli individuati dalla mesh, ora sono personalizzabili secondo 
+ un passo di verifica definito dall'utente. Si consiglia di consultare 
+ le relative parti del manuale per approfondimenti.</span></p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Revisione 
+	 del pannello delle</span> <a href="Selezioni.htm" style="text-decoration: underline; ">s<u><span 
+	 style="text-decoration: underline; ">elezioni</span></u></a>: i comandi 
+	 relativi alle selezioni per finestra <img src="../Icone/32/sel_fin32.png" alt="" border="1" class="hcp2">, finestra 
+	 complementare <span class="hcp3"><img src="../Icone/32/sel_fin_compl32.png" alt="" border="1" class="hcp2"></span>, 
+	 finestra parziale <span class="hcp3"><img src="../Icone/32/sel_fin_parz32.png" alt="" border="1" class="hcp2"></span>, 
+	 giacente sul piano passante per la coordinata X <span class="hcp3"><img src="../Icone/32/sel_PX32.png" alt="" border="1" class="hcp2"></span>, giacente 
+	 sul piano passante per la coordinata Y <span class="hcp3"><img src="../Icone/32/sel_PY32.png" alt="" border="1" class="hcp2"></span>,&#160;giacente 
+	 sul piano passante per la coordinata Z <span class="hcp3"><img src="../Icone/32/sel_QZ32.png" alt="" border="1" class="hcp2"></span> e interno 
+	 al perimetro <img src="../Icone/32/sel_inper32.png" alt="" border="1" class="hcp2"> 
+	 sono adesso permanenti durante i comandi di selezione. In pratica 
+	 ad esempio selezionando il comando <img src="../Icone/32/sel_fin32.png" alt="" border="1" class="hcp2"> (finestra) sarà 
+	 possibile continuare ad indicare finestre di selezione senza doverlo 
+	 cliccare ogni volta.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nelle verifiche delle aste 
+	 in acciaio è stato aggiunto <b class="hcp4">nei criteri 
+	 di progetto il parametro</b> <b><a href="Criacc.htm#Verifica_le_bielle_solo_con_sollecitazioni_di_trazione_moltiplicate_per" class="hcp5">Verifica 
+	 le bielle solo con sollecitazioni di trazione moltiplicate per</a></b><span class="hcp1">, che permette di verificare le 
+	 aste (se definite con vincolo biella), solo per le sollecitazioni 
+	 di trazione (amplificandole). Questo permette di simulare in analisi 
+	 lineare il comportamento dei controventi, con l'ipotesi che trascurando 
+	 il controvento compresso, l'altro abbia una sollecitazione doppia 
+	 e che l'effetto del reale comportamento non lineare sul resto della 
+	 struttura sia trascurabile.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nelle verifiche delle aste 
+	 in acciaio è stato aggiunto <b class="hcp4">nei criteri 
+	 di progetto il parametro</b> <a href="Criacc.htm#Curva_di_stabilita_DM08_EC3" class="hcp5"><b style="mso-bidi-font-weight: normal;"><span 
+	 style="line-height: 115%; mso-bidi-language: AR-SA; font-weight: normal;">Curva 
+	 di stabilità</span></b><b><span style="mso-spacerun: yes; font-weight: normal;">&#160;</span></b><span 
+	 style="line-height: 115%; mso-bidi-language: AR-SA;"><b style="mso-bidi-font-weight: normal; 
+															 font-weight: normal;">(D.M. 
+	 18/EC3)</b></span></a>, per forzare la scelta della curva di stabilità 
+	 da usare per le relative verifiche invece di usare automaticamente 
+	 le tabelle di normativa.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Nelle 
+	 visualizzazioni a mappe di colore degli stati tensionali e delle tensioni 
+	 sul terreno degli elementi bidimensionali, soffermandosi su un punto 
+	 qualunque, appare il suggerimento a video che indica il valore numerico 
+	 corrispondente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Le 
+	 procedure di importazione da Revit sono state ampliate e migliorate. 
+	 È possibile gestire qualunque tipo di sezione e rotazione per le aste 
+	 nonché fili fissi e scostamenti sia per le aste che per gli elementi 
+	 bidimensionali.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span style="line-height: 115%; 
+													 mso-bidi-language: AR-SA; 
+													 mso-bidi-font-weight: bold;">È 
+	 stata riportata in relazione la stampa della sicurezza rispetto alle 
+	 verifiche a taglio per travi e pilastri, in analogia a quanto già 
+	 presente per nuclei e pareti.</span></p></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,160 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>FERC - Ferro corrente</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold;
+text-decoration:none; }
+span.hcp4 { font-weight:bold; }
+span.hcp5 { color:#0000FF;
+font-style:italic; }
+span.hcp6 { font-style:italic; }
+span.hcp7 { font-style:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">FERC - Ferro corrente</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" 
+		 width="100%" bgcolor="#C0C0C0">
+	<tr>
+		<td style="width:68%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Progettazione 
+		 interattiva travi, nuclei, solette/platee, plinti/pali, sezioni</p></td>
+		<td style="width:28%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>: 
+		 + -</p></td>
+	</tr>
+</table>
+<p>Stabilisce il diametro o la combinazione di diametri dei ferri che verranno 
+ inseriti o ai quali saranno assegnati con il comando <span class="hcp3"><a 
+	 href="Afer.htm">AFER</a></span>.</p>
+<p class="AmbienteProgettazione"><span class="hcp4">Progettazione 
+ interattiva travi</span></p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp4">FERC</span> <span class="hcp5">N</span><span class="hcp6"><font 
+	 color="#0000FF">umero diametro</font></span></p>
+<p class="Normal3">oppure:</p>
+<p class="Normal3"><span class="hcp4">FERC</span> <span class="hcp6"><font 
+	 color="#0000FF">clic</font></span></p>
+<p>Nella prima forma il comando setta la combinazione di diametri specificata, 
+ nella seconda forma setta la combinazione di diametri del ferro selezionato 
+ con il cursore grafico.</p>
+<p>Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Il 
+	 comando può essere attivato con un doppio clic del mouse sulla corrispondente 
+	 casella della barra di stato.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">La combinazione di diametri 
+	 può essere cambiata con i modificatori &quot;+&quot; e &quot;-&quot;. 
+	 Ad esempio <span class="hcp4">FERC</span> + permette 
+	 di passare alla combinazione del ferro corrente con area immediatamente 
+	 superiore.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Se si modifica la combinazione 
+	 di diametri mentre si è in fase di editing di un ferro questa viene 
+	 automaticamente assegnata al ferro stesso.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nell'inserimento dei ferri 
+	 di parete, di suola e di fianco l'eventuale secondo diametro viene 
+	 ignorato.</p></li>
+</ul>
+<p class="AmbienteProgettazione"><span class="hcp4">Progettazione 
+ interattiva nuclei</span></p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp4">FERC</span> <span class="hcp5">D</span><span class="hcp6"><font 
+	 color="#0000FF">iametro, modalità di posizionamento</font></span><span class="hcp6"><font color="#0000FF">, modalità di completamento</font></span></p>
+<p>Il comando setta il diametro specificato.</p>
+<p>È possibile utilizzare le seguenti modalità di inserimento: <span class="hcp4">S</span>emiautomatica, 
+ <span class="hcp4">M</span>anuale, <span class="hcp4">P</span>asso 
+ e nel caso si utilizzi la modalità di inserimento a <span class="hcp4">P</span>asso 
+ le seguenti modalità di completamento: <span class="hcp4">A</span>dattata, 
+ <span class="hcp4">T</span>erminata, <span class="hcp4">N</span>essuna. 
+ Per approfondimenti si veda il capitolo <span class="hcp4"><a 
+	 href="../Manuale/Posizionamento%20armature.htm">Posizionamento armature</a></span>.</p>
+<p>Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Il 
+	 comando può essere attivato con un doppio clic del mouse sulla corrispondente 
+	 casella della barra di stato.</p></li>
+</ul>
+<p class="AmbienteProgettazione" style="font-weight: bold;">Progettazione 
+ interattiva solette/platee</p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp4">FERC</span> <span class="hcp5">D</span><span class="hcp6"><font 
+	 color="#0000FF">iametro, passo</font></span></p>
+<p>Il comando setta l'armatura diffusa da assegnare con il comando <span class="hcp3"><a href="AAZ.htm">AAZ</a></span> 
+ o che avranno le zone che saranno inserite con il comando <span class="hcp3"><a href="AGGZ.htm">AGGZ</a></span>.</p>
+<p>Il comando permette anche di impostare in quale direzione (X o Y) e 
+ posizione (Superiore o Inferiore) aggiungere l'armatura con <span class="hcp3"><a href="AGGZ.htm">AGGZ</a></span>. I sottocomandi 
+ +Xs,-Xs,+Ys,-Ys,+Xi,-Xi,+Yi,-Yi attivano e disattivano infatti le direzioni 
+ e posizioni in cui verranno inseriti i ferri, mentre i sottocomandi +A 
+ e -A attivano o disattivano la modalità automatica di individuazione della 
+ posizione di inserimento.</p>
+<p>Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Il 
+	 comando può essere attivato con un doppio clic del mouse sulla corrispondente 
+	 casella della barra di stato.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Se si modifica la combinazione 
+	 di diametri mentre si è in fase di assegnazione o aggiunta di una 
+	 zona questa viene automaticamente assegnata alla zona stessa.</p></li>
+</ul>
+<p class="AmbienteProgettazione"><span class="hcp4">Progettazione 
+ interattiva plinti/pali</span></p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp4">FERC</span> <span class="hcp5">D</span><span class="hcp6"><font 
+	 color="#0000FF">iametro, modalità di posizionamento</font></span></p>
+<p>Il comando setta il <span class="hcp7"><font color="#000000">diametro</font></span> 
+ specificato.</p>
+<p>È possibile utilizzare le seguenti modalità di inserimento: <span class="hcp4">A</span>utomatica, 
+ <span class="hcp4">S</span>emiautomatica.&#160;Per approfondimenti 
+ si veda il capitolo <span class="hcp4"><a href="../Manuale/Posizionamento%20armature.htm">Posizionamento 
+ armature</a></span>.</p>
+<p class="AmbienteProgettazione"><span class="hcp4">Progettazione 
+ interattiva sezioni</span></p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp4">FERC</span> <span class="hcp5">D</span><span class="hcp6"><font 
+	 color="#0000FF">iametro, modalità di posizionamento</font></span><span class="hcp6"><font color="#0000FF">, modalità di completamento</font></span></p>
+<p>Il comando setta il <span class="hcp7"><font color="#000000">diametro</font></span> 
+ specificato.</p>
+<p>È possibile utilizzare le seguenti modalità di inserimento: <span class="hcp4">A</span>utomatica, 
+ <span class="hcp4">S</span>emiautomatica, <span class="hcp4">M</span>anuale, 
+ <span class="hcp4">P</span>asso e nel caso si utilizzi la 
+ modalità di inserimento a <span class="hcp4">P</span>asso 
+ le seguenti modalità di completamento: <span class="hcp4">A</span>dattata, 
+ <span class="hcp4">T</span>erminata, <span class="hcp4">N</span>essuna. 
+ Per approfondimenti si veda il capitolo <span class="hcp4"><a 
+	 href="../Manuale/Posizionamento%20armature.htm">Posizionamento armature</a></span>.</p>
+<p>Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Il 
+	 comando può essere attivato con un doppio clic del mouse sulla corrispondente 
+	 casella della barra di stato.</p></li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a2');
+	FilePopupInit('a3');
+//]]></script>
+</body>
+</html>

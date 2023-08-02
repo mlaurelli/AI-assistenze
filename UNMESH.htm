@@ -1,0 +1,77 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>UNMESH - Unisce elementi bidimensionali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+p.hcp3 { text-align:justify; }
+span.hcp4 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">UNMESH - Unifica elementi bidimensionali</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" 
+		 width="100%" bgcolor="#C0C0C0">
+	<tr>
+		<td style="width:68%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p></td>
+		<td style="width:29%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p></td>
+	</tr>
+</table>
+<p class="hcp3">Il comando permette di unire un insieme 
+ di elementi bidimensionali in un unico elemento.</p>
+<p class="hcp3">Sintassi del comando:</p>
+<p class="Normal3" style="text-align: justify;"><span class="hcp4">UNMESH</span></p>
+<p class="Normal3"><span style="text-decoration: underline; "><a href="javascript:void(0);" id="a1" style="font-weight: bold;" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Setbidi.htm');return false;">Selezionare i muri/elementi bidimensionali</a></span></p>
+<p>Vengono uniti gli elementi bidimensionali che giacciono sullo stesso 
+ piano e che hanno le stesse proprietà di seguito elencate:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">numero;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">tipologia;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">filo fisso e scostamento dal 
+	 filo fisso;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">direzione dell'asse locale 
+	 Y;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">carico.</p></li>
+</ul>
+<p>Il programma inizialmente raggruppa gli elementi bidimensionali selezionati 
+ in quelli che hanno lo stesso numero e poi li suddivide in sottogruppi 
+ che abbiano le stesse caratteristiche sopra elencate. Per cui ad esempio 
+ un insieme di elementi bidimensionali con lo stesso numero ma con 3 differenti 
+ zone di carico verranno suddivisi in 3 grossi elementi bidimensionali. 
+ Questo metodo di unione è stato ideato per evitare di perdere le proprietà, 
+ sia in termini geometrici che di carichi, assegnate dall'utente.</p>
+<p>Il programma individua automaticamente le forature e provvede a ripristinarle 
+ ove è possibile con il comando <span class="hcp4"><a href="FORA.htm">FORA</a></span> 
+ oppure le contorna con delle aste fittizie di sezione 0.</p>
+<p>Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Il 
+	 comando non ha effetto su elementi di tipo &quot;muro&quot;.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Le 
+	 eventuali aste presenti sul perimetro dell'elemento bidimensionale 
+	 non vengono automaticamente unite.</p></li>
+</ul>
+<p>&#160;</p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a2');
+	FilePopupInit('a3');
+	FilePopupInit('a1');
+//]]></script>
+</body>
+</html>

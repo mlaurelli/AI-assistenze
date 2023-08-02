@@ -1,0 +1,64 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.30 alla 8.31</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { mso-bidi-font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.30 alla 8.31</h1>
+<p>È stata introdotta la possibilità di effettuare l'analisi sismica statica 
+ non lineare (pushover) delle strutture in c.a. con il solutore Xfinest 
+ anche a plasticità concentrata, oltre che a fibre. Questa metodologia 
+ di calcolo può essere utilizzata anche per l'analisi di strutture in acciaio 
+ o miste (c.a. e acciaio) non essendo strettamente vincolata all'utilizzo 
+ di sezioni in c.a. come il metodo a fibre.</p>
+<p>La definizione e l'assegnazione delle cerniere plastiche alle aste può 
+ essere effettuata manualmente in modo analogo ai vincoli delle aste oppure 
+ attraverso una procedura automatica sviluppata per semplificare e velocizzare 
+ il lavoro dell'utente. Nel metodo a plasticità concentrata l'utente ha 
+ la libertà di scegliere dove assegnare la cerniera plastica (anche se 
+ è consigliabile assegnare la cerniere plastica a flessione agli estremi 
+ delle aste che compongono la campata della trave e del pilastro e quella 
+ a taglio a tutte le aste della campata) a differenza del metodo a fibre 
+ in cui sono determinate ed assegnate automaticamente dal programma agli 
+ estremi della trave e del pilastro, inoltre non è richiesto di spezzare 
+ in 3 o 5 parti la campata della trave o del pilastro.</p>
+<p>Le caratteristiche delle cerniere plastiche (curva momento-rotazione 
+ e taglio spostamento, domini di interazione sforzo normale-momento) sono 
+ determinate automaticamente dal programma e riportate nel paragrafo dei 
+ vincoli delle aste della relazione di calcolo.</p>
+<p>Al termine dell'analisi pushover oltre alla curva carico-spostamento 
+ è possibile visualizzare sia lo stato (elastico, plastico, rotto) sia 
+ lo stato limite (SLO, SLD, SLV, SLC) raggiunto nell'elemento ad un determinato 
+ passo dell'analisi.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Migliorata 
+	 l'esportazione tramite link diretto da ModeSt a Revit delle armature 
+	 di travi, pilastri, pareti, nuclei, solette/platee e murature armate.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">N</span>ella 
+	 relazione di calcolo è stata aggiunta la tabella riassuntiva delle 
+	 verifiche geotecniche in cui vengono riportate per ciascun elemento 
+	 di fondazione la minima sicurezza di tutte le verifiche effettuate.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Aggiunto un comando che permette 
+	 di visualizzazione l'elenco dei <a href="Tabelle%20risultati.htm">taglianti 
+	 di piano</a> agenti sugli impalcati della struttura.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nel disegno dei ferri verticali 
+	 delle pareti sono stati aggiunti i risvolti in sommità.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">C<span class="hcp1">alcolo 
+	 delle strutture anche con la versione 2024 di Xfinest.</span></p></li>
+</ul>
+<p>&#160;</p>
+</body>
+</html>

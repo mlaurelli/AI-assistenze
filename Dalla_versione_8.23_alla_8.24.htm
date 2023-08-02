@@ -1,0 +1,137 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.23 alla 8.24</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { text-transform:uppercase; }
+span.hcp2 { font-weight:bold; }
+img.hcp3 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.23 alla 8.24</h1>
+<p><span class="hcp1">è</span> stata introdotta la 
+ possibilità di calcolare le strutture con spettri di progetto personalizzati 
+ con approccio semplificato in modo da consentire sia il calcolo di strutture 
+ nuove ma anche e soprattutto di determinare gli indici di sicurezza e 
+ quindi le classi di rischio delle strutture esistenti con risposta sismica 
+ locale.</p>
+<p><span class="hcp1">è</span> stata introdotta la 
+ possibilità di eseguire i <a href="Controlli_di_accettazione_dell_analisi_sismica_lineare.htm">controlli 
+ di accettazione</a> dell'analisi sismica lineare per le strutture esistenti 
+ in c.a. a comportamento dissipativo ai sensi della Circolare esplicativa 
+ n. 7 del 21/01/19.</p>
+<p>Sono state ottimizzate le verifiche delle aste in acciaio, al fine di 
+ ridurre i tempi di verifica e migliorare le anomalie riscontrate. Le ottimizzazioni 
+ principali consistono nella riduzione dei punti di verifica nel caso di 
+ aste cortissime e nella verifica delle aste con vincolo biella in un solo 
+ punto. Le anomalie, relative a ciascuna verifica, vengono segnalate solo 
+ nei punti che verranno poi riportati nella relazione di calcolo a differenza 
+ delle versioni precedenti in cui venivano segnalate in tutti i punti di 
+ verifica. Questo ha portato ad avere, in strutture anche di modeste dimensioni 
+ ma con molte combinazioni delle condizioni di carico elementari, solo 
+ alcune pagine di anomalie contro le precedenti centinaia di pagine. Le 
+ suddette ottimizzazioni consentono di risparmiare memoria RAM e quindi 
+ permettono la verifica di strutture di grosse dimensioni e/o con un numero 
+ elevato di combinazioni delle condizioni di carico elementari.</p>
+<p>Nella progettazione interattiva delle sezioni rettangolari e a T con 
+ membratura trave è possibile utilizzare le stesse modalità di verifica 
+ usate nel progetto delle travi, quindi differenziando il copriferro superiore 
+ ed inferiore e trascurando eventuali ferri di parete, di suola e di fianco. 
+ </p>
+<p>Nella progettazione interattiva di una sezione rettangolare o a T con 
+ membratura trave è possibile utilizzare le stesse modalità di verifica 
+ usate nel progetto delle travi, quindi differenziando il copriferro superiore 
+ ed inferiore e trascurando eventuali ferri di parete, di suola o di fianco. 
+ In tal caso, come copriferro teorico laterale (necessario per il posizionamento 
+ dei ferri per le verifiche a fessurazione) viene considerato quanto indicato 
+ nei criteri della trave come <a href="CriTra.htm#Copriferro_reale_al_bordo_staffa">copriferro 
+ reale al bordo staffe</a>, più il <a href="CriTra.htm#Diametro_staffa_teorica">diametro 
+ della staffa teorica</a>, più mezzo diametro del ferro più vicino all'angolo 
+ sinistro del lato superiore o inferiore a seconda del caso. Per utilizzare 
+ questa funzionalità occorre, nella scheda <a href="CriTra.htm#Dati_per_progettazione_interattiva_sezioni" 
+												 style="font-weight: bold;">Dati 
+ per progettazione interattiva sezioni</a> dei criteri di progetto specifici 
+ delle travi, selezionare la <a href="CriTra.htm#Verifica_con_barre_in_posizione_teorica">verifica 
+ con barre in posizioni teoriche</a>, attivare la verifica in flessione 
+ retta e <a href="CriTra.htm#Considera_My">considerare solo My</a>. Se 
+ uno qualsiasi dei parametri citati non corrisponde, i ferri vengono posizionati 
+ come per una sezione con membratura generica, con un copriferro teorico 
+ pari alla media fra <a href="CriTra.htm#Copriferro_teorico_superiore">copriferro 
+ teorico superiore</a> e <a href="CriTra.htm#Copriferro_teorico_inferiore">copriferro 
+ teorico inferiore</a>.</p>
+<p><span class="hcp1">è</span> stato implementato 
+ il disegno del tasso di sfruttamento della freccia massima, sia per le 
+ aste che per le membrature in acciaio e in legno.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Sono state potenziate le procedure 
+	 di unificazione degli elementi bidimensionali e delle aste.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Sono stati aggiunti i plinti/pali 
+	 nel calcolo dei volumi della struttura (<span class="hcp2"><a 
+	 href="../Comandi/_VOL.htm">?VOL</a></span>).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Sono state aggiunte alcune 
+	 opzioni per personalizzare il tipo di disegno dei carichi, delle reazioni 
+	 vincolari, della deformata nodale, delle sollecitazioni e dei tassi 
+	 di sfruttamento nella scheda <span class="hcp2">Disegno</span> 
+	 delle <span class="hcp2"><a href="Opzioni%20generali.htm">Opzioni</a></span> 
+	 di ModeSt.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">è</span> 
+	 stata aggiunta la possibilità di modificare i fattori di scala ed 
+	 il piano di visualizzazione,&#160;sia dei carichi che dei risultati, 
+	 nella sezione &quot;Diagrammi/Mappe&quot; del pannello <span class="hcp2">Parametri 
+	 modellazione/Ms-Cad</span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Possibilità di scegliere su 
+	 quali elementi visualizzare lo <a href="Stato_verifiche.htm">status</a> 
+	 delle verifiche.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">è</span> 
+	 stata aggiunta la possibilità di scegliere su quali elementi visualizzare 
+	 lo <a href="Stato_verifiche.htm">status</a> delle verifiche. &#160;La 
+	 scelta si effettua attraverso le opzioni della finestra di dialogo 
+	 che compare cliccando sulla freccia sottostante&#160;<span class="hcp2">Status 
+	 <img src="../Icone/32/dstp32.png" alt="" border="1" class="hcp3"></span> 
+	 e poi su <span class="hcp2">Opzioni <img src="../Icone/16/opzioni.png" alt="" border="1" class="hcp3"></span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">è</span> 
+	 stata aggiunta la possibilità di effettuare le selezioni anche dei 
+	 maschi/pareti in muratura e degli integratori longitudinali/trasversali 
+	 cliccando su &quot;Altre&quot; del pannello <span class="hcp2"><a 
+	 href="Selezioni.htm">Selezioni</a></span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">è</span> 
+	 stata aggiunta la possibilità di disegnare l'ingombro delle travi 
+	 e dei muri nell'esploso dei ferri relativi agli schemi dei solai progettati, 
+	 quando il disegno è effettuato lateralmente alla carpenteria di piano, 
+	 selezionando il parametro <span class="hcp2"><a href="Criteri%20di%20disegno%20solai.htm#Disegnare_ingombro_travi_muri">Disegnare 
+	 l'ingombro delle travi e dei muri</a></span> dei criteri di progetto 
+	 dei solai.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">è</span> 
+	 stata velocizzata la selezione degli elementi nel controllo congruenza 
+	 dati.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Sono stati aggiunti ai &quot;punti 
+	 caldi&quot; (punti di <a href="Snap.htm">snap</a>) anche gli spigoli 
+	 dei fori nei muri/elementi bidimensionali.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Oltre alla possibilità di 
+	 esportare i risultati numerici del calcolo contenuti nelle finestre 
+	 di informazione è stata aggiunta la possibilità di esportare anche 
+	 i dati relativi alla geometria della struttura in un file con estensione 
+	 CSV.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Calcolo 
+	 delle strutture anche con la versione 2021 di Xfinest.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Nell'esportazione 
+	 a Revit delle strutture modellate con ModeSt tramite link diretto 
+	 vengono gestiti, oltre alle aste (travi, pilastri, ecc.) e agli elementi 
+	 bidimensionali (con eventuali forature, inclinazioni, ecc.) anche 
+	 i solai e le tamponature. Al momento non vengono gestiti i plinti.</p></li>
+</ul>
+</body>
+</html>

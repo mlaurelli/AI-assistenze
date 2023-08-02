@@ -1,0 +1,121 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>AGGZ - Aggiungi zona</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+span.hcp3 { font-weight:bold; }
+span.hcp4 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">AGGZ - Aggiungi zona</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" 
+		 width="100%" bgcolor="#C0C0C0">
+	<tr>
+		<td style="width:68%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Progettazione 
+		 interattiva pareti, solette/platee</p></td>
+		<td style="width:28%;" class="hcp1"><p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>: 
+		 T</p></td>
+	</tr>
+</table>
+<p>Permette di aggiungere una zona di rinforzo per l'armatura a flessione 
+ o a taglio.</p>
+<p class="AmbienteProgettazione"><span class="hcp3">Progettazione 
+ interattiva pareti</span></p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">AGGZ</span></p>
+<p class="AmbienteProgettazione"><span class="hcp3">Progettazione 
+ interattiva solette/platee</span></p>
+<p>Sintassi del comando:</p>
+<p class="Normal3"><span class="hcp3">AGGZ</span> <font color="#0000FF"><span class="hcp4">Primo punto</span></font> / <font color="#0000FF"><span class="hcp4">Secondo punto</span></font></p>
+<p class="Normal3">oppure:</p>
+<p class="Normal3"><span class="hcp3">AGGF</span> T <font 
+	 color="#0000FF"><span class="hcp4">Primo punto</span></font><span 
+	 style="font-style: italic; color: #0000ff;"> / </span><font color="#0000FF"><span class="hcp4">Secondo punto</span></font></p>
+<p>Nella prima forma i due punti specificati con il cursore grafico individuano 
+ una zona, del tipo specificato con il comando <span class="hcp3"><a 
+	 href="TZC.htm">TZC</a></span>, in cui verrà aggiunta un'armatura concentrata 
+ con passo e diametro definiti con il comando <a href="FERC.htm"><span class="hcp3">FERC</span></a>.</p>
+<p class="Normal2">Nella seconda forma i due punti specificati con il cursore 
+ grafico individuano una zona in cui verrà aggiunta un'armatura a taglio 
+ con numero al metro quadro e diametro definiti con il comando <span class="hcp3"><a 
+	 href="STAC.htm">STAC</a></span>.</p>
+<p>Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">La zona verrà inserita nelle 
+	 direzioni e posizioni specificate utilizzando i modificatori del comando 
+	 <a href="FERC.htm"><span class="hcp3">FERC</span></a>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Se è stata attivata la modalità 
+	 automatica, la direzione e posizione di inserimento vengono stabilite 
+	 in funzione della disposizione dei disegni definita con il comando 
+	 <a href="DISP.htm"><span class="hcp3">DISP</span></a> 
+	 e del punto individuato con il cursore grafico. Ad esempio se si ha 
+	 la vista sovrapposta delle armature X inferiore e superiore, verranno 
+	 inseriti ferri aggiuntivi sia sopra che sotto, mentre se si ha la 
+	 vista sovrapposta delle armature X e Y si avrà l'inserimento di una 
+	 maglia nelle due direzioni. Risulta generalmente conveniente per l'inserimento 
+	 di armature sotto i pilastri utilizzare una disposizione che sovrapponga 
+	 l'armatura in direzione X ed Y in modo da inserire contemporaneamente 
+	 l'armatura in entrambe le direzioni mentre per l'armatura aggiuntiva 
+	 di campata conviene usare una disposizione con tutte le armature disegnate 
+	 separatamente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Se è stata attivata la modalità 
+	 manuale i ferri vengono inseriti nelle direzioni e posizioni attivate. 
+	 Fare attenzione perché può succedere che indicando ad esempio un punto 
+	 in una rappresentazione di armature non congruente con le direzioni 
+	 e posizioni attivate, la maglia venga inserita in una rappresentazione 
+	 diversa, magari momentaneamente non visibile. Si consiglia di utilizzare 
+	 la disposizione manuale nella rappresentazione con tutte le armature 
+	 visibili contemporaneamente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Tenendo premuto il tasto Shift 
+	 viene ricalcolata in tempo reale la mappa all'interno della zona di 
+	 rinforzo tenendo conto dell'armatura aggiuntiva. Questo permette di 
+	 valutare se l'armatura impostata con il comando <span class="hcp3">FERC</span> 
+	 è sufficiente ed eventualmente di cambiarla.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Se le lunghezze dei lati delle 
+	 zone sono state stabilite con i comandi <span class="hcp3"><a 
+	 href="LZX.htm">LZX</a></span> e/o <a href="LZX.htm"><span class="hcp3">LZY</span></a>, 
+	 uno o entrambi i lati della zona non potranno essere modificati e 
+	 la loro lunghezza comprenderà anche l'ancoraggio.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Per individuare le zone delimitate 
+	 dal bordo della soletta/platea è sufficiente indicare uno o entrambi 
+	 i punti cliccando esternamente al perimetro della soletta/platea. 
+	 Il programma taglia automaticamente le zone di rinforzo in corrispondenza 
+	 dei bordi e considera i ferri risvoltati se richiesto da criterio.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">L'armatura di rinforzo avrà 
+	 i lati orientati secondo le direzioni specificate dal comando <span class="hcp3"><a href="ASSX.htm">ASSX</a></span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Per individuare i punti con 
+	 il cursore grafico è possibile usare i normali comandi di Ms-Cad.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="margin-bottom: 0;">La 
+	 zona interna all'armatura a taglio, con perimetro disegnato con linea 
+	 tratteggiata, è l'area che assorbe il taglio mentre la cornice di 
+	 tale zona, di larghezza 0.50 m, è la zona necessaria per il funzionamento 
+	 dell'armatura a taglio.</p></li>
+</ul>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a2');
+	FilePopupInit('a3');
+//]]></script>
+</body>
+</html>

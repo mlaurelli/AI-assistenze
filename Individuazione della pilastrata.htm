@@ -1,0 +1,24 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Individuazione della pilastrata</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Individuazione della pilastrata</h1>
+<p>ModeSt considera come unica "pilastrata" un insieme di aste consecutive con lo stesso numero, con membratura pilastro, tipo di verifica c.a. e perfettamente verticali. È possibile schematizzare e far progettare come pilastri anche elementi "muro" purché siano isolati e costituiti da un unico elemento (in pianta); per attivare questa opzione occorre che nella definizione del tipo di muro/elemento bidimensionale sia stato specificato come utilizzo "Pilastro". Si fa presente che la trasformazione di un muro in pilastro è del tutto indipendente dalla classificazione come "parete" citata in "Denominazioni" e che dopo tale "trasferimento" durante la progettazione dei pilastri tutti i parametri necessari (compreso il rispetto della Circolare n. 65) vengono prelevati dai criteri di progetto dei pilastri. ModeSt trasferisce anche elementi bidimensionali isolati, ma si ricorda che con alcuni tipi di elemento (Xfinest con elemento Isoshell o QF46 senza calcolo delle tensioni ai nodi) considerare un solo elemento bidimensionale isolato può portare alla perdita dei momenti con asse normale all'elemento. Tali momenti vengono infatti valutati integrando le tensioni <font style="font-family: Symbol;" face="Symbol">s</font><span style="vertical-align: sub;">zz</span> nei due nodi dell'elemento, e se il solutore o il tipo di elemento fornisce tensioni costanti non si avrà un momento risultante.</p>
+<p>La presenza di due o più pilastrate non consecutive con lo stesso numero rende impossibile la progettazione dell'armatura delle pilastrate medesime.</p>
+<p>Se nella pilastrata sono presenti aste "rovesciate" cioè inserite dal nodo di testa al nodo di piede, la pilastrata non viene progettata.</p>
+<p>Qualora una o più aste costituenti la pilastrata abbiano diversa rotazione,&#160;ModeSt riporta le relative sollecitazioni nel sistema di riferimento dell'asta di piede della pilastrata. In relazione si avranno quindi stampe di sollecitazioni diverse da quelle riportate nell'elenco delle sollecitazioni&#160;delle aste in quanto riferite a diversi sistemi di riferimento.</p>
+<p style="margin-bottom: 0;">Altri motivi per cui le sollecitazioni riportate in relazione possono essere diverse da quelle riportate nell'elenco delle sollecitazioni sono la presenza&#160;di coefficienti amplificativi o eccentricità aggiuntive per le verifiche di stabilità ed il fatto che i&#160;punti di progetto e verifica dei pilastri non necessariamente coincidono con&#160;le estremità a filo zona rigida dell'asta, causa inviluppi o configurazioni&#160;geometriche al nodo particolarmente complesse.</p>
+</body>
+</html>

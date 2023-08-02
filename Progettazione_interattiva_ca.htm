@@ -1,0 +1,113 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione interattiva</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+font.hcp3 { font-family:Wingdings; }
+span.hcp4 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progettazione interattiva</h1>
+<p>In progettazione interattiva è possibile controllare e modificare tutte 
+ le armature di una travata, pilastrata, parete, nucleo, soletta/platea, 
+ plinto/palo, solaio e sezione ed aggiungere particolari costruttivi, note 
+ e dettagli con i comandi di Ms-Cad.</p>
+<p>È possibile anche modificare il comportamento di ModeSt a fronte di 
+ configurazioni geometriche complesse o nel caso in cui siano richieste 
+ armature particolari.</p>
+<p>Al limite è possibile progettare in modo interamente manuale tutto l'elemento.</p>
+<p>La progettazione interattiva delle armature può essere effettuata in 
+ diversi modi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nel gruppo <span class="hcp1">Progettazione</span> 
+	 della scheda <span class="hcp1">Post-Processor</span> 
+	 cliccando su <span class="hcp1">Interattiva</span> <img src="../Icone/32/progint32.png" alt="" border="1" class="hcp2"> e poi sull'elemento 
+	 da progettare e quindi specificando il numero.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nelle <span style="font-weight: bold; 
+														 text-decoration: none; "><a 
+	 href="Finestre%20di%20modellazione.htm">finestre di modellazione</a></span> 
+	 con il tasto destro sull'elemento <font face="Wingdings" class="hcp3">à</font> 
+	 <span class="hcp4">Elaborazioni e Ms-Cad</span> <font face="Wingdings" class="hcp3">à</font> <span class="hcp4">Progettazione 
+	 interattiva.</span></p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nell'<span class="hcp1"><a 
+	 href="Albero_del_progetto.htm">albero del progetto</a></span> con 
+	 il tasto destro sul nome dell'elemento (che è stato precedentemente 
+	 progettato) <font face="Wingdings" class="hcp3">à</font> 
+	 <span class="hcp4">Progettazione interattiva</span>.</p></li>
+</ul>
+<p>In tutti i casi, se sono stati definiti degli inviluppi secondo i criteri 
+ ed i metodi indicati in <span class="hcp1"><a href="Definizione_inviluppi_ca.htm">Definizione 
+ degli nviluppi</a></span>, viene automaticamente ricercato il gruppo a 
+ cui l'elemento appartiene e nelle verifiche vengono considerate le sollecitazioni 
+ di tutto il gruppo.</p>
+<p>Note:</p>
+<p class="AmbienteProgettazione" style="font-weight: bold;"><span class="hcp1">Solai</span></p>
+<p>Per ogni singolo schema cliccando nel gruppo <span class="hcp1">Armatura</span> 
+ su <span class="hcp1">Modifica <img src="../Icone/16/modificaarmschema.png" alt="" border="1" class="hcp2"></span> 
+ oppure attraverso il tasto destro sulla linea tratteggiata che rappresenta 
+ lo <a href="Definizione%20schemi%20di%20calcolo%20dei%20solai.htm">schema di calcolo</a> 
+ del solaio è possibile modificare l'armatura proposta, inserire in campata 
+ dei carichi concentrati e/o rompitratta (note anche come corree di ripartizione), 
+ specificare la larghezza di eventuali fasce piene all'estremità di ogni 
+ singola campata.</p>
+<p class="AmbienteProgettazione" style="font-weight: bold;"><span class="hcp1">Sezioni</span></p>
+<p>Si riportano le varie modalità di acquisizione delle sollecitazioni:</p>
+<ul>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Sollecitazioni 
+	 automatiche <img src="../Icone/16/ALB_SEZIONEA.png" alt="" border="1" class="hcp2"></p></li>
+</ul>
+<p class="IndentBullet1">Viene richiesto il numero della sezione e viene 
+ aperto l'ambiente di progettazione interattiva armatura sezioni. L'associazione 
+ delle sollecitazioni di altre aste può essere effettuata con il tasto 
+ destro sullo sfondo della finestra <font face="Wingdings" class="hcp3">à</font> 
+ <span class="hcp4">Associa altre aste</span> selezionando 
+ le aste che abbiano la sezione indicata. Aste con sezione diversa vengono 
+ associate ugualmente ma vengono ignorate a meno che non ne venga modificata 
+ successivamente la sezione portandola a coincidere con la sezione in esame. 
+ La progettazione con sollecitazioni automatiche può essere aperta anche 
+ se il calcolo non è stato effettuato o se non è valido e potranno essere 
+ inseriti ferri e staffe, ma non si potrà procedere alle verifiche fino 
+ a quando il calcolo non sarà aggiornato.</p>
+<ul>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Sollecitazioni 
+	 manuali <img src="../Icone/16/ALB_SEZIONEM.png" alt="" border="1" class="hcp2"></p></li>
+</ul>
+<p class="IndentBullet1">Viene richiesto il numero della sezione e viene 
+ aperto l'ambiente di progettazione interattiva armatura sezioni. Le sollecitazioni 
+ devono essere definite dall'utente cliccando nel gruppo <span class="hcp1">Armatura</span> 
+ su <span class="hcp1">Def. sollecit. <img src="../Icone/16/definiscisollec.png" alt="" border="1" class="hcp2"></span> 
+ e inserendo i valori numerici.</p>
+<ul>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Sollecitazioni 
+	 integratori longitudinali&#160;<img src="../Icone/16/ALB_SEZIONEI.png" alt="" border="1" class="hcp2"></p></li>
+</ul>
+<p class="IndentBullet1">Viene richiesto di selezionare un integratore 
+ e viene aperto l'ambiente di progettazione interattiva armatura sezioni. 
+ Le sollecitazioni sono determinate integrando le sollecitazioni o le tensioni 
+ dei muri/elementi bidimensionali&#160;(si veda <a href="Tecniche_di_integrazione.htm" 
+													 style="font-weight: bold;">Tecniche 
+ di integrazione</a>).&#160;Nel caso di <a href="Integratori.htm#Integratori_longitudinali_multi_linea">integratori 
+ longitudinali Multi-Linea</a> possono essere presenti anche fori, che 
+ comporteranno la creazione di una sezione disconnessa.</p>
+</body>
+</html>

@@ -1,0 +1,126 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Oggetto Correnti</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:bold;
+text-decoration:none; }
+span.hcp3 { font-weight:normal; }
+span.hcp4 { font-style:normal;
+font-weight:normal; }
+span.hcp5 { font-style:normal;
+font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Oggetto Correnti</h1>
+<p>L'oggetto è caratterizzato dai seguenti metodi:</p>
+<p class="Normal3"><span class="hcp1">Impalcato</span> ritorna 
+ un oggetto di tipo <span class="hcp1"><a href="Oggetto%20Impalcato.htm">Impalcato</a></span>.</p>
+<p class="Normal3"><span class="hcp1">NumeroNodo</span> ritorna 
+ il numero del nodo corrente (<span class="hcp2"><a 
+	 href="../Comandi/NNC.htm">NNC</a></span>).</p>
+<p class="Normal3"><span class="hcp1">VincoloNodo</span> 
+ ritorna un oggetto di tipo <span class="hcp1"><a href="Oggetto%20VincoloNodo.htm">VincoloNodo</a></span>.</p>
+<p class="Normal3"><span class="hcp1">NumeroAsta</span> ritorna 
+ il numero dell'asta corrente (<span class="hcp2"><a 
+	 href="../Comandi/NAC.htm">NAC</a></span>). Se il numero è stato impostato 
+ come negativo (incremento automatico), ritorna un valore negativo.</p>
+<p class="Normal3"><span class="hcp1">SezioneAsta</span> 
+ ritorna un oggetto di tipo <span class="hcp1"><a href="Oggetto%20Sezione.htm">Sezione</a></span>.</p>
+<p class="Normal3"><span class="hcp1">VincoloAsta</span> 
+ ritorna un oggetto di tipo <span class="hcp1"><a href="Oggetto%20VincoloAsta.htm">VincoloAste</a></span>.</p>
+<p class="Normal3"><span class="hcp1">RotazioneAsta</span> 
+ ritorna la rotazione corrente dell'asta (<span class="hcp2"><a 
+	 href="../Comandi/RAC.htm">RAC</a></span>) in gradi.</p>
+<p class="Normal3"><span class="hcp1">ParametriAggiuntiviAsta</span> 
+ ritorna il numero del parametro aggiuntivo aste corrente (<span class="hcp2"><a href="../Comandi/PAC.htm">PAC</a></span>).</p>
+<p class="Normal3"><span class="hcp1">FiloFissoAsta</span> 
+ ritorna il codice del filo fisso aste corrente (<span class="hcp2"><a 
+	 href="../Comandi/FAC.htm">FAC</a></span>).</p>
+<p class="Normal3"><span class="hcp1">ScostamentoFiloFissoAsta 
+ (e, dir)</span> ritorna il valore dello scostamento dal filo fisso corrente 
+ (<span class="hcp2"><a href="../Comandi/SFAC.htm">SFAC</a></span>) 
+ corrispondente all'estremo <span class="hcp1">e</span> ed 
+ al parametro <span class="hcp1">dir</span><span class="hcp3">.</span></p>
+<p class="script1">Le costanti ammissibili per <span class="hcp1">e</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">FIRSTNODE</span> <span class="hcp3">restituisce</span> <span class="hcp4">i 
+ dati relativi al primo estremo dell'asta;</span></p>
+<p class="script2"><span class="hcp5">SECONDNODE</span> 
+ <span class="hcp3">restituisce</span> <span class="hcp4">i 
+ dati relativi al secondo estremo dell'asta.</span></p>
+<p class="script1">Le costanti ammissibili per <span class="hcp5">dir</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">YDIR</span> <span class="hcp3">restituisce</span> 
+ gli scostamenti in direzione Y locale dell'asta;</p>
+<p class="script2"><span class="hcp1">ZDIR</span> <span class="hcp3">restituisce</span> 
+ gli scostamenti in direzione Z locale dell'asta.</p>
+<p class="Normal3"><span class="hcp1">NumeroBidimensionale</span> 
+ ritorna il numero del muro/elemento bidimensionale corrente (<span class="hcp2"><a href="../Comandi/NBC.htm">NBC</a></span>).</p>
+<p class="Normal3"><span class="hcp1">TipoBidimensionale</span> 
+ ritorna un oggetto di tipo <span class="hcp1"><a href="Oggetto%20TipoBidimensionale.htm">TipoBidimensionale</a></span>.</p>
+<p class="Normal3"><span class="hcp1">FiloFissoBidimensionale</span> 
+ ritorna il codice del filo fisso del muro/elemento bidimensionale corrente 
+ (<span class="hcp2"><a href="../Comandi/FBC.htm">FBC</a></span>).</p>
+<p class="Normal3"><span class="hcp1">ScostamentoFiloFissoBidi 
+ (e)</span> scostamenti dal filo fisso corrispondenti al <span class="hcp3">nodo</span> 
+ <span class="hcp1">e</span> <span class="hcp3">del 
+ muro/elemento</span> bidimensionale<span class="hcp3">.</span></p>
+<p class="script1">Le costanti ammissibili per <span class="hcp1">e</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">FIRSTNODE</span> <span class="hcp3">restituisce</span> <span class="hcp4">i 
+ dati relativi al primo nodo</span> <span class="hcp3">del 
+ muro/elemento</span> bidimensionale<span class="hcp4">;</span></p>
+<p class="script2"><span class="hcp5">SECONDNODE</span> 
+ <span class="hcp3">restituisce</span> <span class="hcp4">i 
+ dati relativi al secondo nodo</span> <span class="hcp3">del 
+ muro/elemento</span> bidimensionale<span class="hcp4">.</span></p>
+<p class="Normal3"><span class="hcp1">NumeroPlinto</span> 
+ ritorna il numero del plinto corrente (<span class="hcp2"><a 
+	 href="../Comandi/NLC.htm">NLC</a></span>).</p>
+<p class="Normal3"><span class="hcp1">TipoPlinto</span> ritorna 
+ un oggetto di tipo <span class="hcp1"><a href="Oggetto%20TipoPlinto.htm">TipoPlinto</a></span>.</p>
+<p class="Normal3"><span class="hcp1">NumeroSolaio</span> 
+ ritorna il numero del solaio corrente (<span class="hcp2"><a 
+	 href="../Comandi/NSC.htm">NSC</a></span>).</p>
+<p class="Normal3"><span class="hcp1">TipoSolaio</span> ritorna 
+ un oggetto di tipo <span class="hcp1"><a href="Oggetto%20TipoSolaio.htm">TipoSolaio</a></span>.</p>
+<p class="Normal3"><span class="hcp1">OrdituraSolaio</span> 
+ ritorna l'angolo d'orditura del solaio corrente (<span class="hcp1"><a 
+	 href="../Comandi/OSC.htm">OSC</a></span>).</p>
+<p class="Normal3"><span class="hcp1">NumeroTamponatura</span> 
+ ritorna il numero della tamponatura corrente (<span class="hcp1"><a 
+	 href="../Comandi/NTC.htm">NTC</a></span>).</p>
+<p class="Normal3"><span class="hcp1">TipoTamponatura</span> 
+ ritorna un oggetto di tipo <span class="hcp1"><a href="Oggetto_TipoTamponatura.htm">TipoTamponatura</a></span>.</p>
+<p class="Normal3"><span class="hcp1">NumeroNucleo</span> 
+ ritorna il numero del nucleo corrente.</p>
+<p class="Normal3"><span class="hcp1">NumeroReticolare</span> 
+ ritorna il numero della reticolare corrente (<span class="hcp1"><a 
+	 href="../Comandi/NRC.htm">NRC</a></span>).</p>
+<p class="Normal3"><span class="hcp1">TipoReticolare</span> 
+ ritorna un oggetto di tipo <span class="hcp1"><a href="Oggetto%20TipoReticolare.htm">TipoReticolare</a></span>.</p>
+<p class="Normal3"><span class="hcp1">NumeroLinkSuLinea</span> 
+ ritorna il numero del link su liena corrente (<span class="hcp1"><a 
+	 href="../Comandi/NKLC.htm">NKLC</a></span>).</p>
+<p class="Normal3"><span class="hcp1">TipoLinksSuLinea</span> 
+ ritorna un oggetto di tipo <span class="hcp1"><a href="Oggetto_TipoLinkSuLinea.htm">TipoLinkSuLinea</a></span>.</p>
+<p class="Normal3" style="margin-bottom: 0;"><span class="hcp1">CCE</span> 
+ ritorna un oggetto di tipo <span class="hcp1"><a href="Oggetto%20CCE.htm">CCE</a></span>.</p>
+</body>
+</html>

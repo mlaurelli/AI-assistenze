@@ -1,0 +1,97 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione armature solette</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+p.hcp3 { margin-bottom:0; }
+a.hcp4 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Introduzione</h1>
+<p>È possibile progettare a flessione, a taglio e a punzonamento solette 
+ o platee di forma qualunque (anche con fori) e con spessori diversi composte 
+ da elementi bidimensionali, <span class="hcp1">che appartengono 
+ a piani (orizzontali o inclinati) per i quali è stato creato il <a href="Creazione%20disegni%20carpenterie%20di%20piano.htm">creato 
+ il disegno della carpenteria di piano</a></span>, che abbiano:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">numero diverso da zero;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">tipologia con utilizzo soletta/platea;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">la carpenteria di piano sia 
+	 stata creata con l'opzione &quot;Passante per tre nodi selezionati&quot; 
+	 per solette o platee giacenti su piani inclinati.</p></li>
+</ul>
+<p>e che rispettino le seguenti limitazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="margin-bottom: 0;">l'armatura 
+	 può avere solo due direzioni distinte, ortogonali fra loro, non necessariamente 
+	 parallele agli assi coordinati, ma non sono previste armature radiali.</p></li>
+</ul>
+<p>Viene sempre effettuato il progetto esecutivo, le armature teoriche 
+ strettamente necessarie possono essere visualizzate cliccando nel gruppo 
+ <span class="hcp1">Af teoriche</span> su <span class="hcp1">Bidi 
+ <img src="../Icone/32/afteobidi32.png" alt="" border="1" class="hcp2"></span>. 
+ Nel caso di verifica con il metodo degli Stati Limite è possibile eseguire 
+ anche la verifica a taglio per solette/platee. Il progetto dell'armatura 
+ può essere eseguito con il metodo classico oppure con quello di <a href="Metodo_di_Wood.htm">Wood</a>.</p>
+<p>Automaticamente è possibile progettare le armature a flessione e generare 
+ i disegni esecutivi, mentre interattivamente è possibile modificare l'armatura 
+ proposta o al limite armare in modo manuale la soletta/platea ed inserire 
+ zone di armatura a taglio.</p>
+<p>È possibile inserire armature anche in zone con spessore diverso e in 
+ cui le superfici di armatura presentano delle discontinuità. L'indicazione 
+ su quale superficie si intende operare si effettua nella sezione <span class="hcp1">Posizionamento</span> del pannello <span class="hcp1">Proprietà correnti</span>; impostando la 
+ modalità automatica le ambiguità verranno risolte in funzione della disposizione 
+ dei disegni e dei punti indicati con il cursore grafico e quindi i ferri 
+ verranno inseriti nelle direzioni individuate dalla disposizione e dal 
+ cursore. La disattivazione della modalità automatica permette una gestione 
+ completamente manuale sia nell'assegnazione dell'armatura che nell'inserimento 
+ di zone d'armatura concentrata.</p>
+<p>La direzione di armatura può essere specificata nelle varie superfici 
+ rendendole correnti e cliccando nel gruppo <span class="hcp1">Zone 
+ armature</span> su <span class="hcp1">Asse X <img src="../Icone/16/assex.png" alt="" border="1" class="hcp2"></span>.</p>
+<p>Interattivamente è possibile aggiungere zone di armatura di rinforzo 
+ sia a flessione che a taglio e se all'interno della soletta/platea sono 
+ presenti aste virtuali di cui sia stata progettata l'armatura, le relative 
+ zone vengono considerate implicitamente già verificate per flessione nella 
+ direzione della trave e completamente per taglio.</p>
+<p>Per quanto riguarda le verifiche a punzonamento si fa presente che è 
+ possibile accorpare pilastri vicini sia automaticamente in base ai criteri 
+ di progetto che manualmente cliccando nel gruppo <span class="hcp1">Punzonamento</span> 
+ su <span class="hcp1">Unifica <img src="../Icone/16/unificapunzo.png" alt="" border="1" class="hcp2"></span>.</p>
+<p class="hcp3">ModeSt crea e mantiene aggiornate la relazione 
+ di calcolo ed il computo delle armature.</p>
+<p class="hcp3">È anche possibile consultare i tutorial: <a href="Guida.chm::/Progettazione_automatica_armature.htm" class="hcp4">Progettazione 
+ automatica armature</a>, <span class="hcp1"><a href="Guida.chm::/Progettazione_interattiva_armature_solette_e_platee.htm">Progettazione 
+ interattiva armature solette/platee</a></span>, <a href="Guida.chm::/Inserimento_in_una_platea_di_zone_di_armatura_con_orientamento_diverso.htm" class="hcp4">Inserimento 
+ in una platea di zone di armatura con orientamento diverso</a> e <span class="hcp1"><a href="Guida.chm::/Progettazione_interattiva_di_una_platea_con_zone_a_diverso_spessore.htm">Progettazione 
+ interattiva di una platea con zone a diverso spessore</a></span>.</p>
+<p class="hcp3"><span class="hcp1">Utilizzo 
+ da linea di comando</span>: <span class="hcp1"><a href="../Comandi/DAFB.htm">DAFB</a></span>&#160;(Disegna 
+ aree di ferro teoriche elementi bidimensionali), <span class="hcp1"><a 
+	 href="../Comandi/ASSX.htm">ASSX</a></span>&#160;(Direzione asse X 
+ principale), <span class="hcp1"><a href="../Comandi/UNIP.htm">UNIP</a></span>&#160;(Unifica 
+ piramidi di punzonamento), <a href="../Comandi/DISP.htm"><span class="hcp1">DISP</span></a>&#160;(Disposizione 
+ disegni),<span class="hcp1">&#160;</span><a href="../Comandi/AAZ.htm" class="hcp4">AAZ</a>&#160;(Assegna 
+ armatura zona),<span class="hcp1">&#160;<a href="../Comandi/AGGZ.htm">AGGZ</a></span>&#160;(Aggiungi 
+ zona di armatura concentrata), <a href="../Comandi/FERC.htm" class="hcp4">FERC</a>&#160;(Ferro 
+ corrente).</p>
+</body>
+</html>

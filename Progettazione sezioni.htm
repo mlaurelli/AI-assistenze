@@ -1,0 +1,104 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione sezioni</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Introduzione</h1>
+<p>In progettazione interattiva sezioni è possibile armare con ferri longitudinali 
+ e staffe sezioni in calcestruzzo armato di qualsiasi forma poligonale 
+ anche con più fori all'interno.</p>
+<p>La progettazione interattiva può essere eseguita considerando le sollecitazioni 
+ provenienti da una o più aste caratterizzate dalla sezione in esame o 
+ con sollecitazioni inserite manualmente.</p>
+<p>Si può progettare interattivamente l'armatura di una ipotetica sezione 
+ in cemento armato definita come la sezione di un insieme di elementi bidimensionali 
+ o di muri presente nel modello.</p>
+<p>In questo modo sono progettabili ad esempio elementi come le solette 
+ delle scale, i muri di sostegno anche con sproni o rinforzi, le solette 
+ di un balcone, le nervature di una soletta o le travi parete che siano 
+ stati schematizzati nel modello con elementi &quot;muro&quot; o con elementi 
+ bidimensionali veri e propri.</p>
+<p>Le sollecitazioni o le tensioni vengono automaticamente integrate e 
+ viene definita una sezione di geometria equivalente, completa di eventuali 
+ raccordi d'angolo. <span class="hcp1">Questa sezione non 
+ compare nell'elenco delle sezioni definite</span>.</p>
+<p>Quando si progetta una sezione rettangolare o a T con membratura trave, 
+ vengono utilizzati i criteri di progetto relativi alle travi con particolare 
+ riferimento a quelli della scheda <a href="CriTra.htm#Dati_per_progettazione_interattiva_sezioni" 
+										 style="font-weight: bold;">Dati 
+ per progettazione interattiva sezioni</a>. Se in tali criteri è prevista 
+ la <a href="CriTra.htm#Verifica_con_barre_in_posizione_teorica">verifica 
+ con barre in posizioni teoriche</a>, in flessione retta e <a href="CriTra.htm#Considera_My">considerando 
+ solo My</a>, i ferri nella sezione vengono posizionati con le stesse modalità 
+ usate nel progetto delle travi, quindi differenziando il copriferro superiore 
+ ed inferiore, trascurando eventuali ferri di parete, di suola o di fianco 
+ e con i ferri longitudinali immaginati al centro del lato inferiore e 
+ superiore della sezione. Come copriferro teorico laterale (necessario 
+ per il posizionamento dei ferri per le verifiche a fessurazione) viene 
+ considerato quanto indicato nei criteri della trave come <a href="CriTra.htm#Copriferro_reale_al_bordo_staffa">copriferro 
+ reale al bordo staffe</a>, più il <a href="CriTra.htm#Diametro_staffa_teorica">diametro 
+ della staffa teorica</a>, più mezzo diametro del ferro più vicino all'angolo 
+ sinistro del lato superiore o inferiore a seconda del caso.</p>
+<p>Nelle verifiche a taglio occorre valutare l'altezza utile, dipendente 
+ dal copriferro che nelle travi può essere diverso superiormente ed inferiormente, 
+ quindi la verifica a taglio dipende dal segno del momento che identifica 
+ le barre tese ed il relativo copriferro. Nel progetto delle travi, in 
+ cui la verifica a taglio viene fatta a zone di staffatura come altezza 
+ utile viene considerata quella corrispondente al momento massimo (in valore 
+ assoluto, ma poi considerato con segno) della zona di staffatura, mentre 
+ nelle sezioni la verifica è puntuale e quindi tale considerazione non 
+ può essere fatta. Questo può far cambiare sia il valore del taglio resistente 
+ che i controlli di normativa che fanno riferimento all'altezza utile.</p>
+<p>In tutte le altre combinazioni di opzioni le verifiche vengono effettuate 
+ come per una sezione di tipo generico, considerando tutti i ferri inseriti 
+ o nella posizione teorica (pari alla media fra <a href="CriTra.htm#Copriferro_teorico_superiore">copriferro 
+ teorico superiore</a> e <a href="CriTra.htm#Copriferro_teorico_inferiore">copriferro 
+ teorico inferiore</a>) o nella loro posizione effettiva.</p>
+<p>Sarà possibile inserire barre longitudinali sia in modo manuale sia 
+ più semplicemente in modo automatico o semi-automatico, con linee guida 
+ variabili in funzione del diametro delle staffe, del ferro e del copriferro 
+ in modo da garantire l'inserimento delle barre nella corretta posizione.</p>
+<p>Il programma gestisce dinamicamente sia le barre longitudinali che le 
+ staffe, in modo da mantenerne la corretta posizione anche quando si modifica 
+ il diametro o la configurazione.</p>
+<p>I criteri di verifica ed i parametri di posizionamento delle barre e 
+ delle staffe vengono desunti dai criteri di progetto.</p>
+<p>Si fa notare che la sezione è verificabile solo se ha verifica prevista 
+ c.a. e che i criteri utilizzati dipendono dal tipo di membratura specificata 
+ (trave, pilastro o generica).</p>
+<p>Oltre al calcolo delle tensioni vengono effettuate le verifiche di normativa 
+ relative al tipo di membratura indicata. Nel caso di membratura generica 
+ nei criteri di progetto è possibile specificare a quale normativa fare 
+ riferimento, ed eventualmente disattivare tutti i controlli.</p>
+<p>Le verifiche possono essere effettuate con il metodo delle tensioni 
+ ammissibili o con il metodo degli stati limite.</p>
+<p>Vengono effettuate le verifiche a presso-flessione e taglio, <span class="hcp1">non 
+ vengono effettuate verifiche a torsione</span>.</p>
+<p>ModeSt crea e mantiene aggiornate la relazione di calcolo ed il computo 
+ delle armature, considerando una lunghezza teorica dell'elemento con la 
+ quale computare le staffe e le barre longitudinali. Tale lunghezza è specificabile 
+ dall'utente con il tasto destro sulla finestra di progettazione interattiva 
+ <font style="font-family: Wingdings;" face="Wingdings"><span style="font-style: normal;">à</span></font> 
+ <span style="font-style: italic;">Proprietà</span>.</p>
+<p style="margin-bottom: 0;">Si ricorda che possono essere definite sezioni 
+ poligonali (eventualmente con fori) come indicato in <span class="hcp1"><a 
+	 href="Sezioni.htm">Definizione sezioni</a></span>.</p>
+</body>
+</html>

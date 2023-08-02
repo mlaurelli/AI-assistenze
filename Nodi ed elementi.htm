@@ -1,0 +1,92 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Introduzione</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-style:italic; }
+b.hcp3 { font-weight:bold;
+mso-bidi-font-weight:normal; }
+span.hcp4 { mso-spacerun:yes; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Introduzione</h1>
+<p>ModeSt non prevede un metodo standard di inserimento dati. Si può arrivare 
+ alla modellazione della struttura seguendo strade diverse, ed ogni utente 
+ si conformerà a quella che gli è più congeniale.</p>
+<p>La definizione di una struttura consiste nella definizione di un insieme 
+ di <span class="hcp1"><span><span class="hcp2">nodi</span></span></span> 
+ (punti nello spazio tridimensionale) che fungono da punto di connessione 
+ fra elementi monodimensionali e bidimensionali secondo gli schemi consueti 
+ nelle strutture da calcolare col metodo degli elementi finiti (FEM).</p>
+<p>I diversi programmi agli elementi finiti denominano in vario modo gli 
+ elementi monodimensionali (beam, truss, ecc.) e bidimensionali (plate, 
+ shell, ecc.), ModeSt denomina i primi generalmente <span class="hcp2">aste</span> 
+ ed i secondi <span class="hcp2">muri</span> o <span class="hcp2">elementi 
+ bidimensionali</span> (per brevità a volte semplicemente <span class="hcp2">bidimensionali</span>). 
+ La denominazione <span style="font-style: italic; font-weight: bold;">muro</span> 
+ è stata adottata per alcuni particolari elementi che pur se visivamente 
+ paiono elementi bidimensionali, vengono in realtà a livello di calcolo 
+ trattati in altro modo. Quando si fa riferimento ad elementi che possono 
+ indifferentemente essere muri o elementi bidimensionali, si usa in genere 
+ il termine <span class="hcp1">elemento bidimensionale</span> 
+ o <span class="hcp1">bidimensionale</span>.</p>
+<p>La caratterizzazione degli elementi presenti nella struttura, ossia 
+ la specifica di tutte le caratteristiche ad esempio di sezione, di vincolo 
+ ecc. di un'asta o di altri elementi viene effettuata in ModeSt utilizzando 
+ il concetto di <b>proprietà.</b> Occorre quindi definire le proprietà 
+ da utilizzare per assegnarle agli elementi. Le proprietà correnti sono 
+ raccolte nel pannello <span class="hcp1"><a href="Proprieta_correnti.htm">Proprietà 
+ correnti</a></span>.</p>
+<p>Altri elementi introducibili in ModeSt, ma che non hanno valenza strutturale 
+ sono:</p>
+<p><b class="hcp3">Impalcati</b>:<span class="hcp4">&#160;</span>sono il raggruppamento logico 
+ di un insieme di nodi, caratterizzati in genere dalla stessa quota. Gli 
+ impalcati servono essenzialmente per facilitare l'inserimento dati e consentono 
+ l'eventuale schematizzazione di piani rigidi.</p>
+<p><b class="hcp3">Solai</b>: 
+ sono superfici piane delimitate da un contorno chiuso di nodi collegati 
+ da aste. I solai non hanno nessuna valenza strutturale, ma servono solo 
+ per definire delle zone con carico uniforme e consentire così la generazione 
+ automatica dei carichi.</p>
+<p><b class="hcp3">Nuclei</b>: 
+ sono il raggruppamento logico di un insieme di elementi bidimensionali 
+ che verranno progettati come pareti di taglio tenendo conto delle sollecitazioni 
+ globali. I muri e gli elementi bidimensionali possono essere raggruppati 
+ in <span class="hcp2">nuclei</span>, insieme di elementi 
+ in cemento armato di cui progettare l'armatura tenendo conto delle sollecitazioni 
+ globali. I nuclei non hanno nessuna valenza strutturale aggiuntiva rispetto 
+ a quella degli elementi che lo compongono, ma servono solo per effettuare 
+ un progetto armature più aderente al reale comportamento della struttura.</p>
+<p><b class="hcp3">Pareti</b>: 
+ sono il raggruppamento logico di un insieme di elementi bidimensionali 
+ che verranno progettati come pareti essenzialmente inflesse fuori dal 
+ proprio piano.</p>
+<p><b class="hcp3">Plinti/pali</b>:<span class="hcp4">&#160;</span>non vengono passati al solutore 
+ se non in alcuni casi come un vincolo elastico, ma sono comunque elementi 
+ che ModeSt può progettare tenendo conto delle sollecitazioni su esso agenti.</p>
+<p><b class="hcp3">Reticolari</b> 
+ <b style="mso-bidi-font-weight: normal;">in acciaio</b>: sono il raggruppamento 
+ logico di un insieme di aste che abbiano una sezione compatibile con il 
+ progetto delle unioni reticolari, ossia che consentano l'inserimento di 
+ una piastra di collegamento.</p>
+<p style="text-align: left; margin-bottom: 0;"><span class="hcp1">Argomenti 
+ correlati: <a href="Differenza%20fra%20muri%20ed%20elementi%20bidimensionali.htm">Differenza 
+ fra muri ed elementi bidimensionali</a></span>, <span class="hcp1"><a 
+	 href="Nuclei.htm">Nuclei</a></span></p>
+</body>
+</html>

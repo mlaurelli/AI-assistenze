@@ -1,0 +1,79 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Introduzione</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+b.hcp3 { mso-bidi-font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Introduzione</h1>
+<p>ModeSt è in grado di eseguire il calcolo di strutture con elementi portanti 
+ costituiti da pannelli in legno X-LAM e di eseguirne le verifiche.</p>
+<p>Uno dei punti critici per il calcolo di questo tipo di strutture è rappresentato 
+ dal fatto che le connessioni fra i pannelli non possono essere considerate 
+ rigide, ma al contrario in esse si concentra praticamente tutta la deformabilità 
+ e la capacità dissipativa della struttura.</p>
+<p>Inoltre le modalità di connessione dipendono da esigenze di cantiere, 
+ di produzione e di trasporto.</p>
+<p>In quest'ottica e per consentire anche la produzione di disegni esecutivi, 
+ ModeSt permette di eseguire il calcolo della struttura attraverso la definizione 
+ dei singoli pannelli e delle loro connessioni con gli altri.</p>
+<p>In pratica nei criteri di progetto è possibile definire dei tipi di 
+ connessione di default da applicare ai pannelli come primo tentativo di 
+ calcolo. Attraverso la numerazione degli elementi il programma individua 
+ i diversi pannelli e cliccando nel gruppo <span class="hcp1">Strumenti</span> 
+ della scheda <span class="hcp1">Modellazione</span> su <span class="hcp1">Assegna connessioni</span> <span class="hcp1"><img src="../Icone/16/assegnaconn.png" alt="" border="1" class="hcp2"></span> è possibile 
+ assegnare ai lati dei pannelli le connessioni specificate nel criterio. 
+ In questo modo vengono generati i pannelli su cui poi sarà possibile eseguire 
+ le verifiche, modificare le connessioni, ecc.</p>
+<p>Dopo aver assegnato le connessioni, è possibile avere una visuale complessiva 
+ di come sono state create nella sezione <b class="hcp3">Pannelli 
+ in legno</b> del pannello <b class="hcp3">Colorazioni 
+ elementi<span style="font-weight: normal;">.</span></b></p>
+<p>Si fa presente che in sede di calcolo le giunzioni a trazione vengono 
+ completamente ignorate. Eventuali deformazioni a trazione possono essere 
+ gestite con le giunzioni longitudinali, ma non risulta che ad oggi nessuno 
+ ritenga necessario mettere in conto tale deformabilità.</p>
+<p>Dopo avere eseguito la definizione delle connessioni di<span style="mso-spacerun: yes;">&#160;</span>default 
+ in progettazione interattiva del pannello, apribile cliccando nel gruppo 
+ <span class="hcp1">Progettazioni</span> della scheda <span class="hcp1">Post-Processor</span> su <span class="hcp1">Interattiva</span> 
+ <img src="../Icone/32/progint32.png" alt="" border="1" class="hcp2"> e poi su 
+ <span class="hcp1">Pannelli</span> <img src="../Icone/16/ALB_PANNELLO.png" alt="" border="1" class="hcp2">, 
+ è possibile personalizzare i dati ed eventualmente spezzare il pannello 
+ aggiungendo delle connessioni verticali in corrispondenza di linee guida 
+ determinate automaticamente dal programma in funzione della mesh. Tali 
+ connessioni vengono considerate a livello di calcolo struttura e influiscono 
+ ovviamente sul comportamento della struttura e sulle sollecitazioni, ma 
+ consentono di verificare le giunzioni a trazione (hold down) considerando 
+ ugualmente il pannello come monolitico.</p>
+<p>Calcolata la struttura, una verifica dei pannelli potrà evidenziare 
+ se qualche giunzione è da rinforzare o da alleggerire, ed eventualmente 
+ anche l'analisi delle deformate può servire per capire se il cambiamento 
+ di alcune rigidezze può rendere più regolare il comportamento della struttura.</p>
+<p>Nella struttura è comunque possibile inserire dei link su linea eventualmente 
+ con comportamento elastico per simulare collegamenti non rigidi ad esempio 
+ nei pannelli di solaio, di copertura, ecc.</p>
+<p>È possibile eseguire delle verifiche locali in qualunque elemento della 
+ struttura, quali ad esempio i pannelli di solaio o di copertura, usando 
+ la progettazione interattiva delle sezioni con sollecitazioni integrate 
+ su linea come indicato in <span class="hcp1"><a href="Verifica_interattiva_sezioni_pannelli.htm">Verifica 
+ interattiva sezioni pannelli</a></span>.</p>
+<p>In presenza di pannelli in legno vengono create carpenterie di piano 
+ apposite, con indicati, per la testa ed il piede dei pannelli, le tipologie 
+ e le caratteristiche delle connessioni.</p>
+</body>
+</html>

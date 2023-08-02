@@ -1,0 +1,513 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Strumenti</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+p.hcp3 { text-align:justify; }
+p.hcp4 { font-weight:bold; }
+a.hcp5 { font-weight:bold; }
+p.hcp6 { text-align:center; }
+img.hcp7 { border:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Strumenti</h1>
+<p>Nel gruppo <span class="hcp1">Strumenti</span> della scheda 
+ <span class="hcp1">Modellazione</span> sono presenti una 
+ serie di funzionalità di seguito elencate tra cui le macro.</p>
+<p><span class="hcp1">Proietta nodi <img src="../Icone/16/proi.png" alt="" border="1" class="hcp2"></span> 
+ consente di accedere a una serie di funzionalità per la modifica delle 
+ coordinate dei nodi di seguito elencati:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Su 
+	 un piano <img src="../Icone/16/proip.png" alt="" border="1" class="hcp2"></span> 
+	 proietta i nodi su di un piano ma solo in direzione Z globale. La 
+	 selezione dei primi tre nodi permette di individuare il piano su cui 
+	 proiettare gli altri nodi successivamente selezionati. Lo strumento 
+	 risulta utile ad esempio nel caso di un tetto a falda inclinata nel 
+	 quale si debba posizionare sul piano della falda i nodi intermedi 
+	 delle aste di bordo. In questo caso per esempio si procede selezionando 
+	 tre nodi che individuino il piano della falda e successivamente gli 
+	 altri nodi da proiettare sul suddetto piano.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Su 
+	 un piano verticale <img src="../Icone/16/alnpv2n.png" alt="" border="1" class="hcp2"></span> 
+	 proietta i nodi degli elementi selezionati (aste, muri/elementi bidimensionali, 
+	 tamponature) su di un piano verticale passante per i due nodi di estremità. 
+	 Spostare i nodi degli elementi su un piano verticale risulta utile 
+	 per risolvere problemi di non perfetta complanarità&#160;come ad esempio 
+	 nei maschi o nelle fasce in muratura, nelle pareti o nei nuclei in 
+	 c.a.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Lungo 
+	 X</span> <span class="hcp1"><img src="../Icone/16/alnpx.png" alt="" border="1" class="hcp2"></span> 
+	 proietta i nodi lungo X su un piano verticale, <span class="hcp1">Lungo 
+	 Y <img src="../Icone/16/alnpy.png" alt="" border="1" class="hcp2"></span> 
+	 proietta i nodi lungo Y&#160;su un piano verticale, <span class="hcp1">Ortogonalmente</span> 
+	 <span class="hcp1"><img src="../Icone/16/alnporto.png" alt="" border="1" class="hcp2"></span> proietta 
+	 i nodi lungo una direzione ortogonale ad un piano verticale, <span class="hcp1">Lungo una direzione</span> <span class="hcp1"><img src="../Icone/16/alnpdir.png" alt="" border="1" class="hcp2"></span> proietta 
+	 i nodi lungo una direzione assegnata su un piano verticale, <span class="hcp1">Per rotazione</span> <span class="hcp1"><img src="../Icone/16/alnprot.png" alt="" border="1" class="hcp2"></span> proietta 
+	 i nodi ruotandoli intorno al primo nodo specificato su un piano verticale.<span class="hcp1"><img src="Alnp.gif" alt="" style="border: Solid 1px #808080; 
+									 margin-top: 0px; margin-bottom: 0px; 
+									 margin-left: 0px; margin-right: 0px; 
+									 border-width: 1px; border-style: solid;" width="350" height="282" align="right" border="1"></span></p></li>
+</ul>
+<p class="IndentBullet1">Note:</p>
+<ul>
+	<li style="list-style: none; display: inline;"><ul>
+		<li class="p-IndentBullet2"><p class="IndentBullet2">La direzione 
+		 individuata non tiene conto dello sfalsamento in Z; in altre parole 
+		 viene individuata la direzione come sua proiezione sul piano XY.</p></li>
+		<li class="p-IndentBullet2"><p class="IndentBullet2">La coordinata 
+		 Z dei nodi proiettati non viene modificata.</p></li>
+		<li class="p-IndentBullet2"><p class="IndentBullet2">L'insieme 
+		 dei nodi da proiettare non devono necessariamente appartenere 
+		 al piano di giacitura della direzione.</p></li>
+		<li class="p-IndentBullet2"><p class="IndentBullet2">L'insieme 
+		 dei nodi da proiettare può contenere anche i nodi direzione.</p></li>
+		<li class="p-IndentBullet2"><p class="IndentBullet2">Nodi proiettati 
+		 e fra loro allineati secondo X o Y verranno ad essere coincidenti 
+		 se proiettati secondo X o Y.</p></li>
+		<li class="p-IndentBullet2"><p class="IndentBullet2">Nodi proiettati 
+		 ortogonalmente e posti su una linea perpendicolare ad N1-N2 verranno 
+		 ad essere coincidenti.</p></li>
+		<li class="p-IndentBullet2"><p class="IndentBullet2">Nodi proiettati 
+		 secondo una direzione N2-N3 e allineati secondo quella verranno 
+		 ad essere coincidenti.</p></li>
+		<li class="p-IndentBullet2"><p class="IndentBullet2">Nodi proiettati 
+		 per rotazione ed aventi la stessa distanza da N1 e posti &quot;davanti&quot; 
+		 (o &quot;dietro&quot;) ad N1 verranno ad essere coincidenti.</p></li>
+		<li class="p-IndentBullet2"><p class="IndentBullet2">Quanto sopra 
+		 a meno che i nodi proiettati non siano sfalsati in Z.</p></li>
+	</ul></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Su 
+	 un allineamento</span> <img src="../Icone/16/trone.png" alt="" border="1" class="hcp2"> modifica solo le coordinate 
+	 X e Y dei nodi spostandoli sul piano verticale passante per l'allineamento 
+	 selezionato. Spostare i nodi sugli allineamenti risulta utile per 
+	 risolvere problemi di non perfetta complanarità.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Su 
+	 riferimenti verticali <img src="../Icone/16/allvert.png" alt="" border="1" class="hcp2"></span> e <span class="hcp1">Su 
+	 riferimenti orizzontali <img src="../Icone/16/alloriz.png" alt="" border="1" class="hcp2"></span> spostano i nodi 
+	 posizionandoli sulla retta verticale o orizzontale passante per i 
+	 nodi di riferimento selezionati. I nodi di riferimento individuano 
+	 i punti in cui passano le verticali/orizzontali sulle quali posizionare 
+	 gli altri nodi. La tolleranza indica la distanza massima in orizzontale/verticale 
+	 che possono avere i nodi da allineare rispetto ai relativi nodi di 
+	 riferimento. Spostare i nodi sugli allineamenti verticali e/o orizzontale 
+	 risulta utile per risolvere problemi degli elementi bidimensionali 
+	 non perfettamente rettangolari, requisito richiesto nella verifica 
+	 delle murature, delle pareti e dei nuclei.</p></li>
+</ul>
+<p><span class="hcp1">Ruota nodi&#160;<img src="../Icone/16/ruot.png" alt="" border="1" class="hcp2"></span> 
+ ruota i nodi attorno ad una asse parallelo a X <span class="hcp1"><img src="../Icone/16/ruotx.png" alt="" border="1" class="hcp2"></span>, Y&#160;<span class="hcp1"><img src="../Icone/16/ruoty.png" alt="" border="1" class="hcp2"></span>, Z&#160;<span class="hcp1"><img src="../Icone/16/ruotz.png" alt="" border="1" class="hcp2"></span> passante per 
+ un nodo assunto come centro di rotazione. La rotazione intorno a Z può 
+ essere effettuata: ruotando solo la struttura cliccando su <span class="hcp1">Normale</span> 
+ <span class="hcp1"><img src="../Icone/16/ruotz.png" alt="" border="1" class="hcp2"></span> oppure ruotando 
+ la struttura ed assegnando alle aste con membratura pilastro ed all'orditura 
+ dei solai lo stesso angolo di rotazione specificato cliccando su <span class="hcp1">Avanzato</span> <span class="hcp1"><img src="../Icone/16/ruoz.png" alt="" border="1" class="hcp2"></span>.</p>
+<p class="hcp3">Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Il 
+	 nodo centro di rotazione è arbitrario e può essere o non compreso 
+	 nell'insieme di nodi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">La 
+	 rotazione avviene attorno ad un asse parallelo all'asse specificato 
+	 e passante per il centro di rotazione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Se 
+	 il valore dell'angolo immesso è positivo, la rotazione avviene in 
+	 senso antiorario; se è negativo avviene in senso orario.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Gli 
+	 effetti sono additivi e non assoluti, quindi ruotare la struttura 
+	 di 60° è equivalente ad eseguire due volte la rotazione di 30°.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">La 
+	 distanza fra l'insieme di nodi ed il nodo del centro di rotazione 
+	 rimane invariata.</p></li>
+</ul>
+<p class="hcp4">Tronca decimali <img src="../Icone/16/tron.png" alt="" border="1" class="hcp2"> <span 
+	 style="font-weight: normal;">tronca le coordinate dei nodi al numero 
+ di cifre decimali specificato (il numero delle cifre decimali si riferisce 
+ sempre alle coordinate del nodo espresse in metri). Il comando agisce 
+ o su tutti i nodi della struttura o solo sui nodi selezionati.</span></p>
+<p><span class="hcp1">Inverte asse locale X aste <img src="../Icone/16/iala.png" alt="" border="1" class="hcp2"></span> inverte l'asse locale X delle aste. Lo strumento 
+ risulta utile ad esempio per invertire l'asse locale dell'asta quando 
+ nell'inserimento dei muri viene segnalato che le aste sono controverse.</p>
+<p><span class="hcp1"><a name="Inverte_asse_locale_Y_bidimensionali" 
+										 id="Inverte_asse_locale_Y_bidimensionali"></a>Inverte 
+ asse locale Y bidimensionali <img src="../Icone/16/ialb.png" alt="" border="1" class="hcp2"></span> inverte l'asse 
+ locale Y dei bidimensionali.</p>
+<p><span class="hcp1">Sposta origine assi locali bidimensionali 
+ <img src="../Icone/16/ialb.png" alt="" border="1" class="hcp2"></span> 
+ sposta l'origine degli assi locali degli elementi bidimensionali sul nodo 
+ successivo. Lo strumento insieme al precedente risulta utile ad esempio 
+ per posizionare l'asse locale Z rivolto verso l'alto, requisito necessario 
+ per la progettazione sia dei nuclei che delle pareti.</p>
+<p><span class="hcp1">Ingrandisce i bidimensionali <img src="../Icone/16/offb.png" alt="" border="1" class="hcp2"></span> ingrandisce gli elementi bidimensionali. Lo strumento 
+ risulta utile ad esempio per allargare una platea di fondazione inserita 
+ selezionando i nodi dei pilastri o muri/elementi bidimensionali del perimetro 
+ dell'edificio.</p>
+<p><span class="hcp1"><a name="Fora"></a>Fora i bidimensionali 
+ <img src="../Icone/16/fora.png" alt="" border="1" class="hcp2"></span> 
+ inserisce una foratura nei muri/elementi bidimensionali. L'inserimento 
+ di una foratura si può effettuare nei seguenti modi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Cliccando su <span class="hcp1">Fora 
+	 bidi <img src="../Icone/16/fora.png" alt="" border="1" class="hcp2"></span>, 
+	 selezionando il muro/elemento bidimensionale e successivamente indicando 
+	 il punto iniziale e l'estremità diagonale della foratura rettangolare. 
+	 Sia il punto iniziale che quello finale possono essere un punto del 
+	 <span class="hcp1"><a href="Visualizzazione%20di%20un%20lucido.htm">lucido</a></span>, 
+	 un punto della <a href="Griglia.htm" class="hcp5">griglia</a> 
+	 o un punto qualsiasi del piano su cui si è posizionati con l'ausilio 
+	 delle quote delle distanze dal punto di riferimento. Il punto di riferimento 
+	 può essere modificato sia prima che durante l'esecuzione del comando 
+	 cliccando sulla voce &quot;P. riferimento&quot; degli <span class="hcp1"><a 
+	 href="Strumenti_di_visualizzazione.htm">Strumenti di visualizzazione</a></span>. 
+	 La precisione delle coordinate dei punti si imposta con l'opzione 
+	 &quot;Arr. coordinate&quot; del pannello <span class="hcp1">Parametri 
+	 modellazione/Ms-Cad</span>. Per imporre movimenti solo in direzioni 
+	 ortogonali sul piano di posizionamento (viene visualizzata solo una 
+	 quota della distanza dal punto di riferimento) si selezioni l'opzione 
+	 &quot;Mov. ortogonali&quot; del pannello <span class="hcp1">Parametri 
+	 modellazione/Ms-Cad</span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Selezionando il muro/elemento 
+	 bidimensionale e cliccando sul simbolo &quot;+&quot; della casella 
+	 &quot;Forature&quot; presente nella sezione &quot;Muri&quot; del pannello 
+	 <a href="Proprieta_correnti.htm"><span class="hcp1">Proprietà 
+	 elementi selezionati</span></a>. L'inserimento della foratura si esegue 
+	 poi specificando le coordinate del punto iniziale (X loc. e Z loc.) 
+	 e le dimensioni (Larghezza e Altezza) della foratura. Questo metodo 
+	 consente anche la cancellazione o la modifica delle proprietà della 
+	 foratura.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Con l'opzione <span style="font-style: italic;">Proprietà</span> 
+	 del menu a comparsa che si ottiene cliccando col tasto destro sul 
+	 muro/elemento bidimensionale, cliccando sul bottone &quot;Forature&quot;, 
+	 inserendo la foratura con il bottone &quot;Inserisci&quot; e specificando 
+	 le coordinate del punto iniziale (X e Z) e le dimensioni (B e H) della 
+	 foratura.&#160;Questo metodo consente anche la cancellazione o la 
+	 modifica delle proprietà della foratura.</p></li>
+</ul>
+<p>Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">I muri/elementi bidimensionali 
+	 con fori che hanno un lato coincidente con il bordo, come ad esempio 
+	 le porte, vengono meshati solo se giacciono su piani verticali.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">I fori possono essere solo 
+	 di forma quadrata o rettangolare e con un lato parallelo all'asse 
+	 locale X del muro/elemento bidimensionale.</p></li>
+</ul>
+<p><span class="hcp1">Crea scala/rampa/sbalzo</span> <img src="../Icone/16/scal.png" alt="" border="1" class="hcp2"> crea una scala, 
+ una rampa o uno sbalzo utilizzando elementi bidimensionali o aste in funzione 
+ dell'opzione &quot;Usa le aste e non i bidimensionali&quot;. I nodi intermedi 
+ creati dallo strumento non sono collegati alle aste o ai muri/elementi 
+ bidimensionali per cui occorre spezzare le aste o i muri/elementi bidimensionali. 
+ Per spezzare le aste occorre selezionarle ed utilizzare il comando <span class="hcp1">Spezza aste su nodi esistenti <img src="../Icone/16/spezzaastene.png" alt="" border="1" class="hcp2"></span>, oppure eseguire il controllo congruenza dati 
+ della struttura per individuare tali situazioni e risolverle. Di seguito 
+ sono elencate le tipologie definibili con i parametri richiesti per ogni 
+ tipologia ed una figura di un esempio esplicativo.</p>
+<table class="SimpleGridBlack" cellspacing="0px" align="center">
+	<col style="width: 50%;">
+	<col style="width: 50%;">
+	<tr class="t1Row">
+		<td><p class="hcp4">Scala a due rampe con pianerottolo 
+		 <img src="../Icone/16/scal2.png" alt="" border="1" class="hcp2"></p>
+		<p>Viene richiesto di specificare:</p>
+		<ul>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto da utilizzare 
+			 come punto di partenza della scala (punto 1 dell'esempio in 
+			 figura).</p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto per determinare 
+			 la direzione e la lunghezza della scala&#160;(punto 2 dell'esempio 
+			 in figura).</p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto per determinare 
+			 la larghezza e l'altezza della scala (punto 3 dell'esempio 
+			 in figura). Se è definito l'impalcato è possibile selezionare 
+			 un nodo/punto alla stessa quota del nodo di partenza della 
+			 scala, l'altezza della scala sarà pari alla differenza fra 
+			 la quota del nodo di partenza e quella dell'impalcato successivo.</p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto per determinare 
+			 la larghezza della rampa e del pianerottolo della scala (punto 
+			 4 dell'esempio in figura) o le dimensioni della rampa e del 
+			 pianerottolo separati da spazio. Il valore negativo della 
+			 dimensione crea rampe/pianerottolo a destra della congiungente 
+			 i primi due nodi/punti indicati.</p></li>
+		</ul>
+		<p><span class="hcp1">Note</span>:</p>
+		<ul>
+			<li class="p-Bullet1"><p class="Bullet1">È possibile annullare 
+			 l'ultimo nodo/punto selezionato digitando <span class="hcp1">U</span> 
+			 e premendo &quot;Invio&quot;. </p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Prima di creare la 
+			 scala può essere utile disattivare l'opzione &quot;Ricerca 
+			 nodi intermedi&quot; del menu che compare cliccando sulla 
+			 freccia a destra di&#160;<span class="hcp1">Aste</span> 
+			 <span class="hcp1"><img src="../Icone/16/astains.png" alt="" border="1" class="hcp2"></span> 
+			 o <span class="hcp1">Bidi <img src="../Icone/16/bidiins.png" alt="" border="1" class="hcp2"></span> 
+			 del gruppo <span class="hcp1">Inserimento</span> 
+			 della scheda <span class="hcp1">Modellazione</span>.</p></li>
+		</ul></td>
+		<td><p class="hcp6"><img src="Scala2R.gif" alt="" border="0" class="hcp7"></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p><span class="hcp1">Scala a tre rampe con due 
+		 pianerottoli</span> <img src="../Icone/16/scal3.png" alt="" border="1" class="hcp2"></p>
+		<p>Viene richiesto di specificare:</p>
+		<ul>
+			<li class="p-Elenco1" style="list-style: disc;"><p class="Elenco1">Nodo/punto 
+			 da utilizzare come punto di partenza della scala&#160;(punto 
+			 1 dell'esempio in figura).</p></li>
+			<li class="p-Elenco1" style="list-style: disc;"><p class="Elenco1">Nodo/punto 
+			 per determinare la direzione e la lunghezza della scala&#160;(punto 
+			 2 dell'esempio in figura).</p></li>
+			<li class="p-Elenco1" style="list-style: disc;"><p class="Elenco1">Nodo/punto 
+			 per determinare la larghezza e l'altezza della scala&#160;(punto 
+			 3 dell'esempio in figura). Se è definito l'impalcato è possibile 
+			 selezionare un nodo/punto alla stessa quota del nodo di partenza 
+			 della scala, l'altezza della scala sarà pari alla differenza 
+			 fra la quota del nodo di partenza e quella dell'impalcato 
+			 successivo.</p></li>
+			<li class="p-Elenco1" style="list-style: disc;"><p class="Elenco1">Nodo/punto 
+			 per determinare la larghezza della rampa e del pianerottolo 
+			 della scala (punto 4 dell'esempio in figura) o la dimensione 
+			 della rampa e del pianerottolo. Il valore negativo della dimensione 
+			 crea rampe/pianerottoli a destra della congiungente i primi 
+			 due nodi/punti indicati.</p></li>
+		</ul>
+		<p><span class="hcp1"><span class="hcp1">N</span>ote</span>:</p>
+		<ul>
+			<li class="p-Bullet1"><p class="Bullet1">È possibile annullare 
+			 l'ultimo nodo/punto selezionato digitando <span class="hcp1">U</span> 
+			 e premendo &quot;Invio&quot;. </p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Prima di creare la 
+			 scala può essere utile disattivare l'opzione &quot;Ricerca 
+			 nodi intermedi&quot; del menu che compare cliccando sulla 
+			 freccia a destra di&#160;<span class="hcp1">Aste</span> 
+			 <span class="hcp1"><img src="../Icone/16/astains.png" alt="" border="1" class="hcp2"></span> 
+			 o <span class="hcp1">Bidi <img src="../Icone/16/bidiins.png" alt="" border="1" class="hcp2"></span> 
+			 del gruppo <span class="hcp1">Inserimento</span> 
+			 della scheda <span class="hcp1">Modellazione</span>.</p></li>
+		</ul></td>
+		<td><p class="hcp6"><img src="Scala3R.gif" alt="" border="0" class="hcp7"></p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p><span class="hcp1">Scala a n rampe e n-1 pianerottoli</span> 
+		 <img src="../Icone/16/scaln.png" alt="" border="1" class="hcp2"></p>
+		<p>Viene richiesto di specificare:</p>
+		<ul>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto da utilizzare 
+			 come punto di partenza della scala (punto 1 dell'esempio in 
+			 figura).</p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto per determinare 
+			 la direzione e la lunghezza della rampa della scala&#160;(punto 
+			 2 dell'esempio in figura).</p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Nodi/punti per determinare 
+			 la lunghezza delle altre rampe della scala&#160;(punto 3 dell'esempio 
+			 in figura).</p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto in cui 
+			 terminare la scala (punto 4 dell'esempio in figura).</p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto per determinare 
+			 la larghezza della rampa o la dimensione della rampa. Il valore 
+			 negativo della dimensione crea una scala a destra della congiungente 
+			 degli ultimi due nodi/punti indicati.</p></li>
+		</ul>
+		<p><span class="hcp1"><span class="hcp1">N</span>ote</span>:</p>
+		<ul>
+			<li class="p-Bullet1"><p class="Bullet1">È possibile annullare 
+			 l'ultimo nodo/punto selezionato digitando <span class="hcp1">U</span> 
+			 e premendo &quot;Invio&quot;. </p></li>
+			<li class="p-Bullet1"><p class="Bullet1">La pendenza e la posizione 
+			 dei pianerottoli viene determinata automaticamente dal programma 
+			 dividendo in modo proporzionale alla lunghezza delle rampe 
+			 l'altezza della scala che è pari alla differenza di quota 
+			 del primo e ultimo nodo/punto specificato.</p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Prima di creare la 
+			 scala può essere utile disattivare l'opzione &quot;Ricerca 
+			 nodi intermedi&quot; del menu che compare cliccando sulla 
+			 freccia a destra di&#160;<span class="hcp1">Aste</span> 
+			 <span class="hcp1"><img src="../Icone/16/astains.png" alt="" border="1" class="hcp2"></span> 
+			 o <span class="hcp1">Bidi <img src="../Icone/16/bidiins.png" alt="" border="1" class="hcp2"></span> 
+			 del gruppo <span class="hcp1">Inserimento</span> 
+			 della scheda <span class="hcp1">Modellazione</span>.</p></li>
+		</ul></td>
+		<td><p class="hcp6"><img src="ScalaNR.gif" alt="" border="0" class="hcp7"></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p><span class="hcp1">Scala a due rampe senza 
+		 pianerottolo</span> <img src="../Icone/16/scald.png" alt="" border="1" class="hcp2"></p>
+		<p>Viene richiesto di specificare:</p>
+		<ul>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto da utilizzare 
+			 come punto di partenza della scala&#160;(punto 1 dell'esempio 
+			 in figura).</p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto per determinare 
+			 la direzione e la lunghezza della scala&#160;(punto 2 dell'esempio 
+			 in figura).</p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto per determinare 
+			 la larghezza e l'altezza della scala&#160;(punto 3 dell'esempio 
+			 in figura). Se è definito l'impalcato è possibile selezionare 
+			 un nodo/punto alla stessa quota del nodo di partenza della 
+			 scala, l'altezza della scala sarà pari alla differenza fra 
+			 la quota del nodo di partenza e quella dell'impalcato successivo.</p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto per determinare 
+			 la larghezza della rampa e del pianerottolo della scala (punto 
+			 4 dell'esempio in figura) o i le dimensioni della rampa e 
+			 del pianerottolo separati da spazi. Il valore negativo della 
+			 dimensione crea una scala a destra della congiungente i primi 
+			 due nodi/punti indicati.</p></li>
+		</ul>
+		<p><span class="hcp1"><span class="hcp1"><span class="hcp1">N</span></span>ote</span>:</p>
+		<ul>
+			<li class="p-Bullet1"><p class="Bullet1">È possibile annullare 
+			 l'ultimo nodo/punto selezionato digitando <span class="hcp1">U</span> 
+			 e premendo &quot;Invio&quot;. </p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Prima di creare la 
+			 scala può essere utile disattivare l'opzione &quot;Ricerca 
+			 nodi intermedi&quot; del menu che compare cliccando sulla 
+			 freccia a destra di&#160;<span class="hcp1">Aste</span> 
+			 <span class="hcp1"><img src="../Icone/16/astains.png" alt="" border="1" class="hcp2"></span> 
+			 o <span class="hcp1">Bidi <img src="../Icone/16/bidiins.png" alt="" border="1" class="hcp2"></span> 
+			 del gruppo <span class="hcp1">Inserimento</span> 
+			 della scheda <span class="hcp1">Modellazione</span>.</p></li>
+		</ul></td>
+		<td><p class="hcp6"><img src="Scala2RSP.gif" alt="" border="0" class="hcp7"></p></td>
+	</tr>
+	<tr class="t1Row">
+		<td><p><span class="hcp1">Rampa/Sbalzo continuo</span> 
+		 <img src="../Icone/16/scals.png" alt="" border="1" class="hcp2"></p>
+		<p>Viene richiesto di specificare:</p>
+		<ul>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto da utilizzare 
+			 come punto di partenza della rampa/sbalzo&#160;(punto 1 dell'esempio 
+			 in figura).</p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Nodi/punti della rampa/sbalzo 
+			 (punto 2 e 3 dell'esempio in figura).</p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto per determinare 
+			 la larghezza della rampa/sbalzo o la dimensione della rampa/sbalzo 
+			 (punto 4 dell'esempio in figura). Il valore negativo della 
+			 dimensione crea una rampa/sbalzo a destra della congiungente 
+			 degli ultimi due nodi/punti indicati.</p></li>
+		</ul>
+		<p><span class="hcp1"><span class="hcp1"><span class="hcp1">N</span></span>ote</span>:</p>
+		<ul>
+			<li class="p-Bullet1"><p class="Bullet1">È possibile annullare 
+			 l'ultimo nodo/punto selezionato digitando <span class="hcp1">U</span> 
+			 e premendo &quot;Invio&quot;. </p></li>
+			<li class="p-Bullet1"><p class="Bullet1">È possibile utilizzare 
+			 l'opzione &quot;Ricerca nodi intermedi&quot; del menu che 
+			 compare cliccando sulla freccia a destra di&#160;<span class="hcp1">Aste</span> 
+			 <span class="hcp1"><img src="../Icone/16/astains.png" alt="" border="1" class="hcp2"></span> 
+			 o <span class="hcp1">Bidi <img src="../Icone/16/bidiins.png" alt="" border="1" class="hcp2"></span> 
+			 del gruppo <span class="hcp1">Inserimento</span> 
+			 della scheda <span class="hcp1">Modellazione</span>, 
+			 per specificare semplicemente il primo e l'ultimo nodo di 
+			 una serie di nodi allineati.</p></li>
+		</ul></td>
+		<td><p class="hcp6"><img src="SbalzoContinuo.gif" alt="" border="0" class="hcp7"></p></td>
+	</tr>
+	<tr class="t2Row">
+		<td><p><span class="hcp1">Rampa/Sbalzo con pianerottolo 
+		 ad ogni angolo</span> <img src="../Icone/16/scalc.png" alt="" border="1" class="hcp2"></p>
+		<p>Viene richiesto di specificare:</p>
+		<ul>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto da utilizzare 
+			 come punto di partenza della rampa/sbalzo&#160;(punto 1 dell'esempio 
+			 in figura).</p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Nodi/punti della rampa/sbalzo 
+			 (punto 2 e 3 dell'esempio in figura).</p></li>
+			<li class="p-Bullet1"><p class="Bullet1">Nodo/punto per determinare 
+			 la larghezza della rampa/sbalzo o la dimensione della rampa/sbalzo 
+			 (punto 4 dell'esempio in figura). Il valore negativo della 
+			 dimensione crea una rampa/sbalzo a destra della congiungente 
+			 degli ultimi due nodi/punti indicati.</p></li>
+		</ul>
+		<p><span class="hcp1"><span><span class="hcp1">N</span></span>ote</span>:</p>
+		<ul>
+			<li class="p-Bullet1"><p class="Bullet1">È possibile annullare 
+			 l'ultimo nodo/punto selezionato digitando <span class="hcp1">U</span> 
+			 e premendo &quot;Invio&quot;. </p></li>
+			<li class="p-Bullet1"><p class="Bullet1">È possibile utilizzare 
+			 l'opzione &quot;Ricerca nodi intermedi&quot; del menu che 
+			 compare cliccando sulla freccia a destra di&#160;<span class="hcp1">Aste</span> 
+			 <span class="hcp1"><img src="../Icone/16/astains.png" alt="" border="1" class="hcp2"></span> 
+			 o <span class="hcp1">Bidi <img src="../Icone/16/bidiins.png" alt="" border="1" class="hcp2"></span> 
+			 del gruppo <span class="hcp1">Inserimento</span> 
+			 della scheda <span class="hcp1">Modellazione</span>, 
+			 per specificare semplicemente il primo e l'ultimo nodo di 
+			 una serie di nodi allineati.</p></li>
+		</ul></td>
+		<td><p class="hcp6"><img src="SbalzoConPianerottolo.gif" alt="" border="0" class="hcp7"></p></td>
+	</tr>
+</table>
+<p><span class="hcp1">Unisce struttura <img src="../Icone/16/merge.png" alt="" border="1" class="hcp2"></span> 
+ inserisce una struttura in quella corrente. L'inserimento di una struttura 
+ all'interno di un'altra può essere effettuato anche mediante <span class="hcp1">Trascinamento</span> 
+ dall'albero del progetto.</p>
+<p>Per entrambe le modalità occorre poi indicare il punto di riferimento 
+ da utilizzare come un punto base per lo spostamento della struttura e 
+ il punto di posizionamento. Sia il punto di riferimento che quello di 
+ posizionamento possono essere un nodo, un punto del <span class="hcp1"><a 
+	 href="Visualizzazione%20di%20un%20lucido.htm">lucido</a></span>, un punto 
+ della <a href="Griglia.htm" class="hcp5">griglia</a> o un 
+ punto qualsiasi del piano su cui si è posizionati. Sia il punto di riferimento 
+ che quello di posizionamento possono essere il punto di intersezione di 
+ due aste o due linee del lucido cliccando sulla voce &quot;INTE&quot; 
+ oppure il punto ortogonale ad un'asta o una linea del lucido cliccando 
+ sulla voce &quot;ORTO&quot; oppure il punto perpendicolare ad un'asta&#160;o 
+ linea del lucido cliccando sulla voce &quot;PERP&quot;. Le suddette voci 
+ si trovano negli <span class="hcp1"><a href="Strumenti_di_visualizzazione.htm">Strumenti 
+ di visualizzazione</a></span>. Nei casi di &quot;ORTO&quot; e &quot;PERP&quot; 
+ il punto di posizionamento è determinato rispettivamente dalla retta ortogonale 
+ o perpendicolare all'asta o alla linea del lucido passante per il punto 
+ di riferimento.</p>
+<p>La precisione delle coordinate del punto di posizionamento si imposta 
+ con l'opzione &quot;Arr. coordinate&quot; del pannello <span class="hcp1">Parametri 
+ modellazione/Ms-Cad</span>. Per imporre movimenti solo in direzioni ortogonali 
+ sul piano di posizionamento (viene visualizzata solo una quota della distanza 
+ dal punto di riferimento) si selezioni l'opzione &quot;Mov. ortogonali&quot; 
+ del pannello <span class="hcp1">Parametri modellazione/Ms-Cad</span>.</p>
+<p class="hcp3">Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nel caso che una proprietà 
+	 della struttura inserita sia già presente nelle proprietà della struttura 
+	 corrente viene fatto riferimento alla proprietà di quest'ultima.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Le 
+	 condizioni di carico elementari della struttura inserita vengono perse.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Gli 
+	 inviluppi devono essere ridefiniti.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Agli 
+	 elementi della struttura inserita con numero di criterio maggiore 
+	 di 10 se non presente in quella corrente, viene assegnato il criterio 
+	 numero 10.</p></li>
+</ul>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/PROI.htm">PROI</a></span> 
+ (Proietta i nodi su di un piano), <span class="hcp1"><a 
+	 href="../Comandi/ALNP.htm">ALNP</a></span> (Proietta i nodi su di 
+ un piano), <span class="hcp1"><a href="../Comandi/RUOT.htm">RUOT</a></span> 
+ (Ruota nodi generico), <span class="hcp1"><a href="../Comandi/RUOZ.htm">RUOZ</a></span>&#160;(Ruota 
+ nodi attorno asse globale Z), <span class="hcp1"><a href="../Comandi/TRON.htm">TRON</a></span> 
+ (Tronca il numero dei decimali delle coordinate dei nodi),&#160;<span class="hcp1"><a href="../Comandi/VERT.htm">VERT</a></span> 
+ (Allinea nodi verticalmente),&#160;<span class="hcp1"><a 
+	 href="../Comandi/ORIZ.htm">ORIZ</a></span> (Allinea nodi orizzontalmente), 
+ <span class="hcp1"><a href="../Comandi/FORA.htm">FORA</a></span> 
+ (Inserisce foratura muri/elementi bidimensionali),&#160;<span class="hcp1"><a 
+	 href="../Comandi/IALA.htm">IALA</a></span> (Inverte asse locale X 
+ aste), <span class="hcp1"><a href="../Comandi/IALB.htm">IALB</a></span> 
+ (Inverte asse locale Y bidimensionali),&#160;<span class="hcp1"><a 
+	 href="../Comandi/RALB.htm">RALB</a></span> (Sposta origine assi locali 
+ bidimensionali),&#160;<span class="hcp1"><a href="../Comandi/OFFB.htm">OFFB</a></span> 
+ (Ingrandisce i bidimensionali), <span class="hcp1"><a href="../Comandi/SCAL.htm">SCAL</a></span> 
+ (Crea scale/rampe/sbalzi), <span class="hcp1"><a href="../Comandi/MERGE.htm">MERGE</a></span> 
+ (Unisce struttura).</p>
+</body>
+</html>

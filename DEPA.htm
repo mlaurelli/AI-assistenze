@@ -1,0 +1,167 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>DEPA - Definisci parametri aggiuntivi aste</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+td.hcp2 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp3 { margin-bottom:0; }
+p.hcp4 { text-align:justify; }
+span.hcp5 { font-style:italic; }
+td.hcp6 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp7 { text-align:left;
+margin-bottom:0;
+font-style:italic;
+color:#0000ff; }
+p.hcp8 { text-align:justify;
+margin-bottom:0; }
+span.hcp9 { font-weight:normal; }
+p.hcp10 { text-align:left;
+margin-bottom:0; }
+span.hcp11 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando"><span class="hcp1">DEPA - Definisci 
+ parametri aggiuntivi aste</span></p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" 
+		 width="100%" bgcolor="#C0C0C0">
+	<tr>
+		<td style="width:68%;" class="hcp2"><p class="hcp3"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p></td>
+		<td style="width:29%;" class="hcp2"><p class="hcp3"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>:</p></td>
+	</tr>
+</table>
+<p class="hcp4">Permette di definire o ridefinire i parametri 
+ aggiuntivi delle aste, per settarne il comportamento in modo diverso dai 
+ default o dai criteri di progetto. I parametri definiti o modificati verranno 
+ automaticamente resi corrente se così è stato specificato nelle Opzioni 
+ generali.</p>
+<p class="hcp4">Sintassi del comando:</p>
+<p class="Normal3" style="text-align: justify;"><span class="hcp1">DEPA</span> 
+ <span class="hcp5"><font color="#0000FF">Numero del parametro 
+ aggiuntivo asta</font></span> / <font color="#0000FF"><span class="hcp5">Coeff. 
+ ßx ßy ßz</span></font> / <font color="#0000FF"><span class="hcp5">Calcolo 
+ con zone rigide</span></font> / <font color="#0000FF"><span class="hcp5">Offset 
+ Y</span></font> / <font color="#0000FF"><span class="hcp5">Offset 
+ Z</span></font> / <span style="font-style: italic; color: #0000ff;">Moltiplicatori 
+ Area, Jy, Jz, Ay, Az</span>&#160;/ <font color="#0000FF"><span class="hcp5">Commento</span></font></p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt;" cellspacing="0" 
+		 width="100%">
+	<tr>
+		<td style="width:30%;" class="hcp6"><p class="hcp7">Numero del parametro aggiuntivo asta</p></td>
+		<td style="width:89%;" class="hcp6"><p class="hcp8"><span class="hcp9">è 
+		 il numero del tipo di parametro aggiuntivo che si vuole definire 
+		 o ridefinire; dovrà essere uguale al numero di un tipo già definito 
+		 per eventuali correzioni oppure uguale al numero del prossimo 
+		 tipo da definire.</span></p></td>
+	</tr>
+	<tr>
+		<td style="width:30%;" class="hcp6"><p class="hcp10"><font color="#0000FF"><span class="hcp5">Coeff. ßx ßy ßz</span></font></p></td>
+		<td style="width:89%;" class="hcp6"><p class="hcp8"><span class="hcp9"><font 
+		 color="#000000">specificare i valori dei coeff. ß da utilizzare 
+		 per il calcolo della snellezza torsionale (ßx) e delle snellezze 
+		 delle aste nelle altre due direzioni locali (ßy, ßz) nelle verifiche 
+		 aste in acciaio. Se non specificati ModeSt utilizzerà quanto indicato 
+		 nei criteri di progetto e verifica.</font></span></p></td>
+	</tr>
+	<tr>
+		<td style="width:30%;" class="hcp6"><p class="hcp10"><font color="#0000FF"><span class="hcp5">Calcolo con</span></font> <font color="#0000FF"><span class="hcp5">zone rigide</span></font></p></td>
+		<td style="width:89%;" class="hcp6"><p class="hcp8"><span class="hcp9">specificare 
+		 la modalità di calcolo delle zone rigide durante il calcolo della 
+		 struttura:</span> <span class="hcp1">S</span> <span class="hcp9">(Sí) calcola le zone rigide indipendentemente 
+		 da quanto specificato nei parametri di calcolo;</span> <span class="hcp1">N</span> 
+		 <span class="hcp9">(No) non calcola le zone rigide 
+		 indipendentemente da quanto specificato nei parametri di calcolo;</span> 
+		 <span class="hcp1">D</span> <span class="hcp9">(Default) 
+		 decide se calcolare o meno le zone rigide in funzione di quanto 
+		 specificato nei parametri di calcolo.</span></p></td>
+	</tr>
+	<tr>
+		<td style="width:30%;" class="hcp6"><p class="hcp10"><font color="#0000FF"><span class="hcp5">Offset Y</span></font></p></td>
+		<td style="width:89%;" class="hcp6"><p class="hcp8"><span class="hcp9">specificare 
+		 la modalità di calcolo degli offset rigidi dai nodi in direzione 
+		 Y locale durante il calcolo della struttura:</span> <span class="hcp1">S</span> 
+		 <span class="hcp9">(Sí) calcola gli offset indipendentemente 
+		 da quanto specificato nei parametri di calcolo;</span> <span class="hcp1">N</span> 
+		 <span class="hcp9">(No) non calcola gli offset 
+		 indipendentemente da quanto specificato nei parametri di calcolo;</span> 
+		 <span class="hcp1">D</span> <span class="hcp9">(Default) 
+		 decide se calcolare o meno gli offset in funzione di quanto specificato 
+		 nei parametri di calcolo.</span></p></td>
+	</tr>
+	<tr>
+		<td style="width:30%;" class="hcp6"><p class="hcp10"><font color="#0000FF"><span class="hcp5">Offset Z</span></font></p></td>
+		<td style="width:89%;" class="hcp6"><p class="hcp8"><span class="hcp9">analogo 
+		 a offset Y ma per la direzione Z locale.</span></p></td>
+	</tr>
+	<tr>
+		<td style="width:30%;" class="hcp6"><p class="hcp7">Moltiplicatori Area, Jy, Jz, Ay, Az</p></td>
+		<td style="width:89%;" class="hcp6"><p class="hcp8">specificare 
+		 i valori dei moltiplicatori dei parametri statici della sezione 
+		 da adottare nel calcolo della struttura. Se non specificati ModeSt 
+		 utilizzerà quelli propri della sezione. Questi consentono di modificare 
+		 la rigidezza assiale (Area), flessionale (Jy, Jz) e a taglio (Ay, 
+		 Az) nella direzione Y o Z locale, specificando ad esempio 0.5 
+		 per il &quot;Moltiplicatore Area&quot; sia ha una riduzione del 
+		 50% della rigidezza assiale.</p></td>
+	</tr>
+	<tr>
+		<td style="width:30%;" class="hcp6"><p class="hcp10"><span class="hcp5"><font 
+		 color="#0000FF">Commento</font></span></p></td>
+		<td style="width:89%;" class="hcp6"><p class="hcp8"><span class="hcp9">specificare 
+		 un commento da associare al tipo di parametri aggiuntivi.</span></p></td>
+	</tr>
+</table>
+<p class="hcp4">Note:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">Le 
+	 snellezze, gli offset ed i moltiplicatori sono relativi agli assi 
+	 locali dell'asta.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="text-align: justify;">I 
+	 valori inseriti per le snellezze vengono utilizzati solo in fase di 
+	 verifica delle aste in acciaio e possono quindi essere definiti anche 
+	 dopo aver calcolato le sollecitazioni nella struttura. I valori specificati 
+	 sostituiscono quelli eventualmente definiti nei criteri di verifica 
+	 che vengono comunque assunti come default per le aste a cui non è 
+	 stato assegnato alcun tipo di snellezza.</p></li>
+</ul>
+<p class="hcp4"><span class="hcp1">Comandi 
+ correlati:</span> <span class="hcp11"><a 
+	 href="PAC.htm">PAC</a></span> rende corrente i parametri aggiuntivi. 
+ <span class="hcp11"><a href="APA.htm">APA</a></span> 
+ assegna i parametri aggiuntivi correnti. <font color="#000000"><span class="hcp11"><a href="DPA.htm">DPA</a></span></font> disegna 
+ il numero dei parametri aggiuntivi. <span class="hcp11"><a 
+	 href="_PA.htm">?PA</a></span> elenca i parametri aggiuntivi.</p>
+<p style="text-align: left;"><span class="hcp1">Argomenti 
+ correlati:</span> <span class="hcp1"><a href="../Manuale/Zone%20rigide%20e%20offset%20dai%20nodi.htm">Zone 
+ rigide e offset dai nodi</a></span></p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('a2');
+	FilePopupInit('a3');
+//]]></script>
+</body>
+</html>

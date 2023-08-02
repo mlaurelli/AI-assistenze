@@ -1,0 +1,305 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Criteri generali di progetto e disegno armatura solette/platee</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-family:Symbol, serif; }
+span.hcp3 { font-family:Symbol, serif;
+font-weight:bold; }
+td.hcp4 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp5 { margin-bottom:0; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Criteri generali di progetto e disegno armatura solette/platee</h1>
+<h2>Parametri di progetto</h2>
+<p><span class="hcp1"><a name="Progetto_e_verifica_con_metodo_d_integrazione" 
+										 id="Progetto_e_verifica_con_metodo_d_integrazione"></a>Progetto 
+ e verifica con metodo d'integrazione</span>: specificare se il progetto 
+ e la verifica dell'armatura deve essere effettuato valutando le sollecitazioni 
+ agenti utilizzando l'integrazione delle tensioni negli elementi bidimensionali. 
+ Si fa presente che nel caso si utilizzi il metodo, in progettazione interattiva 
+ solette/platee le <a href="Progettazione_interattiva_solette_platee.htm#Solette_platee_Af_teoriche">mappe</a> 
+ non indicano se la verifica è soddisfatta o no, in quanto sono riferite 
+ a calcoli senza integrazioni, la colorazione dei <a href="Progettazione_interattiva_solette_platee.htm#DPV">punti 
+ di verifica</a> è invece congruente con le verifiche.&#160;<span style="text-transform: uppercase;">è</span> 
+ disponibile la seguente opzione:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Massima_dimensione_della_linea_d_integrazione" id="Massima_dimensione_della_linea_d_integrazione"></a>Massima 
+	 dimensione della linea d'integrazione</span>: specificare la dimensione 
+	 massima della linea d'integrazione. La linea d'integrazione è simmetrica 
+	 ed orientata in direzione ortogonale al punto di verifica, e si interrompe 
+	 in corrispondenza del bordo della soletta/platea. Si fa presente che 
+	 qualsiasi sia la dimensione specificata le sollecitazioni agenti sono 
+	 sempre riportate al metro. Ad esempio, per un punto di verifica distante 
+	 dal bordo 0.3 m di una soletta/platea alta 0.5 m, e con una dimensione 
+	 massima della linea d'integrazione pari a 1.6 m, avremo una linea 
+	 d'integrazione pari a 1.1 m (1.6/2+0.3) e le sollecitazioni riportate 
+	 al metro per progettare e verificare la sezione con base 1.0 m ed 
+	 altezza 0.5 m.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Calcolo_armature_con_metodo_di_Wood" 
+										 id="Calcolo_armature_con_metodo_di_Wood"></a>Calcolo 
+ armature con metodo di Wood</span>: specificare se deve essere effettuato 
+ il progetto dell'armatura valutando i momenti flettenti con il <a href="Metodo_di_Wood.htm" 
+	 style="font-weight: bold;">metodo di Wood</a>. Non è utilizzabile 
+ quando si valutano le sollecitazioni agenti con il metodo d'integrazione.</p>
+<p><span class="hcp1"><a name="Accoppia_pilastri_per_calcolo_punzonamento" 
+										 id="Accoppia_pilastri_per_calcolo_punzonamento"></a>Accoppia 
+ pilastri per calcolo punzonamento</span>: specificare se unire pilastri 
+ vicini per valutare un'unica piramide di punzonamento. Sono disponibili 
+ le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Massima 
+	 distanza come un moltiplicatore dello spessore</span>: specificare 
+	 la massima distanza dell'intorno all'interno del quale vengono unificati 
+	 automaticamente i pilastri.</p></li>
+</ul>
+<h2><span class="hcp1">A</span>rmatura a taglio</h2>
+<p><span class="hcp1"><span class="hcp1"><a 
+	 name="Controllo_resistenza_a_taglio_allo_S_L_U_" id="Controllo_resistenza_a_taglio_allo_S_L_U_"></a></span>Controllo 
+ resistenza a taglio allo S.L.U. D.M. 96</span>: specificare se considerare 
+ la prescrizione di normativa (par. 4.2.2.2 del D.M. 16/01/96) relativa 
+ al caso di solette/platee sprovviste di armatura trasversale resistente 
+ a taglio, nel qual caso occorre verificare che detti elementi abbiano 
+ sufficiente capacità di ripartire i carichi trasversalmente. Si fa presente 
+ che per calcoli eseguiti agli stati limite con il D.M. 17/01/18 viene 
+ sempre effettuata la verifica del par. 4.1.2.3.5.1 nelle zone prive di 
+ rinforzi a taglio.</p>
+<p><span class="hcp1"><a name="Verifica_con_taglio_totale" 
+										 id="Verifica_con_taglio_totale"></a>Verifica 
+ con taglio totale</span>: specificare se il taglio di verifica debba essere 
+ valutato separatamente in funzione delle tensioni tangenziali nelle due 
+ direzioni di armatura o come il taglio complessivo fuori piano. Questo 
+ parametro viene preso in considerazione anche se è selezionato il calcolo 
+ con il metodo di integrazione.</p>
+<p><span class="hcp1"><a name="Progetta_a_taglio_con_traliccio_ad_inclinazione_variabile" 
+										 id="Progetta_a_taglio_con_traliccio_ad_inclinazione_variabile"></a>Progetta 
+ a taglio con traliccio ad inclinazione variabile</span>: specificare se 
+ progettare e verificare l'armatura a taglio con il metodo del traliccio 
+ ad inclinazione variabile (1 &#8804; ctg <span class="hcp2">q</span> 
+ &#8804; 2.5) oppure se adottare sempre un traliccio con inclinazione delle bielle 
+ compresse di 45° a cui corrisponde ctg <span class="hcp2">q</span> 
+ = 1. Nel caso di progettazione con traliccio ad inclinazione variabile 
+ sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">In 
+	 Classe A limita la ctg </span><span class="hcp3">q</span><span class="hcp1"> a</span>: specificare il valore massimo 
+	 ammissibile della ctg <span class="hcp2">q</span> 
+	 per le strutture in Classe A. Valori accettabili sono compresi tra 
+	 1 e 2.5.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">In 
+	 Classe B&#160;limita la ctg </span><span class="hcp3">q</span><span class="hcp1"> a</span>: specificare il valore massimo 
+	 ammissibile della ctg <span class="hcp2">q</span>&#160;per 
+	 le strutture in Classe B. Valori accettabili sono compresi tra 1 e 
+	 2.5.</p></li>
+</ul>
+<h2>Parametri di disegno</h2>
+<p>Nella creazione dei disegni delle armature delle solette/platee oltre 
+ alle direttive dei <span style="font-weight: bold; text-decoration: none; "><a 
+	 href="Criteri%20generali%20di%20disegno.htm">criteri generali di disegno</a></span> 
+ sono specificabili numerose altre opzioni.</p>
+<p><span class="hcp1"><a name="Tipo_di_disegno" id="Tipo_di_disegno"></a>Tipo 
+ di disegno</span>: specificare la modalità di creazione dei disegni dell'armatura 
+ della soletta/platea. Nello stesso disegno è infatti possibile rappresentare 
+ le armature in diversi modi. Sono disponibili le seguenti opzioni:</p>
+<table wrapperparagraphselector="P" style="margin-top: 14pt;" cellspacing="0" 
+		 width="100%">
+	<tr>
+		<td style="width:7%;" class="hcp4"><p class="hcp5"><span class="hcp1">1</span></p></td>
+		<td style="width:94%;" class="hcp4"><p class="hcp5">viene creato un unico disegno contenente 
+		 le specifiche di tutte le armature (diffuse e concentrate) in 
+		 direzione X ed Y, superiori ed inferiori;</p></td>
+	</tr>
+	<tr>
+		<td style="width:7%;" class="hcp4"><p class="hcp5"><span class="hcp1">2A</span></p></td>
+		<td style="width:94%;" class="hcp4"><p class="hcp5">vengono creati due schemi d'armatura 
+		 affiancati, il primo con le armature superiori in direzione X 
+		 ed Y, il secondo con le armature inferiori in direzione X ed Y;</p></td>
+	</tr>
+	<tr>
+		<td style="width:7%;" class="hcp4"><p class="hcp5"><span class="hcp1">2B</span></p></td>
+		<td style="width:94%;" class="hcp4"><p class="hcp5">vengono creati due schemi d'armatura 
+		 uno sotto l'altro, il primo con le armature superiori in direzione 
+		 X ed Y, il secondo con le armature inferiori in direzione X ed 
+		 Y;</p></td>
+	</tr>
+	<tr>
+		<td style="width:7%;" class="hcp4"><p class="hcp5"><span class="hcp1">2C</span></p></td>
+		<td style="width:94%;" class="hcp4"><p class="hcp5">vengono creati due schemi d'armatura 
+		 affiancati, il primo con le armature in direzione X superiori 
+		 ed inferiori, il secondo con le armature in direzione Y, superiori 
+		 ed inferiori;</p></td>
+	</tr>
+	<tr>
+		<td style="width:7%;" class="hcp4"><p class="hcp5"><span class="hcp1">2D</span></p></td>
+		<td style="width:94%;" class="hcp4"><p class="hcp5">vengono creati due schemi d'armatura 
+		 uno sotto l'altro, il primo con le armature in direzione X superiori 
+		 ed inferiori, il secondo con le armature in direzione Y, superiori 
+		 ed inferiori;</p></td>
+	</tr>
+	<tr>
+		<td style="width:7%;" class="hcp4"><p class="hcp5"><span class="hcp1">3A</span></p></td>
+		<td style="width:94%;" class="hcp4"><p class="hcp5">vengono creati quattro schemi d'armatura 
+		 raggruppati: sopra i due schemi d'armatura con le armature in 
+		 direzione X superiori ed inferiori, sotto i due schemi d'armatura 
+		 con le armature in direzione Y superiori ed inferiori;</p></td>
+	</tr>
+	<tr>
+		<td style="width:7%;" class="hcp4"><p class="hcp5"><span class="hcp1">3B</span></p></td>
+		<td style="width:94%;" class="hcp4"><p class="hcp5">vengono creati quattro schemi d'armatura 
+		 raggruppati: sopra i due schemi d'armatura con le armature superiori 
+		 in direzione X ed Y, sotto i due schemi d'armatura con le armature 
+		 inferiori in direzione X ed Y;</p></td>
+	</tr>
+	<tr>
+		<td style="width:7%;" class="hcp4"><p class="hcp5"><span class="hcp1">4</span></p></td>
+		<td style="width:94%;" class="hcp4"><p class="hcp5">vengono creati quattro schemi d'armatura 
+		 affiancati uno all'altro, ognuno per le diverse direzioni e posizioni 
+		 d'armatura;</p></td>
+	</tr>
+	<tr>
+		<td style="width:7%;" class="hcp4"><p class="hcp5"><span class="hcp1">5</span></p></td>
+		<td style="width:94%;" class="hcp4"><p class="hcp5">vengono creati quattro schemi d'armatura 
+		 uno sotto l'altro, ognuno per le diverse direzioni e posizioni 
+		 d'armatura.</p></td>
+	</tr>
+</table>
+<p><span class="hcp1"><a name="Particolari_disegno_principale" 
+										 id="Particolari_disegno_principale"></a>Particolari 
+ disegno principale</span>: specificare quali particolari del disegno della 
+ carpenteria di piano eliminare nel primo schema di disegno dell'armatura 
+ della soletta/platea. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Eliminare 
+	 le quotature</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Eliminare 
+	 le campiture</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Eliminare 
+	 la numerazione dei pilastri</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Eliminare 
+	 la numerazione delle travi e dei muri</span></p></li>
+</ul>
+<p>Se entrambe le opzioni sono deselezionate non viene eliminato nessun 
+ particolare.</p>
+<p><span class="hcp1"><a name="Particolari_disegni_secondari" 
+										 id="Particolari_disegni_secondari"></a>Particolari 
+ disegni secondari</span>: specificare quali particolari del disegno della 
+ carpenteria di piano eliminare negli schemi di disegno dell'armatura della 
+ soletta/platea successivi al primo. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Eliminare_le_quotature" id="Eliminare_le_quotature"></a>Eliminare 
+	 le quotature</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Eliminare_le_campiture" id="Eliminare_le_campiture"></a>Eliminare 
+	 le campiture</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Eliminare_la_numerazione_dei_pilastri" id="Eliminare_la_numerazione_dei_pilastri"></a>Eliminare 
+	 la numerazione dei pilastri</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Eliminare_la_numerazione_delle_travi_e_dei_muri" id="Eliminare_la_numerazione_delle_travi_e_dei_muri"></a>Eliminare 
+	 la numerazione delle travi e dei muri</span></p></li>
+</ul>
+<p>Se entrambe le opzioni sono deselezionate non viene eliminato nessun 
+ particolare.</p>
+<p><span class="hcp1"><a name="Disegno_armatura_diffusa" 
+										 id="Disegno_armatura_diffusa"></a>Disegno 
+ armatura diffusa</span>: specificare se disegnare su tutta la soletta/platea 
+ l'armatura diffusa. In progettazione interattiva sarà comunque sempre 
+ possibile inserire, togliere o modificare il disegno dell'armatura diffusa.</p>
+<p><span class="hcp1"><a name="Posizione_particolari_punzonamento" 
+										 id="Posizione_particolari_punzonamento"></a>Posizione 
+ particolari punzonamento</span>: specificare dove devono essere posizionati 
+ i disegni dei particolari relativi alle armature a punzonamento. Sono 
+ disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Lateralmente 
+	 al disegno</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Inferiormente 
+	 al disegno</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">In 
+	 automatico</span>: lateralmente se il disegno complessivo è alto e 
+	 stretto, inferiormente in caso contrario. Si noti che in questo caso, 
+	 modificando la disposizione dei disegni delle armature, il posizionamento 
+	 dei particolari può cambiare.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Copriferro_per_calcolo_lunghezza_ferri" 
+										 id="Copriferro_per_calcolo_lunghezza_ferri"></a>Copriferro 
+ per calcolo lunghezza ferri</span>: specificare il copriferro da utilizzare 
+ per il calcolo delle lunghezze dei ferri (risvolti, tratti sagomati per 
+ punzonamento, ecc.).</p>
+<p><span class="hcp1"><a name="Risvoltare_al_bordo_i_ferri" 
+										 id="Risvoltare_al_bordo_i_ferri"></a>Risvoltare 
+ al bordo</span> <span class="hcp1">i ferri</span>: specificare 
+ se i ferri debbano essere risvoltati in prossimità dei bordi della soletta/platea. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Inferiori</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Superiori</span></p></li>
+</ul>
+<p>Se entrambe le opzioni sono deselezionate non viene risvoltato nessun 
+ ferro.</p>
+<p><span class="hcp1"><a name="Lunghezza_risvolti_ferri_al_bordo" 
+										 id="Lunghezza_risvolti_ferri_al_bordo"></a>Lunghezza 
+ risvolti ferri al bordo</span>: specificare la lunghezza dei risvolti 
+ dei ferri al bordo della soletta/platea. ModeSt controlla automaticamente 
+ che il risvolto non sia superiore all'altezza della soletta/platea. Sono 
+ disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 a</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Pari 
+	 all'altezza meno due volte il copriferro</span></p></li>
+</ul>
+<p><span class="hcp1"><a name="Disegno_particolare_ferri_al_bordo" 
+										 id="Disegno_particolare_ferri_al_bordo"></a>Disegno 
+ particolare ferri al bordo</span>: specificare se disegnare il particolare 
+ del risvolto dell'armatura al bordo della soletta/platea.</p>
+<p class="hcp5"><span class="hcp1"><a name="Scala_disegno_particolare_ferri_al_bordo" 
+	 id="Scala_disegno_particolare_ferri_al_bordo"></a>Scala disegno particolare 
+ ferri al bordo</span>: specificare la scala con la quale disegnare il 
+ particolare del risvolto dei ferri al bordo della soletta/platea.</p>
+<p class="hcp5"><span class="hcp1"><a name="Calcolo_lunghezza_ferri_semplificato" 
+	 id="Calcolo_lunghezza_ferri_semplificato"></a>Calcolo lunghezza ferri 
+ semplificato</span>: il programma normalmente calcola le lunghezze e le 
+ quotature dei ferri tenendo conto in modo esatto della loro posizione 
+ e del loro diametro. Ne deriva ovviamente che ferri di ugual forma ma 
+ di diverso diametro avranno lunghezza e quotatura diversa, così come si 
+ avrà una differenza di lunghezza e quotatura fra i ferri in direzione 
+ X ed i ferri in direzione Y, dovendo tener conto della loro reale disposizione. 
+ Con il calcolo semplificato le quotature e le lunghezze vengono valutate 
+ in funzione di un unico diametro medio (da specificare nei parametri successivi) 
+ e senza considerare le reciproche posizioni dei ferri.</p>
+<h2>Stampe</h2>
+<p><span class="hcp1"><a name="Tipo_di_relazione" id="Tipo_di_relazione"></a>Tipo 
+ di relazione</span>: indicare il tipo di relazione di calcolo da realizzare. 
+ Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Sintetica</span>: 
+	 vengono riportate solo le verifiche più gravose in termini di massima 
+	 tensione nell'armatura, nel calcestruzzo e sul terreno.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="margin-bottom: 0;"><span class="hcp1">Estesa</span>: vengono riportate tutte 
+	 le verifiche effettuate.</p></li>
+</ul>
+</body>
+</html>

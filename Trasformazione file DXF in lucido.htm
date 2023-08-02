@@ -1,0 +1,93 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Trasformazione file DXF in lucido</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Trasformazione file DXF/DWG in lucido</h1>
+<p>La trasformazione dei file DXF/DWG si effettua cliccando nel gruppo 
+ <span class="hcp1">Lucido</span> della scheda <span class="hcp1">Modellazione</span> 
+ su <span class="hcp1">Lucido <img src="../Icone/32/cad32.png" alt="" border="1" class="hcp2"></span> e 
+ poi su <span class="hcp1">Trasforma <img src="../Icone/16/trasforma.png" alt="" border="1" class="hcp2"></span>&#160;e 
+ quindi su <span class="hcp1">DXF/DWG <img src="../Icone/16/dxf2luc.png" alt="" border="1" class="hcp2"></span>.</p>
+<p style="text-align: center;"><img src="Trasfo_dxf.png" alt="" border="0"></p>
+<p>La finestra di dialogo si presenta suddivisa essenzialmente in una parte 
+ in cui viene riportato il nome del file DXF/DWG, il nome del file del 
+ lucido, l'elenco dei nomi dei layer e alcune opzioni ed una parte composta 
+ da una finestra di anteprima con bottoni che consentono di modificare 
+ i punti di visualizzazione del disegno e una casella di controllo per 
+ attivare il disegno degli assi. Nella finestra di anteprima vengono visualizzate 
+ le entità grafiche contenute nei layer selezionati e riportate le coordinate 
+ minime e massime dei punti.</p>
+<p>I parametri richiesti nella finestra di dialogo hanno il seguente significato:</p>
+<p><span class="hcp1">File DXF/DWG:</span> nome del file 
+ DXF/DWG da trasformare in lucido. Il bottone &quot;Sfoglia&quot; apre 
+ la finestra di dialogo che permette di selezionare il nome del file DXF/DWG.</p>
+<p><span class="hcp1">File LUC:</span> nome del file LUC. 
+ Il bottone &quot;Sfoglia&quot; apre la finestra di dialogo che permette 
+ di specificare il nome del file lucido e per visualizzare quelli già presenti 
+ nel progetto.</p>
+<p><span class="hcp1">Nomi layer:</span> riporta l'elenco 
+ dei nomi dei layer contenuti nel file DXF/DWG. Selezionare i layer dove 
+ giacciono le entità da convertire (utilizzare i tasti Ctrl e Alt per la 
+ selezione multipla).</p>
+<p><span class="hcp1">Fattore di conversione in metri:</span> 
+ ModeSt presume che i dati contenuti nel file DXF/DWG siano in metri, quindi 
+ è possibile specificare un fattore di scala per tenere conto dell'unità 
+ di misura realmente adottata nel file DXF/DWG.</p>
+<p><span class="hcp1">Precisione di arrotondamento al:</span> 
+ selezionare la precisione a cui arrotondare le coordinate dei punti del 
+ lucido da considerare durante la conversione del file DXF/DWG. Nei disegni 
+ DXF/DWG le coordinate dei punti sono a volte espresse con un numero elevato 
+ di decimali che se considerate come rappresentative delle coordinate dei 
+ nodi, possono portare a problemi numerici durante il calcolo della struttura 
+ con metodo FEM.</p>
+<p><span class="hcp1">Calcola intersezioni:</span> attivare 
+ la casella di controllo per individuare il punto di intersezione di due 
+ rette complanari. Per DXF/DWG tridimensionali di grande dimensione se 
+ l'opzione è attivata può richiedere tempi di elaborazione lunghi.</p>
+<p><span class="hcp1">Spostare il punto minimo nell'origine:</span> 
+ attivare la casella di controllo per riportare tutto il disegno nel primo 
+ quadrante spostando il punto di minimo nell'origine.</p>
+<p><span class="hcp1">Creare la macro per la trasformazione 
+ di linee-aste:</span> attivare la casella di controllo per creare la macro 
+ che inserisce i nodi nei punti e trasforma le linee in aste. Il nome della 
+ macro coincide con quello del file del lucido e per <a href="Uso%20delle%20macro%20da%20ModeSt.htm">eseguirla</a> 
+ occorre digitarne il nome dalla linea di comando. Se nella struttura sono 
+ già state definite le sezioni delle aste prima di effettuare la trasformazione 
+ del file DXF/DWG in lucido e i nomi dei layer del disegno DXF/DWG iniziano 
+ con un numero ad esempio &quot;2 Travi&quot;, automaticamente viene assegnato 
+ alle aste la sezione con lo stesso numero contenuto nel nome del layer. 
+ Ad esempio, la sezione numero 1 viene assegnata a tutte le aste delle 
+ linee che appartengono al layer il cui nome inizia con &quot;1&quot;. 
+ Se la sezione o il nome del layer non soddisfa i requisiti suddetti si 
+ assegna la sezione 0.</p>
+<p><span class="hcp1">Oggetti da estrarre:</span> specificare 
+ se si desidera la trasformazione totale o l'estrazione delle sole entità 
+ contenute su piani prefissati.</p>
+<p><span class="hcp1">Ribaltamenti:</span> specificare se 
+ si desidera ribaltare il disegno DXF/DWG su un piano parallelo all'asse 
+ globale X o Y. Questa opzione consente ad esempio di posizionare su un 
+ piano verticale il disegno di un prospetto o di una sezione dell'edificio 
+ che generalmente giace sul piano XY.</p>
+</body>
+</html>

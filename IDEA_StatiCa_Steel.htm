@@ -1,0 +1,112 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>IDEA StatiCa Steel</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+font.hcp3 { font-family:Wingdings; }
+span.hcp4 { font-style:italic; }
+span.hcp5 { font-family:Symbol, serif; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>IDEA StatiCa Steel</h1>
+<p>La procedura consente di esportare i dati di tutte le aste in acciaio 
+ che convergono in un nodo qualsiasi della struttura a IDEA StatiCa Steel. 
+ Con IDEA StatiCa Steel è possibile progettare interattivamente il collegamento 
+ in acciaio anche con normative diverse da quella utilizzata nel calcolo 
+ della struttura.</p>
+<p>L'esportazione dei dati (geometria e sollecitazioni) a IDEA StatiCa 
+ Steel può essere effettuata in diversi modi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nel gruppo <span class="hcp1">Progettazione</span> 
+	 della scheda <span class="hcp1">Post-Processor</span> 
+	 cliccando su <span class="hcp1">Interattiva</span> <img src="../Icone/32/progint32.png" alt="" border="1" class="hcp2"> e poi su&#160;<span class="hcp1">Collegamenti con IDEA StatiCa Steel</span> 
+	 <img src="../Icone/16/ALB_IDEACON.png" alt="" border="1" class="hcp2"> specificando 
+	 il numero del nodo da progettare.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nelle <span class="hcp1"><a 
+	 href="Finestre%20di%20modellazione.htm">finestre di modellazione</a></span> 
+	 con il tasto destro sul nodo <font face="Wingdings" class="hcp3">à</font> <span class="hcp4">Elaborazioni e Ms-Cad</span> <font face="Wingdings" class="hcp3">à</font> <span class="hcp4">Progettazione 
+	 collegamenti con IDEA StatiCa Steel.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nell'<span class="hcp1"><a 
+	 href="Albero_del_progetto.htm">albero del progetto</a></span> con 
+	 il tasto destro sul nome del file relativo ad un collegamento (che 
+	 è stato precedentemente progettato) <font face="Wingdings" class="hcp3">à</font> 
+	 <span class="hcp4">Progettazione collegamenti con IDEA 
+	 StatiCa Steel.</span></p></li>
+</ul>
+<p>Prima di procedere all'esportazione occorre accertarsi che nelle opzioni 
+ di ModeSt, apribili cliccando sul menu dell'applicazione <span class="hcp1"><img src="../Icone/modest32.png" alt="" border="1" class="hcp2"></span> e poi 
+ su <span class="hcp1">Opzioni <img src="../Icone/16/opzioni.png" alt="" border="1" class="hcp2"></span>, 
+ sia settata correttamente la cartella d'installazione di IDEA StatiCa 
+ Steel.</p>
+<p>Facciamo notare che qualsiasi modifica alla geometria e/o alle sollecitazioni 
+ effettuate in IDEA StatiCa Steel verranno completamente perse alla riapertura 
+ del collegamento da ModeSt.</p>
+<p>La sezione delle aste viene esportata utilizzando il codice indicato 
+ nella definizione della sezione ed il file sezmgt.csv. Il file sezmgt.csv 
+ contiene le codifiche delle sezioni in acciaio utilizzate dai programmi 
+ ai quali ModeSt è collegato. Nel file ci sono una serie di righe e colonne, 
+ dove in ogni riga è specificato il codice della sezione utilizzato dal 
+ programma indicato in cima alla colonna (intestazione). Il file sezmgt.csv 
+ è archiviato nella cartella ETC contenuta nella cartella di installazione 
+ del programma e può essere modificato utilizzando il programma Excel o 
+ il blocco note di Windows.</p>
+<p>Per cui, prima di procedere con l'esportazione, consigliamo di verificare 
+ che il codice indicato corrisponda esattamente al tipo di sezione, per 
+ evitare di avere aste con sezione di forma o dimensioni diversa da quelle 
+ della struttura, e che sia presente nel file sezmgt.csv. Quindi, se&#160;il 
+ codice della sezione coincide con quello presente nella colonna &quot;ModeSt&quot;, 
+ la sezione viene definita utilizzando il codice indicato nella colonna 
+ &quot;Idea&quot;.</p>
+<p>L'esportazione viene interrotta se la sezione è priva di codice oppure 
+ non è presente nella prima colonna del file sezmgt.csv.</p>
+<p>Vengono esportate solo le aste con verifica prevista acciaio.</p>
+<p style="font-weight: bold;">Non vengono esportate le aste con sezioni 
+ del seguente tipo: doppia I, doppia C lato labbri e Omega.</p>
+<p>Le caratteristiche meccaniche e di resistenza delle aste esportate sono 
+ le seguenti:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Modulo elastico (E): 21000000000 
+	 daN/mq</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Coefficiente di Poisson (<span class="hcp5">n</span>): 0.3</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Coefficiente di dilatazione 
+	 termica (<span class="hcp5">a</span>): 12*10<span 
+	 style="vertical-align: Super;">-6</span>/K</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Conduttività termica (<span class="hcp5">l</span>): 50 W/m.K</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Capacità calore specifico 
+	 (c): 0.00049 kJ/m.K</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Resistenza di snervamento 
+	 (Fy): valore impostato nei criteri di progetto delle verifiche delle 
+	 aste in acciaio, scheda materiali, sezione EC3</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Resistenza ultima (Fu): valore 
+	 impostato nei criteri di progetto delle verifiche delle aste in acciaio, 
+	 scheda materiali, sezione EC3</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Resistenza di snervamento 
+	 per spessori superiori a 40 mm (Fy,40):&#160;valore impostato nei 
+	 criteri di progetto delle verifiche delle aste in acciaio, scheda 
+	 materiali, sezione EC3</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Resistenza ultima per spessori 
+	 superiori a 40 mm (Fu,40):&#160;valore impostato nei criteri di progetto 
+	 delle verifiche delle aste in acciaio, scheda materiali, sezione EC3</p></li>
+</ul>
+<p>Per esportare un elemento come continuo è sufficiente assegnare ad un'asta 
+ incidente nel nodo il collegamento di tipo &quot;Asta continua&quot; <img src="../Icone/20x16/TC_C_.png" alt="" style="border: Solid 1px #808080; 
+	 margin-left: 2px; margin-right: 2px; margin-top: 2px; margin-bottom: 2px; 
+	 border-width: 1px; border-style: solid;" border="1">.</p>
+<p>Eventuali modifiche alla struttura vanno salvate precedentemente alla 
+ progettazione dei collegamenti con IDEA StatiCa Steel.</p>
+</body>
+</html>

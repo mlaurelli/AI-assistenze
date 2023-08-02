@@ -1,0 +1,61 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Concetti generali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Concetti generali</h1>
+<p>I metodi utilizzati nei solutori FEM per eseguire l'analisi pushover 
+ sono i seguenti:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Metodo 
+	 a plasticità diffusa</span>: alcuni elementi del modello vengono descritti 
+	 con la cosiddetta formulazione &quot;a fibre&quot; in cui la sezione 
+	 dell'elemento è modellata insieme alle barre di armatura dividendola 
+	 in parti discrete.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Metodo 
+	 a plasticità concentrata</span>: nel modello vengono introdotte delle 
+	 cerniere elasto-plastiche a cui sono associate sia le curve momento-rotazione 
+	 e taglio-spostamento sia i domini di interazione N-M.</p></li>
+</ul>
+<p>Il metodo a plasticità diffusa è utilizzabile solo nelle strutture in 
+ c.a. mentre il metodo a plasticità concentrata è utilizzabile nelle strutture 
+ in c.a. e acciaio.</p>
+<p>In entrambi i metodi sono ovviamente presenti poi le criticità tipiche 
+ di tutte la analisi non lineari: step di calcolo, numero di passi, di 
+ iterazioni, di sottoiterazioni, criteri di convergenza.</p>
+<p>L'analisi pushover non viene eseguita nel caso in cui le travi e/o i 
+ pilastri siano modellati con elementi bidimensionali e sui quali è stata 
+ inserita un'<a href="Asta_virtuale.htm">asta virtuale</a>.</p>
+<p>La procedura di modellazione e calcolo può essere riassunta nelle seguenti 
+ fasi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Modellazione della struttura 
+	 con eventuale suddivisione degli elementi asta.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Calcolo statico o sismico 
+	 statico con il metodo degli stati limite.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Introduzione dell'armatura 
+	 negli elementi da considerare elasto-plastici.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Aggiustamento dei parametri 
+	 di convergenza con calcoli di test.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Calcolo definitivo.</p></li>
+</ul>
+<p>Per ciascuno dei suddetti metodi, nei prossimi paragrafi del manuale, 
+ verranno esaminate in dettaglio le varie fasi evidenziando le peculiarità 
+ degli elementi in c.a. e acciaio, poiché è importante capire bene il comportamento 
+ di ModeSt quando viene selezionata eseguita l'analisi pushover.</p>
+<p>&#160;</p>
+</body>
+</html>

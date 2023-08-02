@@ -1,0 +1,105 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Organizzazione dei dati</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-style:italic; }
+span.hcp2 { font-weight:bold; }
+img.hcp3 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+img.hcp4 { margin-top:5px;
+margin-bottom:5px;
+margin-left:5px;
+margin-right:5px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Organizzazione dei dati</h1>
+<h2 class="Titolo5">I progetti</h2>
+<p>È possibile memorizzare i file relativi ai progetti in qualunque locazione 
+ del disco rigido o della rete, ma per default ModeSt organizza i dati 
+ in alcune cartelle predefinite, che aiutano a mantenere ordinati la numerosa 
+ quantità di file correlati con un progetto.</p>
+<p>Sotto la cartella di installazione di ModeSt è presente una cartella 
+ di nome PROGETT che è per default la cartella dove vengono memorizzati 
+ i progetti. Può essere modificata attraverso la scheda <span class="hcp1">Cartelle</span> 
+ delle opzioni di ModeSt, apribili cliccando sul menu dell'applicazione 
+ <span class="hcp2"><img src="../Icone/modest32.png" alt="" border="1" class="hcp3"></span> e poi su 
+ <span class="hcp2">Opzioni <img src="../Icone/16/opzioni.png" alt="" border="1" class="hcp3"></span>.</p>
+<h2 class="Titolo5">I dati dei progetti</h2>
+<p>Per ogni nuovo progetto vengono create una cartella (con lo stesso nome) 
+ destinata a contenere i dati ed un file con lo stesso nome ed estensione 
+ MPR (ModeSt PRoject) con le specifiche del progetto.<img src="Org_dati_1.GIF" alt="" align="right" border="0" class="hcp4"></p>
+<p>Ad esempio creando un progetto di nome <span class="hcp2">LaCasa</span> 
+ e specificando come cartella di salvataggio la cartella PROGETT, verranno 
+ creati:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">la cartella <span class="hcp2">LaCasa</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1">il file <span class="hcp2">LaCasa</span>.MPR</p></li>
+</ul>
+<p style="margin-bottom: 0;">Tutti i file GDB contenuti nella cartella 
+ del progetto verranno automaticamente considerati come disegni associati 
+ al progetto mentre file di altro tipo dovranno essere esplicitamente inseriti 
+ nel progetto. ModeSt associa automaticamente al progetto e posiziona per 
+ default in questa cartella i file lucido derivanti dalla trasformazione 
+ dei file DXF/DWG e le immagini esportate.</p>
+<h2 class="Titolo5">I dati delle strutture</h2>
+<p>Per ogni struttura che viene creata o inserita nel progetto, oltre ai 
+ file specifici della struttura in questione, viene creata una cartella 
+ con lo stesso nome e con estensione GDB, destinata a contenere i disegni 
+ creati automaticamente da ModeSt o i disegni creati manualmente dall'utente 
+ ed associati alla struttura. Eventuali file con estensione GDB che si 
+ trovino in questa cartella vengono automaticamente associati alla struttura. 
+ Attualmente ModeSt in alcuni casi riconosce i disegni generati automaticamente 
+ dal loro nome, quindi si sconsiglia di cambiare nome ai file relativi 
+ agli esecutivi di carpenterie di piano (CPxxxx), carpenterie di piano 
+ dei maschi murari per verifiche statiche (CMxxxV), carpenterie di piano 
+ dei maschi murari per verifiche sismiche (CMxxxS), carpenterie di piano 
+ dei maschi murari per verifiche dei cinematismi (CMxxxC), travi (TRxxxx), 
+ pilastri (PLxxxx), tabelle pilastri (TPxxxx), pareti (PAxxxx), nuclei 
+ (NUxxxx), solette o platee (SPxxxx), plinti/pali (PNxxxx), solai (SOxxxx), 
+ muratura armata (MAxxxx), reticolari (RETxxxx), pannelli X-LAM (PWxxxx), 
+ collegamenti in acciaio (CLxxxx), collegamenti in acciaio di IDEA StatiCa 
+ Steel (ICxxxx), rinforzi in FRP (Rxxxx) e distinte ferri (DFxxxx).<img src="Org_dati_2.gif" alt="" align="right" border="0" class="hcp4"></p>
+<p>Viene inoltre creata una cartella con lo stesso nome e priva di estensione, 
+ destinata a contenere i file DXF generati da ModeSt in modo automatico.</p>
+<p>Nel caso dell'esempio precedente, se nel progetto viene creata la struttura 
+ di nome <span class="hcp2">CorpoA</span>, verranno creati:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">la cartella <span class="hcp2">CorpoA</span>.GDB</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">la cartella <span class="hcp2">CorpoA</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1">i file <span class="hcp2">CorpoA</span>.* 
+	 (relativi alla struttura)</p></li>
+</ul>
+<p>Il numero dei file della struttura aumenta in base al tipo di elaborazioni 
+ successive alla modellazione (calcolo della struttura, progettazione delle 
+ armature, verifiche degli elementi in acciaio, ecc.).<img src="Org_dati_3.GIF" alt="" align="right" border="0" class="hcp4"></p>
+<p>Tutti i file che si trovano nella cartella <span class="hcp2">LaCasa</span> 
+ con nome <span class="hcp2">CorpoA</span> vengono considerati 
+ appartenenti alla struttura e gestiti di conseguenza.</p>
+<p>Nella cartella del progetto, nell'esempio in questione <span class="hcp2">LaCasa</span>, 
+ sono contenuti file di altro tipo tra i quali quello della relazione di 
+ calcolo con estensione RTF, quello del lucido con estensione LUC, disegni 
+ in formato interno GBD, ecc. Questi file, anche se risiedono in questa 
+ cartella, possono non essere collegati al progetto.</p>
+<h2 class="Titolo5">I disegni di libreria</h2>
+<p>Nella cartella di installazione di ModeSt viene creata anche una cartella 
+ (per default di nome GDB) destinata a contenere eventuali disegni a carattere 
+ generale che l'utente desidera avere sempre a portata di mano ad esempio 
+ come particolari costruttivi o ripetitivi da inserire nei disegni esecutivi.</p>
+<p>Può essere modificata attraverso la scheda <span class="hcp1">Cartelle</span> 
+ delle opzioni di ModeSt, apribili cliccando sul menu dell'applicazione 
+ <span class="hcp2"><img src="../Icone/modest32.png" alt="" border="1" class="hcp3"></span> e poi su 
+ <span class="hcp2">Opzioni <img src="../Icone/16/opzioni.png" alt="" border="1" class="hcp3"></span>.</p>
+</body>
+</html>

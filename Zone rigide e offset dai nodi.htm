@@ -1,0 +1,66 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Zone rigide e offset dai nodi</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Zone rigide e offset dai nodi</h1>
+<p>Durante la fase di calcolo e attraverso i parametri aggiuntivi delle 
+ aste è possibile specificare il calcolo considerando infinitamente rigide 
+ le zone di interconnessione trave-pilastro e considerando il disassamento 
+ dell'asse baricentrico dell'asta rispetto ai nodi.</p>
+<p>La lunghezza delle zone rigide viene calcolata automaticamente in funzione 
+ del filo fisso degli elementi strutturali e delle reciproche posizioni. 
+ Per i pilastri viene considerata infinitamente rigida una parte corrispondente 
+ alla minore delle altezze delle travi che vi concorrono, mentre per le 
+ travi viene considerata la minore delle larghezze dei pilastri. Le aste 
+ che non hanno tipologia trave o pilastro vengono calcolate senza zone 
+ rigide. Tale calcolo viene effettuato per tutti i tipi di sezione escluso 
+ le sezioni qualunque ad inerzia assegnata.</p>
+<p>Quando per un'asta viene selezionato il calcolo con zone rigide i risultati 
+ in termini di sollecitazioni vengono forniti non più sul nodo, ma alle 
+ estremità delle zone rigide e quindi ovviamente l'equilibrio sul nodo 
+ sembra non essere rispettato. Ad esempio la somma dei momenti non risulta 
+ essere pari a zero in quanto occorre considerare il momento dovuto al 
+ taglio (che è applicato ad una certa distanza dal nodo) e l'effetto del 
+ carico sulla parte di asta considerata infinitamente rigida.</p>
+<p>I vari solutori adottano metodologie differenti per la schematizzazione 
+ di queste zone infinitamente rigide: Xfinest prevede in linea più generale 
+ degli offset di posizionamento fra il nodo ed il vero asse baricentrico 
+ dell'asta. Vengono quindi passati al solutore gli offset in direzione 
+ X locale dell'asta corrispondenti alle zone rigide calcolate. In questo 
+ caso, poiché i solutori considerano il carico sull'asta agente sulla sola 
+ parte flessibile, ModeSt può se richiesto recuperare i carichi che andrebbero 
+ perduti creando delle azioni concentrate sui nodi. Si veda anche <a href="Opzioni%20generali.htm#Recupero_carichi_zone_rigide"><span class="hcp1">Recupero carichi zone rigide</span></a>.</p>
+<p>Anche l'offset di posizionamento dai nodi viene calcolato solo per aste 
+ con tipologia trave o pilastro, mentre l'offset di posizionamento dei 
+ muri e degli elementi bidimensionali non viene mai considerato.</p>
+<p>Utilizzare quindi con cautela questo tipo di calcolo per aste che incidono 
+ su elementi bidimensionali o muri. Possono infatti nascere su questi elementi 
+ momenti flettenti non realmente presenti causati dall'eccentricità dei 
+ pilastri soprastanti. Nel caso di elementi membranali questo può dar luogo 
+ anche a fenomeni di labilità locale.</p>
+<p>Analogamente le reazioni vincolari o le azioni trasmesse ad una platea 
+ di fondazione da un pilastro con offset rigido dal nodo possono essere 
+ caratterizzate da valori completamente falsati dalla presenza dell'offset.</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Argomenti 
+ correlati:</span> <span style="font-weight: bold; text-decoration: none; "><a 
+	 href="Aste%20-%20connessione%20e%20posizione.htm">Aste - connessione e posizione</a></span></p>
+</body>
+</html>

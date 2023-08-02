@@ -1,0 +1,40 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Carichi orizzontali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+p.hcp2 { text-align:center;
+font-weight:bold; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Carichi orizzontali</h1>
+<p>Il calcolo degli spostamenti e le valutazioni della sicurezza nei confronti di sollecitazioni trasversali al palo, vengono effettuate attraverso un'analisi elasto-plastica del problema di interazione palo–terreno.</p>
+<p>Ipotizzando un comportamento comunque elastico del palo, il terreno viene considerato come unico elemento potenzialmente non resistente ai fini della valutazione della sicurezza nei confronti dello stato limite ultimo.</p>
+<p>L'entità del terreno in cui le pressioni raggiungono il loro valore limite è rappresentato dall'andamento della curva carichi–spostamenti orizzontali: un andamento lineare indica che i carichi agenti inducono in tutto il terreno prossimo al palo pressioni inferiori a quelle limite; un andamento non lineare indica il raggiungimento delle pressione limite in alcune parti del terreno; un andamento marcatamente non lineare, in cui è evidente l'asintoto orizzontale (rappresentativo dei carichi limite), indica il raggiungimento delle pressione limite in quasi tutto il terreno.</p>
+<p>I carichi applicati sono gli effetti delle azioni di progetto, mentre i carichi tali da indurre nella totalità del terreno pressioni pari a quelle limite sono le resistenze di progetto. Tanto più i carichi applicati si avvicinano a quelli limite tanto più i loro effetti, misurati come spostamenti della testa del palo, sono irreversibili. La misura della quota parte di spostamenti irreversibili (plastici) rispetto agli spostamenti totali è quindi rappresentativa, seppur non linearmente, del rapporto fra gli effetti delle azioni di progetto e le resistenze di progetto ed è il metro utilizzato per la misura del grado di sicurezza nei confronti dello stato limite ultimo.</p>
+<p>Un'analisi elasto-plastica da cui risulti un sistema non convergente indica il superamento della condizione limite secondo la quale tutto il terreno a lato del palo è sottoposto a pressioni pari a quelle massime sopportabili, il sistema palo-terreno è quindi reso labile dai carichi applicati. Tali carichi, intesi come effetti delle azioni di progetto, risultano quindi maggiori di quelli resistenti, intesi come resistenze di progetto, ciò indica che la verifica non è soddisfatta.</p>
+<p>In sintesi, in riferimento alla figura, siano:</p>
+<p class="Normal3"><span class="hcp1">{T;M}</span> le sollecitazioni di taglio e momento in testa al palo;</p>
+<p class="Normal3"><span class="hcp1">s</span> lo spostamento orizzontale della testa del palo, metro di valutazione;</p>
+<p class="Normal3"><span class="hcp1">{T;M}</span><span style="vertical-align: Sub; font-weight: bold;">es</span> le sollecitazioni agenti come carichi applicati, ovvero gli effetti delle azioni di progetto.</p>
+<p>Per la valutazione della sicurezza viene effettuato un calcolo elastico (1) per determinare lo spostamento elastico s(e) ed un calcolo elasto-plastico (2) per determinare lo spostamento totale s(t), la componente plastica dello spostamento totale è quindi s(p) = s(t)-s(e).</p>
+<p>Come detto in precedenza il rapporto fra lo spostamento plastico e quello totale è una misura di quanto sono irreversibili i carichi applicati ed ha limite 1 per carichi che rendono labile il sistema (condizione limite in cui tutto lo spostamento sarebbe plastico). La sicurezza è quindi l'inverso di tale rapporto, considerando il fattore di sicurezza parziale sulle resistenze risulta:</p>
+<p class="hcp2">sic. = [s(t) / s(p)]/<span style="font-family: Symbol, serif;">g</span><span style="vertical-align: Sub;">T</span></p>
+<p>Se dal calcolo elasto-plastico risulta che sono ancora in fase elastica, quindi s(p) = 0, allora i carichi sono totalmente reversibili. Le verifiche sono soddisfatte e risulta:</p>
+<p class="hcp2">sic. &gt; 1</p>
+<p>Se dal calcolo elasto-plastico non ho soluzione perché il sistema è labile, vuol dire che i carichi sono maggiori di quelli limite. Le verifiche non sono soddisfatte e risulta:</p>
+<p class="hcp2">sic. &lt; 1</p>
+<p style="text-align: center;"><img src="Ver_fond_prof_01.gif" alt="" style="border: none;" width="226" height="400" border="0"></p>
+<p>Rispetto alle valutazioni effettuabili da semplici analisi limite, l'utilizzo del metodo appena descritto per effettuare le verifiche di capacità portante per carichi trasversali, ha il vantaggio di poter considerare condizioni generali di variabilità delle proprietà tensodeformative della stratigrafia; permette una lettura dei risultati in cui, oltre ai carichi, è possibile dare una valutazione anche sugli spostamenti generati; permette di effettuare una verifica univoca rispetto alle sollecitazioni agenti (taglio e momento in testa al palo) rappresentative degli effetti delle azioni di progetto per una data combinazione di carico. Peraltro, irrigidendo le proprietà elastiche del palo e del terreno, è possibile simulare le condizioni alla base dell'analisi limite.</p>
+</body>
+</html>

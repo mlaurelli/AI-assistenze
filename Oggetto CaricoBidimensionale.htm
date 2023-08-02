@@ -1,0 +1,43 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Oggetto CaricoBidimensionale</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:normal; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Oggetto CaricoBidimensionale</h1>
+<p>L'oggetto è caratterizzato dalle seguenti proprietà:</p>
+<p class="Normal3"><span class="hcp1">Numero</span> numero del tipo di carico sul muro/elemento bidimensionale.</p>
+<p class="Normal3"><span class="hcp1">Tipo</span> tipo di carico sul muro/elemento bidimensionale. Questa proprietà può assumere i seguenti valori:</p>
+<p class="script1"><span class="hcp1">CARICONULLO</span> <span class="hcp2">carico nullo;</span></p>
+<p class="script1"><span class="hcp1">M_UL</span> <span class="hcp2">carico uniformemente distribuito nel sistema di riferimento locale del</span> muro/elemento bidimensionale<span class="hcp2">;</span></p>
+<p class="script1"><span class="hcp1">M_UG</span> <span class="hcp2">carico uniformemente distribuito nel sistema di riferimento globale;</span></p>
+<p class="script1"><span class="hcp1">M_ID</span> <span class="hcp2">carico idrostatico;</span></p>
+<p class="script1"><span class="hcp1">M_DT</span> dilatazione termica uniforme;</p>
+<p class="script1"><span class="hcp1">M_GT</span> gradiente di temperatura.</p>
+<p class="Normal3"><span class="hcp1">Locale</span> ritorna True se il carico è stato definito nel sistema <span class="hcp2">di riferimento locale dell'elemento muro/elemento bidimensionale.</span></p>
+<p class="Normal3"><span class="hcp1">Carico</span> oggetto <span class="hcp1"><a href="Oggetto%20C3D.htm">C3D</a></span> contenente i valori dei carichi relativi al tipo di carico uniformemente distribuito.</p>
+<p class="Normal3"><span class="hcp1">Ziniziale</span> Z di inizio carico. Se il carico non è del tipo idrostatico setta un codice d'errore.</p>
+<p class="Normal3"><span class="hcp1">Zfinale</span> <span class="hcp2">Z di fine carico.</span> Se il carico non è del tipo <span class="hcp2">idrostatico</span> setta un codice d'errore.</p>
+<p class="Normal3"><span class="hcp1">CaricoIniziale</span> <span class="hcp2">carico iniziale.</span> Se il carico non è del tipo <span class="hcp2">idrostatico</span> setta un codice d'errore.</p>
+<p class="Normal3"><span class="hcp1">CaricoFinale</span> <span class="hcp2">carico finale.</span> Se il carico non è del tipo <span class="hcp2">idrostatico</span> setta un codice d'errore.</p>
+<p class="Normal3"><span class="hcp1">GradY</span> gradiente ter<span class="hcp2">mico in dir. Y.</span> Se il carico non è del tipo gradiente di temperatura setta un codice d'errore.</p>
+<p class="Normal3"><span class="hcp1">DeltaT</span> <span class="hcp2">incremento di temperatura.</span> Se il carico non è del tipo dilatazione termica uniforme setta un codice d'errore.</p>
+<p class="Normal3" style="margin-bottom: 0;"><span class="hcp1">Commento</span> commento inserito dall'utente o creato automaticamente dal programma.</p>
+</body>
+</html>

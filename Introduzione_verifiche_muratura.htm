@@ -1,0 +1,64 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Introduzione verifiche muratura</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Introduzione</h1>
+<p>ModeSt è in grado di eseguire le verifiche di strutture in muratura 
+ ordinaria o armata o miste, sia per azioni statiche (carichi verticali 
+ e/o da vento) che per azioni sismiche, ai sensi delle normative vigenti. 
+ ModeSt è in grado di eseguire anche le verifiche dei cinematismi (meccanismi 
+ locali di collasso) di strutture in muratura ordinaria calcolate sismicamente 
+ con il metodo degli stati limite secondo il D.M. 17/01/18.</p>
+<p>La struttura, modellata con qualche accorgimento (si veda il paragrafo 
+ <span class="hcp1"><a href="Individuazione_dei_maschi_murari.htm">Individuazione 
+ automatica dei maschi e delle fasce</a></span>), ma essenzialmente nel 
+ modo consueto utilizzato per il calcolo FEM, può contenere oltre a elementi 
+ in muratura ordinaria o armata anche elementi in cemento armato come travi, 
+ pilastri, pareti, solette/platee ed elementi in acciaio e legno.</p>
+<p>Qualunque sia il tipo di calcolo richiesto ModeSt procede in prima fase 
+ ad una analisi di tipo FEM nel modo consueto, dalla quale vengono desunte 
+ le sollecitazioni negli elementi strutturali per i carichi verticali (ed 
+ eventualmente sismici se il calcolo sismico richiesto è di tipo FEM) e 
+ sul quale in alcuni casi viene effettuata l'analisi modale necessaria 
+ per le successive elaborazioni.</p>
+<p>Il vantaggio di questo approccio è che le eventuali verifiche degli 
+ altri elementi strutturali (travi, pilastri, ecc.) possono ovviamente 
+ poi essere effettuate normalmente con le relative procedure. Nel caso 
+ di analisi sismica statica non lineare (pushover) i suddetti elementi 
+ strutturali saranno ovviamente soggetti solo alle sollecitazioni derivanti 
+ dalla parte non sismica delle diverse combinazioni di carico.</p>
+<p>ModeSt individua automaticamente dalla struttura i maschi e le fasce 
+ come indicato nel paragrafo <span class="hcp1"><a href="Individuazione_dei_maschi_murari.htm">Individuazione 
+ automatica dei maschi e delle fasce</a></span> ma possono essere inseriti 
+ anche manualmente come indicato nel paragrafo <span class="hcp1"><a href="Inserimento_eliminazione_dei_maschi_e_delle_fasce_manuali.htm">Inserimento 
+ manuale dei maschi e delle fasce</a></span>.</p>
+<p>Per la muratura ordinaria vengono verificate le fasce solo per le azioni 
+ sismiche e i maschi per le azioni statiche, sismiche e dei cinematismi.</p>
+<p>Per la muratura armata, nel caso di calcolo con analisi sismica statica 
+ o dinamica lineare, vengono verificati solo i maschi murari sia per le 
+ azioni statiche che sismiche entrambe effettuate sui <span class="hcp1">maschi 
+ per verifiche sismiche</span>.</p>
+<p>Nel caso di calcolo con analisi sismica statica non lineare (pushover) 
+ il telaio equivalente viene creato dai <span class="hcp1">maschi 
+ per verifiche sismiche</span> (si veda anche &quot;<span class="hcp1"><a 
+	 href="Generazione_telaio_equivalente.htm">Generazione telaio equivalente</a></span>&quot;) 
+ e di conseguenza anche le verifiche sismiche globali dell'edificio.</p>
+<p>Anche prima di avere effettuato il calcolo è possibile, ed è buona regola, 
+ controllare in qualunque momento quali siano i maschi e le fasce in muratura 
+ che ModeSt ha individuato automaticamente.</p>
+</body>
+</html>

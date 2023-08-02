@@ -1,0 +1,81 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Recupero masse secondarie</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+p.hcp2 { font-weight:bold; }
+span.hcp3 { font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Recupero masse secondarie</h1>
+<p>In analisi statica o sismica statica o dinamica lineare è possibile 
+ specificare come devono essere trattate le masse o le forze che non sono 
+ automaticamente riferibili ad un impalcato.</p>
+<p>Quando nella struttura risultano delle masse su nodi che appartengono 
+ all'impalcato 0 e che non siano vincolati in direzione X o Y o RZ, come 
+ in genere accade per i nodi intermedi di piano o i nodi di mesh di elementi 
+ verticali, queste masse possono essere gestite con le seguenti modalità:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">trasferirle al baricentro 
+	 delle masse&#160;dell'impalcato rigido o sui nodi dell'impalcato non 
+	 rigido;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">lasciarle dove sono (sul nodo 
+	 di pertinenza);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">annullare tali masse.</p></li>
+</ul>
+<p>L'impalcato su cui trasferire le masse secondarie può essere quello 
+ superiore più vicino in Z oppure quello più vicino&#160;in assoluto. Nel 
+ caso in cui l'impalcato superiore non esista le masse vengono trasferite 
+ a quello inferiore.</p>
+<p>Per individuare l'impalcato a cui trasferire la massa, il programma 
+ fa riferimento a quanto indicato nel nodo come modalità di trasferimento.&#160;La 
+ modalità di trasferimento è modificabile, dopo aver selezionato il nodo, 
+ nel pannello <span class="hcp1">Proprietà elementi selezionati</span> 
+ selezionandola dalla casella di riepilogo a discesa &quot;Imp. trasf. 
+ masse&quot;.</p>
+<p>Se nel nodo la modalità di trasferimento è automatica, vengono costruiti 
+ i perimetri di impalcato secondo diverse opzioni e poi viene individuato 
+ il perimetro più vicino (sopra o sotto se del caso) in cui ricade la verticale 
+ del nodo.</p>
+<p>Le opzioni sono:</p>
+<p class="hcp2">Dagli elementi appartenenti all'impalcato<span class="hcp3">: per individuare il perimetro vengono 
+ presi in considerazione solo le aste ed i bordi di elementi bidimensionali 
+ che </span>appartengono<span class="hcp3"> all'impalcato.</span></p>
+<p class="hcp2">Dagli elementi giacenti sull'impalcato<span class="hcp3">: per individuare il perimetro vengono 
+ presi in considerazione solo le aste ed i bordi di elementi bidimensionali 
+ i cui nodi </span>giacciono<span class="hcp3"> alla quota 
+ dell'impalcato, anche se appartenenti all'impalcato 0.</span></p>
+<p class="hcp2">Dai solai appartenenti all'impalcato<span class="hcp3">: per individuare il perimetro vengono 
+ presi in considerazione solo le aste di perimetro dei solai i cui nodi 
+ appartengono all'impalcato.</span></p>
+<p>Per gli impalcati rigidi si possono modificare le coordinate X,Y,Z o 
+ solo le X,Y del baricentro delle masse dell'impalcato (calcolato con le 
+ altre) oppure non modificare le coordinate calcolate prima del trasferimento 
+ delle masse secondarie e quindi aumentare solo il valore delle masse su 
+ di esso.</p>
+<p>Non tutti i metodi sono applicabili in relazione al tipo di schematizzazione 
+ del piano rigido. ModeSt rende disponibili di volta in volta solo quelli 
+ applicabili.</p>
+<p>In analisi sismica statica, scegliendo il penultimo tipo di recupero 
+ delle masse secondarie, viene applicata una forza in corrispondenza di 
+ ognuna delle masse.</p>
+<p>Al termine del calcolo statico o sismico è possibile controllare come 
+ sono state trasferite le masse cliccando nel gruppo <span class="hcp1">Disegno</span> 
+ della scheda <span class="hcp1">Risultati</span> su <span class="hcp1">Trasf. masse sec.</span> <img src="../Icone/16/dtms.png" alt="" style="border: Solid 1px #808080; border-width: 1px; border-style: solid;" border="1">.</p>
+</body>
+</html>

@@ -1,0 +1,93 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Introduzione verifiche aste legno</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp3 { font-weight:bold;
+text-decoration:none; }
+font.hcp4 { font-family:Wingdings; }
+span.hcp5 { font-style:normal; }
+span.hcp6 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Introduzione</h1>
+<p>È possibile effettuare la verifica di aste in legno che abbiano:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">numero diverso da zero;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">sezione con verifica prevista 
+	 legno.</p></li>
+</ul>
+<p>La verifica delle aste in legno può essere effettuata in diversi modi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nel gruppo <span class="hcp1">Verifica</span> 
+	 della scheda <span class="hcp1">Post-Processor</span> 
+	 cliccando su <span class="hcp1">Legno</span> <img src="../Icone/32/veracciaio32.png" alt="" border="1" class="hcp2"> e poi su <span class="hcp1">Verifica</span> 
+	 <img src="../Icone/16/verifiche.png" alt="" border="1" class="hcp2">.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nelle <span class="hcp3"><a 
+	 href="Finestre%20di%20modellazione.htm">finestre di modellazione</a></span> 
+	 con il tasto destro sull'asta <font face="Wingdings" class="hcp4"><span class="hcp5">à</span></font> 
+	 <span class="hcp6">Elaborazioni e Ms-Cad</span> <font face="Wingdings" class="hcp4"><span class="hcp5">à</span></font> 
+	 <span class="hcp6">Verifica automatica.</span></p></li>
+</ul>
+<p>Le verifiche vengono effettuate con il metodo delle tensioni ammissibili 
+ (in conformità alla normativa tedesca DIN 1052) e agli stati limite (in 
+ conformità alla normativa EC5 e al D.M. 17/01/18), sia per legno massiccio 
+ che lamellare.</p>
+<p>Da notare che il sistema di riferimento di normativa (assi X e Y) corrisponde 
+ al sistema di riferimento locale adottato in ModeSt (assi Y e Z) in quanto 
+ l'asse X coincide con l'asse dell'asta.</p>
+<p>Per le verifiche secondo la DIN 1052 è possibile indicare nei criteri 
+ di progetto quante combinazioni di carico devono essere considerate di 
+ tipo H (vedi <a href="CriGenLegno.htm#Numero_CC_da_considerare_di_tipo_H"><span class="hcp1">Numero CC da considerare di tipo H</span></a>) 
+ e quante di tipo Hz.</p>
+<p>Per effettuare le verifiche secondo la normativa <span style="font-size: 10.0pt; 
+															 mso-bidi-language: AR-SA;">EC5</span> 
+ e il D.M. 17/01/18 è necessario sia stata definita la durata del carico 
+ per ogni condizione di carico elementare. La durata del carico si assegna 
+ alla tipologia di CCE cliccando nel gruppo <span class="hcp1">Definizioni</span> 
+ della scheda <span class="hcp1">Carichi</span> su <span class="hcp1">Tipi CCE</span> <img src="../Icone/16/tcce.png" alt="" border="1" class="hcp2">, selezionando 
+ nell'elenco la tipologia di CCE, premendo sul tasto &quot;Modifica&quot; 
+ e nella finestra di dialogo selezionando la durata.</p>
+<p>A causa dell'anisotropia del materiale dovuta alla distribuzione casuale 
+ di difetti (nodi, fessurazioni, ecc.) in genere gli assi principali della 
+ sezione non coincidono con gli assi teorici e un carico agente in un piano 
+ di inerzia teorico provoca inflessione lungo entrambe le direzioni principali 
+ della sezione, per cui le verifiche di stabilità vengono sempre effettuate 
+ con riferimento alla snellezza massima relativamente al piano di inflessione 
+ e quello ad esso ortogonale.</p>
+<p>Per le verifiche di stabilità è possibile utilizzare i valori di sollecitazioni 
+ derivanti dal calcolo oppure utilizzare dei &quot;momenti efficaci&quot; 
+ come riportato in letteratura (Giordano), in modo del tutto analogo a 
+ quanto indicato nella CNR 10011 relativa all'acciaio. Essendo la teoria 
+ e lo studio dell'instabilità in fin dei conti del tutto indipendente dal 
+ tipo di materiale, è parso logico estendere le opzioni e le modalità previste 
+ per le verifiche delle aste in acciaio anche alle verifiche delle aste 
+ in legno.</p>
+<p>Viene effettuata la verifica di stabilità anche di membrature costituite 
+ da più aste allineate purché abbiano stesso numero, stessa sezione e stessa 
+ rotazione. Se la membratura così definita è composta da un numero di aste 
+ maggiore di quanto specificato nel criterio di verifica <a href="Crilegno.htm#Max_num_aste_membratura"><span class="hcp1">Massimo numero aste costituenti unica membratura</span></a>, 
+ viene effettuata automaticamente la suddivisione in più membrature.</p>
+<p><span class="hcp1">Argomenti correlati:</span> <span class="hcp3"><a href="Verifiche%20effettuate%20legno.htm">Verifiche 
+ effettuate</a></span></p>
+<p style="margin-bottom: 0;">&#160;</p>
+</body>
+</html>

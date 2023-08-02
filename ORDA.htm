@@ -1,0 +1,78 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>ORDA - Ordisci aste</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:CENTER;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp2 { margin-bottom:0; }
+p.hcp3 { text-align:justify; }
+span.hcp4 { font-weight:bold; }
+span.hcp5 { font-style:italic; }
+span.hcp6 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<p class="TitoloComando">ORDA - Ordisci aste</p>
+<table wrapperparagraphselector="P.SottotitoloComando" cellspacing="0" width="100%" bgcolor="#C0C0C0">
+<tr>
+<td style="width:68%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a2" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Ambiente.htm');return false;">Ambiente</a>: Modellazione</p>
+</td>
+<td style="width:29%;" class="hcp1">
+<p class="hcp2"><a href="javascript:void(0);" id="a3" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Modificatori2.htm');return false;">Modificatori</a>: X, Y</p>
+</td>
+</tr>
+</table>
+<p class="hcp3">Il comando permette di inserire tutta una travata o una pilastrata o comunque una serie di aste allineate specificando semplicemente il primo e l'ultimo nodo di una serie di nodi allineati oppure un insieme di nodi.</p>
+<p class="hcp3">Sintassi del comando:</p>
+<p class="Normal3" style="text-align: justify;"><span class="hcp4">ORDA</span> <font color="#0000FF"><span class="hcp5">Prim</span></font><span class="hcp5"><font color="#0000FF">o</font></span> <font color="#0000FF"><span class="hcp5">nodo dell'allineamento</span></font> / <font color="#0000FF"><span class="hcp5">Ultimo</span></font> <font color="#0000FF"><span class="hcp5">nodo dell'allineamento</span></font></p>
+<p class="Normal3">oppure:</p>
+<p class="Normal3" style="text-align: justify;"><span class="hcp4">ORDA</span> <span style="font-style: normal; font-weight: normal;"><font color="#0000FF">X/Y</font></span></p>
+<p class="Normal2"><span style="text-decoration: underline;"><a href="javascript:void(0);" style="font-weight: bold;" id="a1" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('../Manuale/Setnodi.htm');return false;">Selezionare i nodi</a></span></p>
+<p>Nella prima forma è possibile inserire tutta una travata o una pilastrata o comunque una serie di aste allineate specificando semplicemente il primo e l'ultimo nodo di una serie di nodi allineati.</p>
+<p class="Normal2">Nella seconda forma è possibile ordire travate, pilastrate o comunque una serie di aste allineate specificando semplicemente un insieme di nodi; automaticamente verranno individuati tutti gli allineamenti presenti nella direzione specificata e ordite le aste.</p>
+<p>selezionando i nodi vengono</p>
+<p class="hcp3">Note:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Gli attributi di sezione <span class="hcp6"><a href="SAC.htm">SAC</a></span>, vincolamento <span class="hcp6"><a href="VAC.htm">VAC</a></span>, rotazione <span class="hcp6"><a href="RAC.htm">RAC</a></span>, filo fisso <span class="hcp6"><a href="FAC.htm">FAC</a></span> e numero <span class="hcp6"><a href="NAC.htm">NAC</a></span> delle aste saranno quelli correnti.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">I due nodi possono essere specificati con N numero o cliccando nodi della struttura e punti del lucido.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Se il Primo nodo è omesso viene considerato come primo nodo dell'allineamento l'ultimo nodo inserito.</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="text-align: justify;">Automaticamente ModeSt cerca tutti i nodi intermedi (sullo stesso allineamento) e crea tutte le aste che li collegano con gli stessi attributi di sezione, filo fisso, ecc. ovviamente singolarmente modificabili.</p>
+</li>
+</ul>
+<p class="hcp3"><span class="hcp4">Comandi correlati:</span> <span class="hcp6"><a href="AGGA.htm">AGGA</a></span> aggiunge un'asta. <span class="hcp6"><a href="SPEA.htm">SPEA</a></span> spezza aste.</p>
+<script type="text/javascript" language="JavaScript1.2">
+//<![CDATA[
+        if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+        FilePopupInit('a2');
+        FilePopupInit('a3');
+        FilePopupInit('a1');
+//]]>
+</script>
+</body>
+</html>

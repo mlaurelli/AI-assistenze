@@ -1,0 +1,43 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Calcolo tensioni sul terreno</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:normal; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Calcolo tensioni sul terreno</h1>
+<p>Il calcolo delle tensioni sul terreno viene effettuato con un calcolo a pressoflessione deviata per una sezione non reagente a trazione (parzializzabile), soggetta alle seguenti azioni:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1"><span class="hcp1">Reazioni vincolari agenti</span><span class="hcp2">:</span> le forze calcolate dal solutore FEM come reazioni vincolari sul nodo;</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1"><span class="hcp1">Effetti dovuti ai tagli</span><span class="hcp2">:</span> momenti aggiuntivi dovuti ai tagli agenti sulla testa del plinto, moltiplicati per l'altezza totale del plinto (il plinto è sempre posizionato <span class="hcp1">sotto</span> il nodo);</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1"><span class="hcp1">Effetti dovuti all'eccentricità</span><span class="hcp2">:</span> momenti aggiuntivi dovuti alla diversa posizione del nodo rispetto al baricentro della base del plinto (quindi solo per plinti non simmetrici);</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1"><span class="hcp1">Effetti dovuti al peso proprio</span><span class="hcp2">:</span> sforzo normale ed eventuali momenti dovuti alla diversa posizione del baricentro del volume del plinto rispetto al baricentro della base del plinto (quindi solo per plinti non simmetrici);</p>
+</li>
+<li class="p-Bullet1">
+<p class="Bullet1" style="margin-bottom: 0;"><span class="hcp1">Effetti dovuti ai sovraccarichi e al peso del terreno</span><span class="hcp2">:</span> sforzo normale dovuto al peso del terreno e ad eventuali sovraccarichi indicati nei <span style="font-weight: bold; text-decoration: none;"><a href="Criteri%20di%20progetto%20armatura%20plinti.htm#Sovraccarichi_agenti_sul_plinto">criteri di progetto</a></span>.</p>
+</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,130 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Integratori</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+a.hcp2 { font-weight:bold; }
+img.hcp3 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp4 { mso-bidi-font-weight:bold; }
+span.hcp5 { mso-spacerun:yes; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Integratori</h1>
+<p>All'interno di ModeSt è possibile inserire degli speciali elementi detti 
+ &quot;integratori&quot;.</p>
+<p>Un integratore è definito da due nodi e da un piano individuato da un 
+ elemento bidimensionale.</p>
+<p>L'integratore consente di ottenere le risultanti derivanti dall'integrazione 
+ delle sollecitazioni di un insieme di elementi bidimensionali. Gli integratori 
+ non hanno alcun effetto nel calcolo della struttura e possono essere inseriti 
+ anche dopo che il calcolo è stato eseguito. Dopo che sono stati inseriti 
+ non è necessario eliminarli e reinserirli nel caso in cui si apportino 
+ delle modifiche alla meshatura e/o all'orientamento del sistema di riferimento 
+ locale degli elementi bidimensionali a cui sono associati.</p>
+<p>Si distinguono due tipi di integratori:</p>
+<ul>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Integratori 
+	 longitudinali</p></li>
+	<li class="p-Bullet1" style="font-weight: bold;"><p class="Bullet1">Integratori 
+	 trasversali</p></li>
+</ul>
+<p><a name="Integratori_longitudinali"></a>Gli <span class="hcp1">integratori 
+ longitudinali</span> sono definiti da due nodi e da un piano individuato 
+ da un elemento bidimensionale. L'integratore longitudinale definisce un 
+ unico piano di integrazione, passante per i due nodi ed ortogonale al 
+ piano dove giacciono gli elementi bidimensionali, sul quale vengono restituite 
+ le risultanti dell'integrazione di tutte le sollecitazioni degli elementi 
+ bidimensionali interessati. Oltre a visualizzare le sollecitazioni numeriche 
+ (si veda <a href="Tabelle%20risultati.htm" class="hcp2">Tabelle 
+ risultati</a>), l'integratore longitudinale può essere utilizzato per 
+ progettare interattivamente l'armatura di una sezione in c.a. o per verificare 
+ le sezioni di pannelli X-LAM.</p>
+<p>L'inserimento degli integratori longitudinali si effettua cliccando 
+ nel gruppo <b>Inserimento</b> della scheda <b>Modellazione</b> su <b>Integratori</b> 
+ <span class="hcp1"><img src="../Icone/16/integr.png" alt="" border="1" class="hcp3"> </span>e poi su 
+ <b>Integratori longitudinali</b> <span class="hcp1"><img src="../Icone/16/integrlins.png" alt="" border="1" class="hcp3"> </span><span class="hcp4">e successivamente</span> indicando 
+ il nodo iniziale e finale dove inserire l'integratore e un elemento bidimensionale<span class="hcp5">&#160;</span>che identifica contemporaneamente 
+ sia il piano dove ricercare gli elementi che il lato sul quale integrare 
+ le sollecitazioni.</p>
+<p><a name="Integratori_trasversali"></a>Gli <span class="hcp1">integratori 
+ trasversali</span> sono definiti da due nodi e da un piano individuato 
+ da un elemento bidimensionale. L'integratore trasversale definisce una 
+ serie di piani di integrazione, passanti per i punti di intersezione della 
+ linea congiungente i due nodi con i nodi degli elementi bidimensionali 
+ che giacciono sul piano, ortogonali sia alla linea che ai bidimensionali 
+ e di larghezza uguale alla dimensione della fascia di piano. Su questi 
+ piani vengono restituite le risultanti dell'integrazione di tutte le sollecitazioni 
+ degli elementi bidimensionali interessati. In definitiva si comporta come 
+ un'asta le cui sollecitazioni, oltre a quelle dei piani di integrazione, 
+ possono essere ovunque valutate mediante interpolazioni.</p>
+<p>L'inserimento degli integratori trasversali si effettua cliccando nel 
+ gruppo <b>Inserimento</b> della scheda <b>Modellazione</b> su <b>Integratori</b> 
+ <span class="hcp1"><img src="../Icone/16/integr.png" alt="" border="1" class="hcp3"> </span>e poi su 
+ <b>Integratori trasversali</b> <span class="hcp1"><img src="../Icone/16/integrtins.png" alt="" border="1" class="hcp3"> </span><span class="hcp4">e successivamente</span> 
+ indicando il nodo iniziale e finale dove inserire l'integratore e un elemento 
+ bidimensionale<span class="hcp5">&#160;</span>che identifica 
+ contemporaneamente sia il piano che gli elementi sui quali integrare le 
+ sollecitazioni.</p>
+<p>La fascia di piano è suddivisa in due zone: lato destro e sinistro dell'integratore 
+ trasversale. Le dimensioni di tali zone sono modificabili per consentire 
+ ad esempio di impostare una larghezza uguale alla base della sezione, 
+ per adeguarla quando risulta esterna ai bidimensionali e in tutti gli 
+ altri casi in cui l'utente intenda adottare una diversa larghezza di integrazione. 
+ La modifica delle dimensioni si effettua selezionando l'integratore trasversale 
+ e modificando i valori del &quot;Delta positivo&quot; e/o del &quot;Delta 
+ negativo&quot; nel pannello <span class="hcp1">Proprietà 
+ elementi selezionati</span>. Facciamo osservare che la larghezza della 
+ fascia di piano influisce sul valore delle risultanti.</p>
+<p>Assegnando una sezione non fittizia, si comportano come un'<a href="Asta_virtuale.htm">asta 
+ virtuale</a> e può essere utilizzato per progettare interattivamente l'armatura 
+ di una trave o di un pilastro in c.a.</p>
+<p><a name="Modellazione_integratori_trasversali"></a>Per una corretta 
+ gestione della progettazione e un corretto calcolo delle verifiche dei 
+ nodi e della gerarchia trave-pilastro, nella definizione di travi virtuali 
+ è bene rispettare le seguenti regole:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">se lungo il proprio asse della 
+	 trave sono presenti zone verticali costituite da elementi bidimensionali, 
+	 è bene che la trave virtuale abbia interruzioni prima e dopo la zona 
+	 dei bidimensionali lascendone una parte interamente sovrapposta alla 
+	 zona suddetta.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">se lungo il proprio asse della 
+	 trave sono presenti degli &quot;appoggi&quot; verticali, modellati 
+	 sia con aste sia con elementi bidimensionali, è bene che la trave 
+	 virtuale sia interrotta in corrispondenza degli &quot;appoggi&quot;.</p></li>
+</ul>
+<p><a name="Integratori_longitudinali_multi_linea"></a>Un insieme di integratori 
+ longitudinali caratterizzati dallo stesso numero, tutti integrabili con 
+ forze (si veda <a href="Tecniche_di_integrazione.htm" class="hcp2">Tecniche 
+ di integrazione</a>), giacenti nello stesso piano e riferiti ad elementi 
+ bidimensionali ortogonali al piano stesso e tutti dallo stesso lato identificano 
+ una <span class="hcp1">Multi-Linea</span> di cui vengono 
+ valutate le sollecitazioni riferite alla geometria ed alle sollecitazioni 
+ complessive. La numerazione automatica assegna lo stesso numero ad integratori 
+ lineari che rispettino questi requisiti e mutuamente incidenti, ma è possibile 
+ assegnare lo stesso numero ad integratori di linea geometricamente separati 
+ ma di cui si vogliano assemblare le sollecitazioni.</p>
+<p>Proprio per il motivo che gli integratori longitudinali possono essere 
+ raggruppati se hanno lo stesso numero, per evitare ambiguità non è possibile 
+ ottenere informazioni sulle sollecitazioni di integratori longitudinali 
+ con numero 0.</p>
+<p><b>Utilizzo da linea di comando</b>: <span class="hcp1"><a 
+	 href="../Comandi/AGGI.htm">AGGI</a></span> (Aggiungi integratori).</p>
+<p><span class="hcp1">Argomenti correlati:</span> <span class="hcp1"><a 
+	 href="Asta_virtuale.htm">Asta virtuale</a></span>, <a href="Tecniche_di_integrazione.htm" class="hcp2">Tecniche 
+ di integrazione</a></p>
+</body>
+</html>

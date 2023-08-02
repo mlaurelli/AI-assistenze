@@ -1,0 +1,106 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.27 alla 8.28</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { mso-bidi-font-weight:bold; }
+span.hcp2 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.27 alla 8.28</h1>
+<p>Sono state introdotte le&#160;verifiche di duttilità in modo esplicito&#160;dei 
+ pilastri rettangolari, con la possibilità di considerare o meno l'effetto 
+ del confinamento prodotto dall'armatura trasversale (staffe e legature). 
+ Per i pilastri non rettangolari, le verifiche di duttilità continueranno 
+ ad essere eseguite in modo semplificato.</p>
+<p>È stata introdotta la possibilità di verificare i&#160;meccanismi locali 
+ di collasso (cinematismi) di maschi murari con forature&#160;sia interne 
+ che sui bordi e di definire le quote, oltre a quelle degli impalcati, 
+ alle quali avvengono i meccanismi.</p>
+<p>È stata introdotta la possibilità di <a href="Copia_ed_assegna_progettazione.htm">copiare</a> 
+ la progettazione (armature e rinforzi) di una travata, di una pilastrata 
+ o di un plinto/palo per assegnarla ad analoghi elementi. La nuova procedura 
+ consente anche, entro certi limiti, di adattare la progettazione assegnata 
+ ad elementi della stessa forma ma con dimensioni diverse.</p>
+<p>È stata introdotta la possibilità di esplodere un singolo inviluppo 
+ in modo da generare automaticamente tutte le singole progettazioni degli 
+ elementi facenti parte dell'inviluppo. In questo modo è possibile non 
+ perdere la progettazione dei singoli elementi, quando è necessario rimuovere 
+ un elemento dall'inviluppo per progettarlo o rinforzarlo differentemente 
+ dagli altri.</p>
+<p>Sono state riviste le regole per le quali gli elementi sono inviluppabili 
+ ed aggiunto, al termine della definizione degli inviluppi, il controllo 
+ sulla loro correttezza evidenziando in rosso quelli non corretti&#160;ed 
+ esplicitandone il motivo nel tooltip che compare posizionandovi sopra 
+ il cursore del mouse.</p>
+<p>Nella progettazione automatica ed interattiva dei pilastri è stata introdotta 
+ la possibilità di&#160;differenziare il numero dei ferri non collegati 
+ (legature) nelle zone critiche.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Sono state ottimizzate le 
+	 verifiche delle murature in analisi sismica lineare, al fine di ridurre 
+	 i tempi nella ricerca degli indici di sicurezza<span class="hcp1">.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">È 
+	 stata introdotta la possibilità di specificare il valore dell'incremento 
+	 delle sollecitazioni di taglio nei nuclei dissipativi attraverso il 
+	 parametro </span><span class="hcp2"><a href="Criteri%20di%20progetto%20nuclei.htm#Incremento_dello_sforzo_di_taglio">Incremento 
+	 dello sforzo di taglio</a></span><span class="hcp1"> 
+	 dei criteri di progetto dei nuclei.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Nell'anteprima 
+	 del disegno della progettazione effettuata, visualizzata nell'albero 
+	 del progetto, viene indicato l'ambiente in cui è aperta (Progettazione 
+	 interattiva, Ms-Cad) oppure lo stato attuale della progettazione dell'elemento 
+	 che può essere: valido, non valido o da riverificare.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">È stato migliorato ulteriormente 
+	 il controllo congruenza dati per evitare che siano presenti nel modello 
+	 degli elementi bidimensionali a 4 nodi degeneri che potrebbero portare 
+	 ad avere dei risultati del calcolo non corretti.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Per 
+	 i pilastri già progettati è stata reintrodotta la possibilità di visualizzare 
+	 il tipo di confinamento dei nodi trave-pilastro. Tale visualizzazione 
+	 si effettua attivando il disegno della colorazione dei nodi selezionando 
+	 &quot;Confinamento&quot; nella sezione &quot;Nodi&quot; del pannello 
+	 <span class="hcp2">Colorazioni elementi</span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Nel 
+	 collegamento di tipo &quot;Piastra d'anima&quot; delle aste in acciaio 
+	 è stata aggiunta la possibilità di utilizzare la sezione circolare 
+	 piena per consentire di progettare i collegamenti dei controventi. 
+	 Il collegamento è composto da un manicotto avvitato al finale al cui 
+	 estremo è presente un foro che consente di collegarsi, con un bullone, 
+	 alla piastra saldata sull'ospite.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Nella 
+	 progettazione automatica degli elementi è stata introdotta la possibilità 
+	 di progettare solo gli elementi non progettati, escludendo quelli 
+	 che sono già stati progettati e risparmiando quindi il tempo necessario 
+	 alla progettazione di elementi che non lo necessitano.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;"><span 
+	 style="text-transform: uppercase;">è</span> stata introdotta la possibilità 
+	 di inserire un pilastro fino alla quota dell'ultimo impalcato spezzandolo 
+	 in corrispondenza degli impalcati intermedi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">È 
+	 stata notevolmente migliorata l'importazione della struttura da <a 
+	 href="SCIA_MODEST.htm">SCIA AutoConverter</a>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">Progetto 
+	 dei collegamenti in acciaio anche con la versione 22 di <a href="IDEA_StatiCa_Steel.htm">IDEA 
+	 StatiCa Steel</a>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">È 
+	 stata introdotta la possibilità di esportare la struttura corrente 
+	 per <a href="MODEST_CHECKBOT.htm">IDEA StatiCa Checkbot</a>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-font-weight: bold;">È 
+	 stata introdotta la possibilità nella <a href="Richiesta_assistenza.htm">richiesta 
+	 assistenza</a> di allegare altri file oltre a quelli relativi alla 
+	 struttura.</p></li>
+</ul>
+</body>
+</html>

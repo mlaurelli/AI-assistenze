@@ -1,0 +1,87 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Consigli sulla modellazione</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Consigli sulla modellazione</h1>
+<p>Per una corretta schematizzazione della struttura occorre tenere presente 
+ che:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">i pannelli X-LAM possono essere 
+	 modellati solo con elementi bidimensionali;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">gli elementi bidimensionali 
+	 con numero 0 impediscono la generazione del pannello. L'appartenenza 
+	 o l'accorpamento degli elementi bidimensionali ad uno specifico pannello 
+	 viene stabilita assegnando agli elementi lo stesso numero. È possibile 
+	 in tal modo pilotare la generazione dei pannelli X-LAM;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">gli elementi bidimensionali 
+	 allineati, ma di tipo diverso, non vengono assemblati a costituire 
+	 un unico pannello;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">il grado di libertà in Z dei 
+	 nodi in cui incide una giunzione a taglio è quello assegnato nel modello;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">nel caso di angolo o incrocio 
+	 fra pannelli in cui non sia ben definibile in modo univoco la lunghezza 
+	 del panello (elementi bidimensionali che si compenetrano) il programma 
+	 provvede ad accorciare il pannello parallelo all'asse globale Y. La 
+	 correttezza delle lunghezze calcolate è facilmente controllabile generando 
+	 la carpenteria di piano. In progettazione interattiva è possibile 
+	 allungare o accorciare la dimensione del pannello con i comandi <span class="hcp1">Stira lato sx <img src="../Icone/16/stirapansx.png" alt="" border="1" class="hcp2"></span> 
+	 e<span class="hcp1"> Stira lato dx <img src="../Icone/16/stirapandx.png" alt="" border="1" class="hcp2"></span>. 
+	 Per evitare di dover intervenire sulla maggior parte dei pannelli, 
+	 si consiglia di assegnare ai pannelli, ove possibile, il filo fisso 
+	 eterno o interno (11 o 33);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">le connessioni vengono posizionate 
+	 automaticamente sulla faccia interna del pannello. Per faccia interna 
+	 si intende quella dalla parte negativa dell'asse locale Y dell'elemento 
+	 bidimensionale. La modifica dell'orientamento dell'asse locale Y si 
+	 può effettuare cliccando nel gruppo <span class="hcp1">Strumenti</span> 
+	 della scheda <span class="hcp1">Modellazione</span> 
+	 su <span class="hcp1">Inverte asse locale Y bidimensionali 
+	 <img src="../Icone/16/ialb.png" alt="" border="1" class="hcp2"></span>. 
+	 Ad esempio se vogliamo modellare i pannelli della facciata di un edificio 
+	 con connessioni all'interno dell'edificio, si devono modellare i pannelli 
+	 utilizzando elementi bidimensionali che abbiano l'asse locale Y rivolto 
+	 verso l'esterno;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">l'altezza del pannello è determinata 
+	 dal programma come la differenza tra l'altezza d'interpiano (differenza 
+	 di quota tra i due impalcati consecutivi) e lo spessore degli elementi 
+	 bidimensionale utilizzati per modellare il solaio o la copertura. 
+	 Nel caso in cui gli elementi bidimensionali siano posizionati intradossati 
+	 rispetto al nodo l'altezza del pannello è uguale all'altezza d'interpiano. 
+	 Occorre quindi fare attenzione sia nella definizione delle quote degli 
+	 impalcati che nel posizionamento dei bidimensionali dei solai e delle 
+	 coperture;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">nelle strutture in legno lamellare 
+	 le pareti dell'edificio, per problemi costruttivi, sono generalmente 
+	 composte da un insieme di pannelli allineati e connessi fra di loro, 
+	 mentre le giunzioni a trazione (hold down) vengono posizionate agli 
+	 estremi dell'intera parete. Per questo in progettazione interattiva 
+	 è possibile spezzare il pannello aggiungendo delle connessioni verticali 
+	 in corrispondenza di linee guida determinate automaticamente dal programma 
+	 in funzione della mesh. Tali connessioni vengono considerate a livello 
+	 di calcolo struttura e influiscono ovviamente sul comportamento della 
+	 struttura e sulle sollecitazioni, ma consentono di verificare le giunzioni 
+	 a trazione (hold down) considerando ugualmente il pannello come monolitico. 
+	 La posizione delle linee guida può essere realizzata inserendo delle 
+	 aste verticali con sezione fittizia 0 o -1 prima di meshare gli elementi 
+	 bidimensionali che compongono il pannello oppure raddrizzando e/o 
+	 spostando i nodi di mesh.</p></li>
+</ul>
+</body>
+</html>

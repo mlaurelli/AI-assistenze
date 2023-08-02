@@ -1,0 +1,87 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Criteri generali di verifica aste in acciaio</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-family:Symbol, serif; }
+span.hcp3 { vertical-align:Sub; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Criteri generali di verifica aste in acciaio</h1>
+<p>Si tratta di criteri che stabiliscono alcuni parametri validi per tutte 
+ le aste presenti nella struttura, indipendentemente quindi dal numero 
+ del criterio di verifica assegnato nella definizione della sezione.</p>
+<h2>Verifiche aste in acciaio</h2>
+<p><span class="hcp1"><a name="Num_punti_interni" id="Num_punti_interni"></a>Numero 
+ punti di verifica</span>: specificare il numero di punti interni alle 
+ aste (oltre agli estremi) nei quali effettuare le verifiche. Indipendentemente 
+ da quanto specificato con questo parametro, in modellazione grafica sarà 
+ comunque possibile ottenere le rappresentazioni dei tassi di sfruttamento 
+ in qualunque punto dell'asta.</p>
+<p><span class="hcp1"><a name="Numero_CC_da_considerare_di_tipo_I" 
+										 id="Numero_CC_da_considerare_di_tipo_I"></a>Numero 
+ CC da considerare di tipo I (CNR 10011)</span>: la normativa (par. 3.3.1 
+ della CNR 10011/85) distingue le combinazioni di carico (CC) in combinazioni 
+ di tipo I e di tipo II. Specificare quante sono le combinazioni da considerare 
+ come combinazione di tipo I. Ad esempio specificando 3 verranno considerate 
+ come CC di tipo I le prime 3 CC definite nel calcolo e come CC di tipo 
+ II le successive.</p>
+<p><span class="hcp1"><a name="Verifiche_con_EC3" id="a1"></a>Verifiche 
+ con EC3</span>: specificare se eseguire le verifiche delle aste in conformità 
+ alla normativa Eurocodice 3 (EC3). Questa opzione è utilizzata solo per 
+ le strutture calcolate agli stati limite secondo il D.M. 17/01/18.</p>
+<p><span class="hcp1"><a name="Coeff_amplificativo_sollecitazioni_per_effetti_del_secondo_ordine" 
+										 id="Coeff_amplificativo_sollecitazioni_per_effetti_del_secondo_ordine"></a>Coeff. 
+ amplificativo sollecitazioni per effetti del secondo ordine</span>: nel 
+ paragrafo 4.2.3.4 del D.M. 17/01/18 viene prescritto che l'analisi globale 
+ della struttura può essere eseguita con la teoria del primo ordine quando 
+ il moltiplicatore dei carichi che induce l'instabilità globale della struttura 
+ <span class="hcp2">a</span><span class="hcp3">cr</span> 
+ è maggiore di 10 in caso contrario si deve eseguire un'analisi del secondo 
+ ordine, imponendo l'equilibrio sulla configurazione deformata della struttura. 
+ Tali valori di <span class="hcp2">a</span><span class="hcp3">cr</span> possono essere ottenuti da 
+ un'analisi di buckling oppure valutati utilizzando l'espressione (C4.2.5) 
+ della Circolare del D.M. 14/01/08. In sostituzione dell'analisi del secondo 
+ ordine si può utilizzare un metodo semplificato, valido soprattutto per 
+ le strutture intelaiate e proposto anche nel EC3-1-1 al punto 5.2, in 
+ cui si incrementano gli effetti delle azioni ottenuti dall'analisi lineare 
+ mediante il coefficiente 1/(1-1/<span class="hcp2">a</span><span class="hcp3">cr</span>). Attraverso questo parametro 
+ è possibile specificare di quanto debbano essere incrementate le sollecitazioni 
+ nelle aste derivanti dal calcolo FEM.</p>
+<h2>Stampe</h2>
+<p><span class="hcp1"><a name="Verifiche_da_riportare_in_relazione" 
+										 id="Verifiche_da_riportare_in_relazione"></a>Verifiche 
+ da riportare in relazione</span>: specificare quali delle verifiche effettuate 
+ riportare nella relazione di calcolo. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Tutte</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Aste 
+	 più sollecitate a parità di sezione</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Aste 
+	 più sollecitate a parità di sezione e numero</span></p></li>
+</ul>
+<p style="margin-bottom: 0;"><span class="hcp1">Nota</span>: 
+ le verifiche di stabilità delle membrature vengono stampate in ogni caso 
+ per tutte le membrature verificate.</p>
+<p><span class="hcp1"><a name="Stampa_dettaglio_verifiche" 
+										 id="Stampa_dettaglio_verifiche"></a>Stampa 
+ dettaglio verifiche</span>: specificare se riportare anche le sotto-verifiche. 
+ Questa opzione è utilizzata solo per le strutture calcolate agli stati 
+ limite secondo il D.M. 17/01/18.</p>
+</body>
+</html>

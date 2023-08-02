@@ -1,0 +1,66 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Differenza fra muri ed elementi bidimensionali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Differenza fra muri ed elementi bidimensionali</h1>
+<p>Come già esposto in <span style="font-weight: bold; text-decoration: none; "><a 
+	 href="Nodi%20ed%20elementi.htm">nodi ed elementi</a></span> ModeSt prevede 
+ oltre ai normali elementi bidimensionali a 3 o 4 nodi tipici dei programmi 
+ di calcolo agli elementi finiti, anche degli elementi particolari denominati 
+ <span class="hcp1"><span style="font-style: italic;">muri.</span></span></p>
+<p>I muri hanno le seguenti caratteristiche:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">in sede di calcolo con il 
+	 metodo agli elementi finiti vengono schematizzati come un reticolo 
+	 equivalente di aste e quindi consentono l'uso di solutori con limitate 
+	 capacità di gestione elementi bidimensionali o con problemi di correlazione 
+	 fra elementi bidimensionali e schematizzazione del piano rigido (metodo 
+	 Master-Slave);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">non necessitano di essere 
+	 meshati e quindi utilizzano un numero minore di nodi, il che consente 
+	 la schematizzazione di scale e vani ascensore anche con solutori limitati 
+	 o con la versione Lite di ModeSt;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">se meshati si trasformano 
+	 in elementi bidimensionali;</p></li>
+</ul>
+<p>ma presentano le seguenti limitazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">devono essere verticali, con 
+	 i due nodi inferiori orizzontali, quindi non possono essere utilizzati 
+	 per la schematizzazione di platee o solette;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">devono avere in testa ed al 
+	 piede un'asta, eventualmente fittizia (con sezione 0), con l'asse 
+	 locale X equiverso all'asse locale X del muro;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">in sede di calcolo non accettano 
+	 carichi ortogonali alla loro superficie, né uniformi né idrostatici. 
+	 L'assegnazione di carichi ai muri è quindi inutile, a meno che non 
+	 si intenda procedere alla successiva meshatura del muro, nel qual 
+	 caso i veri elementi bidimensionali generati avranno i carichi assegnati.</p></li>
+</ul>
+<p style="text-align: left; margin-bottom: 0;"><span class="hcp1">Argomenti 
+ correlati:</span> <span class="hcp1"><a href="Schematizzazione%20muri.htm">Schematizzazione 
+ muri</a></span>, <span class="hcp1"><a href="Trasferimento%20dati%20al%20solutore.htm">Trasferimento 
+ dati al solutore</a></span>, <span class="hcp1"><a href="Inserimento_Muri.htm">Inserimento 
+ muri</a></span>, <span class="hcp1"><a href="Inserimento_Muri.htm">Muri 
+ ed elementi bidimensionali</a></span>, <span class="hcp1"><a 
+	 href="Aste%20con%20sezione%20fittizia.htm">Aste con sezione fittizia</a></span></p>
+</body>
+</html>

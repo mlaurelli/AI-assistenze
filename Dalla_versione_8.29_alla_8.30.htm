@@ -1,0 +1,78 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.29 alla 8.30</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.29 alla 8.30</h1>
+<p>È stata introdotta la possibilità di effettuare l'analisi sismica statica 
+ non lineare (pushover) delle strutture in muratura anche con il solutore 
+ Xfinest. <span style="mso-bidi-font-weight: bold;">Questa funzionalità 
+ non è gestita dalle versioni di Xfinest precedenti alla 2023.</span></p>
+<p>I vantaggi rispetto all'analisi effettuata con il solutore interno di 
+ ModeSt sono:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">calcolo a tutti gli effetti 
+	 di strutture miste (muratura, c.a. e acciaio);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">plasticizzazione sia a flessione 
+	 che a taglio di eventuali elementi in c.a. e in acciaio (che con il 
+	 solutore interno di ModeSt non si possono plasticizzare a taglio);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">tempi di calcolo notevolmente 
+	 ridotti.</p></li>
+</ul>
+<p>In questa occasione sono state implementate le seguenti funzionalità:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">la possibilità di visualizzare 
+	 le sollecitazioni derivanti dall'analisi pushover sulle aste del telaio 
+	 equivalente, sia in forma numerica che grafica;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">la visualizzazione del tasso 
+	 di sfruttamento relativo allo stato dei maschi e delle fasce per i 
+	 due estremi, con la possibilità di ottenere dai tooltip le informazioni 
+	 necessarie.</p></li>
+</ul>
+<p>Inoltre sono state riviste le seguenti funzionalità:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">la generazione automatica 
+	 del telaio equivalente (aste corrispondenti alle fasce di piano senza 
+	 gli offset);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">la verifica delle fasce di 
+	 piano (con le formule del par. 7.8.2.2.4 del D.M. 17/01/18 con l'aggiunta 
+	 di una nuova resistenza per le fasce);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">il calcolo del drift per la 
+	 determinazione della rottura dei maschi e delle fasce;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">la relazione relativa allo 
+	 stato evolutivo degli elementi considerati nel telaio equivalente;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">la visualizzazione della curva 
+	 carico-spostamento.</p></li>
+</ul>
+<p>È stata completamente rivista la visualizzazione dei messaggi di anomalia 
+ riscontrati dal programma, in modo da non far perdere l'attenzione del 
+ progettista sulle anomalie importanti a causa di elenchi che a volte possono 
+ risultare anche molto lunghi. Per questo motivo le anomalie sono state 
+ raggruppate e classificate automaticamente con un colore diverso in funzione 
+ della loro importanza (maggiore, media o minore). Inoltre in progettazione 
+ interattiva degli elementi è possibile cliccare sulle righe elencate nel 
+ pannello delle anomalie e visualizzare sul disegno esecutivo il corrispondente 
+ punto o la corrispondente zona dove queste si verificano.</p>
+<p>È stata gestita la dimensione del testo definita nelle impostazioni 
+ di Windows e sono state riviste tutte le icone e le finestre di richiesta 
+ dati in modo che si adattino automaticamente ai monitor con risoluzione 
+ superiore a Full HD (1920x1080).</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nelle opzioni di Xfinest è 
+	 stato reso possibile specificare i criteri di convergenza e le relative 
+	 tolleranze da utilizzare nelle analisi non lineari.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">È stata introdotta la possibilità 
+	 di riaprire una tavola già assemblata per modificarne il contenuto 
+	 (aggiungere o eliminare disegni).</p></li>
+</ul>
+</body>
+</html>

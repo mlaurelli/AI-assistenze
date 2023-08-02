@@ -1,0 +1,126 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.2 alla 8.3</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-family:Symbol, serif; }
+span.hcp3 { vertical-align:Sub; }
+img.hcp4 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.2 alla 8.3</h1>
+<p>La novità più importante introdotta in questa versione riguarda la verifica 
+ di interventi di rinforzo con materiali compositi FRP di travi e pilastri 
+ in c.a. di strutture esistenti calcolate in base al D.M. 17/01/18. I rinforzi 
+ si possono applicare solo a travi e pilastri con sezione rettangolare. 
+ Le verifiche dei rinforzi su nodi trave-pilastro e quelle di resistenza 
+ al fuoco non sono attualmente implementate. Le verifiche vengono eseguite 
+ secondo la CNR DT 200 R1/2012.</p>
+<p>Possibilità di specchiare parti di struttura, il comando risulta utile 
+ ad esempio per la creazione di strutture simmetriche in quanto è possibile 
+ modellare solo metà della struttura.</p>
+<p>Possibilità di esportare il modello nel formato IFC, formato di scambio 
+ dati preferenziale per il mondo della progettazione BIM. Progettare in 
+ modalità BIM significa poter comunicare il proprio progetto e tutti i 
+ dati in esso contenuti con colleghi e partner che usano altri software.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nel caso di pressoflessione 
+	 deviata se il codice della sezione non rientra fra quelli previsti 
+	 in tabella ModeSt (file ProfiliFE.csv nella cartella di nome ETC) 
+	 è possibile specificare se imporre l'appartenenza della sezione alla 
+	 classe 1 attraverso il criterio di progetto <span class="hcp1"><a 
+	 href="Criacc.htm#Usa_classe_1_in_pressoflessione_deviata_se_non_presente_in_archivio">Usa 
+	 classe 1 in pressoflessione deviata se non presente in archivio</a></span>. 
+	 Per maggiori informazioni si veda <span class="hcp1"><a 
+	 href="Classificazione_delle_sezioni.htm">Classificazione delle sezioni</a></span>.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nel paragrafo 4.2.3.4 del 
+	 D.M. 17/01/18 viene prescritto che l'analisi globale della struttura 
+	 può essere eseguita con la teoria del primo ordine quando il moltiplicatore 
+	 dei carichi che induce l'instabilità globale della struttura <span class="hcp2">a</span><span class="hcp3">cr</span> 
+	 è maggiore di 10 in caso contrario si deve eseguire un'analisi del 
+	 secondo ordine, imponendo l'equilibrio sulla configurazione deformata 
+	 della struttura. Tali valori di <span class="hcp2">a</span><span class="hcp3">cr</span> possono essere ottenuti da 
+	 un'analisi di buckling oppure valutati utilizzando l'espressione (C4.2.5) 
+	 della Circolare del D.M. 14/01/08. In sostituzione dell'analisi del 
+	 secondo ordine si può utilizzare un metodo semplificato, valido soprattutto 
+	 per le strutture intelaiate e proposto anche nel EC3-1-1 al punto 
+	 5.2, in cui si incrementano gli effetti delle azioni ottenuti dall'analisi 
+	 lineare mediante il coefficiente 1/(1-1/<span class="hcp2">a</span><span class="hcp3">cr</span>). Utilizzando il parametro 
+	 dei criteri generali di verifica delle aste in acciaio <span class="hcp1"><a 
+	 href="CriGenAcc.htm#Coeff_amplificativo_sollecitazioni_per_effetti_del_secondo_ordine">Coeff. 
+	 amplificativo sollecitazioni per effetti del secondo ordine</a></span> 
+	 è possibile specificare di quanto debbano essere incrementate le sollecitazioni 
+	 nelle aste derivanti dal calcolo FEM.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nel progetto dell'armatura 
+	 dei plinti/pali è possibile velocizzare la fase di progettazione dell'armatura 
+	 utilizzando il parametro dei criteri generali di progetto <a href="Criteri%20di%20disegno%20plinti.htm#Progettazione_e_verifica_armatura_con_sollecitazioni_piu_gravose" 
+	 style="font-weight: bold;">Progettazione e verifica dell'armatura 
+	 con sollecitazioni più gravose</a>. Questo parametro consente di progettare 
+	 l'armatura dei plinti/pali solamente con le sollecitazioni ritenute 
+	 più gravose. Poiché è difficile numericamente determinare quali siano 
+	 le sollecitazioni più gravose, è possibile che le armature progettate 
+	 con tali sollecitazioni possano risultare non verificate relativamente 
+	 alle sollecitazioni delle altre combinazioni. In tal caso, il progettista 
+	 può deselezionare l'opzione e riverificare i plinti/pali per controllare 
+	 se le verifiche sono tutte soddisfatte.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Negli <span class="hcp1"><a 
+	 href="Strumenti.htm">strumenti</a></span> di modellazione sotto <span class="hcp1">Proietta nodi <img src="../Icone/16/proi.png" alt="" border="1" class="hcp4"></span> 
+	 sono stati aggiunti <span class="hcp1">Su riferimento 
+	 verticale <img src="../Icone/16/allvert.png" alt="" border="1" class="hcp4"></span> 
+	 e <span class="hcp1">Su riferimento orizzontale <img src="../Icone/16/alloriz.png" alt="" border="1" class="hcp4"></span> che 
+	 consentono rispettivamente di allineare i nodi rispetto alla verticale 
+	 o orizzontale passante per i nodi selezionati. Lo strumento risulta 
+	 utile per risolvere problemi degli elementi bidimensionali non perfettamente 
+	 rettangolari, requisito richiesto nella verifica delle murature, delle 
+	 pareti e dei nuclei.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Le sezioni disegnate possono 
+	 essere definite importando direttamente la sezione da un file DXF/DWG 
+	 che deve essere disegnata in mm poiché nel programma viene assunto 
+	 che 1 unità di disegno CAD corrisponde a 1 mm.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Modificata la macro <span class="hcp1"><a href="Elenco%20macro%20disponibili%20e%20loro%20uso.htm#ARUT">ARUT</a></span>, 
+	 utilizzata nella modellazione e progettazioni dei plinti indipendenti, 
+	 che consente di importare le reazioni vincolari da un file con estensione 
+	 CSV e crea la matrice diagonale delle combinazioni delle condizioni 
+	 di carico elementari.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Introdotti nei criteri di 
+	 progetto delle verifiche delle aste in acciaio i parametri <a href="Criacc.htm#Max_valore_del_rapporto_tra_altezza_e_spostamento_orizz_aste">Max 
+	 valore del rapporto tra altezza e spostamento orizz. (aste)</a> e 
+	 <a href="Criacc.htm#Max_valore_del_rapporto_tra_altezza_e_spostamento_orizz_memb">Max 
+	 valore del rapporto tra altezza e spostamento orizz. (membrature)</a> 
+	 che consentono di specificare i valori limite di deformabilità per 
+	 i pilastri in acciaio.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Aggiunto nell'installazione 
+	 del programma l'archivio Profilumbra.sez per consentire all'utente 
+	 la definizione delle sezioni ORP (Omega Rinforzato Profilumbra) prodotte 
+	 dall'azienda Profilumbra S.p.A.</p></li>
+</ul>
+</body>
+</html>

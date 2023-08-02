@@ -1,0 +1,88 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Verifica a taglio ciclico</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-family:Symbol, serif; }
+span.hcp2 { font-family:Symbol, serif;
+vertical-align:Sub; }
+span.hcp3 { vertical-align:Sub; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Verifica a taglio ciclico</h1>
+<p>Nel caso di edifici esistenti dissipativi è possibile indicare di effettuare 
+ le verifiche di resistenza in condizioni cicliche&#160;con l'espressione 
+ [C8.7.2.8] come indicato nel paragrafo C8.7.2.3.5 della&#160;Circolare 
+ esplicativa n. 7 del 21/01/19.&#160;La verifica viene effettuata solo 
+ per le strutture calcolate con l'analisi sismica statica o dinamica lineare 
+ ai sensi del D.M. 17/01/18.</p>
+<p style="font-weight: bold;">Le verifiche di resistenza in condizioni 
+ cicliche sono effettuate solo per travi e pilastri in c.a.</p>
+<p>Si fa notare che nella formulazione riportata c'è un refuso: min(0.5; 
+ <span class="hcp1">m</span><span class="hcp2">D,</span><span class="hcp3">pl</span>) in realtà è min(5; <span class="hcp1">m</span><span class="hcp2">D,</span><span class="hcp3">pl</span>). Si confronti con l'espressione 
+ (A.12) del par. A.3.3.1 Eurocodice 8 parte 3.</p>
+<p>La rotazione <span class="hcp1">q</span><span class="hcp3">y</span> corrispondente allo snervamento 
+ viene valutata attraverso la curvatura di snervamento, utilizzando l'espressione 
+ [C8.7.2.7a] del paragrafo C8.7.2.3.4 della&#160;Circolare esplicativa 
+ n. 7 del 21/01/19.</p>
+<p>La rotazione massima <span class="hcp1">q</span><span class="hcp3">m</span> (domanda di rotazione) per il 
+ livello di azione sismica considerata viene valutata in base alle deformazioni 
+ (in analogia all'analisi pushover). Per i pilastri si valuta come rapporto 
+ fra lo spostamento dei nodi e la lunghezza di inflessione del pilastro, 
+ mentre per le travi direttamente dalla rotazione del nodo in prossimità 
+ del punto di verifica.</p>
+<p>La resistenza a taglio in condizioni cicliche (V<span class="hcp3">R</span>) 
+ viene valutata secondo il seguente schema:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">&#956;<span class="hcp2">D</span> 
+	 &lt; 1 : V<span class="hcp3">R </span>è pari al massimo 
+	 valore tra il caso &quot;con staffe&quot; (espressione [4.1.29] del 
+	 D.M. 17/01/18) e il valore relativo al caso &quot;senza staffe&quot; 
+	 (espressione [4.1.23] del D.M. 17/01/18), e il programma verifica 
+	 che la domanda a flessione o a pressoflessione non superi la corrispondente 
+	 capacità al limite elastico;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">&#956;<span class="hcp2">D</span> 
+	 &lt; 2 : V<span class="hcp3">R </span>è pari al massimo 
+	 valore tra il caso &quot;con staffe&quot; (espressione [4.1.29] del 
+	 D.M. 17/01/18) e il taglio con riduzione ciclica (espressione [C8.7.2.8] 
+	 della Circolare esplicativa n. 7 del 21/01/19);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">2 &lt; &#956;<span class="hcp2">D</span> 
+	 &lt; 3 :&#160;VR si calcola mediante interpolazione lineare tra i 
+	 valori di&#160;V<span class="hcp3">R</span> per&#160;&#956;<span class="hcp2">D</span> 
+	 = 2 e&#160;&#956;<span class="hcp2">D</span> 
+	 = 3;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">&#956;<span class="hcp2">D</span> 
+	 &gt; 3 : V<span class="hcp3">R</span> è pari al valore 
+	 relativo alla presenza di riduzione per condizioni cicliche (espressione 
+	 [C8.7.2.8] della Circolare esplicativa n. 7 del 21/01/19).</p></li>
+</ul>
+<p>Alcune precisazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">L'altezza della zona compressa 
+	 (profondità dell'asse neutro) è valutata con riferimento alla curvatura 
+	 di momento ultimo, in modo esatto.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Il calcolo di V<span class="hcp3">W</span> 
+	 per sezioni rettangolari, considerando che usualmente si pone z=0.9d 
+	 (dove &quot;d&quot; è l'altezza utile della sezione) risulta uguale 
+	 a quello di una normale verifica a taglio con&#160;ctg <span class="hcp1">q 
+	 </span>= 1, calcolo per altro da fare per gli ulteriori controlli 
+	 richiesti dalla circolare. Si è optato quindi per calcolarlo&#160;direttamente 
+	 con&#160;&#160;tale verifica, poiché in tal modo è possibile mettere 
+	 in conto anche la quota parte di resistenza relativa ad un eventuale 
+	 rinforzo in FRP o simili della sezione.</p></li>
+</ul>
+<p class="MsoNormal" style="text-autospace: ideograph-numeric;">&#160;</p>
+<p class="MsoNormal" style="text-autospace: ideograph-numeric;">&#160;</p>
+<p class="MsoNormal" style="text-autospace: ideograph-numeric;">&#160;</p>
+</body>
+</html>

@@ -1,0 +1,146 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Calcolo e controllo tensioni tangenziali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:normal; }
+span.hcp2 { font-weight:bold; }
+table.hcp3 { margin-top:14pt; }
+td.hcp4 { vertical-align:TOP;
+padding-left:4px;
+padding-top:4px;
+padding-right:4px;
+padding-bottom:4px; }
+p.hcp5 { margin-bottom:0; }
+img.hcp6 { margin-top:0px;
+margin-bottom:0px;
+margin-left:0px;
+margin-right:0px; }
+font.hcp7 { font-family:Symbol; }
+span.hcp8 { vertical-align:sub; }
+img.hcp9 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Calcolo e controllo tensioni tangenziali</h1>
+<p>Nel caso di calcolo con il metodo delle tensioni ammissibili per il 
+ calcolo delle tensioni tangenziali e di quant'altro necessario per il 
+ progetto e le verifiche a taglio e torsione, si considera come copriferro 
+ il massimo fra i copriferri inferiore e superiore specificati nei criteri 
+ di progetto (<span class="hcp1">vedi</span> <a href="CriTra.htm#Copriferro_teorico_inferiore"><span class="hcp2">Copriferro teorico inferiore</span></a> 
+ <span class="hcp1">e</span> <a href="CriTra.htm#Copriferro_teorico_superiore"><span class="hcp2">Copriferro teorico superiore</span></a>). 
+ Nel seguito, quanto riportato per sezioni a T è valido anche per sezioni 
+ a L, nelle quali la differenza fra centro di taglio e centro di torsione 
+ viene trascurata.</p>
+<p class="Titolo7"><span class="hcp2">Taglio</span></p>
+<p>Le tensioni tangenziali dovute al taglio vengono calcolate per ogni 
+ CC con il metodo seguente:</p>
+<p>Sezioni rettangolari:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="100%" class="hcp3">
+	<tr>
+		<td style="width:27%;" class="hcp4"><p class="hcp5"><img src="tageq1.jpg" alt="" width="143" height="56" border="0" class="hcp6"></p></td>
+		<td style="width:73%;" class="hcp4"><p>dove:</p>
+		<p class="ParametriComando">b = base della sezione</p>
+		<p class="ParametriComando">h = altezza della sezione</p>
+		<p class="ParametriComando" style="margin-bottom: 0;">c = copriferro</p></td>
+	</tr>
+</table>
+<p>Sezioni a T in elevazione ed a T rovescio in fondazione:</p>
+<p>poiché‚ l'ala risulta generalmente tesa nei punti di maggior taglio 
+ (vicino agli appoggi) si considera anche in questo caso:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="100%" class="hcp3">
+	<tr>
+		<td style="width:27%;" class="hcp4"><p class="hcp5"><img src="tageq1.jpg" alt="" width="143" height="56" border="0" class="hcp6"></p></td>
+		<td style="width:73%;" class="hcp4"><p>dove:</p>
+		<p class="ParametriComando">b = larghezza anima</p>
+		<p class="ParametriComando">h = altezza totale della sezione</p>
+		<p class="ParametriComando" style="margin-bottom: 0;">c = copriferro</p></td>
+	</tr>
+</table>
+<p>Nel caso raro di travi a T in fondazione ed a T rovescio in elevazione, 
+ se la soletta risulta avere un'altezza maggiore di 0.3*(h-c) si considera 
+ la stessa formula del caso precedente (l'asse neutro taglia la soletta), 
+ mentre nel caso di soletta sottile (l'asse neutro taglia l'anima) si considera 
+ un braccio della coppia interna pari ad h-s/2 e quindi risulta:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="100%" class="hcp3">
+	<tr>
+		<td style="width:27%;" class="hcp4"><p class="hcp5"><img src="tageq2.jpg" alt="" width="118" height="78" border="0" class="hcp6"></p></td>
+		<td style="width:73%;" class="hcp4"><p>dove:</p>
+		<p class="ParametriComando">b = larghezza anima</p>
+		<p class="ParametriComando">h = altezza totale della sezione</p>
+		<p class="ParametriComando" style="margin-bottom: 0;">s = altezza 
+		 soletta</p></td>
+	</tr>
+</table>
+<p class="Titolo7"><span class="hcp2">Torsione</span></p>
+<p>Le sezioni a T o a L vengono scomposte nei due rettangoli costituenti 
+ l'anima e l'ala ed il momento torcente viene ripartito fra i due rettangoli 
+ con le regole della scienza delle costruzioni. In particolare la rigidezza 
+ torsionale è valutata come C = 3*<font face="Symbol" class="hcp7">b</font>/(<font face="Symbol" class="hcp7">b</font>-0.63) e per il 
+ calcolo di <font face="Symbol" class="hcp7">t</font> si 
+ considera un coefficiente di forma pari a (3*<font face="Symbol" class="hcp7">b</font>+4)/(<font face="Symbol" class="hcp7">b</font>+0.45). In entrambe 
+ le formule <font face="Symbol" class="hcp7">b</font> = 
+ h/b (b &lt; h).</p>
+<p>Nel seguito quanto specificato con riferimento all'<span style="text-decoration: none; ">anima</span> 
+ delle travi a T e a L è valido anche per le sezioni rettangolari.</p>
+<p>Ricordando che le <font face="Symbol" class="hcp7">t</font> 
+ dovute a torsione sono tensioni con andamento &quot;circolare&quot; (dirette 
+ lungo il perimetro della sezione) mentre le <font face="Symbol" class="hcp7">t</font> 
+ dovute al taglio Tz sono dirette secondo l'asse Z locale della sezione, 
+ risulta immediato quanto segue.</p>
+<p>Nell'anima delle sezioni a T si ha:</p>
+<p><img src="torseq1.jpg" alt="" width="196" height="25" border="0" class="hcp6"></p>
+<p>mentre per sezioni a T nel lato orizzontale dell'ala immediatamente 
+ adiacente all'attacco con l'anima (lato interno) si ha:</p>
+<p><img src="torseq2.jpg" alt="" width="204" height="37" border="0" class="hcp6"></p>
+<p>mentre nel fianco dell'ala, immediatamente accanto all'angolo si ha:</p>
+<p><img src="torseq3.jpg" alt="" width="186" height="27" border="0" class="hcp6"></p>
+<p>Si ha quindi:</p>
+<p><img src="torseq4.jpg" alt="" width="179" height="39" border="0" class="hcp6"></p>
+<p>ModeSt determina <font face="Symbol" class="hcp7">t</font><span class="hcp8">tag_anima</span> con le modalità riportate 
+ nel paragrafo precedente e determina <font face="Symbol" class="hcp7">t</font><span class="hcp8">tag_ala</span> con la relazione:</p>
+<p><img src="torseq5.jpg" alt="" width="177" height="55" border="0" class="hcp6"></p>
+<p>Nelle aste in cui la torsione è attivata dai criteri di progetto (vedi 
+ <a href="CriTra.htm#Progetto_a_torsione"><span class="hcp2">Progetto 
+ a torsione</span></a>) il diagramma delle <font face="Symbol" class="hcp7">t</font> 
+ ottenibile in progettazione interattiva cliccando nel gruppo <span class="hcp2">Diagrammi</span> 
+ su <span class="hcp2">Altri <img src="../Icone/16/altri.png" alt="" border="1" class="hcp9"></span> e 
+ poi su <span class="hcp2">Tau <img src="../Icone/16/dtau.png" alt="" border="1" class="hcp9"></span> 
+ subisce alcune modifiche:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">il diagramma di <font face="Symbol" class="hcp7">t</font><span class="hcp8">max_anima</span> 
+	 viene disegnato evidenziando i due valori <font face="Symbol" class="hcp7">t</font><span class="hcp8">tag_anima</span> e <font face="Symbol" class="hcp7">t</font><span class="hcp8">tag_anima</span>+<font face="Symbol" class="hcp7">t</font><span class="hcp8">tors_anima</span>, in modo che si possa 
+	 controllare l'effettivo peso delle <font face="Symbol" class="hcp7">t</font> 
+	 per torsione e per taglio, con i relativi confronti con <font face="Symbol" class="hcp7">t</font><span class="hcp8">c0</span> 
+	 e <font face="Symbol" class="hcp7">t</font><span class="hcp8">c1</span> 
+	 (il diagramma è disegnato in grigio dove <font face="Symbol" class="hcp7">t</font> 
+	 &lt; <font face="Symbol" class="hcp7">t</font><span class="hcp8">c0</span>, in giallo dove <font face="Symbol" class="hcp7">t</font><span class="hcp8">c0</span> 
+	 &lt; <font face="Symbol" class="hcp7">t</font> &lt; 
+	 <font face="Symbol" class="hcp7">t</font><span class="hcp8">c1</span> 
+	 e in rosso dove <font face="Symbol" class="hcp7">t</font> 
+	 &gt; <font face="Symbol" class="hcp7">t</font><span class="hcp8">c1</span>);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="margin-bottom: 0;">nel 
+	 caso di sezioni a T o a L viene disegnato sopra (indipendentemente 
+	 dalla posizione dell'ala) al diagramma di <font face="Symbol" class="hcp7">t</font><span class="hcp8">max_anima</span> anche un secondo diagramma, 
+	 che rappresenta l'andamento di <font face="Symbol" class="hcp7">t</font><span class="hcp8">max_ala</span>.</p></li>
+</ul>
+<p><span class="hcp2">Utilizzo da linea di comando</span>: 
+ <span class="hcp2"><a href="../Comandi/DTAU.htm">DTAU</a></span> 
+ (Disegna tau).</p>
+</body>
+</html>

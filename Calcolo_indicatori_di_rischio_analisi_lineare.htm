@@ -1,0 +1,216 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Analisi lineari con fattore di comportamento</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+i.hcp2 { mso-bidi-font-style:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Analisi lineari con fattore di comportamento</h1>
+<p>La valutazione dell'indice di sicurezza può essere fatta anche attraverso 
+ analisi lineari con fattore di comportamento. Tale metodo non ha i limiti 
+ di applicabilità dell'analisi pushover. In questo caso la duttilità va 
+ stimata a monte dell'analisi ipotizzando il fattore di comportamento, 
+ ed il risultato è fortemente dipendente da tale scelta. Comunque la norma 
+ fornisce indicazioni riguardo i valori massimi dei fattori di struttura 
+ ipotizzabili in funzione del tipo di struttura, sia nuova che esistente.</p>
+<p>Gli indici non sono calcolabili a seguito di analisi non lineari o di 
+ buckling, o con spettri definiti manualmente.</p>
+<p style="font-size: 10pt;">Nel gruppo <span class="hcp1">Ricerca</span> 
+ della scheda <span class="hcp1">Post-Processor</span> cliccando 
+ su <span class="hcp1">Indici di sicurezza</span>&#160;<img src="../Icone/32/calcindrischio32.png" alt="" style="border: Solid 1px #808080; 
+	 border-width: 1px; border-style: solid;" border="1"> si accede ad 
+ un'apposita procedura che permette un calcolo avanzato degli indici di 
+ sicurezza.</p>
+<p>ModeSt è in grado di valutare gli indici di sicurezza separatamente 
+ per i diversi elementi strutturali, divisi in categorie omogenee, e per 
+ tipologia di rottura. Ad esempio è possibile valutare separatamente la 
+ flessione/pressoflessione (rottura duttile),&#160;il taglio (e altre rotture 
+ fragili), la stabilità, la rottura dei nodi (sia quelli trave-pilastro 
+ in c.a. che quelli di strutture in acciaio), la rottura nel piano o fuori 
+ dal piano o per cinematismi (per le strutture in muratura), ecc.</p>
+<p>Al termine del calcolo viene comunque segnalato l'indice di sicurezza 
+ globale come il minimo fra quelli calcolati.</p>
+<p>La possibilità di valutare indici di sicurezza separati è stata introdotta 
+ essenzialmente con due finalità:</p>
+<ul>
+	<li class="p-Bullet1" style="font-size: 10pt;"><p class="Bullet1">L'analisi 
+	 separata delle situazioni critiche dell'edificio fornisce un utile 
+	 strumento che consente di valutare in modo più consapevole eventuali 
+	 interventi di consolidamento o di rinforzo. Ad esempio se una struttura 
+	 ha delle criticità essenzialmente per cinematismi, si può ipotizzare 
+	 un semplice intervento con catene per eliminare gran parte dei meccanismi 
+	 di collasso ed incrementare notevolmente l'indice di sicurezza, oppure 
+	 se i problemi sono di stabilità, potrebbe essere sufficiente introdurre 
+	 dei controventi o altri sistemi che riducano o eliminino tali effetti. 
+	 Con apposite opzioni si individuano anche facilmente quali sono gli 
+	 elementi che necessitano di intervento.</p></li>
+	<li class="p-Bullet1" style="font-size: 10pt;"><p class="Bullet1">Con 
+	 tale procedura è più agevole la compilazione della &quot;<i class="hcp2"><span 
+	 style="mso-bidi-font-size: 12.0pt;">SCHEDA DI SINTESI DELLA VERIFICA 
+	 SISMICA DI EDIFICI STRATEGICI AI FINI DELLA PROTEZIONE CIVILE O RILEVANTI 
+	 IN CASO DI COLLASSO A SEGUITO DI EVENTO SISMICO</span></i> <i class="hcp2">- 
+	 (Ordinanza n. 3274/2003 – Articolo 2, commi 3 e 4, DM 14/01/2008)<span 
+	 style="font-style: normal;">&quot;</span></i>. Tale scheda o altre 
+	 simili vengono richieste da numerosi Geni Civili.</p></li>
+</ul>
+<p>Dalla finestra di dialogo è possibile creare uno o più schemi di calcolo 
+ per la determinazione di un indice di sicurezza. È infatti possibile specificare 
+ quali tipologie di&#160;elementi considerare e quali meccanismi di rottura 
+ valutare. Gli schemi possono essere salvati o caricati da un archivio. 
+ In quello di default fornito con il programma ce ne sono alcuni predisposti 
+ a titolo di esempio. In particolare quelli numerati corrispondono alle 
+ voci richieste nel citato documento della protezione civile, mentre gli 
+ altri corrispondono alle categorie più comunemente definite.</p>
+<p>Nulla vieta ovviamente di creare un unico schema con tutti gli elementi 
+ e tutte le verifiche e procedere al calcolo di un unico indice di sicurezza 
+ globale della struttura.</p>
+<p>Se si procede con schemi separati e si intende ottenere anche il vero 
+ indice di sicurezza globale della struttura accertarsi di non escludere 
+ involontariamente la verifica di alcuni elementi.</p>
+<p>Al termine della procedura di calcolo, ModeSt riporta per ognuno degli 
+ indici richiesti e per ognuno degli stati limite previsti nel calcolo:</p>
+<ul>
+	<li class="p-Bullet1" style="font-size: 10pt;"><p class="Bullet1">PGA 
+	 di domanda e PGA di capacità ed il relativo indice di sicurezza calcolato 
+	 come rapporto fra le due.</p></li>
+	<li class="p-Bullet1" style="font-size: 10pt;"><p class="Bullet1">PVr 
+	 di domanda e di capacità.</p></li>
+	<li class="p-Bullet1" style="font-size: 10pt;"><p class="Bullet1"><span 
+	 style="font-size: 10pt;">Periodi di ritorno (Tr) di domanda e capacità 
+	 ed il relativo indice di sicurezza valutato come il loro rapporto 
+	 elevato alla potenza 0.41 come indicato in alcune circolari delle 
+	 regioni (<a href="http://www.rete.toscana.it/sett/pta/sismica/interventi_ord3728/ordinanza_3728-08_all2.pdf">http://www.rete.toscana.it/sett/pta/sismica/interventi_ord3728/ordinanza_3728-08_all2.pdf</a>) 
+	 e nel citato documento della protezione civile.</span></p></li>
+</ul>
+<p>Alla fine viene riportato un riepilogo generale degli indici di sicurezza 
+ minori fra quelli richiesti.</p>
+<p>La simbologia adottata è la stessa del citato documento.</p>
+<p>Si fa notare che può accadere che in alcuni casi le verifiche richieste 
+ siano già soddisfatte per l'azione sismica di domanda e quindi il relativo 
+ indice di sicurezza sia &gt;1 mentre in altri casi non sia possibile valutare 
+ un periodo di ritorno sufficientemente basso da soddisfare le verifiche 
+ richieste. In tal caso il periodo di ritorno risulta sicuramente &lt;30 
+ anni (minimo di normativa) e il relativo indice di sicurezza non calcolabile 
+ ma sicuramente minore&#160;di quello calcolato per Tr= 30.</p>
+<p>Sono disponibili alcune opzioni:</p>
+<p><span class="hcp1">Separa direzioni del sisma</span>: 
+ gli indici di sicurezza oltre che separatamente per ognuno degli schemi 
+ di calcolo richiesti, vengono calcolati separatamente anche per ognuna 
+ delle direzioni del sisma. Le direzioni vengono valutate considerando 
+ in ogni CC quella che ha maggior moltiplicatore.</p>
+<p><span class="hcp1">Esegui controllo per carichi statici</span>: 
+ viene effettuato un controllo delle verifiche anche per tutte le combinazioni 
+ di calcolo allo stato limite ultimo non sismico per valutare eventuali 
+ criticità anche per soli carichi verticali. Se alcuni elementi non sono 
+ verificati, vengono segnalati. Si fa notare che questa opzione non è equivalente 
+ alle normali procedure di riverifica perché non valuta gli stati limite 
+ di esercizio né rileva il non rispetto di eventuali minimi di normativa.</p>
+<p><span class="hcp1">Crea tabella elementi critici</span>: 
+ viene riportata una tabella di tutti gli elementi non verificati per il 
+ sisma di domanda con il relativo sfruttamento e tipo di rottura, nonché 
+ il valore dello sfruttamento per il sisma di capacità individuato. È proprio 
+ tale tabella che consente di individuare i punti della struttura su cui 
+ converrebbe intervenire con interventi di consolidamento per aumentare 
+ l'indice di sicurezza.</p>
+<p>Nella tabella degli elementi critici sono riportati i tassi di sfruttamento 
+ di domanda (Sfr.D) e quelli di capacità (Sfr.C).</p>
+<p>Il tasso di sfruttamento di domanda è il rapporto fra la sollecitazione 
+ che risulta applicando l'azione sismica richiesta dalla norma per l'adeguamento 
+ nei confronti dello stato limite considerato e la resistenza dell'elemento.</p>
+<p>Le azioni sismiche richieste dalla norma per l'adeguamento sono relative 
+ alle Pvr pari al 5%, 10%, 63% e 81% rispettivamente per gli SLC, SLV, 
+ SLD e SLO. È quindi fondamentale non modificare tali valori in fase di 
+ calcolo per ottenere una corretta valutazione degli indici di sicurezza.</p>
+<p>La tabella degli elementi critici contiene solo gli elementi non adeguati 
+ per la normativa, riportando le verifiche non soddisfatte, quindi i valori 
+ dei tassi di sfruttamento di domanda sono tutti maggiori dell'unità.</p>
+<p>Se due o più tipi di verifica sono stati selezionati nello stesso schema 
+ di calcolo, e più di uno non risulta soddisfatto per l'adeguamento, nella 
+ tabella degli elementi critici viene riportata solo il risultato della 
+ verifica col tasso di sfruttamento maggiore. Per una miglior lettura dello 
+ stato della struttura è quindi consigliabile selezionare un solo tipo 
+ di verifica per un determinato tipo di elemento.</p>
+<p>L'azione sismica di capacità viene definita per ogni stato limite e 
+ per ogni schema di calcolo come la massima azione sismica per cui tutte 
+ le verifiche sono soddisfatte. Il tasso di sfruttamento di capacità è 
+ quindi il rapporto fra la sollecitazione che risulta applicando l'azione 
+ sismica di capacità e la resistenza dell'elemento.</p>
+<p>Fra tutti gli elementi critici ce ne sarà uno (il più critico) le cui 
+ verifiche determinano la capacità sismica.</p>
+<p>Se l'azione sismica di capacità risulta definita per i periodi di ritorno 
+ ammessi (TR &gt; 10 anni, in riferimento alle <a href="http://www.mit.gov.it/sites/default/files/media/normativa/2017-03/DM%2065%20del%2007-03-2017%20All%20A.pdf">Linee 
+ guida per la classificazione del rischio sismico delle costruzioni</a>), 
+ allora per l'elemento più critico risulta un tasso di sfruttamento pari 
+ (o prossimo al più) all'unità, cioè per tale elemento un piccolo incremento 
+ dell'azione sismica rispetto a quella di capacità determina una verifica 
+ non soddisfatta.</p>
+<p>Se anche applicando la minore azione sismica ammessa (quella definita 
+ da un periodo di ritorno TR = 10 anni) alcune verifiche non risultano 
+ soddisfatte, allora i valori della capacità sismica sono indicati come 
+ minori del minimo (TR,C &lt; 10 anni e PGAC &lt; PGA relativa a TR = 10 
+ anni), mentre i tassi di sfruttamento di capacità sono calcolati per la 
+ minore azione sismica ammessa. In tal caso quindi i tassi di sfruttamento 
+ di capacità degli elementi le cui verifiche non sono soddisfatte neanche 
+ con la minor azione sismica ammessa risulteranno maggiori di uno.</p>
+<p>Non è detto che il tasso di sfruttamento vari linearmente in modo omogeneo 
+ per tutti gli elementi in funzione dell'azione sismica, specie per la 
+ pressoflessione la cui resistenza dipende anche dallo sforzo normale. 
+ Quindi è possibile che per un elemento risulti un tasso di sfruttamento 
+ di domanda maggiore di altri, ma che poi abbia un tasso di sfruttamento 
+ di capacità minore degli stessi altri.</p>
+<p>Nel caso in cui si intenda procedere con rinforzi strutturali, nel caso 
+ di edifici in c.a. è sufficiente ripetere il calcolo degli indici dopo 
+ avere inserito in rinforzi negli elementi in c.a. o modificato le caratteristiche 
+ di resistenza della muratura.</p>
+<p style="mso-bidi-font-weight: normal; font-size: 10pt;"><b>Note:</b></p>
+<p><span class="hcp1">Calcolo FEM</span>: si ricorda che 
+ per edifici esistenti la normativa prevede che nel caso di calcolo con 
+ fattore di comportamento i meccanismi di rottura di tipo fragile vengano 
+ valutati con un fattore di comportamento q=1.5. ModeSt gestisce la cosa 
+ automaticamente valutando con q=1.5 gli sforzi taglio se nella scheda 
+ &quot;Dati struttura&quot; è stato indicato &quot;Edificio esistente&quot;.</p>
+<p><span class="hcp1">Calcolo Muratura</span>: se la struttura 
+ è interamente in muratura la normativa suggerisce un fattore di comportamento 
+ q=3 (2.25 se la struttura non è regolare) e non da altre specifiche indicazioni.</p>
+<p><span class="hcp1">Strutture Miste</span>: nel caso di 
+ strutture in muratura con elementi in c.a., acciaio o legno, la normativa 
+ suggerisce che non si possa fare affidamento su comportamenti di tipo 
+ duttile e quindi occorrerebbe usare q=1. È ovviamente una scelta del progettista, 
+ ma si ricorda che calcolando tali strutture come edifici in muratura per 
+ ottenerne le verifiche e poi effettuando anche le verifiche degli elementi 
+ in altri materiali o il calcolo degli indici di sicurezza, ModeSt non 
+ è in grado di valutare in modo differenziato gli sforzi di taglio. Se 
+ si decide di utilizzare un fattore di comportamento &gt;1.5 sarebbe bene 
+ procedere ad un calcolo separato di tipo FEM per la verifica degli elementi 
+ non in muratura.</p>
+<p style="mso-bidi-font-weight: normal;"><b><span style="font-weight: bold; 
+													 font-style: italic;"><a 
+	 name="Elenco_messaggi_di_errore"></a></span>Elenco messaggi di errore:</b></p>
+<p style="font-weight: bold; font-style: italic;">&quot;Tamponature non 
+ presenti o verifiche non previste&quot;</p>
+<p>Controllare che nel modello strutturale siano state inserite e numerare 
+ le tamponature, che nella definizione del <a href="Tipi_tamponature.htm">tipo 
+ di tamponatura</a> sia stata selezionata l'opzione &quot;Area di carico 
+ e verifica&quot; e che nel criterio di progetto, scheda &quot;Parametri 
+ per verifiche&quot;, siano selezionate l'opzione <span class="hcp1"><a 
+	 href="Criteri_di_verifica_tamponature.htm#Verifiche_a_ribaltamento">Verifiche 
+ a ribaltamento</a></span> (necessaria per l'individuazione dell'indice 
+ di sicurezza <span class="hcp1">PRFL</span>) e/o l'opzione<span class="hcp1"> <a href="Criteri_di_verifica_tamponature.htm#Verifiche_per_contenimento_danno">Verifiche 
+ per contenimento del danno</a> </span>(necessaria per l'individuazione 
+ dell'indice di sicurezza <span class="hcp1">DEF</span>), 
+ e che sia stato eseguito l'analisi anche con SLD e/o SLO selezionati nella 
+ scheda &quot;Dati struttura&quot;.</p>
+</body>
+</html>

@@ -1,0 +1,142 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Oggetto Asta</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:bold;
+text-decoration:none; }
+span.hcp3 { font-weight:normal; }
+span.hcp4 { font-style:normal;
+font-weight:normal; }
+span.hcp5 { font-style:normal;
+font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Oggetto Asta</h1>
+<p>L'oggetto è caratterizzato dalle seguenti proprietà:</p>
+<p class="Normal3"><span class="hcp1">Numero</span> numero 
+ dell'asta.</p>
+<p class="Normal3"><span class="hcp1">Sezione</span> oggetto 
+ <span class="hcp2"><a href="Oggetto%20Sezione.htm">Sezione</a></span> 
+ corrispondente alla sezione dell'asta.</p>
+<p class="Normal3"><span class="hcp1">Lunghezza</span> lunghezza 
+ dell'asta.</p>
+<p class="Normal3"><span class="hcp1">Rotazione</span> rotazione 
+ in gradi dell'asta.</p>
+<p class="Normal3"><span class="hcp1">Parametri</span> numero 
+ del parametro aggiuntivo dell'asta.</p>
+<p class="Normal3"><span class="hcp1">Integratore</span> 
+ tipo di integratore. Questa proprietà può assumere i seguenti valori:</p>
+<p class="script2"><span class="hcp1">N</span> Nessuno;</p>
+<p class="script2"><span class="hcp1">T</span> Trasversale;</p>
+<p class="script2"><span class="hcp1">L</span> <span class="hcp3">Longitudinale.</span></p>
+<p class="Normal3"><span class="hcp1">Vincolo</span> oggetto 
+ <span class="hcp1"><a href="Oggetto%20VincoloAsta.htm">VincoloAsta</a></span> 
+ corrispondente al vincolo dell'asta.</p>
+<p class="Normal3"><span class="hcp1">CoeffSottofondo</span> 
+ costante di Winkler.</p>
+<p class="Normal3"><span class="hcp1">FiloFisso</span> codice 
+ del filo fisso dell'asta.</p>
+<p class="Normal3"><span class="hcp1">RigIniziale</span> 
+ lunghezza della zona rigida iniziale dell'asta.</p>
+<p class="Normal3"><span class="hcp1">RigFinale</span> lunghezza 
+ della zona rigida finale dell'asta.</p>
+<p class="Normal3"><span class="hcp1">Indice</span> numero 
+ dell'indice interno dell'asta.</p>
+<p class="Normal3"><span class="hcp1">Selezionata</span> 
+ ritorna True se l'asta è selezionata.</p>
+<p>L'oggetto è caratterizzato dai seguenti metodi:</p>
+<p class="Normal3"><span class="hcp1"><span class="hcp1">R</span>iferimento</span> 
+ oggetto <a href="Oggetto%20Riferimento.htm"><span class="hcp1">Riferimento</span></a> 
+ corrispondente al sistema di riferimento locale dell'asta.</p>
+<p class="Normal3"><span class="hcp1">Scostamenti (e, dir)</span> 
+ scostamenti dal filo fisso corrispondenti all'estremo <span class="hcp1">e</span> 
+ ed al parametro <span class="hcp1">dir</span>.</p>
+<p class="script1">Le costanti ammissibili per <span class="hcp1">e</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">FIRSTNODE</span> <span class="hcp3">restituisce</span> <span class="hcp4">i 
+ dati relativi al primo estremo dell'asta;</span></p>
+<p class="script2"><span class="hcp5">SECONDNODE</span> 
+ <span class="hcp3">restituisce</span> <span class="hcp4">i 
+ dati relativi al secondo estremo dell'asta.</span></p>
+<p class="script1">Le costanti ammissibili per <span class="hcp5">dir</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">YDIR</span> <span class="hcp3">restituisce</span> 
+ gli scostamenti in direzione Y locale dell'asta;</p>
+<p class="script2"><span class="hcp1">ZDIR</span> <span class="hcp3">restituisce</span> 
+ gli scostamenti in direzione Z locale dell'asta.</p>
+<p class="Normal3"><span class="hcp1">Nodo</span> <span class="hcp1">(e)</span> 
+ oggetto <span class="hcp1"><a href="Oggetto%20Nodo.htm">Nodo</a></span><span class="hcp3">.</span></p>
+<p class="script1">Le costanti ammissibili per <span class="hcp1">e</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">FIRSTNODE</span> <span class="hcp3">restituisce</span> <span class="hcp4">i 
+ dati relativi al primo estremo dell'asta;</span></p>
+<p class="script2"><span class="hcp5">SECONDNODE</span> 
+ <span class="hcp3">restituisce</span> <span class="hcp4">i 
+ dati relativi al secondo estremo dell'asta.</span></p>
+<p class="Normal3"><span class="hcp1">SLA (e, sd)</span> 
+ oggetto <span class="hcp2"><a href="Oggetto%20C6D.htm">C6D</a></span> 
+ contenente le sollecitazioni corrispondenti all'estremo <span class="hcp1">e</span> 
+ ed al parametro <span class="hcp1">sd</span>.</p>
+<p class="script1">Le costanti ammissibili per <span class="hcp1">e</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">FIRSTNODE</span> <span class="hcp3">restituisce</span> <span class="hcp4">i 
+ dati relativi al primo estremo dell'asta;</span></p>
+<p class="script2"><span class="hcp5">SECONDNODE</span> 
+ <span class="hcp3">restituisce</span> <span class="hcp4">i 
+ dati relativi al secondo estremo dell'asta.</span></p>
+<p class="script1">Le costanti ammissibili per <span class="hcp1">sd</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">SIGNED</span> <span class="hcp3">restituisce</span> la parte con segno 
+ della sollecitazione;</p>
+<p class="script2"><span class="hcp1">UNSIGNED</span> <span class="hcp3">restituisce</span> l'eventuale parte 
+ priva di segno della sollecitazione.</p>
+<p class="Normal3"><span class="hcp1">PosMMax</span> <span class="hcp1">(dir)</span> restituisce la coordinata 
+ del punto di momento massimo in campata. Se per la sollecitazione richiesta 
+ non si ha un punto di massimo in campata viene settato un codice d'errore.</p>
+<p class="script1">Le costanti ammissibili per <span class="hcp5">dir</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">YDIR</span> <span class="hcp3">restituisce</span> 
+ il punto di massimo My;</p>
+<p class="script2"><span class="hcp1">ZDIR</span> <span class="hcp3">restituisce</span> 
+ il punto di massimo Mz.</p>
+<p class="Normal3"><span class="hcp1">SLAx (x, sd)</span> 
+ oggetto <span class="hcp2"><a href="Oggetto%20C6D.htm">C6D</a></span> 
+ contenente le sollecitazioni corrispondenti al punto di ascissa locale 
+ <span class="hcp1">x</span> ed al parametro <span class="hcp1">sd</span>.</p>
+<p class="script1">Le costanti ammissibili per <span class="hcp1">sd</span> 
+ sono:</p>
+<p class="script2"><span class="hcp1">SIGNED</span> <span class="hcp3">restituisce</span> la parte con segno 
+ della sollecitazione;</p>
+<p class="script2"><span class="hcp1">UNSIGNED</span> <span class="hcp3">restituisce</span> l'eventuale parte 
+ priva di segno della sollecitazione.</p>
+<p class="Normal3"><span class="hcp1">Carico&#160;(nc, ncce)</span> 
+ oggetto <span class="hcp1"><a href="Oggetto%20CaricoAsta.htm">CaricoAsta</a></span> 
+ corrispondente al numero del carico asta <span class="hcp1">nc</span> 
+ della condizione di carico elementare <span class="hcp1">ncce</span>.</p>
+<p class="Normal3"><span class="hcp1">NumeroCarichi&#160;(ncce)</span> 
+ numero dei carichi asta (automatici e manuali) presenti nella condizione 
+ di carico elementare <span class="hcp1">ncce</span>.</p>
+<p class="Normal3"><span class="hcp1">NumeroCarichiManuali&#160;(ncce)</span> 
+ numero dei carichi asta manuali presenti nella condizione di carico elementare 
+ <span class="hcp1">ncce</span>.</p>
+<p class="Normal3"><span class="hcp1">Deformata</span> <span class="hcp1">(p)</span> oggetto <span class="hcp1"><a 
+	 href="Oggetto%20Deformata.htm">Deformata</a></span> inizializzato con 
+ i valori calcolati con passo indicativo pari a <span class="hcp1">p</span>.</p>
+</body>
+</html>

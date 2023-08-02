@@ -1,0 +1,89 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione agli stati limite</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+p.hcp3 { margin-bottom:0; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progettazione agli stati limite</h1>
+<p>La progettazione automatica ed interattiva delle travi per strutture 
+ calcolate agli stati limite avviene con le stesse modalità esposte per 
+ il caso delle tensioni ammissibili.</p>
+<p>In progettazione interattiva occorre fare alcune precisazioni:</p>
+<p>L'armatura teorica visualizzata cliccando nel gruppo <span class="hcp1">Af 
+ teoriche</span> su <span class="hcp1">Aste <img src="../Icone/32/afteoaste32.png" alt="" border="1" class="hcp2"></span> e poi su <span class="hcp1">Aree 
+ di ferro <img src="../Icone/16/dafa.png" alt="" border="1" class="hcp2"></span> 
+ è relativa solamente all'armatura necessaria per le combinazioni di carico 
+ agli stati limite di esercizio e per eventuali minimi di regolamento.</p>
+<p>Non è quindi sufficiente che il diagramma dell'area di ferro effettivamente 
+ presente copra in ogni punto l'area teorica, ma occorre anche che il momento 
+ resistente sia superiore ai momenti agenti per le combinazioni agli stati 
+ limite ultimi. Questo può essere controllato cliccando nel gruppo <span class="hcp1">Diagrammi</span> sia su <span class="hcp1">Momento 
+ <img src="../Icone/16/pmt.png" alt="" border="1" class="hcp2"></span> 
+ che su <span class="hcp1">Inviluppi <img src="../Icone/16/dinv.png" alt="" border="1" class="hcp2"></span>. 
+ Infatti attivando il disegno dei momenti inviluppati viene attivato anche 
+ il disegno del momento con la prescritta traslazione che garantisce la 
+ resistenza a taglio delle armature longitudinali. In ogni caso viene visualizzato 
+ anche il disegno del momento resistente. Quest'ultimo è un diagramma del 
+ tutto analogo a quello dell'area di ferro effettiva ed anch'esso si modifica 
+ in modo dinamico quando si inseriscono, eliminano o modificano dei ferri.</p>
+<p>Analogamente non hanno più senso e non possono essere visualizzati i 
+ diagrammi della tau e dello scorrimento attivabili cliccando nel gruppo 
+ <span class="hcp1">Diagrammi</span> su <span class="hcp1">Altri 
+ <img src="../Icone/16/altri.png" alt="" border="1" class="hcp2"></span> 
+ e poi su <span class="hcp1">Tau <img src="../Icone/16/dtau.png" alt="" border="1" class="hcp2"></span> 
+ o su <span class="hcp1">Scorrimento <img src="../Icone/16/dsco.png" alt="" border="1" class="hcp2"></span>. 
+ Per controllare la correttezza dell'armatura a taglio si devono utilizzare 
+ i diagrammi dell'area delle staffe attivabile cliccando nel gruppo <span class="hcp1">Diagrammi</span> su <span class="hcp1">Area 
+ st. <img src="../Icone/16/dast.png" alt="" border="1" class="hcp2"></span> 
+ e il diagramma del taglio attivabile cliccando nel gruppo <span class="hcp1">Diagrammi</span> 
+ su <span class="hcp1">Taglio <img src="../Icone/16/pt.png" alt="" border="1" class="hcp2"></span>. 
+ In quest'ultimo diagramma attivando il disegno del taglio inviluppato 
+ cliccando su <span class="hcp1">Inviluppi <img src="../Icone/16/dinv.png" alt="" border="1" class="hcp2"></span>, viene visualizzato il taglio a prescindere dal 
+ segno consentendone il confronto con il diagramma del taglio resistente.</p>
+<p>In caso di progettazione ai sensi del D.M. 17/01/18 viene visualizzato 
+ anche il taglio fittizio dovuto ai momenti resistenti di estremità.</p>
+<p>Un altro parametro che può essere visualizzato per valutare la corretta 
+ progettazione della travata è il valore del rapporto x/d (indice di duttilità) 
+ attivabile cliccando nel gruppo <span class="hcp1">Diagrammi</span> 
+ su <span class="hcp1">Altri <img src="../Icone/16/altri.png" alt="" border="1" class="hcp2"></span> e 
+ poi su <span class="hcp1">Rapporto X/D <img src="../Icone/16/deps.png" alt="" border="1" class="hcp2"></span>. 
+ Vengono anche visualizzati i valori massimi di normativa di tale rapporto 
+ ed il valore che corrisponde alla rottura bilanciata.</p>
+<p>Analogamente per travi sottodimensionate può essere impossibile trovare 
+ una combinazione di armatura che soddisfi contemporaneamente la condizione 
+ di duttilità e la copertura del momento ultimo.</p>
+<p class="hcp3">In particolar modo per queste due ultime considerazioni, 
+ può accadere che la progettazione automatica delle armature non riesca 
+ a trovare una combinazione di ferri che soddisfi tutte le verifiche. Il 
+ caso viene ovviamente segnalato ed occorrerà procedere in progettazione 
+ interattiva o rivedere il dimensionamento della trave.</p>
+<p class="hcp3"><span class="hcp1">Utilizzo 
+ da linea di comando</span>: <span class="hcp1"><a href="../Comandi/DAFA.htm">DAFA</a></span> 
+ (Disegna aree di ferro aste), <a href="../Comandi/DMOM.htm"><span class="hcp1">DMOM</span></a>&#160;(Disegna 
+ momento flettente),<span class="hcp1">&#160;</span><a href="../Comandi/DINV.htm"><span class="hcp1">DINV</span></a>&#160;(Disegna inviluppi),<span class="hcp1">&#160;</span><a href="../Comandi/DTAU.htm"><span class="hcp1">DTAU</span></a>&#160;(Disegna tau),<span class="hcp1">&#160;</span><a href="../Comandi/DSCO.htm"><span class="hcp1">DSCO</span></a>&#160;(Disegna scorrimento), 
+ <span class="hcp1"><a href="../Comandi/DAST.htm">DAST</a></span>&#160;(Disegna 
+ area staffe), <span class="hcp1"><a href="../Comandi/DTAG.htm">DTAG</a></span>&#160;(Disegna 
+ taglio), <a href="../Comandi/DEPS.htm"><span class="hcp1">DEPS</span></a>&#160;(Disegna 
+ epsilon).</p>
+</body>
+</html>

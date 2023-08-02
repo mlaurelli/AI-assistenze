@@ -1,0 +1,30 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Trasferimento dati al solutore</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Trasferimento dati al solutore</h1>
+<p>Nel trasferimento dei dati al solutore vengono effettuate alcune trasformazioni dei carichi e/o annullati alcuni carichi.</p>
+<p>Si riportano nei paragrafi seguenti alcune note su questo argomento, ricordando che per "muri" si intendono gli elementi bidimensionali verticali schematizzati con un reticolo equivalente di aste, mentre con "elementi bidimensionali" si intendono i veri elementi bidimensionali (shell) a tre o a quattro nodi derivanti da una mesh.</p>
+<p><span class="hcp1">Carichi concentrati in campata sulle aste</span>: vengono eliminati se si procede al calcolo con <a href="Opzioni%20generali.htm#Uniformizzare_i_carichi_variabili"><span class="hcp1">l'uniformizzazione dei carichi</span></a>. Si ricorda comunque che un carico concentrato in campata può essere introdotto spezzando l'asta in due e applicando il carico sul nodo intermedio.</p>
+<p><span class="hcp1">Carichi variabili o parziali sulle aste</span>: vengono trasformati in carichi uniformi secondo le modalità specificate nei parametri di calcolo alla voce <span style="font-weight: bold; text-decoration: none;"><a href="Opzioni%20generali.htm#Massimizzare_i_carichi_variabili">Massimizzare i carichi variabili</a></span> se si procede al calcolo con <a href="Opzioni%20generali.htm#Uniformizzare_i_carichi_variabili"><span class="hcp1">l'uniformizzazione dei carichi</span></a>.</p>
+<p><span class="hcp1">Carichi sui muri</span>: vengono tutti perduti ad esclusione del peso proprio che viene trasferito per metà all'asta di piede e per metà all'asta di testa. Volendo inserire carichi ortogonali all'elemento o carichi termici occorre procedere alla mesh del muro con conseguente trasformazione in elementi bidimensionali veri e propri.</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Carichi idrostatici sugli elementi bidimensionali</span>: il carico viene trasformato in carico uniforme con riferimento alla media dei valori in corrispondenza dei nodi. Vengono considerati solo gli elementi con baricentro compreso nel campo di applicazione del carico.</p>
+</body>
+</html>

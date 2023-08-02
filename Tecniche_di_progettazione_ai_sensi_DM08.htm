@@ -1,0 +1,215 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Tecniche di progettazione ai sensi D.M. 14/01/08</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+a.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:bold; }
+span.hcp3 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Tecniche di progettazione ai sensi D.M. 17/01/18</h1>
+<p>La progettazione ai sensi del D.M. 17/01/18, e soprattutto la progettazione 
+ dei pilastri in gerarchia delle resistenze richiede che i momenti resistenti 
+ delle travi siano il più possibile vicini a quelli strettamente necessari 
+ alla verifica delle travi stesse, senza sovradimensionamenti di armatura 
+ che porterebbero di conseguenza ad eccessive armature nei pilastri.</p>
+<p>Questo difficilmente si ottiene con la &quot;filosofia di armatura&quot; 
+ che si è adottata fino all'entrata in vigore del D.M. 17/01/18 e che risente 
+ di anni di progettazione in cui questi problemi non si ponevano. Di solito 
+ si armava la campata con i reggistaffe necessari per il momento positivo, 
+ poi si controllava se sovrapponendoli si riusciva a coprire quello negativo 
+ ed eventualmente si integrava con spezzoni sugli appoggi. Se l'armatura 
+ ottenuta semplicemente sovrapponendo i reggistaffe era eccessiva, ciò 
+ non destava preoccupazione, la semplicità della gabbia e la maggior sicurezza, 
+ a fronte di minori oneri di messa in opera e di taglio o sagomatura dei 
+ ferri compensava largamente la sovrabbondanza locale di armatura.</p>
+<p>Con la gerarchia delle resistenze, cioè con la necessità di progettare 
+ telai il cui collasso avvenga in modo duttile, le cose cambiano. Il maggior 
+ momento resistente nelle travi porta ad un aumento a volte drammatico 
+ dell'armatura dei pilastri, di qui la necessità di impostare la progettazione 
+ con tecniche diverse in modo da ottenere un'armatura mirata anche in progettazione 
+ automatica, senza dover intervenire troppo spesso in progettazione interattiva.</p>
+<p>ModeSt ha implementato alcune tecniche di progettazione delle barre, 
+ attivabili con il parametro <a href="CriTra.htm#Minimizzazione_momenti_appoggio_DM08" class="hcp1">Minimizzazione 
+ momenti resistenti d'appoggio (stati limite D.M. 18)</a>, che modificando 
+ il comportamento delle diverse fasi di progetto e consentendo la definizione 
+ di una sequenza di fasi apposite, consente di armare in un modo che limita 
+ la sovracopertura di appoggio (vedi anche la <a href="#Nota_1">Nota 1</a>).</p>
+<p>Si riportano di seguito alcune spiegazioni più dettagliate:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">La fase <span class="hcp2">PFA</span> 
+	 parte dagli appoggi e controlla la necessità di armatura a destra 
+	 e sinistra spingendosi fino alla mezzeria delle campate, per poi inserire 
+	 il quantitativo di ferri strettamente necessario a coprire il momento 
+	 flettente massimo individuato e (se in qualche punto non sono presenti 
+	 già altri ferri) garantendo la presenza di almeno due barre che possano 
+	 fare la funzione di reggistaffe. Anche se il ferro è necessario solo 
+	 per una piccola parte dell'appoggio, viene in ogni caso prolungato 
+	 oltre la zona critica. Il progetto viene fatto anche per l'armatura 
+	 eventualmente necessaria all'intradosso.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">La fase <span class="hcp2">PRG</span> 
+	 invece parte dal centro della campata e controlla la necessità di 
+	 armatura a destra e sinistra spingendosi fino all'inizio delle zone 
+	 critiche. Se nei criteri che gestiscono il numero e diametro dei reggistaffe 
+	 (si veda&#160;<a name="Reggistaffe_superiori_inferiori1" id="Reggistaffe_superiori_inferiori1"></a><a href="CriTra.htm#Reggistaffe_superiori_inferiori" class="hcp1">Reggistaffe 
+	 superiori/inferiori</a>) sono attivate le opzioni automatiche viene 
+	 ricercata una combinazione di barre che garantisca la copertura del 
+	 momento, con almeno 2 barre o il numero necessario per rispettare 
+	 i minimi dovuti all'eventuale torsione. Il progetto viene fatto anche 
+	 per l’armatura eventualmente necessaria all’estradosso. La copertura 
+	 di appoggio non è quindi garantita da questa fase da sola.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">La fase <span class="hcp2">SRG</span> 
+	 sovrappone verso destra o verso sinistra o in entrambe le direzioni 
+	 i reggistaffe già progettati indipendentemente dal tipo particolare 
+	 di sovrapposizione reggistaffe (larghezza pilastro o quantità fissa) 
+	 indicato nei criteri. La sovrapposizione viene eseguita se migliora 
+	 o garantisce (anche in modo sovrabbondante purché nei limiti della 
+	 &quot;<span class="hcp2"><a href="CriTra.htm#Tolleranza_di_copertura_da_sovrapposizione">Tolleranza 
+	 di copertura da sovrapposizione</a></span>&quot;) la copertura all'appoggio. 
+	 Il concetto è di usare le barre già inserite in campata per coprire 
+	 anche gli appoggi. Anche se la sovrapposizione è necessaria solo per 
+	 una piccola parte dell'appoggio, le barre vengono in ogni caso prolungate 
+	 oltre la zona critica.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">La fase <span class="hcp2">SFA</span> 
+	 individua i ferri in prossimità dell'appoggio che possono essere &quot;candidati&quot; 
+	 alla sovrapposizione e valutando tutte le possibili combinazioni di 
+	 sovrapposizione sceglie quella che minimizza la copertura nei limiti 
+	 di tolleranza imposti dal parametro &quot;<span class="hcp2"><a 
+	 href="CriTra.htm#Tolleranza_di_copertura_da_sovrapposizione">Tolleranza 
+	 di copertura da sovrapposizione</a></span>&quot;.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">La fase <span class="hcp2">ARF</span> 
+	 invece di arrotondare le lunghezze dei ferri allungandoli indiscriminatamente 
+	 verso destra e verso sinistra per ottenere la lunghezza desiderata, 
+	 controlla che l'allungamento non vada ad interessare uno dei punti 
+	 di verifica dove vengono calcolati i momenti resistenti e che il ferro 
+	 non vada a terminare in zona critica. Se ciò accade solo da un lato, 
+	 il ferro viene allungato dall'altro, altrimenti si rinuncia all'arrotondamento.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">La fase <span class="hcp2">UFA</span> 
+	 controlla (partendo dai più corti) i ferri che iniziano poco lontano 
+	 da dove ne termina un altro e se le distanze e le differenze fra diametri 
+	 sono compatibili con i criteri, li unifica utilizzando come diametri 
+	 e numero barre quelli maggiori fra i due. È una fase che quindi diminuisce 
+	 il numero di spezzoni presenti nella travata ma ovviamente può portare 
+	 ad una copertura eccessiva di momento.</p></li>
+</ul>
+<p>Le altre fasi si comportano sempre nello stesso modo. <span class="hcp2">Si 
+ consiglia quindi di non usare</span> le fasi <span class="hcp2">EFB</span> 
+ (<span class="hcp2">E</span>stendi <span class="hcp2">F</span>erri 
+ ai <span class="hcp2">B</span>locchi), <span class="hcp2">UFA</span> 
+ (<span class="hcp2">U</span>nifica <span class="hcp2">F</span>erri 
+ <span class="hcp2">A</span>diacenti), <span class="hcp2">UFS</span> 
+ (<span class="hcp2">U</span>nifica <span class="hcp2">F</span>erri 
+ <span class="hcp2">S</span>ovrapposti) e <span class="hcp2">EAT</span> 
+ (<span class="hcp2">E</span>limina <span class="hcp2">A</span>ncoraggi 
+ <span class="hcp2">T</span>esi) che portano quasi sempre 
+ ad un aumento dei momenti resistenti.</p>
+<p>Tutto ciò premesso, si riportano alcune considerazioni di carattere 
+ generale:</p>
+<ol style="list-style: lower-alpha;">
+	<li class="p-Elenco1"><p class="Elenco1">Una strategia di progettazione 
+	 che inizia con <span class="hcp2">PFA</span> non trova 
+	 ferri preesistenti e quindi copre al minimo gli appoggi spingendosi 
+	 fino al centro della campata. Una eventuale successiva fase <span class="hcp2">PRG</span> generalmente non ha effetto. 
+	 Una eventuale fase <span class="hcp2">UFA</span> andrà 
+	 quindi ad unificare i ferri di appoggio dei due pilastri della campata 
+	 portando a volte ad una sovracopertura di quello meno sollecitato. 
+	 Se si hanno però piccole differenze tra i momenti destri e sinistri 
+	 agli appoggi operare in questo modo ben si presta alla generazione 
+	 di un'armatura ottimizzata agli appoggi, evitando la sovrapposizione 
+	 nelle zone critiche e riducendo al minimo il numero di spezzoni.</p></li>
+	<li class="p-Elenco1"><p class="Elenco1" style="margin-bottom: 0pt;">Una 
+	 strategia di progettazione che inizia con <span class="hcp2">PRG</span> 
+	 demanda ovviamente la copertura di appoggio alle fasi successive:</p></li>
+</ol>
+<p class="IndentBullet1">Se la fase successiva è <span class="hcp2">PFA</span>, 
+ si avrà la copertura degli appoggi indipendente da quanto necessario in 
+ campata ma le sovrapposizioni dei ferri saranno tutte interne alla trave. 
+ Una successiva immediata fase <span class="hcp2">UFA</span> 
+ comporterà spesso l'incremento della copertura d'appoggio in quanto l'unificazione 
+ ad esempio dei reggistaffe delle campate adiacenti andrà a creare sovrapposizioni 
+ con i ferri strettamente necessari sull'appoggio già progettati da <span class="hcp2">PFA</span>. Una eventuale successiva fase 
+ <span class="hcp2">SRG</span> non ha in genere effetto in 
+ quanto la copertura d'appoggio è già garantita, mentre <span class="hcp2">URG</span> 
+ diminuisce la spezzonatura ma aumenta la copertura.</p>
+<p class="IndentBullet1">Proseguendo invece dopo <span class="hcp2">PRG</span> 
+ direttamente con <span class="hcp2">SRG</span> si garantisce 
+ una minima spezzonatura, demandando alla successiva fase <span class="hcp2">PFA</span> 
+ la eventuale copertura con spezzoni se le sovrapposizioni non fossero 
+ sufficienti.</p>
+<p>Da quanto detto sembrerebbe quasi corretto eliminare sempre la fase 
+ <span class="hcp2">UFA</span>, ma occorre tenere presente 
+ che ad esempio nelle travate ad una sola campata ciò comporterebbe la 
+ generazione di una armatura con un eccessivo numero di spezzoni: a sinistra 
+ (superiori e inferiori), e a destra (superiori e inferiori), quando invece 
+ è preferibile in genere armare tali travi con ferri superiori e inferiori 
+ andanti.</p>
+<p>Volendo impratichirsi con il programma, può esser utile perdere un poco 
+ di tempo con degli esempi eseguendo manualmente in progettazione interattiva 
+ le varie fasi, in modo da capirne il comportamento.</p>
+<p><a name="Criteri"></a>Con l'installazione del programma vengono comunque 
+ forniti dei criteri di progetto in cui si è cercato di fornire delle strategie 
+ di progetto adatte per i casi più comuni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Il criterio &quot;<span class="hcp3">Travi 
+	 a una o più campate con geometria variabile</span>&quot; è concepito 
+	 per gestire le travate di tutte le configurazioni. Viene generalmente 
+	 generata un'armatura che minimizza l'armatura agli appoggi, evita 
+	 la sovrapposizione nelle zone critiche ma non è detto che riduca al 
+	 minimo il numero di spezzoni. Gestisce al meglio anche travi con cambi 
+	 di sezione e situazioni complesse in cui i ferri non possono sempre 
+	 proseguire a destra e sinistra del pilastro.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Il criterio &quot;<span class="hcp3">Travi 
+	 a più campate a luci disuniformi</span>&quot; è concepito per le travate 
+	 composte da campate di stessa sezione ma di diversa lunghezza ed in 
+	 cui si hanno forti differenze tra i momenti negativi di pilastri consecutivi. 
+	 Questa strategia genera un'armatura che in alcuni casi non minimizza 
+	 l'armatura agli appoggi, ma con forti discontinuità di momento è la 
+	 più adatta. Poiché la fase <span class="hcp2">UFA</span> 
+	 non viene eseguita, questa strategia non è invece molto adatta per 
+	 travi ad una sola campata.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Il criterio &quot;<span class="hcp3">Travi 
+	 a una o più campate a luci quasi uniformi</span>&quot; è concepito 
+	 per travate composte da campate di stessa sezione di &quot;uguale&quot; 
+	 lunghezza ed in cui non si hanno forti differenze tra i momenti negativi 
+	 di pilastri consecutivi a destra e sinistra degli appoggi. Questa 
+	 strategia genera un'armatura che in alcuni casi non minimizza del 
+	 tutto l'armatura agli appoggi, ma che riduce al minimo il numero di 
+	 spezzoni.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nel criterio &quot;<span class="hcp3">Travi 
+	 a più campate con armatura minimale</span>&quot; vengono eseguite 
+	 solo le fasi <span class="hcp2">PFA</span> <span class="hcp2">PFP</span> 
+	 <span class="hcp2">PST</span>. Questo comporta la minimizzazione 
+	 totale dei momenti di appoggio, e quindi può essere utilizzata in 
+	 prima fase per determinare se i pilastri sono progettabili in gerarchia 
+	 delle resistenze almeno quando le travi sono armate al minimo sugli 
+	 appoggi.</p></li>
+</ul>
+<p>Nota 1)</p>
+<p><a name="Nota_1" id="Nota_1"></a>Poiché la progettazione dei telai in 
+ gerarchia delle resistenze prevede che le sollecitazioni di verifica dei 
+ pilastri siano influenzate dai momenti resistenti all'appoggio sia negativi 
+ che positivi (questi ultimi a volte non corrispondenti ad effettivi momenti 
+ agenti) si può intervenire anche sul parametro &quot;<span class="hcp2"><a 
+	 href="CriTra.htm#Tipo_di_distribuzione_armatura_eccedente">Tipo di 
+ distribuzione armatura eccedente</a></span>&quot; in modo da far calcolare 
+ a ModeSt i momenti resistenti ipotizzando che l'area di ferro effettivamente 
+ disposta ed eccedente quella teorica strettamente necessaria per flessione 
+ venga utilizzata tutta per garantire la resistenza a taglio. Questo a 
+ nostro avviso è però ingegneristicamente poco giustificabile. Il comportamento 
+ della trave al limite ultimo sarà verosimilmente quello in cui il momento 
+ ultimo insieme al taglio da gerarchia portano allo snervamento le barre. 
+ Pare quindi più plausibile ripartire l'area di ferro eccedente in maniera 
+ proporzionale alle aree teoriche necessarie.</p>
+</body>
+</html>

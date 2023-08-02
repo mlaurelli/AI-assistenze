@@ -1,0 +1,91 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Classe di rischio</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+a.hcp1 { font-family:Verdana, sans-serif; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Classe di rischio</h1>
+<p>Per qualsiasi struttura è possibile definire la classe di rischio sismico 
+ ai sensi del <a href="http://www.mit.gov.it/normativa/decreto-ministeriale-numero-65-del-07032017" class="hcp1">Decreto ministeriale 
+ numero 65 del 07/03/2017</a>. L'attribuzione della classe di rischio viene 
+ eseguita col metodo convenzionale descritto nelle <a href="http://www.mit.gov.it/sites/default/files/media/normativa/2017-03/DM%2065%20del%2007-03-2017%20All%20A.pdf" class="hcp1">Linee 
+ guida per la classificazione del rischio sismico delle costruzioni</a>. 
+ Tale metodo si basa sulla definizione sia di un parametro economico (PAM), 
+ calcolato dalla frequenza media annua di superamento di ogni stato limite 
+ il cui controllo è richiesto dalla normativa corrente, che di un parametro 
+ di resistenza (IS-V), rappresentato dall'Indice di sicurezza per l'SLV.</p>
+<p>La definizione della frequenza media annua di superamento degli stati 
+ limite e dell'indice di sicurezza per l'SLV, e quindi della classe di 
+ rischio sismico, può avvenire da analisi lineari o non lineari (pushover). 
+ In ogni caso risulta indispensabile l'analisi considerando l'SLV e l'SLD. 
+ Le frequenze medie annue di superamento dell'SLC e dell'SLO, se non considerati 
+ nell'analisi, sono dedotte rispettivamente da quelle dell'SLV e dell'SLD.</p>
+<p class="Titolo7"><a name="Classe_di_rischio_analisi_lineare"></a>Analisi 
+ lineare</p>
+<p>Per determinare la classe di rischio è necessario individuare gli <a 
+	 href="Calcolo_indicatori_di_rischio_analisi_lineare.htm">Indici di 
+ sicurezza</a>. È quindi indispensabile creare gli schemi di calcolo per 
+ determinare gli indici di sicurezza in modo da definire i periodi di ritorno 
+ di capacità di tutti gli stati limite necessari ed in particolare allo 
+ SLD/SLO.</p>
+<p>Premesso che le verifiche allo SLD/SLO, che riguardano la valutazione 
+ del drift di piano, devono essere eseguite sugli elementi non strutturali, 
+ abbiamo scelto di effettuarle sulle tamponature. Per questo è necessario 
+ nella definizione del <a href="Tipi_tamponature.htm">tipo di tamponatura</a>, 
+ selezionare l'opzione &quot;Area di carico e verifica&quot; e specificare 
+ un criterio di progetto nel quale deve essere selezionata l'opzione <span 
+	 style="font-weight: bold;"><a href="Criteri_di_verifica_tamponature.htm#Verifiche_per_contenimento_danno">Verifiche 
+ per contenimento del danno</a></span>, presente nella scheda &quot;Parametri 
+ per verifiche&quot;. Infine occorre inserire e numerare le tamponature 
+ nel modello strutturale, eseguire l'analisi considerando anche l'SLD e/o 
+ l'SLO (selezionati nella scheda &quot;Dati struttura&quot;) e calcolare 
+ l'indice di sicurezza anche per la deformabilità (DEF) delle tamponature.</p>
+<p class="Titolo7"><a name="Classe_di_rischio_analisi_non_lineare"></a>Analisi 
+ non lineari (pushover)</p>
+<p>Per gli edifici in muratura, se il rapporto q* (tra il taglio totale 
+ agente sulla base del sistema equivalente ad un grado di libertà calcolato 
+ dallo spettro di risposta elastico ed il taglio alla base resistente del 
+ sistema equivalente ad un grado di libertà) risulta maggiore di 3, la 
+ struttura risulta non verificata ai sensi della normativa corrente. Limitandosi 
+ a tale controllo non sarebbe possibile definire gli indici di sicurezza 
+ né, di conseguenza, le frequenze medie annue di superamento degli stati 
+ limite. Per consentire una valutazione della classe di rischio anche nelle 
+ suddette condizioni è necessario stimare il q* &quot;disponibile&quot; 
+ della struttura ricalcolando lo spostamento di capacità come quello di 
+ domanda che risulterebbe dall'azione sismica per la quale si ottiene q*=3. 
+ Da tale valutazione si ottiene un indice di sicurezza pari a 3/q*, che 
+ rappresenta il limite superiore di quello calcolato dalla curva bilineare 
+ equivalente. Dall'indice di sicurezza si ricava la PGA e quindi il periodo 
+ di ritorno di capacità e la frequenza media annua di superamento degli 
+ stati limite.</p>
+<p>I risultati di un'analisi pushover non possono essere ritenuti validi 
+ se la struttura è soggetta a cinematismi, o in generale da rotture locali 
+ per azioni ortogonali al piano di elementi in muratura, per un'azione 
+ sismica inferiore a quella di capacità risultante dall'analisi globale. 
+ Per questo, ai fini dell'attribuzione della classe di rischio, la capacità 
+ della struttura è definita come la minore risultante dalle verifiche globali 
+ e locali.</p>
+<p>La tabella dei parametri spettrali allegata alla normativa fornisce 
+ dati relativi ad azioni sismiche per periodi di ritorno compresi fra 2475 
+ e 30 anni. Le linee guida per la classificazione del rischio sismico delle 
+ costruzioni permettono di considerare periodi di ritorno fino a 10 anni, 
+ scalando proporzionalmente le ordinate dello spettro associato al periodo 
+ di ritorno di 30 anni. Inoltre le linee guida definiscono lo stato limite 
+ di &quot;inizio danno&quot; in corrispondenza dell'azione sismica relativa 
+ ad un periodo di ritorno di 10 anni, indipendentemente dalla vita di riferimento. 
+ Il periodo di ritorno di capacità di 10 anni rappresenta quindi il limite 
+ inferiore per ogni stato limite della struttura.</p>
+</body>
+</html>

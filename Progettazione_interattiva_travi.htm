@@ -1,0 +1,478 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione interattiva travi</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+p.hcp3 { font-weight:normal; }
+font.hcp4 { font-family:Symbol; }
+span.hcp5 { vertical-align:sub; }
+p.hcp6 { font-weight:bold; }
+span.hcp7 { font-weight:normal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progettazione interattiva travi</h1>
+<p>Nell'ambiente di progettazione interattiva travi, se l'armatura della 
+ travata era già stata precedentemente progettata e archiviata verrà richiamata, 
+ altrimenti verrà creato il solo disegno geometrico della travata. Al termine 
+ della progettazione è possibile archiviare la travata e creare o aggiornare 
+ i file necessari. È anche possibile consultare il tutorial: <span class="hcp1"><a 
+	 href="Guida.chm::/Progettazione_interattiva_armature_travi.htm">Progettazione 
+ interattiva armature travi</a></span><span style="font-style: italic;">.</span></p>
+<p>Se ModeSt segnala il messaggio &quot;ATTENZIONE: Individuate n campate 
+ - definizione appoggi dubbia.&quot;, occorre controllare che l'individuazione 
+ automatica delle campate sia avvenuta correttamente. Per comprendere quali 
+ siano le campate individuate automaticamente da ModeSt è sufficiente disegnare 
+ il diagramma del momento flettente cliccando nel gruppo <span class="hcp1">Diagrammi</span> 
+ su <span class="hcp1">Momento <img src="../Icone/16/pm.png" alt="" border="1" class="hcp2"></span>: 
+ i diagrammi disegnati a tratteggio rappresentano i minimi di ql<span style="vertical-align: super;">2</span>/n 
+ e quindi riflettono la definizione delle campate. Si veda anche <span class="hcp1"><a href="Individuazione%20delle%20campate.htm">Individuazione 
+ delle campate</a></span>. Per eventualmente definire nei punti ambigui 
+ un appoggio cliccare nel gruppo <span class="hcp1">Altri</span> 
+ su<span class="hcp1"> Appoggi <img src="../Icone/16/definisciappoggio.png" alt="" border="1" class="hcp2"></span> 
+ e poi su <span class="hcp1">Aggiungi <img src="../Icone/16/aggiungiappoggio.png" alt="" border="1" class="hcp2"></span>.</p>
+<p>Durante la progettazione interattiva è possibile anche eseguire una 
+ o più <span style="font-weight: bold; text-decoration: none; "><a href="Fasi%20di%20progetto.htm">fasi 
+ di progetto</a></span> della progettazione automatica: ad esempio si possono 
+ eseguire le fasi PFS e PFP per far progettare a ModeSt automaticamente 
+ i ferri sagomati ed i ferri di parete (se necessari), inserire manualmente 
+ parte dell'armatura longitudinale, eseguire PFA per coprire quello che 
+ manca, modificare dei ferri ed eseguire la fase PST per progettare automaticamente 
+ le staffe ed eventualmente modificarle.</p>
+<p>Si riportano di seguito i comandi principali raggruppati per funzionalità:</p>
+<h2 class="Titolo5">Proprietà correnti</h2>
+<p>Nella sezione <span class="hcp1">Ferri</span> del pannello 
+ <span class="hcp1">Proprietà correnti</span> è possibile: 
+ stabilire i numeri e i diametri da utilizzare per aggiungere nuovi ferri 
+ o da assegnare a ferri esistenti; attivare o disattivare la possibilità 
+ di invertire il ferro in corrispondenza dei cambi di pendenza della travata 
+ con <span class="hcp1">Inverte posizione</span>; indicare 
+ la <span class="hcp1">Posizione</span> (Superiore o Inferiore) 
+ dei ferri da inserire; impostare un multiplo fisso per le lunghezze dei 
+ ferri in <span class="hcp1">Arrotondamento</span>.</p>
+<p>Nella sezione <span class="hcp1">Staffe</span> del pannello 
+ <span class="hcp1">Parametri correnti</span> è possibile 
+ stabilire la staffatura da utilizzare per aggiungere nuove staffe o da 
+ assegnare a staffe esistenti.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/FERC.htm">FERC</a></span>&#160;(Ferro 
+ corrente), <span class="hcp1"><a href="../Comandi/IPF.htm">IPF</a></span>&#160;(Inverte 
+ posizione ferro al cambio di pendenza), <span class="hcp1"><a 
+	 href="../Comandi/FINF.htm">FINF</a></span>&#160;(Ferro inferiore), 
+ <span class="hcp1"><a href="../Comandi/FSUP.htm">FSUP</a></span>&#160;(Ferro 
+ superiore), <span class="hcp1"><a href="../Comandi/STAC.htm">STAC</a></span>&#160;(Staffatura 
+ corrente).</p>
+<h2 class="Titolo5"><a name="Travi_Generali" id="Travi_Generali"></a>Generali</h2>
+<p><span class="hcp1"><a name="ARMA" id="ARMA"></a>Progetta 
+ aut. <img src="../Icone/16/arma.png" alt="" border="1" class="hcp2"></span> 
+ progetta la travata esattamente come ModeSt avrebbe fatto in progettazione 
+ automatica.</p>
+<p><span class="hcp1"><a name="CALC" id="CALC"></a>Ricalcola 
+ <img src="../Icone/16/calc.png" alt="" border="1" class="hcp2"></span> 
+ effettua il controllo che la travata sia verificata e che siano rispettati 
+ tutti i minimi di regolamento, segnalando le eventuali anomalie.</p>
+<p><span class="hcp1"><a name="ELAR" id="ELAR"></a>Elimina 
+ prog. <img src="../Icone/16/eliminaprog.png" alt="" border="1" class="hcp2"></span> 
+ elimina completamente la progettazione lasciando solo il disegno geometrico 
+ della travata.</p>
+<p><span class="hcp1"><a name="_REL"></a>Anteprima rel. <img src="../Icone/16/anteprimarel.png" alt="" border="1" class="hcp2"></span> visualizza 
+ l'anteprima della relazione di calcolo. È possibile visualizzare una relazione 
+ in forma sintetica oppure estesa selezionando le relative opzioni del 
+ menu che compare cliccando sulla freccia a destra del comando. È possibile 
+ specificare se creare la relazione con il sistema tecnico o con l'unità 
+ di misura corrente utilizzando l'opzione &quot;Usa sistema tecnico&quot; 
+ del menu che compare cliccando sulla freccia a destra del comando.</p>
+<p><span class="hcp1"><a name="_VER"></a>Info verifiche <img src="../Icone/16/infover.png" alt="" border="1" class="hcp2"></span> visualizza 
+ le verifiche a flessione, a taglio e torsione in un punto della travata. 
+ Il programma visualizza le verifiche del punto più vicino ai punti di 
+ progettazione (segmenti verticali della linea di riferimento dei diagrammi).&#160;È 
+ possibile aprire in una nuova finestra la sezione con l'armatura presente 
+ nel punto selezionato nella quale effettuare controlli più dettagliati 
+ cliccando sulla freccia a destra del comando e poi su <span class="hcp1">Info 
+ verifiche avanzate <img src="../Icone/16/infoverav.png" alt="" border="1" class="hcp2"></span>.</p>
+<p><span class="hcp1">Mod. criteri <img src="../Icone/16/modcriteri.png" alt="" border="1" class="hcp2"></span> 
+ modifica i criteri di progetto posizionandosi automaticamente sul criterio 
+ specifico assegnato alla travata.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/ARMA.htm">ARMA</a></span>&#160;(Progetta), 
+ <span class="hcp1"><a href="../Comandi/CALC.htm">CALC</a></span>&#160;(Ricalcola), 
+ <span class="hcp1"><a href="../Comandi/ELAR.htm">ELAR</a></span>&#160;(Elimina 
+ progettazione), <span class="hcp1"><a href="../Comandi/_REL.htm">?REL</a></span>&#160;(Anteprima 
+ relazione),&#160;<span class="hcp1"><a href="../Comandi/_VER.htm">?VER</a></span>&#160;(Informazioni 
+ verifiche).</p>
+<h2 class="Titolo5"><a name="Travi_Diagrammi" id="Travi_Diagrammi"></a>Diagrammi</h2>
+<p>Durante l'inserimento dei ferri risultano utili le rappresentazioni 
+ di diagrammi che permettono di controllare la validità dell'armatura longitudinale.</p>
+<p><span class="hcp1"><a name="DMOM" id="DMOM"></a>Momento 
+ <img src="../Icone/16/pm.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno del momento flettente. Per strutture calcolate 
+ agli stati limite, il diagramma permette di controllare se l'armatura 
+ inserita è sufficiente verificando che il momento resistente sia superiore 
+ ai momenti agenti per le combinazioni agli stati limite ultimi. Si veda 
+ anche <span class="hcp1"><a href="Progettazione%20agli%20stati%20limite.htm">Progettazione 
+ agli stati limite</a></span>.</p>
+<p><span class="hcp1"><a name="DTAG" id="DTAG"></a>Taglio 
+ <img src="../Icone/16/pt.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno del taglio. Per le strutture calcolate agli 
+ stati limite, il diagramma consente di controllare la correttezza dell'armatura 
+ a taglio. Si veda anche <span class="hcp1"><a href="Progettazione%20agli%20stati%20limite.htm">Progettazione 
+ agli stati limite</a></span>. Per travate classificate come esistenti 
+ attraverso i criteri di progetto, nel caso in cui siano presenti anche 
+ i ferri piegati, essendone considerato il loro contributo alla resistenza 
+ solo per le combinazioni delle condizioni di carico elementari di tipo 
+ statico, viene disegnato due diagrammi del taglio: inferiormente relativo 
+ alle CC sismiche e superiormente a quelle statiche.</p>
+<p><span class="hcp1"><a name="DNOR" id="DNOR"></a>Sf. norm. 
+ <img src="../Icone/16/pn.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno dello sforzo normale. Il diagramma permette 
+ di controllare se in una campata è attivata o meno la verifica a pressoflessione: 
+ viene disegnato con tratto continuo se la verifica a pressoflessione è 
+ attivata, a tratteggio in caso contrario.</p>
+<p><span class="hcp1"><a name="DTOR" id="DTOR"></a>Torsione 
+ <img src="../Icone/16/pmt.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno del momento torcente. Il diagramma permette 
+ di controllare se in una campata è attivata o meno la verifica a torsione: 
+ viene disegnato con tratto continuo se la verifica è attivata, a tratteggio 
+ in caso contrario.</p>
+<p><span class="hcp1"><a name="DAST" id="DAST"></a>Area st. 
+ <img src="../Icone/16/dast.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno dell'area delle staffe necessarie nella 
+ travata. Il diagramma permette di controllare se la staffatura è sufficiente 
+ e compatibile con i minimi di regolamento ed altre limitazioni.</p>
+<p><span class="hcp1"><a name="DEPS" id="DEPS"></a>Rapporto 
+ X/D <img src="../Icone/16/deps.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno del rapporto X/D (indice di duttilità), 
+ in modo da controllare la corretta progettazione della travata agli stati 
+ limite. Vengono anche visualizzati i valori massimi di normativa di tale 
+ rapporto ed il valore che corrisponde alla rottura bilanciata.</p>
+<p class="hcp3"><span class="hcp1"><a name="DTAU" 
+	 id="DTAU"></a>Tau</span> <img src="../Icone/16/dtau.png" alt="" border="1" class="hcp2"> attiva o disattiva il 
+ disegno delle tensioni tangenziali nella travata. Il diagramma permette 
+ di controllare i valori di <font face="Symbol" class="hcp4">t</font> 
+ confrontandoli con <font face="Symbol" class="hcp4">t</font><span class="hcp5">c0</span> e <font face="Symbol" class="hcp4">t</font><span class="hcp5">c1</span>.</p>
+<p><span class="hcp1"><a name="DSCO" id="DSCO"></a>Scorrimento 
+ <img src="../Icone/16/dsco.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno dello sforzo di scorrimento agente nelle 
+ zone di calcolo dello scorrimento.&#160;Il diagramma permette di controllare 
+ se l'armatura a taglio e a torsione è almeno globalmente sufficiente.</p>
+<p><span class="hcp1"><a name="DZC" id="DZC"></a>Zone compresse 
+ <img src="../Icone/16/dzc.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno delle zone che vengono considerate utilmente 
+ compresse ai fini del calcolo degli ancoraggi.</p>
+<p><span class="hcp1"><a name="DINT" id="DINT"></a>Interferri 
+ <img src="../Icone/16/dint.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno dell'interferro, ossia la mutua distanza 
+ fra i ferri nelle varie zone della travata. Il diagramma permette di controllare 
+ se l'armatura progettata entra nella travata e se rispetta i minimi interferri 
+ di normativa.</p>
+<p><span class="hcp1"><a name="DSR" id="DSR"></a>Spazi residui 
+ <img src="../Icone/16/dsr.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno dello spazio residuo. Lo spazio residuo 
+ nella sezione viene valutato detraendo dalla larghezza dell'asta il copriferro 
+ per il calcolo della lunghezza delle staffe ed il diametro delle staffe. 
+ Il diagramma permette di controllare se l'ingombro dei ferri entra nelle 
+ varie zone della travata.</p>
+<p class="hcp6"><a name="DINV" id="DINV"></a>Inviluppi <img src="../Icone/16/dinv.png" alt="" border="1" class="hcp2"> <span class="hcp7">attiva 
+ o disattiva il disegno dell'inviluppo dei momenti flettenti e dei tagli.</span></p>
+<p><span class="hcp1"><a name="DPV" id="DPV"></a>Punti ver. 
+ <img src="../Icone/16/dpv.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno dei punti in cui verranno riportate in relazione 
+ le verifiche relative all'armatura longitudinale (flessione, pressoflessione, 
+ taglio e torsione).</p>
+<p><span class="hcp1"><a name="PDIA" id="PDIA"></a>Pos. diagr. 
+ <img src="../Icone/16/pdia.png" alt="" border="1" class="hcp2"></span> 
+ consente di stabilire la posizione dei diagrammi correnti.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DMOM.htm">DMOM</a></span>&#160;(Disegna 
+ momento flettente), <span class="hcp1"><a href="../Comandi/DTAG.htm">DTAG</a></span>&#160;(Disegna 
+ taglio), <span class="hcp1"><a href="../Comandi/DNOR.htm">DNOR</a></span>&#160;(Disegna 
+ sforzo normale), <span class="hcp1"><a href="../Comandi/DTOR.htm">DTOR</a></span>&#160;(Disegna 
+ momento torcente), <span class="hcp1"><a href="../Comandi/DAST.htm">DAST</a></span>&#160;(Disegna 
+ area staffe), <span class="hcp1"><a href="../Comandi/DEPS.htm">DEPS</a></span>&#160;(Disegna 
+ epsilon), <span class="hcp1"><a href="../Comandi/DTAU.htm">DTAU</a></span>&#160;(Disegna 
+ tau), <span class="hcp1"><a href="../Comandi/DSCO.htm">DSCO</a></span>&#160;(Disegna 
+ scorrimento),&#160;<span class="hcp1"><a href="../Comandi/DZC.htm">DZC</a></span>&#160;(Disegna 
+ zone compresse), <span class="hcp1"><a href="../Comandi/DINT.htm">DINT</a></span>&#160;(Disegna 
+ interferro), <span class="hcp1"><a href="../Comandi/DSR.htm">DSR</a></span>&#160;(Disegna 
+ spazio residuo), <span class="hcp1"><a href="../Comandi/DINV.htm">DINV</a></span>&#160;(Disegna 
+ inviluppi), <span class="hcp1"><a href="../Comandi/DPV.htm">DPV</a></span>&#160;(Disegna 
+ punti/piani di verifica), <span class="hcp1"><a href="../Comandi/PDIA.htm">PDIA</a></span>&#160;(Posizione 
+ diagrammi).</p>
+<h2 class="Titolo5"><a name="Travi_Af_teoriche" id="Travi_Af_teoriche"></a>Af 
+ teoriche</h2>
+<p><span class="hcp1"><a name="DAFA" id="DAFA"></a>Aree di 
+ ferro <img src="../Icone/16/dafa.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno della mappa delle aree di ferro necessarie 
+ ed il diagramma delle aree di ferro effettivamente presenti nella travata. 
+ La mappa consente di verificare per strutture calcolate alle tensioni 
+ ammissibili se l'armatura inserita è sufficiente mentre per strutture 
+ calcolate agli stati limite di verificare solamente se l'armatura è sufficiente 
+ per le combinazioni di carico agli stati limite di esercizio e se rispetta 
+ eventuali minimi di regolamento.</p>
+<p><span class="hcp1">% area di ferro totale <img src="../Icone/16/dafapt.png" alt="" border="1" class="hcp2"></span> attiva o disattiva il disegno della mappa delle 
+ percentuali di area di ferro strettamente necessaria ed il diagramma delle 
+ aree di ferro effettivamente presenti totali (superiori più inferiori). 
+ La mappa consente di verificare per strutture calcolate agli stati limite 
+ se l'armatura rispetta eventuali minimi di regolamento.</p>
+<p><span class="hcp1">% area di ferro divisa <img src="../Icone/16/dafapd.png" alt="" border="1" class="hcp2"></span> attiva o disattiva il disegno della mappa delle 
+ percentuali di area di ferro strettamente necessaria ed il diagramma delle 
+ aree di ferro effettivamente presenti divise (superiori o inferiori). 
+ La mappa consente di verificare per strutture calcolate agli stati limite 
+ se l'armatura rispetta eventuali minimi di regolamento.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DAFA.htm">DAFA</a></span>&#160;(Disegna 
+ aree di ferro aste).</p>
+<h2 class="Titolo5"><a name="Travi_Ferri" id="Travi_Ferri"></a>Ferri</h2>
+<p class="hcp3"><span class="hcp1"><a name="AGGF" 
+	 id="AGGF"></a>Aggiungi <img src="../Icone/16/aggiungiferro.png" alt="" border="1" class="hcp2"></span> 
+ aggiunge un nuovo ferro longitudinale, sagomato.</p>
+<p class="hcp6">Note<span class="hcp7">:</span></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Se si modifica la combinazione 
+	 di diametri mentre si è in fase di editing di un ferro questa viene 
+	 automaticamente assegnata al ferro stesso.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Se in prossimità del primo 
+	 punto si trova una linea di blocco, il ferro viene fatto partire in 
+	 corrispondenza di quest'ultima. Nel caso di linee di blocco molto 
+	 vicine l'una dall'altra, si consiglia di ingrandire la zona per individuare 
+	 un punto immediatamente a destra o a sinistra della linea di blocco 
+	 corretta in funzione della direzione in cui si intende inserire il 
+	 ferro.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Durante l'inserimento del 
+	 ferro NON viene effettuato il controllo se la lunghezza del ferro 
+	 supera quanto specificato nei criteri di progetto (vedi <a href="CriGenTra.htm#Max_lunghezza_barre"><span class="hcp1">Max lunghezza barre</span></a>).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Se il ferro raggiunge una 
+	 linea di blocco, non sarà possibile prolungarlo oltre, a meno che 
+	 non si disattivino i blocchi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Il ferro che viene inserito 
+	 sarà un ferro superiore o inferiore in funzione della scelta effettuata.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Il ferro viene inserito con 
+	 la combinazione di diametri corrente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">In qualunque momento è possibile 
+	 piegare il ferro per realizzare un sagomato usando i tasti <span class="hcp1">I</span> 
+	 o <span class="hcp1">F</span> e &quot;Invio&quot; che 
+	 consentono di specificare il punto iniziale o finale di piegatura.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">In qualunque momento è possibile 
+	 annullare l'ultima piegatura del ferro usando il tasto <span class="hcp1">U</span> 
+	 e &quot;Invio&quot;.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">In corrispondenza dei cambi 
+	 di pendenza della travata, il ferro inverte automaticamente la posizione 
+	 se incontra una concavità. Se il ferro incontra una convessità normalmente 
+	 non inverte la posizione. È possibile modificare questo comportamento 
+	 con <span class="hcp1">Inverte posizione</span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Se è stato settato un passo 
+	 di arrotondamento ferri, il ferro inserito avrà una lunghezza multipla 
+	 di tale valore. Sarà però in tal caso difficoltoso inserire punti 
+	 di piegatura.</p></li>
+</ul>
+<p class="hcp3"><span class="hcp1"><a name="AGGC" 
+	 id="AGGC"></a>Cavallotto <img src="../Icone/16/aggiungicavallotto.png" alt="" border="1" class="hcp2"></span> aggiunge un cavallotto.</p>
+<p><span class="hcp1"><span class="hcp1">N</span>ote</span>:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Utilizzando i sottocomandi 
+	 <span class="hcp1">I</span> o <span class="hcp1">F</span> 
+	 è possibile piegare il ferro.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Se si modifica la combinazione 
+	 di diametri mentre si è in fase di editing di un ferro questa viene 
+	 automaticamente assegnata al ferro stesso.</p></li>
+</ul>
+<p><span class="hcp1">Ferro di parete <img src="../Icone/16/aggiungiferroparete.png" alt="" border="1" class="hcp2"></span> 
+ aggiunge un ferro di parete.</p>
+<p><span class="hcp1">Ferro di fianco <img src="../Icone/16/aggiungiferrofianco.png" alt="" border="1" class="hcp2"></span> 
+ aggiunge un ferro di fianco.</p>
+<p><span class="hcp1">Ferro di suola <img src="../Icone/16/aggiungiferrosuola.png" alt="" border="1" class="hcp2"></span> 
+ aggiunge un ferro di suola.</p>
+<p><span class="hcp1"><span class="hcp1">N</span>ote</span>:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Il ferro di parete, di fianco 
+	 o di suola viene inserito con la combinazione dei diametri corrente. 
+	 Viene considerata solo la prima combinazione dei diametri (ad esempio 
+	 se la combinazione dei diametri corrente è 2Ø12+2Ø14 viene considerato 
+	 2Ø12), ed interpretata come i ferri da inserire sulle pareti, sul 
+	 fianco o sulla suola della sezione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Il ferro di parete, di fianco 
+	 o di suola inserito è sempre un ferro che lavora a taglio e torsione.</p></li>
+</ul>
+<p class="hcp3"><span class="hcp1"><a name="AFER" 
+	 id="AFER"></a>Assegna <img src="../Icone/16/assegnaferro.png" alt="" border="1" class="hcp2"></span> 
+ assegna al ferro selezionato con il cursore grafico la combinazione di 
+ diametri corrente.</p>
+<p class="hcp3"><span class="hcp1"><a name="ELIF" 
+	 id="ELIF"></a>Elimina <img src="../Icone/16/eliminaferro.png" alt="" border="1" class="hcp2"></span> 
+ elimina il ferro (longitudinale, sagomato, cavallotto, ferro di parete, 
+ ferro di fianco, ferro di suola) selezionato con il cursore grafico.</p>
+<p class="hcp3"><span class="hcp1"><a name="STIR" 
+	 id="STIR"></a>Stira <img src="../Icone/16/stiraferro.png" alt="" border="1" class="hcp2"></span> allunga o accorcia 
+ il ferro selezionato con il cursore grafico.</p>
+<p class="hcp3"><span class="hcp1"><a name="ESTF" 
+	 id="ESTF"></a>Estende <img src="../Icone/16/estendeferro.png" alt="" border="1" class="hcp2"></span> 
+ prolunga l'estremo del ferro selezionato con il cursore grafico fino al 
+ punto di blocco più vicino.</p>
+<p class="hcp3"><span class="hcp1"><a name="ARRF" 
+	 id="ARRF"></a>Arrotonda <img src="../Icone/16/arrotondaferro.png" alt="" border="1" class="hcp2"></span> arrotonda le 
+ lunghezze del ferro&#160;selezionato con il cursore grafico.</p>
+<p class="hcp6">Arrotonda tutti <img src="../Icone/16/arrotondatutti.png" alt="" border="1" class="hcp2"> <span class="hcp7">arrotonda la lunghezza di tutti i ferri 
+ presenti nella travata (viene eseguita la fase ARF).</span></p>
+<p class="hcp3"><span class="hcp1"><a name="UNIF" 
+	 id="UNIF"></a>Unifica <img src="../Icone/16/unificaferro.png" alt="" border="1" class="hcp2"></span> 
+ unifica due ferri. </p>
+<p class="hcp3"><span class="hcp1">Note</span>:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Non è possibile unificare 
+	 due ferri che non siano entrambi ferri longitudinali andanti superiori 
+	 o inferiori.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Non è possibile unificare 
+	 due ferri se fra i loro estremi c'è un punto di blocco o se il ferro 
+	 risultante supera la lunghezza massima ammissibile specificata nei 
+	 criteri di progetto (vedi <span class="hcp1"><a href="CriGenTra.htm#Max_lunghezza_barre">Max 
+	 lunghezza barre</a></span>).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Se i due ferri non occupano 
+	 la stessa zona di travata il ferro risultante avrà la combinazione 
+	 di diametri del ferro di maggior area.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Se i due ferri occupano in 
+	 parte la stessa zona di travata (ferri sovrapposti) il ferro risultante 
+	 avrà la combinazione di diametri che copra la somma delle aree dei 
+	 ferri unificati.</p></li>
+</ul>
+<p class="hcp3"><span class="hcp1"><a name="SIMF" 
+	 id="SIMF"></a>Simmetrizza <img src="../Icone/16/simmetrizzaferro.png" alt="" border="1" class="hcp2"></span> crea un ferro 
+ simmetrico al ferro selezionato&#160;con il cursore grafico.</p>
+<p><span class="hcp1"><a name="SPOF" id="SPOF"></a>Sposta 
+ ferro <img src="../Icone/16/spostaferro.png" alt="" border="1" class="hcp2"></span> 
+ sposta verticalmente la posizione di un ferro nell'esploso.</p>
+<p class="hcp6"><a name="OTTF" id="OTTF"></a>Ottimizza disposizione 
+ <img src="../Icone/16/ottdispferri.png" alt="" border="1" class="hcp2"> <span class="hcp7">ottimizza 
+ la posizione dei ferri nell'esploso, separando ferri di parete, di suola 
+ e di fianco, ferri superiori, sagomati e ferri inferiori e minimizzando 
+ il più possibile l'ingombro dei ferri.</span></p>
+<p class="hcp3"><span class="hcp1">Utilizzo 
+ da linea di comando</span>: <span class="hcp1"><a href="../Comandi/AGGF.htm">AGGF</a></span>&#160;(Aggiungi 
+ ferro), <span class="hcp1"><a href="../Comandi/AGGC.htm">AGGC</a></span>&#160;(Aggiungi 
+ cavallotto), <span class="hcp1"><a href="../Comandi/Afer.htm">AFER</a></span>&#160;(Assegna 
+ ferro), <span class="hcp1"><a href="../Comandi/ELIF.htm">ELIF</a></span>&#160;(Elimina 
+ ferro), <span class="hcp1"><a href="../Comandi/EDIF.htm">EDIF</a></span>&#160;(Edita 
+ ferro),&#160;<span class="hcp1"><a href="../Comandi/ESTF.htm">ESTF</a></span>&#160;(Estende 
+ ferro al blocco), <span class="hcp1"><a href="../Comandi/ARRF.htm">ARRF</a></span>&#160;(Arrotonda 
+ lunghezza ferro), <span class="hcp1"><a href="../Comandi/UNIF.htm">UNIF</a></span>&#160;(Unifica 
+ ferri), <span class="hcp1"><a href="../Comandi/SIMF.htm">SIMF</a></span>&#160;(Simmetrizza 
+ ferro), <span class="hcp1"><a href="../Comandi/SPOF.htm">SPOF</a></span>&#160;(Sposta 
+ ferro), <span class="hcp1"><a href="../Comandi/OTTF.htm">OTTF</a></span>&#160;(Ottimizza 
+ posizione ferri).</p>
+<h2 class="Titolo5"><a name="Travi_Staffe" id="Travi_Staffe"></a>Staffe</h2>
+<p><span class="hcp1">Progetta</span> <img src="../Icone/16/progettastaff.png" alt="" border="1" class="hcp2"> 
+ progetta automaticamente la staffatura (viene eseguita la fase PST).</p>
+<p><span class="hcp1"><a name="ASTA" id="ASTA"></a>Assegna</span> 
+ <img src="../Icone/16/assegnastaff.png" alt="" border="1" class="hcp2"> assegna 
+ o aggiunge la staffatura corrente nella zona di staffatura selezionata 
+ con il cursore grafico, la staffatura assegnata è verticale. La staffatura 
+ orizzontale si assegna cliccando sulla freccia a destra del comando e 
+ poi su <span class="hcp1">Staffatura orizzontale <img src="../Icone/16/assegnastaffor.png" alt="" border="1" class="hcp2"></span>.</p>
+<p><span class="hcp1"><a name="ELIT" id="ELIT"></a>Elimina 
+ <img src="../Icone/16/eliminastaff.png" alt="" border="1" class="hcp2"></span> 
+ elimina la staffatura&#160;nella zona di staffatura selezionata con il 
+ cursore grafico.</p>
+<p class="hcp6"><a name="EDIZ" id="EDIZ"></a>Modifica <img src="../Icone/16/modificazonastaff.png" alt="" border="1" class="hcp2"> <span class="hcp7">modifica 
+ le zone di staffatura in cui è divisa la travata.</span></p>
+<p class="hcp6"><a name="DIVZ" id="DIVZ"></a>Dividi <img src="../Icone/16/dividizonastaff.png" alt="" border="1" class="hcp2"> <span class="hcp7">divide 
+ in due parti una zona di staffatura.</span></p>
+<p><span class="hcp1"><a name="UNIZ" id="UNIZ"></a>Unifica 
+ <img src="../Icone/16/unificazonastaff.png" alt="" border="1" class="hcp2"></span> 
+ unifica due zone di staffatura.</p>
+<p><span class="hcp1"><a name="ZCRI" id="ZCRI"></a>Ripristina 
+ <img src="../Icone/16/resetzonestaff.png" alt="" border="1" class="hcp2"></span> 
+ ripristina le zone di staffatura calcolate in funzione dei criteri di 
+ progetto.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/ASTA.htm">ASTA</a></span>&#160;(Assegna 
+ staffatura), <span class="hcp1"><a href="../Comandi/ELIT.htm">ELIT</a></span>&#160;(Elimina 
+ staffatura), <span class="hcp1"><a href="../Comandi/EDIZ.htm">EDIZ</a></span>&#160;(Edita 
+ zona di staffatura), <a href="../Comandi/DIVZ.htm"><span class="hcp1">DIVZ</span></a>&#160;(Divide 
+ zona di staffatura), <a href="../Comandi/UNIZ.htm"><span class="hcp1">UNIZ</span></a>&#160;(Unifica 
+ zona di staffatura),&#160;<span class="hcp1"><a href="../Comandi/ZCRI.htm">ZCRI</a></span>&#160;(Zone 
+ di staffatura da criterio).</p>
+<h2 class="Titolo5"><a name="Travi_FRP" id="Travi_FRP"></a>Rinforzi</h2>
+<p><span class="hcp1"><a name="FRP_LONG" id="FRP_LONG"></a>FRP 
+ Longitudinali</span> <img src="../Icone/16/rinflongtrave.png" alt="" border="1" class="hcp2"> 
+ assegna o modifica i rinforzi longitudinali nella campata della travata 
+ selezionata con il cursore grafico.</p>
+<p><span class="hcp1"><a name="FRP_TRASV" id="FRP_TRASV"></a>FRP 
+ Trasversali <img src="../Icone/16/rinftrastrave.png" alt="" border="1" class="hcp2"></span> 
+ assegna o modifica i rinforzi trasversali nella campata della travata 
+ selezionata con il cursore grafico.</p>
+<h2 class="Titolo5"><a name="Travi_Altri" id="Travi_Altri"></a>Altri</h2>
+<p class="hcp3"><span class="hcp1"><a name="DEAP" 
+	 id="DEAP"></a>Aggiungi <img src="../Icone/16/aggiungiappoggio.png" alt="" border="1" class="hcp2"></span> aggiunge un appoggio 
+ in corrispondenza del nodo.</p>
+<p class="hcp3"><span class="hcp1">Elimina 
+ <img src="../Icone/16/eliminaappoggio.png" alt="" border="1" class="hcp2"></span> 
+ elimina l'appoggio in corrispondenza del nodo.</p>
+<p class="hcp3"><span class="hcp1"><a name="MPBL" 
+	 id="MPBL"></a>Proprietà blocco <img src="../Icone/16/modblocco.png" alt="" border="1" class="hcp2"></span> modifica 
+ il posizionamento e l'effetto dei punti di blocco.</p>
+<p class="hcp3"><span class="hcp1"><a name="FBL" 
+	 id="FBL"></a>Forza blocchi <img src="../Icone/16/forzablocco.png" alt="" border="1" class="hcp2"></span> attiva o disattiva 
+ i punti di blocco.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DEAP.htm">DEAP</a></span>&#160;(Definisci 
+ appoggio), <a href="../Comandi/MPBL.htm"><span class="hcp1">MPBL</span></a>&#160;(Modifica 
+ proprietà blocco), <span class="hcp1"><a href="../Comandi/FBL.htm">FBL</a></span>&#160;(Forza 
+ blocchi).</p>
+<h2 class="Titolo5"><a name="Travi_Disegno" id="Travi_Disegno"></a>Disegno</h2>
+<p><span class="hcp1"><a name="DSEZ" id="DSEZ"></a>Sezioni 
+ <img src="../Icone/16/dissezioni.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno delle sezioni della travata nei punti necessari, 
+ per evidenziarne le dimensioni, l'armatura e le dimensioni delle staffe.&#160;È 
+ possibile attivare o disattivare il disegno della posizione dei ferri 
+ longitudinali nella sezione della travata selezionando l'opzione &quot;Disegna 
+ ferri&quot; del menu che compare cliccando sulla freccia a destra del 
+ comando. Nel caso in cui l'opzione sia attiva è possibile aggiungere, 
+ eliminare e ricreare le sezioni cliccando sulla freccia a destra del comando 
+ e poi rispettivamente su <span class="hcp1">Aggiungi <img src="../Icone/16/dseza.png" alt="" border="1" class="hcp2"></span>, <span class="hcp1">Elimina <img src="../Icone/16/dseze.png" alt="" border="1" class="hcp2"></span> e<span class="hcp1"> Ricrea <img src="../Icone/16/dsezr.png" alt="" border="1" class="hcp2"></span>.</p>
+<p><span class="hcp1"><a name="DBLI" id="DBLI"></a>Blocchi 
+ inattivi <img src="../Icone/16/blocchiinattivi.png" alt="" border="1" class="hcp2"></span> 
+ attiva o disattiva il disegno dei punti di blocco&#160;inattivi.</p>
+<p><span class="hcp1"><a name="Disegno_FRP" id="Disegno_FRP"></a>Rinforzi&#160;<img src="../Icone/16/ALB_RINFTRAVE.png" alt="" border="1" class="hcp2"></span> apre 
+ una finestra con la travata e le indicazioni dei rinforzi assegnati.</p>
+<p><span class="hcp1"><a name="SHADE" id="SHADE"></a>3D&#160;<img src="../Icone/16/shading.png" alt="" border="1" class="hcp2"></span> apre 
+ una finestra con la visualizzazione tridimensionale della travata progettata.&#160;È 
+ possibile specificare se creare la modellazione solida della travata solo 
+ con le armature, solo con i rinforzi o con entrambi utilizzando le opzioni 
+ del menu che compare cliccando sulla freccia a destra del comando.</p>
+<p><span class="hcp1"><a name="DDF" id="DDF"></a>Distinta&#160;<img src="../Icone/16/disdistinta.png" alt="" border="1" class="hcp2"></span> attiva 
+ o disattiva il disegno della tabella della distinta ferri. È possibile 
+ modificare la posizione della tabella della distinta ferri selezionando 
+ le relative opzioni del menu che compare cliccando sulla freccia a destra 
+ del comando.</p>
+<p><span class="hcp1"><a name="DCMP" id="DCMP"></a>Computo&#160;<img src="../Icone/16/discomputo.png" alt="" border="1" class="hcp2"></span> attiva 
+ o disattiva il disegno del computo dei materiali. È possibile modificare 
+ la posizione della tabella del computo selezionando le relative opzioni 
+ del menu che compare cliccando sulla freccia a destra del comando.</p>
+<p><span class="hcp1">Opzioni&#160;<img src="../Icone/16/opzioni.png" alt="" border="1" class="hcp2"></span> 
+ modifica le opzioni di disegno.</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DSEZ.htm">DSEZ</a></span>&#160;(Disegna 
+ sezioni travata), <span class="hcp1"><a href="../Comandi/DFSEZ.htm">DFSEZ</a></span>&#160;(Disegna 
+ ferri sezioni travata), <span class="hcp1"><a href="../Comandi/DBLI.htm">DBLI</a></span>&#160;(Disegna 
+ blocchi inattivi),<span class="hcp1">&#160;<a href="../Comandi/SHAD.htm">SHADE</a></span>&#160;(Visualizzazione 
+ tridimensionale), <span class="hcp1"><a href="../Comandi/DDF.htm">DDF</a></span>&#160;(Disegna 
+ distinta ferri), <span class="hcp1"><a href="../Comandi/DCMP.htm">DCMP</a></span>&#160;(Disegna 
+ computo).</p>
+</body>
+</html>

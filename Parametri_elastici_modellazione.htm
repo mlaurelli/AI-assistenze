@@ -1,0 +1,241 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Parametri elastici</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { vertical-align:Sub; }
+span.hcp2 { font-family:Symbol, serif; }
+span.hcp3 { vertical-align:Super; }
+span.hcp4 { font-weight:bold; }
+tr.hcp5 { vertical-align:top; }
+p.hcp6 { text-align:center; }
+td.hcp7 { border-top:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+td.hcp8 { border-left:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+td.hcp9 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+-->
+</style>
+</head>
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Parametri elastici</h1>
+<p>In seguito sono riportate le correlazioni fra i risultati delle prove in sito e i parametri elastici.</p>
+<h2 class="Titolo5">Correlazioni con prove GFS</h2>
+<p>Secondo la teoria dell'elasticità vengono utilizzate le seguenti relazioni fra velocità di propagazione delle onde sismiche (vs e vp) e il modulo elastico tangenziale iniziale (G<span class="hcp1">0</span>) in condizioni dinamiche:</p>
+<p class="IndentBullet1">G<span class="hcp1">0</span> = (<span class="hcp2">g</span>/g)*v<span class="hcp1">s</span><span class="hcp3">2</span> ; E<span class="hcp1">ed</span> = (<span class="hcp2">g</span>/g)*v<span class="hcp1">p</span><span class="hcp3">2</span></p>
+<p class="IndentBullet1"><span class="hcp2">n</span> = [(1/2)*(v<span class="hcp1">p</span>/v<span class="hcp1">s</span>)<span class="hcp3">2</span>-1] / [(v<span class="hcp1">p</span>/v<span class="hcp1">s</span>)<span class="hcp3">2</span>-1]</p>
+<p>Se v<span class="hcp1">s</span> e v<span class="hcp1">p</span> risultano variabili all'interno di uno strato i parametri elastici sono determinati attraverso una regressione lineare dei valori puntuali risultanti dalle relazioni precedenti, vengono pertanto determinati i valori di G<span class="hcp1">0</span> e k<span class="hcp1">j</span> che permettono di determinare il modulo elastico tangenziale variabile con la pressione media efficace [G<span class="hcp1">0</span> = G<span class="hcp1">0,a</span>*(p'/p<span class="hcp1">atm</span>)<span class="hcp3">kj</span>]. Perciò, calcolati gli n valori puntuali [G<span class="hcp1">0,i</span> = (<span class="hcp2">g</span>/g)*v<span class="hcp1">s,i</span><span class="hcp3">2</span> ; p'<span class="hcp1">i</span>], risulta:</p>
+<p class="IndentBullet1">k<span class="hcp1">j</span> = {<span class="hcp2">S</span><span class="hcp1">i=1,n</span>[(ln(G<span class="hcp1">0,i</span>)-a)*(ln(p'<span class="hcp1">i</span>)-b)]}/{<span class="hcp2">S</span><span class="hcp1">i=1,n</span>[(ln(p'<span class="hcp1">i</span>)-b)<span class="hcp3">2</span>]} ; k<span class="hcp1">j</span> &gt;= 0</p>
+<p class="IndentBullet1">G<span class="hcp1">0</span> = exp[a-k<span class="hcp1">j</span>*b]</p>
+<p>in cui:</p>
+<p class="IndentBullet1">a = {<span class="hcp2">S</span><span class="hcp1">i=1,n</span>[ln(G<span class="hcp1">0,i</span>)]}/n</p>
+<p class="IndentBullet1">b = {<span class="hcp2">S</span><span class="hcp1">i=1,n</span>[ln(p'<span class="hcp1">i</span>/p<span class="hcp1">atm</span>)]}/n</p>
+<p>Il valore di <span class="hcp2">&#61550;</span> viene valutato mediando i risultati degli n valori puntuali, il resto dei parametri elastici viene valutato da G<span class="hcp1">0</span> e <span class="hcp2">n</span>.</p>
+<h2 class="Titolo5">Correlazioni con prove SPT</h2>
+<p>Il valore rappresentativo di N<span class="hcp1">SPT</span> è ottenuto mediando i risultati delle misure ottenute nello strato definito. Sono disponibili le seguenti opzioni:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp4">Stroud e Butler (1975)</span>, valida per terreni coesivi per i quali è noto l'indice di plasticità</p>
+</li>
+</ul>
+<p class="IndentBullet1">(M. TANZINI – L'indagine geotecnica – Dario Flaccovio Editore, Palermo 2002. Pag. 189)</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp4">Stroud (1989)</span></p>
+</li>
+</ul>
+<p class="IndentBullet1">(M. TANZINI – L'indagine geotecnica – Dario Flaccovio Editore, Palermo 2002. Pag. 190)</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp4">Schmertmann (1978)</span>, se definita la composizione granulometrica (valida per terreni incoerenti)</p>
+</li>
+</ul>
+<p class="IndentBullet1">(F. CETRARO – Ingegneria geotecnica e geologia applicata – EPC Libri, Roma 2007. Pagg. 82, 83)</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp4">Farrent</span> (valida per terreni sabbiosi)</p>
+</li>
+</ul>
+<p class="IndentBullet1">(F. CETRARO – Ingegneria geotecnica e geologia applicata – EPC Libri, Roma 2007. Pag. 83)</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp4">Menzenbach e Malcev</span> se definita la composizione granulometrica (valida per terreni incoerenti)</p>
+</li>
+</ul>
+<p class="IndentBullet1">(F. CETRARO – Ingegneria geotecnica e geologia applicata – EPC Libri, Roma 2007. Pag. 84)</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp4">D'Appolonia et al.</span> se definita la composizione granulometrica (valida per terreni incoerenti sovraconsolidati)</p>
+</li>
+</ul>
+<p class="IndentBullet1">(F. CETRARO – Ingegneria geotecnica e geologia applicata – EPC Libri, Roma 2007. Pag. 83)</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp4">Schulze e Menzenbach</span> (valida per terreni sabbiosi)</p>
+</li>
+</ul>
+<p class="IndentBullet1">(F. CETRARO – Ingegneria geotecnica e geologia applicata – EPC Libri, Roma 2007. Pag. 83)</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp4">Crespellani e Vannucchi</span> per il calcolo del modulo elastico tangenziale iniziale (G<span class="hcp1">0</span>) in condizioni dinamiche</p>
+</li>
+</ul>
+<p class="IndentBullet1">(F. CETRARO – Ingegneria geotecnica e geologia applicata – EPC Libri, Roma 2007. Pag. 84)</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp4">Ohsaki e Iwasaki</span>, per sabbie per il calcolo del modulo elastico tangenziale iniziale (G<span class="hcp1">0</span>) in condizioni dinamiche</p>
+</li>
+</ul>
+<p class="IndentBullet1">(F. CETRARO – Ingegneria geotecnica e geologia applicata – EPC Libri, Roma 2007. Pag. 84)</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp4">Ohsaki e Iwasaki</span>, per sabbie con fini per il calcolo del modulo elastico tangenziale iniziale (G<span class="hcp1">0</span>) in condizioni dinamiche</p>
+</li>
+</ul>
+<p class="IndentBullet1">(F. CETRARO – Ingegneria geotecnica e geologia applicata – EPC Libri, Roma 2007. Pag. 84)</p>
+<h2 class="Titolo5">Correlazioni con prove CPT</h2>
+<p>Il valore rappresentativo di qc è ottenuto mediando i risultati delle misure ottenute nello strato definito. Le pressioni litostatiche sono intese come medie nello strato definito. Sono disponibili le seguenti opzioni:</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp4">Schmertmann (1977)</span> se definita la composizione granulometrica (valida per terreni incoerenti normalconsolidati)</p>
+</li>
+</ul>
+<p class="IndentBullet1">(F. CETRARO – Ingegneria geotecnica e geologia applicata – EPC Libri, Roma 2007. Pag. 55)</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp4">Robertson e Campanella (1983)</span> (valida per terreni incoerenti normalconsolidati per i quali è nota la densità relativa):</p>
+</li>
+</ul>
+<p class="IndentBullet1">(F. CETRARO – Ingegneria geotecnica e geologia applicata – EPC Libri, Roma 2007. Pag. 56)</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp4">Kulhawy e Mayne (1990)</span></p>
+</li>
+</ul>
+<p class="IndentBullet1">(M. TANZINI – L'indagine geotecnica – Dario Flaccovio Editore, Palermo 2002. Pag. 236)</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp4">Rix e Stokoe (1992)</span>, per il calcolo del modulo elastico tangenziale iniziale (G<span class="hcp1">0</span>) in condizioni dinamiche</p>
+</li>
+</ul>
+<p class="IndentBullet1">(M. TANZINI – L'indagine geotecnica – Dario Flaccovio Editore, Palermo 2002. Pag. 248)</p>
+<ul>
+<li class="p-Bullet1">
+<p class="Bullet1">Secondo <span class="hcp4">Mayne e Rix (1993)</span>, per il calcolo del modulo elastico tangenziale iniziale (G0) in condizioni dinamiche</p>
+</li>
+</ul>
+<p class="IndentBullet1">(M. TANZINI – L'indagine geotecnica – Dario Flaccovio Editore, Palermo 2002. Pag. 238)</p>
+<p>Secondo la correlazione scelta, l'insieme dei parametri elastici viene calcolato, partendo dal valore del coefficiente di Poisson definito nell'unità geotecnica, utilizzando le seguenti relazioni:</p>
+<table style="vertical-align: top;" cellspacing="0" width="100%">
+<col style="width: 22.5%;">
+<col style="width: 22.5%;">
+<col style="width: 22.5%;">
+<col style="width: 22.5%;">
+<col style="width: 10%;">
+<tr class="hcp5">
+<td style="border: Solid 1px #000000; width: 22.5%; padding-right: 10px; padding-left: 10px;">
+<p class="hcp6">G =</p>
+</td>
+<td style="width:22.5%;" class="hcp7">
+<p class="hcp6">E =</p>
+</td>
+<td style="width:22.5%;" class="hcp7">
+<p class="hcp6">Eed =</p>
+</td>
+<td style="width:22.5%;" class="hcp7">
+<p class="hcp6">Eu =</p>
+</td>
+<td style="width:10%;" class="hcp7">
+<p class="hcp6">&#160;</p>
+</td>
+</tr>
+<tr class="hcp5">
+<td style="width:22.5%;" class="hcp8">
+<p class="hcp6">1</p>
+</td>
+<td style="width:22.5%;" class="hcp9">
+<p class="hcp6">2*(1+<span class="hcp2">n</span>)</p>
+</td>
+<td style="width:22.5%;" class="hcp9">
+<p class="hcp6">[2*(1-<span class="hcp2">n</span>)]/(1-2*<span class="hcp2">n</span>)</p>
+</td>
+<td style="width:22.5%;" class="hcp9">
+<p class="hcp6">3</p>
+</td>
+<td style="width:10%;" class="hcp9">
+<p class="hcp6">*G</p>
+</td>
+</tr>
+<tr class="hcp5">
+<td style="width:22.5%;" class="hcp8">
+<p class="hcp6">1/[2*(1+<span class="hcp2">n</span>)]</p>
+</td>
+<td style="width:22.5%;" class="hcp9">
+<p class="hcp6">1</p>
+</td>
+<td style="width:22.5%;" class="hcp9">
+<p class="hcp6">(1-<span class="hcp2">n</span>)/[(1+<span class="hcp2">n</span>)*(1-2*<span class="hcp2">n</span>)]</p>
+</td>
+<td style="width:22.5%;" class="hcp9">
+<p class="hcp6">3/[2*(1+<span class="hcp2">n</span>)]</p>
+</td>
+<td style="width:10%;" class="hcp9">
+<p class="hcp6">*E</p>
+</td>
+</tr>
+<tr class="hcp5">
+<td style="width:22.5%;" class="hcp8">
+<p class="hcp6">(1-2*<span class="hcp2">n</span>)/[2*(1-<span class="hcp2">n</span>)]</p>
+</td>
+<td style="width:22.5%;" class="hcp9">
+<p class="hcp6">[(1+<span class="hcp2">n</span>)*(1-2*<span class="hcp2">n</span>)]/(1-<span class="hcp2">n</span>)</p>
+</td>
+<td style="width:22.5%;" class="hcp9">
+<p class="hcp6">1</p>
+</td>
+<td style="width:22.5%;" class="hcp9">
+<p class="hcp6">[3*(1-2*<span class="hcp2">n</span>)]/[2*(1-<span class="hcp2">n</span>)]</p>
+</td>
+<td style="width:10%;" class="hcp9">
+<p class="hcp6">*Eed</p>
+</td>
+</tr>
+<tr class="hcp5">
+<td style="width:22.5%;" class="hcp8">
+<p class="hcp6">1/3</p>
+</td>
+<td style="width:22.5%;" class="hcp9">
+<p class="hcp6">[2*(1+<span class="hcp2">n</span>)]/3</p>
+</td>
+<td style="width:22.5%;" class="hcp9">
+<p class="hcp6">[2*(1-<span class="hcp2">n</span>)]/[3*(1-2*<span class="hcp2">n</span>)]</p>
+</td>
+<td style="width:22.5%;" class="hcp9">
+<p class="hcp6">1</p>
+</td>
+<td style="width:10%;" class="hcp9">
+<p class="hcp6">*Eu</p>
+</td>
+</tr>
+</table>
+<p>È infine possibile specificare, come <span class="hcp4">Fattore correttivo</span>, il rapporto fra i parametri determinati dalle precedenti correlazioni e i parametri di calcolo.</p>
+<p><span class="hcp4">Nota</span>: i valori dinamici (dei moduli elastici, G<span class="hcp1">0</span>) possono essere da 2 a 10 volte maggiori del valore statico (dei parametri considerati nei calcoli, G) (Bowles 1998).</p>
+<p><span class="hcp4">Nota</span>: si osserva che i valori di E decrescono sensibilmente al crescere del livello di tensione deviatorica; i valori iniziali (deviatore nullo) valgono circa il doppio di quelli (E<span class="hcp1">50</span>) relativi ad una tensione deviatorica pari al 50% di quella a rottura (Viggiani 1999).</p>
+</body>
+</html>

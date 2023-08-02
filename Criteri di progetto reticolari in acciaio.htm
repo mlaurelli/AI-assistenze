@@ -1,0 +1,342 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Criteri di progetto reticolari in acciaio</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:normal; }
+p.hcp3 { font-weight:bold; }
+font.hcp4 { font-family:Symbol; }
+span.hcp5 { vertical-align:Sub; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Criteri di progetto nodi in acciaio</h1>
+<h2>Progettazione bullonature</h2>
+<p><span class="hcp1"><a name="Elenco_diametri_bulloni_utilizzabili" 
+										 id="Elenco_diametri_bulloni_utilizzabili"></a>Elenco 
+ diametri bulloni utilizzabili</span>: specificare l'elenco dei diametri 
+ utilizzabili per la progettazione dei bulloni, separati da spazi (ad esempio 
+ 12 14 16 18 20 22 24 27 30). Sono ammessi anche valori non consecutivi.</p>
+<p><span class="hcp1"><a name="Numero_minimo_bulloni" id="Numero_minimo_bulloni"></a>Numero 
+ minimo bulloni</span><span class="hcp2">:</span> indicare 
+ il valore del numero minimo di bulloni da utilizzare per il progetto e 
+ la verifica dei collegamenti della reticolare, del coprigiunto e della 
+ squadretta.</p>
+<p><span class="hcp1"><a name="Classe_bulloni" id="Classe_bulloni"></a>Classe 
+ bulloni</span>: selezionare la classe dei bulloni (previste dalla normativa 
+ Italiana) da utilizzare per il progetto e la verifica dei collegamenti.</p>
+<p><span class="hcp1"><a name="Zona_filettata" id="Zona_filettata"></a>Zona 
+ filettata</span><span class="hcp2">: specificare se le 
+ verifiche di resistenza devono essere effettuate con riferimento all'area 
+ filettata o all'area nominale del bullone.</span></p>
+<h2>Progettazione saldature</h2>
+<p><span class="hcp1"><span class="hcp1"><a 
+	 name="Altezza_della_saldatura" id="Altezza_della_saldatura"></a></span>Altezza 
+ della saldatura</span>: specificare come calcolare l'altezza della saldatura 
+ per i collegamenti delle reticolari. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Uguale 
+	 allo spessore del profilato</span>: viene assunta pari allo spessore 
+	 dell'anima o dell'ala del profilato da collegare.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Valore 
+	 minimo tra profilato e piastra</span>: viene assunta pari al minimo 
+	 valore tra lo spessore del profilato e quello della piastra.</p></li>
+</ul>
+<h2>Progettazione reticolari</h2>
+<p class="hcp3"><a name="Modalita_di_calcolo_sforzo_normale_per_giunti_su_aste_continue" 
+								 id="Modalita_di_calcolo_sforzo_normale_per_giunti_su_aste_continue"></a>Modalità 
+ di calcolo sforzo normale per giunti su aste continue<span class="hcp2">: 
+ indicare come valutare lo sforzo normale per giunti su aste continue. 
+ Sono disponibili le seguenti opzioni:</span></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 per ogni semigiunto le sollecitazioni di calcolo delle aste</span>: 
+	 lo sforzo normale nel semigiunto è la sollecitazione derivante dall'analisi. 
+	 Ad esempio se lo sforzo normale dell'asta di sinistra è 1000 daN e 
+	 quello dell'asta di destra è 700 daN, entrambi i semigiunti vengono 
+	 progettati con uno sforzo normale di 1000 daN.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 per ogni semigiunto la differenza fra le sollecitazioni delle aste</span>: 
+	 lo sforzo normale nel semigiunto è la differenza fra le sollecitazioni 
+	 derivanti dall'analisi. Ad esempio se lo sforzo normale dell'asta 
+	 di sinistra è 1000 daN e quello dell'asta di destra è 700 daN, entrambi 
+	 i semigiunti vengono progettati con uno sforzo normale di 300 daN.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 per ogni semigiunto la differenza fra le sollecitazioni delle aste 
+	 divisa per due</span>: lo sforzo normale nel semigiunto è la differenza 
+	 fra le sollecitazioni derivanti dall'analisi divisa per due. Ad esempio 
+	 se lo sforzo normale dell'asta di sinistra è 1000 daN e quello dell'asta 
+	 di destra è 700 daN, entrambi i semigiunti vengono progettati con 
+	 uno sforzo normale di 150 daN.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Considera 
+	 per ogni semigiunto il massimo fra le sollecitazioni delle aste diviso 
+	 per due</span>: lo sforzo normale nel semigiunto è il massimo fra 
+	 le sollecitazioni derivanti dall'analisi diviso per due. Ad esempio 
+	 se lo sforzo normale dell'asta di sinistra è 1000 daN e quello dell'asta 
+	 di destra è 700 daN, entrambi i semigiunti vengono progettati con 
+	 uno sforzo normale di 500 daN.</p></li>
+</ul>
+<p>In ogni caso il momento con asse normale al piano della reticolare e 
+ il taglio nel piano della reticolare restano comunque le sollecitazioni 
+ derivanti dall'analisi.</p>
+<p><span class="hcp1"><span class="hcp1"><span class="hcp1"><a name="Forma_della_piastra" id="Forma_della_piastra"></a></span></span>Forma 
+ della piastra</span>: indicare la forma della piastra di giunzione dei 
+ collegamenti nelle reticolari. Sono disponibili le seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Rettangolare</span>: 
+	 la forma della piastra viene adattata alle dimensioni dei collegamenti 
+	 concorrenti nel nodo in modo da assumere una forma rettangolare.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Poligonale</span>: 
+	 la piastra rispecchia le dimensioni dei collegamenti garantendo solamente 
+	 una intersezione ortogonale con i profili concorrenti nel nodo.</p></li>
+</ul>
+<p>In progettazione interattiva sarà comunque possibile modificare tale 
+ indicazione anche nei singoli giunti.</p>
+<p><span class="hcp1"><a name="Rendi_continue_aste_allineate" 
+										 id="Rendi_continue_aste_allineate"></a>Rendi 
+ continue aste allineate</span>: indicare se considerare come continue 
+ eventuali aste allineate di uguale sezione e posizionamento. In progettazione 
+ interattiva sarà comunque possibile modificare tale indicazione anche 
+ nei singoli giunti.</p>
+<p><span class="hcp1"><a name="Finali_equidistanti_per_aste_incrociate" 
+										 id="Finali_equidistanti_per_aste_incrociate"></a>Finali 
+ equidistanti per aste incrociate</span>: indicare se interrompere eventuali 
+ doppi allineamenti di aste incrociate (ad esempio nei controventi) posizionando 
+ il termine dei profili ad uguale distanza dal nodo. In progettazione interattiva 
+ sarà comunque possibile modificare tale indicazione anche nei singoli 
+ giunti.</p>
+<p><span class="hcp1"><span class="hcp1"><a 
+	 name="Arretra_piastra_nelle_saldature_di_bordo" id="Arretra_piastra_nelle_saldature_di_bordo"></a></span>Arretra 
+ piastra nelle saldature di bordo</span>: indicare se effettuare le saldature 
+ sul bordo dei profili all'esterno della reticolare sagomando la piastra 
+ in modo da garantire la penetrazione del cordone o arretrando la piastra 
+ in modo da ricavare lo spazio necessario (all'interno dei profili) per 
+ effettuare i cordoni di saldatura. La scelta non ha influenza sulle verifiche 
+ in quanto posizione e dimensione dei cordoni restano invariate, ma cambiano 
+ le dimensioni della piastra stessa. In progettazione interattiva sarà 
+ comunque possibile modificare tale valore anche nei singoli giunti.</p>
+<p><span class="hcp1"><a name="Saldature_con_dimensioni_bilanciate" 
+										 id="Saldature_con_dimensioni_bilanciate"></a>Saldature 
+ con dimensioni bilanciate</span>: indicare se calcolare la lunghezza dei 
+ cordoni di saldatura imponendo che il loro baricentro coincida con il 
+ baricentro del profilo, in modo da non creare momenti aggiuntivi dovuti 
+ all'eccentricità.</p>
+<p><span class="hcp1"><a name="Arrotondamento_lungh__cordoni_di_saldatura" 
+										 id="Arrotondamento_lungh__cordoni_di_saldatura"></a>Arrotondamento 
+ lunghezza cordoni di saldatura</span>: indicare il valore di arrotondamento 
+ per le lunghezze dei cordoni di saldatura. Ad esempio indicando 5 mm verranno 
+ progettati cordoni con lunghezza sempre multipla di 5 mm.</p>
+<p><span class="hcp1"><a name="Rapporto_min__fra_lungh__e_spessore_cordone" 
+										 id="Rapporto_min__fra_lungh__e_spessore_cordone"></a>Rapporto 
+ minimo fra lunghezza e spessore cordone</span>: indicare il valore minimo 
+ che deve risultare come rapporto fra lunghezza e spessore del cordone 
+ di saldatura. Come buona regola costruttiva viene generalmente indicato 
+ un valore pari a 15 (CNR 10011/85 par. 9.2.3).</p>
+<p><span class="hcp1"><a name="Max__ingombro_collegam__lungo_il_profilo" 
+										 id="Max__ingombro_collegam__lungo_il_profilo"></a>Massimo 
+ ingombro collegamento lungo il profilo</span>: indicare a quale ingombro 
+ complessivo (in percentuale sulla lunghezza dell'asta) limitare la lunghezza 
+ del collegamento in fase di progettazione automatica. Ad esempio specificando 
+ 30 verranno considerati come non validi i collegamenti con saldature la 
+ cui lunghezza supera il 30% della lunghezza complessiva dell'asta.</p>
+<p><span class="hcp1"><a name="Allargamento_piastra_ai_lati_del_profilo" 
+										 id="Allargamento_piastra_ai_lati_del_profilo"></a>Allargamento 
+ piastra ai lati del profilo</span>: indicare di quanto allargare la piastra 
+ (in mm) ortogonalmente al profilo prima di modificarne la forma per il 
+ collegamento agli altri profili. In progettazione interattiva sarà comunque 
+ possibile modificare tale valore anche nei singoli giunti.</p>
+<p><a name="Minimo_spazio_libero_tra_profili" id="Minimo_spazio_libero_tra_profili"></a><span class="hcp1">Minimo spazio libero tra i profili</span>: 
+ indicare quanto spazio lasciare libero fra i bordi dei profili che concorrono 
+ nel nodo. ModeSt calcola ed adatta la lunghezza dei profili in modo da 
+ garantire il mantenimento della distanza indicata.</p>
+<p style="margin-bottom: 0;"><span class="hcp1"><a name="Spess__piastra_se_non_imposto_dal_profilo" 
+	 id="Spess__piastra_se_non_imposto_dal_profilo"></a>Spessore piastra 
+ se non imposto dal profilo</span>: indicare lo spessore della piastra. 
+ Tale valore viene considerato solo nel caso in cui nel nodo concorrano 
+ solo aste per le quali non è già noto lo spessore della piastra (profili 
+ accoppiati).</p>
+<h2>Progettazione collegamenti</h2>
+<p><span class="hcp1"><img src="Criterio_pnat.gif" alt="" style="border: none; margin-left: 5px; 
+										 margin-right: 0px; margin-top: 5px; 
+										 margin-bottom: 5px;" width="200" height="193" align="right" border="0"><a 
+	 name="Trascura_sollecitazioni_teoricamente_nulle" id="Trascura_sollecitazioni_teoricamente_nulle"></a>Trascura 
+ sollecitazioni teoricamente nulle</span>: indicare se trascurare le sollecitazioni 
+ che sarebbero teoricamente nulle a causa degli svincolamenti presenti 
+ all'estremità delle aste ma che potrebbero risultare non nulle nel caso 
+ di calcolo senza zone rigide per la differente posizione del nodo rispetto 
+ al punto in cui vengono calcolate le sollecitazioni sul collegamento. 
+ Ad esempio nel caso di collegamento trave-colonna con flangia, nel calcolo 
+ senza zone rigide un eventuale cerniera è pensata in asse alla colonna 
+ ma il collegamento può essere posizionato sull'ala della colonna, in tal 
+ caso per l'andamento del momento si avrebbe una sollecitazione non nulla 
+ sul collegamento stesso (vedi figura). Questo parametro permette di eliminare 
+ questi effetti secondari.</p>
+<p class="hcp3"><a name="Componenti_sollecitazioni_da_trascurare" 
+								 id="Componenti_sollecitazioni_da_trascurare"></a>Componenti 
+ sollecitazioni da trascurare<span class="hcp2">: indicare 
+ quali componenti di sollecitazione trascurare nel progetto del collegamento. 
+ Questo parametro permette di trascurare le sollecitazioni presenti nell'asta 
+ ma che nella struttura reale non sono presenti. Si pensi ad esempio ad 
+ un coprigiunto di una trave in cui sono presenti anche il momento torcente 
+ e quello trasversale alla trave ma che nel caso reale possono essere nulli 
+ per la presenza di un solaio.</span></p>
+<p><span class="hcp1"><span class="hcp2"><a 
+	 name="Classe_saldature_a_completa_penetrazione" id="Classe_saldature_a_completa_penetrazione"></a></span>Classe 
+ saldature a completa penetrazione</span>: selezionare la classe della 
+ saldatura fra <span class="hcp1">Prima</span> o <span class="hcp1">Seconda</span>. 
+ Viene verificata la sezione della saldatura uguale alla sezione dell'asta, 
+ se la saldatura è di prima classe le tensioni vengono confrontate con 
+ le tensioni ammissibili altrimenti vengono confrontate con le tensioni 
+ ammissibili ridotte come da normativa Italiana.</p>
+<p><span class="hcp1"><a name="Considera_solo_bulloni_per_verifiche_a_flessione" 
+										 id="Considera_solo_bulloni_per_verifiche_a_flessione"></a>Considera 
+ solo bulloni per verifiche a flessione</span>: indicare se nella verifica 
+ a flessione delle flange vada considerato solo il contributo dei bulloni, 
+ trascurando l'eventuale zona compressa della piastra.</p>
+<p><span class="hcp1"><a name="Angolo_massimo_di_incidenza" 
+										 id="Angolo_massimo_di_incidenza"></a>Angolo 
+ massimo di incidenza</span>: specificare il massimo angolo nel piano verticale 
+ o orizzontale che può avere l'asta affinché venga progettato il collegamento. 
+ Non sono progettabili collegamenti con l'asta inclinata sia nel piano 
+ verticale che orizzontale.</p>
+<p><span class="hcp1"><a name="Piastre_di_fondazione" id="Piastre_di_fondazione"></a>Piastre 
+ di fondazione</span>: per le piastre di fondazione sono disponibili le 
+ seguenti opzioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Elenco_diametri_tirafondi_utilizzabili" id="Elenco_diametri_tirafondi_utilizzabili"></a>Elenco 
+	 diametri tirafondi utilizzabili</span>: specificare l'elenco dei diametri 
+	 utilizzabili per la progettazione dei tirafondi, separati da spazi 
+	 (ad esempio 10 12 14 16 18). Sono ammessi anche valori non consecutivi.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Lunghezza minima infissione"></a>Lunghezza minima d'infissione</span>: 
+	 specificare la lunghezza minima d'infissione dei tirafondi. Ad esempio 
+	 specificando 200 i tirafondi devono avere in ogni caso lunghezza non 
+	 inferiore a 200 mm, ma possono comunque essere più lunghi se necessario. 
+	 Nei tirafondi con rosetta la lunghezza è pari al valore specificato.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Verifica_piastra_e_tirafondi_con_reazioni_vincolari" id="Verifica_piastra_e_tirafondi_con_reazioni_vincolari"></a>Verifica 
+	 piastra e tirafondi con reazioni vincolari</span>: indicare se eseguire 
+	 le verifiche della piastra di fondazione e dei tirafondi con le reazioni 
+	 vincolari al posto delle sollecitazioni nell'asta. Questo parametro 
+	 permette nel caso di nodi di fondazione su cui insistono dei controventi 
+	 (peraltro non disegnati) di non sottostimare le sollecitazioni agenti 
+	 sulla piastra e sui tirafondi come invece avverrebbe se progettati 
+	 in base alle sollecitazioni dell'asta. Le saldature vengono sempre 
+	 verificate con le sollecitazioni dell'asta.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Trascura_tirafondi_compressi" id="Trascura_tirafondi_compressi"></a>Trascura 
+	 tirafondi compressi</span>: indicare se nella determinazione delle 
+	 sollecitazioni sui bulloni si debbano trascurare quelli compressi. 
+	 Nella piastra di fondazione la determinazione delle sollecitazioni 
+	 avviene assimilando la superficie di contatto (piastra-fondazione) 
+	 ad una sezione rettangolare in c.a. Trascurando i bulloni compressi 
+	 la verifica viene effettuata considerando solo il contributo dell'armatura 
+	 tesa.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Tirafondi_con_barre_filettate" id="Tirafondi_con_barre_filettate"></a>Tirafondi 
+	 con barre filettate</span>: indicare se utilizzare le barre filettate 
+	 anziché le barre da cemento armato. Le barre filettate vengono trattate 
+	 come bulloni con la classe specificata in <span class="hcp1"><a 
+	 href="#Classe_bulloni">Classe bulloni</a></span>. Per le barre da 
+	 cemento armato vengono adottate quelle dell'elemento di fondazione 
+	 su cui insiste la piastra di fondazione oppure le caratteristiche 
+	 presenti nel primo criterio di progetto dell'armatura delle sezioni.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Tipo_di_tirafondi" id="Tipo_di_tirafondi"></a>Tipo di tirafondi</span>: 
+	 selezionare il tipo di tirafondo fra <span class="hcp1">Dritti</span> 
+	 o <span class="hcp1">Uncini</span> per le barre da cemento 
+	 armato oppure <span class="hcp1">Dritti</span> o <span class="hcp1">Rosetta</span> per le barre filettate. 
+	 In progettazione interattiva sarà comunque possibile modificare la 
+	 tipologia per ogni singolo giunto.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1"><a 
+	 name="Fattore_di_riduzione_per_ancoraggio_tirafondi" id="Fattore_di_riduzione_per_ancoraggio_tirafondi"></a>Fattore 
+	 di riduzione per ancoraggio tirafondi</span>: specificare di quanto 
+	 deve essere ridotto il valore di <font face="Symbol" class="hcp4">t</font><span class="hcp5">c0</span> o di F<span class="hcp5">bd</span> 
+	 (definito fra le caratteristiche dei materiali) per calcolare la tensione 
+	 tangenziale di aderenza ammissibile necessaria per il calcolo degli 
+	 ancoraggi dei ferri. Ad esempio specificando 0.6 si impone una riduzione 
+	 di <font face="Symbol" class="hcp4">t</font><span class="hcp5">c0</span> o di F<span class="hcp5">bd</span> 
+	 del 40%. Si ricorda che la normativa ammette riduzioni anche fino 
+	 al 50%. Per calcolare la lunghezza d'ancoraggio si fa riferimento 
+	 al valore di <font face="Symbol" class="hcp4">t</font><span class="hcp5">c0</span> o di F<span class="hcp5">bd</span> 
+	 definito nel criterio di progetto dell'elemento a cui la piastra di 
+	 fondazione è collegata. Nel caso in cui non sia presente nessun elemento 
+	 di fondazione si fa riferimento al primo criterio di progetto dell'armatura 
+	 delle sezioni.</p></li>
+</ul>
+<p><span class="hcp1"><a name="Piastra_circolare_per_sezioni_circolari_cave" 
+										 id="Piastra_circolare_per_sezioni_circolari_cave"></a>Piastra 
+ circolare per sezioni circolari cave</span>: indicare se nel caso di sezioni 
+ circolari cave, per collegamenti del tipo Continuità con flangia e Piastra 
+ di fondazione vada utilizzata una piastra di forma circolare anziché quadrata.</p>
+<p><span class="hcp1"><a name="Numero_minimo_bulloni_per_piastra_circolare" 
+										 id="Numero_minimo_bulloni_per_piastra_circolare"></a>Numero 
+ minimo bulloni per piastra circolare</span>: indicare il numero minimo 
+ di bulloni da utilizzare per il progetto e la verifica dei collegamenti 
+ del tipo Continuità con flangia e Piastra di fondazione per sezioni circolari 
+ cave con piastra circolare.</p>
+<p><span class="hcp1"><a name="Collegamenti_a_piastra_d_anima_di_aste_inclinate_con_piastra_di_forma_rettangolare" 
+										 id="Collegamenti_a_piastra_d_anima_di_aste_inclinate_con_piastra_di_forma_rettangolare"></a>Collegamenti 
+ a piastra d'anima di aste inclinate con piastra di forma rettangolare</span>: 
+ indicare se nel caso di collegamenti del tipo Piastra d'anima di aste 
+ inclinate vada utilizzata una piastra di forma rettangolare anziché poligonale.</p>
+<p><span class="hcp1"><a name="Disp_continuita_con_flangia" 
+										 id="Disp_continuita_con_flangia"></a>Disposizione 
+ della piastra nel collegamento &quot;continuità con flangia&quot;</span>:&#160;selezionare 
+ la disposizione della piastra nei collegamenti del tipo Continuità con 
+ flangia. È possibile scegliere fra: <span class="hcp1">Orto. 
+ finale</span> la piastra è ortogonale all'asta del finale, <span class="hcp1">Orto. 
+ ospite</span> la piastra è ortogonale all'asta ospite, <span class="hcp1">Bisecante</span> 
+ la piastra è sulla retta che divide in parti uguali l'angolo formato fra 
+ l'asta del finale e l'asta ospite,<span class="hcp1"> Verticale</span> 
+ la piastra è parallela all'asse Z del sistema di riferimento globale,<span class="hcp1"> Orizzontale</span> la piastra è parallela 
+ al piano XY del sistema di riferimento globale.</p>
+<p><span class="hcp1"><a name="Disp_piastra_di_fondazione" 
+										 id="Disp_piastra_di_fondazione"></a>Disposizione 
+ della piastra nel collegamento &quot;piastra di fondazione&quot;</span>: 
+ selezionare la disposizione della piastra nei collegamenti del tipo Piastra 
+ di fondazione.&#160;È possibile scegliere fra: <span class="hcp1">Ortogonale</span> 
+ la piastra è ortogonale all'asta del finale, <span class="hcp1">Verticale</span> 
+ la piastra è parallela all'asse Z del sistema di riferimento globale,<span class="hcp1"> Orizzontale</span> la piastra è parallela 
+ al piano XY del sistema di riferimento globale.</p>
+<p><span class="hcp1"><a name="Progetta_i_collegamenti_ignorando_i_controlli_sulle_distanze_della_bullonatura" 
+										 id="Progetta_i_collegamenti_ignorando_i_controlli_sulle_distanze_della_bullonatura"></a>Progetta 
+ i collegamenti ignorando i controlli sulle distanze della bullonatura</span>: 
+ indicare se progettare i collegamenti ignorando le prescrizioni sulle 
+ distanze della bullonatura previste dalla normativa. Questo parametro 
+ viene ignorato per i collegamenti delle reticolari, dei coprigiunti, della 
+ piastra d'anima, e sull'ala della squadretta sul finale d'asta.</p>
+<h2>Verifiche ai sensi D.M. 18</h2>
+<p class="hcp3"><a name="Esposizione_a_fenomeni_corrosivi" 
+								 id="Esposizione_a_fenomeni_corrosivi"></a>Esposizione 
+ a fenomeni corrosivi<span class="hcp2">: indicare la classe 
+ d'esposizione del collegamento necessaria per controllare se le distanze 
+ massime tra i bulloni rispettano le limitazioni della Tabella 4.2.XVIII 
+ del D.M. 17/01/18. Sono disponibili le seguenti opzioni:</span></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Unione 
+	 non esposta alla corrosione</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Unione 
+	 esposta alla corrosione</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp1">Unione 
+	 di elementi in acciaio resistente alla corrosione</span></p></li>
+</ul>
+</body>
+</html>

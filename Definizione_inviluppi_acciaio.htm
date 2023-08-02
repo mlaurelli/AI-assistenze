@@ -1,0 +1,83 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Definizione inviluppi</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Definizione inviluppi</h1>
+<p>ModeSt è in grado di inviluppare fra loro più reticolari con la stessa 
+ geometria o più collegamenti con la stessa tipologia in modo da progettare 
+ le unioni in funzione delle sollecitazioni massime, producendo però un 
+ solo disegno e un'unica relazione di calcolo.</p>
+<p>La definizione degli inviluppi delle reticolari/collegamenti può essere 
+ effettuata in diversi modi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nel gruppo <span class="hcp1">Inviluppi</span> 
+	 della scheda <span class="hcp1">Post-Processor</span> 
+	 cliccando su <span class="hcp1">Definizione</span> <img src="../Icone/32/inviluppi32.png" alt="" border="1" class="hcp2">&#160;e poi 
+	 su reticolare o su collegamento da inviluppare.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nel gruppo <span class="hcp1">Progettazione</span> 
+	 della scheda <span class="hcp1">Post-Processor</span> 
+	 cliccando su <span class="hcp1">Automatica</span> <img src="../Icone/32/progaut32.png" alt="" border="1" class="hcp2">, attraverso 
+	 il bottone <span class="hcp1">Modifica inviluppi</span> 
+	 relativo alla reticolare/collegamento da inviluppare.</p></li>
+</ul>
+<p>Nella casella relativa a <span class="hcp1">Inviluppo 
+ reticolari/collegamenti</span> è possibile specificare i numeri delle 
+ reticolari o i <a href="Nome_collegamenti.htm">nomi dei collegamenti</a> 
+ da inviluppare. Su ogni riga è possibile indicare un solo inviluppo, inserendo 
+ inizialmente il numero della reticolare/collegamento &quot;principale&quot; 
+ e successivamente i numeri delle reticolari/collegamenti da inviluppare 
+ separati da spazio. La sintassi è la seguente: <span class="hcp1">n1 
+ n2 n3 n4 ...</span> per creare il disegno relativo alla sola reticolare/collegamento 
+ n1, ma progettando i collegamenti tenendo conto anche delle sollecitazioni 
+ delle reticolari/collegamenti n2, n3, n4, ... È possibile anche indicare 
+ negli inviluppi le reticolari che si desidera vengano disegnate viste 
+ dalla parte opposta rispetto a quella individuata per default da ModeSt. 
+ È sufficiente indicare il numero della reticolare negativo.</p>
+<p>Nella finestra di dialogo è possibile, cliccando sul bottone <span class="hcp1">Interattivo</span> 
+ definire graficamente gli inviluppi selezionando gli elementi nella finestra 
+ di modellazione oppure, cliccando sul bottone <span class="hcp1">Automatico</span> 
+ far definire gli inviluppi automaticamente al programma. Dopo aver effettuato 
+ una qualsiasi modifica agli inviluppi, occorre cliccare sul bottone <span class="hcp1">Applica</span> prima di procedere alla 
+ definizione automatica o interattiva degli inviluppi.</p>
+<p>Per ogni elemento strutturale si riportano di seguito alcune note sulla 
+ correttezza degli inviluppi:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">La correttezza degli inviluppi 
+	 viene controllata al termine della loro definizione.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Non è possibile inviluppare 
+	 reticolari costituite da un diverso numero di aste, con sezioni non 
+	 corrispondenti o con lunghezze delle aste (da nodo a nodo) non corrispondenti. 
+	 Per l'individuazione di tutti i parametri che dipendono dalla configurazione 
+	 geometrica della reticolare e dagli elementi incidenti su di essa 
+	 ModeSt fa comunque sempre riferimento alla reticolare &quot;principale&quot;.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Non è possibile inviluppare 
+	 collegamenti con diversa tipologia ed appartenenti ad aste con sezioni 
+	 di diversa tipologia.</p></li>
+</ul>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DEIN.htm">DEIN</a></span>&#160;(Definisce 
+ inviluppi).</p>
+<p>&#160;</p>
+</body>
+</html>

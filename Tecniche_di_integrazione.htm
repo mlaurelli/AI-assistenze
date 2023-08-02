@@ -1,0 +1,57 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Tecniche di integrazione</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Tecniche di integrazione</h1>
+<p>Premesso che una mesh regolare è alla base di una buona progettazione 
+ e di un calcolo più corretto, gli <a href="Integratori.htm">integratori</a> 
+ sono in grado di gestire anche mesh non regolari.</p>
+<p>Esistono due metodi per valutare le sollecitazioni complessive su un 
+ integratore, il metodo delle forze di equilibrio ed il metodo delle tensioni. 
+ Il primo è applicabile solamente se l'integratore interessa soltanto nodi 
+ e lati di elementi bidimensionali, senza intersecarne alcuno. In tal caso 
+ i calcoli vengono fatti con riferimento alle forze di equilibrio risultanti 
+ dal calcolo FEM. Il secondo metodo (meno preciso) è utilizzabile sempre 
+ ma ovviamente dipende in maggior misura dal tipo di elemento utilizzato 
+ dal solutore e da come vengono forniti gli stati tensionali (per ogni 
+ nodo o nel centroide). Nelle tabelle delle sollecitazioni integrate (si 
+ veda <a href="Tabelle%20risultati.htm">Tabelle risultati</a>) viene sempre 
+ riportato con i simboli F/T se il calcolo è stato fatto col metodo delle 
+ forze di equilibrio (F) o col metodo delle tensioni (T).</p>
+<p>Quando l'integrazione viene effettuata con le tensioni vengono presi 
+ in conto tutti gli elementi che in toto o in parte interessano la linea 
+ di definizione dell'integratore, eventualmente interpolando i valori tensionali 
+ dei nodi degli elementi.</p>
+<p>Negli <a href="Integratori.htm#Integratori_trasversali">integratori 
+ trasversali</a>, visto che sono pensati per considerare la soletta come 
+ elemento monodimensionale, lo sforzo di taglio fuori piano viene valutato 
+ integrando l'intera tensione di taglio fuori piano (<span style="font-family: Symbol, serif;">t</span><span 
+	 style="vertical-align: Sub;">y</span>) con inevitabile perdita di 
+ segno, che comunque non è significativo per il progetto e la verifica 
+ delle armature.</p>
+<p>Nell'integrazione con le forze di equilibrio si considerano ovviamente 
+ tutti gli elementi che hanno due nodi giacenti sulla linea. Gli elementi 
+ che dovessero toccare la linea con un solo nodo, contribuiscono con le 
+ loro forze di equilibrio su quel nodo solamente se almeno in parte interessano 
+ la proiezione della linea nel piano degli elementi. Le forze di equilibrio 
+ vengono ridotte in proporzione all'area dell'elemento che giace all'interno 
+ della proiezione.</p>
+<p><span class="hcp1">Argomenti correlati:</span> <span class="hcp1"><a 
+	 href="Integratori.htm">Integratori</a></span>, <span class="hcp1"><a 
+	 href="Asta_virtuale.htm">Asta virtuale</a></span></p>
+</body>
+</html>

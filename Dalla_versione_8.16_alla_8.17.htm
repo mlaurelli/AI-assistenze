@@ -1,0 +1,73 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.16 alla 8.17</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.16 alla 8.17</h1>
+<p>Analisi non lineare (statica, sismica statica o pushover) di strutture 
+ con elementi bidimensionali modellati al continuo con comportamento a 
+ rottura descritto da un legame elasto-plastico attritivo del tipo <a href="Legame_costitutivo_Drucker-Prager.htm" 
+	 style="font-family: Verdana, sans-serif;">Drucker-Prager</a>. Questo 
+ legame non è supportato dalle versioni di Xfinest precedenti alla 2018. 
+ Questa funzionalità nasce con l'idea di consentire analisi in campo non 
+ lineare di strutture in muratura caratterizzate da una geometria di una 
+ complessità tale che la corretta risposta sismica non possa essere colta 
+ per mezzo di uno schema a telaio equivalente, che risulterebbe troppo 
+ riduttivo. Nelle analisi pushover è possibile inserire sia elementi bidimensionali 
+ di questo tipo sia aste con comportamento a fibre ed i risultati che ne 
+ derivano forniscono le informazioni necessarie per la verifica globale 
+ al collasso della struttura.<br>
+Facciamo osservare che in generale, con il legame Drucker-Prager, la rottura 
+ per taglio può avvenire secondo meccanismi fessurativi di diversa natura, 
+ ascrivibili all'effetto delle tensioni tangenziali originate dalle azioni 
+ orizzontali, in combinazione con le componenti di tensione normale. Questi 
+ tipi di rottura sono tra i più frequenti nelle costruzioni in muratura 
+ e dipendono anche da come la muratura stessa è stata realizzata. Il legame 
+ Drucker-Prager è adatto soprattutto a simulare la risposta sismica di 
+ muratura ordinata, in cui la tipologia di rottura prevalente è di tipo 
+ taglio-scorrimento.</p>
+<p>Nuovo collegamento delle aste in acciaio del tipo trave su trave o su 
+ pilastro con piastra e bullonatura. Il collegamento è composto da una 
+ piastra saldata sull'ospite e bullonata sul finale di asta. Il principale 
+ utilizzo è il collegamento dei controventi di parete o di falda a travi 
+ o a pilastri.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Introdotta la possibilità 
+	 di specificare per ogni nodo l'impalcato sul quale trasferire la propria 
+	 massa così da aumentare e personalizzare ulteriormente le modalità 
+	 di trasferimento delle masse dei nodi che non appartengono agli impalcati 
+	 definiti.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Progetto del bicchiere dei 
+	 plinti con i tagli ed i momenti resistenti del pilastro soprastante, 
+	 ai sensi del D.M. 17/01/18. Per un plinto a bicchiere collegato alla 
+	 struttura è richiesto che sia già stato progettato li pilastro soprastante 
+	 mentre, per quello indipendente occorre seguire la procedura riportata 
+	 nel capitolo <span style="font-weight: bold;"><a href="Progettazione_plinti_indipendenti_ai_sensi_DM18.htm">Progettazione 
+	 plinti indipendenti ai sensi D.M. 17/01/18</a></span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nel collegamento con saldatura 
+	 a cordone d'angolo è stata aggiunta tra i finali d'asta la sezione 
+	 rettangolare.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Visualizzazione della deformata 
+	 nodale con mappe a colori sugli elementi della struttura indeformata. 
+	 Questo tipo di visualizzazione si attiva con l'opzione <span class="hcp1">Mappatura</span> 
+	 presente nelle <span class="hcp1">Opzioni di disegno</span> 
+	 del menu a comparsa che si ottiene facendo clic col tasto destro sullo 
+	 sfondo della finestra.</p></li>
+</ul>
+<p>&#160;</p>
+</body>
+</html>

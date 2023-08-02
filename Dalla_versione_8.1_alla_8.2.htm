@@ -1,0 +1,117 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.1 alla 8.2</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp3 { mso-fareast-language:IT; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.1 alla 8.2</h1>
+<p>È stato implementato il progetto dell'armatura di solai che giacciono 
+ su piani inclinati come ad esempio le falde di un tetto. Il progetto dei 
+ solai su piani inclinati può essere effettuato solo su carpenterie di 
+ piano create con l'opzione &quot;Passante per tre nodi selezionati&quot;.</p>
+<p>La finestra di dialogo per il <span class="hcp1"><a href="Creazione%20disegni%20carpenterie%20di%20piano.htm">disegno 
+ delle carpenterie di piano</a></span> è stata ridisegnata e migliorata, 
+ con l'aggiunta di nuove funzionalità per la generazione del disegno delle 
+ carpenterie della copertura (questa funzionalità sostituisce la macro 
+ CARP che è stata eliminata) e del disegno di sezioni o prospetti della 
+ struttura.</p>
+<p>Negli <span class="hcp1"><a href="Strumenti.htm">strumenti</a></span> 
+ di modellazione è stata aggiunta il comando <span class="hcp1">Crea 
+ scala/rampa/sbalzo <img src="../Icone/16/scal.png" alt="" border="1" class="hcp2"></span> 
+ attraverso la quale si accede ad una serie di funzionalità che consentono 
+ di creare oltre alle classiche tipologie di scale a due o tre rampe, le 
+ scale a due rampe senza pianerottoli, le rampe continue con o senza pianerottoli 
+ e gli sbalzi (balconi).</p>
+<p>Possibilità di calcolare le strutture ai sensi del D.M. 17/01/18 utilizzando 
+ spettri di progetto personalizzati importati da file esterni.</p>
+<p>Completata la relazione di calcolo &quot;sintetica&quot; per consentire 
+ agli utenti di compilare agevolmente le schede del SI-ERC e l'Allegato 
+ B della Regione Lazio. Sempre per agevolare l'utente nella stesura della 
+ relazione sintetica si è cercato quanto più possibile di seguire l'ordine 
+ dei dati richiesti nelle suddette schede. Nella relazione sintetica sono 
+ stati aggiunti ai dati di calcolo e agli spettri di progetto in formato 
+ tabellare le caratteristiche delle colonne stratigrafiche e delle eventuali 
+ prove in sito utilizzate, le caratteristiche di resistenza dei materiali 
+ utilizzati e i carichi agenti sulla struttura.</p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Il progetto dei collegamenti 
+	 in acciaio è stato velocizzato utilizzando una nuova tecnica. Invece 
+	 di controllare TUTTI i possibili collegamenti generati, facendone 
+	 le verifiche e scegliendo poi quello che massimizzava lo sfruttamento, 
+	 si effettua adesso un ordinamento in base a criteri di peso, numero 
+	 bulloni, spessore piastre, ecc. e si sceglie il PRIMO dei collegamenti 
+	 che risulta verificato. Questo ha consentito ad esempio di portare 
+	 a meno di 2 i 16 minuti necessari per una struttura con 64 collegamenti 
+	 (non molti) calcolata con 24 combinazioni di carico. Da numerosi test 
+	 è emerso che praticamente sempre il collegamento scelto risulta lo 
+	 stesso della versione precedente.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Inserimento di nodi, aste, 
+	 muri/elementi bidimensionali fra nodi creati nei punti di intersezione, 
+	 ortogonali o perpendicolari alle aste. I nodi possono essere creati 
+	 nel punto di intersezione di due aste cliccando sulla voce &quot;INTE&quot; 
+	 oppure nel punto ortogonale ad un'asta cliccando sulla voce &quot;ORTO&quot; 
+	 oppure nel punto perpendicolare ad un'asta cliccando sulla voce &quot;PERP&quot;. 
+	 Le suddette voci si trovano negli <span class="hcp1"><a 
+	 href="Strumenti_di_visualizzazione.htm">Strumenti di visualizzazione</a></span>. 
+	 Nei casi di &quot;ORTO&quot; e &quot;PERP&quot; il punto di inserimento 
+	 del nodo è determinato rispettivamente dalla retta ortogonale o perpendicolare 
+	 all'asta passante per il punto di riferimento. Il punto di riferimento 
+	 può essere modificato sia prima che durante l'esecuzione del comando 
+	 cliccando sulla voce &quot;P. riferimento&quot; degli <span class="hcp1"><a 
+	 href="Strumenti_di_visualizzazione.htm">Strumenti di visualizzazione</a></span>.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Per le strutture isolate è 
+	 possibile disegnare la carpenteria di piano con indicate le tipologie 
+	 degli isolatori adottati.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Il programma è adesso in grado 
+	 di recuperare l'armatura dei pilastri progettati con il metodo delle 
+	 tensioni ammissibili e di riverificarli secondo la nuova normativa, 
+	 sia in analisi lineare che non lineare. L'armatura non è editabile 
+	 a meno che non si proceda ad un ricalcolo agli stati limite, nel qual 
+	 caso sarà possibile modificarla. È possibile quindi adesso eseguire 
+	 un progetto simulato alle T.A. D.M. 14/02/92 comprensivo di travi 
+	 e pilastri e riverificarlo automaticamente.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Negli <span class="hcp1"><a 
+	 href="Strumenti.htm">strumenti</a></span> di modellazione sotto <span class="hcp1">Aggiusta coordinate <img src="../Icone/16/agco.png" alt="" border="1" class="hcp2"></span> 
+	 è stato aggiunto <span class="hcp1">Sposta nodi su allineamenti 
+	 <img src="../Icone/16/trone.png" alt="" border="1" class="hcp2"></span> 
+	 che consente di modificare solo le coordinate X e Y dei nodi per spostarli 
+	 sul piano verticale passante per l'allineamento più vicino. Lo strumento 
+	 risulta utile per risolvere problemi di non perfetta complanarità.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Le finestre di modellazione 
+	 e di editor possono essere raggruppate fra loro e disposte verticalmente 
+	 o orizzontalmente. Questa funzionalità è attiva solo su Windows 8. 
+	 Si rimanda al capitolo <a href="Finestre%20di%20modellazione.htm">finestre 
+	 di modellazione</a> del manuale per approfondimenti e dettagli.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">Nella 
+	 trasformazione dei file DXF/DWG la macro per la trasformazione di 
+	 linee-aste è stata migliorata consentendo di assegnare automaticamente 
+	 alle aste la sezione con lo stesso numero contenuto nel nome del layer. 
+	 Ad esempio, la sezione numero 1 viene assegnata a tutte le aste delle 
+	 linee che appartengono al layer il cui nome inizia con &quot;1&quot;. 
+	 Per utilizzare questa funzionalità occorre prima definire nella struttura 
+	 le sezioni e modificare i nomi dei layer del disegno DXF/DWG in modo 
+	 che inizino con un numero (ad esempio &quot;2 Travi&quot;).</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1"><span class="hcp3">I</span><span class="hcp3">l lucido può essere posizionato 
+	 direttamente sugli impalcati definiti.</span></p></li>
+</ul>
+</body>
+</html>

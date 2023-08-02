@@ -1,0 +1,129 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Introduzione</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp3 { font-family:Symbol, serif; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Introduzione</h1>
+<p>La verifica di edifici esistenti può essere effettuata in ModeSt come 
+ indicato al paragrafo C8.7.2 della&#160;Circolare esplicativa n. 7 del 
+ 21/01/19 con analisi statica lineare o dinamica modale oppure con analisi 
+ sismica statica non lineare (pushover). L'analisi con spettro elastico 
+ non è implementata in ModeSt.</p>
+<p>Per effettuare le verifiche occorre in primo luogo inserire nei criteri 
+ di progetto i corretti valori dei materiali e dei relativi fattori di 
+ confidenza nella sezione &quot;Materiali&quot; dei relativi elementi. 
+ In ogni caso è possibile considerare alcuni elementi come nuovi per gestire 
+ la presenza di interventi di rinforzo o miglioramento, ma si vedano le 
+ successive considerazioni per quanto riguarda il fattore di comportamento 
+ e le verifiche a taglio.</p>
+<p>In presenza di elementi in c.a. occorre anche inserire le armature esistenti 
+ in travi, pilastri e nuclei. A questo proposito si fa notare che per impedire 
+ a ModeSt di calcolare in automatico i ferri di ripresa nei pilastri in 
+ funzione delle sollecitazioni agenti, occorre impostare nei criteri generali 
+ di progetto dei pilastri il parametro <span class="hcp1"><a 
+	 href="CriGenPil.htm#Non_progettare_riprese_ma_estendi_solo_i_ferri">Non 
+ progettare riprese ma estendi solo i ferri</a></span>.</p>
+<p>Nel caso di calcolo FEM si dovrà indicare nella scheda &quot;Dati struttura&quot; 
+ che l'edificio è esistente, contrassegnando la relativa casella. Si fa 
+ notare che per default in tal caso ModeSt imposta il fattore di comportamento 
+ q a 1.5.</p>
+<p>Nel caso di calcolo muratura occorre solo definire i corretti parametri 
+ nei criteri di progetto e il fattore di comportamento.</p>
+<p>L'analisi viene effettuata trascurando l'eventuale presenza di rinforzi 
+ in FRP o incamiciature in travi e pilastri, che vengono comunque messi 
+ in conto durante la ricerca dei diversi stati limite o durante le verifiche 
+ degli elementi.</p>
+<p class="Titolo7">Analisi lineari</p>
+<p><span style="text-autospace: ideograph-numeric;">Il calcolo delle strutture 
+ esistenti può essere eseguito in analisi lineare sia ipotizzando un comportamento 
+ dissipativo con fattore di comportamento q, che un comportamento non dissipativo, 
+ in entrambi i casi ModeSt, come indicato dalla normativa (in relazione 
+ alle rotture fragili del c.a.), valuta gli effetti del taglio considerando 
+ q=1.5. Nei due casi si fanno notare alcune particolarità e comportamenti 
+ del programma:</span></p>
+<p><b>Strutture dissipative</b></p>
+<p>La scelta del fattore di comportamento q, che per default viene impostato 
+ a 1.5&#160;indipendentemente dalle considerazioni sulla regolarità della 
+ struttura, resta compito del progettista. ModeSt, come già detto, in ogni 
+ caso valuta gli effetti del taglio considerando q=1.5 quindi, se si esegue 
+ il calcolo della struttura con ad esempio il fattore di comportamento 
+ q=3 le verifiche a flessione vengono eseguite con le sollecitazioni derivanti 
+ dal calcolo mentre le verifiche a taglio vengono effettuate con le sollecitazioni, 
+ calcolate automaticamente dal programma, corrispondenti a q=1.5.</p>
+<p>Il resto delle verifiche vengono effettuate come per le strutture nuove 
+ con comportamento dissipativo, con alcune precisazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Non vengono effettuati i controlli 
+	 sui minimi di regolamento.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">I valori del taglio da gerarchia 
+	 vengono valutati come prescritto da normativa, considerando i momenti 
+	 resistenti valutati amplificando le resistenze medie dei materiali 
+	 tramite il fattore di confidenza e tali valori del taglio vengono 
+	 considerati come un limite superiore rispetto al taglio derivante 
+	 dal calcolo che quindi non può essere superiore a quello da gerarchia 
+	 (il contrario degli edifici nuovi).</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Vengono effettuate, se non 
+	 disabilitate come le altre verifiche specifiche per strutture dissipative, 
+	 anche verifiche di resistenza taglio in condizioni cicliche, come 
+	 indicato in circolare al punto C8.7.2.3.5.</p></li>
+</ul>
+<p style="font-weight: bold;">Strutture non dissipative</p>
+<p>Anche in questo caso le verifiche vengono eseguite come per le strutture 
+ nuove con comportamento non dissipativo, con alcune precisazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Nel caso in cui il fattore 
+	 di comportamento (per default pari a 1.5) venga modificato manualmente 
+	 vale, a proposito del taglio, quanto indicato per le strutture dissipative.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Non vengono effettuati i controlli 
+	 sui minimi di regolamento.</p></li>
+</ul>
+<p>La riverifica degli elementi si effettua cliccando nel gruppo <span class="hcp1">Verifica</span> della scheda <span class="hcp1">Post-Processor</span> 
+ su <span class="hcp1">Cemento</span> <img src="../Icone/32/cemento32.png" alt="" border="1" class="hcp2">&#160;e 
+ poi su <span class="hcp1">Riverifica elementi progettati</span> 
+ <img src="../Icone/16/riverifiche.png" alt="" border="1" class="hcp2">. Al termine 
+ della procedura se tutti gli elementi risultassero verificati, la nostra 
+ struttura sarebbe perfettamente adeguata all'azione sismica del D.M. 17/01/18, 
+ a meno ovviamente del rispetto dei minimi di regolamento ed altre prescrizioni 
+ costruttive. Si consiglia di disabilitare tutte le verifiche di gerarchia 
+ delle resistenze dai criteri, in quanto teoricamente non previste per 
+ strutture esistenti.</p>
+<p>Qualora la struttura non risultasse verificata, è possibile valutarne 
+ gli indici di sicurezza come indicato nel capitolo <a href="Calcolo_indicatori_di_rischio_analisi_lineare.htm" 
+														 style="font-weight: bold;">Analisi 
+ lineari con fattore di comportamento</a>.</p>
+<p class="Titolo7">Analisi non lineari (pushover)</p>
+<p>Si fa presente che l'analisi pushover richiede una drastica semplificazione 
+ della struttura, presenta spesso problemi di convergenza ed è da ritenersi 
+ valida solo nel caso di struttura regolare. Ad oggi è più un metodo di 
+ studio che non di verifica della struttura, ma può essere utile per stimare 
+ il valore di <span class="hcp3">a</span><span style="vertical-align: Sub;">u</span>/<span class="hcp3">a</span><span style="text-transform: lowercase; 
+														 vertical-align: Sub;">1</span> 
+ e quindi il coefficiente di struttura da usare poi in un'analisi lineare, 
+ che operando con concetti e procedure già ben note ai progettisti è sicuramente 
+ meglio controllabile e gestibile.</p>
+<p>Nel caso di analisi pushover i nuclei e gli elementi bidimensionali 
+ in genere non possono essere gestiti, si rimanda al paragrafo <span class="hcp1"><a 
+	 href="Linee_guida_sulla_modellazione_e_la_verifica.htm">Linee guida 
+ sulla modellazione e la verifica</a></span> nella sezione relativa all'analisi 
+ pushover per chiarimenti e suggerimenti.</p>
+<p>I risultati della verifica vengono valutati automaticamente al termine 
+ del calcolo e si leggono direttamente nella relazione di calcolo.</p>
+</body>
+</html>

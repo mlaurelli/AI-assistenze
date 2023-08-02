@@ -1,0 +1,214 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Sistemi di riferimento locali</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Sistemi di riferimento locali</h1>
+<p>Tutti gli elementi in ModeSt sono caratterizzati da un sistema di riferimento 
+ locale rispetto al quale sono riferite le sollecitazioni, alcuni tipi 
+ di carichi e alcuni tipi di dati.</p>
+<p>La visualizzazione del sistema di riferimento locale degli elementi 
+ si effettua cliccando nel gruppo <span class="hcp1">Disegno</span> 
+ della scheda <span class="hcp1">Modellazione</span> su <span class="hcp1">Assi locali <img src="../Icone/32/assi32.png" alt="" style="border: Solid 1px #808080; 
+												 border-width: 1px; border-style: solid;" border="1"></span>. 
+ Se gli elementi sono già stati <span class="hcp1"><a href="Selezioni.htm">selezionati</a></span> 
+ verranno automaticamente visualizzati gli assi locali di tali elementi 
+ altrimenti verrà richiesto di <span class="hcp1"><a href="Selezioni.htm">selezionare</a></span> 
+ gli elementi.</p>
+<p class="Titolo7"><span class="hcp1">Aste</span></p>
+<p>Il sistema di riferimento locale è una terna cartesiana destrorsa così 
+ definita:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">origine nel nodo iniziale 
+	 dell'asta;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">asse X coincidente con l'asse 
+	 dell'asta e con verso dal nodo iniziale al nodo finale;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">immaginando la trave a sezione 
+	 rettangolare l'asse Y è parallelo alla base e l'asse Z è parallelo 
+	 all'altezza. La rotazione dell'asta comporta quindi una rotazione 
+	 di tutta la terna locale.</p></li>
+</ul>
+<p>Si può immaginare la terna locale di un'asta comunque disposta nello 
+ spazio come derivante da quella globale dopo una serie di trasformazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">una rotazione intorno all'asse 
+	 Z che porti l'asse X a coincidere con la proiezione dell'asse dell'asta 
+	 sul piano orizzontale;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">una traslazione lungo il nuovo 
+	 asse X così definito in modo da portare l'origine a coincidere con 
+	 la proiezione del nodo iniziale dell'asta sul piano orizzontale;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">una traslazione lungo l'asse 
+	 Z che porti l'origine a coincidere con il nodo iniziale dell'asta;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">una rotazione intorno all'asse 
+	 Y così definito che porti l'asse X a coincidere con l'asse dell'asta;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">una rotazione intorno all'asse 
+	 X così definito pari alla rotazione dell'asta.</p></li>
+</ul>
+<p>In pratica le aste non verticali prive di rotazione avranno sempre l'asse 
+ Z rivolto verso l'alto e l'asse Y nel piano del solaio, mentre le aste 
+ verticali prive di rotazione causa l'ambiguità di definizione avranno 
+ per default l'asse Y parallelo all'asse Y globale e l'asse Z parallelo 
+ ma controverso all'asse X globale. Da notare quindi che per le aste verticali 
+ normalmente la &quot;base&quot; è il lato parallelo a Y. Non appena un'asta 
+ non è più verticale non esiste più ambiguità nella definizione dell'asse 
+ locale e quindi può apparire che l'asta &quot;ruoti&quot; se si sposta 
+ uno dei nodi rispetto alla verticale.</p>
+<p>Al sistema di riferimento locale dell'asta sono riferiti:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">i carichi esplicitamente riferiti 
+	 al sistema locale dell'asta;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">le sollecitazioni nell'asta.</p></li>
+</ul>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DALA.htm">DALA</a></span> 
+ (Disegna assi locali asta).</p>
+<p class="Titolo7">Muri ed elementi bidimensionali</p>
+<p>Il sistema di riferimento locale è una terna cartesiana destrorsa così 
+ definita:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">origine nel primo nodo dell'elemento;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">asse X coincidente con la 
+	 congiungente il primo ed il secondo nodo dell'elemento;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">versore dell'asse Y definito 
+	 come prodotto vettoriale fra il versore dell'asse X e il versore della 
+	 congiungente il primo e il quarto (o il terzo) nodo (uscente dall'elemento);</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">versore dell'asse Z sul piano 
+	 dell'elemento a formare con gli altri due una terna destrorsa (prodotto 
+	 vettoriale fra asse X ed asse Y).</p></li>
+</ul>
+<p>La normale uscente dall'elemento è quindi l'asse Y locale.</p>
+<p>Praticamente un elemento verticale con l'asse X locale coincidente con 
+ l'asse X globale ha anche gli altri assi locali paralleli con quelli globali 
+ (eventualmente con Y controversa).</p>
+<p>Al sistema di riferimento locale del muro o dell'elemento bidimensionale 
+ sono riferiti:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">i carichi esplicitamente riferiti 
+	 al sistema locale dell'elemento bidimensionale;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">la componente normale dei 
+	 carichi idrostatici;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">le sollecitazioni nel muro 
+	 e le tensioni nell'elemento bidimensionale.</p></li>
+</ul>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DALB.htm">DALB</a></span> 
+ (Disegna assi locali muro/elemento bidimensionale).</p>
+<p class="Titolo7"><span class="hcp1">Plinti/pali</span></p>
+<p>Il sistema di riferimento locale è una terna cartesiana destrorsa così 
+ definita:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">origine nel baricentro geometrico 
+	 del plinto/palo;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">asse X e Y paralleli agli 
+	 assi globali;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">rotazione del sistema uguale 
+	 al pilastro soprastante ed eventuale rotazione associata al tipo di 
+	 plinto/palo.</p></li>
+</ul>
+<p>Al sistema di riferimento locale del plinto/palo è riferito:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">l'angolo di rotazione del 
+	 plinto/palo.</p></li>
+</ul>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DALL.htm">DALL</a></span> 
+ (Disegna assi locali plinto/palo).</p>
+<p class="Titolo7"><span class="hcp1">Solai</span></p>
+<p>Il sistema di riferimento locale è una terna cartesiana destrorsa così 
+ definita:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">origine nel baricentro geometrico 
+	 del solaio;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">asse X parallelo alla proiezione 
+	 dell'asse X del sistema di riferimento globale di default sul piano 
+	 del solaio.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">asse Z normale al piano del 
+	 solaio;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">versore dell'asse Y sul piano 
+	 dell'elemento a formare con gli altri due una terna destrorsa (prodotto 
+	 vettoriale fra asse Z ed asse X).</p></li>
+</ul>
+<p>Al sistema di riferimento locale del solaio è riferito:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">l'angolo d'orditura del solaio.</p></li>
+</ul>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DALS.htm">DALS</a></span> 
+ (Disegna assi locali solaio).</p>
+<p class="Titolo7"><span class="hcp1">Tamponature</span></p>
+<p>Il sistema di riferimento locale è una terna cartesiana destrorsa così 
+ definita:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">origine nel baricentro geometrico 
+	 della tamponatura;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">asse X parallelo alla proiezione 
+	 dell'asse X del sistema di riferimento globale di default sul piano 
+	 della tamponatura.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">asse Z normale al piano della 
+	 tamponatura;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">versore dell'asse Y sul piano 
+	 dell'elemento a formare con gli altri due una terna destrorsa (prodotto 
+	 vettoriale fra asse Z ed asse X).</p></li>
+</ul>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DALT.htm">DALT</a></span> 
+ (Disegna assi locali tamponatura).</p>
+<p class="Titolo7"><span class="hcp1">Reticolari</span></p>
+<p>Il sistema di riferimento locale è una terna cartesiana destrorsa così 
+ definita:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">origine nel baricentro geometrico 
+	 della reticolare;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">asse X parallelo al piano 
+	 XY del sistema di riferimento globale di default;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">asse Z normale al piano della 
+	 reticolare.</p></li>
+</ul>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DALR.htm">DALR</a></span> 
+ (Disegna assi locali reticolari).</p>
+<p class="Titolo7"><span class="hcp1">LINK su linea</span></p>
+<p>Il sistema di riferimento locale è una terna cartesiana destrorsa così 
+ definita:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">origine nel nodo iniziale 
+	 del link su linea;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">asse X coincidente con l'asse 
+	 del link su linea e con verso dal nodo iniziale al nodo finale;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">asse Y coincidente con il 
+	 piano degli elementi bidimensionali associati.</p></li>
+</ul>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DALKL.htm">DALKL</a></span> 
+ (Disegna assi locali link su linea).</p>
+<p class="Titolo7"><span class="hcp1">INTEGRATORI</span></p>
+<p>Il sistema di riferimento locale è visualizzabile solo per gli integratori 
+ di tipo trasversale ed è analogo a quello dell'asta in cui possono essere 
+ trasformati e quindi vale quanto detto a proposito delle <span class="hcp1">ASTE</span>.</p>
+<p>Il sistema di riferimento degli integratori longitudinali dipende dalla 
+ tecnica di integrazione (vedi <a href="Tecniche_di_integrazione.htm" style="font-weight: bold;">Tecniche 
+ di integrazione</a>) e può essere visualizzato quando se ne richiedono 
+ le sollecitazioni (vedi <span class="hcp1"><a href="Tabelle%20risultati.htm">Tabelle 
+ risultati</a></span>).</p>
+<p><span class="hcp1">Utilizzo da linea di comando</span>: 
+ <span class="hcp1"><a href="../Comandi/DALA.htm">DALA</a></span> 
+ (Disegna assi locali asta).</p>
+</body>
+</html>

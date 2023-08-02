@@ -1,0 +1,96 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Modalità di calcolo e criteri di verifica</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Modalità di calcolo e criteri di verifica</h1>
+<p class="Titolo7">Dettagli di calcolo</p>
+<p>Il calcolo viene eseguito, solo nel caso in cui non siano presenti maschi 
+ per verifiche sismiche manuali, secondo le indicazioni riportate ai paragrafi 
+ 7.3.4, 7.8.1.5.4 e 7.8.1.6 del D.M. 17/01/18 con le integrazioni di cui 
+ ai punti C7.3.4.1 e C7.8.1.5.4 della relativa circolare esplicativa.</p>
+<p>In particolare il calcolo della rigidezza secante viene effettuato sul 
+ punto della curva pari al 70% di Fbu* (7.8.1.6) e l'equivalenza energetica 
+ viene effettuata considerando come spostamento ultimo quello corrispondente 
+ ad una riduzione della forza non superiore al 20% del massimo (C7.8.1.5.4).</p>
+<p>I calcoli vengono eseguiti per le distribuzioni di forza riportate in 
+ 7.3.4.1 con la possibilità per l'utente di scegliere quale distribuzione 
+ utilizzare del Gruppo 1 (si veda l'opzione <span style="font-weight: bold;"><a 
+	 href="Dati%20di%20calcolo.htm#Forze_primo_gruppo">Forze primo gruppo</a></span> 
+ in Dati di calcolo). Per il Gruppo 2 viene sempre utilizzata la distribuzione 
+ uniforme.</p>
+<p>Nel caso di edifici ad un solo piano, non ha ovviamente senso parlare 
+ di distribuzioni di forze e quindi viene eseguito solo il calcolo per 
+ il Gruppo 2 che in questo è concettualmente identico a tutte le altre 
+ distribuzioni.</p>
+<p>Al termine dell'analisi ModeSt controlla se sono rispettati le prescrizioni 
+ del paragrafo 7.3.4.1 con alcune precisazioni: la percentuale di massa 
+ movimentata viene controllata con il limite del 60% (7.8.1.6) e il controllo 
+ sul periodo TC viene effettuato separatamente per ogni stato limite. Il 
+ calcolo viene comunque effettuato, anche se i limiti qui indicati non 
+ sono rispettati.</p>
+<p>Per rispettare i disposti del paragrafo 7.2.6 (che sembra avere carattere 
+ prescrittivo generale) è possibile mettere in conto le eccentricità aggiuntive 
+ del centro di massa. Attraverso le &quot;Opzioni pushover&quot; è possibile 
+ indicare se trascurarle, se effettuare calcoli solo con le eccentricità 
+ aggiuntive e al limite se effettuare i calcoli sia con che senza tali 
+ eccentricità.</p>
+<p class="Titolo7">Valutazione spostamenti limite</p>
+<p>Per la verifica di raggiunta rottura degli elementi in muratura viene 
+ controllato il rapporto fra lo spostamento e la lunghezza dell'elemento. 
+ La normativa non dice niente in proposito, ma parrebbe logico assumere 
+ lo spostamento netto depennato della quota parte dovuta alla rotazione 
+ rigida dell'elemento stesso, rotazione che non provoca sollecitazioni. 
+ Analogamente, nell'ottica di valutare la raggiunta rottura con riferimento 
+ alla sola parte deformabile dell'elemento, si può specificare se valutare 
+ il rapporto spostamento/lunghezza della sola parte flessibile, ossia al 
+ netto delle eventuali zone rigide.</p>
+<p>Per il controllo degli stati limite di danno e di operatività la normativa 
+ fa riferimento in modo generico a &quot;spostamento di interpiano&quot; 
+ (7.3.7.2), ma parrebbe logico fare tale controllo come &quot;spostamento 
+ di interpiano a livello di maschio&quot;, visto che per l'insorgere di 
+ effetti torsionali applicati o insiti nella struttura, alcuni maschi possono 
+ raggiungere lo spostamento limite prima che lo facciano i baricentri dei 
+ relativi piani. Comunque anche questo comportamento è definibile da criterio 
+ di progetto e nel caso in cui il controllo sia attivo a livello di maschio, 
+ usando anche le stesse opzioni e considerazioni sulle parti deformabili 
+ e sulle rotazioni rigide sopra riportate.</p>
+<p class="Titolo7">Modalità di rottura</p>
+<p>Con opportuni criteri di progetto è possibile gestire i meccanismi di 
+ rottura ed il comportamento sia per i maschi che per le travi di accoppiamento 
+ in muratura. Questo rende possibile lo studio di diverse scelte di calcolo, 
+ dato che molte sono le scuole di pensiero in tal senso e dato che spesso 
+ la verifica di strutture in muratura esistenti non si risolve in un mero 
+ calcolo automatico, ma in una ponderata valutazione del comportamento 
+ della struttura stessa mettendo a confronto diverse ipotesi e teorie.</p>
+<p>Per i maschi murari è possibile attivare o disattivare la rottura a 
+ taglio e la rottura a pressoflessione, e per la rottura a taglio stabilire 
+ se considerare quella per scorrimento (generalmente indicata per edifici 
+ nuovi) o quella per fessurazione diagonale (generalmente indicata per 
+ edifici esistenti). La scelta di questo comportamento è lasciata all'utente, 
+ come d'altro lato indica la normativa nella sua circolare esplicativa 
+ al punto C8.7.1.5: &quot;<span style="font-style: italic;">Per gli edifici 
+ esistenti in muratura, considerata la notevole varietà delle tipologie 
+ e dei meccanismi di rottura del materiale, la resistenza a taglio di calcolo 
+ per azioni nel piano di un pannello in muratura potrà essere calcolata 
+ con un criterio di rottura per fessurazione diagonale o con un criterio 
+ di scorrimento&quot;</span>.</p>
+<p>Per completezza si è lasciata inoltre all'utente la possibilità di intervenire 
+ sullo spostamento ultimo degli elementi, differenziabile fra muratura 
+ nuova ed esistente. Questo permette di studiare quindi anche casi in cui 
+ si ipotizzi per i maschi un comportamento &quot;elastico–indefinitamente 
+ plastico&quot;: è infatti sufficiente mettere un valore molto elevato 
+ come spostamento limite per ottenere di fatto tale comportamento.</p>
+<p>Per i cordoli ed i pilastri in c.a. o acciaio, si veda quanto indicato 
+ in <u><a href="Generazione_telaio_equivalente.htm" style="font-weight: bold;">Generazione 
+ telaio equivalente</a></u><u><span style="text-decoration: none; ">.</span></u></p>
+</body>
+</html>

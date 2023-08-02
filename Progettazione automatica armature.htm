@@ -1,0 +1,46 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Progettazione automatica armature</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+font.hcp2 { font-family:Symbol; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Progettazione automatica armature</h1>
+<p>Per effettuare il progetto delle armature ModeSt esegue il progetto 
+ delle armature teoriche e quindi il progetto esecutivo secondo quanto 
+ specificato nei criteri di progetto.</p>
+<p>La progettazione automatica dell'armatura a flessione viene eseguita 
+ ricercando un'armatura diffusa che rispetti i vincoli imposti dai criteri 
+ di progetto e che sia sufficiente in tutti i punti della platea. In automatico 
+ ModeSt non inserisce zone di rinforzo dell'armatura.</p>
+<p>L'armatura a taglio non viene progettata automaticamente. Qualora le 
+ relative verifiche non fossero soddisfatte occorrerà inserire armatura 
+ diffusa o zone di rinforzo a taglio concentrate in modo interattivo.</p>
+<p>La progettazione automatica dell'armatura a punzonamento viene eseguita 
+ tentando le disposizioni di barre (diametro e passo) previste nei criteri 
+ di progetto (vedi <span class="hcp1"><a href="CriPlat.htm#Elenco_diametri_utilizzabili">Elenco 
+ diametri utilizzabili</a></span>), fino ad individuarne una in cui le 
+ barre che intersecano le facce di rottura a punzonamento abbiano una tensione 
+ inferiore alla <font face="Symbol" class="hcp2">s</font>f 
+ ammissibile indicata nei criteri di progetto (vedi <a href="CriPlat.htm#samm_acciaio"><span class="hcp1"><font face="Symbol" class="hcp2">s</font></span><font><span 
+	 style="font-weight: bold; font-family: Verdana, sans-serif;">amm acciaio</span></font></a>).</p>
+<p style="margin-bottom: 0;">Vengono poi creati i disegni dei particolari 
+ relativi, inviluppando automaticamente zone con uguale forma ed armatura.</p>
+</body>
+</html>

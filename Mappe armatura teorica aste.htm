@@ -1,0 +1,72 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Mappe armatura teorica aste</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+span.hcp3 { font-weight:bold;
+text-decoration:none; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Mappe armatura teorica aste</h1>
+<p>La visualizzazione delle armature teoriche per le aste per la <span class="hcp1">sollecitazione corrente</span> e per il 
+ <span class="hcp1">risultato corrente</span> può essere 
+ effettuata nelle <span class="hcp1"><a href="Finestre%20di%20modellazione.htm">finestre 
+ di modellazione</a></span>, purché il calcolo sia stato eseguito col metodo 
+ delle tensioni ammissibili, cliccando nel gruppo <span class="hcp1">Diagrammi 
+ e mappe</span> della scheda <span class="hcp1">Post-Processor</span> 
+ su <span class="hcp1">Af teo. aste <img src="../Icone/32/afteoaste32.png" alt="" border="1" class="hcp2"></span> 
+ e poi su <span class="hcp1">Aree di ferro <img src="../Icone/16/dafa.png" alt="" border="1" class="hcp2"></span>.</p>
+<p>La visualizzazione dell'armatura è una informazione su selezione di 
+ aste e può essere effettuata solo per aste caratterizzate da sezioni così 
+ definite:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">membratura trave, verifica 
+	 prevista cemento armato, sezione rettangolare, a T, a L o L destra;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">membratura pilastro, verifica 
+	 prevista cemento armato, sezione rettangolare.</p></li>
+</ul>
+<p>La visualizzazione può essere effettuata solamente se il tipo di sollecitazione 
+ corrente è una combinazione di condizioni elementari di carico e può essere 
+ richiesta anche per un solo risultato, ma ModeSt segnala la cosa come 
+ inconsueta, in quanto normalmente occorre fare l'inviluppo dei diversi 
+ risultati per valutare l'armatura necessaria.</p>
+<p>ModeSt decide automaticamente se eseguire la progettazione a flessione 
+ o pressoflessione e se in armatura simmetrica o meno in funzione del tipo 
+ di utilizzo previsto per le aste e del criterio di progetto e verifica 
+ armatura relativo. Anche le caratteristiche del calcestruzzo ed i valori 
+ dei copriferri teorici vengono desunti dai criteri di progetto e verifica.</p>
+<p><span class="hcp1">Nota</span>: come nella procedura di 
+ progetto pilastri, anche in questo caso l'armatura teorica viene effettuata 
+ in <span class="hcp1">pressoflessione retta</span>, non 
+ essendo possibile una progettazione teorica a pressoflessione deviata, 
+ che richiede la specifica della reale posizione delle barre d'armatura. 
+ Le due armature necessarie nei pilastri vengono riportate nel rispettivo 
+ <span class="hcp1">piano di flessione</span> e la quantità 
+ indicata è relativa ad ognuno dei due lati della sezione. Eventuali minimi 
+ di regolamento relativi all'area totale dell'armatura nella sezione vengono 
+ considerati in entrambe le direzioni.</p>
+<p style="margin-bottom: 0;"><span class="hcp1">Argomenti 
+ correlati:</span> <span><span class="hcp3"><a 
+	 href="Fattori%20di%20scala.htm">Fattori di scala</a></span></span><span 
+	 style="font-weight: normal;">,</span> <span><span class="hcp3"><a 
+	 href="Sollecitazioni%20prive%20di%20segno.htm">Sollecitazioni prive di segno</a></span></span></p>
+</body>
+</html>

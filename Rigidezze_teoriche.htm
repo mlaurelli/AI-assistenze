@@ -1,0 +1,190 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Rigidezze teoriche</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-family:Symbol, serif; }
+span.hcp2 { font-style:italic;
+font-weight:bold; }
+span.hcp3 { font-style:italic; }
+span.hcp4 { vertical-align:Super; }
+span.hcp5 { font-style:italic;
+vertical-align:Super; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Rigidezze teoriche</h1>
+<p style="font-family: Verdana, sans-serif; font-size: 10pt;">Sotto alcune 
+ ipotesi è possibile ottenere l'elenco degli spostamenti, delle rigidezze 
+ teoriche degli impalcati e del coefficiente <span class="hcp1">q</span><span 
+	 style="mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: IT;">.</span> 
+ Viene inoltre determinata la posizione del baricentro delle rigidezze 
+ teorico e vengono riportati alcuni dati che possono essere utili per la 
+ stima della tipologia strutturale ai sensi del D.M. 17/01/18.</p>
+<p>I calcoli sono eseguibili solo se esiste almeno un impalcato, non esistono 
+ masse in direzione Z ed è stata effettuata un'analisi sismica statica 
+ o con azioni orizzontali convenzionali ai sensi del D.M. 17/01/18.</p>
+<p>In questa ipotesi il calcolo delle rigidezze di piano viene effettuato 
+ dividendo il tagliante di piano (somma delle azioni sismiche sopra il 
+ piano in esame), per la differenza di spostamento del piano in esame con 
+ quello immediatamente precedente.</p>
+<p>Si sottolinea che questa formulazione (per altro l'unica applicabile) 
+ è valida solamente nell'ipotesi di comportamento deformativo cosiddetto 
+ &quot;shear-type&quot;, tipica degli edifici intelaiati privi di pareti 
+ di taglio ed in cui si immaginano gli orizzontamenti infinitamente rigidi.</p>
+<p>Per poter eseguire una corretta valutazione delle rigidezze si deve 
+ quindi eseguire un calcolo sismico statico bloccando i nodi di piede dei 
+ pilastri (incastri). Per eseguire una valutazione con l'ipotesi di trasverso 
+ rigido è sufficiente bloccare anche le rotazioni rispetto al piano orizzontale 
+ (vincoli RX ed RY) dei nodi degli impalcati.</p>
+<p>Anche in questo caso però si possono avere risultati del tutto inattendibili 
+ nel caso di edifici con pareti di taglio.</p>
+<p>Se ad esempio si esegue la procedura succitata per l'edificio riportato 
+ nell'esempio ES2, edificio perfettamente regolare ed identico da un piano 
+ all'altro, si può notare come la differenza di rigidezza da un piano all'altro 
+ in direzione Y sia (giustamente) praticamente nulla, mentre in direzione 
+ X la presenza della parete di taglio porta al calcolo di valori di rigidezza 
+ assolutamente inattendibili.</p>
+<p>Si consiglia quindi di utilizzare questa procedura ed i risultati da 
+ essa forniti con le cautele del caso, eventualmente operando su modelli 
+ semplificati e/o schematizzazioni della reale struttura, solo al fine 
+ di fare le necessarie considerazioni sulla variazione di rigidezza da 
+ un piano all'altro e quindi sulla cosiddetta &quot;regolarità strutturale&quot;.</p>
+<p style="mso-fareast-font-family: 'Times New Roman'; mso-fareast-language: IT; 
+	 font-family: Verdana, sans-serif; font-size: 10pt;">Alcune precisazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Il coefficiente <span class="hcp1">q</span> 
+	 viene calcolato secondo la formula (7.3.2) del par. 7.3.1 del D.M. 
+	 14/01/08. Tale parametro consente di valutare se prendere in considerazione 
+	 le non linearità geometriche. Il valore calcolato può essere utilizzato 
+	 nel calcolo della struttura secondo il D.M. 17/01/18 riportandolo 
+	 nella scheda &quot;Dati struttura&quot; nel parametro <a href="Dati%20struttura.htm#Coefficiente teta" 
+	 style="font-family: Verdana, sans-serif; font-size: 10pt;"><b style="font-family: Verdana, sans-serif; 
+	 font-size: 10pt;">Coefficiente</b> <span style="font-family: Symbol, serif; 
+												 font-weight: bold; text-decoration: underline; ">q</span></a>.</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1"><span style="font-family: Verdana, sans-serif; 
+													 mso-fareast-font-family: 'Times New Roman'; 
+													 mso-fareast-language: IT; 
+													 font-size: 10pt;">La 
+	 <b>posizione del baricentro delle rigidezze</b> <b>teorico</b> viene 
+	 calcolata dalla sua distanza rispetto al baricentro delle masse. Tale 
+	 distanza, scomposta rispetto agli assi globali, viene valutata imponendo 
+	 l'uguaglianza fra la rotazione che essa genera (rispetto alla rigidezza 
+	 teorica torsionale) dall'applicazione del tagliante di piano e la 
+	 rotazione dell'impalcato causata dalla medesima applicazione del tagliante 
+	 di piano. La definizione del baricentro delle rigidezze presenta le 
+	 stesse limitazioni del suddetto calcolo delle rigidezze di piano. 
+	 Inoltre è indispensabile che l'analisi venga eseguita con l'incastro 
+	 alla base della struttura, in quanto la deformabilità del suolo può 
+	 falsare notevolmente il valore della rigidezza teorica torsionale 
+	 (in tal caso potrebbe addirittura risultare che il baricentro delle 
+	 rigidezze sia esterno alla sezione in pianta dell'impalcato). Per 
+	 un confronto con i risultati ottenibili da un calcolo analitico per 
+	 singoli interpiani, è opportuno considerare, oltre che la struttura 
+	 incastrata alla base, anche l'ipotesi di trasverso rigido e soprattutto 
+	 la variazione della posizione di baricentri delle masse sugli impalcati 
+	 superiori. Si fa notare che il baricentro delle rigidezze non è un'entità 
+	 genericamente definibile, ed una stima del comportamento più o meno 
+	 torsionale di una struttura è meglio eseguibile dalla valutazione 
+	 dei risultati di un'analisi modale: dalle deformate dei modi calcolati 
+	 e dalle percentuali di masse movimentate nel caso di analisi con impalcati 
+	 rigidi (in questo caso una struttura ha un comportamento tanto migliore 
+	 quanto minore è la percentuale di masse rotazionali movimentate nei 
+	 modi principali in X ed Y); unicamente visualizzando le deformate 
+	 dei modi calcolati nel caso di analisi senza impalcati rigidi. La 
+	 posizione del baricentro teorico delle rigidezze di un impalcato è 
+	 influenzata dalle masse degli impalcati superiori e dalle rigidezze 
+	 degli impalcati inferiori. Per escludere tali effetti dalla valutazione 
+	 della posizione del baricentro teorico delle rigidezze si consiglia 
+	 di seguire, per ogni impalcato della struttura, la procedura qui indicata:</span></p></li>
+</ul>
+<ol start="1">
+	<li style="list-style: decimal;"><p class="Elenco1">definire un solo 
+	 impalcato, alla quota di quello di cui si vuole valutare il baricentro 
+	 delle rigidezze;</p></li>
+	<li class="p-Elenco1" style="list-style: decimal;"><p class="Elenco1">incastrare 
+	 tutti i nodi dei piani inferiori;</p></li>
+	<li class="p-Elenco1" style="list-style: decimal;"><p class="Elenco1">eseguire 
+	 l'analisi sismica statica e selezionare l'opzione &quot;Annullare 
+	 masse e forze relative&quot; relativamente al &quot;Recupero masse 
+	 secondarie&quot;.</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Nella stima della tipologia 
+	 strutturale vengono riportate le informazioni utili per la valutazione 
+	 di seguito elencate:</p></li>
+</ol>
+<ol start="1">
+	<li class="p-RientroElenco" style="list-style: decimal;"><p class="RientroElenco">Elenco 
+	 baricentri e masse d'impalcati, le percentuali delle masse presenti 
+	 nel terzo superiore della struttura rispetto ad entrambe le direzioni 
+	 di applicazione del sisma. Al par. 7.4.3.1 del D.M. 17/01/18 è specificato: 
+	 &quot;<span class="hcp2">strutture 
+	 a</span> <span class="hcp2">pendolo 
+	 inverso</span><span class="hcp3">, nelle quali almeno 
+	 il 50% delle masse totali è nel terzo superiore dell'altezza della 
+	 costruzione o nelle quali la dissipazione d'energia avviene alla base 
+	 di un singolo elemento strutturale (non appartengono a questa categoria 
+	 i telai ad un piano con i pilastri collegati in sommità lungo entrambe 
+	 le direzioni principali dell'edificio e per i quali la forza assiale 
+	 non eccede il 30% della resistenza a compressione della sola sezione 
+	 di calcestruzzo).</span>&quot;</p></li>
+	<li class="p-RientroElenco" style="list-style: decimal;"><p class="RientroElenco">I 
+	 valori del parametro r<span class="hcp4">2</span>/ls<span class="hcp4">2</span> per ogni impalcato per il 
+	 controllo della deformabilità torsionale. Dove r<span class="hcp4">2</span> 
+	 è il rapporto tra rigidezza torsionale e flessionale di piano e ls<span class="hcp4">2</span> = (L<span class="hcp4">2</span>+ 
+	 B<span class="hcp4">2</span>)/12, con L e B dimensioni 
+	 in pianta del piano. Al par. 7.4.3.1 del D.M. 17/01/18 è specificato: 
+	 &quot;<span class="hcp2">strutture</span> 
+	 <span class="hcp2">deformabili torsionalmente</span><span class="hcp3">, composte da telai e/o pareti, la cui 
+	 rigidezza torsionale non soddisfa ad ogni piano la condizione r</span><span class="hcp5">2</span><span class="hcp3">/ls</span><span class="hcp5">2</span><span class="hcp3">&gt;=1</span>&quot;.</p></li>
+	<li class="p-RientroElenco" style="list-style: decimal;"><p class="RientroElenco">Le 
+	 aree resistenti a taglio di pilastri e nuclei. Basandosi sull'approssimazione 
+	 data dall'uguaglianza fra i rapporti di resistenza a taglio con i 
+	 rapporti fra le aree delle sezioni resistenti è possibile stimare 
+	 la percentuale di taglio resistente dei pilastri (elementi resistenti 
+	 dei telai spaziali) e dei nuclei (con cui vengono modellate le pareti, 
+	 singole o accoppiate). &quot;<span class="hcp3">Una 
+	 struttura è a</span> <span class="hcp2">telaio</span> 
+	 <span class="hcp3">se, alla base, il taglio resistente 
+	 dei pilastri è almeno il 65% del totale, mentre è a</span> <span class="hcp2">pareti</span> <span class="hcp3">se, 
+	 alla base, il taglio resistente dei nuclei è almeno il 65% del totale, 
+	 nel caso intermedio la struttura è</span> <span class="hcp2">mista</span><span class="hcp3">.&quot;</span></p></li>
+	<li class="p-RientroElenco" style="list-style: decimal;"><p class="RientroElenco">Le 
+	 percentuali di taglio assorbito da pilastri e nuclei, valutati alla 
+	 base, rispetto ad entrambe le direzioni di applicazione del sisma; 
+	 &quot;<span class="hcp3">Una struttura è a</span> <span class="hcp2">telaio</span> <span class="hcp3">o mista equivalente a telaio se, alla 
+	 base, il taglio assorbito dai pilastri è più del 50% del totale, mentre 
+	 è a</span> <span class="hcp2">pareti</span> 
+	 <span class="hcp3">o mista equivalente a pareti se, 
+	 alla base, il taglio assorbito dai nuclei è più del 50% del totale. 
+	 I risultati sono riportati rispetto ad entrambe le direzioni di applicazione 
+	 del sisma perché le strutture delle costruzioni in calcestruzzo possono 
+	 essere classificate come appartenenti ad una tipologia in una direzione 
+	 orizzontale ed ad un'altra tipologia nella direzione orizzontale ortogonale 
+	 alla precedente.</span>&quot;</p></li>
+</ol>
+<p class="IndentBullet1">Le rigidezze rotazionali e traslazionali di piano, 
+ così come i rapporti fra i tagli assorbiti da pilastri e nuclei, vengono 
+ valutati dai risultati di un'analisi sismica statica eseguita con impalcati 
+ rigidi, in cui i carichi &quot;esploratori&quot; sono rappresentati dalle 
+ azioni sismiche disaccoppiate per SLV o SND.</p>
+<p class="IndentBullet1">Come già detto la stima della tipologia strutturale 
+ attraverso il comando fornisce risultati attendibili se eseguita su una 
+ struttura senza elementi di fondazione o di scantinato, devono quindi 
+ essere presenti solo gli elementi che generano effetti inerziali (cioè 
+ quelli che spiccano dal piano di campagna). La struttura deve pertanto 
+ essere incastrata alla base e con i nodi a quota Z=0. Per una corretta 
+ analisi dei tagli resistenti ed assorbiti non devono essere presenti elementi 
+ che spiccano dalla base diversi da pilastri o nuclei.</p>
+</body>
+</html>

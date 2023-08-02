@@ -1,0 +1,72 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Sollecitazioni di progetto</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Sollecitazioni di progetto</h1>
+<p>Le sollecitazioni di progetto per le fondazioni vengono calcolate dalle 
+ reazioni di vincolo risultanti dal calcolo FEM.</p>
+<h2 class="Titolo5">Plinti e pali</h2>
+<p>Per i plinti superficiali, i pali ed i plinti su pali le sollecitazioni 
+ di progetto sono date direttamente dalle reazioni vincolari dei nodi ai 
+ quali l'elemento di fondazione è assegnato.</p>
+<p>La componente verticale della sollecitazione è incrementata dal peso 
+ del plinto e dai sovraccarichi agenti su di esso, come indicato nei parametri 
+ di calcolo dei criteri specifici dei plinti.</p>
+<p>Per i pali, in relazione al metodo di calcolo che prevede l'analisi 
+ di un problema piano, la componente orizzontale di progetto è definita: 
+ per il taglio dalla somma vettoriale delle sollecitazioni nodali; per 
+ il momento dalla somma della proiezione delle sollecitazioni nodali rispetto 
+ alla direzione definita dal vettore somma dei tagli. Il piano di progetto 
+ è pertanto definito dalla direzione dell'asse del palo e dalla direzione 
+ del vettore somma delle sollecitazioni nodali di taglio.</p>
+<h2 class="Titolo5">Reticoli di travi</h2>
+<p>Per ogni singola travata di fondazione (cioè per ogni insieme di aste 
+ contigue ed allineate univocamente accomunate da medesima sezione e numero 
+ asta) le sollecitazioni di progetto vengono come di seguito valutate:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">la sollecitazione di progetto 
+	 verticale totale è data dall'integrale delle <a href="../Manuale/Mappe%20tensioni%20sul%20terreno.htm">pressioni 
+	 sul terreno</a> sull'area di contatto della travata;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">le sollecitazioni di progetto 
+	 orizzontali sono calcolate dalla somma delle reazioni vincolari dei 
+	 nodi su cui incide la travata, al netto delle riduzioni indicate nei 
+	 criteri di verifica relativi al calcolo della capacità portante per 
+	 scorrimento;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">il momento rispetto all'asse 
+	 normale a quello della travata è dato dal momento integrale delle 
+	 <a href="../Manuale/Mappe%20tensioni%20sul%20terreno.htm">pressioni sul 
+	 terreno</a> sull'area di contatto, rispetto al baricentro della travata;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">il momento rispetto all'asse 
+	 della travata è dato dall'integrale dei momenti calcolati dalla costante 
+	 di sottofondo e dalla rotazione dell'asse della travata stessa.</p></li>
+</ul>
+<h2 class="Titolo5">Platee</h2>
+<p>Per ogni singola platea (cioè per ogni insieme di elementi bidimensionali 
+ contigui univocamente accomunati da medesimo tipo e numero di bidimensionale) 
+ le sollecitazioni di progetto vengono come di seguito valutate:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">la sollecitazione di progetto 
+	 verticale totale è data dall'integrale delle <a href="../Manuale/Mappe%20tensioni%20sul%20terreno.htm">pressioni 
+	 sul terreno</a> sull'area di contatto della platea;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">le sollecitazioni di progetto 
+	 orizzontali sono calcolate dalla somma delle reazioni vincolari dei 
+	 nodi su cui incide la travata, al netto delle riduzioni indicate nei 
+	 criteri di verifica relativi al calcolo della capacità portante per 
+	 scorrimento;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">i momenti vengono calcolati 
+	 rispetto alle direzioni degli assi principali d'inerzia dell'area 
+	 di contatto della platea e sono dati dal momento integrale delle <a 
+	 href="../Manuale/Mappe%20tensioni%20sul%20terreno.htm">pressioni sul terreno</a> 
+	 rispetto a tali assi.</p></li>
+</ul>
+</body>
+</html>

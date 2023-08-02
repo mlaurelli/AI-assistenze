@@ -1,0 +1,114 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Spettri di progetto ai sensi D.M. 17/01/18</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { mso-list:l0 level1 lfo1; }
+span.hcp3 { vertical-align:Sub; }
+span.hcp4 { font-family:Symbol, serif; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Spettri di progetto ai sensi D.M. 17/01/18</h1>
+<p>Gli spettri di progetto vengono di default, attraverso l'opzione <span class="hcp1"><a href="Dati%20struttura.htm#Automatici_da_normativa">Automatici 
+ da normativa</a></span> della scheda &quot;Dati struttura&quot;, calcolati 
+ automaticamente dal programma seguendo le indicazioni del <span class="hcp2">par. 
+ 3.2.3</span>.</p>
+<p>Gli spettri di progetto possono essere definiti anche dai risultati 
+ di una specifica analisi della risposta sismica locale selezionando l'opzione 
+ <span class="hcp1"><a href="Dati%20struttura.htm#Da_specifiche_analisi_di_risposta_sismica_locale">Da 
+ specifiche analisi di risposta sismica locale</a></span> nella scheda 
+ &quot;Dati struttura&quot;. Lo spettro viene calcolato con le espressioni 
+ del <span class="hcp2">par. 3.2.3.2.1</span>, non 
+ utilizzando i parametri di Ss e di Cc della Tab. 3.2.IV ma bensì i valori 
+ specificati nel <span class="hcp1"><a href="Dati%20di%20calcolo.htm#Coefficiente_di_amplificazione_stratigrafica_Ss">Coefficiente 
+ di amplificazione stratigrafica (Ss)</a></span> e nel <span class="hcp1"><a 
+	 href="Dati%20di%20calcolo.htm#Coefficiente_funzione_della_categoria_del_suolo_Cc">Coefficiente 
+ funzione della categoria del suolo (Cc)</a></span><span class="hcp1"> 
+ </span>e moltiplicando il valore del periodo TB (calcolato con l'espressione 
+ [3.2.6]) per il valore del <span class="hcp1"><a href="Dati%20di%20calcolo.htm#Coefficiente_di_modifica_TB">Coefficiente 
+ di modifica del periodo TB</a></span><span class="hcp1"> 
+ </span>presenti nella scheda &quot;Dati di calcolo&quot;. Il valore di 
+ TD è comunque definito solo in funzione dell'accelerazione orizzontale 
+ massima su sito di riferimento rigido orizzontale, come da normativa (espressione 
+ [3.2.7]). Lo spettro di risposta elastico in accelerazione della componente 
+ verticale è comunque indipendente dalle condizioni stratigrafiche, come 
+ da Tab. 3.2.VI del par. 3.2.3.2.2.</p>
+<p>Tali parametri possono essere desunti standardizzando lo spettro ottenuto 
+ della specifica analisi di risposta sismica locale nella forma prescritta 
+ in normativa (<span class="hcp2">par. </span>3.2.3).</p>
+<p>Dato quindi uno spettro da specifica analisi di risposta sismica locale 
+ relativo ad un dato periodo di ritorno TR, calcolati i valori dell'accelerazione 
+ massima del tratto orizzontale ad accelerazione costante (Smax<span class="hcp3">RSL</span>) 
+ e dei relativi periodi limite TB<span class="hcp3">RSL</span> 
+ e TC<span class="hcp3">RSL</span>, è possibile ricavare 
+ i <span class="hcp1">Coefficiente di amplificazione stratigrafica 
+ (Ss)</span> e di modifica del periodo TC (<span class="hcp1">Coefficiente 
+ funzione della categoria del suolo (Cc)</span>) e del periodo TB (<span class="hcp1">Coefficiente di modifica del periodo TB</span>)<span class="hcp1"> </span>partendo dall'azione sismica di 
+ base, definita dai valori di ag, F<span class="hcp3">0</span> 
+ e T<span class="hcp3">c</span>*, funzione del sito di 
+ costruzione e del medesimo periodo di ritorno TR utilizzato per l'analisi 
+ della risposta sismica locale (RSL): il <span class="hcp1">Coefficiente 
+ di amplificazione stratigrafica&#160;(Ss)</span> = Smax<span class="hcp3">RSL</span>/(a<span class="hcp3">g</span> x F<span class="hcp3">0</span>); 
+ il coefficiente di modifica del periodo TC è pari a <span class="hcp1">Cc</span> 
+ = TC<span class="hcp3">RSL</span>/T<span class="hcp3">c</span>*; 
+ il <span class="hcp1">Coefficiente di modifica del periodo 
+ TB </span>= TB<span class="hcp3">RSL</span>/(Cc x T<span class="hcp3">c</span>*/3).</p>
+<p>Gli spettri di progetto possono essere definiti anche importandoli da 
+ file esterni&#160;selezionando l'opzione <span class="hcp1"><a 
+	 href="Dati%20struttura.htm#Definiti_manualmente">Definiti manualmente</a></span> 
+ nella scheda &quot;Dati struttura&quot; e nella scheda &quot;Dati di calcolo&quot; 
+ con il bottone &quot;Gestione spettri&quot; importare gli spettri necessari 
+ in funzione dei parametri di calcolo impostati.</p>
+<p>I file degli spettri devono essere in formato TXT o CSV (ASCII in ogni 
+ caso) e contenere su diverse linee i dati di periodo ed accelerazione 
+ espressi in <b style="mso-bidi-font-weight: normal;">secondi e multipli 
+ di g</b> (accelerazione di gravità). Le coppie di dati possono essere 
+ separate da spazio da punto e virgola o da virgola. Una volta importato 
+ il file i dati vengono salvati nel file con lo stesso nome della struttura 
+ ed estensione SPE che risiede nella cartella del progetto.</p>
+<p>Con gli spettri personalizzati non vengono richiesti da ModeSt i dati 
+ relativi alla determinazione degli spettri di progetto (caratterizzazione 
+ topografica, pericolosità, ecc.). I dati dello spettro devono essere già 
+ caratterizzati da tutti i parametri necessari.</p>
+<p>I dati si intendono come già comprensivi di uno smorzamento implicito 
+ e non divisi per il fattore di comportamento q. Per questo motivo il programma 
+ automaticamente divide i dati dello spettro per <span class="hcp4">h</span> 
+ (fattore calcolato con lo smorzamento implicito indicato nella scheda 
+ &quot;Dati di calcolo&quot;) e poi per q.</p>
+<p>Volendo eseguire il calcolo senza modifiche allo spettro fornito, ovviamente 
+ basta indicare un coefficiente di smorzamento implicito<span style="mso-spacerun: yes;">&#160;</span>pari 
+ al 5% (<span class="hcp4">h</span>=1) ed un fattore 
+ di comportamento q=1. In tal caso ModeSt non è in grado di valutare gli 
+ spostamenti amplificati come previsto al punto 7.3.3.3.</p>
+<p>Quando viene importato uno spettro, ModeSt cerca di individuare automaticamente 
+ il periodo TC, necessario per diverse procedure di calcolo. È bene controllare 
+ che sia stato individuato in modo corretto, ed eventualmente modificarlo.</p>
+<p>Note:</p>
+<ul>
+	<li class="p-Bullet1" style="font-family: Verdana, sans-serif; font-size: 10pt;"><p 
+		 class="Bullet1" style="mso-list: l0 level1 lfo1;">I controlli 
+	 di cui alla tabella 3.2.VII. non vengono eseguiti e lo spettro elastico 
+	 in spostamento necessario in alcuni casi (par. 3.2.3.2.3) viene calcolato 
+	 tramite la formula 3.2.10.</p></li>
+	<li class="p-Bullet1" style="font-family: Verdana, sans-serif; font-size: 10pt;"><p 
+		 class="Bullet1" style="mso-list: l0 level1 lfo1;">Nel caso di 
+	 analisi pushover, vengono calcolati solo gli indici di sicurezza in 
+	 termini di accelerazione, e non in termini di periodo di ritorno.</p></li>
+</ul>
+</body>
+</html>

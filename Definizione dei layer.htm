@@ -1,0 +1,287 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Definizione dei layer</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+img.hcp2 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+table.hcp3 { margin-top:14pt; }
+td.hcp4 { vertical-align:TOP;
+padding-left:2px;
+padding-top:2px;
+padding-right:2px;
+padding-bottom:2px; }
+p.hcp5 { margin-bottom:0; }
+p.hcp6 { text-align:right;
+margin-bottom:0; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Definizione dei layer CAD</h1>
+<p>Nella generazione dei file DXF le entità grafiche vengono posizionate 
+ su diversi layer (livelli) in base alle loro caratteristiche. I layer 
+ che verranno definiti e le modalità di creazione dei file DXF sono completamente 
+ definibili dall'utente.</p>
+<p>Il nome del layer, il colore e il tipo di linea associato alle diverse 
+ entità può essere modificato cliccando sul menu dell'applicazione <span class="hcp1"><img src="../Icone/modest32.png" alt="" border="1" class="hcp2"></span> e poi su <span class="hcp1">Opzioni <img src="../Icone/16/opzioni.png" alt="" border="1" class="hcp2"></span>, selezionando 
+ la scheda <span class="hcp1">Esportazioni DXF</span> e cliccando 
+ sul bottone <span class="hcp1">Modifica</span> <span class="hcp1">definizione 
+ layer</span>.</p>
+<p>I nomi degli stili di penna fanno riferimento ai dati contenuti nel 
+ file LTYPE.DEF (che risiede nella cartella FILES) in cui è descritto il 
+ tipo di linea secondo la convenzione adottata da AutoCAD.</p>
+<p>Il significato dell'entità che possono essere modificati dall'utente 
+ coincide con quanto riportato in <a href="Schemi%20di%20colore.htm"><span class="hcp1">Schemi di colore</span></a>.</p>
+<p>Di default la definizione e l'associazione dei layer con le diverse 
+ entità è la seguente:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="500" class="hcp3">
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp5"><span class="hcp1">N.</span></p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5"><span class="hcp1">Entità</span></p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5"><span class="hcp1">Layer</span></p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp5"><span class="hcp1">Penna</span></p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5"><span class="hcp1">Stile 
+		 penna</span></p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">1</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">Geo1</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">GEO</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">1</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">2</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">Geo2</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">GEO</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">2</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">3</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">Geo3</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">GEO</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">3</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">4</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TratGeo1</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">GEO</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">1</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">TRATTEGGIATA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">5</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TratGeo2</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">GEO</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">2</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">TRATTEGGIATA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">6</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TratGeo3</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">GEO</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">3</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">TRATTEGGIATA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">7</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">Campiture</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TRATTEGGI</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">1</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">8</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TAlti</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TESTI</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">3</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">9</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TMedi</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TESTI</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">2</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">10</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TPiccoli</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TESTI</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">2</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">11</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TQuote</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">QUOTE</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">2</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">12</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TFerri</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">FERRI</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">2</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">13</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">LQuote</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">QUOTE</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">1</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">14</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">LQincl</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">QUOTE</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">3</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">15</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">LRifer</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">QUOTE</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">1</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">16</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">LIndSez</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">SEZIONI</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">3</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">PUNTOLINEA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">17</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TIndSez</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">SEZIONI</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">3</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">18</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">LIntDis</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TRATTEGGI</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">1</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">TRATTEGGIATA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">19</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">CTesti</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TESTI</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">2</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">20</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">Ferri</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">FERRI</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">3</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">21</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">RifFerri</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">FERRI</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">1</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">22</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">User1</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">USER</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">1</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">23</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">User2</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">USER</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">2</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">24</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">User3</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">USER</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">3</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">CONTINUA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">25</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TratUser1</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">USER</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">1</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">TRATTEGGIATA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">26</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TratUser2</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">USER</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">2</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">TRATTEGGIATA</p></td>
+	</tr>
+	<tr>
+		<td style="width:5%;" class="hcp4"><p class="hcp6">27</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">TratUser3</p></td>
+		<td style="width:25%;" class="hcp4"><p class="hcp5">USER</p></td>
+		<td style="width:10%;" class="hcp4"><p class="hcp6">3</p></td>
+		<td style="width:30%;" class="hcp4"><p class="hcp5">TRATTEGGIATA</p></td>
+	</tr>
+</table>
+<p>dove:</p>
+<table wrapperparagraphselector="P" cellspacing="0" width="500" class="hcp3">
+	<tr>
+		<td style="width:20%;" class="hcp4"><p class="hcp5"><span class="hcp1">N.</span></p></td>
+		<td style="width:80%;" class="hcp4"><p class="hcp5">numero progressivo di riferimento</p></td>
+	</tr>
+	<tr>
+		<td style="width:20%;" class="hcp4"><p class="hcp5"><span class="hcp1">Entità</span></p></td>
+		<td style="width:80%;" class="hcp4"><p class="hcp5">nome dell'entità grafica e layer 
+		 GDB</p></td>
+	</tr>
+	<tr>
+		<td style="width:20%;" class="hcp4"><p class="hcp5"><span class="hcp1">Layer</span></p></td>
+		<td style="width:80%;" class="hcp4"><p class="hcp5">nome del layer da usare nei file 
+		 DXF</p></td>
+	</tr>
+	<tr>
+		<td style="width:20%;" class="hcp4"><p class="hcp5"><span class="hcp1">Penna</span></p></td>
+		<td style="width:80%;" class="hcp4"><p class="hcp5">numero della penna da usare nei 
+		 file DXF</p></td>
+	</tr>
+	<tr>
+		<td style="width:20%;" class="hcp4"><p class="hcp5"><span class="hcp1">Stile 
+		 penna</span></p></td>
+		<td style="width:80%;" class="hcp4"><p class="hcp5">stile della penna da usare nei file 
+		 DXF</p></td>
+	</tr>
+</table>
+<p class="hcp5">Pur restando libera al momento del plottaggio 
+ l'associazione fra colori e spessori delle penne (si veda anche <span 
+	 style="font-weight: bold; text-decoration: none; "><a href="Stampa%20e%20plottaggio%20disegni.htm">Stampa 
+ e plottaggio disegni</a></span>) nella definizione di default dei layer 
+ ModeSt assume che il colore rosso sia associato ad una penna fine (0.1-0.2), 
+ il giallo ad una penna media (0.3-0.4) e il verde ad una penna grossa 
+ (0.5-0.6).</p>
+</body>
+</html>

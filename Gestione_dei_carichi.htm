@@ -1,0 +1,86 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Gestione dei carichi</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { mso-bidi-language:AR-SA; }
+span.hcp2 { mso-bidi-language:AR-SA;
+font-weight:bold; }
+span.hcp3 { font-weight:bold; }
+img.hcp4 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Gestione dei carichi</h1>
+<p>La definizione delle CCE <span class="hcp1">nella 
+ versione 7 si effettuava calcolando e/o assegnando prima i carichi agli 
+ elementi e successivamente archiviandoli in una CCE con il comando</span> 
+ <span class="hcp2">ACON</span> 
+ <span class="hcp1">(</span><span class="hcp2">che 
+ non esiste più</span><span class="hcp1">),</span> 
+ nella 8 si deve definire prima la condizione di carico cliccando nel gruppo 
+ <span class="hcp3">Definizioni</span> della scheda <span class="hcp3">Carichi</span> su&#160;<span class="hcp3">CCE</span> 
+ <img src="../Icone/16/cce.png" alt="" border="1" class="hcp4"> e quindi 
+ cliccare sul bottone &quot;Aggiungi&quot; e specificare i dati richiesti, 
+ la nuova CCE viene automaticamente resa corrente, e poi calcolare e assegnare 
+ i carichi da memorizzare nella CCE.</p>
+<p>Per rendere corrente una CCE nella <span class="hcp1">versione 
+ 7 si doveva richiamare la CCE con il comando</span> <span class="hcp2">RCON</span> 
+ <span class="hcp1">(</span><span class="hcp2">che 
+ non esiste più</span><span class="hcp1">),</span> 
+ nella 8 si deve cliccare nel gruppo <span class="hcp3">Definizioni</span> 
+ della scheda <span class="hcp3">Carichi</span> su&#160;<span class="hcp3">CCE</span> <img src="../Icone/16/cce.png" alt="" border="1" class="hcp4"> e quindi 
+ selezionare la riga della tabella relativa alla CCE da rendere corrente 
+ e poi cliccare sul bottone &quot;Rendi corrente&quot; oppure, selezionare 
+ la CCE dalla casella di riepilogo a discesa &quot;Condizione di carico&quot; 
+ del pannello <span class="hcp3">Proprietà correnti</span>.</p>
+<p>Per azzerare i carichi in una CCE nella versione 7 si doveva utilizzare 
+ il comando <span class="hcp2"><a 
+	 href="../Comandi/ZCA.htm">ZCA</a></span> <span class="hcp1">dopo 
+ aver richiamato la CCE con il comando</span> <span class="hcp2">RCON</span> 
+ <span class="hcp1">(</span><span class="hcp2">che 
+ non esiste più</span><span class="hcp1">),</span> 
+ nella 8 si deve cliccare nel gruppo <span class="hcp3">Definizioni</span> 
+ della scheda <span class="hcp3">Carichi</span> su&#160;<span class="hcp3">CCE</span> <img src="../Icone/16/cce.png" alt="" border="1" class="hcp4"> e quindi 
+ selezionare la riga della tabella relativa alla CCE e poi cliccare sul 
+ bottone &quot;Azzera carichi&quot; quindi, non è più necessario rendere 
+ corrente la CCE su cui si vogliono azzerare i carichi.</p>
+<p>L'archiviazione del PESO della struttura in una CCE si effettua spuntando 
+ la casella &quot;Peso&quot; nell'elenco delle CCE (ModeSt per default 
+ lo attiva nella prima CCE che viene creata).</p>
+<p>L'assegnazione dei carichi manuali nella versione 7 si effettuava definendo 
+ prima il tipo di carico e poi assegnandolo agli elementi ad esempio <span class="hcp2"><a href="../Comandi/DECA.htm">DECA</a></span> 
+ e poi <span class="hcp2"><a href="../Comandi/ACA.htm">ACA</a></span> 
+ o <span class="hcp2"><a href="../Comandi/AGCA.htm">AGCA</a></span><span class="hcp1">,</span> nella versione 8 dopo aver 
+ definito il tipo di carico cliccando nel gruppo <span class="hcp3">Definizioni</span> 
+ della scheda <span class="hcp3">Carichi</span> su&#160;<span class="hcp3">Tipi carichi</span> <img src="../Icone/32/tc32.png" alt="" border="1" class="hcp4"> 
+ e quindi sul tipo di carico, si selezionano gli elementi e nel pannello 
+ <span class="hcp3">Proprietà elementi selezionati</span> 
+ si stabilisce dalla casella di riepilogo a discesa relativa ai carichi 
+ manuali quale dei carichi definiti vadano assegnati.</p>
+<p>I carichi automatici dai solai si calcolano selezionando i solai interessati 
+ e poi nel gruppo <span class="hcp3">Definizioni</span> della 
+ scheda <span class="hcp3">Carichi</span> cliccando sul comando 
+ desiderato, oppure nel pannello <span class="hcp3">Proprietà 
+ elementi selezionati</span>, scegliendo dalla casella di riepilogo a discesa 
+ &quot;Carichi automatici&quot; il tipo di carico da calcolare. Selezionando 
+ &quot;Carichi automatici&quot; nella sezione <span class="hcp3">Solai</span> 
+ del pannello <span class="hcp3">Colorazioni elementi</span> 
+ è possibile visualizzare, relativamente alla CCE corrente, quale tipo 
+ di carico automatico sia stato calcolato sui solai.</p>
+<p>Selezionando un elemento oppure più elementi ma con lo stesso carico 
+ applicato, nella sezione &quot;Carichi presenti&quot; del pannello&#160;<span class="hcp3">Proprietà elementi selezionati</span> si 
+ ha l'elenco delle CCE con l'entità dei relativi carichi agenti.</p>
+</body>
+</html>

@@ -1,0 +1,254 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Individuazione dei maschi e delle fasce</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+a.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:bold; }
+img.hcp3 { border:Solid 1px #808080;
+border-width:1px;
+border-style:solid; }
+table.hcp4 { vertical-align:top; }
+tr.hcp5 { vertical-align:top; }
+td.hcp6 { border:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp7 { font-weight:bold; }
+td.hcp8 { border-top:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp9 { font-weight:bold;
+text-align:center; }
+img.hcp10 { border:none;
+margin-left:0px;
+margin-right:0px;
+margin-top:10px;
+margin-bottom:10px; }
+td.hcp11 { border-left:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp12 { font-weight:bold;
+text-align:left; }
+span.hcp13 { font-weight:normal; }
+td.hcp14 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+span.hcp15 { mso-bidi-font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Individuazione automatica dei maschi e delle fasce</h1>
+<p>I maschi murari rappresentano le parti della struttura verticale che 
+ verranno verificate per le azioni statiche, sismiche e per i cinematismi 
+ (meccanismi locali di collasso). Le fasce murarie rappresentano le parti 
+ della struttura orizzontale che verranno verificate per le azioni sismiche.</p>
+<p>Verranno considerati come maschi i muri e gli elementi bidimensionali 
+ con le seguenti caratteristiche:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">tipo di utilizzo &quot;muratura 
+	 ordinaria&quot; o &quot;muratura armata&quot; (vedi <a href="Tipi_muri_bidimensionali.htm" class="hcp1">Definizione 
+	 del tipo di muro/elemento bidimensionale</a>) e con numero diverso 
+	 da 0. Assegnare ai muri e agli elementi bidimensionali il numero 0 
+	 è un metodo per poterli escludere dall'individuazione automatica dei 
+	 maschi;</p></li>
+	<li class="p-Bullet1"><p class="Bullet1">muri/elementi bidimensionali 
+	 allineati, dello stesso tipo e con uguale scostamento dal filo fisso;</p></li>
+</ul>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">i nodi che definiscono il 
+	 piede e la testa del maschio murario devono giacere su un piano orizzontale 
+	 <span style="mso-list: l0 level1 lfo1; tab-stops: list 36.0pt;">ed 
+	 appartenere ad un impalcato;</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1" style="mso-bidi-language: AR-SA; 
+							 mso-fareast-font-family: Calibri; line-height: 115%; 
+							 mso-fareast-language: EN-US;">è necessario 
+	 che esistano nodi alla stessa quota degli impalcati definiti. Se si 
+	 modellano elementi che saltano un piano o inclinati è consigliato 
+	 prima definire gli impalcati e successivamente meshare i muri/elementi 
+	 bidimensionali. In questo modo la procedura di meshatura è in grado 
+	 di imporre il passaggio dei nodi della mesh alle quote degli impalcati;</p></li>
+	<li class="p-Bullet1" style="font-family: Verdana, sans-serif;"><p 
+		 class="Bullet1" style="mso-bidi-language: AR-SA; mso-fareast-font-family: Calibri; 
+		 line-height: 115%; mso-fareast-language: EN-US;">non è necessario 
+	 avere una mesh regolare, anche se è consigliato sia per la determinazione 
+	 delle sollecitazioni di verifica sia per l'eventuale inserimento di 
+	 maschi o fasce manuali, poiché&#160;il programma individua i maschi 
+	 e le fasce esclusivamente con procedure geometriche ed il calcolo 
+	 delle sollecitazioni viene eseguito con l'integrazione su linea, che 
+	 è in grado di trovare le sollecitazioni anche senza incidere sui nodi, 
+	 ma estrapolando e interpolando le sollecitazioni negli elementi bidimensionali 
+	 intercettati. L'unica limitazione è che il maschio murario in corrispondenza 
+	 della linea di integrazione, contenga almeno un elemento bidimensionale.</p></li>
+</ul>
+<p><span style="line-height: 115%; mso-fareast-language: EN-US; mso-bidi-language: AR-SA; 
+		 mso-fareast-font-family: Calibri;">V</span>erranno considerati 
+ come fasce solo gli elementi bidimensionali con le seguenti caratteristiche:</p>
+<ul>
+	<li class="p-Bullet1" style="font-family: Verdana, sans-serif;"><p>tipo 
+	 di utilizzo &quot;muratura ordinaria&quot; (vedi <a href="Tipi_muri_bidimensionali.htm" class="hcp1">Definizione 
+	 del tipo di muro/elemento bidimensionale</a>) e con numero diverso 
+	 da 0. Assegnare agli elementi bidimensionali il numero 0 è un metodo 
+	 per poterli escludere dall'individuazione automatica delle fasce.</p></li>
+</ul>
+<p style="margin-bottom: 0;">In tutte le visualizzazioni soffermando il 
+ mouse sopra un elemento, si ha la visualizzazione di un suggerimento a 
+ video con le informazioni associate all'elemento che variano in funzione 
+ delle visualizzazioni attive.</p>
+<p><span class="hcp2">Nota</span>: qualunque modifica venga 
+ fatta alla geometria e ai criteri di progetto relativi alle murature, 
+ comporta la perdita del modello di muratura e di tutte le eventuali modifiche 
+ e personalizzazione apportate ai maschi. Si consiglia quindi di procedere 
+ a tutte le modifiche solo quando il modello base è ormai definitivo.</p>
+<p class="Titolo7"><a name="Maschi_murari_per_le_verifiche_statiche"></a>Maschi 
+ in muratura per le verifiche statiche</p>
+<p>I maschi murari vengono individuati ricercando ed assemblando gli elementi 
+ continui da ogni impalcato fino a &quot;terra&quot;. Come &quot;terra&quot; 
+ si considera il livello in cui tutti i suoi nodi hanno un qualche vincolamento 
+ e non sono presenti muri/elementi bidimensionali sottostanti. Come &quot;testa&quot; 
+ dei maschi si considera il livello con i nodi appartenenti all'impalcato 
+ più alto. Non esisteranno quindi maschi che vadano ad esempio dall'impalcato 
+ 1 al 2 senza muratura sottostante. Potranno però convivere ad esempio 
+ in una struttura a due piani maschi che vanno dall'impalcato 0 al 2, purché 
+ ci siano nodi intermedi alla stessa quota dell'impalcato 1, con maschi 
+ che vanno dall'impalcato 0 all'impalcato 1. I maschi murari vengono poi 
+ suddivisi in parti che rispecchiano i diversi impalcati della struttura. 
+ Queste saranno le parti soggette a verifica in testa, in mezzeria ed al 
+ piede come previsto dalla normativa.</p>
+<p>I maschi murari vengono numerati in maniera indipendente dalla numerazione 
+ che i muri/elementi bidimensionali hanno nella modellazione.</p>
+<p>Per visualizzarli occorre prima renderli corrente cliccando nel gruppo 
+ <span class="hcp2">Disegno</span> della scheda <span class="hcp2">Modellazione</span> 
+ sulla freccia sottostante <span class="hcp2">Muratura </span><img src="../Icone/32/muratura32.png" alt="" border="1" class="hcp3"> e quindi selezionare 
+ &quot;Verifiche statiche&quot; nella sezione &quot;Maschi e fasce&quot;, 
+ poi attivare il disegno della colorazione degli elementi in muratura cliccando 
+ nuovamente su <span class="hcp2">Muratura </span><img src="../Icone/32/muratura32.png" alt="" border="1" class="hcp3">.</p>
+<p>Quando è attiva la colorazione dei maschi murari è possibile attivare 
+ il disegno del numero del maschio cliccando nel gruppo <span class="hcp2">Disegno</span> 
+ della scheda <span class="hcp2">Modellazione</span> su <span class="hcp2">Numeri proprietà</span> <img src="../Icone/32/numerazioni32.png" alt="" border="1" class="hcp3"> 
+ e selezionando &quot;Numero&quot; nella sezione &quot;Muri/Bidimensionali&quot;.</p>
+<p>La selezione dei maschi in muratura si effettua, dopo aver attivato 
+ la colorazione degli elementi in muratura, selezionando &quot;Muratura&quot; 
+ del pannello <span class="hcp2"><a href="Selezioni.htm">Selezioni</a></span> 
+ e poi cliccando su <span class="hcp2"><img src="../Icone/32/sel_num32.png" alt="" border="1" class="hcp3"></span> 
+ e quindi specificando il numero del maschio o della fascia.</p>
+<p>Nella figura sottostante è riportato un esempio di generazione automatica 
+ dei <span class="hcp2">maschi murari per le verifiche statiche</span>. 
+ I colori si riferiscono allo schema di colore di default.</p>
+<table cellspacing="0" align="center" class="hcp4">
+	<col width="250">
+	<col width="200">
+	<tr class="hcp5">
+		<td width="250" class="hcp6"><p class="hcp7">Modello strutturale</p></td>
+		<td width="200" class="hcp8"><p class="hcp9"><img src="MUR_01.png" alt="" border="0" class="hcp10"></p></td>
+	</tr>
+	<tr class="hcp5">
+		<td width="250" class="hcp11"><p class="hcp12">Maschi 
+		 murari per le verifiche statiche<span class="hcp13">: 
+		 i maschi murari vengono individuati ricercando ed assemblando 
+		 gli elementi verticali continui da ogni piano fino a terra.</span></p></td>
+		<td width="200" class="hcp14"><p class="hcp9"><img src="MUR_02.png" alt="" border="0" class="hcp10"></p></td>
+	</tr>
+</table>
+<p class="Titolo7"><a name="Maschi_murari_per_le_verifiche_sismiche"></a>Maschi 
+ e fasce in muratura per le verifiche sismiche</p>
+<p>I maschi murari vengono individuati ricercando ed assemblando per ogni 
+ piano gli elementi presenti tra due aperture oppure gli elementi continui 
+ da ogni impalcato fino a &quot;terra&quot; in funzione di quanto specificato 
+ nell'opzione <span class="hcp2"><a href="Criteri_generali_di_verifica_murature.htm#Metodo_di_individuazione">Metodo 
+ di individuazione</a></span> dei criteri generali delle murature.</p>
+<p class="Bullet1">Per visualizzarli occorre prima renderli corrente cliccando 
+ nel gruppo <span class="hcp2">Disegno</span> della scheda 
+ <span class="hcp2">Modellazione</span> sulla freccia sottostante 
+ <span class="hcp2">Muratura </span><img src="../Icone/32/muratura32.png" alt="" border="1" class="hcp3"> 
+ e quindi selezionare &quot;Verifiche sismiche&quot; nella sezione &quot;Maschi 
+ e fasce&quot;, poi attivare il disegno della colorazione degli elementi 
+ in muratura cliccando nuovamente su <span class="hcp2">Muratura 
+ </span><img src="../Icone/32/muratura32.png" alt="" border="1" class="hcp3">.</p>
+<p class="Bullet1">Verranno trascurati i maschi murari che non rispondono 
+ ai requisiti di rapporto L/H definito nei criteri di progetto o per i 
+ quali è stata richiesta esplicitamente la non resistenza sismica (vedi 
+ <span class="hcp2"><a href="Criteri_di_verifica_murature.htm#Comportamento_maschi">Comportamento 
+ maschi&#160;per azioni sismiche</a></span>) e le fasce che non hanno un 
+ elemento resistente a trazione o per le quali è stata richiesta esplicitamente 
+ la non resistenza sismica (vedi <span class="hcp2"><a href="Criteri_di_verifica_murature.htm#Comportamento_fasce_in_muratura">Comportamento 
+ fasce per azioni sismiche</a></span>).</p>
+<p class="Bullet1"><span class="hcp15">Nel calcolo 
+ della struttura non vengono considerate le rigidezze dei muri/elementi 
+ bidimensionali che costituiscono i maschi e le fasce trascurati, ma mantenute 
+ le loro masse che vengono trasferite o all'impalcato o ai nodi adiacenti 
+ in base a quanto impostato nei parametri di calcolo (vedi </span><span 
+	 style="mso-bidi-font-weight: bold; font-weight: bold;"><a href="Parametri_generali_del_calcolo.htm#Recupero_masse_secondarie">Recupero_masse_secondarie</a></span><span class="hcp15">). P</span>er visualizzare <span class="hcp15">i muri/elementi bidimensionali 
+ che non vengono trasferiti al solutore occorre eseguire il <a href="Controllo%20congruenza%20dati.htm">controllo 
+ congruenza dati</a> e cliccare sulla voce &quot;seleziona&quot;. La selezione 
+ consente di controllare </span><span class="hcp15">l'eventuale 
+ presenza di porzioni di elementi che fuoriescono dal perimetro dei maschi 
+ o delle fasce, e decidere se modificare la mesh in modo che gli elementi 
+ bidimensionali siano tutti contenuti all'interno del loro perimetro.</span></p>
+<p>Quando è attiva la colorazione dei maschi murari e delle fasce è possibile 
+ attivare il disegno del numero del maschio o della fascia cliccando nel 
+ gruppo <span class="hcp2">Disegno</span> della scheda <span class="hcp2">Modellazione</span> su <span class="hcp2">Numeri 
+ proprietà</span> <img src="../Icone/32/numerazioni32.png" alt="" border="1" class="hcp3"> 
+ e selezionando &quot;Numero&quot; nella sezione &quot;Muri/Bidimensionali&quot;.</p>
+<p>La selezione dei maschi o delle fasce si effettua, dopo aver attivato 
+ la colorazione degli elementi in muratura, selezionando &quot;Muratura&quot; 
+ del pannello <span class="hcp2"><a href="Selezioni.htm">Selezioni</a></span> 
+ e poi cliccando su <span class="hcp2"><img src="../Icone/32/sel_num32.png" alt="" border="1" class="hcp3"></span> 
+ e quindi specificando il numero del maschio o della fascia.</p>
+<p>Nella figura sottostante è riportato un esempio che evidenzia le differenze 
+ tra i due metodi di generazione: <span class="hcp2">Assemblando 
+ per ogni piano gli elementi continui tra due aperture</span>,<span class="hcp2"> 
+ Assemblando gli elementi continui da ogni impalcato fino a &quot;terra&quot;</span>. 
+ I colori si riferiscono allo schema di colore di default.</p>
+<table cellspacing="0" align="center" class="hcp4">
+	<col width="250">
+	<col width="200">
+	<tr class="hcp5">
+		<td width="250" class="hcp6"><p class="hcp7">Modello strutturale</p></td>
+		<td width="200" class="hcp8"><p class="hcp9"><img src="MUR_01.png" alt="" border="0" class="hcp10"></p></td>
+	</tr>
+	<tr class="hcp5">
+		<td width="250" class="hcp11"><p class="hcp12">Assemblando 
+		 per ogni piano gli elementi continui tra due aperture<span class="hcp13">: 
+		 i maschi murari vengono individuati ricercando ed assemblando 
+		 per ogni piano gli elementi presenti tra due aperture.</span></p></td>
+		<td width="200" class="hcp14"><p class="hcp9"><img src="MUR_03.png" alt="" border="0" class="hcp10"></p></td>
+	</tr>
+	<tr class="hcp5">
+		<td width="250" class="hcp11"><p class="hcp12">Assemblando 
+		 gli elementi continui da ogni impalcato fino a &quot;terra&quot;<span class="hcp13">: i maschi murari vengono individuati 
+		 ricercando ed assemblando gli elementi in muratura verticali continui 
+		 da ogni piano fino a terra.</span></p>
+		<p style="font-weight: normal;">&#160;</p></td>
+		<td width="200" class="hcp14"><p class="hcp9"><img src="MUR_04.png" alt="" border="0" class="hcp10"></p></td>
+	</tr>
+</table>
+<p class="Titolo7"><a name="Maschi_murari_per_le_verifiche_dei_cinematismi"></a>Maschi&#160;in 
+ muratura per le verifiche dei cinematismi</p>
+<p>I maschi murari vengono generati con la stessa metodologia dei maschi 
+ murari per le verifiche statiche.</p>
+<p>Per visualizzarli occorre prima renderli corrente cliccando nel gruppo 
+ <span class="hcp2">Disegno</span> della scheda <span class="hcp2">Modellazione</span> 
+ sulla freccia sottostante <span class="hcp2">Muratura </span><img src="../Icone/32/muratura32.png" alt="" border="1" class="hcp3"> e quindi selezionare 
+ &quot;Verifiche cinematismi&quot; nella sezione &quot;Maschi e fasce&quot;, 
+ poi attivare il disegno della colorazione degli elementi in muratura cliccando 
+ nuovamente su <span class="hcp2">Muratura </span><img src="../Icone/32/muratura32.png" alt="" border="1" class="hcp3">.</p>
+<p>Quando è attiva la colorazione dei maschi murari è possibile attivare 
+ il disegno del numero del maschio cliccando nel gruppo <span class="hcp2">Disegno</span> 
+ della scheda <span class="hcp2">Modellazione</span> su <span class="hcp2">Numeri proprietà</span> <img src="../Icone/32/numerazioni32.png" alt="" border="1" class="hcp3"> 
+ e selezionando &quot;Numero&quot; nella sezione &quot;Muri/Bidimensionali&quot;.</p>
+</body>
+</html>

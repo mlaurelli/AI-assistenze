@@ -1,0 +1,145 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp 2015">
+<title>Dalla versione 8.7 alla 8.8</title>
+<link rel="StyleSheet" href="../ModeSt.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+p.hcp2 { font-weight:normal; }
+span.hcp3 { mso-bidi-font-weight:bold; }
+span.hcp4 { line-height:115%;
+mso-bidi-language:AR-SA; }
+span.hcp5 { mso-bidi-font-weight:bold;
+mso-spacerun:yes; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Dalla versione 8.7 alla 8.8</h1>
+<p style="mso-bidi-font-weight: bold;">Modellazione e verifica delle tamponature 
+ di qualunque forma. Le tamponature possono essere utilizzate solo per 
+ applicare i carichi in modo automatico alle aste sottostanti (anche in 
+ situazioni con forme irregolari) oppure ne può&#160;essere richiesta anche 
+ la verifica come un elemento secondario. Una delle opzioni più interessanti 
+ è la possibilità di gestire pesi diversi per considerare un carico medio 
+ vuoto per pieno nell'analisi dei carichi, ed una massa più esatta nelle 
+ verifiche. Per approfondimenti su questa ed altre opzioni si consiglia 
+ di consultare le relative parti del manuale (<span class="hcp1"><a 
+	 href="Introduzione_verifiche_tamponature.htm">Verifica tamponature</a></span>).</p>
+<p class="hcp2">Interventi di rinforzo con materiali compositi 
+ FRP per travi e pilastri di strutture in c.a. calcolate con l'analisi 
+ sismica statica non lineare (pushover). <span class="hcp3">Fermo 
+ restando che la fase di calcolo non lineare (pushover) della struttura 
+ non tiene conto della presenza di rinforzi FRP, è stata comunque implementata 
+ la ricerca degli stati limite lungo la curva di pushover tenendo conto 
+ della presenza di tali rinforzi. A parità di stato di sollecitazione dedotto 
+ dall'analisi, il programma considera la presenza delle fibre per determinare 
+ l'effetto di confinamento, se è stata raggiunta o meno ad esempio la rottura 
+ a taglio, la rottura a flessione, ecc. Si fa notare che se l'effetto di 
+ confinamento nei pilastri fa in genere aumentare la duttilità della struttura, 
+ mentre il rinforzo a taglio delle travi sposta i problemi di rottura globale 
+ dal lato fragile al lato duttile, risulta generalmente poco efficace il 
+ rinforzo a flessione sia dei pilastri che delle travi. L'implementazione 
+ di tali verifiche in modo analitico conferma quindi indirettamente quanto 
+ indicato dalla normativa come considerazione generale, ossia che gli interventi 
+ di rinforzo con FRP aumentano in genere la duttilità, ma non la resistenza 
+ della struttura. Si consiglia di consultare le relative parti del manuale 
+ per approfondimenti (</span><span class="hcp1"><a href="Introduzione_rinforzo_FRP.htm">Rinforzi 
+ con FRP</a></span><span class="hcp3">).</span></p>
+<p class="hcp2">Mappa delle differenze tra il taglio agente 
+ e il taglio resistente visualizzabile sia nella finestra di modellazione 
+ che in progettazione interattiva <span class="hcp3">dell'armatura 
+ delle solette/platee</span>. <span class="hcp3">In 
+ analogia a quanto già fattibile per le verifiche a flessione, è adesso 
+ possibile visualizzare con mappe a colori la differenza fra il taglio 
+ agente e il taglio ultimo. Il programma in progettazione interattiva dell'armatura 
+ delle solette/platee non prevede l'introduzione di armatura specifica 
+ a taglio (raramente necessaria) ma nelle mappe tiene comunque in conto 
+ della presenza di armatura in zona tesa che può contribuire ad un incremento 
+ della resistenza a taglio.</span></p>
+<p class="hcp2">Gestione del comportamento non lineare 
+ degli elementi in c.a. e acciaio nell'analisi sismica statica non lineare 
+ <span class="hcp4">(</span>pushover) 
+ ai sensi del <span class="hcp4">D.M. 
+ 17/01/18</span> di strutture in muratura. <span class="hcp3">Gli 
+ elementi in c.a.</span><span class="hcp5">&#160;</span><span class="hcp3">ed acciaio non hanno più un comportamento 
+ indefinitamente elastico, ma non lineare simile a quello del pushover 
+ in c.a., per consentire una migliore schematizzazione di strutture miste 
+ o di cerchiature. Gli elementi in c.a. (se armati)</span><span class="hcp5">&#160;</span><span class="hcp3">hanno 
+ ora comportamento&#160;a taglio di tipo elastico-fragile ed elastico-plastico 
+ a momento (con riferimento al momento di prima plasticizzazione) con rottura 
+ regolata dalla rotazione ultima indicata al punto C8A.6.</span> <span class="hcp4">Elementi non 
+ armati hanno un comportamento elastico indefinito. Gli elementi in acciaio 
+ hanno comportamento elastico-plastico indefinito a taglio con riferimento 
+ al punto 4.2.4.1.2 formula [4.2.18] ed elastico-plastico indefinito a 
+ momento, con riferimento al momento ultimo per flessione calcolato come 
+ indicato al punto 4.2.4.1.2 con la formula [4.2.36] (trascurando le riduzioni 
+ dovute al taglio di cui alla formula [4.2.41]).</span></p>
+<p>Altre implementazioni:</p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Semplificata la gestione dei 
+	 materiali nei criteri di progetto delle travi, pilastri, nuclei e 
+	 sezioni con l'eliminazione della sezione &quot;Materiali per edifici 
+	 esistenti&quot; e il raggruppamento di tutti i parametri in un'unica 
+	 sezione &quot;Materiali&quot;. A livello di impostazione di calcolo 
+	 la definizione di &quot;edificio esistente&quot; riguarda ora solo 
+	 la possibilità di definire uno stato di sollecitazione iniziale necessario 
+	 qualora si vogliano verificare i rinforzi in fibre FRP tenendo conto 
+	 dello stato iniziale deformativo della struttura e l'utilizzo di un 
+	 fattore di struttura q=1.5 per il calcolo delle sollecitazioni di 
+	 taglio indipendentemente da quanto impostato come fattore di struttura 
+	 q.</p></li>
+</ul>
+<p class="IndentBullet1">In sede di verifica degli elementi invece, la 
+ scelta se considerare l'elemento come nuovo (e quindi utilizzare le resistenze 
+ caratteristiche) o se considerarlo come esistente (usando quindi le resistenze 
+ medie) è lasciata completamente a quanto selezionato a livello di criterio 
+ di progetto.</p>
+<p class="IndentBullet1">Nell'importazione delle strutture realizzate con 
+ le versioni precedenti, il programma dovendo unire i criteri di progetto 
+ adotta la seguente strategia: se la struttura era stata calcolata, controlla 
+ se il tipo di calcolo era stato impostato come &quot;edificio esistente&quot; 
+ e adatta i nuovi criteri di progetto utilizzando quelli della sezione 
+ &quot;Materiali per edifici esistenti&quot;, in tutti gli altri casi utilizza 
+ quelli della sezione &quot;Materiali&quot;. Importando strutture in cui 
+ ci fosse una gestione mista fra elementi nuovi ed esistenti, si consiglia 
+ quindi di controllare che i relativi criteri di progetto siano stati convertiti 
+ in modo corretto. <i style="mso-bidi-font-style: normal; font-style: normal;">Il 
+ programma segnala comunque la necessità di effettuare tale controllo.</i></p>
+<ul>
+	<li class="p-Bullet1"><p class="Bullet1">Modifiche alla visualizzazione 
+	 dei maschi murari e dei telai equivalenti per le strutture in muratura. 
+	 <span class="hcp3">Nelle precedenti versioni 
+	 gli elementi non collaboranti nel telaio equivalente venivano comunque 
+	 visualizzati, con colore diverso (generalmente blu). Per chiarezza, 
+	 visto che tali elementi di fatto non esistono durante la fase di calcolo, 
+	 ne è stata completamente eliminata la visualizzazione.</span><span class="hcp5">&#160;</span><span 
+	 style="mso-bidi-font-weight: bold; text-transform: capitalize;">è</span> 
+	 <span class="hcp3">stata invece aggiunta la 
+	 visualizzazione come &quot;maschio&quot; degli elementi verticali 
+	 e delle fasce in c.a. o acciaio collaboranti che verranno considerate 
+	 nell'analisi pushover.</span><span class="hcp5">&#160;</span><span class="hcp3">Anche di tali oggetti, che oggi 
+	 hanno un comportamento avanzato, è possibile visualizzare lo stato 
+	 di verifica.</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Importazione ed esportazione 
+	 di un modello strutturale da e su file IFC strutturale. <span class="hcp3">Si 
+	 consiglia di consultare le relative parti del manuale per approfondimenti 
+	 (</span><span class="hcp1"><a href="Da_file_con_estensione_IFC.htm">Da 
+	 file con estensione IFC</a></span> e <span class="hcp1"><a 
+	 href="In_formato_IFC.htm">In formato IFC</a></span><span class="hcp3">).</span></p></li>
+	<li class="p-Bullet1"><p class="Bullet1">Importazione ed esportazione 
+	 di un modello strutturale da e su file con estensione MGT. <span class="hcp3">Si 
+	 consiglia di consultare le relative parti del manuale per approfondimenti&#160;(</span><span class="hcp1"><a href="MIDAS_MODEST.htm">Da file con 
+	 estensione MGT</a></span> <span class="hcp3">e</span> 
+	 <span class="hcp1"><a href="MODEST_MIDAS.htm">In formato 
+	 MGT</a></span><span class="hcp3">).</span></p></li>
+</ul>
+</body>
+</html>
